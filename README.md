@@ -271,7 +271,7 @@ to two). Two things happen:
 
 Fixed seeds also make runs reproducible: the same inputs and options
 give the same board every time, on any platform. The placer draws from
-an explicit generator (`src/place/rng.c`, SplitMix64) rather than libc
+an explicit deterministic generator rather than libc
 `rand()`, whose algorithm is implementation-defined — glibc and macOS
 walk different sequences from the same seed, which used to put the
 annealer on a different placement per machine and made a recorded
@@ -620,139 +620,6 @@ announced by name as "not modeled in routing" — the DRC gate still
 enforces them on the output. Command-line pins beat everything.
 
 The resolved rules are printed per board before routing.
-
-## Internals
-
-The program is four modules plus a CLI, each a `.c/.h` pair under `src/`.
-Data flows: `sexpr` parses the file → `board` builds a geometric model →
-`route` adds copper to both the model and the parse tree → `sexpr` writes
-the tree back out.
-
-### `sexpr` — KiCad file I/O
-
-`.kicad_pcb` files are s-expressions. The parser reads the whole file into
-a tree of nodes (atoms with a quoted flag, or lists), and the writer
-serializes the tree back with KiCad-style indentation. Round-tripping the
-full tree — rather than picking out known fields — is the compatibility
-strategy: zones, graphics, properties, and any nodes introduced by newer
-KiCad versions pass through untouched. Helpers (`sx_find`, `sx_num`,
-`sx_str`) give the rest of the program keyed access into lists.
-
-The writer reproduces KiCad's own layout, not merely a valid one: a list's
-leading atoms stay on the head line (`(pad "1" thru_hole circle` — not one
-atom per line), and millimetres are written with trailing zeros trimmed
-(`23.68`, never `23.6800`) through the one formatter in `numfmt.c` that
-every emitter shares — the tree writer, the designator nudge in `board.c`,
-and the placer's in-place text patches. The point is that content we did
-not touch comes back byte-for-byte: an output diff then shows only what
-klayout actually changed, and the regression corpus's baseline comparison
-carries signal instead of whitespace. Parse-and-write of an untouched
-KiCad board is byte-identical except for `(xy …)` packing inside `(pts …)`,
-where KiCad fits several per line and we emit one.
-
-### `board` — geometric model
-
-Walks the tree once and extracts only what routing needs:
-
-- **Net table**: KiCad ≤ 9 declares `(net N "name")` nodes and references
-  nets by index; KiCad 10 references nets by name only, so names are
-  interned into indices as they are encountered. New copper is written in
-  whichever style the file uses.
-- **Pads**: each footprint's `(at x y rot)` is applied to its pads' local
-  offsets (KiCad's y axis points down; positive angles rotate
-  counter-clockwise on screen) to get absolute positions. As an obstacle,
-  a pad is a bounding circle of radius `hypot(w,h)/2`, widened by the
-  copper-shape offset when the pad has `(drill (offset …))`. As a
-  connection target, the *exact* copper shape is kept — a rounded
-  rectangle in the pad's rotated frame, which covers rect, roundrect,
-  oval and circle pads exactly — so routes attach only on real copper.
-  SMD pads carry a copper layer; thru-hole pads occupy every layer.
-- **Holes**: every drill is a keep-out on all layers with its own
-  clearance rule (`min_hole_clearance`), separate from — and often larger
-  than — the copper clearance. `np_thru_hole` pads have no copper but
-  their hole still blocks.
-- **Copper rectangles**: KiCad 10 allows filled graphics on copper to
-  carry a net (e.g. battery contact areas). A net'd `gr_rect` becomes an
-  exact rectangular obstacle for other nets and, for its own net, a
-  connection target (a disc inscribed in the rect, so anything reaching it
-  lands on real copper).
-- **Keepout rule areas**: zones carrying a `(keepout ...)` clause that
-  bars tracks or vias, board-level and footprint-embedded alike (KiCad
-  stores zone outlines in board coordinates even inside footprints, so
-  both load the same way). Each keeps its polygon, a copper-layer
-  bitmask, and the two flags; a signed-distance query serves the
-  raster maps and the exact-geometry checks.
-- **Board outline**: `Edge.Cuts` graphics (lines, rects, arcs, circles,
-  polygons) are decomposed into segments; arcs and circles are sampled
-  into ~0.2 mm chords.
-- **Existing copper**: `(segment)` and `(via)` nodes become obstacles.
-
-`board_add_segment` / `board_add_via` are the write path: they append to
-the obstacle arrays *and* build the corresponding s-expression node
-(including a fresh v4 UUID) onto the tree root, keeping the model and the
-output file in sync by construction.
-
-### `rules` — project-file design rules
-
-Derives `<board>.kicad_pro` from the board path and scans the JSON for the
-relevant keys with a first-match `"key": number` search rather than a full
-JSON parser. That shortcut is sound for `.kicad_pro` files because the
-net-class keys (`clearance`, `track_width`, `via_diameter`, `via_drill`)
-first appear in the Default class — KiCad writes it first — and the
-`min_*` rule keys are unique in the file. Per-class rules would need a
-real parser.
-
-### `route` — the router
-
-For each net (skipping nets that already have tracks):
-
-1. **Connection ordering.** A minimum spanning tree (Prim's) over the
-   net's pads picks which pad pairs to connect — n−1 connections, shortest
-   overall, in MST growth order.
-
-2. **Obstacle grid.** A uniform grid (`--grid` pitch) covers the board
-   outline's bounding box (or the pads' plus a margin if there is no
-   outline), one plane of cells per copper layer. Before each connection,
-   all *foreign* copper is rasterized into it: pads as their exact copper
-   shape (a rounded rectangle in the rotated pad frame — a signed-distance
-   test that covers rect, roundrect, oval and circle pads; only trapezoid
-   and custom pads fall back to the bounding circle), vias as discs,
-   tracks as thick lines sampled along their length, net'd copper
-   rectangles exactly, and the board edge with the edge clearance. Exact
-   pad shapes matter: a fine-pitch connector's neighbours stay routable
-   where bounding circles would blanket them. Two
-   maps are kept: one inflated by `clearance + track/2` (where a track
-   center may go) and one by `clearance + via_size/2` (where a via center
-   may go — vias are fatter than tracks). Both get half a cell of slack so
-   copper that merely grazes a cell still blocks it (conservative, never
-   unsafe). Same-net copper is left free, so nets may T off their own
-   tracks. The grid is rebuilt per connection, which keeps tracks routed
-   moments earlier correctly up to date; rebuild cost is linear in the
-   number of obstacles.
-
-3. **Search.** A* over `(layer, y, x)` cells. Moves are the 8 neighbours
-   (so finished tracks run at 0/45/90°) with Euclidean step costs, plus a
-   layer change: a through via needs the via-clearance map free on
-   *every* copper layer, and then connects this layer to any other in one
-   hop at `--via-cost`. The heuristic is straight-line distance to the target pad
-   (admissible; via cost excluded). The search is seeded from every free
-   cell under the source pad and terminates on any cell of the target pad,
-   so connections attach anywhere on the pad, not just at its center. The
-   heap admits duplicate entries; stale ones are detected and skipped on
-   pop.
-
-4. **Emission.** The cell path is compressed into maximal collinear runs,
-   each becoming one `(segment)`; layer changes become `(via)` nodes.
-   Short stubs connect the exact pad centers to the first/last grid
-   points.
-
-Failures are per-connection: an unroutable pair is reported on stderr with
-its coordinates and the router moves on.
-
-**Complexity.** Memory is `layers x (bbox/grid)²` bytes for the grid plus
-~8 bytes/cell during a search; a 100×100 mm board at 0.1 mm pitch and two
-layers is 2M cells. The cell count is capped at 80M — for large boards,
-coarsen `--grid`.
 
 ## Status and benchmark results
 
