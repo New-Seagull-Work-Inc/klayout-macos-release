@@ -1,0 +1,122 @@
+(footprint "Bourns_2100HT_Vertical_P8.38mm"
+	(version 20260206)
+	(generator "kichad_kds")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Bourns 2100HT vertical through-hole toroid; 21.84mm diameter; 8.38mm formed lead pitch")
+	(tags "power inductor toroid THT")
+	(property "Reference" "L"
+		(at 0 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "edd4c01e-7367-8489-8204-d152a96f936c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "Bourns 2100HT Vertical"
+		(at 0 2.54 0)
+		(layer "F.Fab")
+		(uuid "0bb765f8-5e0e-8042-b7f0-2dbeef3fe906")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.bourns.com/docs/Product-Datasheets/2100ht_series.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "255f002f-6905-8e84-a54f-bc1249c26e6d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Bourns 2100HT vertical through-hole toroid; 21.84mm diameter; 8.38mm formed lead pitch"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0677d51e-d559-808a-9ad0-2e32a2c82d2d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 10.92 0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "b3212e67-dc9c-88c2-999a-8f6a8393aa0f")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 11.5 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "175e9d06-a2c9-89e9-b3d2-4e968dd40284")
+	)
+	(fp_line
+		(start -7.5 -8)
+		(end 7.5 -8)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91052774-e7b7-846f-bfb9-724312846150")
+	)
+	(fp_line
+		(start -7.5 8)
+		(end 7.5 8)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d8f75497-9b86-8396-b31b-164c3380d0ff")
+	)
+	(fp_text user "2100HT"
+		(at 0 12.5 0)
+		(layer "F.Fab")
+		(uuid "61630d03-10b2-8229-9345-2c818dc0013e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -4.19 0 0)
+		(size 3 3)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "42f98ed1-864a-8420-b62b-0af2aab6c33c")
+	)
+	(pad "2" thru_hole circle
+		(at 4.19 0 0)
+		(size 3 3)
+		(drill 1.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6e11b013-05b5-80e9-9361-8668635640e0")
+	)
+	(embedded_fonts no)
+)

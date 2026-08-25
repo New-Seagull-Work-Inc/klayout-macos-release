@@ -1,0 +1,122 @@
+(footprint "Fuse_Axial_P10.16mm"
+	(version 20260206)
+	(generator "kichad_kds")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Axial lead fuse, 10.16mm formed pitch")
+	(tags "axial fuse THT")
+	(property "Reference" "F"
+		(at 0 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "50183153-fef8-8fe0-b1c2-be3a60f40a34")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "AXIAL FUSE"
+		(at 0 2.54 0)
+		(layer "F.Fab")
+		(uuid "8ed50ad5-4527-8210-9683-91d4a3bfe661")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e679b085-8b05-850c-965c-6e5d1a71f849")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Axial lead fuse, 10.16mm formed pitch"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3de3269f-c7f2-84c2-919e-9671e47ec68c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start 1.4 -2.6)
+		(end 8.76 2.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "534bb873-3bdc-889f-8fcb-7fb3dc2bfe78")
+	)
+	(fp_rect
+		(start -1.45 -2.85)
+		(end 11.61 2.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "06c3e60e-d1b7-8a30-b74f-b3ffc8be9fd8")
+	)
+	(fp_line
+		(start 1.4 -2.6)
+		(end 8.76 -2.6)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d30e44fb-1554-8bbe-88fe-1b67bc673637")
+	)
+	(fp_line
+		(start 1.4 2.6)
+		(end 8.76 2.6)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c93a62ce-d9c1-8ec2-96ee-1e2b960d3c26")
+	)
+	(fp_text user "FUSE"
+		(at 5.08 3.8 0)
+		(layer "F.Fab")
+		(uuid "c23837f2-9476-86b4-8a51-c76ca3b81b29")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0 0)
+		(size 2.4 2.4)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "616e48b9-0443-8a9b-85a9-0e271b50701b")
+	)
+	(pad "2" thru_hole circle
+		(at 10.16 0 0)
+		(size 2.4 2.4)
+		(drill 1.1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ff7b0820-0616-8f77-9bed-2186e1667672")
+	)
+	(embedded_fonts no)
+)

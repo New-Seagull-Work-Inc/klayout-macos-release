@@ -1,0 +1,17 @@
+{
+  "_note": "Operating currents from the product spec: 7V output, 15W max (2.15A), served from rectified AC normally and from the 1S LiFePO4 via the TPS61088 boost when AC is shorted. Battery branch sized at min battery voltage 3.0V and 88% boost efficiency: 15W / 0.88 / 3.0V = 5.7A -> 6A. AC/rectifier branch sized at min line 8VAC with the 0.8A charger running. Fuses (F101 4A, F102 10A) are protection, not operating current.",
+  "nets": {
+    "AC1":      { "current_A": 2.6 },
+    "AC1F":     { "current_A": 2.6 },
+    "AC2":      { "current_A": 2.6 },
+    "VRECT":    { "current_A": 2.5 },
+    "MAIN_RAW": { "current_A": 2.8 },
+    "SW_MAIN":  { "current_A": 2.8 },
+    "OUT7":     { "current_A": 2.2 },
+    "BOOST_RAW":{ "current_A": 2.3 },
+    "CHG5":     { "current_A": 0.85 },
+    "BAT":      { "current_A": 6.0 },
+    "BATCELL":  { "current_A": 6.0 },
+    "BSW":      { "current_A": 6.0 }
+  }
+}

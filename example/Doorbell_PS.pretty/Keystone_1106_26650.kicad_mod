@@ -1,0 +1,109 @@
+(footprint "Keystone_1106_26650"
+	(version 20260206)
+	(generator "kichad_kds")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Single-cell 26650 SMT holder, Keystone 1106")
+	(tags "26650 battery holder")
+	(property "Reference" "BT"
+		(at 0 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "c376da81-090d-8102-9ac7-7bc911ba24b0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "Keystone 1106 26650 Holder"
+		(at 0 2.54 0)
+		(layer "F.Fab")
+		(uuid "85acb738-beb0-8847-81a7-28d266adbb2f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.keyelco.com/userAssets/file/K75p30.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "606cab1c-35d4-86b8-988c-50d95c990747")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Single-cell 26650 SMT holder, Keystone 1106"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1229d30d-8f1b-8d7d-bc49-9160a54b3225")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -41.1 -14.5)
+		(end 41.1 14.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "13f79045-b07b-88ae-954a-4070dded60ba")
+	)
+	(fp_rect
+		(start -41.1 -14.5)
+		(end 41.1 14.5)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "129b0716-e63f-8d9e-872c-b6e868c61b43")
+	)
+	(fp_rect
+		(start -41.6 -15)
+		(end 41.6 15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "14fdee33-6a62-8600-82ee-17bb32e4b061")
+	)
+	(fp_text user "Keystone 1106"
+		(at 0 16 0)
+		(layer "F.Fab")
+		(uuid "78976900-50d0-8f2b-bd16-81e67233f8b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 38.4 0 0)
+		(size 7.5 6.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "47569cc6-582d-8580-a178-04e985b241e3")
+	)
+	(pad "2" smd rect
+		(at -38.4 0 0)
+		(size 7.5 6.4)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "91df7417-ca56-8d2d-bff1-76d9e47be22b")
+	)
+	(embedded_fonts no)
+)

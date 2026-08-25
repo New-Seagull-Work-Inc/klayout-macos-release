@@ -1,0 +1,124 @@
+klayout and kplace — Trial Software License
+Copyright (c) 2026 Seagull Work, Inc. All rights reserved.
+
+This is trial software, provided free of charge so that you can evaluate
+it. In short: run it as much as you like, and whatever layouts it produces
+are yours to use for anything, including commercially. The program itself
+carries no warranty and no guarantee of any kind, and nothing it outputs
+has been reviewed by an engineer. Verify every board before you build it.
+
+The rest of this file states that precisely.
+
+
+1. PERMISSION TO USE
+
+Seagull Work, Inc. grants you a personal, non-exclusive, non-transferable,
+revocable permission to install and run the klayout and kplace executables
+in this package, on any number of machines you control, to evaluate them.
+No fee is charged for this. This is a trial, not a sale: no ownership of
+the software passes to you, and Seagull Work, Inc. retains all rights not
+expressly granted here.
+
+
+2. WHAT YOU PRODUCE IS YOURS
+
+Your input designs remain entirely yours. Seagull Work, Inc. claims no
+interest in them.
+
+Everything the program writes out is likewise yours: routed boards,
+project and schematic files, gerbers, drill files, pick-and-place and
+IPC-D-356 files, run verdicts, tuning files, logs. You may use, modify,
+publish, fabricate, have fabricated, sell, and distribute those outputs
+for any purpose, personal or commercial, with no royalty, no attribution,
+and no further permission from anyone.
+
+The example board included in this package may also be used, modified,
+and redistributed freely.
+
+This freedom is about ownership only. It is not an assurance that any
+output is correct — see sections 4 and 5, which apply to everything the
+program produces.
+
+
+3. WHAT THIS TRIAL DOES NOT COVER
+
+You may not redistribute, publish, sell, rent, lease, sublicense, or host
+the executables themselves, in whole or in part. You may not reverse
+engineer, decompile, or disassemble them, except to the extent that
+applicable law expressly permits this despite this restriction. You may
+not remove or alter the notices in this package.
+
+If you need any of that — redistribution, deployment beyond evaluation, a
+warranty, or support — contact Seagull Work, Inc. and ask. Those terms are
+available; they are simply not these terms.
+
+
+4. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT,
+ACCURACY, AND QUIET ENJOYMENT.
+
+Because this program produces designs for physical hardware, one point
+deserves to be said plainly rather than left to the paragraph above:
+
+  A run that reports zero DRC violations, zero unconnected items, and
+  that every gate was met is a report from this program about its own
+  work. It is not an assurance that the board is correct, routable as
+  intended, manufacturable, electrically sound, thermally adequate,
+  compliant with any standard or regulation, or safe.
+
+Placement, routing, ampacity widening, impedance geometry, length
+matching, stitching, and the design-rule checks reported here are
+heuristics and automated checks. They can be wrong, and they can be
+confidently wrong. No engineer at Seagull Work, Inc. has reviewed your
+board. Before you fabricate, assemble, energize, sell, or rely on any
+output of this program, review and verify it independently, by whatever
+means your application warrants. Boards intended for safety-critical,
+medical, automotive, aerospace, or life-support use require review
+appropriate to those domains; this software is not offered as suitable
+for them.
+
+You are responsible for the engineering judgment applied to your designs.
+
+
+5. NO LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SEAGULL WORK, INC.
+SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGE, OR OTHER LIABILITY, WHETHER IN
+CONTRACT, TORT, OR OTHERWISE, ARISING FROM OR IN CONNECTION WITH THE
+SOFTWARE OR ITS USE, INCLUDING WITHOUT LIMITATION ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES: SCRAPPED OR
+UNUSABLE BOARDS, FABRICATION, TOOLING, ASSEMBLY, OR REWORK COSTS, DAMAGED
+OR DESTROYED EQUIPMENT, PROJECT DELAY, LOST TIME, LOST DATA, LOST
+PROFITS, OR PERSONAL INJURY OR PROPERTY DAMAGE — EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+The total aggregate liability of Seagull Work, Inc. under these terms
+shall not exceed the amount you paid for this trial, which is zero.
+
+Some jurisdictions do not allow the exclusion of certain warranties or the
+limitation of certain liabilities. Where that is so, the exclusions and
+limitations above apply to the greatest extent permitted, and nothing here
+excludes liability that cannot lawfully be excluded.
+
+
+6. NO SUPPORT, NO CONTINUITY
+
+Seagull Work, Inc. has no obligation to provide support, maintenance,
+updates, bug fixes, or continued availability of this software, and no
+obligation to keep any behaviour, format, or interface stable between
+versions. The trial may be changed, suspended, or withdrawn, and the
+permission in section 1 may be terminated, at any time and for any reason.
+
+On termination, stop using the executables and delete them. Everything you
+produced with them before that point remains yours under section 2.
+
+
+7. SURVIVAL
+
+Sections 2, 4, and 5 survive any termination or expiry of this trial.
+
+
+Questions, or a use these terms do not cover: contact Seagull Work, Inc.

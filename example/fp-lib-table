@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Doorbell_PS")(type "KiCad")(uri "${KIPRJMOD}/Doorbell_PS.pretty")(options "")(descr ""))
+)
