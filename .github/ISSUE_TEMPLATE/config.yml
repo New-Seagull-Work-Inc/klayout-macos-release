@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Licensing, deployment beyond the trial, support
+    url: https://github.com/New-Seagull-Work-Inc
+    about: The trial terms are in LICENSE; other terms are available from Seagull Work, Inc.
