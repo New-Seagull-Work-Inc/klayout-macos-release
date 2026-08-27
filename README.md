@@ -210,6 +210,15 @@ within 10 %). Then:
   unconnected, schematic parity 0, ERC 0/0, no routing failures. A board
   that routes but is not clean is still written, with `*** NOT CLEAN`
   and the counts in the log.
+- **Violations that were already on the input board** are named as such:
+  the tool runs the same DRC on the input (read-only) and the final
+  message says how many of the reported errors and warnings were there
+  before routing and how many the router introduced — and, when nothing
+  beyond the input's own findings remains, says so. The result file
+  carries `input_drc`, `introduced` and `clean_beyond_input`. A pad
+  overlapping its own footprint's hole, a library footprint mismatch,
+  an unplaced part's courtyard: those are the board's to fix, not the
+  router's.
 - The per-pair and per-lane reports above the table: skew, home-layer
   share, impedance as laid, via counts.
 
