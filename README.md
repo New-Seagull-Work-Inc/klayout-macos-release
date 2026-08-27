@@ -107,7 +107,11 @@ http://localhost:8765/
 One panel per placement attempt, drawn as it routes — the copper laid
 since the last frame in white — with completion bars per signal class
 (differential pairs and DDR, other signals, power), the current stage,
-the elapsed time, and a scrub bar to step back through the run's frames.
+the elapsed time, and a scrub bar over the run's frames. **Step frame by
+frame** with the ‹ › buttons beside the bar, or click a panel and use
+the ← → keys (space returns to live); the counter shows which frame you
+are on. The run ends on two frames: what the last pass laid, highlighted
+white, then the finished board in its layer colours.
 If the page does not open by itself, open that address (or
 `http://127.0.0.1:8765/`) while the run is going. To watch a finished
 run again:
