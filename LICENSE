@@ -33,7 +33,11 @@ for any purpose, personal or commercial, with no royalty, no attribution,
 and no further permission from anyone.
 
 The example board included in this package may also be used, modified,
-and redistributed freely.
+and redistributed freely. So may the fab library, the JSON files in the
+fab/ folder: they record what each board house publishes about its own
+capabilities and stackups, with the source noted in each file; Seagull
+Work, Inc. claims no rights in those numbers and gives no assurance that
+they are current or correct — the board house's own pages govern.
 
 This freedom is about ownership only. It is not an assurance that any
 output is correct — see sections 4 and 5, which apply to everything the
@@ -43,7 +47,8 @@ program produces.
 3. WHAT THIS TRIAL DOES NOT COVER
 
 You may not redistribute, publish, sell, rent, lease, sublicense, or host
-the executables themselves, in whole or in part. You may not reverse
+the executables themselves, in whole or in part. (The example board and
+the fab/ folder are not executables; section 2 covers them.) You may not reverse
 engineer, decompile, or disassemble them, except to the extent that
 applicable law expressly permits this despite this restriction. You may
 not remove or alter the notices in this package.

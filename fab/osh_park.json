@@ -1,0 +1,93 @@
+{
+  "found": true,
+  "vendor": "OSH Park",
+  "source_url": "https://docs.oshpark.com/services/",
+  "min_trace_width_mm": 0.127,
+  "min_trace_spacing_mm": 0.127,
+  "min_drill_mm": 0.2032,
+  "min_annular_ring_mm": 0.1016,
+  "min_via_drill_mm": 0.254,
+  "min_board_edge_clearance_mm": 0.381,
+  "layer_counts": [
+    2,
+    4,
+    6
+  ],
+  "min_layers": 2,
+  "max_layers": 6,
+  "board_thickness_mm": [
+    0.8128,
+    1.6256
+  ],
+  "materials": [
+    "FR4",
+    "FR408"
+  ],
+  "surface_finishes": [
+    "ENIG"
+  ],
+  "solder_mask_colors": [
+    "Purple",
+    "Clear",
+    "Black"
+  ],
+  "copper_weights_oz": [
+    1,
+    2
+  ],
+  "note": "Most conservative values used across all services. 2-layer uses 6mil (0.1524mm) trace width but 4/6-layer use 5mil (0.127mm). Minimum drill is 8mil (0.2032mm) for 6-layer, 10mil (0.254mm) for 2/4-layer. Annular ring is 5mil (0.127mm) for 2-layer, 4mil (0.1016mm) for 4/6-layer. No specific silkscreen or solder mask dam specifications found. Via diameter not explicitly stated. Impedance control not mentioned.",
+  "retrieved_utc": "2026-06-22T23:40:53Z",
+  "stackups": [
+    {
+      "name": "OSH Park 4-layer",
+      "layers": 4,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.511,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": false,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1999,
+          "er": 3.61,
+          "material": "Isola FR408HR 2113 prepreg"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0173,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.9906,
+          "er": 3.61,
+          "material": "Isola FR408HR core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0173,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1999,
+          "er": 3.61,
+          "material": "Isola FR408HR 2113 prepreg"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 1
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://docs.oshpark.com/services/four-layer/",
+  "stackups_retrieved_utc": "2026-08-26T04:00:10Z"
+}

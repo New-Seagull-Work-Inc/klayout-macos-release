@@ -1,0 +1,36 @@
+{
+  "found": true,
+  "vendor": "Sierra Circuits",
+  "source_url": "https://www.protoexpress.com/pcb-manufacturing-capabilities/",
+  "min_trace_width_mm": 0.0381,
+  "min_trace_spacing_mm": 0.0381,
+  "min_drill_mm": 0.0508,
+  "min_annular_ring_mm": 0.0508,
+  "min_via_drill_mm": 0.0508,
+  "min_via_diameter_mm": 0.1524,
+  "min_board_edge_clearance_mm": 0.254,
+  "layer_counts": [],
+  "min_layers": 1,
+  "max_layers": 30,
+  "board_thickness_mm": [],
+  "materials": [
+    "FR4",
+    "Polyimide",
+    "Rogers"
+  ],
+  "surface_finishes": [
+    "ENIG",
+    "ENEPIG",
+    "HASL"
+  ],
+  "solder_mask_colors": [],
+  "copper_weights_oz": [
+    0.5,
+    1,
+    2
+  ],
+  "note": "US HDI/prototype specialist (Sunnyvale, CA). Published: 1.5 mil (0.0381 mm) trace/space, 2 mil (0.0508 mm) laser microvia drilling, 2 mil microvia annular ring (KB), blind/buried/stacked vias and via-in-pad, 1-30 layers up to 20x30 in, +/-5% impedance tolerance, IPC 6012 Class 2 and 3/ES. Advanced-capability floors, NOT quickturn-standard pricing rules: quote the stackup. min_via_diameter derived as laser drill + 2x annular. Edge clearance and thickness not published; conservative placeholder used. Suits HDI via-in-pad escapes for 0.5 mm BGAs that standard fabs cannot build.",
+  "retrieved_utc": "2026-08-11T00:00:00Z",
+  "stackups": [],
+  "stackups_note": "No standard stackup table published on the capabilities/resources pages (checked 2026-08-25); the vendor quotes stackups per order. Fill with `procurement bare-pcb-stackup <url>` once a page or PDF is available."
+}

@@ -1,0 +1,559 @@
+{
+  "found": true,
+  "vendor": "JLCPCB",
+  "source_url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+  "min_trace_width_mm": 0.127,
+  "min_trace_spacing_mm": 0.127,
+  "min_drill_mm": 0.2,
+  "min_via_drill_mm": 0.15,
+  "min_via_diameter_mm": 0.25,
+  "min_annular_ring_mm": 0.15,
+  "min_hole_to_hole_mm": 0.5,
+  "min_silkscreen_width_mm": 0.15,
+  "min_silkscreen_height_mm": 0.15,
+  "min_solder_mask_dam_mm": 0.1,
+  "min_solder_mask_clearance_mm": 0.05,
+  "min_board_edge_clearance_mm": 0.5,
+  "min_layers": 1,
+  "max_layers": 32,
+  "layer_counts": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32
+  ],
+  "board_thickness_mm": [
+    0.8,
+    1,
+    1.2,
+    1.6,
+    2
+  ],
+  "copper_weights_oz": [
+    0.5,
+    1,
+    2
+  ],
+  "materials": [
+    "FR-4 TG130",
+    "FR-4 TG155",
+    "Aluminum",
+    "Rogers",
+    "PTFE",
+    "Polyimide"
+  ],
+  "surface_finishes": [
+    "HASL",
+    "Lead-free HASL",
+    "ENIG",
+    "OSP"
+  ],
+  "solder_mask_colors": [
+    "Green",
+    "Red",
+    "Yellow",
+    "Blue",
+    "White",
+    "Black",
+    "Purple"
+  ],
+  "impedance_control": true,
+  "max_aspect_ratio": 10,
+  "note": "Standard capabilities reported. Advanced capabilities include minimum trace/space of 0.0762mm and minimum drill of 0.15mm. Hole-to-hole spacing inferred from design guidance (0.5mm minimum recommended). Some silkscreen text parameters based on character design specifications.",
+  "retrieved_utc": "2026-05-28T21:08:30Z",
+  "stackups": [
+    {
+      "name": "JLC04161H-7628",
+      "layers": 4,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.586,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": true,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2104,
+          "er": 4.4,
+          "material": "Nan Ya Plastics NP-155F 7628"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 1.065,
+          "er": 4.43,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2104,
+          "er": 4.4,
+          "material": "Nan Ya Plastics NP-155F 7628"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        }
+      ]
+    },
+    {
+      "name": "JLC06161H-3313",
+      "layers": 6,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.546,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": true,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0994,
+          "er": 4.1,
+          "material": "Nan Ya Plastics NP-155F 3313"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.55,
+          "er": 4.41,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1164,
+          "er": 4.16,
+          "material": "Nan Ya Plastics NP-155F 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.55,
+          "er": 4.41,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0994,
+          "er": 4.1,
+          "material": "Nan Ya Plastics NP-155F 3313"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        }
+      ]
+    },
+    {
+      "name": "JLC08161H-2116",
+      "layers": 8,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.6,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": true,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1164,
+          "er": 4.16,
+          "material": "Nan Ya Plastics NP-155F 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3,
+          "er": 4.41,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0764,
+          "er": 3.91,
+          "material": "Nan Ya Plastics NP-155F 1080"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0764,
+          "er": 3.91,
+          "material": "Nan Ya Plastics NP-155F 1080"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3,
+          "er": 4.41,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0764,
+          "er": 3.91,
+          "material": "Nan Ya Plastics NP-155F 1080"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0764,
+          "er": 3.91,
+          "material": "Nan Ya Plastics NP-155F 1080"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3,
+          "er": 4.41,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1164,
+          "er": 4.16,
+          "material": "Nan Ya Plastics NP-155F 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        }
+      ]
+    },
+    {
+      "name": "JLC10161H-2116",
+      "layers": 10,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.589,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": true,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        }
+      ]
+    },
+    {
+      "name": "JLC12161H-2313",
+      "layers": 12,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.642,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": true,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0964,
+          "er": 4.31,
+          "material": "SYTECH (Shengyi) S1000-2M 2313"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.15,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.15,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.15,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.15,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1194,
+          "er": 4.29,
+          "material": "SYTECH (Shengyi) S1000-2M 2116"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.15,
+          "er": 4.36,
+          "material": "Nan Ya Plastics NP-155F Core"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.0964,
+          "er": 4.31,
+          "material": "SYTECH (Shengyi) S1000-2M 2313"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://jlcpcb.com/impedance",
+  "stackups_note": "Layer-by-layer thicknesses via https://github.com/gsuberland/jlcpcb_autogenerated_stackups (normalised_json, extracted from jlcpcb.com)",
+  "stackups_retrieved_utc": "2026-08-26T04:00:10Z"
+}

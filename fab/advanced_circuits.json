@@ -1,0 +1,36 @@
+{
+  "found": true,
+  "vendor": "Advanced Circuits",
+  "source_url": "https://www.advancedpcb.com/en-us/solutions/advanced-pcbs/hdi-pcb-manufacturing/",
+  "min_trace_width_mm": 0.0699,
+  "min_trace_spacing_mm": 0.0699,
+  "min_drill_mm": 0.1016,
+  "min_annular_ring_mm": 0.0508,
+  "min_via_drill_mm": 0.1016,
+  "min_via_diameter_mm": 0.2032,
+  "min_board_edge_clearance_mm": 0.254,
+  "layer_counts": [],
+  "min_layers": 2,
+  "max_layers": 40,
+  "board_thickness_mm": [],
+  "materials": [
+    "FR4",
+    "Rogers",
+    "Polyimide"
+  ],
+  "surface_finishes": [
+    "ENIG",
+    "HASL",
+    "Immersion Silver"
+  ],
+  "solder_mask_colors": [],
+  "copper_weights_oz": [
+    0.5,
+    1,
+    2
+  ],
+  "note": "US quickturn HDI fab (Aurora, CO). Published: 2.75 mil (0.0699 mm) trace/space, laser microvias with 2 mil (0.0508 mm) annular ring (laser via diameter + 4 mil pad), stacked microvias, blind/buried vias, VIA-IN-PAD (resin-filled, copper-capped), laser direct imaging, sequential lamination, up to 40 layers, fine pitch to 0.3 mm, no minimum order. Laser drill size not published: 4 mil (0.1016 mm) assumed, industry-typical; via diameter derived as drill + 2x annular. Edge clearance and thickness not published; conservative placeholders. With via-in-pad this fab can escape 0.5 mm BGAs that channel-only routing cannot.",
+  "retrieved_utc": "2026-08-11T00:00:00Z",
+  "stackups": [],
+  "stackups_note": "No standard stackup table published on the capabilities/resources pages (checked 2026-08-25); the vendor quotes stackups per order. Fill with `procurement bare-pcb-stackup <url>` once a page or PDF is available."
+}
