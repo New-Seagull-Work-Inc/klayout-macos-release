@@ -46,9 +46,21 @@ program; the layouts it produces are yours, the program is not.
 `klayout` takes a KiCad project — schematic, unrouted board, footprints —
 and delivers a placed and routed board:
 
-- **Places** the parts (`kplace`, invoked automatically) and **routes**
-  every net on the layer count you ask for, through vias, with copper
-  pours for the ground and power planes it reserves.
+- **Places** the parts (`kplace`, invoked automatically) the way an
+  experienced layout engineer would, from the board alone: every chip
+  gets its decoupling and its two-pad satellites in rows along the
+  edge that carries their pins; chips cluster into functional blocks
+  (a regulator and its parts, a charger and its parts) ordered from
+  the input connector; a connector's circuit sits at the connector,
+  with the USB pair short and straight from the jack. Boards of four
+  copper layers and up are placed on both faces from the first
+  attempt; two-layer boards start single-sided and go to both faces
+  only when no single-sided attempt routes every net.
+  `--group-labeling` frames and names each block on the silkscreen
+  (`Battery charger (U3)`, `Boost converter (U10)`).
+- **Routes** every net on the layer count you ask for, through vias,
+  with copper pours for the ground and power planes it reserves, and
+  power rails at their IPC-2221 ampacity width.
 - **Signal integrity built in.** Differential pairs are detected from
   the net names and routed as coupled pairs to their standard's
   impedance and skew budget (USB, PCIe, MIPI CSI/DSI, LVDS, Ethernet).
@@ -63,8 +75,18 @@ and delivers a placed and routed board:
   meets every gate, printing a table of the trials so you can see why.
 - **Shows you the work as it happens** — the PCB Layout Cinema, a live
   view in your browser (below).
-- **Delivers the fab package**: gerbers, drill files, pick-and-place,
-  IPC-D-356 netlist, unless you ask it not to.
+- **Builds to your fab's floors.** `--fab NAME` raises every design
+  rule below the house's published minimums for the board's layer
+  count, writes its stackup into the board, and judges the input at
+  those floors too, so a footprint the house cannot etch is named as
+  the input's problem, not the router's.
+- **Delivers the fabrication package**: gerbers, drill files and maps,
+  IPC-D-356 netlist, a sourced BOM, pick-and-place, fab drawings, a
+  board render, the schematic as PDF, a copy of the design and a
+  SHA-256 manifest, unless you ask it not to.
+- **Keeps the console quiet.** A run prints one status line per
+  attempt (placing, routing pass, rip-up round, DRC, done) and the
+  verdict; everything else goes to `klayout.log`.
 
 ## Quick start
 
@@ -84,16 +106,74 @@ Keep `klayout` and `kplace` in the same directory: `klayout` runs
 
 ### What you get
 
-In the output directory:
+Everything a run produces lives in the output directory:
 
-- `<board>.kicad_pcb` — the placed and routed board, opening directly in
-  KiCad, with the copper pours filled and the fab's stackup written in.
-- `<board>-klayout-result.json` — the verdict: DRC and ERC counts,
-  `clean`, routing failures, every signal-integrity gate.
-- `klayout.log` — everything the run printed, including the trial table
-  and the impedance and skew reports.
-- `gerber-drill/` — gerbers, drill files, pick-and-place and IPC-D-356
-  (omit with `--no-fab`).
+```
+my-board-routed/
+  <board>.kicad_pcb            the placed and routed board: opens in KiCad,
+                               pours filled, the fab's stackup written in,
+                               designators straightened and kept off silk
+  <board>.kicad_pro, .kicad_prl, .kicad_sch, fp-lib-table, sym-lib-table,
+  <libs>.pretty/, <libs>.kicad_sym
+                               the rest of the project, copied beside the
+                               board so it opens as a whole; the project's
+                               DRC minimums raised to the fab's floors
+  <board>-klayout-result.json  the verdict (below)
+  klayout.log                  everything the run did: the trial table,
+                               placement and routing passes, the impedance,
+                               skew and reflection reports, DRC and ERC
+  placement-report.txt         boards that were placed: wirelength before
+                               and after, the pin pulls, each part's move
+                               (beside the board, or in the kept attempt's
+                               folder when that attempt placed it)
+  si-report/                   boards built on a fab's stackup: the copper
+                               as laid, per net — segments.csv, vias.csv,
+                               pads.csv — the reflection data an SI review
+                               starts from
+  fabrication/                 the manufacturing package (below);
+                               --gerber-dir moves it, --no-fab skips it
+  .input/                      a read-only copy of the input, judged by the
+                               same DRC at the fab's floors, so the verdict
+                               can separate the board's own violations from
+                               anything the router introduced
+  .att0/ … .att7/, .att0.log … the placement attempts, each a full project
+                               with that attempt's board and log (hidden
+                               dot-files; `ls -a`)
+  <board>.progress.json        the frame the PCB Layout Cinema is drawing
+```
+
+The fabrication package, in the layout a board house and an assembler
+both expect:
+
+```
+fabrication/
+  gerbers/            <board>-<Layer>.gbr for every copper, mask, silk and
+                      paste layer plus the outline, and <board>-job.gbrjob
+    drill/            <board>-PTH.drl, <board>-NPTH.drl (Excellon, mm), a
+                      PDF drill map per file, drill-report.rpt
+  electrical-test/    <board>.d356 — the IPC-D-356 netlist for bare-board test
+  assembly/           <board>-bom.csv — one row per reference: Reference,
+                      Value, Footprint, Quantity, Manufacturer, MPN,
+                      Datasheet, Lifecycle, Supplier, SKU, Product URL,
+                      Available, Verified On, Unit Price, DNP
+                      <board>-positions.csv — pick-and-place, both sides,
+                      mm, populated parts only
+                      drawings-svg/ — front and back fab drawings
+  documentation/      <board>-board-render.png (top view) and
+                      schematic/<board>.pdf
+  design/             the board, project, schematic, tables and libraries
+                      as sent to manufacture
+  manifest.json       every file with its size and SHA-256, the source
+                      board's hash, the kicad-cli version, the run's DRC counts
+```
+
+The BOM's sourcing columns come from the footprint's own fields
+(Manufacturer, MPN, Datasheet) when the schematic carries them, and
+otherwise from the parts library beside the fab library
+(`--parts-dir`): manufacturer, part number, lifecycle status, stock, the
+first authorized supplier with its SKU, the lowest-volume price and the
+date the record was verified. A part with no record keeps its row with
+those columns empty, so the BOM always lists every part on the board.
 
 ### The PCB Layout Cinema
 
@@ -138,7 +218,11 @@ All options are `klayout --help`. The ones you are likely to use:
 | `--grid`, `--track`, `--clearance`, `--via-size`, `--via-drill`, `--edge-clearance`, `--hole-clearance` (mm) | override the design rules read from the `.kicad_pro`. |
 | `--fab NAME` | the board house you will use: its floors become the minimum for every rule and its stackup is written into the board (see the fab library below). |
 | `--fab-dir DIR` | where the fab library is (default: `fab/` beside the binaries; `KLAYOUT_FAB_DIR` does the same; `none` runs without it). |
-| `--no-fab` | skip the gerber / drill / pick-and-place package. |
+| `--parts-dir DIR` | the parts library the BOM is sourced from (default: `components/` beside the fab library). |
+| `--group-labeling` | frame and name the functional blocks on the front silkscreen; off, the blocks pack as tightly as the rows allow and nothing is drawn. |
+| `--no-fab` | skip the fabrication package. |
+| `--gerber-dir DIR` | write the fabrication package somewhere else. |
+| `--split-ps` | split a board larger than a power supply into `<base>-PS` (the mains sheet) and `<base>-MB` (everything else) and route the two separately. |
 | `--si-layer-min F` | the share of a DDR lane member's copper that must stay on its home layer (default 0.90); `--si-any-layer` lifts the home-layer rule altogether. |
 | `--eight-angles-routing` | 90°/45° turns only, no any-angle shortcuts. Every board is tried this way first; only a board that ends below its gates is retried any-angle, and a DDR board that is complete and DRC-clean stays octilinear. |
 | `--arc-wiggles`, `--sine-wiggles` | the shape of length-matching meanders: arc accordions or sinusoids instead of rectangular bumps. |
@@ -213,7 +297,11 @@ within 10 %). Then:
 - `clean: true` in the result file — DRC 0 errors / 0 warnings / 0
   unconnected, schematic parity 0, ERC 0/0, no routing failures. A board
   that routes but is not clean is still written, with `*** NOT CLEAN`
-  and the counts in the log.
+  and the counts in the log. The result file also carries `fab_target`
+  (the house whose floors the board was built to), `gates_met`,
+  `si_pairs_missed`, `stitch_bonds`, the `placement_constraints` read
+  from the design file and any violations, and `outputs` — the path of
+  the fabrication package and of each of its parts.
 - **Violations that were already on the input board** are named as such:
   the tool runs the same DRC on the input (read-only) and the final
   message says how many of the reported errors and warnings were there

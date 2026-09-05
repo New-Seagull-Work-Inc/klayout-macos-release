@@ -8,6 +8,36 @@
   "min_annular_ring_mm": 0.1016,
   "min_via_drill_mm": 0.254,
   "min_board_edge_clearance_mm": 0.381,
+  "layer_rules": [
+    {
+      "layers": 2,
+      "min_trace_width_mm": 0.1524,
+      "min_trace_spacing_mm": 0.1524,
+      "min_drill_mm": 0.254,
+      "min_via_drill_mm": 0.254,
+      "min_annular_ring_mm": 0.127,
+      "min_board_edge_clearance_mm": 0.381
+    },
+    {
+      "layers": 4,
+      "min_trace_width_mm": 0.127,
+      "min_trace_spacing_mm": 0.127,
+      "min_drill_mm": 0.254,
+      "min_via_drill_mm": 0.254,
+      "min_annular_ring_mm": 0.1016,
+      "min_board_edge_clearance_mm": 0.381
+    },
+    {
+      "layers": 6,
+      "min_trace_width_mm": 0.127,
+      "min_trace_spacing_mm": 0.127,
+      "min_drill_mm": 0.2032,
+      "min_via_drill_mm": 0.2032,
+      "min_annular_ring_mm": 0.1016,
+      "min_board_edge_clearance_mm": 0.381
+    }
+  ],
+  "layer_rules_note": "Per service from docs.oshpark.com: 2-layer 6 mil trace/space, 10 mil drill, 5 mil annular ring; 4-layer 5 mil trace/space, 10 mil drill, 4 mil ring; 6-layer 5 mil, 8 mil drill, 4 mil ring. klayout raises the vendor-wide floors above to the entry for the board's copper count.",
   "layer_counts": [
     2,
     4,
