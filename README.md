@@ -12,8 +12,9 @@
 > JSON) are the entire distribution: there is no source tree, no
 > Makefile, and nothing here that can be compiled,
 > rebuilt, or modified. The example is design input for
-> the tool, not program source. The binaries are the only
-> form of the program you receive.
+> the tool, not program source. The `scripts/` folder holds
+> the report generators (Python, standard library only) —
+> the router itself is the binaries and nothing else.
 > Nothing to build here: route the included board with
 > `./klayout --input-dir example --output-dir out --resize-pcb`.
 > Keep both binaries in the same directory: klayout invokes
@@ -68,6 +69,15 @@ and delivers a placed and routed board:
   lane is routed as a bundle on one inner layer with its strobe pair,
   length-matched to the strobe, at the standard's single-ended and
   differential impedance on the fab's real stackup.
+- **Judges the signal integrity like a reviewer would.** DDR groups are
+  gated on two tiers — the standard's spec (what training absorbs) and
+  a shipped-quality target — and their impedance is judged against the
+  DRAM's *legal* termination bins (LPDDR4 ODT 40/48/60/80/120/240 Ω) so
+  the report names the firmware setting the copper needs. Home layers
+  are ranked by the impedance they can actually carry on the fab's
+  stackup (a 6-layer board's DDR lands on the outer layers, as the
+  reference SoMs do). The **SI sign-off page** (below) adds eye
+  diagrams, per-net openings, a timing budget and via-stub analysis.
 - **Checks its own work.** Every board goes through KiCad's own DRC
   and ERC (`kicad-cli`); the verdict is `clean` only at zero errors,
   zero warnings, zero unconnected items, zero schematic-parity findings.
@@ -317,6 +327,69 @@ within 10 %). Then:
 KiCad's own DRC is the ground truth; open the board in KiCad or run
 `kicad-cli pcb drc` on it yourself to confirm.
 
+## The SI and PI sign-off pages — `scripts/`
+
+Beside the binaries the package carries the report generators (Python 3,
+no packages needed). They read a routed output directory and write
+self-contained HTML you can review, share or archive:
+
+```
+python3 scripts/signoff.py    my-board-routed -o my-board-routed/signoff-si.html
+python3 scripts/signoff_pi.py my-board-routed -o my-board-routed/signoff-pi.html
+python3 scripts/si_report.py  my-board-routed my-board-routed/si-report/si-report.pdf
+```
+
+Several output directories on one command line give one page with a
+column per board (a 6/8/10/12-layer comparison, say). `--label TEXT`
+names the build on the page. `si_report.py` (the per-segment impedance
+report as PDF) applies to boards with SI groups — pairs or DDR buses —
+and says so on a board without them.
+
+**`signoff-si.html`** — the signal-integrity sign-off:
+
+- a verdict per board — *Signed off* (no open condition), *Conditional*
+  (every gate in spec, a legal termination for every group, but a
+  shipped-quality target missed) or *Not ready* (a DRC/ERC finding, a
+  spec miss, or an impedance outside every legal bin) — with the
+  bring-up settings it was judged at (DQ / CA ODT and PHY drive);
+- the gates table: DRC/ERC, every DDR group's worst skew against its
+  target and spec tiers, home layers and shares, the as-laid impedance
+  of pairs and members, the reflection judge's count;
+- **eye diagrams**: PRBS-7 at the interface's rate through the copper
+  as laid (every segment a transmission line at its own impedance;
+  every reflection), write and read direction, worst-case opening by
+  peak-distortion analysis at the point the DRAM trains to, against the
+  JEDEC receiver mask (LPDDR4 tDIVW × VdIVW) net of a jitter budget —
+  every eye marked PASS/FAIL, a table of all nets, the worst per group
+  drawn; `KLAYOUT_DATA_RATE` (MT/s) and `KLAYOUT_JITTER_UI` set the rate
+  and the jitter allowance;
+- a timing budget per group in picoseconds (UI − mask − jitter − static
+  skew − eye closure = margin), the worst through-via stub against the
+  data rate's harmonics, and the method statement a reviewer expects;
+- **conditions for sign-off**: every missed gate as *measured →
+  required*, with the remedy — nothing on the page is typed in.
+
+**`signoff-pi.html`** — the power-integrity sign-off: one row per rail
+declared in `power.json` (declared load, IPC-2221 ampacity width against
+the width laid, worst IR drop against the budget and its load, plane-fed
+or unmodeled), plane bonds, and the conditions (a rail over budget, laid
+narrow, or not modelable for lack of supply/load pads).
+
+**Field-solver measurements (optional).** `scripts/fullwave/` drives
+openEMS through Antmicro's gerber2ems and si-wrapper to measure a net's
+impedance, loss and crosstalk on the real copper; when its
+`si-report/fullwave.json` is present, the SI page shows the measured
+impedance beside the router's model, the measured eye (loss and
+crosstalk) beside the bounce eye, and |S| and TDR figures. Those tools
+are external installs (openEMS, gerbv, KiCad's Python) and are not part
+of this package; the `README.md` in `scripts/fullwave/` describes the
+recipe and its pitfalls.
+
+**`progress.py`** turns a history of sign-off runs (`signoff.py
+--record history.json`) into a build-by-build progress page: verdict
+timeline, metric charts, an eye per board per build, changes since the
+previous build marked.
+
 ## Requirements
 
 - The platform named at the top of this file.
@@ -324,6 +397,7 @@ KiCad's own DRC is the ground truth; open the board in KiCad or run
   it the board still routes, but the DRC / ERC gates, the pour
   verification and the fab package are skipped, and the verdict says so.
 - Both binaries in the same directory.
+- **Python 3** for the sign-off pages (`scripts/`); no packages beyond the standard library.
 
 ## Limitations
 
