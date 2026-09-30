@@ -139,7 +139,10 @@ my-board-routed/
   si-report/                   boards built on a fab's stackup: the copper
                                as laid, per net — segments.csv, vias.csv,
                                pads.csv — the reflection data an SI review
-                               starts from
+                               starts from, and si-report.pdf built on it
+                               (reflections per DDR net; per serial lane its
+                               eye at the receiver and its impedance along
+                               the lane)
   fabrication/                 the manufacturing package (below);
                                --gerber-dir moves it, --no-fab skips it
   .input/                      a read-only copy of the input, judged by the
@@ -169,8 +172,11 @@ fabrication/
                       <board>-positions.csv — pick-and-place, both sides,
                       mm, populated parts only
                       drawings-svg/ — front and back fab drawings
-  documentation/      <board>-board-render.png (top view) and
-                      schematic/<board>.pdf
+  documentation/      <board>-board-render.png (top view),
+                      schematic/<board>.pdf, si-report.pdf (a copy of
+                      si-report/si-report.pdf), signoff-si.html and
+                      signoff-pi.html — the SI documents, written after
+                      the verdict and listed in the manifest
   design/             the board, project, schematic, tables and libraries
                       as sent to manufacture
   manifest.json       every file with its size and SHA-256, the source
@@ -330,8 +336,13 @@ KiCad's own DRC is the ground truth; open the board in KiCad or run
 ## The SI and PI sign-off pages — `scripts/`
 
 Beside the binaries the package carries the report generators (Python 3,
-no packages needed). They read a routed output directory and write
-self-contained HTML you can review, share or archive:
+no packages needed). klayout runs them itself at the end of every run —
+`si-report/si-report.pdf` and, in the fabrication package's
+`documentation/`, `si-report.pdf`, `signoff-si.html` and
+`signoff-pi.html` — and prints the lane table on the console (per pair:
+home layer, skew against budget, differential impedance as laid, share
+of the copper within 10 % of the target). To re-run them by hand, or to
+compare several output directories on one page:
 
 ```
 python3 scripts/signoff.py    my-board-routed -o my-board-routed/signoff-si.html
@@ -341,9 +352,15 @@ python3 scripts/si_report.py  my-board-routed my-board-routed/si-report/si-repor
 
 Several output directories on one command line give one page with a
 column per board (a 6/8/10/12-layer comparison, say). `--label TEXT`
-names the build on the page. `si_report.py` (the per-segment impedance
-report as PDF) applies to boards with SI groups — pairs or DDR buses —
-and says so on a board without them.
+names the build on the page. `si_report.py` (the PDF) applies to boards
+with SI groups — pairs or DDR buses — and says so on a board without
+them. A pair whose ends it recognises as a serial link — a MIPI CSI-2
+sensor into a serializer or SoC, a V3Link forward channel (`serial_links.py`
+lists the parts) — is judged by that link's own standard: the eye at the
+receiver at the parts' data rate, worst corner of their datasheet limits,
+against the receiver's threshold window, with the lane's differential
+impedance profile above it; every other SI net gets the DDR reflection
+judge.
 
 **`signoff-si.html`** — the signal-integrity sign-off:
 

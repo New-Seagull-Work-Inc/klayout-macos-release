@@ -7,7 +7,11 @@ lossless-transmission-line bounce simulation (method of characteristics —
 each segment is a delay line at its own as-laid Z0; no SPICE needed for
 ideal lines), and renders one PDF: a summary table plus, per net, the
 impedance profile along the path and the simulated edge at the receiver,
-judged against overshoot/ringback thresholds.
+judged against overshoot/ringback thresholds. Nets that belong to a serial
+link (a camera's MIPI CSI-2 lanes, a serializer's forward channel — recognised
+from the parts at the pair's ends by serial_links.py beside this script) are
+not judged as DDR: they get eye pages instead, at the link's data rate and the
+receiver's own window, worst corner of the transmitter and receiver limits.
 
 Dependency-free by design (no numpy/matplotlib/ngspice): the solver is a
 few hundred waves in Python lists and the PDF is written directly with
@@ -128,7 +132,10 @@ def chain(net, segs, vias, pads):
         return None, 0.0
     ladder, total = [], 0.0
     lastz = None
-    pairleg = any(r.get('role') == '2' for r in order)  # a pair leg: the export's Z is differential
+    # a pair leg (role 1 = P, 2 = N in the router's export): the export's Z is
+    # differential. Testing role '2' alone left every P leg at the full
+    # differential impedance (2x its odd-mode Z) in the bounce model.
+    pairleg = any(r.get('role') in ('1', '2') for r in order)
     for row in order:
         L = float(row['len_mm'])
         z = float(row['z_ohm'])
@@ -148,20 +155,29 @@ def chain(net, segs, vias, pads):
     return ladder, total
 
 
-def bounce(ladder, rs=RS, rt=RT):
+def bounce(ladder, rs=RS, rt=RT, vsrc=None, vterm=None, trise=None, tstop=None):
     """Exact lossless-TL lattice sim of the ladder; returns (t_ps[], v_recv[],
-    v_drv[]). Each line holds right/left waves in delay queues."""
+    v_drv[]). Each line holds right/left waves in delay queues.
+    Defaults are the LPDDR4 case: a 0 -> VDDQ step with a 100 ps linear edge,
+    the load terminated to VDDQ (POD). vsrc: the source's open-circuit step;
+    vterm: the voltage the load termination returns to (0 = ground, which is
+    also the virtual ground of a differential termination in odd mode);
+    trise: 0-100 % linear edge, ps; tstop: simulated time, ps."""
     from collections import deque
+    vsrc = VDDQ if vsrc is None else vsrc
+    vterm = VDDQ if vterm is None else vterm
+    trise = TRISE_PS if trise is None else trise
+    tstop = TSTOP_PS if tstop is None else tstop
     dt = max(1.0, min(d for _, d, _ in ladder) / 2.0)
     lines = []
     for z, d, _ in ladder:
         n = max(1, int(round(d / dt)))
         lines.append({'z': z, 'r': deque([0.0] * n), 'l': deque([0.0] * n)})
-    steps = int(TSTOP_PS / dt)
+    steps = int(tstop / dt)
     t, vr, vd = [], [], []
     for k in range(steps):
         now = k * dt
-        vs = VDDQ * min(1.0, now / TRISE_PS)
+        vs = vsrc * min(1.0, now / trise)
         z1 = lines[0]['z']
         # driver boundary: incident from the left line's returning wave
         refl_in = lines[0]['l'][0]
@@ -175,7 +191,7 @@ def bounce(ladder, rs=RS, rt=RT):
         # Thevenin source at the load injects VDDQ*Zn/(RT+Zn); with a
         # ground termination the steady state was a 0.66 V divider,
         # below VIH forever, and every net failed the mask.
-        bwave = gl * inc + VDDQ * zn / (rt + zn)  # wave launched left
+        bwave = gl * inc + vterm * zn / (rt + zn)  # wave launched left
         # the node voltage is BOTH waves: inc*(1+gl) drops the
         # termination source's share and read 0.5 V at DC (the sum
         # solves to VDDQ exactly)
@@ -236,6 +252,10 @@ class PDF:
 
     def text(self, x, y, s, size=9, bold=False):
         f = '/F2' if bold else '/F1'
+        # base-14 Helvetica is Latin-1: spell the symbols the parts' notes use
+        s = (s.replace('Ω', 'ohm').replace('—', '-').replace('–', '-').replace('±', '+-')
+              .replace('·', '.').replace('→', '->').replace('≤', '<=').replace('≥', '>=')
+              .encode('latin-1', 'replace').decode('latin-1'))
         s = s.replace('\\', r'\\').replace('(', r'\(').replace(')', r'\)')
         self.cmd(f'BT {f} {size} Tf {x:.1f} {y:.1f} Td ({s}) Tj ET')
 
@@ -307,7 +327,7 @@ def plot(pdf, x0, y0, w, h, xs, ys, xlab, ylab, ymin, ymax, extra=None,
     pdf.text(x0 - 6, y0 + h + 4, ylab, 7)
     if not xs:
         return
-    xmax = max(xs) or 1.0
+    xmax = max(list(xs) + [a for a, _ in (extra or [])]) or 1.0  # both traces fit
 
     def X(v):
         return x0 + w * v / xmax
@@ -326,6 +346,67 @@ def plot(pdf, x0, y0, w, h, xs, ys, xlab, ylab, ymin, ymax, extra=None,
         pdf.poly([(X(a), Y(b)) for a, b in extra], 0.6, (0.55, 0.55, 0.9))
     pdf.poly([(X(a), Y(b)) for a, b in zip(xs, ys)], 0.9, (0.1, 0.1, 0.1))
     pdf.text(x0 + w - 24, y0 - 14, f'{xmax:.1f}', 6)
+
+
+def lane_z(lane_lad, L, z_pair):
+    """The differential impedance of a lane along its path, from the two
+    legs' ladders (odd-mode per leg x 2): per leg [(mm, Zdiff)] steps for
+    the drawing, and min / length-median / max plus the share of the
+    copper within +-10 % of the target. None without both legs."""
+    if L['p'] not in lane_lad or L['n'] not in lane_lad:
+        return None
+    out = {'steps': {}}
+    runs = []
+    for leg in ('p', 'n'):
+        xs, zs, run = [], [], 0.0
+        for z, _, mm in lane_lad[L[leg]][0]:
+            xs += [run, run + mm]; zs += [2 * z, 2 * z]; run += mm
+            runs.append((2 * z, mm))
+        out['steps'][leg] = (xs, zs)
+    tot = sum(mm for _, mm in runs) or 1.0
+    w = sorted(runs); acc = 0.0; med = w[-1][0]
+    for z, mm in w:
+        acc += mm
+        if acc >= tot / 2: med = z; break
+    out['min'] = min(z for z, _ in runs); out['max'] = max(z for z, _ in runs); out['med'] = med
+    out['within'] = sum(mm for z, mm in runs if abs(z - z_pair) <= 0.1 * z_pair) / tot
+    out['len'] = tot / 2.0
+    # the reflection figures an SI review states: the peak reflection
+    # coefficient of the lane against its reference impedance,
+    # |Gamma| = |Z - Z0| / (Z + Z0), and the return loss it implies,
+    # RL = -20 log10 |Gamma| (dB); a step of +-10 % is |Gamma| 0.05, RL 26 dB
+    gmax = max(abs(z - z_pair) / (z + z_pair) for z, _ in runs) if runs else 0.0
+    out['gamma'] = gmax
+    out['rl_db'] = -20 * math.log10(gmax) if gmax > 1e-6 else 99.0
+    return out
+
+
+def eye_plot(pdf, x0, y0, w, h, e):
+    """The eye over two UI: PRBS traces (grey), the zero line, and for a
+    thresholded receiver the +-VIDTH window at the sampling instant — the
+    inner box is setup+hold, the outer one adds the transmitter's skew
+    allowance (serial_links._analyse)."""
+    span = max(abs(e['vlo']), abs(e['vhi'])) * 1.25 or 0.1
+    def X(u): return x0 + u / 2.0 * w
+    def Y(v): return y0 + (v + span) / (2 * span) * h
+    pdf.line(x0, y0, x0 + w, y0); pdf.line(x0, y0, x0, y0 + h)
+    for u in (0, 0.5, 1, 1.5, 2):
+        pdf.line(X(u), y0, X(u), y0 - 3); pdf.text(X(u) - 4, y0 - 12, f'{u:g}', 6)
+    pdf.text(x0 + w / 2 - 30, y0 - 24, 'UI (2 shown)', 7)
+    for mv in (-span, -span / 2, 0, span / 2, span):
+        pdf.line(x0 - 3, Y(mv), x0, Y(mv)); pdf.text(x0 - 30, Y(mv) - 2, f'{1000*mv:.0f}', 6)
+    pdf.text(x0 - 6, y0 + h + 6, 'mV differential at the receiver', 7)
+    pdf.line(x0, Y(0), x0 + w, Y(0), 0.3, (0.6, 0.6, 0.6))
+    for seg in e['traces']:
+        pdf.poly([(X(u), Y(v)) for u, v in seg], 0.5, (0.45, 0.45, 0.45))
+    if e['vth'] > 0:
+        c = e['samp_ui']
+        for (a, b2, wd, rgb) in ((c - e['setup_ui'], c + e['hold_ui'], 0.6, (0.8, 0.4, 0.4)),
+                                  (c - e['box_ui'] / 2, c + e['box_ui'] / 2, 1.0, (0.75, 0.1, 0.1))):
+            pts = [(X(a), Y(e['vth'])), (X(b2), Y(e['vth'])), (X(b2), Y(-e['vth'])),
+                   (X(a), Y(-e['vth'])), (X(a), Y(e['vth']))]
+            pdf.poly(pts, wd, rgb)
+        pdf.text(X(c) - 40, Y(e['vth']) + 4, f"receiver window +-{1000*e['vth']:.0f} mV", 6)
 
 
 def main():
@@ -349,6 +430,29 @@ def main():
         ladder, length = chain(net, bynet[net], vias, pads)
         if ladder:
             ladders[net] = (ladder, length)
+    # Serial links: the pairs whose ends are a known transmitter and
+    # receiver (serial_links.PROFILES) are judged by their own standard
+    # (eye at the receiver) and kept out of the DDR ODT judge below. Needs
+    # the router's verdict JSON for the pair list; without it (or without
+    # the module) the report is the DDR one for every net.
+    links, lane_nets, link_note, lane_lad, z_pair = None, set(), '', {}, 100.0
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import json
+        import serial_links as SL
+        resj = next((os.path.join(outdir, f) for f in sorted(os.listdir(outdir))
+                     if f.endswith('-klayout-result.json')), None)
+        if resj:
+            b = {'dir': outdir, 'res': json.load(open(resj)), 'has_report': True}
+            det = SL.detect(b)
+            lane_nets = set(det['nets'])
+            links = SL.link_eyes(b, det) if det['links'] else None
+            lane_lad = SL._ladders(b, det) if det['links'] else {}  # per leg: (z_leg, ps, mm) runs
+            z_pair = float(((b['res'].get('si') or {}).get('z_target_pair')) or 100.0)
+        else:
+            link_note = 'no verdict JSON: serial links not recognised'
+    except Exception as ex:
+        link_note = f'serial links not judged ({ex})'
     # ODT judge: one legal (PHY drive, DRAM ODT) setting per group; a group
     # passes with the setting that clears the most nets, then the least
     # overshoot, then the strongest termination. Candidates: the ODT bins
@@ -366,7 +470,7 @@ def main():
         return w[-1][0]
     settings, results = {}, []
     for grp in ('DQ', 'CA'):
-        nets = [n for n in ladders if group_of(n) == grp]
+        nets = [n for n in ladders if group_of(n) == grp and n not in lane_nets]
         if not nets:
             continue
         zmed = sorted(median_z(ladders[n][0]) for n in nets)[len(nets) // 2]
@@ -394,10 +498,14 @@ def main():
     pdf.text(50, 750, 'SI reflection report', 16, True)
     pdf.text(50, 734, time.strftime('%Y-%m-%d %H:%M') + '   ' +
              os.path.abspath(outdir), 8)
-    pdf.text(50, 716, f'step 0-{VDDQ} V, {TRISE_PS:.0f} ps rise; ODT to VDDQ (POD); '
-             f'lossless TL bounce model; pair legs at odd-mode Z; settings chosen '
-             f'from the LPDDR4 legal bins per group:', 8)
     yy = 716
+    if settings:
+        pdf.text(50, yy, f'DDR nets: step 0-{VDDQ} V, {TRISE_PS:.0f} ps rise; ODT to VDDQ (POD); '
+                 f'lossless TL bounce model; pair legs at odd-mode Z; settings chosen '
+                 f'from the LPDDR4 legal bins per group:', 8)
+    else:
+        pdf.text(50, yy, 'no DDR nets: every SI net on this board belongs to a serial link '
+                 '(eyes below)' + (f' — {link_note}' if link_note else ''), 8)
     for grp, (rs, rt, np_, nn, zmed) in settings.items():
         yy -= 12
         pdf.text(60, yy, f'{grp}: PHY drive {rs:.0f} ohm, DRAM ODT {rt:.0f} ohm per leg '
@@ -405,17 +513,69 @@ def main():
                  f'{"; pairs 2x = %.0f ohm diff" % (2 * rt) if grp == "DQ" or grp == "CA" else ""}) '
                  f'-- {np_}/{nn} nets pass, group median line Z {zmed:.0f} ohm', 8)
     setting_line = '  '.join(f'{g}: drive {rs:.0f}/ODT {rt:.0f} ({np_}/{nn})' for g, (rs, rt, np_, nn, _) in settings.items())
-    pdf.text(50, yy - 12, f'masks: overshoot <= {OVERSHOOT_MAX} V, ringback '
-             f'must hold above VIH {VIH} V after the first crossing', 8)
-    y = yy - 40
-    pdf.text(50, y, 'net', 8, True)
-    pdf.text(230, y, 'len mm', 8, True)
-    pdf.text(280, y, 'Z min-max', 8, True)
-    pdf.text(360, y, 'overshoot V', 8, True)
-    pdf.text(430, y, 'ringback V', 8, True)
-    pdf.text(495, y, 'verdict', 8, True)
-    y -= 4
-    pdf.line(50, y, 560, y, 0.4)
+    if settings:
+        pdf.text(50, yy - 12, f'masks: overshoot <= {OVERSHOOT_MAX} V, ringback '
+                 f'must hold above VIH {VIH} V after the first crossing', 8)
+        yy -= 12
+    # Model, standards and parameters — every number the verdicts rest on,
+    # with its source, so a reviewer can check the report against the
+    # standard and the datasheets rather than trust it.
+    yy -= 22
+    pdf.text(50, yy, 'Model, standards and parameters', 9, True)
+    lines = [
+        'Channel: each segment a lossless transmission line at the router\'s as-laid impedance (its stackup model on the finished copper);',
+        f'  method of characteristics, exact for ideal lines; propagation {PS_MM_MICRO} ps/mm microstrip, {PS_MM_STRIP} ps/mm stripline;',
+        '  no dielectric or copper loss, no crosstalk, no package or connector models: the report is the routing\'s contribution alone.',
+        'Impedance: the industry tolerance for controlled impedance is +-10 % of the target (IPC-2221/IPC-6012 impedance-control class);',
+        '  reflection coefficient |Gamma| = |Z - Z0| / (Z + Z0) against the lane\'s reference Z0, return loss RL = -20 log10 |Gamma| dB',
+        '  (a +-10 % step is |Gamma| 0.05, RL 26 dB; the peak over the lane is reported).',
+    ]
+    if settings:
+        lines += [
+            f'DDR (JEDEC JESD209-4, LPDDR4): VDDQ {VDDQ} V, pseudo-open-drain driver, {TRISE_PS:.0f} ps edge; PHY drive strength',
+            f'  {"/".join(f"{x:.0f}" for x in PHY_DRIVE)} ohm (ZQ-calibrated) and DRAM ODT {"/".join(f"{x:.0f}" for x in DRAM_ODT)} ohm per leg (MR11 DQ/CA ODT);',
+            f'  masks: overshoot <= {OVERSHOOT_MAX} V above VDDQ (JESD209-4 overshoot amplitude limit), ringback above VIH {VIH} V = Vref + 0.2 VDDQ.',
+        ]
+    if links:
+        seen = set()
+        for L in links:
+            if 'error' in L: continue
+            if L['kind'] == 'csi2':
+                t, r = L['txp'], L['rxp']
+                key = (L['tx'], L['rx'])
+                if key in seen: continue
+                seen.add(key)
+                lines += [
+                    f"MIPI CSI-2 D-PHY v{t.get('dphy', '1.2')} (MIPI Alliance): HS transmitter clock-to-data skew +-{SL.DPHY_TSKEW_TX_UI:g} UI; the lane is judged at",
+                    f"  {L['mbps']:.0f} Mbps (the slower of the two parts), receiver window +-{1000*r['vidth']:.0f} mV over tSETUP {r['tsetup_ui']:g} + tHOLD {r['thold_ui']:g} UI.",
+                    f"  TX {L['tx']}: VOD {1000*t['vod_min']:.0f}-{1000*t.get('vod_max', t['vod_min']):.0f} mV, ZOS {'/'.join(f'{z:g}' for z in t['zos'])} ohm, tr/tf 20-80 % {'/'.join(f'{x:g}' for x in t['tr2080_ps'])} ps",
+                    f"    - {L.get('tx_src', '')}",
+                    f"  RX {L['rx']}: ZID {'/'.join(f'{z:g}' for z in r['zid'])} ohm (100 typ), VIDTH/VIDTL +-{1000*r['vidth']:.0f} mV, up to {r['max_mbps']:.0f} Mbps",
+                    f"    - {L.get('rx_src', '')}",
+                    '  Worst corner = every combination of ZOS, ZID and edge rate at minimum VOD; the eye must clear the window at the',
+                    '  clock-defined sampling instant with the transmitter skew allowance on both sides.',
+                ]
+            else:
+                t = L['txp']
+                if L['tx'] in seen: continue
+                seen.add(L['tx'])
+                lines += [
+                    f"TI V3Link forward channel ({L['mode']}): {t['mbps']/1000:.2f} Gbps, output {1000*(t['vout_se_min'] if L['mode']=='coax' else t['vod_pp_min']):.0f} mV p-p min, "
+                    f"termination {t['rt_se']:g} ohm, tr/tf 20-80 % {t['tr2080_ps']:g} ps, jitter {t['jitter_ui']:g} UI - {L.get('tx_src', '')}",
+                ]
+    for ln in lines:
+        yy -= 10
+        pdf.text(50, yy, ln[:150], 6.5)
+    y = yy - 28
+    if results:
+        pdf.text(50, y, 'net', 8, True)
+        pdf.text(230, y, 'len mm', 8, True)
+        pdf.text(280, y, 'Z min-max', 8, True)
+        pdf.text(360, y, 'overshoot V', 8, True)
+        pdf.text(430, y, 'ringback V', 8, True)
+        pdf.text(495, y, 'verdict', 8, True)
+        y -= 4
+        pdf.line(50, y, 560, y, 0.4)
     for net, ladder, length, *_r in results:
         over, ring, settle, ok = _r[2], _r[3], _r[4], _r[5]
         y -= 12
@@ -429,6 +589,79 @@ def main():
         pdf.text(360, y, f'{over:.3f}', 8)
         pdf.text(430, y, f'{ring:.3f}', 8)
         pdf.text(495, y, 'PASS' if ok else 'FAIL', 8, True)
+    nlink_ok = nlink = 0
+    if links:
+        # summary table: one row per lane, the link's own verdict
+        if y < 140:
+            pdf.page(); y = 740
+        y -= 24
+        pdf.text(50, y, "Serial links — eye at the receiver, worst corner of the parts' limits", 9, True)
+        y -= 14
+        pdf.text(50, y, link_note if link_note else
+                 'differential P-N from the as-laid impedance of both legs (skew and leg mismatch '
+                 'included); lossless, reflections only; PRBS-7 drawn, worst-case pattern judged', 8)
+        y -= 12
+        pdf.text(50, y, f'Zdiff: the router\'s stackup model on the laid copper, differential, target {z_pair:.0f} ohm; '
+                 f'"in 10%" = share of the lane\'s length within +-10 % of it', 8)
+        y -= 16
+        for x, h_ in ((50, 'pair'), (200, 'link'), (300, 'Zdiff min/med/max'), (378, 'in 10%'),
+                      (408, '|G| / RL dB'), (455, 'eye mV'), (487, 'width UI'), (520, 'margin'), (555, 'verdict')):
+            pdf.text(x, y, h_, 7, True)
+        y -= 4
+        pdf.line(50, y, 590, y, 0.4)
+        for L in links:
+            y -= 12
+            if y < 60:
+                pdf.page(); y = 740
+            pdf.text(50, y, L['pair'][:38], 6)
+            pdf.text(200, y, L['label'][:24], 6)
+            if 'error' in L:
+                pdf.text(300, y, L['error'][:40], 7); continue
+            zz = lane_z(lane_lad, L, z_pair)
+            if zz:
+                pdf.text(300, y, f"{zz['min']:.0f} / {zz['med']:.0f} / {zz['max']:.0f}", 7)
+                pdf.text(378, y, f"{100*zz['within']:.0f}%", 7)
+                pdf.text(408, y, f"{zz['gamma']:.2f} / {zz['rl_db']:.0f}", 7)
+            e = L['eye']; nlink += 1
+            pdf.text(450, y, f"{1000*e['height_v']:.0f}", 7)
+            pdf.text(485, y, f"{e['width_ui']:.2f}", 7)
+            pdf.text(520, y, f"{e['margin_ui']:+.2f}" if e['vth'] > 0 else '-', 7)
+            v = 'PASS' if L['ok'] else ('FAIL' if L['ok'] is not None else 'info')
+            nlink_ok += 1 if L['ok'] else 0
+            pdf.text(555, y, v, 7, True)
+        # eye pages, two lanes per page
+        slot = 2
+        for L in links:
+            if 'error' in L:
+                continue
+            if slot == 2:
+                pdf.page(); slot = 0
+            top = 750 - slot * 370
+            slot += 1
+            e = L['eye']
+            pdf.text(50, top, L['pair'], 11, True)
+            pdf.text(50, top - 14, f"{L['label']}: {L['tx']} -> {L['rx'] or 'connector'}; "
+                     f"UI {L['ui_ps']:.0f} ps; flight {L['flight_ps']:.0f} ps, P-N skew {L['skew_ps']:.0f} ps"
+                     + (f"; clock-to-data {L['shift_ps']:+.0f} ps" if L.get('shift_ps') else ''), 8)
+            verdict = 'PASS' if L['ok'] else ('FAIL' if L['ok'] is not None else 'informative')
+            pdf.text(50, top - 26, f"worst corner: {e['corner']}", 8)
+            pdf.text(50, top - 38, f"eye height {1000*e['height_v']:.0f} mV, width {e['width_ui']:.2f} UI" +
+                     (f", margin {e['margin_ui']:+.2f} UI at the receiver's window "
+                      f"(+-{1000*e['vth']:.0f} mV over {e['box_ui']:.2f} UI)" if e['vth'] > 0 else
+                      f" (reference {L.get('ref_mv', 0):.0f} mV at the serializer output)") +
+                     f" - {verdict}", 8, True)
+            zz = lane_z(lane_lad, L, z_pair)
+            if zz:
+                pdf.text(50, top - 50, f"Zdiff along the lane: {zz['min']:.0f}-{zz['max']:.0f} ohm, median {zz['med']:.0f}, "
+                         f"{100*zz['within']:.0f}% of {zz['len']:.1f} mm within +-10% of {z_pair:.0f} ohm; "
+                         f"peak |Gamma| {zz['gamma']:.2f}, return loss {zz['rl_db']:.0f} dB  (P dark, N blue)", 8)
+                xp, zp = zz['steps']['p']; xn, zn = zz['steps']['n']
+                plot(pdf, 90, top - 130, 430, 60, xp, zp, 'mm', 'Zdiff ohm',
+                     max(0.0, z_pair * 0.5), z_pair * 1.5, extra=list(zip(xn, zn)),
+                     hlines=((z_pair, f'{z_pair:.0f}'),))
+                eye_plot(pdf, 90, top - 325, 430, 160, e)
+            else:
+                eye_plot(pdf, 90, top - 330, 430, 255, e)
     for net, ladder, length, t, vr, over, ring, settle, ok in results:
         pdf.page()
         pdf.text(50, 750, net, 13, True)
@@ -451,8 +684,8 @@ def main():
                      (VDDQ + OVERSHOOT_MAX, 'overshoot max')))
     pdf.save(pdfp)
     npass = sum(1 for r in results if r[8])
-    print(f'si-report: {len(results)} net(s), {npass} PASS, ' + (f'[{setting_line}] ' if settings else '') +
-          f'{len(results)-npass} FAIL -> {pdfp}')
+    print(f'si-report: {len(results)} DDR net(s), {npass} PASS, ' + (f'[{setting_line}] ' if settings else '') +
+          f'{len(results)-npass} FAIL; {nlink} serial lane(s), {nlink_ok} PASS -> {pdfp}')
 
 
 if __name__ == '__main__':

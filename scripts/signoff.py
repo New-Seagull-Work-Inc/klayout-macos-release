@@ -18,6 +18,7 @@ import sys, os, json, csv, re, html, time, subprocess, math
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import si_report as SR
+import serial_links as SL
 
 ODT = (40, 48, 60, 80, 120, 240)                # LPDDR4 per-leg bins (MR11)
 LEGAL_SE = (40, 48, 60, 80)                       # bins a member line is matched to
@@ -31,6 +32,9 @@ REMEDY = {  # gate -> the unit that closes it (kept honest by hand as units land
     'member_bins':   'Members in two bins: size the ball-field boxes to the array, then widen uniformly (fair ladder).',
     'member_bin':    'Member outside every legal bin: per-landed-layer width on this stack.',
     'drc':           'DRC/ERC must be zero: rerun after the responsible unit; warnings are in scope.',
+    'pair_skew':     'Intra-pair skew over budget: stage-1 pair repair and tuning (the pair phase does not hand over until it fits).',
+    'pair_share':    'Members on different layers for most of the run: re-lay the pair so both legs share one layer (coupled, one impedance class).',
+    'link_eye':      'Serial-link eye under the receiver window: shorten the clock-to-data flight difference in the bus, or the reflections on the lane.',
 }
 
 
@@ -50,6 +54,10 @@ def read_dir(d):
     si = res.get('si') or {}
     b['layers'] = si.get('copper_layers') or 0
     b['short'] = f"{b['layers']}L" if b['layers'] else b['name']
+    try:  # serial links (camera CSI-2, serializer forward channels): judged by their own standards, not as DDR
+        b['links'] = SL.detect(b) if b['has_report'] else {'links': [], 'nets': set(), 'unknown': []}
+    except Exception as ex:  # a board file we cannot parse leaves the links unjudged, not the page broken
+        b['links'] = {'links': [], 'nets': set(), 'unknown': [], 'error': str(ex)}
     return b
 
 
@@ -65,10 +73,15 @@ def judge(b):
     for s in segs:
         bynet.setdefault(s['net'], []).append(s)
     ladders = {}
+    skip = (b.get('links') or {}).get('nets', set())
     for net in sorted(bynet):
+        if net in skip:  # a serial link: the LPDDR4 judge does not apply
+            continue
         ladder, length = SR.chain(net, bynet[net], vias, pads)
         if ladder:
             ladders[net] = ladder
+    if not ladders:
+        return None
     def group_of(net):
         n = net.upper()
         return 'CA' if any(k in n for k in ('_CA', '_CS', '_CKE', '_CK')) else 'DQ'
@@ -733,6 +746,98 @@ def cls(ok):
     return 'ok' if ok == 1 else ('warn' if ok == 0 else 'bad')
 
 
+def pair_conditions(b):
+    """The router's own pair gates, from the result file: intra-pair skew over
+    its budget, and members that do not share their home layer for most of the
+    run (on different layers they are equal in length but not coupled)."""
+    out = []
+    for p in (b['res'].get('si') or {}).get('pairs', []):
+        if p['intra_skew_mm'] > p['intra_budget_mm'] + 1e-9:
+            out.append((f"{p['pair']} skew", f"{p['intra_skew_mm']:.3f} mm", f"≤ {p['intra_budget_mm']:.3f} mm (spec budget)", REMEDY['pair_skew']))
+        if p['worst_share'] < p['share_min'] - 1e-9:
+            out.append((f"{p['pair']} home layer", f"{100*p['worst_share']:.0f}% of a member's copper", f"≥ {100*p['share_min']:.0f}% on one layer", REMEDY['pair_share']))
+    return out
+
+
+def link_conditions(b):
+    """A serial-link lane whose worst-corner eye misses its receiver window."""
+    out = []
+    for x in b.get('link_eyes') or []:
+        if x.get('ok') is False:
+            e = x['eye']; r = x['rxp']
+            out.append((f"{x['pair']} eye ({x['label']})", f"{1000*e['height_v']:.0f} mV × {e['width_ui']:.2f} UI, timing margin {e['margin_ui']:+.2f} UI",
+                        f"beyond ±{1000*r['vidth']:.0f} mV over tSETUP+tHOLD {r['tsetup_ui']+r['thold_ui']:.2f} UI plus TX skew (receiver spec)", REMEDY['link_eye']))
+        elif x.get('error'):
+            out.append((f"{x['pair']} eye", x['error'], 'a traced TX-to-RX path', REMEDY['link_eye']))
+    return out
+
+
+def link_rate_text(b):
+    kinds = {}
+    for L in (b.get('links') or {}).get('links', []):
+        kinds[L['kind']] = L['label'].split(' (')[0]
+    return ' · '.join(sorted(set(kinds.values())))
+
+
+def link_section(boards):
+    """The serial-link eyes: one card per lane (worst corner), then the lane table."""
+    E = html.escape
+    rows = [(b, x) for b in boards for x in (b.get('link_eyes') or [])]
+    if not rows:
+        return ''
+    h = []
+    srcs = sorted({s for b, x in rows for s in x.get('sources', [])})
+    h.append('<section><h2>Serial-link eye diagrams</h2><p class="lede" style="margin:0 0 14px"><b>Method.</b> '
+             'Each differential pair is recognised by the parts at its ends and judged at the rate and limits of those parts. '
+             'Channel: each leg is its traced copper path from the transmitter pad to the receiver pad (shortest path through the copper, vias joining layers), '
+             'every stretch a lossless line at its as-laid odd-mode impedance (the router\'s differential Z halved), stripline '
+             f'{SR.PS_MM_STRIP} ps/mm and microstrip {SR.PS_MM_MICRO} ps/mm; the differential signal is P − N, so intra-pair skew and leg mismatch are in it. '
+             'Reflections only: no loss, no crosstalk, no package — the eye is what the routing does to the signal. '
+             '<b>MIPI CSI-2 D-PHY:</b> PRBS-7 at the lane rate the two parts allow (the lower of TX and RX maxima), minimum VOD, every corner of '
+             'TX output impedance (ZOS), RX termination (ZID) and TX edge rate, worst corner shown. Worst-case peak-distortion analysis against the '
+             'receiver\'s fixed threshold ±VIDTH. The receiver samples with the forwarded clock lane, so the sampling instant is the data eye centre '
+             'moved by the clock-to-data flight difference; the inner box is ±VIDTH × (tSETUP + tHOLD), the dashed box adds the transmitter\'s '
+             f'clock-to-data skew allowance TSKEW[TX] ±{SL.DPHY_TSKEW_TX_UI} UI (MIPI D-PHY v1.2, ≤1 Gbps). A lane passes when its worst-case eye clears both boxes. '
+             '<b>V3Link forward channel:</b> the board section only (serializer to the AC caps), at the minimum output swing; the receiver sits at the far '
+             'end of the cable, so this is reported, not judged: the opening beside the ideal launch and TI\'s typical forward-channel eye at the serializer output.</p>'
+             '<p class="lede" style="margin:0 0 14px"><b>Sources.</b> ' + E('; '.join(srcs)) + '.</p><div class="eyes">')
+    for b, x in rows:
+        if x.get('error'):
+            h.append(f'<div class="eyebox"><div class="eyehead"><b>{E(b["short"])} · {E(x["pair"])}</b> <span class="chip fail">{E(x["error"])}</span></div></div>'); continue
+        e = x['eye']
+        if x['ok'] is None:
+            chip = f'<span class="chip cond">REPORTED · {1000*e["height_v"]:.0f} mV × {e["width_ui"]:.2f} UI</span>'
+        else:
+            chip = f'<span class="chip {"pass" if x["ok"] else "fail"}">{"PASS" if x["ok"] else "FAIL"} · {1000*e["height_v"]:.0f} mV × {e["width_ui"]:.2f} UI · margin {e["margin_ui"]:+.2f} UI</span>'
+        sub = f'{x["label"]} · {x["tx"]}→{x["rx"] or "connector"}' + (' · clock lane' if x.get('clock') else '')
+        h.append(f'<div class="eyebox"><div class="eyehead"><b>{E(b["short"])} · {E(x["pair"])}</b> <span class="was">{E(sub)}</span> {chip}</div>'
+                 f'{SL.eye_svg(e)}<div class="was" style="font-size:12px">{E(e["corner"])}</div></div>')
+    h.append('</div></section>')
+    h.append('<section><h2>Serial-link lanes</h2><p class="lede" style="margin:0 0 14px">Per lane at its worst corner: the traced flight time, '
+             'the P/N flight difference, the offset of the lane from its forwarded clock (what moves the sampling instant), the worst-case eye and the '
+             'timing margin left around the receiver window.</p><div class="tablewrap"><table><thead><tr><th>Board</th><th>Pair</th><th>Link</th>'
+             '<th>Rate</th><th>Flight</th><th>P/N</th><th>To clock</th><th>Eye H × W</th><th>Margin</th><th>Verdict</th></tr></thead><tbody>')
+    for b, x in rows:
+        if x.get('error'):
+            continue
+        e = x['eye']
+        if x['ok'] is None:
+            ideal = x.get('ideal_v', 0)
+            ver = f'<span class="chip cond">{100*e["height_v"]/ideal:.0f}% of the launch · TI typ {x["ref_mv"]} mV</span>' if ideal else '<span class="chip cond">reported</span>'
+            mcell = '<td class="num was">—</td>'; tocl = '<td class="num was">—</td>'
+        else:
+            ver = f'<span class="chip {"pass" if x["ok"] else "fail"}">{"PASS" if x["ok"] else "FAIL"}</span>'
+            mcell = f'<td class="num {"ok" if e["margin_ui"] >= 0 else "bad"}">{e["margin_ui"]:+.2f} UI</td>'
+            shift = round(x.get('shift_ps', 0.0)) + 0  # +0 turns -0 into 0
+            tocl = f'<td class="num">{"clock" if x.get("clock") else f"{shift:+d} ps"}</td>'
+        rate = f'{x["mbps"]:.0f} Mbps' if x['mbps'] < 1000 else f'{x["mbps"]/1000:.2f} Gbps'
+        h.append(f'<tr><th>{E(b["short"])}</th><td>{E(x["pair"])}</td><td>{E(x["label"].split(" ")[0] + " " + x["label"].split(" ")[1])}</td><td class="num">{rate} · UI {x["ui_ps"]:.0f} ps</td>'
+                 f'<td class="num">{x["flight_ps"]:.0f} ps</td><td class="num">{x["skew_ps"]:.1f} ps</td>{tocl}'
+                 f'<td class="num">{1000*e["height_v"]:.0f} mV × {e["width_ui"]:.2f} UI</td>{mcell}<td>{ver}</td></tr>')
+    h.append('</tbody></table></div></section>')
+    return '\n'.join(h)
+
+
 def render(boards, label):
     E = html.escape
     boards = sorted(boards, key=lambda b: -b['layers'])
@@ -741,20 +846,27 @@ def render(boards, label):
         b['judge'] = judge(b)
         b['census'] = census(b)
         b['eyes'] = eyes(b, b['judge'])
+        b['link_eyes'] = SL.link_eyes(b, b['links']) if (b.get('links') or {}).get('links') else None
         b['stubs'] = via_stubs(b)
-        b['conds'] = conditions(b, b['judge'], b['census']) + eye_conditions(b)
+        b['conds'] = conditions(b, b['judge'], b['census']) + eye_conditions(b) + pair_conditions(b) + link_conditions(b)
         b['verdict'] = verdict(b, b['conds'])
     counts = {'pass': 0, 'cond': 0, 'fail': 0}
     for b in boards:
         counts[b['verdict'][0]] += 1
-    title = 'LPDDR4 Sign-off' if any((b['res'].get('si') or {}).get('ddr_groups') for b in boards) else 'SI Sign-off'
+    has_ddr = any((b['res'].get('si') or {}).get('ddr_groups') for b in boards)
+    title = 'LPDDR4 Sign-off' if has_ddr else 'SI Sign-off'
+    links_txt = ' · '.join(sorted({link_rate_text(b) for b in boards} - {''}))
+    rate_txt = ' · '.join(x for x in ((f'{DATA_RATE_MTS:.0f} MT/s' if has_ddr else ''), links_txt) if x) or '—'
+    has_ddr_eyes = any(b['eyes'] for b in boards)
+    link_rates = [L['mbps'] for b in boards for L in (b.get('links') or {}).get('links', [])]
+    stub_rate = max([DATA_RATE_MTS if has_ddr else 0] + link_rates) or DATA_RATE_MTS
     h = ['<meta charset="utf-8">', f'<title>{E(title)}</title>',
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">',
          f'<style>{CSS}</style><div class="page">']
     summary = ', '.join(f"{v} {k}" for k, v in (('signed off', counts['pass']), ('conditional', counts['cond']), ('not ready', counts['fail'])) if v)
     h.append(f'<header><div><div class="eyebrow">Router sign-off · {E(", ".join(b["short"] for b in boards))}</div><h1 style="margin-top:8px">{E(title)}</h1>'
              f'<p class="lede">{E(summary)}. Every condition is a gate the board misses, printed as measured → required with the unit that closes it. Impedance is judged on the laid copper in a field solver where a measurement exists; the router\'s own model is shown beside it.</p></div>'
-             f'<div class="meta"><div><span>build</span> <b>{E(label)}</b></div><div><span>date</span> <b>{time.strftime("%Y-%m-%d")}</b></div><div><span>rate</span> <b>{DATA_RATE_MTS:.0f} MT/s</b></div><div><span>solver</span> <b>openEMS via gerber2ems</b></div><div><span>status</span> <b>generated — unsigned</b></div></div></header>')
+             f'<div class="meta"><div><span>build</span> <b>{E(label)}</b></div><div><span>date</span> <b>{time.strftime("%Y-%m-%d")}</b></div><div><span>rate</span> <b>{E(rate_txt)}</b></div><div><span>solver</span> <b>openEMS via gerber2ems</b></div><div><span>status</span> <b>generated — unsigned</b></div></div></header>')
     # verdict strip
     h.append('<div class="verdicts">')
     for b in boards:
@@ -775,6 +887,46 @@ def render(boards, label):
         ok = not (d.get('error_violations') or d.get('warnings') or d.get('unconnected_items') or e.get('errors') or e.get('warnings'))
         cells.append(f'<td class="num {"ok" if ok else "bad"}">{d.get("error_violations",0)} / {d.get("warnings",0)} / {d.get("unconnected_items",0)} · ERC {e.get("errors","-")}/{e.get("warnings","-")}</td>')
     row('DRC errors / warnings / unconnected · ERC', cells, ('Design rules', 'KiCad DRC + ERC + schematic parity, all zero'))
+    if any((b['res'].get('si') or {}).get('pairs') for b in boards):
+        def worst(b, key, fn):
+            ps = (b['res'].get('si') or {}).get('pairs', [])
+            return fn(ps, key=key) if ps else None
+        cells = []
+        for b in boards:
+            p = worst(b, lambda p: p['intra_skew_mm'] - p['intra_budget_mm'], max)
+            cells.append('<td class="num was">—</td>' if not p else f'<td class="num {"ok" if p["intra_skew_mm"] <= p["intra_budget_mm"] + 1e-9 else "bad"}">{p["intra_skew_mm"]:.3f} mm <span class="was">budget {p["intra_budget_mm"]:.3f} · {E(p["pair"].split(" /")[0][:-2])}</span></td>')
+        row('Intra-pair skew (worst)', cells, ('Differential pairs', 'the router\'s pair gates as measured on the finished board'))
+        cells = []
+        for b in boards:
+            ps = (b['res'].get('si') or {}).get('pairs', [])
+            miss = [p for p in ps if p['worst_share'] < p['share_min'] - 1e-9]
+            p = worst(b, lambda p: p['worst_share'], min)
+            cells.append('<td class="num was">—</td>' if not p else f'<td class="num {"ok" if not miss else "bad"}">{len(ps) - len(miss)} / {len(ps)} pairs · worst {100*p["worst_share"]:.0f}% <span class="was">min {100*p["share_min"]:.0f}% · {E(p["pair"].split(" /")[0][:-2])}</span></td>')
+        row('Members on the home layer', cells)
+        cells = []
+        for b in boards:
+            p = worst(b, lambda p: p['zdiff_within_10pct'], min)
+            cells.append('<td class="num was">—</td>' if not p else f'<td class="num">worst {100*p["zdiff_within_10pct"]:.0f}% <span class="was">{E(p["pair"].split(" /")[0][:-2])}</span></td>')
+        row('Copper within 10% of Z<sub>diff</sub>', cells)
+    if any(b.get('link_eyes') for b in boards):
+        kinds = []
+        for b in boards:
+            for x in b.get('link_eyes') or []:
+                k = x['label']
+                if k not in kinds: kinds.append(k)
+        first = True
+        for k in kinds:
+            cells = []
+            for b in boards:
+                xs = [x for x in (b.get('link_eyes') or []) if x['label'] == k and not x.get('error')]
+                if not xs: cells.append('<td class="num was">—</td>'); continue
+                if xs[0]['ok'] is None:
+                    w = min(xs, key=lambda x: x['eye']['height_v'])
+                    cells.append(f'<td class="num">{len(xs)} lane(s) · worst {1000*w["eye"]["height_v"]:.0f} mV × {w["eye"]["width_ui"]:.2f} UI <span class="was">reported</span></td>')
+                else:
+                    npass = sum(1 for x in xs if x['ok']); w = min(xs, key=lambda x: x['eye']['margin_ui'])
+                    cells.append(f'<td class="num {"ok" if npass == len(xs) else "bad"}">{npass} / {len(xs)} lanes · worst {1000*w["eye"]["height_v"]:.0f} mV × {w["eye"]["width_ui"]:.2f} UI, margin {w["eye"]["margin_ui"]:+.2f} UI <span class="was">{E(w["pair"].split(" /")[0][:-2])}</span></td>')
+            row(E(k), cells, ('Serial links', 'worst-corner eye per link at the parts\' rate and receiver window (section below)') if first else None); first = False
     # timing rows: union of group labels
     labels = []
     for b in boards:
@@ -797,7 +949,7 @@ def render(boards, label):
     for b in boards:
         gs = (b['res'].get('si') or {}).get('ddr_groups', [])
         cells.append('<td>' + E(', '.join(f"{g['label']} {g['home_layer']} {100*g['worst_share']:.0f}%" for g in gs)) + '</td>')
-    row('Home layers (worst share)', cells)
+    if has_ddr: row('Home layers (worst share)', cells)
     # impedance: field solver
     first = True
     pnames = []
@@ -844,7 +996,7 @@ def render(boards, label):
     for b in boards:
         jd = b['judge']
         cells.append(f'<td class="num">{jd["npass"]} / {jd["n"]}</td>' if jd else '<td class="num was">not run</td>')
-    row('Nets passing the masks', cells, ('Reflection judge', 'lossless-line bounce on router-model impedances, vendor-calibrated masks, best legal ODT/drive per group'))
+    if has_ddr_eyes: row('Nets passing the masks', cells, ('Reflection judge', 'lossless-line bounce on router-model impedances, vendor-calibrated masks, best legal ODT/drive per group'))
     cells = []
     for b in boards:
         ey = b['eyes']
@@ -859,37 +1011,38 @@ def render(boards, label):
                 okm = em['height_v'] >= MASK_H_V and em['width_ui'] >= MASK_W_UI
                 parts.append(f'<span class="{"ok" if okm else "warn"}">{grp} measured {1000*em["height_v"]:.0f} mV × {em["width_ui"]:.2f} UI</span>')
         cells.append('<td class="num">' + ' · '.join(parts) + '</td>')
-    row('Worst eye per group (PDA)', cells, ('Eye diagrams', f'PRBS-7 at {DATA_RATE_MTS:.0f} MT/s (UI {UI_PS:.0f} ps) on the bounce model with the chosen settings; worst-case opening by peak-distortion analysis against the JEDEC Rx mask {1000*MASK_H_V:.0f} mV × {MASK_W_UI} UI'))
+    if has_ddr_eyes: row('Worst eye per group (PDA)', cells, ('Eye diagrams', f'PRBS-7 at {DATA_RATE_MTS:.0f} MT/s (UI {UI_PS:.0f} ps) on the bounce model with the chosen settings; worst-case opening by peak-distortion analysis against the JEDEC Rx mask {1000*MASK_H_V:.0f} mV × {MASK_W_UI} UI'))
     cells = []
     for b in boards:
         stubs = b.get('stubs') or {}
         if not stubs: cells.append('<td class="num was">—</td>'); continue
         worst = max(stubs.values()); wn = max(stubs, key=stubs.get)
         fres = 3e8 / (4 * worst * 1e-3 * 4.3 ** 0.5) / 1e9 if worst > 0.05 else float('inf')
-        f3 = 3 * DATA_RATE_MTS / 2 / 1000  # third harmonic of the data fundamental, GHz
+        f3 = 3 * stub_rate / 2 / 1000  # third harmonic of the data fundamental, GHz
         ok = fres > 2 * f3
         cells.append(f'<td class="num {"ok" if ok else "warn"}">{worst:.2f} mm ({E(wn.replace("LPDDR4_",""))}) · λ/4 at {fres:.1f} GHz</td>')
-    row('Worst through-via stub', cells, ('Via stubs', f'through-vias leave the board below the deepest layer as an open stub; its quarter-wave resonance should sit well above the 3rd harmonic ({3*DATA_RATE_MTS/2000:.1f} GHz at {DATA_RATE_MTS:.0f} MT/s) or the layer/back-drill must change'))
+    row('Worst through-via stub', cells, ('Via stubs', f'through-vias leave the board below the deepest layer as an open stub; its quarter-wave resonance should sit well above the 3rd harmonic ({3*stub_rate/2000:.1f} GHz at {stub_rate:.0f} MT/s, the fastest link on the board) or the layer/back-drill must change'))
     cells = [f'<td><span class="chip {b["verdict"][0]}">{E(b["verdict"][1])}</span></td>' for b in boards]
     row('Sign-off', cells, ('Verdict', ''))
     h.append('</tbody></table></div></section>')
+    h.append(link_section(boards))
     # eyes
-    h.append(f'<section><h2>Eye diagrams</h2><p class="lede" style="margin:0 0 14px"><b>Method.</b> Stimulus PRBS-7 at {DATA_RATE_MTS:.0f} MT/s (UI {UI_PS:.0f} ps), 100 ps edges. Channel: the bounce model (every segment a lossless line at its as-laid impedance — reflections only) or, where a field-solver slice exists, the openEMS S-parameters of the actual copper renormalised to the terminations (loss, reflections, and crosstalk from the sliced aggressor). Terminations: the legal LPDDR4 setting chosen per group above; write direction SoC PHY → DRAM ODT to VDDQ (POD), read direction DRAM PDDS {DRAM_PDDS:.0f} Ω → SoC ODT. Analysis: worst-case peak-distortion over every bit pattern (sum of the ISI and crosstalk taps), sampled at the point the DRAM trains to (the largest opening) with V<sub>ref</sub> at its centre; width net of a {JITTER_UI:.2f} UI jitter budget (transmitter DCD/RJ and residual tDQS2DQ), drawn as edge smear. Mask: JESD209-4 data-input valid window tDIVW {MASK_W_UI} UI × VdIVW {1000*MASK_H_V:.0f} mV (the amber rectangle). Drawings show the PRBS pattern folded on two UI; the numbers are the worst case, not the drawing\'s.</p><div class="eyes">')
+    if has_ddr_eyes: h.append(f'<section><h2>Eye diagrams</h2><p class="lede" style="margin:0 0 14px"><b>Method.</b> Stimulus PRBS-7 at {DATA_RATE_MTS:.0f} MT/s (UI {UI_PS:.0f} ps), 100 ps edges. Channel: the bounce model (every segment a lossless line at its as-laid impedance — reflections only) or, where a field-solver slice exists, the openEMS S-parameters of the actual copper renormalised to the terminations (loss, reflections, and crosstalk from the sliced aggressor). Terminations: the legal LPDDR4 setting chosen per group above; write direction SoC PHY → DRAM ODT to VDDQ (POD), read direction DRAM PDDS {DRAM_PDDS:.0f} Ω → SoC ODT. Analysis: worst-case peak-distortion over every bit pattern (sum of the ISI and crosstalk taps), sampled at the point the DRAM trains to (the largest opening) with V<sub>ref</sub> at its centre; width net of a {JITTER_UI:.2f} UI jitter budget (transmitter DCD/RJ and residual tDQS2DQ), drawn as edge smear. Mask: JESD209-4 data-input valid window tDIVW {MASK_W_UI} UI × VdIVW {1000*MASK_H_V:.0f} mV (the amber rectangle). Drawings show the PRBS pattern folded on two UI; the numbers are the worst case, not the drawing\'s.</p><div class="eyes">')
     for b in boards:
         ey = b['eyes']
         if not ey: continue
         for grp in ('DQ', 'DQS', 'CA'):
             g = ey.get(grp)
-            if not g or not g['worst']: continue
+            if not g or not g.get('worst'): continue
             ok = g['height_v'] >= MASK_H_V and g['width_ui'] >= MASK_W_UI
             h.append(f'<div class="eyebox"><div class="eyehead"><b>{E(b["short"])} · {grp}</b> <span class="was">bounce · {E(g["worst_net"])}</span> <span class="chip {"pass" if ok else "fail"}">{"PASS" if ok else "FAIL"} · {1000*g["height_v"]:.0f} mV × {g["width_ui"]:.2f} UI</span></div>{eye_svg(g["worst"])}</div>')
             for key, em in g.get('measured', {}).items():
                 okm = em['height_v'] >= MASK_H_V and em['width_ui'] >= MASK_W_UI
                 tag = 'field solver' + (f' + {em["aggressors"]} aggressor(s)' if em.get('aggressors') else ', no crosstalk')
                 h.append(f'<div class="eyebox measured"><div class="eyehead"><b>{E(b["short"])} · {grp}</b> <span class="was">{E(tag)} · {E(em["net"])}</span> <span class="chip {"pass" if okm else "fail"}">{"PASS" if okm else "FAIL"} · {1000*em["height_v"]:.0f} mV × {em["width_ui"]:.2f} UI</span></div>{eye_svg(em)}</div>')
-    h.append('</div></section>')
+    if has_ddr_eyes: h.append('</div></section>')
     # per-net eye table (both directions), the timing budget, and the measured nets' S-parameters/TDR
-    h.append(f'<section><h2>Eye openings per net</h2><p class="lede" style="margin:0 0 14px">Every SI net at the settings chosen above: write direction (SoC PHY drive → DRAM ODT) and read direction (DRAM PDDS {DRAM_PDDS:.0f} Ω → SoC ODT), worst-case peak-distortion opening net of the {JITTER_UI:.2f} UI jitter budget, margin to the mask as the tighter of height/width.</p><div class="tablewrap"><table><thead><tr><th>Board</th><th>Net</th><th>Group</th><th>Write H × W</th><th>Read H × W</th><th>Margin</th><th>Verdict</th></tr></thead><tbody>')
+    if has_ddr_eyes: h.append(f'<section><h2>Eye openings per net</h2><p class="lede" style="margin:0 0 14px">Every SI net at the settings chosen above: write direction (SoC PHY drive → DRAM ODT) and read direction (DRAM PDDS {DRAM_PDDS:.0f} Ω → SoC ODT), worst-case peak-distortion opening net of the {JITTER_UI:.2f} UI jitter budget, margin to the mask as the tighter of height/width.</p><div class="tablewrap"><table><thead><tr><th>Board</th><th>Net</th><th>Group</th><th>Write H × W</th><th>Read H × W</th><th>Margin</th><th>Verdict</th></tr></thead><tbody>')
     for b in boards:
         for r in (b['eyes'] or {}).get('_nets', []):
             def cell(hw):
@@ -899,8 +1052,8 @@ def render(boards, label):
             cands = [x for x in (r['write'], r['read']) if x]
             mg = min(min(x[0] / MASK_H_V, x[1] / MASK_W_UI) for x in cands)
             h.append(f'<tr><th>{E(b["short"])}</th><td>{E(r["net"].replace("LPDDR4_", ""))}</td><td>{r["grp"]}</td>{cell(r["write"])}{cell(r["read"])}<td class="num">{mg:.2f}×</td><td><span class="chip {"pass" if mg >= 1 else "fail"}">{"PASS" if mg >= 1 else "FAIL"}</span></td></tr>')
-    h.append('</tbody></table></div></section>')
-    h.append(f'<section><h2>Timing budget per group</h2><p class="lede" style="margin:0 0 14px">Unit interval at {DATA_RATE_MTS:.0f} MT/s less the receiver mask, the jitter budget and the static member-to-strobe skew as laid (converted at {PS_MM["strip"]} ps/mm stripline, {PS_MM["micro"]} ps/mm microstrip); what remains is the margin the DRAM\'s training must not need. LPDDR4 trains DQS-to-DQ per lane (tDQS2DQ), so a negative static margin is absorbed within spec — the target tier is where it stays positive.</p><div class="tablewrap"><table><thead><tr><th>Board · group</th><th>UI</th><th>− mask</th><th>− jitter</th><th>− static skew</th><th>− eye closure</th><th>= margin</th></tr></thead><tbody>')
+    if has_ddr_eyes: h.append('</tbody></table></div></section>')
+    if has_ddr: h.append(f'<section><h2>Timing budget per group</h2><p class="lede" style="margin:0 0 14px">Unit interval at {DATA_RATE_MTS:.0f} MT/s less the receiver mask, the jitter budget and the static member-to-strobe skew as laid (converted at {PS_MM["strip"]} ps/mm stripline, {PS_MM["micro"]} ps/mm microstrip); what remains is the margin the DRAM\'s training must not need. LPDDR4 trains DQS-to-DQ per lane (tDQS2DQ), so a negative static margin is absorbed within spec — the target tier is where it stays positive.</p><div class="tablewrap"><table><thead><tr><th>Board · group</th><th>UI</th><th>− mask</th><th>− jitter</th><th>− static skew</th><th>− eye closure</th><th>= margin</th></tr></thead><tbody>')
     for b in boards:
         si = b['res'].get('si') or {}
         for g in si.get('ddr_groups', []):
@@ -911,7 +1064,7 @@ def render(boards, label):
             closure = (1 - (ey['width_ui'] + JITTER_UI)) * ui if ey else 0  # the eye's own closure, before the jitter budget
             margin = ui - mask - jit - skew - closure
             h.append(f'<tr><th>{E(b["short"])} · {E(g["label"])}</th><td class="num">{ui:.0f} ps</td><td class="num">{mask:.0f}</td><td class="num">{jit:.0f}</td><td class="num">{skew:.0f} ({g["worst_skew_mm"]:.1f} mm)</td><td class="num">{closure:.0f}</td><td class="num {"ok" if margin > 0 else "warn"}">{margin:.0f} ps</td></tr>')
-    h.append('</tbody></table></div></section>')
+    if has_ddr: h.append('</tbody></table></div></section>')
     h.append('<section><h2>Measured channels</h2><p class="lede" style="margin:0 0 14px">Field-solver S-parameters of the sliced nets (0.2–4 GHz) and the impedance profile along the trace from the reflection (TDR at the port reference; the shaded band is the target ±15 %).</p><div class="eyes">')
     for b in boards:
         fw = b['fullwave'] or {}
