@@ -429,32 +429,63 @@ def ticks(lo, hi, n=5):
     return out
 
 
+# Loss model for the S-parameters (first order, the textbook forms —
+# Johnson & Graham, High-Speed Digital Design; IPC-2141 for the
+# dielectric): stated on the report's first page.
+TAN_D = 0.02          # FR-4 class loss tangent at ~1 GHz (the stackup's, when the fab publishes it, belongs here)
+SIGMA_CU = 5.8e7      # copper conductivity, S/m
+ROUGH = 1.5           # conductor-loss multiplier for standard (non-VLP) foil roughness
+C_MM_PS = 0.299792458  # c, mm/ps
+
+
+def seg_loss_db_per_mm(f_ghz, z_leg, width_mm, inner, ps_per_mm):
+    """Dielectric + conductor attenuation of one run at f, dB/mm.
+    Dielectric: alpha_d = 8.686 * pi * f * sqrt(er_eff) * tan_d / c, with
+    er_eff from the run's own propagation velocity. Conductor (skin
+    effect, wide-strip form): alpha_c = 8.686 * Rs / (Z * w) * ROUGH,
+    Rs = sqrt(pi f mu0 / sigma); a stripline carries current on both
+    faces, so half of that."""
+    if f_ghz <= 0: return 0.0
+    f = f_ghz * 1e9
+    er_eff = (ps_per_mm * C_MM_PS) ** 2
+    alpha_d = 8.686 * math.pi * f * math.sqrt(er_eff) * TAN_D / 2.99792458e11  # dB/mm
+    rs = math.sqrt(math.pi * f * 4e-7 * math.pi / SIGMA_CU)
+    alpha_c = 8.686 * rs / (z_leg * max(width_mm, 0.02) * 1e-3) * ROUGH / 1000.0  # dB/mm
+    if inner: alpha_c *= 0.5
+    return alpha_d + alpha_c
+
+
 def lane_sparams(lane_lad, L, z_pair, fmax_ghz, n=120):
     """SDD11 / SDD21 of the lane against Z0 = its differential target, from
-    the as-laid ladder: each run a lossless line (Z = 2 x odd-mode leg Z,
-    delay from the router's velocity) as an ABCD matrix, cascaded; the
-    legs are averaged. Lossless, so |S21|^2 = 1 - |S11|^2: the insertion
-    loss is what the reflections take, not the dielectric. Returns
-    {'f': GHz[], 's11': dB[], 's21': dB[]} or None."""
+    the as-laid ladder: each run a lossy line (Z = 2 x odd-mode leg Z,
+    delay from the router's velocity, attenuation from seg_loss_db_per_mm)
+    as an ABCD matrix, cascaded; the legs are averaged. Returns
+    {'f': GHz[], 's11': dB[], 's21': dB[], 'il_dc': dB[]} or None, il_dc
+    being the plain attenuation sum (no reflections) for the caption."""
     if L['p'] not in lane_lad or L['n'] not in lane_lad:
         return None
     import cmath
-    legs = [lane_lad[L[k]][0] for k in ('p', 'n')]
+    legs = [lane_lad[L[k]] for k in ('p', 'n')]
     fs = [fmax_ghz * (i + 1) / n for i in range(n)]
-    s11, s21 = [], []
+    s11, s21, il = [], [], []
     for f in fs:
-        acc11 = acc21 = 0.0
-        for lad in legs:
+        acc11 = acc21 = att = 0.0
+        for entry in legs:
+            lad = entry[0]; widths = entry[2] if len(entry) > 2 else [(0.1, False)] * len(lad)
             A, B, C, D = 1 + 0j, 0j, 0j, 1 + 0j
-            for z, d_ps, _ in lad:
+            for (z, d_ps, mm), (wmm, inner) in zip(lad, widths):
                 Z = 2 * z; th = 2 * math.pi * f * d_ps / 1000.0  # GHz x ps
-                a, b, c, d = cmath.cos(th), 1j * Z * cmath.sin(th), 1j * cmath.sin(th) / Z, cmath.cos(th)
+                a_db = seg_loss_db_per_mm(f, z, wmm, inner, d_ps / mm if mm > 0 else PS_MM_MICRO) * mm
+                att += a_db / 2
+                g = a_db / 8.686 + 1j * th  # gamma * length
+                a, b, c, d = cmath.cosh(g), Z * cmath.sinh(g), cmath.sinh(g) / Z, cmath.cosh(g)
                 A, B, C, D = A * a + B * c, A * b + B * d, C * a + D * c, C * b + D * d
             den = A + B / z_pair + C * z_pair + D
             acc11 += abs((A + B / z_pair - C * z_pair - D) / den) / 2
             acc21 += abs(2 / den) / 2
         s11.append(20 * math.log10(max(acc11, 1e-6))); s21.append(20 * math.log10(max(acc21, 1e-6)))
-    return {'f': fs, 's11': s11, 's21': s21}
+        il.append(-att)
+    return {'f': fs, 's11': s11, 's21': s21, 'il_dc': il}
 
 
 def eye_plot(pdf, x0, y0, w, h, e):
@@ -605,9 +636,11 @@ def main():
         'Impedance: the industry tolerance for controlled impedance is +-10 % of the target (IPC-2221/IPC-6012 impedance-control class);',
         '  reflection coefficient |Gamma| = |Z - Z0| / (Z + Z0) against the lane\'s reference Z0, return loss RL = -20 log10 |Gamma| dB',
         '  (a +-10 % step is |Gamma| 0.05, RL 26 dB; the peak over the lane is reported).',
-        'S-parameters: SDD11 (return loss) and SDD21 (insertion loss) vs frequency, computed from the same ladder (ABCD cascade of lossless',
-        '  lines, both legs averaged) against the lane\'s Z0, to the 5th harmonic of the link\'s fundamental; the table gives the worst SDD11 up to',
-        '  Nyquist and SDD21 at Nyquist (reflections only: no dielectric or copper loss in this model).',
+        'S-parameters: SDD11 (return loss) and SDD21 (insertion loss) vs frequency from the same ladder as an ABCD cascade of lossy lines',
+        '  (both legs averaged) against the lane\'s Z0, to the 5th harmonic of the link\'s fundamental; the table gives the worst SDD11 up to',
+        '  Nyquist and SDD21 at Nyquist. Loss, first order (Johnson & Graham; IPC-2141): dielectric alpha_d = 8.686 pi f sqrt(er_eff) tan_d / c',
+        f'  with tan_d {TAN_D} (FR-4 class) and er_eff from each run\'s velocity; conductor alpha_c = 8.686 Rs / (Z w) x {ROUGH} (foil roughness),',
+        f'  Rs = sqrt(pi f mu0 / sigma), sigma {SIGMA_CU:.1e} S/m, w = the run\'s track width, halved on striplines (current on both faces).',
     ]
     if settings:
         lines += [
@@ -760,9 +793,10 @@ def main():
                               0, fmax, -50, 0, [(sp['f'], sp['s11'], (0.1, 0.1, 0.1), '')],
                               ticks(0, fmax, 4), (-50, -40, -30, -20, -10, 0),
                               hlines=((-10, 'RL 10 dB reference', red),), vlines=vl)
-                    il_floor = min(-1.0, math.floor(min(sp['s21'])))
+                    il_floor = -max(0.5, math.ceil(-min(sp['s21']) * 4) / 4)
                     axes_plot(pdf, 415, py, 125, 70, '|SDD21| insertion loss', 'GHz', 'dB',
-                              0, fmax, il_floor, 0, [(sp['f'], sp['s21'], (0.1, 0.1, 0.1), '')],
+                              0, fmax, il_floor, 0, [(sp['f'], sp['s21'], (0.1, 0.1, 0.1), 'SDD21'),
+                                                     (sp['f'], sp['il_dc'], blue, 'attenuation')],
                               ticks(0, fmax, 4), ticks(il_floor, 0, 4), vlines=vl)
                 eye_plot(pdf, 90, top - 328, 430, 140, e)
             else:

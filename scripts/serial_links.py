@@ -292,9 +292,11 @@ def trace_path(rows, vias, src, dst, tol=0.02, debug=False):
     return None
 
 
-def _ladder_of(path):
+def _ladder_of(path, widths=None):
     """(z_leg, delay_ps, len_mm) per run: the export's differential Z halved
-    (odd mode per leg), stripline or microstrip velocity by layer."""
+    (odd mode per leg), stripline or microstrip velocity by layer. `widths`,
+    when given, receives one (width_mm, inner) per run — the track width the
+    conductor-loss model needs, length-weighted over merged runs."""
     lad = []
     last = None
     for r, L in path:
@@ -305,10 +307,16 @@ def _ladder_of(path):
         z = float(r['z_ohm']); z = z / 2.0 if z > 0 else (lad[-1][0] if lad else 50.0)
         inner = r['layer_name'] not in ('F.Cu', 'B.Cu')
         d = L * (SR.PS_MM_STRIP if inner else SR.PS_MM_MICRO)
+        w = float(r.get('width_mm') or 0) or 0.1
         if lad and abs(lad[-1][0] - z) < 1.0:
-            lad[-1] = (lad[-1][0], lad[-1][1] + d, lad[-1][2] + L)
+            L0 = lad[-1][2]
+            lad[-1] = (lad[-1][0], lad[-1][1] + d, L0 + L)
+            if widths is not None:
+                w0, in0 = widths[-1]
+                widths[-1] = ((w0 * L0 + w * L) / (L0 + L), in0)
         else:
             lad.append((z, d, L))
+            if widths is not None: widths.append((w, inner))
     return lad
 
 
@@ -338,7 +346,8 @@ def _ladders(b, det):
                 p['layer'] = '*' if pad in pr.get('thru', set()) or p.get('through') == '1' else pr.get('side')
             path = trace_path(bynet[net], [v for v in vias if v['net'] == net], src, dst)
             if path:
-                lad[net] = (_ladder_of(path), sum(Lm for _, Lm in path))
+                widths = []  # per run, for the loss model
+                lad[net] = (_ladder_of(path, widths), sum(Lm for _, Lm in path), widths)
     return lad
 
 
