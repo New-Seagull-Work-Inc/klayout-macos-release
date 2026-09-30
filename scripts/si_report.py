@@ -378,7 +378,83 @@ def lane_z(lane_lad, L, z_pair):
     gmax = max(abs(z - z_pair) / (z + z_pair) for z, _ in runs) if runs else 0.0
     out['gamma'] = gmax
     out['rl_db'] = -20 * math.log10(gmax) if gmax > 1e-6 else 99.0
+    out['vswr'] = (1 + gmax) / (1 - gmax) if gmax < 1 else 99.0
     return out
+
+
+def axes_plot(pdf, x0, y0, w, h, title, xlab, ylab, xmin, xmax, ymin, ymax,
+              curves, xticks, yticks, hlines=(), vlines=()):
+    """A measurement-style panel: framed axes, labelled ticks on both
+    axes, a title, curves as [(xs, ys, rgb, label)], reference lines
+    (hlines: (y, label, rgb); vlines: (x, label, rgb)) — the layout of a
+    VNA / TDR screen a reviewer reads without a legend hunt."""
+    def X(v): return x0 + (v - xmin) / (xmax - xmin) * w
+    def Y(v): return y0 + (min(max(v, ymin), ymax) - ymin) / (ymax - ymin) * h
+    pdf.poly([(x0, y0), (x0 + w, y0), (x0 + w, y0 + h), (x0, y0 + h), (x0, y0)], 0.6)
+    pdf.text(x0, y0 + h + 4, title, 7, True)
+    for t in xticks:
+        if xmin <= t <= xmax:
+            pdf.line(X(t), y0, X(t), y0 - 3); pdf.line(X(t), y0, X(t), y0 + h, 0.2, (0.85, 0.85, 0.85))
+            pdf.text(X(t) - 6, y0 - 11, f'{t:g}', 5.5)
+    for t in yticks:
+        if ymin <= t <= ymax:
+            pdf.line(x0 - 3, Y(t), x0, Y(t)); pdf.line(x0, Y(t), x0 + w, Y(t), 0.2, (0.85, 0.85, 0.85))
+            pdf.text(x0 - 22, Y(t) - 2, f'{t:g}', 5.5)
+    pdf.text(x0 + w / 2 - 12, y0 - 20, xlab, 6)
+    pdf.text(x0 - 26, y0 + h + 4, ylab, 6)
+    for yv, lab, rgb in hlines:
+        pdf.line(x0, Y(yv), x0 + w, Y(yv), 0.5, rgb)
+        if lab: pdf.text(x0 + 2, Y(yv) + 2, lab, 5.5)
+    for xv, lab, rgb in vlines:
+        if xmin <= xv <= xmax:
+            pdf.line(X(xv), y0, X(xv), y0 + h, 0.5, rgb)
+            if lab: pdf.text(X(xv) + 2, y0 + h - 8, lab, 5.5)
+    ly = y0 + h - 8
+    for xs, ys, rgb, lab in curves:
+        pdf.poly([(X(a), Y(b)) for a, b in zip(xs, ys)], 0.8, rgb)
+        if lab:
+            pdf.line(x0 + w - 40, ly + 2, x0 + w - 30, ly + 2, 0.8, rgb); pdf.text(x0 + w - 28, ly, lab, 5.5); ly -= 8
+
+
+def ticks(lo, hi, n=5):
+    """Round tick positions covering [lo, hi] in about n steps."""
+    span = hi - lo or 1.0
+    raw = span / n
+    mag = 10 ** math.floor(math.log10(raw))
+    step = min((m * mag for m in (1, 2, 2.5, 5, 10)), key=lambda v: abs(v - raw))
+    t0 = math.ceil(lo / step) * step
+    out = []
+    while t0 <= hi + 1e-9:
+        out.append(round(t0, 6)); t0 += step
+    return out
+
+
+def lane_sparams(lane_lad, L, z_pair, fmax_ghz, n=120):
+    """SDD11 / SDD21 of the lane against Z0 = its differential target, from
+    the as-laid ladder: each run a lossless line (Z = 2 x odd-mode leg Z,
+    delay from the router's velocity) as an ABCD matrix, cascaded; the
+    legs are averaged. Lossless, so |S21|^2 = 1 - |S11|^2: the insertion
+    loss is what the reflections take, not the dielectric. Returns
+    {'f': GHz[], 's11': dB[], 's21': dB[]} or None."""
+    if L['p'] not in lane_lad or L['n'] not in lane_lad:
+        return None
+    import cmath
+    legs = [lane_lad[L[k]][0] for k in ('p', 'n')]
+    fs = [fmax_ghz * (i + 1) / n for i in range(n)]
+    s11, s21 = [], []
+    for f in fs:
+        acc11 = acc21 = 0.0
+        for lad in legs:
+            A, B, C, D = 1 + 0j, 0j, 0j, 1 + 0j
+            for z, d_ps, _ in lad:
+                Z = 2 * z; th = 2 * math.pi * f * d_ps / 1000.0  # GHz x ps
+                a, b, c, d = cmath.cos(th), 1j * Z * cmath.sin(th), 1j * cmath.sin(th) / Z, cmath.cos(th)
+                A, B, C, D = A * a + B * c, A * b + B * d, C * a + D * c, C * b + D * d
+            den = A + B / z_pair + C * z_pair + D
+            acc11 += abs((A + B / z_pair - C * z_pair - D) / den) / 2
+            acc21 += abs(2 / den) / 2
+        s11.append(20 * math.log10(max(acc11, 1e-6))); s21.append(20 * math.log10(max(acc21, 1e-6)))
+    return {'f': fs, 's11': s11, 's21': s21}
 
 
 def eye_plot(pdf, x0, y0, w, h, e):
@@ -529,6 +605,9 @@ def main():
         'Impedance: the industry tolerance for controlled impedance is +-10 % of the target (IPC-2221/IPC-6012 impedance-control class);',
         '  reflection coefficient |Gamma| = |Z - Z0| / (Z + Z0) against the lane\'s reference Z0, return loss RL = -20 log10 |Gamma| dB',
         '  (a +-10 % step is |Gamma| 0.05, RL 26 dB; the peak over the lane is reported).',
+        'S-parameters: SDD11 (return loss) and SDD21 (insertion loss) vs frequency, computed from the same ladder (ABCD cascade of lossless',
+        '  lines, both legs averaged) against the lane\'s Z0, to the 5th harmonic of the link\'s fundamental; the table gives the worst SDD11 up to',
+        '  Nyquist and SDD21 at Nyquist (reflections only: no dielectric or copper loss in this model).',
     ]
     if settings:
         lines += [
@@ -602,33 +681,41 @@ def main():
                  'included); lossless, reflections only; PRBS-7 drawn, worst-case pattern judged', 8)
         y -= 12
         pdf.text(50, y, f'Zdiff: the router\'s stackup model on the laid copper, differential, target {z_pair:.0f} ohm; '
-                 f'"in 10%" = share of the lane\'s length within +-10 % of it', 8)
+                 f'"in 10%" = share of the lane\'s length within +-10 % of it;', 8)
+        y -= 11
+        pdf.text(50, y, 'RL/VSWR at the lane\'s worst step; SDD11 = worst return loss up to Nyquist, SDD21 = insertion loss at Nyquist (both dB)', 8)
         y -= 16
-        for x, h_ in ((50, 'pair'), (200, 'link'), (300, 'Zdiff min/med/max'), (378, 'in 10%'),
-                      (408, '|G| / RL dB'), (455, 'eye mV'), (487, 'width UI'), (520, 'margin'), (555, 'verdict')):
-            pdf.text(x, y, h_, 7, True)
+        for x, h_ in ((50, 'pair'), (185, 'link'), (270, 'Zdiff min/med/max'), (342, 'in 10%'),
+                      (370, 'RL dB/VSWR'), (415, 'SDD11 / SDD21'), (468, 'eye mV'), (497, 'width'), (525, 'margin'), (558, 'verdict')):
+            pdf.text(x, y, h_, 6.5, True)
         y -= 4
         pdf.line(50, y, 590, y, 0.4)
         for L in links:
             y -= 12
             if y < 60:
                 pdf.page(); y = 740
-            pdf.text(50, y, L['pair'][:38], 6)
-            pdf.text(200, y, L['label'][:24], 6)
+            pdf.text(50, y, L['pair'][:36], 6)
+            pdf.text(185, y, L['label'][:22], 6)
             if 'error' in L:
-                pdf.text(300, y, L['error'][:40], 7); continue
+                pdf.text(275, y, L['error'][:40], 7); continue
             zz = lane_z(lane_lad, L, z_pair)
             if zz:
-                pdf.text(300, y, f"{zz['min']:.0f} / {zz['med']:.0f} / {zz['max']:.0f}", 7)
-                pdf.text(378, y, f"{100*zz['within']:.0f}%", 7)
-                pdf.text(408, y, f"{zz['gamma']:.2f} / {zz['rl_db']:.0f}", 7)
+                pdf.text(270, y, f"{zz['min']:.0f} / {zz['med']:.0f} / {zz['max']:.0f}", 6.5)
+                pdf.text(342, y, f"{100*zz['within']:.0f}%", 6.5)
+                pdf.text(370, y, f"{zz['rl_db']:.0f} / {zz['vswr']:.2f}", 6.5)
+                fnyq = L['mbps'] / 2000.0  # GHz
+                sp = lane_sparams(lane_lad, L, z_pair, 5 * fnyq)
+                if sp:
+                    inb = [v for f_, v in zip(sp['f'], sp['s11']) if f_ <= fnyq + 1e-9]
+                    il = sp['s21'][min(range(len(sp['f'])), key=lambda i: abs(sp['f'][i] - fnyq))]
+                    pdf.text(415, y, f"{max(inb):.0f} / {il:.2f} dB", 6.5)
             e = L['eye']; nlink += 1
-            pdf.text(450, y, f"{1000*e['height_v']:.0f}", 7)
-            pdf.text(485, y, f"{e['width_ui']:.2f}", 7)
-            pdf.text(520, y, f"{e['margin_ui']:+.2f}" if e['vth'] > 0 else '-', 7)
+            pdf.text(470, y, f"{1000*e['height_v']:.0f}", 6.5)
+            pdf.text(498, y, f"{e['width_ui']:.2f}", 6.5)
+            pdf.text(525, y, f"{e['margin_ui']:+.2f}" if e['vth'] > 0 else '-', 6.5)
             v = 'PASS' if L['ok'] else ('FAIL' if L['ok'] is not None else 'info')
             nlink_ok += 1 if L['ok'] else 0
-            pdf.text(555, y, v, 7, True)
+            pdf.text(558, y, v, 6.5, True)
         # eye pages, two lanes per page
         slot = 2
         for L in links:
@@ -654,12 +741,30 @@ def main():
             if zz:
                 pdf.text(50, top - 50, f"Zdiff along the lane: {zz['min']:.0f}-{zz['max']:.0f} ohm, median {zz['med']:.0f}, "
                          f"{100*zz['within']:.0f}% of {zz['len']:.1f} mm within +-10% of {z_pair:.0f} ohm; "
-                         f"peak |Gamma| {zz['gamma']:.2f}, return loss {zz['rl_db']:.0f} dB  (P dark, N blue)", 8)
+                         f"peak |Gamma| {zz['gamma']:.2f}, RL {zz['rl_db']:.0f} dB, VSWR {zz['vswr']:.2f}; "
+                         f"S-parameters to the 5th harmonic", 8)
                 xp, zp = zz['steps']['p']; xn, zn = zz['steps']['n']
-                plot(pdf, 90, top - 130, 430, 60, xp, zp, 'mm', 'Zdiff ohm',
-                     max(0.0, z_pair * 0.5), z_pair * 1.5, extra=list(zip(xn, zn)),
-                     hlines=((z_pair, f'{z_pair:.0f}'),))
-                eye_plot(pdf, 90, top - 325, 430, 160, e)
+                xmax = max(xp[-1], xn[-1])
+                red, blue, grey = (0.75, 0.1, 0.1), (0.2, 0.3, 0.8), (0.55, 0.55, 0.55)
+                py = top - 150  # panel row: TDR view, |SDD11|, |SDD21|
+                axes_plot(pdf, 95, py, 125, 70, 'Zdiff along the lane (TDR view)', 'mm', 'ohm',
+                          0, xmax, z_pair * 0.5, z_pair * 1.5,
+                          [(xp, zp, (0.1, 0.1, 0.1), 'P'), (xn, zn, blue, 'N')],
+                          ticks(0, xmax, 4), ticks(z_pair * 0.5, z_pair * 1.5, 4),
+                          hlines=((z_pair * 1.1, '+10%', grey), (z_pair * 0.9, '-10%', grey)))
+                fnyq = L['mbps'] / 2000.0; fbit = 2 * fnyq; fmax = 5 * fnyq
+                sp = lane_sparams(lane_lad, L, z_pair, fmax)
+                if sp:
+                    vl = ((fnyq, 'Nyquist', grey), (fbit, f'{fbit:g} GHz', grey))
+                    axes_plot(pdf, 255, py, 125, 70, '|SDD11| return loss', 'GHz', 'dB',
+                              0, fmax, -50, 0, [(sp['f'], sp['s11'], (0.1, 0.1, 0.1), '')],
+                              ticks(0, fmax, 4), (-50, -40, -30, -20, -10, 0),
+                              hlines=((-10, 'RL 10 dB reference', red),), vlines=vl)
+                    il_floor = min(-1.0, math.floor(min(sp['s21'])))
+                    axes_plot(pdf, 415, py, 125, 70, '|SDD21| insertion loss', 'GHz', 'dB',
+                              0, fmax, il_floor, 0, [(sp['f'], sp['s21'], (0.1, 0.1, 0.1), '')],
+                              ticks(0, fmax, 4), ticks(il_floor, 0, 4), vlines=vl)
+                eye_plot(pdf, 90, top - 328, 430, 140, e)
             else:
                 eye_plot(pdf, 90, top - 330, 430, 255, e)
     for net, ladder, length, t, vr, over, ring, settle, ok in results:
