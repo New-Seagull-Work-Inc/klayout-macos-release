@@ -1,0 +1,94 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Torex Semiconductor Ltd.",
+    "description-s": "2.7V 200mA Low ESR Cap. Compatible Positive LDO Voltage Regulator, SOT-23",
+    "package-ao": [
+      { "ptype-s": "sot23" },
+      { "ppins-i": 3 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "current-limit",
+      "reference-bandgap"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 6000 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 150 }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 1800,
+      "vin_max_mv": 6000,
+      "vout_fixed_mv": 2700,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 150,
+      "iq_typ_ua": 1,
+      "dropout_mv_at_iout": 100,
+      "has_enable_b": false,
+      "has_thermal_shutdown_b": false,
+      "has_current_limit_b": true
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vss" },
+      { "2": "vout" },
+      { "3": "vin" }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "1uf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "1uf-avss" },
+      { "1": "avss" }
+    ],
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "XC6206P272MR-G"
+  }
+}

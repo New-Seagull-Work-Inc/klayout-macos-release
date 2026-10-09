@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "part-s": "GRM188R71C104KA01D",
+    "description-s": "16V 100nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+    "package-ao": [
+      { "ptype-s": "Ceramic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Yageo",
+    "part-s": "RL0805FR-070R75L",
+    "description-s": "0.75 Ω ±1% 0.125 W thick film low-ohmic current-sense chip resistor, 0805 SMD, ±200 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.127,
+        "100": 0.076,
+        "1K": 0.052,
+        "10K": 0.039,
+        "100K": 0.039
+      },
+      "distributor-s": "Mouser",
+      "moq-i": 1,
+      "stock-i": 6883
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-current-sense"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 750,
+      "value-unit-s": "r",
+      "power-mw-i": 125,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

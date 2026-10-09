@@ -1,0 +1,24 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "Diodes Inc.",
+    "part-s": "AP9101CAK6-ANTRG1",
+    "description-s": "IC BATT PROT LI-ION 1CELL SOT26 / Battery Battery Protection IC Lithium Ion/Polymer SOT-26",
+    "package-ao": [
+      { "ptype-s": "Battery Management" },
+      { "ppins-i": 2 }
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "+" },
+      { "2": "-" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "2": "avss" }
+    ],
+    "battery-o": {}
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "component-o": {
+    "type-s": "soc",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS259474ARPW",
+    "description-s": "2.7V to 23V, 5.5A, 28m\u03a9 True Reverse Current Blocking eFuse with input reverse polarity protection, integrated back-to-back FETs with low on-resistance (RON = 28.3m\u03a9 typical), ideal diode operation with true reverse-current blocking, fast overvoltage protection with adjustable overvoltage lockout (OVLO) with 1.2\u03bcs typical response time, overcurrent protection with load current monitor output (ILM) - circuit breaker with adjustable threshold (ILIM) 0.5A to 6A (\u00b110% accuracy for ILIM > 1A), adjustable transient blanking timer (ITIMER) to allow peak currents up to 2 \u00d7 ILIM, output load current monitor accuracy \u00b16% (IOUT \u2265 1A), fast-trip response for short-circuit protection with 500ns typical response time and adjustable (2 \u00d7 ILIM) and fixed thresholds, active high enable input with adjustable undervoltage lockout threshold (UVLO), adjustable output slew rate control (dVdt), overtemperature protection, power good indication (PG) with adjustable threshold (PGTH), auto-retry fault response, characterized for operation over junction temperature range from \u201340\u00b0C to +125\u00b0C. QFN 2mm \u00d7 2mm, 10-pin HotRod package.",
+    "package-ao": [
+      {
+        "ptype-s": "QFN"
+      },
+      {
+        "ppins-i": 10
+      }
+    ],
+    "blocks-as": [
+      "integrated-back-to-back-fets",
+      "ideal-diode",
+      "reverse-current-blocking",
+      "overvoltage-lockout",
+      "overcurrent-protection",
+      "circuit-breaker",
+      "current-limit-amplifier",
+      "short-circuit-protection",
+      "undervoltage-lockout",
+      "slew-rate-control",
+      "overtemperature-protection",
+      "load-current-monitor",
+      "power-good"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin_min": 2700
+      },
+      {
+        "vin_max": 23000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "vin": 1
+      },
+      {
+        "iout_max": 5500
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "EN/UVLO - Active High Enable for the device. A Resistor Divider on this pin from input supply to GND can be used to adjust the Undervoltage Lockout threshold. Do not leave floating."
+      },
+      {
+        "2": "OVLO - A Resistor Divider on this pin from supply to GND can be used to adjust the Overvoltage Lockout threshold. This pin can also be used as an Active Low Enable for the device. Do not leave floating."
+      },
+      {
+        "3": "PG - Power Good indication. This pin is an Open Drain signal which is asserted High when the internal powerpath is fully turned ON and PGTH input exceeds a certain threshold."
+      },
+      {
+        "4": "PGTH - Power Good Threshold."
+      },
+      {
+        "5": "IN - Power input"
+      },
+      {
+        "6": "OUT - Power output"
+      },
+      {
+        "7": "DVDT - A capacitor from this pin to GND sets the output turn on slew rate. Leave this pin floating for the fastest turn on slew rate."
+      },
+      {
+        "8": "GND - This pin is the ground reference for all internal circuits and must be connected to system GND."
+      },
+      {
+        "9": "ILM - This pin is a dual function pin used to limit and monitor the output current. An external resistor from this pin to GND sets the output current limit threshold during start-up as well as steady state. The pin voltage can also be used as analog output load current monitor signal. Do not leave floating."
+      },
+      {
+        "10": "ITIMER - A capacitor from this pin to GND sets the overcurrent blanking interval during which the output current can temporarily exceed set current limit (but lower than fast-trip threshold) before the device overcurrent response takes action. Leave this pin open for fastest response to overcurrent events."
+      }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      {
+        "5": "ds-power-rx"
+      },
+      {
+        "6": "ds-power-tx"
+      },
+      {
+        "8": "dvss"
+      },
+      {
+        "5": "1uf-dvss"
+      },
+      {
+        "6": "470uf-dvss"
+      },
+      {
+        "7": "3300pf-dvss"
+      },
+      {
+        "9": "549r-dvss"
+      },
+      {
+        "10": "2.2nf-dvss"
+      }
+    ],
+    "specs-o": {},
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

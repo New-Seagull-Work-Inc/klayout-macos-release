@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Fenghua",
+    "part-s": "0402B102K500NT",
+    "description-s": "1 nF ±10% 50 V X7R 0402 multilayer ceramic capacitor (MLCC), SMD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.0035,
+        "1K": 0.0027,
+        "10K": 0.0017,
+        "100K": 0.0014
+      },
+      "distributor-s": "UnikeyIC",
+      "moq-i": 100,
+      "stock-i": 2037293
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 1000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r"
+    }
+  }
+}

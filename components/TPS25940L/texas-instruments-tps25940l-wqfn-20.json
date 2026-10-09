@@ -1,0 +1,144 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS25940L",
+    "description-s": "2.7-18V eFuse with True Reverse Blocking and DevSleep Support for SSDs (Latched)",
+    "package-ao": [
+      { "ptype-s": "WQFN-20" },
+      { "ppins-i": 20 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "efuse",
+      "current-limit",
+      "thermal-shutdown",
+      "overvoltage-protection",
+      "undervoltage-lockout",
+      "reverse-blocking",
+      "power-good",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 12000 }
+    ],
+    "max_currents-ao": [
+      { "out": 5300 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "devslp" },
+      { "2": "pgood" },
+      { "3": "pgth" },
+      { "4": "out" },
+      { "5": "out" },
+      { "6": "out" },
+      { "7": "out" },
+      { "8": "out" },
+      { "9": "in" },
+      { "10": "in" },
+      { "11": "in" },
+      { "12": "in" },
+      { "13": "in" },
+      { "14": "en/uvlo" },
+      { "15": "ovp" },
+      { "16": "gnd" },
+      { "17": "ilim" },
+      { "18": "dvdt" },
+      { "19": "imon" },
+      { "20": "flt" },
+      { "21": "thermal pad, connect to gnd" }
+    ],
+    "cfgpins-ao": [
+      { "1": "devslp" },
+      { "2": "pgood" },
+      { "3": "pgth" },
+      { "14": "en/uvlo" },
+      { "15": "ovp" },
+      { "17": "ilim" },
+      { "18": "dvdt" },
+      { "18": "1.5nf-avss" },
+      { "19": "imon" },
+      { "20": "flt" }
+    ],
+    "stdpins-ao": [
+      { "9": "ds-power-rx" },
+      { "10": "ds-power-rx" },
+      { "11": "ds-power-rx" },
+      { "12": "ds-power-rx" },
+      { "13": "ds-power-rx" },
+      { "9": "100nf-avss" },
+      { "4": "ds-power-tx" },
+      { "5": "ds-power-tx" },
+      { "6": "ds-power-tx" },
+      { "7": "ds-power-tx" },
+      { "8": "ds-power-tx" },
+      { "4": "100uf-avss" },
+      { "16": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "linear",
+      "adjustable_b": false,
+      "vin_min_mv": 2700,
+      "vin_max_mv": 18000,
+      "vout_min_mv": 2700,
+      "vout_max_mv": 18000,
+      "iout_max_ma": 5300,
+      "iq_typ_ua": 200,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_reverse_current_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

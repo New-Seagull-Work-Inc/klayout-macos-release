@@ -1,0 +1,147 @@
+{
+  "component-o": {
+    "type-s": "efuse",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS259530DSG",
+    "description-s": "The TPS259530DSG is a highly integrated eFuse (electronic fuse / hot-swap controller) that provides circuit protection and power management in a small WSON-8 package. It operates from 2.7 V to 18 V input (20 V absolute maximum), with a low 34-mΩ typical on-resistance. The device features fast overvoltage protection with a 5.7 V clamp threshold and a typical 5 µs response time. It includes active-high enable with adjustable undervoltage lockout (UVLO), adjustable current limit from 0.5 A to 4 A (±7.5% accuracy) with a load-current monitor output (ILM), adjustable output slew rate control (dVdt), over-temperature protection, and a fault indication pin (FLT). The device automatically shuts down and latches off on thermal overload events. Operating junction temperature range is –40°C to +125°C.",
+    "package-ao": [
+      {
+        "ptype-s": "WSON"
+      },
+      {
+        "ppins-i": 8
+      }
+    ],
+    "blocks-as": [
+      "power-switch-integrated-fet",
+      "hot-swap-controller",
+      "current-limit-monitor",
+      "overvoltage-clamp",
+      "undervoltage-lockout",
+      "thermal-shutdown",
+      "slew-rate-control",
+      "fault-indicator"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 5000
+      },
+      {
+        "vout": 5000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "vin": 4170
+      },
+      {
+        "vout": 4170
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "dVdt - capacitor connection from this pin to GND sets the output turn-on slew rate. Leave floating for fastest turn-on slew rate."
+      },
+      {
+        "2": "EN/UVLO - active high enable input. A resistor divider can be used to adjust the undervoltage lockout threshold. Do not leave floating."
+      },
+      {
+        "3": "IN - power input"
+      },
+      {
+        "4": "IN - power input"
+      },
+      {
+        "5": "OUT - power output"
+      },
+      {
+        "6": "FLT - fault event indicator, pulled low when a fault is detected. Open-drain output that requires an external pull-up resistance."
+      },
+      {
+        "7": "ILM - dual function pin used to limit and monitor the output current. An external resistor from this pin to GND sets the output current limit. The pin voltage can also be used to monitor the output load current. Do not leave floating."
+      },
+      {
+        "8": "GND - ground"
+      },
+      {
+        "9": "GND (thermal pad) - the exposed pad is used primarily for heat dissipation and must be connected to GND."
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "2": "EN/UVLO"
+      },
+      {
+        "2c": "Active-high enable with adjustable undervoltage lockout. Resistor divider (R1 from VIN to EN, R2 from EN to GND) sets UVLO threshold. VUVLO rising threshold is 1.2 V (typ)."
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "4": "ds-power-rx"
+      },
+      {
+        "5": "ds-power-tx"
+      },
+      {
+        "3": "100nf-dvss"
+      },
+      {
+        "5": "1uf-dvss"
+      },
+      {
+        "8": "dvss"
+      },
+      {
+        "9": "dvss"
+      },
+      {
+        "7": "487r-dvss"
+      }
+    ],
+    "specs-o": {},
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "efuse-o": {
+      "current-limit-min-ma-i": 500,
+      "current-limit-max-ma-i": 4000,
+      "current-limit-adjustable-b": true
+    }
+  }
+}

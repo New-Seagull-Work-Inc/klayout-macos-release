@@ -1,0 +1,123 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "description-s": "6-A, 5-V Input Non-Isolated Wide Output Adjust Power Module",
+    "package-ao": [
+      { "ptype-s": "through-hole module" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "soft-start",
+      "enable",
+      "thermal-shutdown",
+      "current-limit",
+      "auto-track"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 5000 },
+      { "vout": 800 }
+    ],
+    "max_currents-ao": [
+      { "out": 6000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "track" },
+      { "3": "vin" },
+      { "4": "inhibit" },
+      { "5": "vo adjust" },
+      { "6": "vout" }
+    ],
+    "cfgpins-ao": [
+      { "2": "track" },
+      { "4": "inhibit" },
+      { "5": "vo adjust" }
+    ],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "100uf-avss" },
+      { "6": "ds-power-tx" },
+      { "6": "100uf-avss" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 4500,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 800,
+      "vout_max_mv": 3600,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 6000,
+      "iq_typ_ua": 10000,
+      "switching_freq_khz": 600,
+      "efficiency_pct_max": 95,
+      "has_enable_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "PTH05050WAH",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3"
+        ],
+        "vmin_mv": 4500,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "datasheet_7.pdf",
+          "page_n": 3,
+          "table-s": "ELECTRICAL CHARACTERISTICS"
+        }
+      }
+    ]
+  }
+}

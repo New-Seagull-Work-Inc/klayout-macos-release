@@ -1,0 +1,150 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "LM2576HVT-12",
+    "description-s": "12V 3A Step-Down Switching Regulator",
+    "package-ao": [
+      {
+        "ptype-s": "to-220"
+      },
+      {
+        "ppins-i": 5
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 60000
+      },
+      {
+        "vout": 12000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 3000
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "vin"
+      },
+      {
+        "2": "output"
+      },
+      {
+        "3": "gnd"
+      },
+      {
+        "4": "feedback"
+      },
+      {
+        "5": "on/off"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "4": "feedback"
+      },
+      {
+        "4c": "fixed 12 V version: FB senses the output, tie to vout (Figure 21 test circuit: CIN 100 uF, COUT 1000 uF, L1 100 uH, D1 MBR360)"
+      },
+      {
+        "4": "vout"
+      },
+      {
+        "5": "on/off"
+      },
+      {
+        "5c": "ON/OFF is active-high shutdown: tie to GND to run"
+      },
+      {
+        "5": "avss"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "1": "100uf-avss"
+      },
+      {
+        "2": "100uh-vout"
+      },
+      {
+        "2": "schottky-3a-60v-avss"
+      },
+      {
+        "vout": "ds-power-tx"
+      },
+      {
+        "vout": "1000uf-avss"
+      },
+      {
+        "3": "avss"
+      }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": false,
+      "vin_min_mv": 15000,
+      "vin_max_mv": 60000,
+      "vout_fixed_mv": 12000,
+      "vout_accuracy_pct_x10": 40,
+      "iout_max_ma": 3000,
+      "iq_typ_ua": 5000,
+      "switching_freq_khz": 52,
+      "efficiency_pct_max": 88,
+      "has_enable_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

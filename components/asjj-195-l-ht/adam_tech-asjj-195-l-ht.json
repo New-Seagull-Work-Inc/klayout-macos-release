@@ -1,0 +1,66 @@
+{
+  "component-o": {
+		"type-s" 	: "connector",
+		"subtype-s" 	: "io-analog_stereo-jack",
+		"vendor-s" 	: "adam_tech",
+		"part-s"	: "asjj-195-l-ht",
+		"description-s" : "analog stereo jack",
+	  	"non-technical-o" : {
+      		"lifecycle-o" : {
+          		"samples" : {
+              		"month" : 11,
+              		"year"  : 2023
+          		},
+          		"mp" : {
+              		"month" : 1,
+              		"year"  : 2024
+          		},
+          		"eol" : {
+              		"month" : 12,
+              		"year" : 2035
+          		}
+      		},
+      		"distributor-s" : "TBD",
+      		"cost-o" : {
+          		"10"   : 2.00,
+          		"100"  : 1.50,
+          		"1K"   : 0.80,
+          		"10K"  : 0.50,
+          		"100K" : 0.40
+      		}
+  		},
+		"package-ao"	: 
+			[
+				{"ptype-s" 	: "jack"},
+				{"ppins-i" 	: 6}
+			],
+		"blocks-as"			: [],
+		"interfaces-as" 	: ["as-l-tx","as-r-tx"],
+		"typical_voltages-ao" :
+			[
+			{"vdc" : 30000}
+			],
+		"max_currents-ao" :
+			[
+			{"vdc" : 500}
+			],
+		"pins-ao" : 
+			[
+			{"1" : "earth"},
+			{"2" : "tip_spring"},
+			{"3" : "ring_spring"},
+			{"4" : "nc"},
+			{"5" : "ring_spring"},
+			{"6" : "ring_spring"}
+			],
+		"cfgpins-ao" :
+			[
+			],
+		"stdpins-ao" : 
+			[
+			{"3" : "l-tx"},
+			{"2"  : "r-tx"}, 
+			{"1"  : "earth"}
+			]
+	}
+}

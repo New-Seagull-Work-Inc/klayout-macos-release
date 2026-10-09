@@ -1,0 +1,118 @@
+{
+  "component-o": {
+    "type-s": "efuse",
+    "vendor-s": "Texas Instruments",
+    "description-s": "2.7V-18V smart eFuse, 0.6A-5.3A adjustable current limit (±8%), 42mΩ RON, 1µs fast-trip short-circuit response, true reverse blocking, DevSleep mode, auto-retry, 20-pin WQFN",
+    "package-ao": [
+      { "ptype-s": "WQFN" },
+      { "ppins-i": 20 }
+    ],
+    "blocks-as": [
+      "efuse-load-switch"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-pwrmon-tx"
+    ],
+    "efuse-o": {
+      "vin-min-mv-i": 2700,
+      "vin-max-mv-i": 18000,
+      "current-limit-adjustable-b": true,
+      "current-limit-min-ma-i": 600,
+      "current-limit-max-ma-i": 5300,
+      "current-limit-accuracy-pct-x10-i": 80,
+      "on-resistance-mohm-i": 42,
+      "shortcircuit-response-us-i": 1,
+      "overvoltage-clamp-b": true,
+      "reverse-current-block-b": true,
+      "hotswap-b": true,
+      "slew-rate-control-b": true,
+      "thermal-shutdown-b": true,
+      "fault-flag-b": true,
+      "auto-retry-b": true
+    },
+    "pins-ao": [
+      { "1": "DEVSLP" },
+      { "2": "PGOOD" },
+      { "3": "PGTH" },
+      { "4": "OUT" },
+      { "5": "OUT" },
+      { "6": "OUT" },
+      { "7": "OUT" },
+      { "8": "OUT" },
+      { "9": "IN" },
+      { "10": "IN" },
+      { "11": "IN" },
+      { "12": "IN" },
+      { "13": "IN" },
+      { "14": "EN/UVLO" },
+      { "15": "OVP" },
+      { "16": "GND" },
+      { "17": "ILIM" },
+      { "18": "dVdT" },
+      { "19": "IMON" },
+      { "20": "FLT" },
+      { "21": "thermal pad" }
+    ],
+    "stdpins-ao": [
+      { "9": "ds-power-rx" },
+      { "10": "ds-power-rx" },
+      { "11": "ds-power-rx" },
+      { "12": "ds-power-rx" },
+      { "13": "ds-power-rx" },
+      { "9": "0.1uf-dvss" },
+      { "4": "ds-power-tx" },
+      { "5": "ds-power-tx" },
+      { "6": "ds-power-tx" },
+      { "7": "ds-power-tx" },
+      { "8": "ds-power-tx" },
+      { "4": "100uf-dvss" },
+      { "16": "dvss" },
+      { "21": "dvss" },
+      { "2": "ds-pwrmon-pg" },
+      { "20": "ds-pwrmon-flt" }
+    ],
+    "cfgpins-ao": [
+      { "1": "DEVSLP" },
+      { "2": "PGOOD" },
+      { "3": "PGTH" },
+      { "3": "475k-vout" },
+      { "3": "47k-dvss" },
+      { "14": "EN/UVLO" },
+      { "14": "475k-vin" },
+      { "14": "16.7k-dvss" },
+      { "15": "OVP" },
+      { "15": "16.7k-vin" },
+      { "15": "31.2k-dvss" },
+      { "17": "ILIM" },
+      { "17": "17.8k-dvss" },
+      { "18": "dVdT" },
+      { "18": "1nf-dvss" },
+      { "19": "IMON" },
+      { "19": "19.1k-dvss" },
+      { "20": "FLT" },
+      { "1": "dvss" }
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "part-s": "TPS25940A"
+  }
+}

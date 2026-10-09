@@ -1,0 +1,211 @@
+{
+  "component-o": {
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Texas Instruments",
+    "part-s": "BQ25601RTWR",
+    "description-s": "I2C-controlled 1-cell 3 A switch-mode buck battery charger with NVDC power path, 3.9 V to 13.5 V input, input current limit 100 mA to 3.2 A, 1.5 MHz, WQFN-24 4 x 4 mm",
+    "package-ao": [
+      { "ptype-s": "WQFN" },
+      { "ppins-i": 24 }
+    ],
+    "blocks-as": [
+      "battery-charger-switching",
+      "power-path"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "ds-power-rxtx",
+      "ds-i2c-rxtx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 3900 },
+      { "vin_max": 13500 }
+    ],
+    "max_currents-ao": [
+      { "charge_max": 3000 },
+      { "sys_max": 3250 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vac" },
+      { "2": "psel" },
+      { "3": "pg" },
+      { "4": "stat" },
+      { "5": "scl" },
+      { "6": "sda" },
+      { "7": "int" },
+      { "8": "nc" },
+      { "9": "ce" },
+      { "10": "nc" },
+      { "11": "ts" },
+      { "12": "qon" },
+      { "13": "bat" },
+      { "14": "bat" },
+      { "15": "sys" },
+      { "16": "sys" },
+      { "17": "gnd" },
+      { "18": "gnd" },
+      { "19": "sw" },
+      { "20": "sw" },
+      { "21": "btst" },
+      { "22": "regn" },
+      { "23": "pmid" },
+      { "24": "vbus" },
+      { "25": "ep" }
+    ],
+    "stdpins-ao": [
+      { "24": "ds-power-rx" },
+      { "24": "1uf-avss" },
+      { "23": "10uf-avss" },
+      { "22": "4.7uf-avss" },
+      { "21": "47nf-sw" },
+      { "19": "1uh-sys" },
+      { "15": "ds-power-tx" },
+      { "15": "10uf-avss" },
+      { "15": "10uf-avss" },
+      { "16": "ds-power-tx" },
+      { "13": "ds-power-rxtx" },
+      { "13": "10uf-avss" },
+      { "14": "ds-power-rxtx" },
+      { "5": "ds-i2c-scl" },
+      { "6": "ds-i2c-sda" },
+      { "17": "avss" },
+      { "18": "avss" },
+      { "25": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "1": "vac" },
+      { "1c": "Charge input voltage sense; this pin must be connected to the VBUS pin (Table 7-1)." },
+      { "1": "vbus" },
+      { "2": "psel" },
+      { "2c": "Power source selection: high sets a 500 mA input current limit, low sets 2.4 A; in host mode the host programs IINDPM (100 mA to 3.2 A) over I2C. Tied low for the 2.4 A default. The part does not read USB Type-C CC lines: the host must read CC and program the limit." },
+      { "2": "avss" },
+      { "9": "ce" },
+      { "9c": "Charge enable, active low: battery charging is enabled when this pin is driven low. Tied low." },
+      { "9": "avss" },
+      { "11": "ts" },
+      { "11c": "Thermistor input. Values here are the datasheet's 'TS pin not used' connection: 10k from REGN to TS and 10k from TS to GND. With a 103AT-2 thermistor use the Figure 10-1 divider instead (5.23k from REGN, 30.1k to GND, thermistor to GND)." },
+      { "11": "10k-regn" },
+      { "11": "10k-avss" },
+      { "12": "qon" },
+      { "12c": "BATFET enable / reset control, internal 200k pull-up; left open when the ship-mode / reset button is not used." },
+      { "3": "pg" },
+      { "3c": "Open-drain power-good, active low; pull up to a logic rail through 10k, or drive an LED through 2.2k (Figure 10-1). May be left open if unused." },
+      { "4": "stat" },
+      { "4c": "Open-drain charge status; pull up through 10k or drive an LED through 2.2k (Figure 10-1). May be left open if unused." },
+      { "7": "int" },
+      { "7c": "Open-drain interrupt, active-low 256 us pulse; connect to the host's logic rail through 10k. Board-level pull-up to the host rail, no strap here. SCL and SDA also need 10k pull-ups to that rail." },
+      { "8": "nc" },
+      { "8c": "No connect; left open (keep floating)." },
+      { "10": "nc" },
+      { "10c": "No connect; left open (keep floating)." },
+      { "20": "sw" },
+      { "20c": "Second switching-node pin, joined to pin 19." },
+      { "20": "sw" },
+      { "23": "pmid" },
+      { "23c": "Reverse-blocking FET drain; 10 uF ceramic from PMID to GND (Table 7-1), in stdpins-ao." }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "chemistries-as": [
+        "lithium-ion",
+        "lithium-polymer"
+      ],
+      "cells-i": 1,
+      "topology-s": "switching-buck",
+      "vin-min-mv-i": 3900,
+      "vin-max-mv-i": 13500,
+      "charge-voltage-mv-i": 4208,
+      "charge-voltage-accuracy-pct-x10-i": 5,
+      "charge-voltage-selectable-b": true,
+      "charge-current-max-ma-i": 3000,
+      "charge-current-programmable-b": true,
+      "precharge-b": true,
+      "power-path-b": true,
+      "ntc-thermistor-b": true,
+      "jeita-b": true,
+      "charge-enable-b": true,
+      "status-outputs-i": 2,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "i2c",
+      "input-current-limit-max-ma-i": 3200,
+      "system-current-max-ma-i": 3250,
+      "battery-discharge-max-ma-i": 6000
+    },
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.6778,
+        "100": 0.6562,
+        "1K": 0.6346,
+        "10K": 0.6346,
+        "100K": 0.6346
+      },
+      "distributor-s": "Verical",
+      "moq-i": 10,
+      "stock-i": 610
+    },
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 35.6,
+      "tj-max-c-i": 150
+    },
+    "specs-o": {
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "19"
+      ],
+      "vin_pins-as": [
+        "24"
+      ],
+      "pgnd_pins-as": [
+        "17",
+        "18",
+        "25"
+      ],
+      "l_nh_typ": 1000,
+      "cin_nf_typ": 1000,
+      "cout_nf_typ": 20000,
+      "source-o": {
+        "datasheet-s": "BQ25601RTWR.pdf",
+        "page_n": 45,
+        "figure-s": "Figure 10-1"
+      }
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VBUS",
+        "role-s": "vbus",
+        "pins-as": [
+          "24"
+        ],
+        "vmin_mv": 3900,
+        "vmax_mv": 13500,
+        "source-o": {
+          "datasheet-s": "BQ25601RTWR.pdf",
+          "page_n": 7,
+          "table-s": "8.3 Recommended Operating Conditions"
+        }
+      }
+    ]
+  }
+}

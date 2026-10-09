@@ -1,0 +1,78 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-jack",
+    "vendor-s": "Molex",
+    "part-s": "0430451200",
+    "description-s": "Micro-Fit 3.0 header, 12 circuits (2x6), 3.00 mm pitch, right angle, through hole, 4-wall shroud, board locks, tin. Pin functions are assigned per design by the architect's connector pinmap.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 1.42,
+        "100": 1.42,
+        "1K": 1.42,
+        "10K": 1.02,
+        "100K": 0.868
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 9,
+      "stock-i": 953,
+      "quote-s": "Arrow Electronics quote 25584222 (2026-09-23, expires 2026-10-23)",
+      "coo-s": "MX",
+      "coo-source-s": "Arrow Electronics quote 25584222",
+      "coo-url-s": "",
+      "coo-quote-s": "",
+      "coo-checked-s": "2026-09-29",
+      "hts-s": "85366940"
+    },
+    "package-ao": [
+      { "ptype-s": "header-2x6-3.00mm-ra-tht" },
+      { "ppins-i": 12 }
+    ],
+    "blocks-as": [
+      "header",
+      "jack",
+      "power-jack"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" },
+      { "4": "PIN4" },
+      { "5": "PIN5" },
+      { "6": "PIN6" },
+      { "7": "PIN7" },
+      { "8": "PIN8" },
+      { "9": "PIN9" },
+      { "10": "PIN10" },
+      { "11": "PIN11" },
+      { "12": "PIN12" }
+    ],
+    "max_currents-ao": [
+      { "in": 5000 }
+    ],
+    "connector-o": {
+      "pin_count_i": 12,
+      "rows_i": 2,
+      "gender_s": "male",
+      "orientation_s": "right-angle",
+      "mount_s": "through-hole",
+      "current_per_pin_ma_i": 5000,
+      "voltage_max_v_i": 600,
+      "contact_plating_s": "tin",
+      "locking_b": true,
+      "shielded_b": false
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 105
+        }
+      }
+    ]
+  }
+}

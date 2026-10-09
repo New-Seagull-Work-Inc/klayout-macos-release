@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Walsin",
+    "part-s": "1206N104J500CT",
+    "description-s": "100 nF ±5% 50 V C0G (NP0) 1206 multilayer ceramic capacitor (MLCC), SMD, 1.6 mm thick",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.306,
+        "100": 0.202,
+        "1K": 0.138,
+        "10K": 0.119,
+        "100K": 0.119
+      },
+      "distributor-s": "Mouser",
+      "moq-i": 1,
+      "stock-i": 119
+    },
+    "package-ao": [
+      { "ptype-s": "smd-1206" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 100000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g"
+    }
+  }
+}

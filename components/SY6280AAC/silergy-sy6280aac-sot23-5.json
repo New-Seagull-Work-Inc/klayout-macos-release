@@ -1,0 +1,114 @@
+{
+  "component-o": {
+    "type-s": "efuse",
+    "vendor-s": "Silergy",
+    "part-s": "SY6280AAC",
+    "description-s": "2.4 V to 5.5 V current-limited power distribution (load) switch, 80 mOhm, programmable 0.4 A to 2 A limit, active-high enable, reverse blocking, output discharge, SOT-23-5; used as the microSD card power switch",
+    "package-ao": [
+      { "ptype-s": "SOT-23-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "efuse-load-switch"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 2400 },
+      { "vin_max": 5500 }
+    ],
+    "max_currents-ao": [
+      { "out": 2000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "out" },
+      { "2": "gnd" },
+      { "3": "iset" },
+      { "4": "en" },
+      { "5": "in" }
+    ],
+    "stdpins-ao": [
+      { "5": "ds-power-rx" },
+      { "5": "1uf-avss" },
+      { "1": "ds-power-tx" },
+      { "1": "1uf-avss" },
+      { "2": "avss" },
+      { "4": "ds-sd_pwr-rx" }
+    ],
+    "cfgpins-ao": [
+      { "3": "iset" },
+      { "3c": "Current limit programming: Ilim (A) = 6800 / Rset (ohm), 0.4 A to 2 A. 6.8k gives 1 A (0.75 to 1.25 A), the datasheet's test value, sized for one microSD card." },
+      { "3": "6.8k-avss" },
+      { "4": "en" },
+      { "4c": "ON/OFF control, pull high to enable, do not float. Driven by the host's card-power GPIO (ds-sd_pwr-rx); a pull-down so the card stays off while the host pin is high-impedance is a board-level choice, no strap here. EN rising threshold is 2 V (at VIN = 5 V), so a 1.8 V GPIO cannot drive it." }
+    ],
+    "efuse-o": {
+      "vin-min-mv-i": 2400,
+      "vin-max-mv-i": 5500,
+      "continuous-current-ma-i": 2000,
+      "current-limit-adjustable-b": true,
+      "current-limit-min-ma-i": 400,
+      "current-limit-max-ma-i": 2000,
+      "current-limit-accuracy-pct-x10-i": 250,
+      "on-resistance-mohm-i": 80,
+      "overvoltage-clamp-b": false,
+      "reverse-current-block-b": true,
+      "hotswap-b": false,
+      "thermal-shutdown-b": true,
+      "fault-flag-b": false,
+      "auto-retry-b": true,
+      "quiescent-current-ua-i": 25
+    },
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.09009,
+        "100": 0.05406,
+        "1K": 0.04505,
+        "10K": 0.04505,
+        "100K": 0.04505
+      },
+      "distributor-s": "Chipsmall Limited",
+      "moq-i": 1,
+      "stock-i": 82283
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "in",
+        "pins-as": [
+          "5"
+        ],
+        "vmin_mv": 2400,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "SY6280AAC.pdf",
+          "page_n": 3,
+          "table-s": "Electrical Characteristics"
+        }
+      }
+    ]
+  }
+}

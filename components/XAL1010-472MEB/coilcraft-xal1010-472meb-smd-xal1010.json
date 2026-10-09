@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Coilcraft",
+    "part-s": "XAL1010-472MEB",
+    "description-s": "4.7 µH 24 A shielded power inductor, XAL series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-xal1010"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 4700,
+      "value-unit-s": "nh",
+      "current-max-i": 24000,
+      "lead-style-s": "smd"
+    }
+  }
+}

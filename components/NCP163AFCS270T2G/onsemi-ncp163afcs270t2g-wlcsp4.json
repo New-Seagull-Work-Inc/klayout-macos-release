@@ -1,0 +1,111 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "onsemi",
+    "description-s": "Ultra-Low Noise High PSRR LDO Regulator 250mA 2.7V",
+    "package-ao": [
+      { "ptype-s": "wlcsp4" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "reference-bandgap",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 5500 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 250 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "in" },
+      { "2": "out" },
+      { "3": "en" },
+      { "4": "gnd" }
+    ],
+    "cfgpins-ao": [
+      { "3": "en" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "1uf-avss" },
+      { "4": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 2200,
+      "vin_max_mv": 5500,
+      "vout_fixed_mv": 2700,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 250,
+      "iq_typ_ua": 12,
+      "ish_max_ua": 100,
+      "dropout_mv_at_iout": 95,
+      "psrr_db_at_1khz": 92,
+      "noise_uvrms": 7,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "NCP163AFCS270T2G"
+  }
+}

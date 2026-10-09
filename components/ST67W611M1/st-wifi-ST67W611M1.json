@@ -1,0 +1,130 @@
+{
+  "component-o": {
+    "type-s": "wifi-module",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "ST67W611M1",
+    "description-s": "Wi-Fi 6 + Bluetooth LE 5.4 + 802.15.4 coprocessor module",
+	   "non-technical-o": {
+        "lifecycle-o": {
+          "samples": {
+            "month": 11,
+            "year": 2023
+          },
+          "mp": {
+            "month": 1,
+            "year": 2024
+          },
+          "eol": {
+            "month": 12,
+            "year": 2035
+          }
+        },
+        "distributor-s" : "TBD",
+        "cost-o": {
+          "10": 6.34,
+          "100": 5.53,
+          "1K": 4.74,
+          "10K": 4.74,
+          "100K": 4.74
+        }
+      },
+
+    "package-ao": [
+      { "ptype-s": "LGA" },
+      { "ppins-i": 32 }
+    ],
+
+    "blocks-as": [
+      "wifi",
+      "bluetooth",
+      "802.15.4",
+      "spi",
+      "uart",
+      "rf"
+    ],
+
+    "interfaces-as": [
+      "ds-spi-rxtx",
+      "ds-uart-rxtx",
+      "dd-rf-tx"
+    ],
+
+    "pins-ao": [
+      {"1": "RESERVED_GPIO0"},
+      {"2": "RESERVED_GPIO1"},
+      {"3": "BOOT"},
+      {"4": "RESERVED_GPIO3"},
+      {"5": "RESERVED"},
+      {"6": "RESERVED"},
+      {"7": "RESERVED"},
+      {"8": "RESERVED"},
+      {"9": "VDDIO"},
+      {"10": "GND"},
+      {"11": "RESERVED"},
+      {"12": "RESERVED"},
+      {"13": "XTAL32K_OUT_GPIO17"},
+      {"14": "XTAL32K_IN_GPIO16"},
+      {"15": "GND"},
+      {"16": "VDD33"},
+      {"17": "CHIP_EN"},
+      {"18": "GND"},
+      {"19": "RESERVED"},
+      {"20": "RESERVED"},
+      {"21": "SPI_RDY"},
+      {"22": "UART_RX_GPIO22"},
+      {"23": "UART_TX_GPIO21"},
+      {"24": "SPI_CS_GPIO28"},
+      {"25": "VDDIO"},
+      {"26": "GND"},
+      {"27": "SPI_MOSI_GPIO27"},
+      {"28": "SPI_CLK_GPIO29"},
+      {"29": "SPI_MISO_GPIO30"},
+      {"30": "GND"},
+      {"31": "RF_OR_NC"},
+      {"32": "GND"}
+    ],
+
+    "cfgpins-ao": [
+      {"3": "boot"},
+      {"17": "enable"}
+    ],
+
+    "stdpins-ao": [
+      {"16": "dvdd-3_3"},
+      {"9": "dvdd-3_3"},
+      {"25": "dvdd-3_3"},
+
+      {"10": "gnd"},
+      {"15": "gnd"},
+      {"18": "gnd"},
+      {"26": "gnd"},
+      {"30": "gnd"},
+      {"32": "gnd"},
+
+      {"27": "ds-spi-mosi"},
+      {"29": "ds-spi-miso"},
+      {"28": "ds-spi-clk"},
+      {"24": "ds-spi-cs"},
+      {"21": "ds-spi-ready"},
+      {"17": "ds-spi-reset"},
+
+      {"22": "ds-uart-rx"},
+      {"23": "ds-uart-tx"},
+
+      {"31": "dd-rf"}
+    ],
+    "voltages-ao": [
+      {"vdd33": 3300},
+      {"vddio": 3300}
+    ],
+    "max_currents-ao": [
+      {"vdd33": 200},
+      {"vddio": 20}
+    ],
+
+    "temperatures-ao": [
+      {"operating-o": {"min-i": -40, "max-i": 85}},
+      {"storage-o": {"min-i": -40, "max-i": 125}}
+    ]
+  }
+}

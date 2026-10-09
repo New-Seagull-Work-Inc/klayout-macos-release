@@ -1,0 +1,122 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Diodes Inc.",
+    "part-s": "AP63205WU-7",
+    "description-s": "3.8-32V 2A synchronous buck converter, fixed 5.0V output",
+    "package-ao": [
+      {
+        "ptype-s": "sot-563"
+      },
+      {
+        "ppins-i": 6
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 32000
+      },
+      {
+        "vout": 5000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 2000
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "fb"
+      },
+      {
+        "2": "en"
+      },
+      {
+        "3": "vin"
+      },
+      {
+        "4": "gnd"
+      },
+      {
+        "5": "vout"
+      },
+      {
+        "6": "bst"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "3": "10uf-avss"
+      },
+      {
+        "3": "100nf-avss"
+      },
+      {
+        "5": "ds-power-tx"
+      },
+      {
+        "5": "22uf-avss"
+      },
+      {
+        "4": "avss"
+      },
+      {
+        "6": "100nf-vout"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "2": "en"
+      },
+      {
+        "1": "fb"
+      },
+      {
+        "1c": "fixed 5V variant: tie fb sense directly to vout"
+      }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": false,
+      "vin_min_mv": 3800,
+      "vin_max_mv": 32000,
+      "vout_fixed_mv": 5000,
+      "iout_max_ma": 2000,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    }
+  }
+}

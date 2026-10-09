@@ -1,0 +1,90 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-usbc-jack",
+    "vendor-s": "GCT",
+    "part-s": "USB4085-GF-A",
+    "description-s": "USB Type-C 2.0 receptacle, 16 contacts, through-hole, right angle, 5 A / 48 VDC, 20000 cycles; board power input (VBUS/GND, CC1/CC2 with 5.1k Rd pull-downs for a sink, D+/D- brought out)",
+    "package-ao": [
+      { "ptype-s": "through-hole" },
+      { "ppins-i": 16 }
+    ],
+    "blocks-as": [
+      "usb-c-receptacle"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-usb2-rxtx",
+      "ds-usbcc-rxtx"
+    ],
+    "voltages-ao": [
+      { "vin_max": 48000 }
+    ],
+    "max_currents-ao": [
+      5.0
+    ],
+    "pins-ao": [
+      { "A1":  "GND" },
+      { "A4":  "VBUS" },
+      { "A5":  "CC1" },
+      { "A6":  "D+" },
+      { "A7":  "D-" },
+      { "A8":  "SBU1" },
+      { "A9":  "VBUS" },
+      { "A12": "GND" },
+      { "B1":  "GND" },
+      { "B4":  "VBUS" },
+      { "B5":  "CC2" },
+      { "B6":  "D+" },
+      { "B7":  "D-" },
+      { "B8":  "SBU2" },
+      { "B9":  "VBUS" },
+      { "B12": "GND" },
+      { "SH":  "shield" }
+    ],
+    "stdpins-ao": [
+      { "A1":  "avss" },
+      { "A12": "avss" },
+      { "B1":  "avss" },
+      { "B12": "avss" },
+      { "A4":  "ds-power-rxtx" },
+      { "A9":  "ds-power-rxtx" },
+      { "B4":  "ds-power-rxtx" },
+      { "B9":  "ds-power-rxtx" },
+      { "A5":  "ds-usbcc-cc1" },
+      { "A5":  "5.1k-avss" },
+      { "B5":  "ds-usbcc-cc2" },
+      { "B5":  "5.1k-avss" },
+      { "A6":  "ds-usb2-dp" },
+      { "B6":  "ds-usb2-dp" },
+      { "A7":  "ds-usb2-dm" },
+      { "B7":  "ds-usb2-dm" },
+      { "A8":  "SBU1, unused for a power sink" },
+      { "B8":  "SBU2, unused for a power sink" },
+      { "SH":  "shield, tie to chassis/ground at the connector" },
+      { "A5c": "CC1/CC2: USB-C sink must present Rd = 5.1k to GND on each CC pin or a Type-C source keeps VBUS off; the 5.1k-avss shorthands place them" }
+    ],
+    "cfgpins-ao": [],
+    "temperatures-ao": [
+      { "operating-o": { "min-i": -40, "max-i": 85 } }
+    ],
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.772,
+        "100": 0.656,
+        "1K": 0.572,
+        "10K": 0.572,
+        "100K": 0.572
+      },
+      "distributor-s": "DigiKey",
+      "distributors-ao": [
+        { "DigiKey": "2073-USB4085-GF-A-ND" },
+        { "Mouser": "640-USB4085-GF-A" },
+        { "Newark/Farnell": "2924867" }
+      ],
+      "lifecycle-o": {}
+    },
+    "datasheet-s": "https://gct.co/files/drawings/usb4085.pdf",
+    "procurement-o": {}
+  }
+}

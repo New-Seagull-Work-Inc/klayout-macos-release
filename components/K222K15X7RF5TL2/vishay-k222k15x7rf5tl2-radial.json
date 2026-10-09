@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Vishay",
+    "part-s": "K222K15X7RF5TL2",
+    "description-s": "2200 pF 50 V ±10% X7R ceramic disc capacitor, 5 mm pitch, thru-hole, K series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.111,
+        "100": 0.098,
+        "1K": 0.068,
+        "10K": 0.049,
+        "100K": 0.049
+      },
+      "distributor-s": "Mouser"
+    },
+    "package-ao": [
+      { "ptype-s": "radial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 2200,
+      "value-unit-s": "pf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "X7R",
+      "lead-style-s": "radial"
+    }
+  }
+}

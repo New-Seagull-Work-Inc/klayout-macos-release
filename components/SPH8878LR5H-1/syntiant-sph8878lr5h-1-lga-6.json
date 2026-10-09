@@ -1,0 +1,93 @@
+{
+  "component-o": {
+    "type-s": "microphone",
+    "vendor-s": "Syntiant (Knowles)",
+    "part-s": "SPH8878LR5H-1",
+    "description-s": "SiSonic analog MEMS microphone, bottom port, differential output (−44 dBV single-ended, −38 dBV differential), 67 dB SNR, 2.3-3.6 V, 250 µA, LGA-6 3.5 x 2.65 mm",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 1.655,
+        "100": 1.2777,
+        "1K": 1.08172,
+        "10K": 0.88375,
+        "100K": 0.88375
+      },
+      "distributor-s": "DigiKey"
+    },
+    "package-ao": [
+      { "ptype-s": "lga-6-3.5x2.65" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "microphone",
+      "analog"
+    ],
+    "interfaces-as": [
+      "as-audio-tx",
+      "ds-power-rx"
+    ],
+    "pins-ao": [
+      { "1": "OUT+" },
+      { "2": "GND" },
+      { "3": "GND" },
+      { "4": "GND" },
+      { "5": "VDD" },
+      { "6": "OUT-" }
+    ],
+    "stdpins-ao": [
+      { "1": "as-audio-tx" },
+      { "2": "gnd" },
+      { "3": "gnd" },
+      { "4": "gnd" },
+      { "5": "ds-power-rx" },
+      { "5": "100nf/c0g-gnd" },
+      { "5": "dvdd-2_75" }
+    ],
+    "cfgpins-ao": [
+      { "1": "OUT+" },
+      { "1c": "Single-ended analog output (−44 dBV): AC-couple into the audio input (a series capacitor at the receiving end, not a pin passive)." },
+      { "6": "OUT-" },
+      { "6c": "OUT-: no connect -- the datasheet labels it \"No Connect\" beside the pin in its application circuit (page 4); left open." }
+    ],
+    "microphone-o": {
+      "output-s": "analog",
+      "sensitivity-mdbv-x10-i": -440,
+      "snr-db-x10-i": 670,
+      "vdd-min-mv-i": 2300,
+      "vdd-max-mv-i": 3600,
+      "idd-ua-i": 250,
+      "port-s": "bottom"
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      }
+    ],
+    "max_currents-ao": [
+      { "vdd": 1 }
+    ],
+    "voltages-ao": [
+      { "vdd": 2750 }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "VDD",
+        "role-s": "vdd",
+        "pins-as": [
+          "5"
+        ],
+        "vnom_mv": 2750,
+        "vmin_mv": 2300,
+        "vmax_mv": 3600,
+        "source-o": {
+          "datasheet-s": "SPH8878LR5H-1.pdf",
+          "page_n": 2
+        }
+      }
+    ]
+  }
+}

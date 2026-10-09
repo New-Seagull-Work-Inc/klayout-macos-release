@@ -1,0 +1,99 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-rj45m-jack",
+    "vendor-s": "Suntsu",
+    "part-s": "SCNRJ-1010GGMSEGY-073GSORTH",
+    "description-s": "1000 Base-T Single Port RJ45 Jack Magnetics",
+	"non-technical-o" : {
+		  "lifecycle-o" : {
+			  "samples" : {
+				  "month" : 11,
+				  "year"  : 2023
+			  },
+			  "mp" : {
+				  "month" : 1,
+				  "year"  : 2024
+			  },
+			  "eol" : {
+				  "month" : 12,
+				  "year" : 2035
+			  }
+		  },
+		  "distributor-s" : "Suntsu",
+		  "cost-o" : {
+			  "10"   : 3.00,
+			  "100"  : 2.50,
+			  "1K"   : 1.80,
+			  "10K"  : 1.20,
+			  "100K" : 1.00
+		  }
+  	},
+
+    "package-ao": [
+      {"ptype-s": "jack"}, 
+	  {"ppins-i": 15 }
+    ],
+
+    "blocks-as": [
+      "green_led",
+      "yellow_led"
+    ],
+
+    "interfaces-as": [
+      "ds-green-led-rx",
+      "ds-yellow-led-rx",
+      "dd-gige-rxtx"
+    ],
+
+    "max_currents-ao": [
+      { "green_led": 20 },
+      { "yellow_led": 20 }
+    ],
+
+    "pins-ao": [
+      {"1": "TD1P"},
+      {"2": "TD1N"},
+	  {"3": "TD2P"},
+	  {"4": "TD2N"},
+	  {"5": "CT"},
+	  {"6": "CT"},
+	  {"7": "TD3P"},
+	  {"8": "TD3N"},
+	  {"9": "TD4P"},
+	  {"10": "TD4N"},
+	  {"11": "YA"},
+	  {"12": "YC"},
+	  {"13": "GA"},
+	  {"14": "GC"},
+	  {"15": "SHIELD"}
+    ],
+
+    "cfgpins-ao": [
+    ],
+
+    "stdpins-ao": [
+      {"11": "yled-a" },
+      {"12": "yled-c" },
+      {"13": "gled-a" },
+      {"14": "gled-c" },
+      {"15": "gnd" },
+	  {"1" : "dd-gige-a-p"},
+	  {"2" : "dd-gige-a-n"},
+	  {"3" : "dd-gige-b-p"},
+	  {"4" : "dd-gige-b-n"},
+	  {"7" : "dd-gige-c-p"},
+	  {"8" : "dd-gige-c-n"},
+	  {"9" : "dd-gige-d-p"},
+	  {"10": "dd-gige-d-n"}
+    ],
+
+    "voltages-ao": [
+    ],
+
+	"temperatures-ao": [
+        {"operating-o"  : { "min-i": -40,"max-i": 85 }},
+        {"storage-o"    : { "min-i": -40,"max-i": 150 }}
+    ]
+  }
+}

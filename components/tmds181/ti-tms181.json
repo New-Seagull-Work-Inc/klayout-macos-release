@@ -1,0 +1,123 @@
+{
+  "component-o": {
+		"type-s" 	: "hdmi_retimer",
+		"vendor-s" 	: "ti",
+		"part-s"	: "tmds181",
+		"non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 3.00,
+				  "100"  : 2.50,
+				  "1K"   : 1.80,
+				  "10K"  : 1.20,
+				  "100K" : 1.00
+			  }
+  		},
+		"package-o"	: 
+			{
+				"ptype-s" 	: "vqfn",
+				"pins-i" 	: 48
+			},
+		"blocks-as"			: ["hdmi_retimer"],
+		"interfaces-as" 	: ["l-rxd","r-rxd","ds-i2c-rxtx","i2s"],
+		"voltages-ao"		:
+		[
+			{"vcc-s" : "3.3"},
+			{"vdd-s" : "1.2"}
+		],
+		"currents-ao"	:
+		[
+			{"vcc-i" : 150},
+			{"vdd-i" : 350}
+		],
+		"temperatures-ao"	:
+		[
+			{"low-i"  : 0},
+			{"high-i" : 85}
+		],
+		"power-i" : 900,
+		"pins-ao" : 
+			[
+			{"2" : "in_d2p"},
+			{"3" : "in_d2n"},
+			{"5" : "in_d1p"},
+			{"6" : "in_d1n"},
+			{"8" : "in_d0p"},
+			{"9" : "in_d0n"},
+			{"11": "in_clkp"},
+			{"12": "in_clkn"},
+
+			{"7" : "gnd"},
+			{"19": "gnd"},
+			{"30": "gnd"},
+			{"41": "gnd"},
+
+			{"13": "vcc"},
+			{"43": "vcc"},
+
+			{"14": "vdd"},
+			{"23": "vdd"},
+			{"24": "vdd"},
+			{"37": "vdd"},
+			{"48": "vdd"},
+
+			{"15": "scl_ctl"},
+			{"16": "sda_ctl"},
+
+			{"42": "oe"},
+			{"17": "sig_en"},
+			{"20": "pre_sel"},
+			{"21": "eq_sel/a0"},
+			{"10": "i2c_en/pin"},
+
+			{"27": "a1"},
+			{"22": "vsadj"},
+			{"36": "tx_term_ctl"},
+			{"1" : "swap/pol"},
+
+			{"34": "out_d2p"},
+			{"35": "out_d2n"},
+			{"31": "out_d1p"},
+			{"32": "out_d1n"},
+			{"28": "out_d0p"},
+			{"29": "out_d0n"},
+			{"25": "out_clkp"},
+			{"26": "out_clkn"},
+
+			{"4" : "hdp_src"},
+			{"33": "hdp_snk"},
+			{"45": "spdif_in"},
+			{"44": "arc_out"},
+
+			{"47": "sda_src"},
+			{"46": "scl_src"},
+			{"39": "sda_snk"},
+			{"38": "scl_snk"},
+
+			{"18": "nc"},
+			{"40": "nc"}
+
+			],
+		"stdpins-ao" : 
+			[
+			{"cks3/sda" : "i2c-sda"},
+			{"cks2/scl" : "i2c-scl"},
+			{"avdd"		: "avdd-5"},
+			{"dvdd"		: "dvdd-3_3"}
+			]
+	}
+}

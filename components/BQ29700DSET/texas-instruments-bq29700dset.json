@@ -1,0 +1,24 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "Texas Instruments",
+    "part-s": "BQ29700DSET",
+    "description-s": "IC BATT PROT LI-ION 1CELL 6WSON Battery Battery Protection IC Lithium Ion/Polymer 6-WSON (1.5x1.5)",
+    "package-ao": [
+      { "ptype-s": "Battery Management" },
+      { "ppins-i": 2 }
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "+" },
+      { "2": "-" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "2": "avss" }
+    ],
+    "battery-o": {}
+  }
+}

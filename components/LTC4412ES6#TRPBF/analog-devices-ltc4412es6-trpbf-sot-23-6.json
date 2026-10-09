@@ -1,0 +1,102 @@
+{
+  "component-o": {
+    "type-s": "power-path",
+    "vendor-s": "Analog Devices",
+    "part-s": "LTC4412ES6#TRPBF",
+    "description-s": "Low-loss PowerPath ideal-diode controller, drives external P-channel MOSFET",
+    "package-ao": [
+      {
+        "ptype-s": "sot-23-6"
+      },
+      {
+        "ppins-i": 6
+      }
+    ],
+    "blocks-as": [
+      "power-path",
+      "ideal-diode-controller"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "as-gate-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 28000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "vin": 1
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "vin"
+      },
+      {
+        "2": "gnd"
+      },
+      {
+        "3": "ctl"
+      },
+      {
+        "4": "stat"
+      },
+      {
+        "5": "gate"
+      },
+      {
+        "6": "sense"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "6": "ds-power-tx"
+      },
+      {
+        "5": "as-gate-tx"
+      },
+      {
+        "2": "avss"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "3": "ctl"
+      },
+      {
+        "3c": "tie to gnd for automatic primary/auxiliary switchover"
+      },
+      {
+        "4": "stat"
+      },
+      {
+        "4c": "open-drain status output; may float unconnected"
+      }
+    ],
+    "specs-o": {
+      "forward_regulation_mv": 20,
+      "gate_drive_b": true,
+      "iq_typ_ua": 11
+    }
+  }
+}

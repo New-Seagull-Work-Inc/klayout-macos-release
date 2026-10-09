@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Rubycon",
+    "part-s": "50PK4700MEFC18X40",
+    "description-s": "Radial Can ALUMINUM ELECTROLYTIC CAPACITOR PK 50V 4700muF ±20% 0.709Dia 18.00mm",
+    "package-ao": [
+      { "ptype-s": "Aluminum Electrolytic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

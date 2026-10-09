@@ -1,0 +1,72 @@
+{
+  "component-o": {
+		"type-s" 	: "als",
+		"vendor-s" 	: "Digilent, Inc.",
+		"part-s"	: "PmodalALS-3.3",
+		"description-s" : "ALS with MISO interface",
+		"non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 12.99,
+				  "100"  : 12.99,
+				  "1K"   : 12.99,
+				  "10K"  : 12.99,
+				  "100K" : 12.99 
+			  }
+  		},
+		"package-ao"	: 
+			[
+				{"ptype-s" 	: "sip"},
+				{"ppins-i" 	: 6}
+			],
+		"blocks-as"			: ["als"],
+		"interfaces-as" 	: ["ds-spi-rxtx"],
+		"voltages-ao" :
+			[
+				{"vcc" : 3300}
+			],
+		"max_currents-ao" :
+			[
+			{ "vcc": 20 }
+			],
+		"temperatures-ao" :
+			[
+             {"operating-o": {"min-i": -40,"max-i": 85}},
+             {"storage-o": {"min-i": -40,"max-i": 100}}
+			],
+		"pins-ao" : 
+			[
+		  	{ "1": "cs_b" },
+		  	{ "2": "nc" },
+		  	{ "3": "miso" },
+		  	{ "4": "sclk" },
+		  	{ "5": "gnd" },
+  			{ "6": "vcc" }
+			],
+		"cfgpins-ao" : 
+			[
+			],
+		"stdpins-ao" : 
+			[
+			{"3"  : "ds-spi-miso"},
+			{"1"  : "ds-spi-cs"},
+			{"4"  : "ds-spi-clk"},
+			{"6"  : "dvdd-3_3"},
+			{"5"  : "dvss"}
+			]
+	}
+}

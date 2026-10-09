@@ -1,0 +1,97 @@
+{
+  "component-o": {
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Maxim Integrated",
+    "description-s": "Single-cell Li-ion linear charger, dual-input USB/AC adapter, 4.20 V, USB 100 mA / DC 280 mA, CHG status output, SOT-23-5",
+    "package-ao": [
+      { "ptype-s": "SOT-23-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "battery-charger-linear"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin_dc": 7000 },
+      { "vin_usb": 6000 },
+      { "vbat": 4200 }
+    ],
+    "max_currents-ao": [
+      { "charge_dc": 280 },
+      { "charge_usb": 100 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "usb" },
+      { "2": "gnd" },
+      { "3": "chg" },
+      { "4": "dc" },
+      { "5": "bat" }
+    ],
+    "cfgpins-ao": [
+      { "3": "chg" },
+      { "3c": "active-low open-drain charge status; low when charging, high-Z when charge current < 50 mA" },
+      { "3": "100k-avss" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "4": "ds-power-rx" },
+      { "4": "1uf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "1uf-avss" },
+      { "2": "avss" }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "topology-s": "linear",
+      "vin-min-mv-i": 3700,
+      "vin-max-mv-i": 7000,
+      "input-uvlo-mv-i": 3950,
+      "charge-voltage-mv-i": 4200,
+      "charge-voltage-accuracy-pct-x10-i": 10,
+      "charge-current-max-ma-i": 280,
+      "charge-current-programmable-b": false,
+      "precharge-b": true,
+      "precharge-threshold-mv-i": 3000,
+      "precharge-current-ma-i": 40,
+      "termination-current-ma-i": 50,
+      "power-path-b": false,
+      "ntc-thermistor-b": false,
+      "safety-timer-b": false,
+      "thermal-regulation-b": true,
+      "thermal-regulation-c-i": 110,
+      "charge-enable-b": false,
+      "status-outputs-i": 1,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "none",
+      "usb-input-b": true,
+      "battery-leakage-ua-i": 5
+    },
+    "non-technical-o": {},
+    "part-s": "MAX1555EZK+T"
+  }
+}

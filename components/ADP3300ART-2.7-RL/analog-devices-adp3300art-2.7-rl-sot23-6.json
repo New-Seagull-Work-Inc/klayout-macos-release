@@ -1,0 +1,113 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Analog Devices",
+    "part-s": "ADP3300ART-2.7-RL",
+    "description-s": "High Accuracy anyCAP 50 mA Low Dropout Linear Regulator",
+    "package-ao": [
+      { "ptype-s": "sot23-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "reference-bandgap",
+      "thermal-shutdown",
+      "current-limit",
+      "enable",
+      "power-good"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 7000 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 50 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "nr" },
+      { "3": "sd" },
+      { "4": "out" },
+      { "5": "in" },
+      { "6": "err" }
+    ],
+    "cfgpins-ao": [
+      { "3": "sd" },
+      { "6": "err" },
+      { "2": "nr" }
+    ],
+    "stdpins-ao": [
+      { "5": "ds-power-rx" },
+      { "5": "0.47uf-avss" },
+      { "4": "ds-power-tx" },
+      { "4": "0.47uf-avss" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 3000,
+      "vin_max_mv": 12000,
+      "vout_fixed_mv": 2700,
+      "vout_accuracy_pct_x10": 14,
+      "iout_max_ma": 50,
+      "iq_typ_ua": 190,
+      "dropout_mv_at_iout": 80,
+      "psrr_db_at_1khz": 70,
+      "noise_uvrms": 100,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

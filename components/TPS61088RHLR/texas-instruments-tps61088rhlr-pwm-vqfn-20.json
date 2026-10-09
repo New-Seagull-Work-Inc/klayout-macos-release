@@ -1,0 +1,261 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS61088RHLR",
+    "description-s": "10A fully-integrated synchronous boost converter, 2.7-12V in, adjustable output (configured 7.0V) [PWM SKU: MODE (pin 13) tied to AGND: forced PWM at light load. Fixed switching frequency and lowest ripple; lower light-load efficiency than the PFM SKU.]",
+    "package-ao": [
+      {
+        "ptype-s": "vqfn-20"
+      },
+      {
+        "ppins-i": 21
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 12000
+      },
+      {
+        "vout": 7000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 3000
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "vcc"
+      },
+      {
+        "2": "en"
+      },
+      {
+        "3": "fsw"
+      },
+      {
+        "4": "sw"
+      },
+      {
+        "5": "sw"
+      },
+      {
+        "6": "sw"
+      },
+      {
+        "7": "sw"
+      },
+      {
+        "8": "boot"
+      },
+      {
+        "9": "vin"
+      },
+      {
+        "10": "ss"
+      },
+      {
+        "11": "nc"
+      },
+      {
+        "12": "nc"
+      },
+      {
+        "13": "mode"
+      },
+      {
+        "14": "vout"
+      },
+      {
+        "15": "vout"
+      },
+      {
+        "16": "vout"
+      },
+      {
+        "17": "fb"
+      },
+      {
+        "18": "comp"
+      },
+      {
+        "19": "ilim"
+      },
+      {
+        "20": "agnd"
+      },
+      {
+        "21": "pgnd"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "9": "ds-power-rx"
+      },
+      {
+        "9": "10uf-avss"
+      },
+      {
+        "9": "100nf-avss"
+      },
+      {
+        "14": "ds-power-tx"
+      },
+      {
+        "15": "ds-power-tx"
+      },
+      {
+        "16": "ds-power-tx"
+      },
+      {
+        "14": "1uf-avss"
+      },
+      {
+        "14": "22uf-avss"
+      },
+      {
+        "14": "22uf-avss"
+      },
+      {
+        "14": "22uf-avss"
+      },
+      {
+        "4": "1.2uh-vin"
+      },
+      {
+        "8": "100nf-sw"
+      },
+      {
+        "1": "2.2uf-avss"
+      },
+      {
+        "10": "47nf-avss"
+      },
+      {
+        "20": "avss"
+      },
+      {
+        "21": "avss"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "2": "en"
+      },
+      {
+        "2": "vin"
+      },
+      {
+        "2c": "EN: logic high turns the converter on. Tied to VIN for always-on (Figure 8-1 shows an ON/OFF switch); a GPIO may drive it instead."
+      },
+      {
+        "17": "fb"
+      },
+      {
+        "17": "360k-out"
+      },
+      {
+        "17": "56k-avss"
+      },
+      {
+        "17c": "Feedback divider (Figure 8-1, 3.3 V to 9 V/3 A): R1 360 kΩ VOUT to FB, R2 56 kΩ FB to ground (the datasheet's standard low-side value); VOUT = VREF x (1 + R1/R2), VREF 1.204 V (PWM) / 1.212 V (PFM). The design re-values it to the architect's set-point."
+      },
+      {
+        "3": "fsw"
+      },
+      {
+        "3": "255k-sw"
+      },
+      {
+        "3c": "Switching frequency set by a resistor from FSW to SW (not to ground): 255 kΩ gives the typical application's 600 kHz."
+      },
+      {
+        "19": "ilim"
+      },
+      {
+        "19": "100k-avss"
+      },
+      {
+        "19c": "Peak switch current limit: resistor ILIM to AGND; 100 kΩ gives about 11.9 A (datasheet, Setting Peak Current Limit)."
+      },
+      {
+        "18": "comp"
+      },
+      {
+        "18": "36.5k+2.7nf-avss"
+      },
+      {
+        "18c": "Loop compensation R5 + C5 from COMP to AGND, computed with the datasheet equations for Figure 8-1 (3.3 V to 9 V/3 A, L 1.2 µH, CO 67 µF, fC 10 kHz below fRHPZ/5): R5 = 2π·VOUT·Rsense·fC·CO / ((1-D)·VREF·GEA) = 36.5 kΩ (Rsense 0.08 Ω, GEA 190 µA/V); C5 = RO·CO / (2·R5) = 2.7 nF. C8 = RESR·CO / R5 is about 4 pF with ceramic output capacitors: not fitted."
+      },
+      {
+        "10": "ss"
+      },
+      {
+        "10c": "Soft start: 47 nF to ground (Figure 8-1)."
+      },
+      {
+        "13": "mode"
+      },
+      {
+        "13": "avss"
+      },
+      {
+        "13c": "MODE tied to AGND: forced PWM at light load (fixed frequency, no audible noise; lower light-load efficiency)."
+      }
+    ],
+    "specs-o": {
+      "topology_s": "boost",
+      "adjustable_b": true,
+      "vin_min_mv": 2700,
+      "vin_max_mv": 12000,
+      "vout_min_mv": 4500,
+      "vout_max_mv": 12600,
+      "iout_max_ma": 3000,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "cost-o": {
+        "10": 2.05,
+        "100": 1.68,
+        "1K": 1.48,
+        "10K": 1.42,
+        "100K": 1.42
+      },
+      "distributor-s": "Mouser"
+    },
+    "sku-s": "TPS61088RHLR-PWM",
+    "sku-note-s": "MODE (pin 13) tied to AGND: forced PWM at light load. Fixed switching frequency and lowest ripple; lower light-load efficiency than the PFM SKU."
+  }
+}

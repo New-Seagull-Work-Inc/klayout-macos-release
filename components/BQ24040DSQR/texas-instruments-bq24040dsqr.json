@@ -1,0 +1,24 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "Texas Instruments",
+    "part-s": "BQ24040DSQR",
+    "description-s": "Battery Management ICs; BQ24040DSQR; TEXAS INSTRUMENTS; 10; 800 µm; 2 mm; 2 mm",
+    "package-ao": [
+      { "ptype-s": "Battery Management" },
+      { "ppins-i": 2 }
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "+" },
+      { "2": "-" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "2": "avss" }
+    ],
+    "battery-o": {}
+  }
+}

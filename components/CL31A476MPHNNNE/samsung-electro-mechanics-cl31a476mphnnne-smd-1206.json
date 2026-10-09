@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL31A476MPHNNNE",
+    "description-s": "47 µF ±20% 10 V X5R 1206 multilayer ceramic capacitor (MLCC), SMD, 1.6 mm thick",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.506,
+        "100": 0.216,
+        "1K": 0.165,
+        "10K": 0.158,
+        "100K": 0.158
+      },
+      "distributor-s": "Newark",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 32125
+    },
+    "package-ao": [
+      { "ptype-s": "smd-1206" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 47000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 10000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "component-o": {
+		"type-s" 		: "fpga",
+		"vendor-s" 	: "amd",
+		"part-s"		: "xcau15p-1ubva368e",
+		"package-o"	: {
+				"type-s" : "bga05",
+				"pins-i" : 368
+			},
+		"blocks-as"			: ["hdcp","video-crop","video-scale","stereo-audio-embed"],
+		"interfaces-as" 	: ["hdmi-rx","hdmi-tx","12g-sdi","mipi","i2s","1000base-t","spi","i2c"]
+	}
+}

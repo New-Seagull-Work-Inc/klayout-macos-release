@@ -1,0 +1,14 @@
+{
+  "component-o": {
+		"type-s" 	: "fpga",
+		"vendor-s" 	: "amd",
+		"part-s"	: "xczu5ev-xfbvb900",
+		"package-o"	: {
+				"type-s" : "bga10",
+				"hp-pins-i" :156,
+				"hd-pins-i" : 96 
+			},
+		"blocks-as"			: ["hdcp","video-crop","video-scale","stereo-audio-embed","arm53","arm53","arm53","arm53"],
+		"interfaces-as" 	: ["hdmi-20-rx","hdmi-20-tx","12g-sdi","i2s","1000base-t","spi","i2c"]
+	}
+}

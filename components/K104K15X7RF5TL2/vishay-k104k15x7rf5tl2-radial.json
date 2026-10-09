@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Vishay",
+    "part-s": "K104K15X7RF5TL2",
+    "description-s": "0.1 uF 50 V ±10% X7R ceramic disc capacitor, 5 mm pitch, thru-hole, K series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.0737,
+        "10K": 0.0706,
+        "100K": 0.0706
+      },
+      "distributor-s": "Verical"
+    },
+    "package-ao": [
+      { "ptype-s": "radial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 100000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "X7R",
+      "lead-style-s": "radial"
+    }
+  }
+}

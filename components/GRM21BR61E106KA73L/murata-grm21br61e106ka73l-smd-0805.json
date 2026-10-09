@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "description-s": "10 µF ±10% 25 V X5R 0805 multilayer ceramic capacitor (MLCC), SMD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.023,
+        "100": 0.023,
+        "1K": 0.023,
+        "10K": 0.015,
+        "100K": 0.014
+      },
+      "distributor-s": "CoreStaff",
+      "moq-i": 1
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x5r"
+    },
+    "part-s": "GRM21BR61E106KA73L"
+  }
+}

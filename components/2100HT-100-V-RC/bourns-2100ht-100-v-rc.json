@@ -1,0 +1,21 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "2100HT-100-V-RC",
+    "description-s": "10 uH high-current toroidal power inductor, thru-hole radial; Inductor High Current Toroid 10uH/7.6uH 15% 1KHz 9.9A 0.012Ohm DCR RDL",
+    "package-ao": [
+      {
+        "ptype-s": "Fixed Inductors"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "passive-o": {
+      "value-i": 10000,
+      "value-unit-s": "nh",
+      "lead-style-s": "radial"
+    }
+  }
+}

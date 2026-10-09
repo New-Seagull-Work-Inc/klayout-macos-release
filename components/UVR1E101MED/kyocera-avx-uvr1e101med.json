@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KYOCERA AVX",
+    "part-s": "UVR1E101MED",
+    "description-s": "Radial Can ALUMINUM ELECTROLYTIC CAPACITOR UVR 25V 100muF 卤20% 0.248Dia 6.30mm",
+    "package-ao": [
+      { "ptype-s": "Aluminum Electrolytic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

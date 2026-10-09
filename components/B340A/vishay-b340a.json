@@ -1,0 +1,22 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "B340A",
+    "description-s": "Rectifier Diode, Schottky, 1 Phase, 1 Element, 3A, 40V V(RRM), Silicon, DO-214AC",
+    "package-ao": [
+      { "ptype-s": "Schottky Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "100": 0.1217,
+        "1K": 0.1193,
+        "10K": 0.1122,
+        "100K": 0.1122
+      },
+      "distributor-s": "Verical"
+    }
+  }
+}

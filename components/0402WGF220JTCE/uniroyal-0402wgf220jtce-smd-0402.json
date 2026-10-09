@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Uniroyal",
+    "part-s": "0402WGF220JTCE",
+    "description-s": "22 Ω ±1% 0.0625 W thick film chip resistor, 0402 SMD, ±100 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.0103,
+        "1K": 0.00276,
+        "10K": 0.00076,
+        "100K": 0.00064
+      },
+      "distributor-s": "TME",
+      "moq-i": 100,
+      "order-mult-i": 100,
+      "lead-time-weeks-i": 21
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 22000,
+      "value-unit-s": "r",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

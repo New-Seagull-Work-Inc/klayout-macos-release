@@ -1,0 +1,194 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Analog Devices",
+    "description-s": "20VIN, 12A Step-Down DC/DC µModule Regulator",
+    "package-ao": [
+      { "ptype-s": "BGA-49" },
+      { "ppins-i": 49 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 1500 },
+      { "intvcc": 3300 }
+    ],
+    "max_currents-ao": [
+      { "out": 12000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vout" },
+      { "2": "vout" },
+      { "3": "vout" },
+      { "4": "vout" },
+      { "5": "vout" },
+      { "6": "tsense+" },
+      { "7": "tsense-" },
+      { "8": "vosns+" },
+      { "9": "gnd" },
+      { "10": "intvcc" },
+      { "11": "run" },
+      { "12": "pgood" },
+      { "13": "gnd" },
+      { "14": "sw" },
+      { "15": "fb" },
+      { "16": "vosns-" },
+      { "17": "gnd" },
+      { "18": "gnd" },
+      { "19": "gnd" },
+      { "20": "gnd" },
+      { "21": "gnd" },
+      { "22": "compa" },
+      { "23": "mode/clkin" },
+      { "24": "vin" },
+      { "25": "vin" },
+      { "26": "gnd" },
+      { "27": "gnd" },
+      { "28": "gnd" },
+      { "29": "freq" },
+      { "30": "track/ss" },
+      { "31": "vin" },
+      { "32": "vin" },
+      { "33": "gnd" },
+      { "34": "gnd" },
+      { "35": "gnd" },
+      { "36": "compb" },
+      { "37": "clkout" },
+      { "38": "vout" },
+      { "39": "vin" },
+      { "40": "gnd" },
+      { "41": "gnd" },
+      { "42": "gnd" },
+      { "43": "vout" },
+      { "44": "vout" },
+      { "45": "vout" },
+      { "46": "vin" },
+      { "47": "phmode" },
+      { "48": "gnd" },
+      { "49": "gnd" }
+    ],
+    "cfgpins-ao": [
+      { "11": "run" },
+      { "12": "pgood" },
+      { "23": "mode/clkin" },
+      { "30": "track/ss" },
+      { "29": "freq" },
+      { "37": "clkout" },
+      { "47": "phmode" },
+      { "22": "compa" },
+      { "36": "compb" },
+      { "15": "fb" },
+      { "30c": "soft-start capacitor" },
+      { "30": "100nf-avss" }
+    ],
+    "stdpins-ao": [
+      { "24": "ds-power-rx" },
+      { "25": "ds-power-rx" },
+      { "31": "ds-power-rx" },
+      { "32": "ds-power-rx" },
+      { "39": "ds-power-rx" },
+      { "46": "ds-power-rx" },
+      { "24": "22uf-avss" },
+      { "1": "ds-power-tx" },
+      { "2": "ds-power-tx" },
+      { "3": "ds-power-tx" },
+      { "4": "ds-power-tx" },
+      { "5": "ds-power-tx" },
+      { "38": "ds-power-tx" },
+      { "43": "ds-power-tx" },
+      { "44": "ds-power-tx" },
+      { "45": "ds-power-tx" },
+      { "1": "100uf-avss" },
+      { "1": "100uf-avss" },
+      { "9": "avss" },
+      { "13": "avss" },
+      { "17": "avss" },
+      { "18": "avss" },
+      { "19": "avss" },
+      { "20": "avss" },
+      { "21": "avss" },
+      { "26": "avss" },
+      { "27": "avss" },
+      { "28": "avss" },
+      { "33": "avss" },
+      { "34": "avss" },
+      { "35": "avss" },
+      { "40": "avss" },
+      { "41": "avss" },
+      { "42": "avss" },
+      { "48": "avss" },
+      { "49": "avss" },
+      { "10": "intvcc" },
+      { "15": "33pf-vout" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 3100,
+      "vin_max_mv": 20000,
+      "vout_min_mv": 600,
+      "vout_max_mv": 5500,
+      "iout_max_ma": 12000,
+      "iq_typ_ua": 100000,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "switching_freq_khz": 600,
+      "vout_accuracy_pct_x10": 15
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "LTM4626EY"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "component-o": { 
+	"type-s"	: "lens",
+	"vendor-s"	: "sunex",
+	"part-s"	: "DSL385A-NIR-F2.8",
+	"description-s" : "Wide-angle Lens",
+	"non-technical-o" : {
+		  "lifecycle-o" : {
+			  "samples" : {
+				  "month" : 11,
+				  "year"  : 2023
+			  },
+			  "mp" : {
+				  "month" : 1,
+				  "year"  : 2024
+			  },
+			  "eol" : {
+				  "month" : 12,
+				  "year" : 2035
+			  }
+		  },
+		  "coo-s" : "usa",
+		  "distributor-s" : "TBD",
+		  "cost-o" : {
+			  "10"   : 3.00,
+			  "100"  : 2.50,
+			  "1K"   : 1.80,
+			  "10K"  : 1.20,
+			  "100K" : 1.00
+		  }
+  	},
+	"blocks-as" : ["lens"],
+	"interfaces-as" : ["light-rx","light-tx"],
+	"max_currents-ao" : [],
+	"pins-ao" : [],
+	"stdpins-ao" : [],
+	"cfgpins-ao" : [],
+	"package-ao"	: 
+	[
+		{"ptype-s" 	: "m12"},
+		{"ppins-i" 	: 0}
+	],
+	"specs-o"		: 
+	{
+		"fnumber-f"		: 2.8,
+		"fov-ao"		:
+		[
+			{"degrees-i":150,"imagecircle-f":7}
+		],
+		"ttl-f"			: 24,
+		"efl-f"			: 2.33
+	},
+	"features-as"	: ["tailored-distortion"]
+ }
+}

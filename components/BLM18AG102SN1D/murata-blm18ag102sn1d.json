@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "ferrite-bead",
+    "vendor-s": "Murata",
+    "part-s": "BLM18AG102SN1D",
+    "description-s": "Ferrite Beads Multi-Layer 1KOhm 25% 100MHz 400mA 500mOhm DCR 0603 T/R",
+    "package-ao": [
+      { "ptype-s": "Ferrite Beads and Chips" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.014,
+        "100": 0.014,
+        "1K": 0.014,
+        "10K": 0.009,
+        "100K": 0.009
+      },
+      "distributor-s": "CoreStaff"
+    }
+  }
+}

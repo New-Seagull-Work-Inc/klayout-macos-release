@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Vishay",
+    "part-s": "K272K15X7RF5TL2",
+    "description-s": "2.7 nF 50 V ±10% X7R radial leaded ceramic capacitor, K series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100K": 0.03955
+      },
+      "distributor-s": "Avnet"
+    },
+    "package-ao": [
+      { "ptype-s": "radial-2.54mm" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 2700,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "radial"
+    }
+  }
+}

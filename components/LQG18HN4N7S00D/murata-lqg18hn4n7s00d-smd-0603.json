@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Murata",
+    "part-s": "LQG18HN4N7S00D",
+    "description-s": "4.7 nH ±0.3 nH 300 mA multilayer RF inductor, 0603, LQG18HN series (value-i holds 5: whole nH, as the design rounds 4.7 nH)",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-0603"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 5,
+      "value-unit-s": "nh",
+      "current-max-i": 300,
+      "lead-style-s": "smd"
+    }
+  }
+}

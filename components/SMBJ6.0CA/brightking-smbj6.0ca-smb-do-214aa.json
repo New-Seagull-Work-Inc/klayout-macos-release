@@ -1,0 +1,50 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "BrightKing",
+    "description-s": "6.0V bidirectional TVS, 600W (10/1000us), VC 10.3V @ 58.3A, SMB/DO-214AA, for power-input and signal-line surge protection",
+    "non-technical-o": {},
+    "package-ao": [
+      {
+        "ptype-s": "SMB-DO-214AA"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": true,
+      "standoff-voltage-mv-i": 6000,
+      "breakdown-voltage-min-mv-i": 6670,
+      "breakdown-voltage-max-mv-i": 7370,
+      "clamping-voltage-mv-i": 10300,
+      "peak-pulse-current-a-i": 58,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 800
+    },
+    "part-s": "SMBJ6.0CA",
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

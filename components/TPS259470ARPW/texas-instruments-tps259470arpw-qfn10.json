@@ -1,0 +1,145 @@
+{
+  "component-o": {
+    "type-s": "efuse",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS259470ARPW",
+    "description-s": "2.7-23V adjustable current-limit eFuse with OVLO, 0.5-6A ILIM, 500ns short-circuit response, 28mΩ Ron, hot-swap, reverse current blocking, auto-retry, QFN-10",
+    "package-ao": [
+      {
+        "ptype-s": "QFN"
+      },
+      {
+        "ppins-i": 10
+      }
+    ],
+    "blocks-as": [
+      "efuse-load-switch"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "efuse-o": {
+      "vin-min-mv-i": 2700,
+      "vin-max-mv-i": 23000,
+      "current-limit-adjustable-b": true,
+      "current-limit-min-ma-i": 500,
+      "current-limit-max-ma-i": 6000,
+      "current-limit-accuracy-pct-x10-i": 100,
+      "on-resistance-mohm-i": 28,
+      "shortcircuit-response-us-i": 1,
+      "current-limit-response-us-i": 400,
+      "overvoltage-clamp-b": false,
+      "reverse-current-block-b": true,
+      "hotswap-b": true,
+      "slew-rate-control-b": true,
+      "thermal-shutdown-b": true,
+      "fault-flag-b": true,
+      "auto-retry-b": true
+    },
+    "pins-ao": [
+      {
+        "5": "IN"
+      },
+      {
+        "6": "OUT"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "5": "ds-power-rx"
+      },
+      {
+        "5": "1uf-dvss"
+      },
+      {
+        "6": "ds-power-tx"
+      },
+      {
+        "6": "470uf-dvss"
+      },
+      {
+        "8": "dvss"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "1": "EN/UVLO"
+      },
+      {
+        "1c": "Active high enable; resistor divider from IN to GND sets UVLO threshold; do not float"
+      },
+      {
+        "1": "100k-in"
+      },
+      {
+        "1": "82k-dvss"
+      },
+      {
+        "2": "OVLO"
+      },
+      {
+        "2c": "Resistor divider from IN to GND sets OVLO threshold; can be used as active-low enable; do not float"
+      },
+      {
+        "2": "249k-in"
+      },
+      {
+        "2": "63.4k-dvss"
+      },
+      {
+        "3": "AUXOFF"
+      },
+      {
+        "3c": "Active high open-drain output indicating input supply valid and inrush complete; pull up to logic supply"
+      },
+      {
+        "4": "FLT"
+      },
+      {
+        "4c": "Active low open-drain fault indicator; pull up to logic supply"
+      },
+      {
+        "7": "dVdt"
+      },
+      {
+        "7c": "Capacitor from pin to GND sets output rising slew rate; leave open for fastest slew rate"
+      },
+      {
+        "7": "3300pf-dvss"
+      },
+      {
+        "9": "ILM"
+      },
+      {
+        "9c": "Resistor from pin to GND sets overcurrent threshold and provides analog current monitor output; do not float; mandatory"
+      },
+      {
+        "9": "549r-dvss"
+      },
+      {
+        "10": "ITIMER"
+      },
+      {
+        "10c": "Capacitor from pin to GND sets overcurrent blanking interval; leave open for fastest response"
+      },
+      {
+        "10": "2.2nf-dvss"
+      }
+    ],
+    "voltages-ao": [],
+    "max_currents-ao": [
+      {
+        "continuous-ma-i": 5500
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "non-technical-o": {}
+  }
+}

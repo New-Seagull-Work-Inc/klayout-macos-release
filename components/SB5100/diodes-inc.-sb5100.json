@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Diodes Inc.",
+    "part-s": "SB5100",
+    "description-s": "Rectifier Diode, Schottky, 1 Phase, 1 Element, 5A, 100V V(RRM), Silicon, DO-201AD",
+    "package-ao": [
+      { "ptype-s": "Schottky Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

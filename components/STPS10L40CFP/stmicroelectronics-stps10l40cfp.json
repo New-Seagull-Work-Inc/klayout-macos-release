@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "STPS10L40CFP",
+    "description-s": "Rectifier Diode, Schottky, 1 Phase, 2 Element, 5A, 40V V(RRM), Silicon, TO-220AB",
+    "package-ao": [
+      { "ptype-s": "Rectifier Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

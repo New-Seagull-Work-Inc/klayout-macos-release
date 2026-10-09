@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Vishay",
+    "part-s": "516D106M050JL6AE3",
+    "description-s": "Cap Aluminum 10uF 50V 20% (5 X 12mm) Axial 50mA 2000 hr 85°C Bulk",
+    "package-ao": [
+      { "ptype-s": "Aluminum Electrolytic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.6,
+        "100": 0.45,
+        "1K": 0.3,
+        "10K": 0.3,
+        "100K": 0.3
+      },
+      "distributor-s": "Quest"
+    }
+  }
+}

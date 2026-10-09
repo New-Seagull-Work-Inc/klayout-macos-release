@@ -1,0 +1,38 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL10A106KP8NNNC",
+    "description-s": "10 µF ±10% 10 V X5R 0603 multilayer ceramic capacitor (MLCC), SMD, 0.8 mm thick",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.163,
+        "100": 0.0661,
+        "1K": 0.0503,
+        "10K": 0.038,
+        "100K": 0.0364
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 1,
+      "stock-i": 1589804
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 10000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x5r"
+    }
+  }
+}

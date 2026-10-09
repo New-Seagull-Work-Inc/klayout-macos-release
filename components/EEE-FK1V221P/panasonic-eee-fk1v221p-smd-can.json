@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Panasonic",
+    "part-s": "EEE-FK1V221P",
+    "description-s": "220 µF 35 V ±20% ALUMINUM-ELECTROLYTIC SMD aluminum electrolytic, FK series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-can"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "capacitor-electrolytic"
+    ],
+    "passive-o": {
+      "value-i": 220000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 35000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic",
+      "lead-style-s": "smd"
+    }
+  }
+}

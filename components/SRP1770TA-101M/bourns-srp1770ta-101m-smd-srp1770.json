@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "SRP1770TA-101M",
+    "description-s": "100 µH 6.5 A shielded SMD power inductor, SRP1770TA series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 3.041,
+        "100": 2.5011,
+        "1K": 2.0584,
+        "10K": 1.9416,
+        "100K": 1.9416
+      },
+      "distributor-s": "DigiKey"
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-srp1770"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 100000,
+      "value-unit-s": "nh",
+      "current-max-i": 6500,
+      "lead-style-s": "smd"
+    }
+  }
+}

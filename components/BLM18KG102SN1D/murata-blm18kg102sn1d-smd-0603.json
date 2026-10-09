@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "ferrite-bead",
+    "vendor-s": "Murata",
+    "description-s": "1000 Ω @ 100 MHz ±25% chip ferrite bead, 0603 SMD, 1 A rated current at 85 °C / 0.8 A at 125 °C, 0.2 Ω max DC resistance",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0655,
+        "100": 0.0304,
+        "1K": 0.0191,
+        "10K": 0.0191,
+        "100K": 0.0191
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 5,
+      "stock-i": 148850
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "ferrite-bead"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 200,
+      "value-unit-s": "r",
+      "current-max-i": 1000,
+      "tolerance-pct-x10": 250
+    },
+    "part-s": "BLM18KG102SN1D"
+  }
+}

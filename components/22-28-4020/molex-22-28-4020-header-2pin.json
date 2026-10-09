@@ -1,0 +1,68 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-header-jack",
+    "vendor-s": "Molex",
+    "part-s": "22-28-4020",
+    "description-s": "KK 254 breakaway header, vertical, 2 circuits, 2.54 mm, tin. As a power header: 1 V, 2 GND; as an LED link: 1 LED drive (anode), 2 return (cathode, ground).",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "header-1x2-2.54mm-vertical-tht"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "header"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-led-rxtx",
+      "ds-ir_led-rxtx"
+    ],
+    "pins-ao": [
+      {
+        "1": "V"
+      },
+      {
+        "2": "GND"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rxtx"
+      },
+      {
+        "1": "ds-led-a"
+      },
+      {
+        "1": "ds-ir_led-a"
+      },
+      {
+        "2": "gnd"
+      },
+      {
+        "2": "ds-led-c"
+      },
+      {
+        "2": "ds-ir_led-c"
+      }
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 1,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "through-hole",
+      "contact_plating_s": "tin",
+      "locking_b": false,
+      "shielded_b": false
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Coilcraft",
+    "part-s": "XAL7070-122MEC",
+    "description-s": "1.2 µH 31.2 A shielded power inductor, XAL series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-xal7070"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 1200,
+      "value-unit-s": "nh",
+      "current-max-i": 31200,
+      "lead-style-s": "smd"
+    }
+  }
+}

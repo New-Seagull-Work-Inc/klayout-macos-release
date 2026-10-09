@@ -1,0 +1,45 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "C0603C104K5RACTU",
+    "description-s": "100 nF (0.1 µF) 50 V ±10% X7R dielectric SMD ceramic capacitor, EIA 0603 case",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0152,
+        "100": 0.0152,
+        "1K": 0.0125,
+        "10K": 0.0119,
+        "100K": 0.0119
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 28,
+      "stock-i": 3998,
+      "quote-s": "Arrow Electronics quote 25584222 (2026-09-23, expires 2026-10-23)",
+      "coo-s": "TW",
+      "coo-source-s": "Arrow Electronics quote 25584222",
+      "coo-url-s": "",
+      "coo-quote-s": "",
+      "coo-checked-s": "2026-09-29",
+      "hts-s": "85322400"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 100000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "smd"
+    }
+  }
+}

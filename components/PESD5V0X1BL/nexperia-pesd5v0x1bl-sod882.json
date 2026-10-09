@@ -1,0 +1,68 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Nexperia",
+    "description-s": "5V bidirectional ESD protection diode, 9kV IEC 61000-4-2 contact, ultra-low 0.9pF capacitance, SOD882, for high-speed data/signal lines",
+    "package-ao": [
+      {
+        "ptype-s": "SOD882"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": true,
+      "standoff-voltage-mv-i": 5000,
+      "breakdown-voltage-min-mv-i": 6000,
+      "breakdown-voltage-max-mv-i": 9500,
+      "reverse-leakage-ua-i": 1,
+      "capacitance-pf-i": 1,
+      "esd-contact-kv-i": 9
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {},
+    "part-s": "PESD5V0X1BL",
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

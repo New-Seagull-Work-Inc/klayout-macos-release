@@ -1,0 +1,87 @@
+{
+  "component-o": {
+    "type-s": "icr",
+    "vendor-s": "Lightspeed Semiconductor",
+    "part-s": "LSS-IRCCY202024W705",
+    "description-s": "Day&Night IR filter changer (ChiYi ICRCY202024W705) with M12x0.5 holder: 20 ohm coil, 3.3-5.0 V, 100-500 ms pulse; 8x8x0.21 mm IR-cut and clear glass; 24 x 31.5 x 12.7 mm; 65 mm cable to a 2-pin 1.25 mm plug (1 red +, 2 black -).",
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 11,
+          "year": 2023
+        },
+        "mp": {
+          "month": 1,
+          "year": 2024
+        },
+        "eol": {
+          "month": 12,
+          "year": 2035
+        }
+      },
+      "distributor-s": "TBD",
+      "cost-o": {
+        "10": 3.0,
+        "100": 2.5,
+        "1K": 1.8,
+        "10K": 1.2,
+        "100K": 1.0
+      }
+    },
+    "package-ao": [
+      {
+        "ptype-s": "m12-icr-holder"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "irar-filter",
+      "arar-filter",
+      "icr_ctl"
+    ],
+    "interfaces-as": [
+      "light-rx",
+      "light-tx",
+      "ds-icr_ctl-rx"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -10,
+          "max-i": 80
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "red"
+      },
+      {
+        "2": "black"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-icr_ctl-a"
+      },
+      {
+        "2": "ds-icr_ctl-b"
+      }
+    ],
+    "icr-o": {
+      "thread-s": "M12x0.5",
+      "mount-hole-spacing-mm-x10-i": 200,
+      "mount-screw-s": "PA2.0x5 self-tapping",
+      "height-mm-x10-i": 127,
+      "ir-filter-b": true,
+      "coil-ohm-i": 20,
+      "vop-min-mv-i": 3300,
+      "vop-max-mv-i": 5000,
+      "cable-mm-i": 65,
+      "plug-s": "2-pin 1.25 mm (PicoBlade-compatible), pin 1 red, pin 2 black",
+      "header-s": "Molex 53047-0210 PicoBlade (THT) land pattern in the footprint"
+    }
+  }
+}

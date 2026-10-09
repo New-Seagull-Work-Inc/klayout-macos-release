@@ -1,0 +1,40 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "SB540-E3/54",
+    "description-s": "5 A 40 V Schottky barrier rectifier, 480 mV VF max, DO-201AD axial",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.3892,
+        "100": 0.3819,
+        "1K": 0.303,
+        "10K": 0.2146,
+        "100K": 0.2146
+      },
+      "distributor-s": "Arrow Electronics"
+    },
+    "package-ao": [
+      { "ptype-s": "axial-do-201ad" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "passive-o": {
+      "voltage-max-i": 40000,
+      "current-max-i": 5000,
+      "lead-style-s": "axial"
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 480,
+      "ir-ua-i": 500
+    }
+  }
+}

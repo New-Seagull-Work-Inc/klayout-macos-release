@@ -1,0 +1,64 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Diodes Incorporated",
+    "description-s": "6.5V unidirectional TVS, 600W (10/1000us), VC 11.2V @ 53.6A, D-FLAT package, for power-input surge protection",
+    "non-technical-o": {},
+    "package-ao": [
+      {
+        "ptype-s": "D-FLAT"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 6500,
+      "breakdown-voltage-min-mv-i": 7220,
+      "breakdown-voltage-max-mv-i": 8300,
+      "clamping-voltage-mv-i": 11200,
+      "peak-pulse-current-a-i": 53,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 500
+    },
+    "part-s": "P6SMAJ6.5A",
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

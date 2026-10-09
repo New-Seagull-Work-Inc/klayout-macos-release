@@ -1,0 +1,105 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "LM1117-ADJ",
+    "description-s": "800-mA Low-Dropout Adjustable Linear Regulator",
+    "package-ao": [
+      { "ptype-s": "sot-223" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "reference-bandgap",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 15000 },
+      { "vout": 1250 }
+    ],
+    "max_currents-ao": [
+      { "out": 800 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "adj" },
+      { "2": "vout" },
+      { "3": "vin" },
+      { "4": "vout" }
+    ],
+    "cfgpins-ao": [
+      { "1": "adj" },
+      { "1c": "feedback divider top to vout, bottom to gnd" },
+      { "1": "121r-vout" },
+      { "1": "1k-avss" }
+    ],
+    "stdpins-ao": [
+      { "2": "ds-power-tx" },
+      { "2": "100uf-avss" },
+      { "3": "ds-power-rx" },
+      { "3": "10uf-avss" },
+      { "4": "ds-power-tx" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": true,
+      "vin_min_mv": 1400,
+      "vin_max_mv": 15000,
+      "vout_min_mv": 1250,
+      "vout_max_mv": 13800,
+      "vout_accuracy_pct_x10": 10,
+      "iout_max_ma": 800,
+      "iq_typ_ua": 5000,
+      "dropout_mv_at_iout": 1200,
+      "psrr_db_at_1khz": 75,
+      "has_enable_b": false,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

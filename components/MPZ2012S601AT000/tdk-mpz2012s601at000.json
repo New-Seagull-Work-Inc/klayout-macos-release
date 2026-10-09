@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "ferrite-bead",
+    "vendor-s": "TDK",
+    "part-s": "MPZ2012S601AT000",
+    "description-s": "Ferrite Beads Multi-Layer Power 600Ohm 25% 100MHz 2A 0.1Ohm DCR 0805 T/R",
+    "package-ao": [
+      { "ptype-s": "Ferrite Beads and Chips" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.068,
+        "100": 0.0467,
+        "1K": 0.032,
+        "10K": 0.0226,
+        "100K": 0.0221
+      },
+      "distributor-s": "TME"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Panasonic",
+    "part-s": "16SVPF100M",
+    "description-s": "Cap Aluminum Polymer 1000uF 16VDC 20%( 10 X 12.6mm) SMD 0.012 Ohm 5400mA 5000h 105C T/R",
+    "package-ao": [
+      { "ptype-s": "Aluminum Electrolytic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

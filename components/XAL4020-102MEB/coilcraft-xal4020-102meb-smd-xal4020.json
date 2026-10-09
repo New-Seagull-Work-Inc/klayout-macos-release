@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Coilcraft",
+    "part-s": "XAL4020-102MEB",
+    "description-s": "1 µH 8.7 A shielded power inductor, XAL series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-xal4020"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 1000,
+      "value-unit-s": "nh",
+      "current-max-i": 8700,
+      "lead-style-s": "smd"
+    }
+  }
+}

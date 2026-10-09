@@ -1,0 +1,105 @@
+{
+  "component-o": {
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Nanjing Top Power ASIC Corp.",
+    "description-s": "Single-cell Li-ion linear charger, 4.20 V, 130-1000 mA programmable, TEMP/CE/CHRG/STDBY status, SOP-8",
+    "package-ao": [
+      { "ptype-s": "SOP-8" },
+      { "ppins-i": 8 }
+    ],
+    "blocks-as": [
+      "battery-charger-linear"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 4000 },
+      { "vin_max": 8000 },
+      { "vbat": 4200 }
+    ],
+    "max_currents-ao": [
+      { "charge_max": 1000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 145
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "temp" },
+      { "2": "prog" },
+      { "3": "gnd" },
+      { "4": "vcc" },
+      { "5": "bat" },
+      { "6": "stdby" },
+      { "7": "chrg" },
+      { "8": "ce" }
+    ],
+    "cfgpins-ao": [
+      { "1": "temp" },
+      { "1c": "thermistor input, monitors battery temperature; ground to disable" },
+      { "2": "prog" },
+      { "2c": "charge current = 1200 V / Rprog; 1.2k -> 1000 mA" },
+      { "2": "1.2k-avss" },
+      { "6": "stdby" },
+      { "6c": "open-drain charge-complete status, low when terminated" },
+      { "6": "1k-vcc" },
+      { "7": "chrg" },
+      { "7c": "open-drain charging status, low when charging" },
+      { "7": "1k-vcc" },
+      { "8": "ce" },
+      { "8c": "chip enable, high = enable, low = shutdown" }
+    ],
+    "stdpins-ao": [
+      { "4": "ds-power-rx" },
+      { "4": "10uf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "10uf-avss" },
+      { "3": "avss" }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "topology-s": "linear",
+      "vin-min-mv-i": 4000,
+      "vin-max-mv-i": 8000,
+      "charge-voltage-mv-i": 4200,
+      "charge-voltage-accuracy-pct-x10-i": 15,
+      "charge-current-max-ma-i": 1000,
+      "charge-current-min-ma-i": 130,
+      "charge-current-programmable-b": true,
+      "charge-current-accuracy-pct-x10-i": 50,
+      "precharge-b": true,
+      "precharge-threshold-mv-i": 2900,
+      "precharge-current-ma-i": 130,
+      "termination-current-pct-x10-i": 100,
+      "recharge-threshold-mv-i": 80,
+      "power-path-b": false,
+      "ntc-thermistor-b": true,
+      "jeita-b": false,
+      "safety-timer-b": false,
+      "thermal-regulation-b": true,
+      "thermal-regulation-c-i": 145,
+      "charge-enable-b": true,
+      "status-outputs-i": 2,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "none",
+      "quiescent-current-ua-i": 150,
+      "battery-leakage-ua-i": 2,
+      "usb-input-b": true
+    },
+    "non-technical-o": {},
+    "part-s": "TP4056"
+  }
+}

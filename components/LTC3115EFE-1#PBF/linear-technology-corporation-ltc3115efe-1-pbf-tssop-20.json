@@ -1,0 +1,167 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Linear Technology Corporation",
+    "description-s": "40V, 2A Synchronous Buck-Boost DC/DC Converter",
+    "package-ao": [
+      { "ptype-s": "tssop-20" },
+      { "ppins-i": 20 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 2700 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 2000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "pgnd" },
+      { "2": "run" },
+      { "3": "sw2" },
+      { "4": "pvout" },
+      { "5": "gnd" },
+      { "6": "gnd" },
+      { "7": "vc" },
+      { "8": "fb" },
+      { "9": "rt" },
+      { "10": "pgnd" },
+      { "11": "pgnd" },
+      { "12": "vcc" },
+      { "13": "vin" },
+      { "14": "pvcc" },
+      { "15": "bst2" },
+      { "16": "bst1" },
+      { "17": "pvin" },
+      { "18": "sw1" },
+      { "19": "pwm/sync" },
+      { "20": "pgnd" },
+      { "21": "thermal pad, connect to pgnd" }
+    ],
+    "cfgpins-ao": [
+      { "2": "run" },
+      { "2c": "tie to VIN for always-on; can be driven by logic or resistor divider for UVLO; do not force >VIN + 0.3V" },
+      { "2": "vin" },
+      { "7": "vc" },
+      { "7": "63.4k+3300pf-avss" },
+      { "7c": "error amplifier output; requires Type III compensation network to FB" },
+      { "8": "fb" },
+      { "8c": "feedback voltage input; resistor divider sets output voltage; 1000mV nominal" },
+      { "8": "1m-pvout" },
+      { "8": "249k-avss" },
+      { "9": "rt" },
+      { "9c": "oscillator frequency programming; resistor to GND sets switching frequency; f = 35.7MHz / RT(kΩ)" },
+      { "9": "47.5k-avss" },
+      { "19": "pwm/sync" },
+      { "19c": "Burst Mode/PWM mode control and sync input; force high for PWM mode, low for Burst Mode; can be driven by external clock" },
+      { "19": "vin" }
+    ],
+    "stdpins-ao": [
+      { "17": "ds-power-rx" },
+      { "17": "4.7uf-avss" },
+      { "4": "ds-power-tx" },
+      { "4": "47uf-avss" },
+      { "1": "avss" },
+      { "5": "avss" },
+      { "6": "avss" },
+      { "10": "avss" },
+      { "11": "avss" },
+      { "20": "avss" },
+      { "21": "avss" },
+      { "13": "0.1uf-avss" },
+      { "12": "4.7uf-avss" },
+      { "14": "4.7uf-avss" },
+      { "16": "0.1uf-sw1" },
+      { "15": "0.1uf-sw2" },
+      { "18": "10uh-sw2" }
+    ],
+    "specs-o": {
+      "topology_s": "buck_boost",
+      "adjustable_b": true,
+      "vin_min_mv": 2700,
+      "vin_max_mv": 40000,
+      "vout_min_mv": 2700,
+      "vout_max_mv": 40000,
+      "iout_max_ma": 2000,
+      "iq_typ_ua": 50,
+      "switching_freq_khz": 1000,
+      "efficiency_pct_max": 95,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "18"
+      ],
+      "vin_pins-as": [
+        "17"
+      ],
+      "pgnd_pins-as": [
+        "1",
+        "10",
+        "11",
+        "20"
+      ],
+      "l_nh_typ": 10000,
+      "cin_nf_typ": 4700,
+      "cout_nf_typ": 47000,
+      "source-o": {
+        "datasheet-s": "ltc3115-1.pdf",
+        "page_n": 1,
+        "figure-s": "Typical Application"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "LTC3115EFE-1#PBF"
+  }
+}

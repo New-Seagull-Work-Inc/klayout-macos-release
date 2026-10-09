@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "2100HT-680-V-RC",
+    "description-s": "68 µH 5.1 A vertical toroidal power inductor, 2100HT series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 4.076,
+        "100": 3.5552,
+        "1K": 2.87455,
+        "10K": 2.6875,
+        "100K": 2.6875
+      },
+      "distributor-s": "DigiKey"
+    },
+    "package-ao": [
+      { "ptype-s": "radial-toroid-vertical" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 68000,
+      "value-unit-s": "nh",
+      "current-max-i": 5100,
+      "lead-style-s": "radial"
+    }
+  }
+}

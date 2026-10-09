@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Murata",
+    "part-s": "13R222C",
+    "description-s": "2.2 µH 5.3 A radial power inductor, 1300R series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "radial-inductor"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 2200,
+      "value-unit-s": "nh",
+      "current-max-i": 5300,
+      "lead-style-s": "radial"
+    }
+  }
+}

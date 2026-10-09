@@ -1,0 +1,64 @@
+{
+  "component-o": {
+		"type-s" 	: "ir_led",
+		"vendor-s" 	: "chanzon",
+		"part-s"	: "100F5T-IR-FS-850NM",
+		"description-s" : "Thru-hole IR LED",
+		"non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 3.00,
+				  "100"  : 2.50,
+				  "1K"   : 1.80,
+				  "10K"  : 1.20,
+				  "100K" : 1.00
+			  }
+  		},
+		"package-ao"	: 
+			[
+				{"ptype-s" 	: "dip"},
+				{"ppins-i" 	: 2}
+			],
+		"blocks-as"			: ["ir_led"],
+		"interfaces-as" 	: ["ds-ir_led-rx"],
+		"voltages-ao" :
+			[
+			],
+		"max_currents-ao" :
+			[
+			{ "on": 20 }
+			],
+		"temperatures-ao" :
+			[
+				{"operating-o": {"min-i": -40,"max-i": 125}},
+				{"storage-o": {"min-i": -65,"max-i": 150}}
+			],
+		"pins-ao" : 
+			[
+		  	{ "1": "anode" },
+  			{ "2": "cathode" }
+			],
+		"cfgpins-ao" : 
+			[
+			],
+		"stdpins-ao" : 
+			[
+			{"1"  : "ds-ir_led-a"},
+			{"2"  : "ds-ir_led-c"}
+			]
+	}
+}

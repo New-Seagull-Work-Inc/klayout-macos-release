@@ -1,0 +1,76 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-sdcard-jack",
+    "vendor-s": "SHOU HAN",
+    "part-s": "TF PUSH",
+    "description-s": "microSD (TF) card socket, push-push, surface mount, 8 contacts plus card-detect switch, 2 mm high (LCSC C393941)",
+    "package-ao": [
+      { "ptype-s": "smd" },
+      { "ppins-i": 9 }
+    ],
+    "blocks-as": [
+      "microsd-socket"
+    ],
+    "interfaces-as": [
+      "ds-sd-rxtx",
+      "ds-power-rx"
+    ],
+    "voltages-ao": [
+      { "vdd": 3300 }
+    ],
+    "pins-ao": [
+      { "1": "DAT2" },
+      { "2": "CD/DAT3" },
+      { "3": "CMD" },
+      { "4": "VDD" },
+      { "5": "CLK" },
+      { "6": "VSS" },
+      { "7": "DAT0" },
+      { "8": "DAT1" },
+      { "CD": "card detect switch" },
+      { "10": "shield" },
+      { "11": "shield" },
+      { "12": "shield" },
+      { "13": "shield" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-sd-d2" },
+      { "2": "ds-sd-d3" },
+      { "3": "ds-sd-cmd" },
+      { "4": "ds-power-rx" },
+      { "4": "100nf-avss" },
+      { "5": "ds-sd-clk" },
+      { "6": "avss" },
+      { "7": "ds-sd-d0" },
+      { "8": "ds-sd-d1" },
+      { "CD": "ds-sd_cd-tx" },
+      { "10": "avss" },
+      { "11": "avss" },
+      { "12": "avss" },
+      { "13": "avss" }
+    ],
+    "cfgpins-ao": [],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -25,
+          "max-i": 85
+        }
+      }
+    ],
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.0464,
+        "1K": 0.0354,
+        "10K": 0.0338,
+        "100K": 0.0338
+      },
+      "distributor-s": "UnikeyIC",
+      "moq-i": 20,
+      "stock-i": 21754
+    },
+    "notes-s": "Contact functions 1-8 are the SD Association microSD assignment; the vendor drawing numbers the contacts 1-8 plus Cd but does not name them. VDD is the card supply from the card power switch; the 100 nF is common practice."
+  }
+}

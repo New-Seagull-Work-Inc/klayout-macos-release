@@ -1,0 +1,91 @@
+{
+  "component-o": { 
+	"type-s"	: "imagesensor",
+	"vendor-s"	: "omnivision",
+	"part-s"	: "OS04E10",
+	"description-s" : "4Mp image sensor",
+	  	"non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 3.00,
+				  "100"  : 2.50,
+				  "1K"   : 1.80,
+				  "10K"  : 1.20,
+				  "100K" : 1.00
+			  }
+	},
+	"blocks-as"	: ["mipi","i2c","tempsensor"],
+	"interfaces-as" : ["ds-i2c-rxtx"],
+	"mipi"		:
+	{
+		"lanes"	: [1,2,4]
+	},
+	"package-ao"	: 
+	[
+		{"ptype-s" 	: "CSP"},
+		{"ppins-i" 	: 47}
+	],
+	"specs"		: 
+	{
+		"hres"		: 2048,
+		"vres"		: 2048,
+		"binning" 	: 2,
+		"cra"		: [18,"linear"],
+		"inputclk"	: [6,27],
+		"adc"		: 12,
+		"fps"		:
+		{
+			"2048x2048"	: 60,
+			"1920x1080"	: 80,
+			"1024x1024"	: 120,
+			"512x512"	: 240
+		},
+		"shutter"		: "rolling",
+		"maxsnr"		: 33.4,
+		"dynamicrange"	: 81,
+		"vts"			: 8,
+		"pixel"			: 1.998
+	},
+	"features"	: ["alwayson","lowpower","rawwatermark"],
+	"voltage"		:
+	{
+		"core"		: 1.2,
+		"analog" 	: 2.8,
+		"io"		: 1.8
+	},
+	"temperature"	:
+	{
+		"operating"	: [-30,85],
+		"stable"	: [-10,60]
+	},
+	"pinout"	:
+	{
+		"a1"	: {"type" : "io", "functions" : ["sda"]			},
+		"a2"	: {"type" : "o"	, "functions" : ["mdp3","sd0"]	},
+		"a3"	: {"type" : "o"	, "functions" : ["mdp1"]		},
+		"a4"	: {"type" : "o"	, "functions" : ["mcp"]			},
+		"a5"	: {"type" : "o"	, "functions" : ["mdn0"]		},
+		"a6"	: {"type" : "o"	, "functions" : ["mdp2","scsn"]	},
+		"b1"	: {"type" : "i"	, "functions" : ["scl"]			},
+		"b2"	: {"type" : "o"	, "functions" : ["mdn3","sclk"]	},
+		"b3"	: {"type" : "o"	, "functions" : ["mdn1"]		},
+		"b4"	: {"type" : "o"	, "functions" : ["mcn"]			},
+		"b5"	: {"type" : "o"	, "functions" : ["mdp0"]		},
+		"b6"	: {"type" : "o"	, "functions" : ["mdn2","sd1"]	}
+	}
+ }
+}

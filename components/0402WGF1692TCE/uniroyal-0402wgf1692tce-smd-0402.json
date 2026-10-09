@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Uniroyal",
+    "part-s": "0402WGF1692TCE",
+    "description-s": "16.9 kΩ ±1% 0.0625 W thick film chip resistor, 0402 SMD, ±100 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.0008,
+        "1K": 0.0006,
+        "10K": 0.0005,
+        "100K": 0.0004
+      },
+      "distributor-s": "LCSC",
+      "moq-i": 100,
+      "order-mult-i": 100
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 16900000,
+      "value-unit-s": "k",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

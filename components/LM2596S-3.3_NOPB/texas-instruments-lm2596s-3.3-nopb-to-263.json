@@ -1,0 +1,156 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "description-s": "3.3-V Fixed Buck Switching Regulator",
+    "package-ao": [
+      { "ptype-s": "to-263" },
+      { "ppins-i": 7 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 3300 }
+    ],
+    "max_currents-ao": [
+      { "out": 3000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vin" },
+      { "2": "output" },
+      { "3": "gnd" },
+      { "4": "feedback" },
+      { "5": "on/off" },
+      { "6": "gnd" }
+    ],
+    "cfgpins-ao": [
+      { "4": "feedback" },
+      { "4c": "fixed 3.3 V version: FB senses the output, tie to vout (Figure 32: CIN 470 uF, COUT 220 uF, L1 68 uH, D1 1N5825)" },
+      { "4": "vout" },
+      { "5": "en" },
+      { "5c": "ON/OFF is active-high shutdown: tie to GND to run" },
+      { "5": "avss" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "470uf-avss" },
+      { "2": "68uh-vout" },
+      { "2": "schottky-5a-40v-avss" },
+      { "vout": "ds-power-tx" },
+      { "vout": "220uf-avss" },
+      { "3": "avss" },
+      { "6": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": false,
+      "vin_min_mv": 4750,
+      "vin_max_mv": 40000,
+      "vout_fixed_mv": 3300,
+      "vout_accuracy_pct_x10": 40,
+      "iout_max_ma": 3000,
+      "iq_typ_ua": 5000,
+      "switching_freq_khz": 150,
+      "efficiency_pct_max": 73,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "synchronous_b": false,
+      "sw_pins-as": [
+        "2"
+      ],
+      "vin_pins-as": [
+        "1"
+      ],
+      "pgnd_pins-as": [
+        "3",
+        "6"
+      ],
+      "l_nh_typ": 68000,
+      "cin_nf_typ": 470000,
+      "cout_nf_typ": 220000,
+      "catch_diode-o": {
+        "type-s": "schottky",
+        "if_ma_min": 5000,
+        "vr_mv_min": 40000
+      },
+      "source-o": {
+        "datasheet-s": "datasheet_7.pdf",
+        "page_n": 1,
+        "figure-s": "Typical Application"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "LM2596S-3.3/NOPB",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "1"
+        ],
+        "vmin_mv": 4500,
+        "vmax_mv": 40000,
+        "source-o": {
+          "datasheet-s": "datasheet_7.pdf",
+          "page_n": 4,
+          "table-s": "7.3 Operating Conditions"
+        }
+      }
+    ]
+  }
+}

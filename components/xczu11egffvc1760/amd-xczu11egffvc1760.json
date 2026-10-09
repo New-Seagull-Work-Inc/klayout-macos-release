@@ -1,0 +1,20 @@
+{
+  "component-o": {
+		"type-s" 	: "fpga",
+		"vendor-s" 	: "amd",
+		"part-s"	: "xczu11egffvc1760",
+		"package-o"	: {
+				"type-s" : "bga10",
+				"hp-pins-i" :156,
+				"hd-pins-i" : 96 
+			},
+		"interfaces-as" 	: 	[	"hdmi_20_hdcp-rx","i2s-rx","ext_sync-rx",
+									"1000base_t-rxtx","usb_20-rxtx",
+									"hdmi_20_hdcp-tx","12g_sdi-tx","12g_sdi-tx"
+								],
+		"blocks-as"			: 	[	"hdcp-decode","video_crop","video_scale","stereo_audio_embed",
+									"arm53","arm53","arm53","arm53",
+									"hdcp-encode"
+								]
+	}
+}

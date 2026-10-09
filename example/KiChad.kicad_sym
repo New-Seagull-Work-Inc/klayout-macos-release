@@ -77,8 +77,8 @@
 		)
 		(symbol "AP63205_1_1"
 			(rectangle
-				(start -7.54 -18)
-				(end 7.54 18)
+				(start -7.62 -5.08)
+				(end 7.62 5.08)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -88,7 +88,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -15 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "FB"
 					(effects
@@ -106,7 +106,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -15 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "EN"
 					(effects
@@ -124,7 +124,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -12.46 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "VIN"
 					(effects
@@ -142,7 +142,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -12.46 0)
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -160,7 +160,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -9.92 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -178,7 +178,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -9.92 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "BST"
 					(effects
@@ -273,8 +273,8 @@
 		)
 		(symbol "BQ25171_1_1"
 			(rectangle
-				(start -7.54 -18)
-				(end 7.54 18)
+				(start -7.62 -7.62)
+				(end 7.62 10.16)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -284,7 +284,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -15 180)
+				(at 10.16 -5.08 180)
 				(length 2.54)
 				(name "IN"
 					(effects
@@ -302,7 +302,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -15 0)
+				(at -10.16 -5.08 0)
 				(length 2.54)
 				(name "ISET"
 					(effects
@@ -320,7 +320,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -12.46 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "CE"
 					(effects
@@ -338,7 +338,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -12.46 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "TS"
 					(effects
@@ -356,7 +356,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -9.92 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -374,7 +374,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -9.92 0)
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "TMR"
 					(effects
@@ -392,7 +392,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -7.38 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "STAT1"
 					(effects
@@ -410,7 +410,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -7.38 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "STAT2"
 					(effects
@@ -428,7 +428,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -4.84 180)
+				(at 10.16 5.08 180)
 				(length 2.54)
 				(name "VSET"
 					(effects
@@ -446,7 +446,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -4.84 0)
+				(at -10.16 5.08 0)
 				(length 2.54)
 				(name "OUT"
 					(effects
@@ -464,7 +464,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -2.3 180)
+				(at 10.16 7.62 180)
 				(length 2.54)
 				(name "EP"
 					(effects
@@ -559,8 +559,8 @@
 		)
 		(symbol "LM76003_1_1"
 			(rectangle
-				(start -7.54 -18)
-				(end 7.54 18)
+				(start -7.62 -20.32)
+				(end 7.62 22.86)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -570,7 +570,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -15 180)
+				(at 10.16 -17.78 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -588,7 +588,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -15 0)
+				(at -10.16 -17.78 0)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -606,7 +606,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -12.46 180)
+				(at 10.16 -15.24 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -624,7 +624,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -12.46 0)
+				(at -10.16 -15.24 0)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -642,7 +642,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -9.92 180)
+				(at 10.16 -12.7 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -660,7 +660,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -9.92 0)
+				(at -10.16 -12.7 0)
 				(length 2.54)
 				(name "BOOT"
 					(effects
@@ -678,7 +678,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -7.38 180)
+				(at 10.16 -10.16 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -696,7 +696,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -7.38 0)
+				(at -10.16 -10.16 0)
 				(length 2.54)
 				(name "VCC"
 					(effects
@@ -714,7 +714,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -4.84 180)
+				(at 10.16 -7.62 180)
 				(length 2.54)
 				(name "BIAS"
 					(effects
@@ -732,7 +732,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -4.84 0)
+				(at -10.16 -7.62 0)
 				(length 2.54)
 				(name "RT"
 					(effects
@@ -750,7 +750,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -2.3 180)
+				(at 10.16 -5.08 180)
 				(length 2.54)
 				(name "SS"
 					(effects
@@ -768,7 +768,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -2.3 0)
+				(at -10.16 -5.08 0)
 				(length 2.54)
 				(name "FB"
 					(effects
@@ -786,7 +786,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 0.24 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "AGND"
 					(effects
@@ -804,7 +804,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 0.24 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "AGND"
 					(effects
@@ -822,7 +822,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 2.78 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "AGND"
 					(effects
@@ -840,7 +840,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 2.78 0)
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "PGOOD"
 					(effects
@@ -858,7 +858,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 5.32 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "MODE"
 					(effects
@@ -876,7 +876,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 5.32 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "EN"
 					(effects
@@ -894,7 +894,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 7.86 180)
+				(at 10.16 5.08 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -912,7 +912,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 7.86 0)
+				(at -10.16 5.08 0)
 				(length 2.54)
 				(name "PVIN"
 					(effects
@@ -930,7 +930,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 10.4 180)
+				(at 10.16 7.62 180)
 				(length 2.54)
 				(name "PVIN"
 					(effects
@@ -948,7 +948,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 10.4 0)
+				(at -10.16 7.62 0)
 				(length 2.54)
 				(name "PVIN"
 					(effects
@@ -966,7 +966,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 12.94 180)
+				(at 10.16 10.16 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -984,7 +984,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 12.94 0)
+				(at -10.16 10.16 0)
 				(length 2.54)
 				(name "PGND"
 					(effects
@@ -1002,7 +1002,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 15.48 180)
+				(at 10.16 12.7 180)
 				(length 2.54)
 				(name "PGND"
 					(effects
@@ -1020,7 +1020,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 15.48 0)
+				(at -10.16 12.7 0)
 				(length 2.54)
 				(name "PGND"
 					(effects
@@ -1038,7 +1038,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 18.02 180)
+				(at 10.16 15.24 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1056,7 +1056,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 18.02 0)
+				(at -10.16 15.24 0)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1074,7 +1074,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 20.56 180)
+				(at 10.16 17.78 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1092,7 +1092,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 20.56 0)
+				(at -10.16 17.78 0)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1110,7 +1110,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 23.1 180)
+				(at 10.16 20.32 180)
 				(length 2.54)
 				(name "EP"
 					(effects
@@ -1205,8 +1205,8 @@
 		)
 		(symbol "LTC4412_1_1"
 			(rectangle
-				(start -7.54 -18)
-				(end 7.54 18)
+				(start -7.62 -5.08)
+				(end 7.62 5.08)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -1216,7 +1216,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -15 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "VIN"
 					(effects
@@ -1234,7 +1234,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -15 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -1252,7 +1252,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -12.46 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "CTL"
 					(effects
@@ -1270,7 +1270,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -12.46 0)
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "STAT"
 					(effects
@@ -1288,7 +1288,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -9.92 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "GATE"
 					(effects
@@ -1306,7 +1306,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -9.92 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "SENSE"
 					(effects
@@ -1401,8 +1401,8 @@
 		)
 		(symbol "PMOS_GDS_1_1"
 			(rectangle
-				(start -3 -3)
-				(end 3 3)
+				(start -2.54 -2.54)
+				(end 2.54 2.54)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -1412,7 +1412,7 @@
 				)
 			)
 			(pin passive line
-				(at -5.54 0 0)
+				(at -5.08 0 0)
 				(length 2.54)
 				(name "G"
 					(effects
@@ -1430,7 +1430,7 @@
 				)
 			)
 			(pin passive line
-				(at 5.54 -1.27 180)
+				(at 5.08 -1.27 180)
 				(length 2.54)
 				(name "S"
 					(effects
@@ -1448,7 +1448,7 @@
 				)
 			)
 			(pin passive line
-				(at 5.54 1.27 180)
+				(at 5.08 1.27 180)
 				(length 2.54)
 				(name "D"
 					(effects
@@ -1543,8 +1543,8 @@
 		)
 		(symbol "TPS61088_1_1"
 			(rectangle
-				(start -7.54 -18)
-				(end 7.54 18)
+				(start -7.62 -15.24)
+				(end 7.62 15.24)
 				(stroke
 					(width 0.25)
 					(type solid)
@@ -1554,7 +1554,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -15 180)
+				(at 10.16 -12.7 180)
 				(length 2.54)
 				(name "VCC"
 					(effects
@@ -1572,7 +1572,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -15 0)
+				(at -10.16 -12.7 0)
 				(length 2.54)
 				(name "EN"
 					(effects
@@ -1590,7 +1590,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -12.46 180)
+				(at 10.16 -10.16 180)
 				(length 2.54)
 				(name "FSW"
 					(effects
@@ -1608,7 +1608,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -12.46 0)
+				(at -10.16 -10.16 0)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -1626,7 +1626,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -9.92 180)
+				(at 10.16 -7.62 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -1644,7 +1644,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -9.92 0)
+				(at -10.16 -7.62 0)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -1662,7 +1662,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -7.38 180)
+				(at 10.16 -5.08 180)
 				(length 2.54)
 				(name "SW"
 					(effects
@@ -1680,7 +1680,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -7.38 0)
+				(at -10.16 -5.08 0)
 				(length 2.54)
 				(name "BOOT"
 					(effects
@@ -1698,7 +1698,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -4.84 180)
+				(at 10.16 -2.54 180)
 				(length 2.54)
 				(name "VIN"
 					(effects
@@ -1716,7 +1716,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -4.84 0)
+				(at -10.16 -2.54 0)
 				(length 2.54)
 				(name "SS"
 					(effects
@@ -1734,7 +1734,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 -2.3 180)
+				(at 10.16 0 180)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1752,7 +1752,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 -2.3 0)
+				(at -10.16 0 0)
 				(length 2.54)
 				(name "NC"
 					(effects
@@ -1770,7 +1770,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 0.24 180)
+				(at 10.16 2.54 180)
 				(length 2.54)
 				(name "MODE"
 					(effects
@@ -1788,7 +1788,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 0.24 0)
+				(at -10.16 2.54 0)
 				(length 2.54)
 				(name "VOUT"
 					(effects
@@ -1806,7 +1806,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 2.78 180)
+				(at 10.16 5.08 180)
 				(length 2.54)
 				(name "VOUT"
 					(effects
@@ -1824,7 +1824,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 2.78 0)
+				(at -10.16 5.08 0)
 				(length 2.54)
 				(name "VOUT"
 					(effects
@@ -1842,7 +1842,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 5.32 180)
+				(at 10.16 7.62 180)
 				(length 2.54)
 				(name "FB"
 					(effects
@@ -1860,7 +1860,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 5.32 0)
+				(at -10.16 7.62 0)
 				(length 2.54)
 				(name "COMP"
 					(effects
@@ -1878,7 +1878,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 7.86 180)
+				(at 10.16 10.16 180)
 				(length 2.54)
 				(name "ILIM"
 					(effects
@@ -1896,7 +1896,7 @@
 				)
 			)
 			(pin passive line
-				(at -10.08 7.86 0)
+				(at -10.16 10.16 0)
 				(length 2.54)
 				(name "AGND"
 					(effects
@@ -1914,7 +1914,7 @@
 				)
 			)
 			(pin passive line
-				(at 10.08 10.4 180)
+				(at 10.16 12.7 180)
 				(length 2.54)
 				(name "PGND"
 					(effects

@@ -1,0 +1,99 @@
+{
+  "component-o": {
+    "type-s": "icr_driver",
+    "vendor-s": "Microchip",
+    "part-s": "MIC4427YN",
+    "description-s": "Dual 1.5 A non-inverting CMOS MOSFET driver, 4.5-18 V, TTL inputs (VIH 2.4 V), PDIP-8. The two totem-pole outputs across a coil form a full bridge (through-hole ICR coil driver; needs a 9-10 V supply). INA high/INB low: OUTA high, OUTB low; INB high/INA low: reverse; both low: both outputs low (coil idle).",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.79,
+        "1K": 0.739,
+        "10K": 0.717,
+        "100K": 0.717
+      },
+      "distributor-s": "Onlinecomponents.com",
+      "moq-i": 50,
+      "order-mult-i": 50,
+      "lead-time-weeks-i": 13,
+      "stock-i": 550
+    },
+    "package-ao": [
+      { "ptype-s": "pdip-8" },
+      { "ppins-i": 8 }
+    ],
+    "blocks-as": [
+      "icr_driver"
+    ],
+    "interfaces-as": [
+      "ds-icr_ctl-rx",
+      "ds-icr_ctl-tx",
+      "ds-power-rx"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "NC" },
+      { "2": "INA" },
+      { "3": "GND" },
+      { "4": "INB" },
+      { "5": "OUTB" },
+      { "6": "VS" },
+      { "7": "OUTA" },
+      { "8": "NC" }
+    ],
+    "stdpins-ao": [
+      { "7": "ds-icr_ctl-a" },
+      { "5": "ds-icr_ctl-b" },
+      { "2": "ds-icr_ctl-pos" },
+      { "4": "ds-icr_ctl-neg" },
+      { "6": "ds-power-rx" },
+      { "6": "1uf-gnd" },
+      { "6": "100nf-gnd" },
+      { "3": "gnd" }
+    ],
+    "cfgpins-ao": [
+      { "1": "nc" },
+      { "1c": "not internally connected; left open" },
+      { "8": "nc" },
+      { "8c": "not internally connected; left open" }
+    ],
+    "motor-driver-o": {
+      "bridges-i": 1,
+      "topology-s": "gate-driver-pair",
+      "iout-max-ma-i": 1500,
+      "vm-min-mv-i": 4500,
+      "vm-max-mv-i": 18000,
+      "ron-mohm-i": 14000,
+      "ron-at-mv-i": 10000,
+      "vih-max-mv-i": 2400,
+      "control-s": "in1-in2",
+      "note-s": "1.5 A is the peak rating. Each output is ~12 ohm at VS = 5 V (datasheet Fig. 2-8), leaving ~2.3 V on a 20 ohm ICR coil (below its 3.5 V minimum); at VS 9-10 V (~7 ohm per side) the coil gets ~5.3-5.9 V. Use VS 9-10 V and keep the coil under 6 V."
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VS",
+        "role-s": "vs",
+        "pins-as": [
+          "6"
+        ],
+        "i_max_ma": 8,
+        "i_typ_ma": 2,
+        "source-o": {
+          "datasheet-s": "MIC4427YN.pdf",
+          "page_n": 4,
+          "table-s": "ELECTRICAL CHARACTERISTICS (CONTINUED)"
+        }
+      }
+    ],
+    "max_currents-ao": [
+      { "vs": 8 }
+    ]
+  }
+}

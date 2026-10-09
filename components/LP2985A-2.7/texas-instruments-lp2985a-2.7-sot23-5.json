@@ -1,0 +1,130 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "description-s": "150 mA Low-Noise LDO, 2.7 V Fixed Output",
+    "package-ao": [
+      { "ptype-s": "sot23-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "reference-bandgap",
+      "thermal-shutdown",
+      "current-limit",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 16000 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 150 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vin" },
+      { "2": "gnd" },
+      { "3": "on/off" },
+      { "4": "bypass" },
+      { "5": "vout" }
+    ],
+    "cfgpins-ao": [
+      { "3": "on/off" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "2.2uf-avss" },
+      { "2": "avss" },
+      { "4": "10nf-avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 2500,
+      "vin_max_mv": 16000,
+      "vout_fixed_mv": 2700,
+      "vout_accuracy_pct_x10": 5,
+      "iout_max_ma": 150,
+      "iq_typ_ua": 71,
+      "dropout_mv_at_iout": 198,
+      "psrr_db_at_1khz": 70,
+      "noise_uvrms": 30,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "LP2985A-2.7",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "1"
+        ],
+        "vmin_mv": 2200,
+        "vmax_mv": 16000,
+        "decap-ao": [
+          { "value_nf": 10, "count": 1, "per-s": "rail", "page_n": 7 }
+        ],
+        "source-o": {
+          "datasheet-s": "LP2985A-2.7.pdf",
+          "page_n": 4,
+          "table-s": "5.3 Recommended Operating Conditions"
+        }
+      }
+    ]
+  }
+}

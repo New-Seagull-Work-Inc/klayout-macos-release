@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "C0603C100J5GACTU",
+    "description-s": "10 pF 50 V ±5% C0G SMD ceramic capacitor, EIA 0603",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.067,
+        "100": 0.0356,
+        "1K": 0.0246,
+        "10K": 0.0213,
+        "100K": 0.0213
+      },
+      "distributor-s": "TME"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 10,
+      "value-unit-s": "pf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g",
+      "lead-style-s": "smd"
+    }
+  }
+}

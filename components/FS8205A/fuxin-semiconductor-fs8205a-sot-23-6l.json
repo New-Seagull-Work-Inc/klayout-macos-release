@@ -1,0 +1,56 @@
+{
+  "component-o": {
+    "type-s": "protection-ic",
+    "vendor-s": "Fuxin Semiconductor",
+    "description-s": "Dual N-channel MOSFET for battery protection, 20V 6A, 25mΩ@4.5V, SOT-23-6L",
+    "package-ao": [
+      { "ptype-s": "SOT-23-6L" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "mosfet-dual-n-channel"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "voltages-ao": [
+      { "vds_max": 20000 },
+      { "vgs_max": 12000 },
+      { "vgs_threshold_min": 500 },
+      { "vgs_threshold_max": 1200 }
+    ],
+    "max_currents-ao": [
+      { "id_continuous": 6000 },
+      { "id_pulsed": 25000 }
+    ],
+    "pins-ao": [
+      { "1": "G1" },
+      { "2": "S1" },
+      { "3": "S2" },
+      { "4": "G2" },
+      { "5": "D1/D2" },
+      { "6": "D1/D2" }
+    ],
+    "protection-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "integrated-fets-b": true
+    },
+    "non-technical-o": {},
+    "part-s": "FS8205A"
+  }
+}

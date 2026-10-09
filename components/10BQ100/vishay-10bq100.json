@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "10BQ100",
+    "description-s": "Rectifier Diode Schottky 100V 1A 2-Pin SMB T/R / DIODE SCHOTTKY 100V 1A SMB",
+    "package-ao": [
+      { "ptype-s": "Schottky Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.04,
+        "100": 0.04,
+        "1K": 0.04,
+        "10K": 0.04,
+        "100K": 0.04
+      },
+      "distributor-s": "RS (Formerly Allied Electronics)"
+    }
+  }
+}

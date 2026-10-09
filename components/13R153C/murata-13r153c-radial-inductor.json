@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Murata",
+    "part-s": "13R153C",
+    "description-s": "15 µH 2.5 A radial power inductor, 1300R series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.4485,
+        "10K": 0.4375,
+        "100K": 0.4375
+      },
+      "distributor-s": "Arrow Electronics"
+    },
+    "package-ao": [
+      { "ptype-s": "radial-inductor" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 15000,
+      "value-unit-s": "nh",
+      "current-max-i": 2500,
+      "lead-style-s": "radial"
+    }
+  }
+}

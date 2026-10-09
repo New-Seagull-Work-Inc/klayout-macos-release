@@ -1,0 +1,58 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-jack",
+    "vendor-s": "Molex",
+    "description-s": "Micro-Fit 3.0 header, 14 circuits (2x7), 3.00 mm pitch, right angle, through hole, tin. Pin functions are assigned per design by the architect's connector pinmap.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "package-ao": [
+      { "ptype-s": "header-2x7-3.00mm-ra-tht" },
+      { "ppins-i": 14 }
+    ],
+    "blocks-as": [
+      "header",
+      "jack",
+      "power-jack"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" },
+      { "4": "PIN4" },
+      { "5": "PIN5" },
+      { "6": "PIN6" },
+      { "7": "PIN7" },
+      { "8": "PIN8" },
+      { "9": "PIN9" },
+      { "10": "PIN10" },
+      { "11": "PIN11" },
+      { "12": "PIN12" },
+      { "13": "PIN13" },
+      { "14": "PIN14" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 14,
+      "rows_i": 2,
+      "pitch_mm_f": 3,
+      "gender_s": "male",
+      "orientation_s": "right-angle",
+      "mount_s": "through-hole",
+      "contact_plating_s": "tin",
+      "mates_with_series_s": "43025",
+      "source_s": "drawing (procurement connx, no LLM)"
+    },
+    "part-s": "0430451400"
+  }
+}

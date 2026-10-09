@@ -1,0 +1,206 @@
+{
+  "component-o": {
+		"type-s" 	: "i2s2spdif",
+		"vendor-s" 	: "akm",
+		"part-s"	: "ak4118",
+		"description-s" : "I2S to SPDIF converter",
+		  "non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 3.00,
+				  "100"  : 2.50,
+				  "1K"   : 1.80,
+				  "10K"  : 1.20,
+				  "100K" : 1.00
+			  }
+		  },
+		"package-ao"	: 
+			[
+				{"ptype-s" 	: "lqfp"},
+				{"ppins-i" 	: 48}
+			],
+		"blocks-as"			: ["i2s2spdif"],
+		"interfaces-as" 	: ["ds-i2sc-rx","ds-i2c-rxtx","ds-i2s-tx","ds-spdif-tx"],
+		"voltages-ao" :
+			[
+			{ "avdd": 3300 },
+			{ "dvdd": 3300 },
+			{ "tvdd": 3300 }
+			],
+		"max_currents-ao" :
+			[
+			{ "avdd": 7 },
+			{ "dvdd": 36 },
+			{ "tvdd": 10 }
+			],
+		"temperatures-ao" :
+			[
+    			{"operating-o": {"min-i": -10, "max-i": 70}},
+    			{"storage-o": {"min-i": -10, "max-i": 70}}
+			],
+		"pins-ao" : 
+		[
+		  { "1": "IPS0/RX4" },
+		  { "2": "NC" },
+		  { "3": "DIF0/RX5" },
+		  { "4": "TEST2" },
+		  { "5": "DIF1/RX6" },
+		  { "6": "VSS1" },
+		  { "7": "DIF2/RX7" },
+		  { "8": "IPS1/IIC" },
+		  { "9": "PSN" },
+		  { "10": "XTL0" },
+		  { "11": "XTL1" },
+		  { "12": "VIN/GP0" },
+		  { "13": "TVDD" },
+		  { "14": "GP1" },
+		  { "15": "TX0/GP2" },
+		  { "16": "TX1/GP3" },
+		  { "17": "BOUT/GP4" },
+		  { "18": "COUT/GP5" },
+		  { "19": "UOUT/GP6" },
+		  { "20": "VOUT/GP7" },
+		  { "21": "DVDD" },
+		  { "22": "VSS2" },
+		  { "23": "MCKO1" },
+		  { "24": "LRCK" },
+		  { "25": "SDTO" },
+		  { "26": "BICK" },
+		  { "27": "MCKO2" },
+		  { "28": "DAUX" },
+		  { "29": "XTO" },
+		  { "30": "XTI" },
+		  { "31": "PDN" },
+		  { "32": "CM0/CDTO/CAD1" },
+		  { "33": "CM1/CDTI/SDA" },
+		  { "34": "OCKS1/CCLK/SCL" },
+		  { "35": "OCKS0/CSN/CAD0" },
+		  { "36": "INT0" },
+		  { "37": "INT1" },
+		  { "38": "AVDD" },
+		  { "39": "R" },
+		  { "40": "VCOM" },
+		  { "41": "VSS3" },
+		  { "42": "RX0" },
+		  { "43": "NC" },
+		  { "44": "RX1" },
+		  { "45": "TEST1" },
+		  { "46": "RX2" },
+		  { "47": "VSS4" },
+		  { "48": "RX3" }
+		],
+		"pins-grouped-ao" :
+			[
+				{"power supply": [
+					{"13": "tvdd"},
+					{"21": "dvdd"},
+					{"38": "avdd"},
+					{"6" : "vss1"},
+					{"22": "vss2"},
+					{"41": "vss3"},
+					{"47": "vss4"}
+				]},
+				{"clock and crystal": [
+					{"29": "xto"},
+					{"30": "xti"},
+					{"10": "xtl0"},
+					{"11": "xtl1"},
+					{"23": "mcko1"},
+					{"27": "mcko2"}
+				]},
+				{"digital audio interfaces": [
+					{"24": "lrck"},
+					{"25": "sdto"},
+					{"26": "bick"},
+					{"15": "tx0/gp2"},
+					{"16": "tx1/gp3"},
+					{"28": "daux"},
+					{"42": "rx0"},
+					{"44": "rx1"},
+					{"46": "rx2"},
+					{"48": "rx3"},
+					{"1": "ips0/rx4"},
+					{"3": "dif0/rx5"},
+					{"5": "dif1/rx6"},
+					{"7": "dif2/rx7"}
+				]},
+				{"control and configuration": [
+					{"8" : "ips1/iic"},
+					{"9" : "psn"},
+					{"32": "cm0/cdto/cad1"},
+					{"33": "cm1/cdti/sda"},
+					{"34": "ocks1/cclk/scl"},
+					{"35": "ocks0/csn/cad0"},
+					{"31": "pdn"}
+				]},
+				{"gpio pins": [
+					{"12": "vin/gp0"},
+					{"14": "gp1"},
+					{"17": "bout/gp4"},
+					{"18": "cout/gp5"},
+					{"19": "uout/gp6"},
+					{"20": "vout/gp7"}
+				]},
+				{"interrupts": [
+					{"36": "int0"},
+					{"37": "int1"}
+				]},
+				{"miscellaneous": [
+					{"39": "r"},
+					{"40": "vcom"},
+					{"4" : "test2"},
+					{"45": "test1"}
+				]},
+				{"no connect": [
+					{"2" : "nc"},
+					{"43": "nc"}
+				]}
+		],
+		"cfgpins-ao" : 
+			[
+				{"9" : "dvdd-3_3"}, {"9c"  : "psn = parallel control mode"},
+				{"7" : "dvdd-3_3"}, {"7c"  : "dif2 = 24-bit I2S input"},
+				{"5" : "dvss"},     {"5c"  : "dif1 = 24-bit I2S input"},
+				{"3" : "dvdd-3_3"}, {"3c"  : "dif0 = 24-bit I2S input"},
+				{"34" : "dvss"},	{"34c" : "ocks1 = 0 256fs @ 96 KHz"},
+				{"35" : "dvss"},	{"35c" : "ocks0 = 0 256fs @ 96 KHz"},
+				{"33" : "dvdd-3_3"},{"33c" : "? cm1=0 Master Clock Operation Mode PLL off"},
+				{"32" : "dvss"},    {"32c" : "? cm0=1 Master Clock Operation Mode PLL off"},
+				{"2"  : "nc"},    	{"2c"  : "NC"},
+				{"43" : "nc"},    	{"43c" : "NC"},
+				{"11" : "dvdd-3_3"},{"11c" : "XTL1 high for 24.576 MHz clock"},
+				{"10" : "dvss"},	{"10c" : "XTL0 low for 24.576 MHz clock"},
+				{"1"  : "dvss"},	{"1c"  : "" },
+				{"45" : "dvss"},    {"45c" : "TEST1 to ground"}
+			],
+		"stdpins-ao" : 
+			[
+			{"30" : "xtl-i"},
+			{"29" : "xtl-o"},
+			{"31" : "ds-reset_n-rx"},
+			{"24" : "ds-i2s-lrck"},
+			{"26" : "ds-i2s-bick"},
+			{"25" : "ds-i2s-sdto"},
+			{"15" : "ds-spdif-tx"},
+			{"33" : "ds-i2c-sda"},
+			{"34" : "ds-i2c-scl"},
+			{"38" : "avdd-3_3"},
+			{"21" : "dvdd-3_3"},
+			{"13" : "dvdd-3_3"}
+			]
+	}
+}

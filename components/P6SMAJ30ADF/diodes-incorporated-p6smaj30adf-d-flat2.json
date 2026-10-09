@@ -1,0 +1,64 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Diodes Incorporated",
+    "part-s": "P6SMAJ30ADF",
+    "description-s": "30V unidirectional TVS, 600W (10/1000us), VC 48.4V @ 12.4A, D-FLAT, for power-input surge protection",
+    "package-ao": [
+      {
+        "ptype-s": "D-FLAT"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 30000,
+      "breakdown-voltage-min-mv-i": 33300,
+      "breakdown-voltage-max-mv-i": 38300,
+      "clamping-voltage-mv-i": 48400,
+      "peak-pulse-current-a-i": 12,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 1
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {},
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

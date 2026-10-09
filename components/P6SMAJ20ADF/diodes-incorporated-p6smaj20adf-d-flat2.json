@@ -1,0 +1,64 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Diodes Incorporated",
+    "part-s": "P6SMAJ20ADF",
+    "description-s": "20V unidirectional TVS, 600W (10/1000us), VC 32.4V @ 18.5A, D-FLAT, for power-input surge protection",
+    "package-ao": [
+      {
+        "ptype-s": "D-FLAT"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 20000,
+      "breakdown-voltage-min-mv-i": 22200,
+      "breakdown-voltage-max-mv-i": 25500,
+      "clamping-voltage-mv-i": 32400,
+      "peak-pulse-current-a-i": 19,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 1
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {},
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

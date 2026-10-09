@@ -1,0 +1,139 @@
+{
+  "component-o": {
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Texas Instruments",
+    "description-s": "Single-cell Li-Ion/Li-Pol linear charger, 4.20 V, 50-1000 mA programmable, JEITA temperature support, USB/Adapter input with OVP, WSON-10",
+    "package-ao": [
+      { "ptype-s": "WSON" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "battery-charger-linear"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 3500 },
+      { "vin_max": 6450 },
+      { "vin_abs_max": 30000 },
+      { "vbat": 4200 }
+    ],
+    "max_currents-ao": [
+      { "charge_max": 1000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "in" },
+      { "2": "iset" },
+      { "3": "vss" },
+      { "4": "preterm" },
+      { "5": "pg" },
+      { "6": "nc" },
+      { "7": "iset2" },
+      { "8": "chg" },
+      { "9": "ts" },
+      { "10": "out" },
+      { "pad": "vss" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "10": "ds-power-tx" },
+      { "10": "1uf-avss" },
+      { "3": "avss" },
+      { "pad": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "2": "iset" },
+      { "2c": "Fast-charge current: RISET = 540 AΩ / IOUT; 1k = 540 mA" },
+      { "2": "1k-avss" },
+      { "4": "preterm" },
+      { "4c": "Programs termination (5-50% of ISET) and pre-charge (2x termination); float = 10%/20%" },
+      { "7": "iset2" },
+      { "7c": "Input current limit: High = 500 mA, Low = ISET, Float = 100 mA" },
+      { "8": "chg" },
+      { "8c": "Charge status output, tri-state: Low during first charge, open when done" },
+      { "8": "1.5k-out" },
+      { "5": "pg" },
+      { "5c": "Power good output, open-drain: Low when VIN > VOUT+VDT and VIN < VOVP" },
+      { "5": "2k-out" },
+      { "9": "ts" },
+      { "9c": "JEITA temperature sense: 10k NTC thermistor (103AT-2) or 10k resistor to disable" }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "topology-s": "linear",
+      "vin-min-mv-i": 3500,
+      "vin-max-mv-i": 6450,
+      "vin-abs-max-mv-i": 30000,
+      "input-ovp-mv-i": 6650,
+      "input-uvlo-mv-i": 3300,
+      "charge-voltage-mv-i": 4200,
+      "charge-voltage-accuracy-pct-x10-i": 10,
+      "charge-voltage-selectable-b": false,
+      "charge-current-max-ma-i": 1000,
+      "charge-current-min-ma-i": 50,
+      "charge-current-programmable-b": true,
+      "charge-current-accuracy-pct-x10-i": 100,
+      "precharge-b": true,
+      "precharge-threshold-mv-i": 2500,
+      "precharge-current-pct-x10-i": 200,
+      "termination-current-pct-x10-i": 100,
+      "recharge-threshold-mv-i": 95,
+      "input-current-limit-b": true,
+      "input-current-limit-max-ma-i": 500,
+      "usb-input-b": true,
+      "power-path-b": false,
+      "otg-boost-b": false,
+      "ntc-thermistor-b": true,
+      "jeita-b": true,
+      "safety-timer-b": true,
+      "safety-timer-min-i": 600,
+      "thermal-regulation-b": true,
+      "thermal-regulation-c-i": 125,
+      "charge-enable-b": true,
+      "status-outputs-i": 2,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "none",
+      "quiescent-current-ua-i": 1000,
+      "battery-leakage-ua-i": 6,
+      "integrated-protection-b": false
+    },
+    "part-s": "BQ24040DSQR",
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "in",
+        "pins-as": [
+          "1"
+        ],
+        "vnom_mv": 28000,
+        "vmin_mv": 3500,
+        "decap-ao": [
+          { "value_nf": 1000, "count": 1, "per-s": "rail", "page_n": 4 }
+        ],
+        "source-o": {
+          "datasheet-s": "BQ24040DSQR.pdf",
+          "page_n": 5,
+          "table-s": "7.3 Recommended Operating Conditions(1)"
+        }
+      }
+    ]
+  }
+}

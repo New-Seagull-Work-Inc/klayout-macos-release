@@ -1,0 +1,109 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Silver Telecom",
+    "part-s": "Ag5424",
+    "description-s": "30W Power-over-Ethernet Module, 24V output, IEEE802.3at/bt compliant",
+    "package-ao": [
+      { "ptype-s": "SIL" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "poe-pd",
+      "thermal-shutdown",
+      "current-limit",
+      "overvoltage-protection"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 52000 },
+      { "vout": 24000 }
+    ],
+    "max_currents-ao": [
+      { "out": 1250 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 100
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vin+" },
+      { "2": "vin-" },
+      { "3": "at-det" },
+      { "4": "ic" },
+      { "5": "ic" },
+      { "6": "ic" },
+      { "7": "-vdc" },
+      { "8": "+vdc" },
+      { "9": "adj" },
+      { "10": "-vdc" }
+    ],
+    "cfgpins-ao": [
+      { "3": "at-det" },
+      { "9": "adj" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "10nf-vin-" },
+      { "2": "avss" },
+      { "8": "ds-power-tx" },
+      { "8": "470uf-avss" },
+      { "7": "avss" },
+      { "10": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 40000,
+      "vin_max_mv": 57000,
+      "vout_fixed_mv": 24000,
+      "vout_min_mv": 21600,
+      "vout_max_mv": 24800,
+      "vout_accuracy_pct_x10": 31,
+      "iout_max_ma": 1250,
+      "efficiency_pct_max": 93,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_enable_b": false,
+      "has_pgood_b": false
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

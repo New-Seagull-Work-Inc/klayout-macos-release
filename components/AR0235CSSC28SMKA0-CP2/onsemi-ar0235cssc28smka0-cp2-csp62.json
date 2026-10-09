@@ -1,0 +1,356 @@
+{
+  "component-o": {
+    "type-s": "imagesensor",
+    "vendor-s": "onsemi",
+    "part-s": "AR0235CSSC28SMKA0-CP2",
+    "description-s": "AR0235CS 1/2.8-inch 2.3 MP (1920 x 1200) global-shutter CMOS image sensor, RGB Bayer, 28 deg CRA, 120 fps full resolution (10-bit), MIPI CSI-2 1/2/4-lane up to 850 Mbps/lane; 62-ball CSP with protective film, MOQ 50 (-CP2).",
+    "specs-o": {
+      "max_h_res": 1920,
+      "max_v_res": 1200,
+      "max_frame_rate_at_max_res": 120,
+      "pixel-size-f": 2.8
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "cost-o": {
+        "100": 21.26,
+        "1K": 21.02,
+        "10K": 20.57,
+        "100K": 20.57
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 50,
+      "order-mult-i": 50,
+      "lead-time-weeks-i": 29,
+      "quote-s": "Arrow Electronics quote 25584222 (2026-09-23, expires 2026-10-23)"
+    },
+    "package-ao": [
+      { "ptype-s": "CSP" },
+      { "ppins-i": 62 }
+    ],
+    "blocks-as": [
+      "mipi",
+      "i2c",
+      "pll",
+      "global-shutter",
+      "otp-memory",
+      "flash-control"
+    ],
+    "interfaces-as": [
+      "light-rx",
+      "ds-i2c-rxtx",
+      "dd-mipi-csi-tx",
+      "ds-refclk-rx"
+    ],
+    "voltages-ao": [
+      { "dvdd": 1250 },
+      { "iovdd": 1800 },
+      { "avdd": 2800 }
+    ],
+    "max_currents-ao": [
+      { "dvdd": 123 },
+      { "iovdd": 3 },
+      { "avdd": 52 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -20,
+          "max-i": 85
+        }
+      }
+    ],
+    "pins-ao": [
+      { "A2": "VDD" },
+      { "A3": "VDD" },
+      { "A4": "VDD_IO" },
+      { "A5": "VDD_IO" },
+      { "A6": "XSHUTDOWN" },
+      { "A7": "VDD_PHY" },
+      { "A8": "VDD_IO" },
+      { "A9": "VDD_IO" },
+      { "B1": "DGND" },
+      { "B2": "VDD_IO" },
+      { "B3": "VDD" },
+      { "B4": "VDD" },
+      { "B5": "DGND" },
+      { "B6": "DATA_1P" },
+      { "B7": "DATA_1N" },
+      { "B8": "DATA2_P" },
+      { "B9": "DATA2_N" },
+      { "C1": "GPIO0" },
+      { "C2": "GPI2" },
+      { "C3": "SCLK" },
+      { "C4": "DGND" },
+      { "C5": "DGND" },
+      { "C6": "DGND" },
+      { "C7": "VDD_PHY" },
+      { "C8": "DGND" },
+      { "C9": "VDD_PHY" },
+      { "D1": "VAA" },
+      { "D2": "GPI3" },
+      { "D3": "SDATA" },
+      { "D4": "AGND" },
+      { "D5": "AGND" },
+      { "D6": "CLK_P" },
+      { "D7": "CLK_N" },
+      { "D8": "VDD_PHY" },
+      { "D9": "DGND" },
+      { "E1": "VAA_PIX" },
+      { "E2": "GPIO1" },
+      { "E3": "TEST" },
+      { "E4": "AGND" },
+      { "E5": "AGND" },
+      { "E6": "DATA3_P" },
+      { "E7": "DATA3_N" },
+      { "E8": "DATA4_P" },
+      { "E9": "DATA4_N" },
+      { "F1": "VAA_PIX" },
+      { "F2": "VAA_PIX" },
+      { "F3": "AGND" },
+      { "F4": "ATEST2" },
+      { "F5": "VAA" },
+      { "F6": "VDD_PHY" },
+      { "F7": "VDD_PHY" },
+      { "F8": "EXTCLK" },
+      { "F9": "DGND" },
+      { "G1": "VAA" },
+      { "G2": "VAA" },
+      { "G3": "VDD_IO_ANA" },
+      { "G4": "VDD_ANA" },
+      { "G5": "DGND_ANA" },
+      { "G6": "VDD_IO" },
+      { "G7": "VDD" },
+      { "G8": "VAA_PLL" },
+      { "G9": "ATEST1" }
+    ],
+    "stdpins-ao": [
+      { "D6": "dd-mipi-csi-clkp" },
+      { "D7": "dd-mipi-csi-clkn" },
+      { "B6": "dd-mipi-csi-data0p" },
+      { "B7": "dd-mipi-csi-data0n" },
+      { "B8": "dd-mipi-csi-data1p" },
+      { "B9": "dd-mipi-csi-data1n" },
+      { "E6": "dd-mipi-csi-data2p" },
+      { "E7": "dd-mipi-csi-data2n" },
+      { "E8": "dd-mipi-csi-data3p" },
+      { "E9": "dd-mipi-csi-data3n" },
+      { "C3": "ds-i2c-scl" },
+      { "D3": "ds-i2c-sda" },
+      { "F8": "ds-refclk-rx" },
+      { "A2": "dvdd-1_2" },
+      { "A2": "10uf-dvss" },
+      { "A2": "100nf-dvss" },
+      { "A3": "dvdd-1_2" },
+      { "A4": "iovdd-1_8" },
+      { "A4": "10uf-dvss" },
+      { "A4": "100nf-dvss" },
+      { "A5": "iovdd-1_8" },
+      { "A7": "dvdd-1_2" },
+      { "A7": "10uf-dvss" },
+      { "A7": "100nf-dvss" },
+      { "A8": "iovdd-1_8" },
+      { "A9": "iovdd-1_8" },
+      { "B1": "dvss" },
+      { "B2": "iovdd-1_8" },
+      { "B3": "dvdd-1_2" },
+      { "B4": "dvdd-1_2" },
+      { "B5": "dvss" },
+      { "C4": "dvss" },
+      { "C5": "dvss" },
+      { "C6": "dvss" },
+      { "C7": "dvdd-1_2" },
+      { "C8": "dvss" },
+      { "C9": "dvdd-1_2" },
+      { "D1": "avdd-2_8" },
+      { "D1": "10uf-avss" },
+      { "D1": "100nf-avss" },
+      { "D4": "avss" },
+      { "D5": "avss" },
+      { "D8": "dvdd-1_2" },
+      { "D9": "dvss" },
+      { "E1": "avdd-2_8" },
+      { "E1": "10uf-avss" },
+      { "E1": "100nf-avss" },
+      { "E4": "avss" },
+      { "E5": "avss" },
+      { "F1": "avdd-2_8" },
+      { "F2": "avdd-2_8" },
+      { "F3": "avss" },
+      { "F5": "avdd-2_8" },
+      { "F6": "dvdd-1_2" },
+      { "F7": "dvdd-1_2" },
+      { "F9": "dvss" },
+      { "G1": "avdd-2_8" },
+      { "G2": "avdd-2_8" },
+      { "G3": "iovdd-1_8" },
+      { "G3": "10uf-avss" },
+      { "G3": "100nf-avss" },
+      { "G4": "dvdd-1_2" },
+      { "G4": "10uf-avss" },
+      { "G4": "100nf-avss" },
+      { "G5": "avss" },
+      { "G6": "iovdd-1_8" },
+      { "G7": "dvdd-1_2" },
+      { "G8": "avdd-2_8" },
+      { "G8": "10uf-avss" },
+      { "G8": "100nf-avss" },
+      { "G8": "1kfb-avdd-2_8" },
+      { "A6": "ds-reset-rx" }
+    ],
+    "cfgpins-ao": [
+      { "A6": "xshutdown" },
+      { "A6c": "Active-low reset/shutdown: drive from a host GPIO, or pull up to VDD_IO (the pin named VDD_IO) when unused (the datasheet requires a pull-up if not driven; value not given, 10k used)." },
+      { "A6": "10k-vdd_io" },
+      { "F8": "extclk" },
+      { "F8c": "External input clock, 10-48 MHz (e.g. 24 MHz). Feed from the serializer's CLK_OUT (ds-refclk-tx) or a 1.8 V oscillator; the sensor does not run without it." },
+      { "E3": "test" },
+      { "E3c": "Manufacturing test enable: connect to DGND." },
+      { "E3": "dvss" },
+      { "G9": "atest1" },
+      { "G9c": "Analog test access: leave open (floating) for normal operation." },
+      { "F4": "atest2" },
+      { "F4c": "Analog test access: leave open (floating) for normal operation." },
+      { "C1": "gpio0" },
+      { "C1c": "Unused GPIO0: tie to DGND (onsemi recommendation; may float if never enabled)." },
+      { "E2": "gpio1" },
+      { "E2c": "Unused GPIO1: tie to DGND." },
+      { "C2": "gpi2" },
+      { "C2c": "Unused GPI2 (SADDR/trigger): tie to DGND." },
+      { "C2": "dvss" },
+      { "D2": "gpi3" },
+      { "D2c": "Unused GPI3 (SADDR/trigger): tie to DGND." },
+      { "D2": "dvss" }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "VDD",
+        "role-s": "dvdd",
+        "pins-as": [
+          "A2",
+          "A3",
+          "B3",
+          "B4",
+          "G7"
+        ],
+        "vnom_mv": 1250,
+        "vmin_mv": 1200,
+        "vmax_mv": 1300,
+        "i_max_ma": 123,
+        "i_typ_ma": 100,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 16,
+          "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        },
+        "i_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT"
+        }
+      },
+      {
+        "rail-s": "VDD_IO",
+        "role-s": "iovdd",
+        "pins-as": [
+          "A4",
+          "A5",
+          "A8",
+          "A9",
+          "B2",
+          "G6"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1700,
+        "vmax_mv": 1900,
+        "i_max_ma": 3,
+        "i_typ_ma": 1,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 16,
+          "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        },
+        "i_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT"
+        }
+      },
+      {
+        "rail-s": "VDD_PHY",
+        "role-s": "dvdd",
+        "pins-as": [
+          "A7",
+          "C7",
+          "C9",
+          "D8",
+          "F6",
+          "F7"
+        ],
+        "vnom_mv": 1250,
+        "vmin_mv": 1200,
+        "vmax_mv": 1300,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 16,
+          "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        }
+      },
+      {
+        "rail-s": "VAA",
+        "role-s": "avdd",
+        "pins-as": [
+          "D1",
+          "F5",
+          "G1",
+          "G2"
+        ],
+        "vnom_mv": 2800,
+        "vmin_mv": 2600,
+        "vmax_mv": 3000,
+        "i_max_ma": 52,
+        "i_typ_ma": 45,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 16,
+          "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        },
+        "i_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT"
+        }
+      },
+      {
+        "rail-s": "VAA_PIX",
+        "role-s": "avdd",
+        "pins-as": [
+          "E1",
+          "F1",
+          "F2"
+        ],
+        "vnom_mv": 2800,
+        "vmin_mv": 2600,
+        "vmax_mv": 3000,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 16,
+          "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        }
+      }
+    ]
+  }
+}

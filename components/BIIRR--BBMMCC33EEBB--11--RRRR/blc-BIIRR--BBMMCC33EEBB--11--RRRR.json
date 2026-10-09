@@ -1,0 +1,64 @@
+{
+  "component-o": {
+		"type-s" 	: "ir_led",
+		"vendor-s" 	: "Bright LED Electronics, Corp",
+		"part-s"	: "BIIRR--BBMMCC33EEBB--11--RRRR",
+		"description-s" : "Thru-hole 5mm 940nm IR LED",
+		"non-technical-o" : {
+			  "lifecycle-o" : {
+				  "samples" : {
+					  "month" : 11,
+					  "year"  : 2023
+				  },
+				  "mp" : {
+					  "month" : 1,
+					  "year"  : 2024
+				  },
+				  "eol" : {
+					  "month" : 12,
+					  "year" : 2035
+				  }
+			  },
+			  "distributor-s" : "TBD",
+			  "cost-o" : {
+				  "10"   : 3.00,
+				  "100"  : 2.50,
+				  "1K"   : 1.80,
+				  "10K"  : 1.20,
+				  "100K" : 1.00
+			  }
+  		},
+		"package-ao"	: 
+			[
+				{"ptype-s" 	: "dip"},
+				{"ppins-i" 	: 2}
+			],
+		"blocks-as"			: ["ir_led"],
+		"interfaces-as" 	: ["ds-ir_led-rx"],
+		"voltages-ao" :
+			[
+			],
+		"max_currents-ao" :
+			[
+			{ "on": 100 }
+			],
+		"temperatures-ao" :
+			[
+    			{"low": {"value": -40}},
+    			{"high": {"value": 85}}
+			],
+		"pins-ao" : 
+			[
+		  	{ "1": "anode" },
+  			{ "2": "cathode" }
+			],
+		"cfgpins-ao" : 
+			[
+			],
+		"stdpins-ao" : 
+			[
+			{"1"  : "led-a"},
+			{"2"  : "led-c"}
+			]
+	}
+}

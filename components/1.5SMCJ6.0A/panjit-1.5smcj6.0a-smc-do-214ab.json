@@ -1,0 +1,80 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Panjit",
+    "description-s": "6V unidirectional TVS, 1500W (10/1000us), VC 10.3V @ 145.6A, SMC/DO-214AB, for power-input surge protection",
+    "package-ao": [
+      {
+        "ptype-s": "SMC-DO-214AB"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 6000,
+      "breakdown-voltage-min-mv-i": 6670,
+      "breakdown-voltage-max-mv-i": 7670,
+      "clamping-voltage-mv-i": 10300,
+      "peak-pulse-current-a-i": 145,
+      "peak-pulse-power-w-i": 1500,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 1000,
+      "esd-contact-kv-i": 30
+    },
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.458,
+        "100": 0.367,
+        "1K": 0.211,
+        "10K": 0.19,
+        "100K": 0.19
+      },
+      "distributor-s": "Mouser"
+    },
+    "part-s": "1.5SMCJ6.0A",
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "CRCW0603150KFKEA",
+    "description-s": "150 kΩ ±1% 0.1 W thick film chip resistor, 0603, CRCW-e3",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.001,
+        "100": 0.001,
+        "1K": 0.001,
+        "10K": 0.001,
+        "100K": 0.001
+      },
+      "distributor-s": "Arrow Electronics"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 150000000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 100,
+      "voltage-max-i": 75000,
+      "tolerance-pct-x10": 10,
+      "lead-style-s": "smd"
+    }
+  }
+}

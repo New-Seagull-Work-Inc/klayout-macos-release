@@ -1,0 +1,31 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "TNPW06036K12BEEA",
+    "description-s": "6.12 kΩ ±0.1% 0.11 W thin film chip resistor, 0603, TNPW e3",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10K": 0.02841,
+        "100K": 0.02798
+      },
+      "distributor-s": "Avnet"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 6120000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 110,
+      "voltage-max-i": 75000,
+      "tolerance-pct-x10": 1,
+      "lead-style-s": "smd"
+    }
+  }
+}

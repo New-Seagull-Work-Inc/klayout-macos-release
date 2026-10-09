@@ -1,0 +1,59 @@
+{
+  "component-o": {
+    "type-s": "ir_led",
+    "vendor-s": "bright led electronics corp.",
+    "part-s": "BIR-BMC3EB-1-RR",
+    "description-s": "End-look IR LED, T-1 3/4 (5mm) through-hole, peak wavelength 940nm, radiant/viewing angle 100°, water clear lens.",
+
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": { "month": 1, "year": 3000 },
+        "mp": { "month": 1, "year": 3000 },
+        "eol": { "month": 1, "year": 3000 }
+      },
+      "distributor-s" : "TBD",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+
+    "package-ao": [
+      { "ptype-s": "T-1 3/4 (5mm) end-look, through-hole, water clear lens" },
+      { "ppins-i": 2 }
+    ],
+
+    "blocks-as": ["emitter"],
+    "interfaces-as": ["2-pin", "anode_cathode"],
+
+    "voltages-ao": [
+      { "vf_v": { "typ": 1.5, "max": 1.8, "if_ma": 50 } },
+      { "vr_v": { "max": 5 } }
+    ],
+
+    "max_currents-ao": [
+      { "on": 100 },
+      { "on": 1000 }
+    ],
+
+    "temperatures-ao": [
+      { "operating-o": { "min-i": -40, "max-i": 85 } },
+      { "storage-o": { "min-i": -45, "max-i": 85 } }
+    ],
+
+    "pins-ao": [
+      { "1": "anode" },
+      { "2": "cathode" }
+    ],
+
+    "cfgpins-ao": [],
+
+    "stdpins-ao": [
+      { "1": "anode" },
+      { "2": "cathode" }
+    ]
+  }
+}

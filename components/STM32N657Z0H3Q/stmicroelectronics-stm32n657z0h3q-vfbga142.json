@@ -1,0 +1,660 @@
+{
+  "component-o": {
+    "type-s": "soc",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "STM32N657Z0H3Q",
+    "description-s": "High-performance MCU based on Arm Cortex-M55 core running up to 800 MHz (overdrive), with ST Neural-ART Accelerator NPU up to 1 GHz (600 Gops), Neo-Chrom 2.5D GPU, hardware H264 encoder and JPEG codec, ISP with parallel/2-lane CSI-2 camera interfaces, 4.2-Mbyte contiguous SRAM, no internal flash (boots from external XSPI/e.MMC/SD flash or serial USB/UART), embedded SMPS step-down converter providing VDDCORE. STM32N657Z0 variant: 75 I/Os, 5x SPI, 3x I2C, 2x I3C, 2x USART, 3x UART + LPUART, 2x USB 2.0 HS OTG (one with UCPD), Ethernet with TSN, 3x FDCAN, 2x SAI, 8-bit XSPI only, no SDMMC, dual 12-bit ADCs, security (TrustZone, AES, PKA, HASH, RNG). Packaged in VFBGA142 (8x8 mm, 0.5 mm pitch). Ambient operating temperature -40 to 125°C.",
+    "specs-o": {
+      "cpu_arch_s": "Arm Cortex-M55",
+      "cpu_cores_i": 1,
+      "cpu_max_freq_mhz": 800,
+      "sram_kb": 4300,
+      "has_gpu_b": true,
+      "has_h264_b": true,
+      "has_jpeg_b": true,
+      "has_isp_b": true,
+      "has_npu_b": true,
+      "mipi_csi_lanes_i": 2,
+      "usb_b": "USB 2.0 HS OTG",
+      "ethernet_b": "10/100/1000 GMAC with TSN",
+      "gpio_count_i": 75,
+      "adc_resolution_b": 12
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "coo-s": "",
+      "cost-o": {
+        "10": 10.39179,
+        "100": 10.26953,
+        "1K": 10.26953,
+        "10K": 10.26953,
+        "100K": 10.26953
+      },
+      "distributor-s": "Avnet"
+    },
+    "package-ao": [
+      { "ptype-s": "VFBGA142 8x8mm pitch 0.5mm" },
+      { "ppins-i": 142 }
+    ],
+    "blocks-as": [
+      "cpu-arm-cortex-m55",
+      "npu-neural-art",
+      "gpu-2d",
+      "image-h264",
+      "image-jpeg",
+      "image-mipi-csi",
+      "isp",
+      "memory-sram-4_2mb",
+      "memory-tcm",
+      "memory-backup-sram",
+      "fmc-external-memory",
+      "xspi",
+      "usb-hs-otg",
+      "ethernet-gmac",
+      "i2c",
+      "i3c",
+      "uart",
+      "usart",
+      "spi",
+      "sai",
+      "fdcan",
+      "adc",
+      "temperature-sensor",
+      "rtc",
+      "timers",
+      "watchdog",
+      "security-crypto",
+      "gpio-matrix",
+      "dma"
+    ],
+    "interfaces-as": [
+      "dd-mipi-csi-rx",
+      "ds-spi-rxtx",
+      "ds-spi2-rxtx",
+      "ds-i2c-rxtx",
+      "ds-usb-rxtx"
+    ],
+    "voltages-ao": [
+      { "vdd": 3300 },
+      { "vddio3": 3300 },
+      { "vddio4": 3300 },
+      { "vdda18csi": 1800 },
+      { "vdda18pll": 1800 },
+      { "vdda18pmu": 1800 },
+      { "vdda18usb": 1800 },
+      { "vdda18adc": 1800 },
+      { "vdda18aon": 1800 },
+      { "vdd33usb": 3300 },
+      { "vddsmps": 1800 },
+      { "vbat": 3300 },
+      { "vddcore": 810 }
+    ],
+    "max_currents-ao": [
+      { "vdd": 1 },
+      { "vddio3": 50 },
+      { "vddio4": 50 },
+      { "vdda18csi": 20 },
+      { "vdda18pll": 9 },
+      { "vdda18pmu": 50 },
+      { "vdda18usb": 50 },
+      { "vdda18adc": 50 },
+      { "vdda18aon": 10 },
+      { "vdd33usb": 17 },
+      { "vddsmps": 450 },
+      { "vbat": 1 },
+      { "vddcore": 840 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "R2": "VREF-, ADC negative reference, S" },
+      { "P2": "VREF+, ADC reference voltage, 1.1 V to VDDA18ADC, S" },
+      { "D2": "PWR_ON, power-on output, drives the enable of the external VDDCORE regulator, O" },
+      { "A1": "PDR_ON, power-down reset enable input, 1.62 V to 1.98 V, I" },
+      { "B2": "BOOT0, boot mode selection input, I" },
+      { "C2": "NRST, reset input/output, internal weak pull-up, I" },
+      { "P5": "CSI_CKN, MIPI CSI-2 PHY clock negative, I" },
+      { "R5": "CSI_CKP, MIPI CSI-2 PHY clock positive, I" },
+      { "P6": "CSI_D0N, MIPI CSI-2 PHY data lane 0 negative, I" },
+      { "R6": "CSI_D0P, MIPI CSI-2 PHY data lane 0 positive, I" },
+      { "P4": "CSI_D1N, MIPI CSI-2 PHY data lane 1 negative, I" },
+      { "R4": "CSI_D1P, MIPI CSI-2 PHY data lane 1 positive, I" },
+      { "P7": "CSI_REXT, MIPI CSI-2 PHY external reference resistor, I/O" },
+      { "A3": "OTG2_HSDM, USB2 HS OTG data minus, I/O" },
+      { "B3": "OTG2_HSDP, USB2 HS OTG data plus, I/O" },
+      { "A2": "OTG2_ID, USB2 OTG ID, I/O" },
+      { "C3": "NC, not connected" },
+      { "D5": "OTG2_TXRTUNE, USB2 PHY tuning resistor, I/O" },
+      { "A5": "OTG1_HSDM, USB1 HS OTG data minus, I/O" },
+      { "B5": "OTG1_HSDP, USB1 HS OTG data plus, I/O" },
+      { "B4": "OTG1_ID, USB1 OTG ID, I/O" },
+      { "A4": "NC, not connected" },
+      { "A6": "OTG1_TXRTUNE, USB1 PHY tuning resistor, I/O" },
+      { "D6": "UCPD1_CC1, USB Type-C power delivery CC1, I/O" },
+      { "D7": "UCPD1_CC2, USB Type-C power delivery CC2, I/O" },
+      { "F3": "VFBSMPS, SMPS step-down converter feedback (sense of VDDCORE), S" },
+      { "R14": "PA0, GPIO powered from VDD, alternate functions: AF1 TIM2_CH1, AF2 TIM5_CH1, AF3 TIM9_CH1, AF4 TIM15_BKIN, AF5 SPI6_NSS/I2S6_WS, AF7 USART2_CTS/USART2_NSS, AF8 UART4_TX, AF10 SAI2_SD_B, AF11 SDMMC2_CMD, AF12 FMC_AD7/FMC_D7, AF14 LCD_G3, AF15 HDP0" },
+      { "P14": "PA1, GPIO powered from VDD, alternate functions: AF1 TIM2_CH2, AF2 TIM5_CH2, AF3 LPTIM3_IN1, AF4 TIM15_CH1N, AF7 USART2_RTS, AF8 UART4_RX, AF9 DCMIPP_D0/DCMI_D0/PSSI_D0, AF10 SAI2_MCLK_B, AF12 FMC_AD6/FMC_D6, AF15 LCD_G2" },
+      { "P12": "PA2, GPIO powered from VDD, alternate functions: AF1 TIM2_CH3, AF2 TIM5_CH3, AF3 LPTIM3_IN2, AF4 TIM15_CH1, AF7 USART2_TX, AF10 SAI2_SCK_B, AF11 MDIOS_MDIO, AF12 FMC_AD5/FMC_D5, AF15 LCD_B7" },
+      { "R12": "PA5, GPIO powered from VDD, alternate functions: AF0 PWR_CSTOP, AF1 TIM2_CH1, AF2 TIM2_ETR, AF3 TIM9_CH2, AF4 I3C1_SCL, AF5 SPI1_SCK/I2S1_CK, AF8 SPI6_SCK/I2S6_CK, AF9 DCMIPP_D8/DCMI_D8/PSSI_D8, AF10 TIM10_CH1, AF12 FMC_NOE, AF15 LCD_CLK" },
+      { "P13": "PA6, GPIO powered from VDD, alternate functions: AF0 BOOT1, AF1 TIM1_BKIN, AF2 TIM3_CH1, AF3 LPTIM3_ETR, AF4 I3C1_SDA, AF5 SPI1_MISO/I2S1_SDI, AF8 SPI6_MISO/I2S6_SDI, AF9 DCMIPP_PIXCLK/DCMI_PIXCLK/PSSI_PDCK, AF10 TIM13_CH1, AF11 MDIOS_MDC, AF12 LCD_B7, AF15 LCD_HSYNC" },
+      { "M11": "PA8, GPIO powered from VDD, alternate functions: AF0 MCO1, AF1 TIM1_CH1, AF2 I3C2_SCL, AF4 I2C3_SCL, AF7 USART1_CK, AF9 TIM11_CH1, AF10 UART7_RX, AF12 FMC_AD4/FMC_D4, AF15 LCD_B6" },
+      { "P11": "PA9, GPIO powered from VDD, alternate functions: AF1 TIM1_CH2, AF2 I3C2_SDA, AF3 LPUART1_TX, AF4 I2C3_SDA, AF5 SPI2_SCK/I2S2_CK, AF7 USART1_TX, AF9 DCMIPP_D0/DCMI_D0/PSSI_D0, AF12 FMC_AD3/FMC_D3, AF15 LCD_B5" },
+      { "R11": "PA10, GPIO powered from VDD, alternate functions: AF1 TIM1_CH3, AF3 LPUART1_RX, AF7 USART1_RX, AF9 DCMIPP_D1/DCMI_D1/PSSI_D1, AF11 MDIOS_MDIO, AF12 FMC_AD2/FMC_D2, AF15 LCD_B4" },
+      { "R10": "PA11, GPIO powered from VDD, alternate functions: AF1 TIM1_CH4, AF3 LPUART1_CTS, AF5 SPI2_NSS/I2S2_WS, AF6 FDCAN1_RX, AF7 USART1_CTS/USART1_NSS, AF8 UART4_RX, AF12 FMC_AD1/FMC_D1, AF15 LCD_B3" },
+      { "P10": "PA12, GPIO powered from VDD, alternate functions: AF1 TIM1_ETR, AF3 LPUART1_RTS, AF5 SPI2_SCK/I2S2_CK, AF6 FDCAN1_TX, AF7 USART1_RTS, AF8 UART4_TX, AF10 SAI2_FS_B, AF12 FMC_AD0/FMC_D0, AF15 LCD_B2" },
+      { "R9": "JTMS/SWDIO (PA13), reserved for debug/clock, I/O powered from VDD, alternate functions: AF0 JTMS/SWDIO" },
+      { "R8": "JTCK/SWCLK (PA14), reserved for debug/clock, I/O powered from VDD, alternate functions: AF0 JTCK/SWCLK" },
+      { "L15": "JTDI (PA15), reserved for debug/clock, I/O powered from VDD, alternate functions: AF0 JTDI, AF1 TIM2_CH1, AF2 TIM2_ETR, AF5 SPI1_NSS/I2S1_WS, AF6 SPI3_NSS/I2S3_WS, AF7 SPI6_NSS/I2S6_WS, AF8 UART4_RTS, AF10 UART7_TX, AF12 FMC_D15/FMC_AD15, AF15 LCD_R5" },
+      { "C14": "PB0, GPIO powered from VDD, alternate functions: AF0 TRACED1, AF1 TIM1_CH4, AF2 SAI1_D2, AF3 ADF1_SDI0, AF4 MDF1_SDI2, AF5 SPI4_NSS, AF6 SAI1_FS_A, AF7 TIM15_CH1N, AF9 DCMIPP_D4/DCMI_D4/PSSI_D4, AF12 FMC_D13/FMC_AD13, AF15 EVENTOUT" },
+      { "L14": "NJTRST (PB4), reserved for debug/clock, I/O powered from VDD, alternate functions: AF0 NJTRST, AF1 TIM16_BKIN, AF2 TIM3_CH1, AF3 LPTIM4_ETR, AF5 SPI1_MISO/I2S1_SDI, AF6 SPI3_MISO/I2S3_SDI, AF7 SPI2_NSS/I2S2_WS, AF8 SPI6_MISO/I2S6_SDI, AF9 DCMIPP_VSYNC/DCMI_VSYNC/PSSI_RDY, AF10 UART7_TX, AF11 SDMMC2_D3, AF12 FMC_D13/FMC_AD13, AF14 LCD_R3, AF15 HDP4" },
+      { "M15": "JTDO/TRACESWO (PB5), reserved for debug/clock, I/O powered from VDD, alternate functions: AF0 JTDO/TRACESWO, AF1 TIM17_BKIN, AF2 TIM3_CH2, AF3 LPTIM4_OUT, AF4 I2C1_SMBA, AF5 SPI1_MOSI/I2S1_SDO, AF6 FDCAN2_RX, AF7 SPI3_MOSI/I2S3_SDO, AF8 SPI6_MOSI/I2S6_SDO, AF9 DCMIPP_D10/DCMI_D10/PSSI_D10, AF11 UART5_RX, AF12 FMC_D12/FMC_AD12, AF14 LCD_R2, AF15 HDP5" },
+      { "D15": "PB6, GPIO powered from VDD, alternate functions: AF0 TRACED2, AF2 SAI1_CK2, AF3 ADF1_CCK1, AF4 MDF1_CCK1, AF5 SPI4_MISO, AF6 SAI1_SCK_A, AF7 TIM15_CH1, AF9 DCMIPP_D6/DCMI_D6/PSSI_D6, AF12 FMC_D14/FMC_AD14, AF15 EVENTOUT" },
+      { "E12": "PB7, GPIO powered from VDD, alternate functions: AF0 TRACED3, AF1 TIM1_BKIN2, AF2 SAI1_D1, AF3 ADF1_SDI0, AF4 MDF1_SDI1, AF5 SPI4_MOSI, AF6 SAI1_SD_A, AF7 TIM15_CH2, AF9 DCMIPP_D7/DCMI_D7/PSSI_D7, AF10 SAI2_MCLK_B, AF12 FMC_D15/FMC_AD15, AF15 EVENTOUT" },
+      { "N15": "PB10, GPIO powered from VDD, alternate functions: AF1 TIM2_CH3, AF2 I3C2_SCL, AF3 LPTIM2_IN1, AF4 I2C2_SCL, AF5 SPI2_SCK/I2S2_CK, AF7 USART3_TX, AF12 FMC_D11/FMC_AD11, AF14 LCD_G7, AF15 HDP2" },
+      { "N14": "PB11, GPIO powered from VDD, alternate functions: AF1 TIM2_CH4, AF2 I3C2_SDA, AF3 LPTIM2_ETR, AF4 I2C2_SDA, AF7 USART3_RX, AF12 FMC_D10/FMC_AD10, AF14 LCD_G6, AF15 HDP3" },
+      { "N13": "PB12, GPIO powered from VDD, alternate functions: AF1 TIM1_BKIN, AF3 LPTIM2_IN2, AF4 I2C2_SMBA, AF5 SPI2_NSS/I2S2_WS, AF6 FDCAN2_RX, AF7 USART3_CK, AF11 UART5_RX, AF12 FMC_D9/FMC_AD9, AF14 LCD_G5, AF15 HDP4" },
+      { "A8": "PC8, GPIO powered from VDDIO4, alternate functions: AF0 TRACED1, AF2 TIM3_CH3, AF4 I2C3_SMBA, AF6 UCPD1_FRSTX1, AF7 USART6_CK, AF9 DCMIPP_D2/DCMI_D2/PSSI_D2, AF10 SDMMC1_D0, AF11 UART5_RTS, AF12 FMC_NE4, AF14 LCD_B0, AF15 HDP0" },
+      { "B8": "PC9, GPIO powered from VDDIO4, alternate functions: AF0 MCO2, AF2 TIM3_CH4, AF4 I2C3_SDA, AF5 AUDIOCLK, AF6 UCPD1_FRSTX2, AF7 USART6_RX, AF9 DCMIPP_D3/DCMI_D3/PSSI_D3, AF10 SDMMC1_D1, AF11 UART5_CTS, AF14 LCD_B3, AF15 HDP1" },
+      { "A9": "PC10, GPIO powered from VDDIO4, alternate functions: AF1 TIM1_BKIN, AF2 I3C2_SCL, AF4 I2C4_SCL, AF6 SPI3_SCK/I2S3_CK, AF7 USART3_TX, AF8 UART4_TX, AF9 DCMIPP_D14/PSSI_D14, AF10 SDMMC1_D2, AF12 FMC_CLK, AF15 HDP2" },
+      { "B9": "PC11, GPIO powered from VDDIO4, alternate functions: AF2 I3C2_SDA, AF4 I2C4_SDA, AF6 SPI3_MISO/I2S3_SDI, AF7 USART3_RX, AF8 UART4_RX, AF9 DCMIPP_D4/DCMI_D4/PSSI_D4, AF10 SDMMC1_D3, AF15 HDP3" },
+      { "A10": "PC12, GPIO powered from VDDIO4, alternate functions: AF0 TRACED3, AF1 TIM1_CH4, AF4 TIM15_CH1, AF5 SPI6_SCK/I2S6_CK, AF6 SPI3_MOSI/I2S3_SDO, AF7 USART3_CK, AF9 DCMIPP_D9/DCMI_D9/PSSI_D9, AF10 SDMMC1_CK, AF11 UART5_TX, AF12 FMC_NL, AF15 HDP4" },
+      { "E2": "PC13, GPIO powered from VDD, alternate functions: AF15 HDP5" },
+      { "C1": "OSC32_IN (PC14), reserved for debug/clock, I/O powered from VDD, alternate functions: " },
+      { "B1": "OSC32_OUT (PC15), reserved for debug/clock, I/O powered from VDD, alternate functions: " },
+      { "B12": "PD1, GPIO powered from VDD, alternate functions: AF6 FDCAN1_TX, AF8 UART4_TX, AF11 ETH1_MDC, AF12 FMC_A7, AF14 FMC_A23, AF15 EVENTOUT" },
+      { "C13": "PD8, GPIO powered from VDD, alternate functions: AF7 USART3_TX, AF8 SPDIFRX1_IN1, AF9 DCMIPP_D11/DCMI_D11/PSSI_D11, AF12 FMC_NBL0, AF14 LCD_R7, AF15 EVENTOUT" },
+      { "A14": "PE0, GPIO powered from VDD, alternate functions: AF1 LPTIM1_ETR, AF2 TIM4_ETR, AF3 LPTIM2_ETR, AF7 USART3_RX, AF8 UART8_RX, AF9 DCMIPP_D2/DCMI_D2/PSSI_D2, AF10 SAI2_MCLK_A, AF12 FMC_D9/FMC_AD9, AF15 EVENTOUT" },
+      { "B14": "PE1, GPIO powered from VDD, alternate functions: AF1 LPTIM1_IN2, AF3 LPTIM2_CH2, AF7 USART3_TX, AF8 UART8_TX, AF9 DCMIPP_D8/DCMI_D8/PSSI_D8, AF12 FMC_D10/FMC_AD10, AF15 EVENTOUT" },
+      { "B15": "PE2, GPIO powered from VDD, alternate functions: AF0 TRACECLK, AF1 LPTIM5_IN1, AF2 SAI1_CK1, AF3 ADF1_CCK0, AF4 MDF1_CCK0, AF5 SPI4_SCK, AF6 SAI1_MCLK_A, AF7 UCPD1_FRSTX1, AF12 FMC_D11/FMC_AD11, AF13 TIM1_CH2N, AF15 EVENTOUT" },
+      { "C15": "PE3, GPIO powered from VDD, alternate functions: AF0 TRACED0, AF1 LPTIM5_ETR, AF4 MDF1_CKI2, AF6 SAI1_SD_B, AF7 TIM15_BKIN, AF12 FMC_D12/FMC_AD12, AF15 EVENTOUT" },
+      { "A12": "PE7, GPIO powered from VDD, alternate functions: AF1 TIM1_ETR, AF4 MDF1_CKI0, AF8 UART7_RX, AF10 SAI2_SD_B, AF12 FMC_A4, AF14 FMC_A20, AF15 EVENTOUT" },
+      { "D12": "PE8, GPIO powered from VDD, alternate functions: AF1 TIM1_CH1N, AF4 MDF1_SDI0, AF7 USART3_TX, AF8 UART7_TX, AF9 DCMIPP_D4/DCMI_D4/PSSI_D4, AF12 FMC_A12, AF15 EVENTOUT" },
+      { "A13": "PE9, GPIO powered from VDD, alternate functions: AF1 TIM1_CH1, AF4 MDF1_CKI4, AF8 UART7_RTS, AF12 FMC_A14/FMC_BA0, AF15 EVENTOUT" },
+      { "B13": "PE10, GPIO powered from VDD, alternate functions: AF0 TRACECLK, AF1 TIM1_CH2N, AF4 MDF1_SDI4, AF7 USART3_RX, AF8 UART7_CTS, AF9 DCMIPP_D3/DCMI_D3/PSSI_D3, AF12 FMC_A15/FMC_BA1, AF15 EVENTOUT" },
+      { "B11": "PE12, GPIO powered from VDD, alternate functions: AF1 TIM1_CH3N, AF4 MDF1_SDI5, AF5 SPI4_SCK, AF6 FDCAN3_RX, AF10 SAI2_SCK_B, AF12 FMC_NRAS, AF15 EVENTOUT" },
+      { "A11": "PE13, GPIO powered from VDD, alternate functions: AF1 TIM1_CH3, AF3 ADF1_CCK0, AF4 I2C4_SCL, AF5 SPI4_MISO, AF10 SAI2_FS_B, AF12 FMC_NCAS, AF15 EVENTOUT" },
+      { "D10": "PE14, GPIO powered from VDD, alternate functions: AF1 TIM1_CH4, AF2 GFXTIM_FCKCAL, AF3 ADF1_CCK1, AF4 I2C4_SDA, AF5 SPI4_MOSI, AF10 SAI2_MCLK_B, AF12 FMC_SDNE0, AF13 GFXTIM_LCKCAL, AF14 FMC_NWE, AF15 EVENTOUT" },
+      { "D11": "PE15, GPIO powered from VDD, alternate functions: AF1 TIM1_BKIN, AF2 GFXTIM_LCKCAL, AF4 I2C4_SMBA, AF5 SPI5_SCK, AF6 USART10_CK, AF7 USART2_CK, AF10 SDMMC1_D0, AF12 FMC_SDCKE0, AF13 GFXTIM_FCKCAL, AF15 EVENTOUT" },
+      { "L1": "PF2, GPIO powered from VDD, alternate functions: AF1 TIM1_CH3N, AF5 SPI2_SCK/I2S2_CK, AF6 FDCAN3_TX, AF7 USART2_CTS/USART2_NSS, AF11 ETH1_RGMII_CLK125, AF12 FMC_NWAIT, AF14 LCD_B1, AF15 EVENTOUT" },
+      { "L4": "PF3, GPIO powered from VDD, alternate functions: AF6 FDCAN3_RX, AF7 USART2_RTS, AF9 DCMIPP_HSYNC/DCMI_HSYNC/PSSI_DE, AF11 ETH1_PPS_OUT, AF12 FMC_NL, AF14 LCD_R4, AF15 EVENTOUT" },
+      { "K1": "PF4, GPIO powered from VDD, alternate functions: AF2 TIM5_ETR, AF3 LPTIM3_CH2, AF5 SPI1_NSS/I2S1_WS, AF6 SPI3_NSS/I2S3_WS, AF7 USART2_CK, AF8 SPI6_NSS/I2S6_WS, AF9 DCMIPP_HSYNC/DCMI_HSYNC/PSSI_DE, AF11 ETH1_MDIO, AF14 LCD_R3, AF15 HDP4" },
+      { "K3": "PF5, GPIO powered from VDD, alternate functions: AF1 TIM1_ETR, AF3 LPTIM2_IN2, AF7 USART3_CTS/USART3_NSS, AF9 DCMIPP_D6/DCMI_D6/PSSI_D6, AF10 SAI2_SD_A, AF11 ETH1_CLK, AF12 FMC_NE3, AF14 LCD_G0, AF15 EVENTOUT" },
+      { "M2": "PF7, GPIO powered from VDD, alternate functions: AF1 TIM1_CH2N, AF2 TIM3_CH3, AF3 TIM9_CH1, AF5 SPI1_SCK/I2S1_CK, AF8 UART4_CTS, AF11 ETH1_MII_RX_CLK/ETH1_RMII_REF_CLK/ETH1_RGMII_RX_CLK, AF12 GFXTIM_TE, AF13 [RNG_S1], AF14 LCD_VSYNC, AF15 HDP0" },
+      { "N1": "PF8, GPIO powered from VDD, alternate functions: AF0 TRACECLK, AF7 UART9_TX, AF11 ETH1_MII_RXD2/ETH1_RGMII_RXD2, AF12 FMC_NWE, AF14 LCD_R6, AF15 EVENTOUT" },
+      { "K2": "PF10, GPIO powered from VDD, alternate functions: AF1 TIM16_BKIN, AF2 SAI1_D3, AF4 MDF1_SDI3, AF6 UCPD1_FRSTX1, AF8 UART7_RX, AF9 DCMIPP_D11/DCMI_D11/PSSI_D11, AF10 DCMIPP_D15/PSSI_D15, AF11 ETH1_MII_RX_DV/ETH1_RMII_CRS_DV/ETH1_RGMII_RX_CTL, AF14 LCD_R1, AF15 EVENTOUT" },
+      { "N2": "PF11, GPIO powered from VDD, alternate functions: AF5 SPI5_MOSI, AF9 DCMIPP_D15/PSSI_D15, AF10 SAI2_SD_B, AF11 ETH1_MII_TX_EN/ETH1_RMII_TX_EN/ETH1_RGMII_TX_CTL, AF14 LCD_B0, AF15 EVENTOUT" },
+      { "P1": "PF12, GPIO powered from VDD, alternate functions: AF4 USART1_RX, AF5 SPI5_MISO, AF9 DCMIPP_D13/DCMI_D13/PSSI_D13, AF11 ETH1_MII_TXD0/ETH1_RMII_TXD0/ETH1_RGMII_TXD0, AF15 EVENTOUT" },
+      { "N3": "PF13, GPIO powered from VDD, alternate functions: AF4 USART1_TX, AF5 SPI5_NSS, AF9 DCMIPP_D10/DCMI_D10/PSSI_D10, AF11 ETH1_MII_TXD1/ETH1_RMII_TXD1/ETH1_RGMII_TXD1, AF15 EVENTOUT" },
+      { "L2": "PF14, GPIO powered from VDD, alternate functions: AF1 TIM2_CH2, AF4 USART1_CTS, AF5 SPI5_MOSI, AF11 ETH1_MII_RXD0/ETH1_RMII_RXD0/ETH1_RGMII_RXD0, AF14 LCD_G0, AF15 EVENTOUT" },
+      { "M1": "PF15, GPIO powered from VDD, alternate functions: AF4 USART1_RTS, AF5 SPI5_SCK, AF11 ETH1_MII_RXD1/ETH1_RMII_RXD1/ETH1_RGMII_RXD1, AF14 LCD_G1, AF15 EVENTOUT" },
+      { "M14": "PG2, GPIO powered from VDD, alternate functions: AF1 TIM17_CH1N, AF5 SPI5_MOSI, AF6 SAI1_FS_B, AF7 USART3_RTS, AF8 UART7_CTS, AF9 DCMIPP_D6/DCMI_D6/PSSI_D6, AF10 SAI2_MCLK_B, AF11 TIM14_CH1, AF12 FMC_A21, AF14 LCD_R0, AF15 EVENTOUT" },
+      { "P15": "PG10, GPIO powered from VDD, alternate functions: AF1 TIM1_CH1N, AF3 LPTIM2_CH1, AF5 SPI2_SCK/I2S2_CK, AF6 FDCAN2_TX, AF7 USART3_CTS/USART3_NSS, AF9 DCMIPP_D2/DCMI_D2/PSSI_D2, AF11 UART5_TX, AF12 FMC_A16/FMC_CLE, AF14 LCD_G4, AF15 HDP5" },
+      { "R13": "PG13, GPIO powered from VDD, alternate functions: AF1 LPTIM1_IN1, AF2 TIM4_CH1, AF3 LPTIM2_IN1, AF7 USART3_RTS, AF9 DCMIPP_D12/DCMI_D12/PSSI_D12, AF10 SAI2_FS_A, AF12 FMC_NE1, AF14 LCD_DE, AF15 EVENTOUT" },
+      { "P9": "PG14, GPIO powered from VDD, alternate functions: AF0 TRACED1, AF1 LPTIM1_ETR, AF2 TIM8_CH4, AF5 SPI6_MOSI/I2S6_SDO, AF6 USART10_RTS, AF7 USART6_TX, AF8 USART2_RTS, AF9 DCMIPP_D11/DCMI_D11/PSSI_D11, AF10 FMC_NCE, AF12 FMC_NE2, AF14 LCD_B1, AF15 EVENTOUT" },
+      { "A7": "OSC_IN (PH0), reserved for debug/clock, I/O powered from VDD, alternate functions: AF15 EVENTOUT" },
+      { "B7": "OSC_OUT (PH1), reserved for debug/clock, I/O powered from VDD, alternate functions: AF15 EVENTOUT" },
+      { "B10": "PH2, GPIO powered from VDDIO4, alternate functions: AF0 TRACED2, AF1 TIM1_ETR, AF2 TIM3_ETR, AF4 TIM15_BKIN, AF6 FDCAN1_TX, AF9 DCMIPP_D11/DCMI_D11/PSSI_D11, AF10 SDMMC1_CMD, AF11 UART5_RX, AF12 FMC_NE3, AF15 EVENTOUT" },
+      { "J15": "XSPIM_P2 boot-flash bus (PN0), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_DQS0, AF12 FMC_A25, AF15 EVENTOUT" },
+      { "D14": "XSPIM_P2 boot-flash bus (PN1), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_NCS1, AF12 FMC_A24, AF15 EVENTOUT" },
+      { "H15": "XSPIM_P2 boot-flash bus (PN2), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO0, AF12 FMC_A23, AF15 EVENTOUT" },
+      { "K15": "XSPIM_P2 boot-flash bus (PN3), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO1, AF12 FMC_A22, AF15 EVENTOUT" },
+      { "E14": "XSPIM_P2 boot-flash bus (PN4), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO2, AF15 EVENTOUT" },
+      { "F15": "XSPIM_P2 boot-flash bus (PN5), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO3, AF15 EVENTOUT" },
+      { "G15": "XSPIM_P2 boot-flash bus (PN6), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_CLK, AF15 EVENTOUT" },
+      { "F14": "XSPIM_P2 boot-flash bus (PN7), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_NCLK, AF15 EVENTOUT" },
+      { "E15": "XSPIM_P2 boot-flash bus (PN8), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO4, AF15 EVENTOUT" },
+      { "G14": "XSPIM_P2 boot-flash bus (PN9), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO5, AF10 DCMIPP_D5/DCMI_D5/PSSI_D5, AF15 EVENTOUT" },
+      { "H14": "XSPIM_P2 boot-flash bus (PN10), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO6, AF14 LCD_B4, AF15 EVENTOUT" },
+      { "J14": "XSPIM_P2 boot-flash bus (PN11), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_IO7, AF14 LCD_B6, AF15 EVENTOUT" },
+      { "K14": "XSPIM_P2 boot-flash bus (PN12), I/O powered from VDDIO3, alternate functions: AF9 XSPIM_P2_NCS2, AF15 EVENTOUT" },
+      { "D1": "VBAT, backup operating voltage, up to 3.6 V, S" },
+      { "K4": "VDDA18PLL, 1.8 V analog supply for PLL, S" },
+      { "K12": "VDDIO3, independent I/O supply for PN[12:0] (XSPIM port 2), 1.8 V or 3.3 V range, S" },
+      { "L12": "VDDIO3, independent I/O supply for PN[12:0] (XSPIM port 2), 1.8 V or 3.3 V range, S" },
+      { "D8": "VDDIO4, independent I/O supply for PC[1], PC[12:6], PH[2,9], 1.8 V or 3.3 V range, S" },
+      { "P8": "VDDCSI, CSI operating voltage, 0.81 V typ, S" },
+      { "R7": "VDDA18CSI, 1.8 V analog supply for CSI, S" },
+      { "F1": "VDDA18PMU, 1.8 V SMPS analog supply, S" },
+      { "F2": "VSSAPMU, analog ground (PMU), S" },
+      { "J1": "VDDSMPS, SMPS step-down converter supply, 1.8 V typ, S" },
+      { "G1": "VSSSMPS, SMPS ground, S" },
+      { "J2": "VDDSMPS, SMPS step-down converter supply, 1.8 V typ, S" },
+      { "G2": "VSSSMPS, SMPS ground, S" },
+      { "J3": "VDDSMPS, SMPS step-down converter supply, 1.8 V typ, S" },
+      { "G3": "VSSSMPS, SMPS ground, S" },
+      { "E1": "V08CAP, backup regulator output, 0.8 V typ, external capacitor, S" },
+      { "H1": "VLXSMPS, SMPS step-down converter switching node, external 1 uH coil to VDDCORE with 4 x 22 uF, S" },
+      { "H2": "VLXSMPS, SMPS step-down converter switching node, external 1 uH coil to VDDCORE with 4 x 22 uF, S" },
+      { "H3": "VLXSMPS, SMPS step-down converter switching node, external 1 uH coil to VDDCORE with 4 x 22 uF, S" },
+      { "D4": "VDDA18USB, 1.8 V analog supply for USB PHY, S" },
+      { "B6": "VDD33USB, 3.3 V supply for USB PHY, S" },
+      { "R3": "VDDA18ADC, 1.8 V ADC supply, S" },
+      { "P3": "VSSA, analog ground, S" },
+      { "E4": "VDDA18AON, 1.8 V internal analog supply, must be present before any other supply, S" },
+      { "F4": "VSSAON, analog ground (AON), S" },
+      { "F12": "VDD, digital I/O supply, 1.8 V or 3.3 V range, S" },
+      { "G12": "VDD, digital I/O supply, 1.8 V or 3.3 V range, S" },
+      { "H12": "VDD, digital I/O supply, 1.8 V or 3.3 V range, S" },
+      { "M5": "VDDCORE, main digital logic supply, 0.81 V typ (VOS low), from the internal SMPS or external, S" },
+      { "M6": "VDDCORE, main digital logic supply, 0.81 V typ (VOS low), from the internal SMPS or external, S" },
+      { "M7": "VDDCORE, main digital logic supply, 0.81 V typ (VOS low), from the internal SMPS or external, S" },
+      { "M8": "VDDCORE, main digital logic supply, 0.81 V typ (VOS low), from the internal SMPS or external, S" },
+      { "M9": "VDDCORE, main digital logic supply, 0.81 V typ (VOS low), from the internal SMPS or external, S" },
+      { "A15": "VSS, ground, S" },
+      { "D9": "VSS, ground, S" },
+      { "J12": "VSS, ground, S" },
+      { "M4": "VSS, ground, S" },
+      { "M10": "VSS, ground, S" },
+      { "M12": "VSS, ground, S" },
+      { "R1": "VSS, ground, S" },
+      { "R15": "VSS, ground, S" }
+    ],
+    "cfgpins-ao": [
+      { "B2": "boot_mode_BOOT0" },
+      { "B2c": "BOOT0 dedicated boot pin, latched upon reset release; with BOOT1 selects external flash boot, serial boot (USB/UART) or development boot. Must not float. The datasheet does not give the polarity or strap value (see AN5967 / RM0486); 10k to ground assumed for external flash boot" },
+      { "B2": "10k-dvss" },
+      { "P13": "boot_mode_BOOT1" },
+      { "P13c": "BOOT1 (PA6 by default, non-dedicated boot pin): if selected the BootROM enters development boot. Must not float at reset; 10k to ground assumed (value not in the datasheet)" },
+      { "P13": "10k-dvss" },
+      { "C2": "nrst" },
+      { "C2c": "NRST reset input/output; 100nF to ground assumed (value not in the datasheet, see AN5967)" },
+      { "C2": "100nf-dvss" },
+      { "A1": "pdr_on" },
+      { "A1c": "PDR_ON power-down reset enable, 1.62 V to 1.98 V; tie to the 1.8 V rail; must not float" },
+      { "A1": "0r-vdda18aon" },
+      { "D2": "pwr_on" },
+      { "D2c": "PWR_ON output; connect to the enable of the external VDDCORE/1.8 V regulator when one is used, otherwise leave unconnected" },
+      { "M6": "vddcore" },
+      { "M6c": "VDDCORE ball: all VDDCORE balls form one 0.81 V net supplied by the embedded SMPS (VLXSMPS through the 1 uH coil); never connect to an external 1.1 V rail (absolute maximum 0.99 V)" },
+      { "M6": "vddcore" },
+      { "M7": "vddcore" },
+      { "M7c": "VDDCORE ball: all VDDCORE balls form one 0.81 V net supplied by the embedded SMPS (VLXSMPS through the 1 uH coil); never connect to an external 1.1 V rail (absolute maximum 0.99 V)" },
+      { "M7": "vddcore" },
+      { "M8": "vddcore" },
+      { "M8c": "VDDCORE ball: all VDDCORE balls form one 0.81 V net supplied by the embedded SMPS (VLXSMPS through the 1 uH coil); never connect to an external 1.1 V rail (absolute maximum 0.99 V)" },
+      { "M8": "vddcore" },
+      { "M9": "vddcore" },
+      { "M9c": "VDDCORE ball: all VDDCORE balls form one 0.81 V net supplied by the embedded SMPS (VLXSMPS through the 1 uH coil); never connect to an external 1.1 V rail (absolute maximum 0.99 V)" },
+      { "M9": "vddcore" },
+      { "P8": "vddcsi" },
+      { "P8c": "VDDCSI 0.81 V CSI supply: same 0.81 V domain as VDDCORE (absolute maximum 0.99 V); tied to the VDDCORE net" },
+      { "P8": "vddcore" },
+      { "F3": "vfbsmps" },
+      { "F3c": "VFBSMPS step-down converter feedback: senses the VDDCORE net" },
+      { "F3": "vddcore" },
+      { "H2": "vlxsmps" },
+      { "H2c": "VLXSMPS ball: all VLXSMPS balls form the SMPS switching node" },
+      { "H2": "vlxsmps" },
+      { "H3": "vlxsmps" },
+      { "H3c": "VLXSMPS ball: all VLXSMPS balls form the SMPS switching node" },
+      { "H3": "vlxsmps" }
+    ],
+    "stdpins-ao": [
+      { "P5": "dd-mipi-csi-clkn" },
+      { "R5": "dd-mipi-csi-clkp" },
+      { "P6": "dd-mipi-csi-data0n" },
+      { "R6": "dd-mipi-csi-data0p" },
+      { "P4": "dd-mipi-csi-data1n" },
+      { "R4": "dd-mipi-csi-data1p" },
+      { "B5": "ds-usb-dp" },
+      { "A5": "ds-usb-dm" },
+      { "C14": "ds-spi-cs" },
+      { "B11": "ds-spi-clk" },
+      { "D15": "ds-spi-miso" },
+      { "E12": "ds-spi-mosi" },
+      { "N3": "ds-spi2-cs" },
+      { "M1": "ds-spi2-clk" },
+      { "P1": "ds-spi2-miso" },
+      { "N2": "ds-spi2-mosi" },
+      { "N15": "ds-i2c-scl" },
+      { "N15": "4.7k-vdd" },
+      { "N14": "ds-i2c-sda" },
+      { "N14": "4.7k-vdd" },
+      { "D1": "dvdd-3_3" },
+      { "D1": "100nf-dvss" },
+      { "K4": "dvdd-1_8" },
+      { "K4": "100nf-dvss" },
+      { "K12": "dvdd-3_3" },
+      { "K12": "100nf-dvss" },
+      { "L12": "dvdd-3_3" },
+      { "L12": "100nf-dvss" },
+      { "D8": "dvdd-3_3" },
+      { "D8": "100nf-dvss" },
+      { "P8": "100nf-dvss" },
+      { "R7": "dvdd-1_8" },
+      { "R7": "100nf-dvss" },
+      { "F1": "dvdd-1_8" },
+      { "F1": "100nf-dvss" },
+      { "F2": "avss" },
+      { "J1": "dvdd-1_8" },
+      { "J1": "100nf-dvss" },
+      { "G1": "dvss" },
+      { "J2": "dvdd-1_8" },
+      { "J2": "100nf-dvss" },
+      { "G2": "dvss" },
+      { "J3": "dvdd-1_8" },
+      { "J3": "100nf-dvss" },
+      { "G3": "dvss" },
+      { "E1": "100nf-dvss" },
+      { "H1": "1uh-vddcore" },
+      { "D4": "dvdd-1_8" },
+      { "D4": "100nf-dvss" },
+      { "B6": "dvdd-3_3" },
+      { "B6": "100nf-dvss" },
+      { "R3": "dvdd-1_8" },
+      { "R3": "100nf-dvss" },
+      { "P3": "avss" },
+      { "E4": "dvdd-1_8" },
+      { "E4": "100nf-dvss" },
+      { "F4": "avss" },
+      { "F12": "dvdd-3_3" },
+      { "F12": "100nf-dvss" },
+      { "G12": "dvdd-3_3" },
+      { "G12": "100nf-dvss" },
+      { "H12": "dvdd-3_3" },
+      { "H12": "100nf-dvss" },
+      { "M5": "100nf-dvss" },
+      { "M5": "22uf-dvss" },
+      { "M5": "22uf-dvss" },
+      { "M5": "22uf-dvss" },
+      { "M5": "22uf-dvss" },
+      { "M6": "100nf-dvss" },
+      { "M7": "100nf-dvss" },
+      { "M8": "100nf-dvss" },
+      { "M9": "100nf-dvss" },
+      { "A15": "dvss" },
+      { "D9": "dvss" },
+      { "J12": "dvss" },
+      { "M4": "dvss" },
+      { "M10": "dvss" },
+      { "M12": "dvss" },
+      { "R1": "dvss" },
+      { "R15": "dvss" }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "VREF+",
+        "role-s": "vref",
+        "pins-as": [
+          "P2"
+        ],
+        "vmin_mv": 1100,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VBAT",
+        "role-s": "vbat",
+        "pins-as": [
+          "D1"
+        ],
+        "vmax_mv": 3600,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDA18PLL",
+        "role-s": "vdda18pll",
+        "pins-as": [
+          "K4"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1620,
+        "vmax_mv": 1980,
+        "i_max_ma": 9,
+        "i_typ_ma": 8,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        },
+        "i_source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 152,
+          "table-s": "Table 46. PLL1 to PLL4 characteristics(1)"
+        }
+      },
+      {
+        "rail-s": "VDDIO3",
+        "role-s": "vddio3",
+        "pins-as": [
+          "K12",
+          "L12"
+        ],
+        "vnom_mv": 3300,
+        "vmin_mv": 2700,
+        "vmax_mv": 3600,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDIO4",
+        "role-s": "vddio4",
+        "pins-as": [
+          "D8"
+        ],
+        "vnom_mv": 3300,
+        "vmin_mv": 2700,
+        "vmax_mv": 3600,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDCSI",
+        "role-s": "vddcsi",
+        "pins-as": [
+          "P8"
+        ],
+        "vnom_mv": 810,
+        "vmin_mv": 784,
+        "vmax_mv": 842,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDA18CSI",
+        "role-s": "vdda18csi",
+        "pins-as": [
+          "R7"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1746,
+        "vmax_mv": 1980,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDA18PMU",
+        "role-s": "vdda18pmu",
+        "pins-as": [
+          "F1"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1620,
+        "vmax_mv": 1890,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 137,
+          "table-s": "Table 22. General operating conditions (continued)"
+        }
+      },
+      {
+        "rail-s": "VDDSMPS",
+        "role-s": "vddsmps",
+        "pins-as": [
+          "J1",
+          "J2",
+          "J3"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1620,
+        "vmax_mv": 1890,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 137,
+          "table-s": "Table 22. General operating conditions (continued)"
+        }
+      },
+      {
+        "rail-s": "VDDA18USB",
+        "role-s": "vdda18usb",
+        "pins-as": [
+          "D4"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1746,
+        "vmax_mv": 1935,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDD33USB",
+        "role-s": "vdd33usb",
+        "pins-as": [
+          "B6"
+        ],
+        "i_max_ma": 17,
+        "i_typ_ma": 4,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 218,
+          "table-s": "Table 111. USB PHY characteristics(1) (continued)"
+        }
+      },
+      {
+        "rail-s": "VDDA18ADC",
+        "role-s": "vdda18adc",
+        "pins-as": [
+          "R3"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1620,
+        "vmax_mv": 1980,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        }
+      },
+      {
+        "rail-s": "VDDA18AON",
+        "role-s": "vdda18aon",
+        "pins-as": [
+          "E4"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1710,
+        "vmax_mv": 1935,
+        "i_max_ma": 10,
+        "i_typ_ma": 4,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        },
+        "i_source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 153,
+          "table-s": "Table 48. OTP characteristics(1)"
+        }
+      },
+      {
+        "rail-s": "VDD",
+        "role-s": "vdd",
+        "pins-as": [
+          "F12",
+          "G12",
+          "H12"
+        ],
+        "vnom_mv": 3300,
+        "vmin_mv": 3000,
+        "vmax_mv": 3600,
+        "i_max_ma": 1,
+        "i_typ_ma": 1,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        },
+        "i_source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 140,
+          "table-s": "Table 27. Current consumption in Run mode"
+        }
+      },
+      {
+        "rail-s": "VDDCORE",
+        "role-s": "vddcore",
+        "pins-as": [
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ],
+        "vnom_mv": 810,
+        "vmin_mv": 782,
+        "vmax_mv": 842,
+        "i_max_ma": 840,
+        "i_typ_ma": 91,
+        "source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 136,
+          "table-s": "Table 22. General operating conditions"
+        },
+        "i_source-o": {
+          "datasheet-s": "STM32N657Z0H3Q.pdf",
+          "page_n": 141,
+          "table-s": "Table 28. Current consumption (core) in Run mode"
+        }
+      }
+    ]
+  }
+}

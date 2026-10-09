@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL10B104KB8NNNC",
+    "description-s": "Multi Layer Ceramic Capacitor (MLCC) / Cap Ceramic 0.1uF 50V X7R 10% Pad SMD 0603 125°C T/R",
+    "package-ao": [
+      { "ptype-s": "Ceramic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

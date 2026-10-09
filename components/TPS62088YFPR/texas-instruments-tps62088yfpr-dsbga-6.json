@@ -1,0 +1,161 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS62088YFPR",
+    "description-s": "2.4 V to 5.5 V input, 3 A adjustable (0.6 V to 4 V) 4 MHz synchronous step-down converter, DCS-Control, PFM/PWM, power good, 6-ball DSBGA 1.2 x 0.8 mm",
+    "package-ao": [
+      { "ptype-s": "dsbga-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable",
+      "power-good"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 5500 },
+      { "vout": 600 }
+    ],
+    "max_currents-ao": [
+      { "out": 3000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "A1": "en" },
+      { "A2": "vin" },
+      { "B1": "pg" },
+      { "B2": "sw" },
+      { "C1": "fb" },
+      { "C2": "gnd" }
+    ],
+    "cfgpins-ao": [
+      { "A1": "en" },
+      { "A1c": "Device enable, active high, do not leave floating (Table 5-1). Tied to VIN for always-on; drive it from another converter's PG for sequencing." },
+      { "A1": "vin" },
+      { "C1": "fb" },
+      { "C1c": "VFB = 0.6 V. VOUT = 0.6 V x (1 + R1/R2), R1 from VOUT to FB, R2 from FB to GND, R2 not above 100k (section 8.2.2.2). Values are Figure 8-1 / Table 8-2: R1 200k, R2 100k = 1.8 V, with the required 120 pF feedforward capacitor C4 across R1. For 0.81 V use R1 = 35k (34.8k E96)." },
+      { "C1": "200k-vout" },
+      { "C1": "100k-avss" },
+      { "C1": "120pf-vout" },
+      { "B1": "pg" },
+      { "B1c": "Power-good open-drain output, sinks up to 1 mA, needs a pull-up to any rail up to 5.5 V; R3 100k in Figure 8-1 (shown to VPG; VIN used here). If unused it may be left floating." },
+      { "B1": "100k-vin" }
+    ],
+    "stdpins-ao": [
+      { "A2": "ds-power-rx" },
+      { "A2": "4.7uf-avss" },
+      { "B2": "0.24uh-vout" },
+      { "vout": "ds-power-tx" },
+      { "vout": "10uf-avss" },
+      { "vout": "10uf-avss" },
+      { "C2": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 2400,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 600,
+      "vout_max_mv": 4000,
+      "vout_accuracy_pct_x10": 10,
+      "iout_max_ma": 3000,
+      "iq_typ_ua": 4,
+      "switching_freq_khz": 4000,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "B2"
+      ],
+      "vin_pins-as": [
+        "A2"
+      ],
+      "pgnd_pins-as": [
+        "C2"
+      ],
+      "l_nh_typ": 240,
+      "cin_nf_typ": 4700,
+      "cout_nf_typ": 20000,
+      "source-o": {
+        "datasheet-s": "TPS62088YFPR.pdf",
+        "page_n": 10,
+        "figure-s": "Figure 8-1"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "cost-o": {
+        "10": 1.445,
+        "100": 1.193,
+        "1K": 0.645,
+        "10K": 0.645,
+        "100K": 0.645
+      },
+      "distributor-s": "Texas Instruments",
+      "moq-i": 1
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "A2"
+        ],
+        "vmin_mv": 2400,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "TPS62088YFPR.pdf",
+          "page_n": 4,
+          "table-s": "6.3 Recommended Operating Conditions"
+        }
+      }
+    ]
+  }
+}

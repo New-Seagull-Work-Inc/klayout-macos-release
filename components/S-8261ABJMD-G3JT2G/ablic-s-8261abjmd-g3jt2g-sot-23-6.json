@@ -1,0 +1,110 @@
+{
+  "component-o": {
+    "type-s": "protection-ic",
+    "vendor-s": "ABLIC",
+    "description-s": "Single-cell Li-ion/Li-Po protection IC, OV 4.280V/UV 3.000V/OC 0.080V, external dual N-FET, SOT-23-6",
+    "package-ao": [
+      {
+        "ptype-s": "SOT-23-6"
+      },
+      {
+        "ppins-i": 6
+      }
+    ],
+    "blocks-as": [
+      "protection-ic-lithium"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "protection-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "integrated-fets-b": false,
+      "overcharge-detect-mv-i": 4280,
+      "overcharge-release-mv-i": 4080,
+      "overcharge-delay-ms-i": 1200,
+      "overdischarge-detect-mv-i": 3000,
+      "overdischarge-release-mv-i": 3000,
+      "overdischarge-delay-ms-i": 144,
+      "overcurrent-discharge-mv-i": 80,
+      "overcurrent-delay-ms-i": 9,
+      "shortcircuit-detect-mv-i": 500,
+      "shortcircuit-delay-us-i": 2240,
+      "quiescent-current-ua-i": 4,
+      "powerdown-current-ua-i": 0
+    },
+    "pins-ao": [
+      {
+        "1": "DO"
+      },
+      {
+        "2": "VM"
+      },
+      {
+        "3": "CO"
+      },
+      {
+        "4": "DP"
+      },
+      {
+        "5": "VDD"
+      },
+      {
+        "6": "VSS"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "4": "DP"
+      },
+      {
+        "4c": "Test pin for delay time measurement; leave open in application"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "5": "ds-power-rx"
+      },
+      {
+        "6": "vss"
+      },
+      {
+        "5c": "Series resistor R1 = 470Ω from VDD to battery positive for ESD protection and power fluctuation"
+      },
+      {
+        "5": "0.1uf-vss"
+      },
+      {
+        "5c": "Decoupling capacitor C1 = 0.1µF between VDD and VSS for power fluctuation"
+      },
+      {
+        "2c": "Resistor R2 = 2kΩ on VM pin for reverse charger connection protection"
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "voltages-ao": [
+      {
+        "vdd_min-i": 1500
+      },
+      {
+        "vdd_max-i": 8000
+      }
+    ],
+    "non-technical-o": {},
+    "part-s": "S-8261ABJMD-G3JT2G"
+  }
+}

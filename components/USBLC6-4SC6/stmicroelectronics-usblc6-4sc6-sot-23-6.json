@@ -1,0 +1,71 @@
+{
+  "component-o": {
+    "type-s": "esd-array",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "USBLC6-4SC6",
+    "description-s": "4-line very low capacitance ESD protection array for USB 2.0 / CC lines, 3 pF typ per line, 5 V standoff, 17 V clamp at 5 A (8/20 us), IEC 61000-4-2 level 4 (15 kV air / 8 kV contact), SOT-23-6",
+    "package-ao": [
+      { "ptype-s": "SOT-23-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "esd-array"
+    ],
+    "interfaces-as": [
+      "ds-usb2-rxtx",
+      "ds-usbcc-rxtx",
+      "ds-power-rx"
+    ],
+    "voltages-ao": [
+      { "vin_max": 5000 }
+    ],
+    "esd-o": {
+      "lines-i": 4,
+      "standoff-voltage-mv-i": 5000,
+      "breakdown-voltage-min-mv-i": 6000,
+      "clamping-voltage-mv-i": 17000,
+      "peak-pulse-current-a-i": 5,
+      "line-capacitance-pf-i": 3,
+      "iec61000-4-2-air-kv-i": 15,
+      "iec61000-4-2-contact-kv-i": 8
+    },
+    "temperatures-ao": [
+      { "operating-o": { "min-i": -40, "max-i": 125 } },
+      { "storage-o":   { "min-i": -55, "max-i": 150 } }
+    ],
+    "pins-ao": [
+      { "1": "I/O1" },
+      { "2": "GND" },
+      { "3": "I/O2" },
+      { "4": "I/O3" },
+      { "5": "VBUS" },
+      { "6": "I/O4" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-usb2-dp" },
+      { "2": "avss" },
+      { "3": "ds-usb2-dm" },
+      { "4": "ds-usbcc-cc1" },
+      { "5": "ds-power-rx" },
+      { "6": "ds-usbcc-cc2" }
+    ],
+    "cfgpins-ao": [],
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.373,
+        "100": 0.2374,
+        "1K": 0.13528,
+        "10K": 0.13528,
+        "100K": 0.13528
+      },
+      "distributor-s": "DigiKey",
+      "distributors-ao": [
+        { "DigiKey": "497-5333-1-ND" },
+        { "Mouser": "511-USBLC6-4SC6" }
+      ],
+      "lifecycle-o": {}
+    },
+    "datasheet-s": "https://www.st.com/resource/en/datasheet/usblc6-4.pdf",
+    "procurement-o": {}
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Microdiode",
+    "description-s": "6.5V unidirectional TVS, 400W (10/1000us), VC 11.2V @ 35.7A, SMA/DO-214AC, for power-input surge protection",
+    "non-technical-o": {},
+    "package-ao": [
+      {
+        "ptype-s": "SMA-DO-214AC"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 6500,
+      "breakdown-voltage-min-mv-i": 7220,
+      "breakdown-voltage-max-mv-i": 7980,
+      "clamping-voltage-mv-i": 11200,
+      "peak-pulse-current-a-i": 35,
+      "peak-pulse-power-w-i": 400,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 500,
+      "esd-contact-kv-i": 30
+    },
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "part-s": "SMAJ6.5A",
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Vishay",
+    "part-s": "K474K20X7RF5TL2",
+    "description-s": "470 nF 50 V ±10% X7R radial leaded ceramic capacitor, K series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "radial-2.54mm"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 470000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "radial"
+    }
+  }
+}

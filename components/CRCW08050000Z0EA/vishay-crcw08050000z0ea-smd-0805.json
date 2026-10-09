@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "description-s": "0 Ω jumper, thick film chip resistor, 0805, CRCW, Imax 2.5 A, <= 20 mΩ",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0037,
+        "100": 0.0037,
+        "1K": 0.0037,
+        "10K": 0.0032,
+        "100K": 0.0029
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 2055325
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-jumper"
+    ],
+    "passive-o": {
+      "value-i": 0,
+      "value-unit-s": "ohm",
+      "power-mw-i": 125,
+      "voltage-max-i": 150000,
+      "current-max-i": 2500,
+      "lead-style-s": "smd"
+    },
+    "part-s": "CRCW08050000Z0EA"
+  }
+}

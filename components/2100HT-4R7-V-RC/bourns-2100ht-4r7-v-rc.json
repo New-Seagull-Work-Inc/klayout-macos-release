@@ -1,0 +1,25 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "2100HT-4R7-V-RC",
+    "description-s": "4.7 uH high-current toroidal power inductor, thru-hole radial; Inductor, Toroidal /Tray Packaging; |Bourns Jw Miller 2100HT-4R7V-RC",
+    "package-ao": [
+      { "ptype-s": "Fixed Inductors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {
+      "value-i": 4700,
+      "value-unit-s": "nh",
+      "lead-style-s": "radial"
+    },
+    "non-technical-o": {
+      "cost-o": {
+        "1K": 2.7615,
+        "10K": 2.7615,
+        "100K": 2.7615
+      },
+      "distributor-s": "Arrow Electronics"
+    }
+  }
+}

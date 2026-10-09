@@ -4,12 +4,13 @@
 > Other platforms and distributions: build from the source
 > repository when authorized by Seagull Work, Inc.
 > **This package contains executables, one example
-> KiCad board and the fab library — no source code is
+> KiCad board, the fab library and the parts library — no source code is
 > included or implied.**
 > The `klayout` and `kplace` binaries, this README, the
 > `LICENSE`, the `example/` board they route and the `fab/`
 > folder (the fabs' published capabilities and stackups,
-> JSON) are the entire distribution: there is no source tree, no
+> JSON) and the `components/` folder (the parts library: each
+> part's design record, JSON) are the entire distribution: there is no source tree, no
 > Makefile, and nothing here that can be compiled,
 > rebuilt, or modified. The example is design input for
 > the tool, not program source. The `scripts/` folder holds
@@ -186,10 +187,14 @@ fabrication/
 The BOM's sourcing columns come from the footprint's own fields
 (Manufacturer, MPN, Datasheet) when the schematic carries them, and
 otherwise from the parts library beside the fab library
-(`--parts-dir`): manufacturer, part number, lifecycle status, stock, the
-first authorized supplier with its SKU, the lowest-volume price and the
-date the record was verified. A part with no record keeps its row with
-those columns empty, so the BOM always lists every part on the board.
+(`--parts-dir`). The `components/` folder of this package holds each
+part's design record, and the BOM takes from it the manufacturer, the
+part number, the datasheet when the record names one, and, where the
+record carries them, the distributor, the stock and the lowest-volume
+price (a bare number: the record states no currency). Lifecycle, SKU,
+product link and verification date are not in a design record and stay
+empty. A part with no record keeps its row with those columns empty, so
+the BOM always lists every part on the board.
 
 ### The PCB Layout Cinema
 
@@ -250,6 +255,23 @@ Environment: `KICAD_CLI=/path/to/kicad-cli` if it is not on your PATH;
 `KLAYOUT_OFFLINE=1` to keep the tool from touching the network;
 `KLAYOUT_NO_SWEEP=1` to skip the fab sweep (below) when a board ends
 below its gates.
+
+## The parts library — the `components/` folder
+
+One folder per part number, holding the part's design record as JSON:
+its pins by number and name, the circuit its datasheet asks for around
+it, its voltages, currents and, for a switching regulator, which pins
+are the switch node, the power input and the power ground. klayout
+reads it by itself from beside the binaries; nothing has to be set.
+
+- The electrical checks use it to recognise switching regulators and
+  their hot loops, supply pins and rails. The log names the library it
+  read and its revision (`components/REVISION`). A part with no record
+  is judged by pin names and topology only, and the log says so.
+- The functional blocks are named after each part's type.
+- The BOM takes its sourcing columns from it (see above).
+
+`--parts-dir DIR` points the BOM at another library of the same shape.
 
 ## The fab library — the `fab/` folder
 

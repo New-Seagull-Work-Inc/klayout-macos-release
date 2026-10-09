@@ -1,0 +1,242 @@
+{
+  "component-o": {
+    "type-s": "serdes",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TSER953RHBT",
+    "description-s": "TSER953 4.16-Gbps V3Link (FPD-Link III compatible) serializer with MIPI CSI-2 input (1-4 lanes, up to 832 Mbps/lane), coax or STP, I2C control, CLK_OUT for the image sensor; single 1.8 V supply; VQFN-32 5 x 5 mm.",
+    "specs-o": {
+      "direction-s": "serializer",
+      "link-s": "fpd-link-iii",
+      "max_link_rate_mbps": 4160,
+      "max_bus_rate_per_lane_mbps": 832,
+      "bus_lanes-i": 4,
+      "link_channels-i": 1,
+      "coax-b": true,
+      "bus_ports-i": 1
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "cost-o": {
+        "1K": 5.23,
+        "10K": 5.17,
+        "100K": 5.17
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 250,
+      "order-mult-i": 250,
+      "lead-time-weeks-i": 26,
+      "quote-s": "Arrow Electronics quote 25584222 (2026-09-23, expires 2026-10-23)"
+    },
+    "package-ao": [
+      { "ptype-s": "VQFN" },
+      { "ppins-i": 32 }
+    ],
+    "blocks-as": [
+      "v3link-serializer",
+      "mipi-csi2-rx",
+      "i2c-passthrough",
+      "gpio",
+      "adc",
+      "temperature-sensor"
+    ],
+    "interfaces-as": [
+      "dd-mipi-csi-rx",
+      "dd-fpdlink-tx",
+      "ds-i2c-rxtx",
+      "ds-refclk-tx"
+    ],
+    "voltages-ao": [
+      { "dvdd": 1800 },
+      { "avdd": 1800 }
+    ],
+    "max_currents-ao": [
+      { "dvdd": 70 },
+      { "avdd": 155 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -20,
+          "max-i": 85
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "CSI_D1P" },
+      { "2": "CSI_D1N" },
+      { "3": "CSI_D0P" },
+      { "4": "CSI_D0N" },
+      { "5": "CSI_CLKP" },
+      { "6": "CSI_CLKN" },
+      { "7": "RES0" },
+      { "8": "PDB" },
+      { "9": "LPF1" },
+      { "10": "VDDPLL_CAP" },
+      { "11": "VDDPLL" },
+      { "12": "LPF2" },
+      { "13": "DOUT-" },
+      { "14": "DOUT+" },
+      { "15": "VDDDRV_CAP" },
+      { "16": "VDDDRV" },
+      { "17": "GPIO_0" },
+      { "18": "GPIO_1" },
+      { "19": "CLK_OUT/IDX" },
+      { "20": "CLKIN" },
+      { "21": "MODE" },
+      { "22": "RES1" },
+      { "23": "I2C_SDA" },
+      { "24": "I2C_SCL" },
+      { "25": "VDDD" },
+      { "26": "VDDD_CAP" },
+      { "27": "GPIO_2" },
+      { "28": "GPIO_3" },
+      { "29": "CSI_D3P" },
+      { "30": "CSI_D3N" },
+      { "31": "CSI_D2P" },
+      { "32": "CSI_D2N" },
+      { "33": "EP" }
+    ],
+    "stdpins-ao": [
+      { "5": "dd-mipi-csi-clkp" },
+      { "6": "dd-mipi-csi-clkn" },
+      { "3": "dd-mipi-csi-data0p" },
+      { "4": "dd-mipi-csi-data0n" },
+      { "1": "dd-mipi-csi-data1p" },
+      { "2": "dd-mipi-csi-data1n" },
+      { "31": "dd-mipi-csi-data2p" },
+      { "32": "dd-mipi-csi-data2n" },
+      { "29": "dd-mipi-csi-data3p" },
+      { "30": "dd-mipi-csi-data3n" },
+      { "23": "ds-i2c-sda" },
+      { "24": "ds-i2c-scl" },
+      { "14": "dd-fpdlink-p" },
+      { "13": "dd-fpdlink-n" },
+      { "13": "47nf/50v+49.9r-dvss" },
+      { "25": "dvdd-1_8" },
+      { "25": "1uf-dvss" },
+      { "25": "10nf-dvss" },
+      { "16": "avdd-1_8" },
+      { "16": "1uf-dvss" },
+      { "16": "10nf-dvss" },
+      { "11": "avdd-1_8" },
+      { "11": "1uf-dvss" },
+      { "11": "10nf-dvss" },
+      { "26": "10uf-dvss" },
+      { "26": "100nf-dvss" },
+      { "26": "10nf-dvss" },
+      { "15": "10uf-dvss" },
+      { "15": "100nf-dvss" },
+      { "15": "10nf-dvss" },
+      { "10": "10uf-dvss" },
+      { "10": "100nf-dvss" },
+      { "10": "10nf-dvss" },
+      { "19": "ds-refclk-tx" },
+      { "33": "dvss" },
+      { "14": "100nf/50v-link" },
+      { "23": "4.7k-vddd" },
+      { "24": "4.7k-vddd" },
+      { "25": "1kfb-dvdd-1_8" },
+      { "16": "1kfb-avdd-1_8" },
+      { "11": "1kfb-avdd-1_8" }
+    ],
+    "cfgpins-ao": [
+      { "8": "pdb" },
+      { "8c": "Power-down, active low, internal 1M pulldown, NOT 3.3 V tolerant. Tied up for power-on enable: 10k to VDD (1.8 V) and >1 uF to GND delays enable until the supplies settle (datasheet 8.x)." },
+      { "8": "10k-vddd" },
+      { "8": "10uf-dvss" },
+      { "21": "mode" },
+      { "21c": "MODE strap 0 = CSI-2 synchronous (V3Link clock from the deserializer): RHIGH open, RLOW 10k (Table 7-8)." },
+      { "21": "10k-dvss" },
+      { "19": "clk_out/idx" },
+      { "19c": "IDX strap 1 = I2C address 0x18 (7-bit), I2C at 1.8 V: RHIGH open, RLOW 40.2k (Table 7-9); >= 35k keeps CLK_OUT usable for the image sensor's EXTCLK." },
+      { "19": "40.2k-dvss" },
+      { "9": "lpf1" },
+      { "9c": "PLL loop filter: 22 nF from LPF1 to VDDPLL (pin 11), smallest possible loop." },
+      { "9": "22nf-vddpll" },
+      { "12": "lpf2" },
+      { "12c": "PLL loop filter: 100 nF from LPF2 to GND." },
+      { "12": "100nf-dvss" },
+      { "7": "res0" },
+      { "7c": "Reserved: connect to GND." },
+      { "7": "dvss" },
+      { "22": "res1" },
+      { "22c": "Reserved: do not connect (leave open)." },
+      { "20": "clkin" },
+      { "20c": "Reference clock input, only for non-synchronous external-clock mode; synchronous mode (MODE 0) leaves it open." },
+      { "14": "DOUT+" },
+      { "14c": "V3Link output: 33-100 nF (50 V X7R 0402) AC-coupling capacitor in series to the coax connector (Table 8-3); a series part to another component, not a pin passive." },
+      { "17": "gpio_0" },
+      { "17c": "GPIO, internal 300k pulldown: may be left open if unused." },
+      { "18": "gpio_1" },
+      { "18c": "GPIO, internal 300k pulldown: may be left open if unused." },
+      { "27": "gpio_2" },
+      { "27c": "GPIO, internal 300k pulldown: may be left open if unused." },
+      { "28": "gpio_3" },
+      { "28c": "GPIO, internal 300k pulldown: may be left open if unused." }
+    ],
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 31.5,
+      "tj-max-c-i": 150
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VDDPLL",
+        "role-s": "avdd",
+        "pins-as": [
+          "11"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1710,
+        "vmax_mv": 1890,
+        "source-o": {
+          "datasheet-s": "TSER953RHBT.pdf",
+          "page_n": 7,
+          "table-s": "6.3 Recommended Operating Conditions"
+        }
+      },
+      {
+        "rail-s": "VDDDRV",
+        "role-s": "avdd",
+        "pins-as": [
+          "16"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1710,
+        "vmax_mv": 1890,
+        "source-o": {
+          "datasheet-s": "TSER953RHBT.pdf",
+          "page_n": 7,
+          "table-s": "6.3 Recommended Operating Conditions"
+        }
+      },
+      {
+        "rail-s": "VDDD",
+        "role-s": "dvdd",
+        "pins-as": [
+          "25"
+        ],
+        "vnom_mv": 1800,
+        "vmin_mv": 1710,
+        "vmax_mv": 1890,
+        "source-o": {
+          "datasheet-s": "TSER953RHBT.pdf",
+          "page_n": 7,
+          "table-s": "6.3 Recommended Operating Conditions"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "component-o": {
+    "type-s": "mosfet",
+    "vendor-s": "Infineon",
+    "part-s": "IRF4905PBF",
+    "description-s": "P-channel power MOSFET -55V -74A TO-220AB, pass element for power-path/ideal-diode duty",
+    "package-ao": [
+      {
+        "ptype-s": "to-220ab"
+      },
+      {
+        "ppins-i": 3
+      }
+    ],
+    "blocks-as": [
+      "mosfet",
+      "mosfet-p",
+      "pass-fet"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "as-gate-rx"
+    ],
+    "max_currents-ao": [
+      {
+        "out": 74000
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "gate"
+      },
+      {
+        "2": "drain"
+      },
+      {
+        "3": "source"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "2": "ds-power-rx"
+      },
+      {
+        "3": "ds-power-tx"
+      },
+      {
+        "1": "as-gate-rx"
+      }
+    ],
+    "cfgpins-ao": [],
+    "specs-o": {
+      "channel_s": "p",
+      "vds_max_mv": -55000,
+      "id_max_ma": -74000,
+      "rds_on_mohm": 20,
+      "vgs_th_mv": -3000
+    }
+  }
+}

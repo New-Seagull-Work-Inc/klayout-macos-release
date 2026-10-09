@@ -1,0 +1,271 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "LM76003RNPT",
+    "description-s": "3.5-60V 3.5A synchronous buck converter, adjustable output (configured 7.0V)",
+    "package-ao": [
+      {
+        "ptype-s": "vqfn-30"
+      },
+      {
+        "ppins-i": 31
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable",
+      "pgood"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 60000
+      },
+      {
+        "vout": 7000
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 3500
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "vout"
+      },
+      {
+        "2": "vout"
+      },
+      {
+        "3": "vout"
+      },
+      {
+        "4": "vout"
+      },
+      {
+        "5": "vout"
+      },
+      {
+        "6": "boot"
+      },
+      {
+        "7": "nc"
+      },
+      {
+        "8": "vcc"
+      },
+      {
+        "9": "bias"
+      },
+      {
+        "10": "rt"
+      },
+      {
+        "11": "ss"
+      },
+      {
+        "12": "fb"
+      },
+      {
+        "13": "agnd"
+      },
+      {
+        "14": "agnd"
+      },
+      {
+        "15": "agnd"
+      },
+      {
+        "16": "pgood"
+      },
+      {
+        "17": "mode"
+      },
+      {
+        "18": "en"
+      },
+      {
+        "19": "nc"
+      },
+      {
+        "20": "vin"
+      },
+      {
+        "21": "vin"
+      },
+      {
+        "22": "vin"
+      },
+      {
+        "23": "nc"
+      },
+      {
+        "24": "pgnd"
+      },
+      {
+        "25": "pgnd"
+      },
+      {
+        "26": "pgnd"
+      },
+      {
+        "27": "nc"
+      },
+      {
+        "28": "nc"
+      },
+      {
+        "29": "nc"
+      },
+      {
+        "30": "nc"
+      },
+      {
+        "31": "ep"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "20": "ds-power-rx"
+      },
+      {
+        "20": "10uf-avss"
+      },
+      {
+        "20": "100nf-avss"
+      },
+      {
+        "21": "ds-power-rx"
+      },
+      {
+        "22": "ds-power-rx"
+      },
+      {
+        "1": "ds-power-tx"
+      },
+      {
+        "1": "47uf-avss"
+      },
+      {
+        "2": "ds-power-tx"
+      },
+      {
+        "3": "ds-power-tx"
+      },
+      {
+        "4": "ds-power-tx"
+      },
+      {
+        "5": "ds-power-tx"
+      },
+      {
+        "6": "100nf-vout"
+      },
+      {
+        "8": "1uf-avss"
+      },
+      {
+        "11": "47nf-avss"
+      },
+      {
+        "13": "avss"
+      },
+      {
+        "14": "avss"
+      },
+      {
+        "15": "avss"
+      },
+      {
+        "24": "avss"
+      },
+      {
+        "25": "avss"
+      },
+      {
+        "26": "avss"
+      },
+      {
+        "31": "avss"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "18": "en"
+      },
+      {
+        "12": "fb"
+      },
+      {
+        "12c": "feedback divider top to vout, bottom to gnd (1.011V ref; 60.4k/10.2k for 7.0V)"
+      },
+      {
+        "12": "60.4k-out"
+      },
+      {
+        "12": "10.2k-avss"
+      },
+      {
+        "10": "rt"
+      },
+      {
+        "10c": "switching-frequency program resistor to gnd; float for 500kHz default"
+      },
+      {
+        "17": "mode"
+      },
+      {
+        "17c": "tie to gnd for auto (PFM) mode"
+      },
+      {
+        "16": "pgood"
+      },
+      {
+        "16c": "open-drain power-good; pull up to vout if used"
+      },
+      {
+        "9": "bias"
+      },
+      {
+        "9c": "tie to vout for improved efficiency (vout >= 3.3V)"
+      }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 3500,
+      "vin_max_mv": 60000,
+      "vout_min_mv": 1011,
+      "vout_max_mv": 55000,
+      "iout_max_ma": 3500,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    }
+  }
+}

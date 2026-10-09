@@ -1,0 +1,536 @@
+{
+  "component-o": {
+    "type-s": "wifi-module",
+    "vendor-s": "Cypress Semiconductor (Infineon Technologies)",
+    "description-s": "Single-chip IEEE 802.11 b/g/n 2.4 GHz WLAN MAC/baseband/radio with integrated Bluetooth 5.2 compliance. Integrates a power amplifier (PA), low-noise amplifier (LNA), and an internal transmit/receive (iTR) RF switch sharing a single 2.4 GHz antenna between WLAN and Bluetooth. The WLAN host interface supports gSPI and SDIO v2.0 modes (raw data transfer rate up to 200 Mbps in 4-bit mode at 50 MHz). An independent high-speed UART is provided for the Bluetooth host interface (HCI), with PCM for audio. Includes an integrated power management unit with an internal switching regulator operating from a battery voltage of 3.0V to 4.8V. Supplied in a 63-ball WLBGA package (4.87 mm x 2.87 mm, 0.4 mm pitch); operating ambient temperature -30 to +70 C.",
+    "specs-o": {
+      "wifi_standard_s": "Wi-Fi 4 (802.11b/g/n)",
+      "wifi_bands_s": "2.4 GHz",
+      "spatial_streams_s": "1x1",
+      "max_phy_rate_mbps": 65,
+      "bt_version_s": "Bluetooth 5.2 (BR/EDR + LE)",
+      "has_802154_b": false,
+      "host_if_s": "SDIO v2.0 / gSPI",
+      "antenna_s": "RF pin (external antenna)",
+      "integrated_pa_b": true,
+      "integrated_lna_b": true,
+      "integrated_mcu_s": "ARM Cortex-M3",
+      "tx_power_dbm": 21,
+      "rx_sensitivity_dbm": -97.5,
+      "module_b": false
+    },
+    "package-ao": [
+      {
+        "ptype-s": "WLBGA"
+      },
+      {
+        "ppins-i": 63
+      }
+    ],
+    "blocks-as": [
+      "wifi",
+      "bluetooth",
+      "ble",
+      "rf",
+      "power-amplifier",
+      "lna",
+      "spi",
+      "uart",
+      "sdio",
+      "security-crypto"
+    ],
+    "interfaces-as": [
+      "ds-sdio-rxtx",
+      "ds-spi-rxtx",
+      "ds-uart-rxtx",
+      "dd-rf-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vbat": 3600
+      },
+      {
+        "vddio": 1800
+      },
+      {
+        "vddio_rf": 3300
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "vbat": 800
+      },
+      {
+        "vddio": 20
+      },
+      {
+        "vddio_rf": 20
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -30,
+          "max-i": 70
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "A1": "BT_UART_RXD"
+      },
+      {
+        "A2": "BT_UART_TXD"
+      },
+      {
+        "A5": "BT_PCM_CLK or BT_I2S_CLK"
+      },
+      {
+        "A6": "SR_VLX"
+      },
+      {
+        "A7": "SR_PVSS"
+      },
+      {
+        "B1": "BT_DEV_WAKE"
+      },
+      {
+        "B2": "BT_UART_CTS_N"
+      },
+      {
+        "B4": "BT_PCM_OUT or BT_I2S_DO"
+      },
+      {
+        "B5": "BT_PCM_SYNC or BT_I2S_WS"
+      },
+      {
+        "B6": "PMU_AVSS"
+      },
+      {
+        "B7": "SR_VDDBAT5V"
+      },
+      {
+        "C1": "BT_HOST_WAKE"
+      },
+      {
+        "C2": "FM_OUT1"
+      },
+      {
+        "C3": "BT_UART_RTS_N"
+      },
+      {
+        "C4": "BT_PCM_IN or BT_I2S_DI"
+      },
+      {
+        "C6": "VOUT_CLDO"
+      },
+      {
+        "C7": "LDO_VDD1P5"
+      },
+      {
+        "D2": "FM_OUT2"
+      },
+      {
+        "D3": "VDDC"
+      },
+      {
+        "D4": "VSSC"
+      },
+      {
+        "D6": "VOUT_LNLDO"
+      },
+      {
+        "E1": "FM_RF_IN"
+      },
+      {
+        "E2": "FM_RF_VDD"
+      },
+      {
+        "E3": "FM_RF_VSS"
+      },
+      {
+        "E6": "BT_REG_ON"
+      },
+      {
+        "E7": "VOUT_3P3"
+      },
+      {
+        "F1": "BT_VCO_VDD"
+      },
+      {
+        "F2": "BTFM_PLL_VDD"
+      },
+      {
+        "F5": "LPO_IN"
+      },
+      {
+        "F6": "WCC_VDDIO"
+      },
+      {
+        "F7": "LDO_VDDBAT5V"
+      },
+      {
+        "G1": "BT_IF_VDD"
+      },
+      {
+        "G2": "BTFM_PLL_VSS"
+      },
+      {
+        "G4": "VDDC"
+      },
+      {
+        "G6": "WL_REG_ON"
+      },
+      {
+        "H1": "BT_PAVDD"
+      },
+      {
+        "H2": "BT_IF_VSS"
+      },
+      {
+        "H3": "BT_VCO_VSS"
+      },
+      {
+        "H4": "WLRF_AFE_GND"
+      },
+      {
+        "H6": "GPIO_1"
+      },
+      {
+        "H7": "SDIO_DATA_1"
+      },
+      {
+        "J1": "WLRF_2G_eLG"
+      },
+      {
+        "J2": "WLRF_LNA_GND"
+      },
+      {
+        "J3": "WLRF_GPIO"
+      },
+      {
+        "J5": "VSSC"
+      },
+      {
+        "J6": "GPIO_0"
+      },
+      {
+        "J7": "SDIO_DATA_3"
+      },
+      {
+        "K1": "WLRF_2G_RF"
+      },
+      {
+        "K2": "WLRF_GENERAL_GND"
+      },
+      {
+        "K6": "SDIO_DATA_0"
+      },
+      {
+        "L2": "WLRF_PA_GND"
+      },
+      {
+        "L3": "WLRF_VCO_GND"
+      },
+      {
+        "L4": "WLRF_XTAL_GND"
+      },
+      {
+        "L5": "GPIO_2"
+      },
+      {
+        "L6": "SDIO_CMD"
+      },
+      {
+        "L7": "SDIO_DATA_2"
+      },
+      {
+        "M1": "WLRF_PA_VDD"
+      },
+      {
+        "M2": "WLRF_VDD_1P35"
+      },
+      {
+        "M3": "WLRF_XTAL_VDD1P2"
+      },
+      {
+        "M4": "WLRF_XTAL_XOP"
+      },
+      {
+        "M5": "WLRF_XTAL_XON"
+      },
+      {
+        "M6": "CLK_REQ"
+      },
+      {
+        "M7": "SDIO_CLK"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "L7": "host_if_sel"
+      },
+      {
+        "L7c": "WLAN host interface select; default is SDIO. For gSPI, pull this pin low."
+      },
+      {
+        "G6": "wl_reg_on"
+      },
+      {
+        "G6c": "WLAN regulator/section enable; internal 200 kohm pull-down enabled by default"
+      },
+      {
+        "E6": "bt_reg_on"
+      },
+      {
+        "E6c": "Bluetooth/FM regulator/section enable; internal 200 kohm pull-down enabled by default"
+      },
+      {
+        "M6": "clk_req"
+      },
+      {
+        "M6c": "external clock request output; add an external 100 kohm pull-down to ensure deasserted at power-up/reset when VDDIO present"
+      },
+      {
+        "M2": "wlrf_vdd_1p35"
+      },
+      {
+        "M2c": "1.35 V CBUCK output node (Figure 3): tie to LDO_VDD1P5"
+      },
+      {
+        "M2": "ldo_vdd1p5"
+      },
+      {
+        "D3": "vddc"
+      },
+      {
+        "D3c": "core supply from the internal CLDO (Figure 3): tie to VOUT_CLDO, no external rail"
+      },
+      {
+        "D3": "vout_cldo"
+      },
+      {
+        "G4": "vddc"
+      },
+      {
+        "G4c": "core supply from the internal CLDO (Figure 3): tie to VOUT_CLDO, no external rail"
+      },
+      {
+        "G4": "vout_cldo"
+      },
+      {
+        "M3": "wlrf_xtal_vdd1p2"
+      },
+      {
+        "M3c": "1.2 V from VOUT_LNLDO directly (Figure 3)"
+      },
+      {
+        "M3": "vout_lnldo"
+      },
+      {
+        "F2": "btfm_pll_vdd"
+      },
+      {
+        "F2c": "1.2 V from VOUT_LNLDO through the bead (Figure 3): tie to FM_RF_VDD"
+      },
+      {
+        "F2": "fm_rf_vdd"
+      },
+      {
+        "F1": "bt_vco_vdd"
+      },
+      {
+        "F1c": "same bead-fed 1.2 V net as FM_RF_VDD"
+      },
+      {
+        "F1": "fm_rf_vdd"
+      },
+      {
+        "G1": "bt_if_vdd"
+      },
+      {
+        "G1c": "same bead-fed 1.2 V net as FM_RF_VDD"
+      },
+      {
+        "G1": "fm_rf_vdd"
+      },
+      {
+        "M1": "wlrf_pa_vdd"
+      },
+      {
+        "M1c": "3.3 V from VOUT_3P3 (Figure 4)"
+      },
+      {
+        "M1": "vout_3p3"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "K1": "dd-rf"
+      },
+      {
+        "K1": "4.7nh-rf_ant"
+      },
+      {
+        "K1": "10pf-gnd"
+      },
+      {
+        "M7": "ds-sdio-clk"
+      },
+      {
+        "L6": "ds-sdio-cmd"
+      },
+      {
+        "K6": "ds-sdio-d0"
+      },
+      {
+        "H7": "ds-sdio-d1"
+      },
+      {
+        "L7": "ds-sdio-d2"
+      },
+      {
+        "J7": "ds-sdio-d3"
+      },
+      {
+        "A1": "ds-uart-rx"
+      },
+      {
+        "A2": "ds-uart-tx"
+      },
+      {
+        "B2": "ds-uart-cts"
+      },
+      {
+        "C3": "ds-uart-rts"
+      },
+      {
+        "M4": "12pf-gnd"
+      },
+      {
+        "M5": "12pf-gnd"
+      },
+      {
+        "B7": "dvdd-3_3"
+      },
+      {
+        "B7": "4.7uf-gnd"
+      },
+      {
+        "F7": "dvdd-3_3"
+      },
+      {
+        "F7": "4.7uf-gnd"
+      },
+      {
+        "F6": "dvdd-1_8"
+      },
+      {
+        "F6": "100nf-gnd"
+      },
+      {
+        "D4": "gnd"
+      },
+      {
+        "J5": "gnd"
+      },
+      {
+        "A7": "gnd"
+      },
+      {
+        "B6": "gnd"
+      },
+      {
+        "H4": "gnd"
+      },
+      {
+        "J2": "gnd"
+      },
+      {
+        "K2": "gnd"
+      },
+      {
+        "L2": "gnd"
+      },
+      {
+        "L3": "gnd"
+      },
+      {
+        "L4": "gnd"
+      },
+      {
+        "H2": "gnd"
+      },
+      {
+        "H3": "gnd"
+      },
+      {
+        "G2": "gnd"
+      },
+      {
+        "E3": "gnd"
+      },
+      {
+        "A6": "2.2uh-ldo_vdd1p5"
+      },
+      {
+        "C7": "4.7uf-gnd"
+      },
+      {
+        "C6": "2.2uf-gnd"
+      },
+      {
+        "D6": "2.2uf-gnd"
+      },
+      {
+        "D6": "fb-600r-fm_rf_vdd"
+      },
+      {
+        "E2": "100nf-gnd"
+      },
+      {
+        "E7": "4.7uf-gnd"
+      },
+      {
+        "M1": "1uf-gnd"
+      },
+      {
+        "H1": "22r-vout_3p3"
+      },
+      {
+        "H1": "1uf-gnd"
+      }
+    ],
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "CYW43439"
+  }
+}

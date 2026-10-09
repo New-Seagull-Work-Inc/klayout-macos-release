@@ -1,0 +1,38 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "description-s": "10 µF ±10% 25 V X5R 0805 multilayer ceramic capacitor (MLCC), SMD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.1126,
+        "100": 0.0493,
+        "1K": 0.0352,
+        "10K": 0.0327,
+        "100K": 0.0327
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 1,
+      "stock-i": 327818
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x5r"
+    },
+    "part-s": "CL21A106KAYNNNE"
+  }
+}

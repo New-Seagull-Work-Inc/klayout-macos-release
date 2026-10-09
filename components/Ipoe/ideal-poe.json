@@ -1,0 +1,105 @@
+{
+  "component-o": {
+    "type-s": "poe",
+    "vendor-s": "Idealix",
+    "part-s": "Ipoe",
+    "description-s": "Ideal Power-over-Ethernet Module, 12V PD output on pin 1",
+	"non-technical-o" : {
+		  "lifecycle-o" : {
+			  "samples" : {
+				  "month" : 11,
+				  "year"  : 2023
+			  },
+			  "mp" : {
+				  "month" : 1,
+				  "year"  : 2024
+			  },
+			  "eol" : {
+				  "month" : 12,
+				  "year" : 2035
+			  }
+		  },
+		  "distributor-s" : "TBD",
+		  "cost-o" : {
+			  "10"   : 3.00,
+			  "100"  : 2.50,
+			  "1K"   : 1.80,
+			  "10K"  : 1.20,
+			  "100K" : 1.00
+		  }
+	},
+    "package-ao": [
+      { "ptype-s": "PGA"},
+	  { "ppins-i": 17 }
+    ],
+
+    "blocks-as": [
+      "spi",
+      "gige"
+    ],
+
+    "interfaces-as": [
+      "ds-spi-rxtx",
+      "dd-gige-rxtx"
+    ],
+
+    "max_currents-ao": [
+      {
+        "ovdd": 1200,
+        "vdd": 500
+      },
+      { "odvdd": 2500 }
+    ],
+
+    "pins-ao": [
+      {"1": "VOUT"},
+      {"2": "GND"},
+	  {"3": "TDAP"},
+	  {"4": "TDAN"},
+	  {"5": "TDBP"},
+	  {"6": "TDBN"},
+	  {"7": "TDCP"},
+	  {"8": "TDCN"},
+	  {"9": "TDDP"},
+	  {"10": "TDDN"},
+	  {"11": "CLK"},
+	  {"12": "MISO"},
+	  {"13": "MOSI"},
+	  {"14": "CS"},
+	  {"15": "RESET_N"},
+	  {"16": "OVDD"},
+	  {"17": "VDD"}
+    ],
+
+    "cfgpins-ao": [
+    ],
+
+    "stdpins-ao": [
+      { "1": "odvdd-12" },
+      {"17": "dvdd-3_3" },
+      {"16": "dvdd-5" },
+      { "2": "gnd" },
+	  {"11": "ds-spi-clk"},
+	  {"12": "ds-spi-miso"},
+	  {"13": "ds-spi-mosi"},
+	  {"14": "ds-spi-cs"},
+	  {"3" : "dd-gige-a-p"},
+	  {"4" : "dd-gige-a-n"},
+	  {"5" : "dd-gige-b-p"},
+	  {"6" : "dd-gige-b-n"},
+	  {"7" : "dd-gige-c-p"},
+	  {"8" : "dd-gige-c-n"},
+	  {"9" : "dd-gige-d-p"},
+	  {"10": "dd-gige-d-n"}
+    ],
+    "voltages-ao": [
+      { "ovdd": 5000},
+      { "vdd": 3300},
+      { "odvdd": 12000}
+    ],
+	"temperatures-ao": [
+        {"operating-o"  : { "min-i": -40,"max-i": 85 }},
+        {"storage-o"    : { "min-i": -40,"max-i": 150 }}
+    ]
+  }
+}

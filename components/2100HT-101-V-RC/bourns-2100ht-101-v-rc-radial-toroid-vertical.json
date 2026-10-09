@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "2100HT-101-V-RC",
+    "description-s": "100 µH 4.6 A vertical toroidal power inductor, 2100HT series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "radial-toroid-vertical"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 100000,
+      "value-unit-s": "nh",
+      "current-max-i": 4600,
+      "lead-style-s": "radial"
+    }
+  }
+}

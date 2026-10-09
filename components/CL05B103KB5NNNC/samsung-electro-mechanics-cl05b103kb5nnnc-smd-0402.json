@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL05B103KB5NNNC",
+    "description-s": "10 nF ±10% 50 V X7R 0402 multilayer ceramic capacitor (MLCC), SMD, 0.5 mm thick",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.1,
+        "100": 0.009,
+        "1K": 0.005,
+        "10K": 0.003,
+        "100K": 0.002
+      },
+      "distributor-s": "Newark",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 240000
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r"
+    }
+  }
+}

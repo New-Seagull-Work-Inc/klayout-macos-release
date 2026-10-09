@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "thermistor",
+    "vendor-s": "Murata",
+    "description-s": "10k NTC thermistor, B25/85 3434K, ±1%, 0603 SMD (1.6x0.8mm), -40 to +125°C, for Li-ion cell temperature sensing",
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "ntc-thermistor"
+    ],
+    "interfaces-as": [
+      "ds-temp-sense"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "thermistor-o": {
+      "ntc-b": true,
+      "resistance-25c-ohm-i": 10000,
+      "resistance-tolerance-pct-x10-i": 10,
+      "beta-25-85-k-i": 3434,
+      "beta-tolerance-pct-x10-i": 10,
+      "dissipation-constant-mw-c-x10-i": 10,
+      "mounting-s": "smd"
+    },
+    "non-technical-o": {},
+    "part-s": "NCU18XH103F60RB"
+  }
+}

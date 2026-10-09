@@ -1,0 +1,48 @@
+{
+  "component-o": {
+    "type-s": "led",
+    "vendor-s": "ams OSRAM",
+    "part-s": "GW JTLPS1.EM-KMLN-XX53-1-150-R33",
+    "description-s": "DURIS E 2835 white LED, 5000 K, CRI 80, 84 lm at 150 mA, 3.05 V, 250 mA max, 120°, 3.25 x 2.8 mm SMD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.02535,
+        "100": 0.02205,
+        "1K": 0.0206,
+        "10K": 0.01851,
+        "100K": 0.01851
+      },
+      "distributor-s": "Bettlink"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-2835" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "led",
+      "visible"
+    ],
+    "interfaces-as": [
+      "ds-led-rx"
+    ],
+    "pins-ao": [
+      { "1": "K" },
+      { "2": "A" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-led-c" },
+      { "2": "ds-led-a" }
+    ],
+    "led-o": {
+      "color-s": "white",
+      "cct-k-i": 5000,
+      "vf-mv-i": 3050,
+      "if-test-ma-i": 150,
+      "if-max-ma-i": 250,
+      "flux-mlm-i": 84000,
+      "viewing-angle-deg-i": 120,
+      "lead-style-s": "smd"
+    }
+  }
+}

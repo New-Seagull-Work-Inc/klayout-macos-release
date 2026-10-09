@@ -1,0 +1,39 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "onsemi",
+    "part-s": "MBR360RLG",
+    "description-s": "3 A 60 V Schottky barrier rectifier, 740 mV VF max, DO-201AD axial",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.1998,
+        "1K": 0.1658,
+        "10K": 0.1479,
+        "100K": 0.1239
+      },
+      "distributor-s": "Rochester Electronics"
+    },
+    "package-ao": [
+      { "ptype-s": "axial-do-201ad" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "passive-o": {
+      "voltage-max-i": 60000,
+      "current-max-i": 3000,
+      "lead-style-s": "axial"
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 740,
+      "ir-ua-i": 600
+    }
+  }
+}

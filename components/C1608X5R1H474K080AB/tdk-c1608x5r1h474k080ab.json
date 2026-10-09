@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "TDK",
+    "part-s": "C1608X5R1H474K080AB",
+    "description-s": "50V 470nF X5R 卤10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+    "package-ao": [
+      { "ptype-s": "Ceramic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

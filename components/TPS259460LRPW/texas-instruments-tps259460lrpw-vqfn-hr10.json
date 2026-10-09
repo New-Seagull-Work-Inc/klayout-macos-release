@@ -1,0 +1,109 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS259460LRPW",
+    "description-s": "2.7-V–23-V, 5.5-A, 28-mΩ eFuse with Bidirectional Current Support, Latch-Off, PG output",
+    "package-ao": [
+      { "ptype-s": "vqfn-hr" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "efuse",
+      "current-limit",
+      "overvoltage-protection",
+      "undervoltage-protection",
+      "thermal-shutdown",
+      "reverse-current-blocking",
+      "power-good"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 12000 }
+    ],
+    "max_currents-ao": [
+      { "out": 5500 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "en/uvlo" },
+      { "2": "ovlo" },
+      { "3": "pg" },
+      { "4": "pgth" },
+      { "5": "in" },
+      { "6": "out" },
+      { "7": "dvdt" },
+      { "8": "gnd" },
+      { "9": "ilm" },
+      { "10": "itimer" }
+    ],
+    "cfgpins-ao": [
+      { "1": "en/uvlo" },
+      { "2": "ovlo" },
+      { "3": "pg" },
+      { "4": "pgth" },
+      { "7": "dvdt" },
+      { "9": "ilm" },
+      { "10": "itimer" }
+    ],
+    "stdpins-ao": [
+      { "5": "ds-power-rx" },
+      { "5": "10uf-avss" },
+      { "6": "ds-power-tx" },
+      { "6": "47uf-avss" },
+      { "8": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "efuse",
+      "vin_min_mv": 2700,
+      "vin_max_mv": 23000,
+      "iout_max_ma": 5500,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_reverse_current_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

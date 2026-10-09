@@ -1,0 +1,74 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "Lithium Werks",
+    "part-s": "ANR26650M1B",
+    "description-s": "LiFePO4 26650 cell, 3.3V 2.5Ah, fits Keystone 1107 holder",
+    "package-ao": [
+      {
+        "ptype-s": "26650"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "battery",
+      "battery-lifepo4"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-batt-rxtx"
+    ],
+    "max_currents-ao": [
+      {
+        "out": 50000
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -30,
+          "max-i": 55
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 60
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "out"
+      },
+      {
+        "2": "gnd"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rxtx"
+      },
+      {
+        "1": "ds-batt-rxtx"
+      },
+      {
+        "2": "avss"
+      }
+    ],
+    "cfgpins-ao": [],
+    "battery-o": {
+      "chemistry-s": "lifepo4",
+      "nominal-mv": 3300,
+      "charge-max-mv": 3600,
+      "capacity-mah": 2500
+    },
+    "voltages-ao": [
+      {
+        "out": 3300
+      }
+    ]
+  }
+}

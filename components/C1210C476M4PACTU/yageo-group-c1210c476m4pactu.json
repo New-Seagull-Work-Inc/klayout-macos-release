@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Yageo Group",
+    "part-s": "C1210C476M4PACTU",
+    "description-s": "Ceramic Capacitor, Multilayer, Ceramic, 50V, 80% +Tol, 20% -Tol, Z5U, -56/+22% TC, 0.1uF, 1210",
+    "package-ao": [
+      { "ptype-s": "Ceramic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Yageo",
+    "part-s": "MFR-25FBF52-49R9",
+    "description-s": "49.9 Ω ±1% 0.25 W axial metal film resistor, thru-hole, MFR-25 series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0073,
+        "100": 0.0073,
+        "1K": 0.0073,
+        "10K": 0.0073,
+        "100K": 0.0073
+      },
+      "distributor-s": "Arrow Electronics"
+    },
+    "package-ao": [
+      { "ptype-s": "axial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-metal-film"
+    ],
+    "passive-o": {
+      "value-i": 49900,
+      "value-unit-s": "ohm",
+      "power-mw-i": 250,
+      "voltage-max-i": 250000,
+      "tolerance-pct-x10": 10,
+      "lead-style-s": "axial"
+    }
+  }
+}

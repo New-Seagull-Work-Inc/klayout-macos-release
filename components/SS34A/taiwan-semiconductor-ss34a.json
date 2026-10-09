@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Taiwan Semiconductor",
+    "part-s": "SS34A",
+    "description-s": "Rectifier Diode, Schottky, 1 Phase, 1 Element, 3A, 40V V(RRM), Silicon",
+    "package-ao": [
+      { "ptype-s": "Rectifier Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.61,
+        "100": 0.386,
+        "1K": 0.176,
+        "10K": 0.136,
+        "100K": 0.136
+      },
+      "distributor-s": "Mouser"
+    }
+  }
+}

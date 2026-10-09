@@ -1,0 +1,95 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "LD1117S33TR",
+    "description-s": "3.3 V Fixed LDO Voltage Regulator",
+    "package-ao": [
+      { "ptype-s": "sot-223" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 15000 },
+      { "vout": 3300 }
+    ],
+    "max_currents-ao": [
+      { "out": 800 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "vout" },
+      { "3": "vin" },
+      { "4": "vout" }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "100nf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "10uf-avss" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 4750,
+      "vin_max_mv": 15000,
+      "vout_fixed_mv": 3300,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 800,
+      "iq_typ_ua": 5000,
+      "dropout_mv_at_iout": 1100,
+      "psrr_db_at_1khz": 75,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

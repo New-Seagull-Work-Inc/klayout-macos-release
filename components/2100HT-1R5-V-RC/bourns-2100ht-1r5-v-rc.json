@@ -1,0 +1,21 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "2100HT-1R5-V-RC",
+    "description-s": "1.5 uH high-current toroidal power inductor, thru-hole radial; Inductor, Toroidal /Tray Packaging; |Bourns Jw Miller 2100HT-1R5V-RC",
+    "package-ao": [
+      {
+        "ptype-s": "Fixed Inductors"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "passive-o": {
+      "value-i": 1500,
+      "value-unit-s": "nh",
+      "lead-style-s": "radial"
+    }
+  }
+}

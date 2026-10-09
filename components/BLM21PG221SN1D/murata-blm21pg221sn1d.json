@@ -1,0 +1,23 @@
+{
+  "component-o": {
+    "type-s": "ferrite-bead",
+    "vendor-s": "Murata",
+    "part-s": "BLM21PG221SN1D",
+    "description-s": "Ferrite Beads Multi-Layer 220Ohm 25% 100MHz 2A 45mOhm DCR 0805 Paper T/R",
+    "package-ao": [
+      { "ptype-s": "Ferrite Beads and Chips" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.0731,
+        "100": 0.052,
+        "1K": 0.0356,
+        "10K": 0.0233,
+        "100K": 0.0224
+      },
+      "distributor-s": "Arrow Electronics"
+    }
+  }
+}

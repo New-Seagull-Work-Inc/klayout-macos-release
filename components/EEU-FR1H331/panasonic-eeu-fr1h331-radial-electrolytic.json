@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Panasonic",
+    "part-s": "EEU-FR1H331",
+    "description-s": "330 µF 50 V ±20% ALUMINUM-ELECTROLYTIC low-ESR radial aluminum electrolytic, FR series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "radial-electrolytic"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "capacitor-electrolytic"
+    ],
+    "passive-o": {
+      "value-i": 330000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic",
+      "lead-style-s": "radial"
+    }
+  }
+}

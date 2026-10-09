@@ -1,0 +1,71 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Littelfuse",
+    "description-s": "6V unidirectional TVS, 600W (10/1000us), VC 10.3V @ 58.3A, DO-214AA, for power-input surge protection",
+    "package-ao": [
+      {
+        "ptype-s": "DO-214AA"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 6000,
+      "breakdown-voltage-min-mv-i": 6670,
+      "breakdown-voltage-max-mv-i": 7370,
+      "clamping-voltage-mv-i": 10300,
+      "peak-pulse-current-a-i": 58,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 800,
+      "esd-contact-kv-i": 30
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 175
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {},
+    "part-s": "SMBJ6.0A",
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

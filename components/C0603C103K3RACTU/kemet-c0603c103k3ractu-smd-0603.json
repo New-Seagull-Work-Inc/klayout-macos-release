@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "description-s": "10000 pF (0.01 µF) 25 V ±10% X7R dielectric SMD ceramic capacitor, EIA 0603 case, 100% matte Sn termination, 7\" reel unmarked",
+    "package-ao": [
+      {
+        "ptype-s": "smd-0603"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "non-technical-o": {
+      "cost-o": {},
+      "distributor-s": "",
+      "lifecycle-o": {}
+    },
+    "passive-o": {
+      "value-i": 10000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "smd"
+    },
+    "part-s": "C0603C103K3RACTU"
+  }
+}

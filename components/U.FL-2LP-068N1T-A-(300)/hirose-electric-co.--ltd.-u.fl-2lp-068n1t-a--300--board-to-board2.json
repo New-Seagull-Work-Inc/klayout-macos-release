@@ -1,0 +1,81 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-coax-plug",
+    "vendor-s": "Hirose Electric Co., Ltd.",
+    "description-s": "U.FL series double-ended cable assembly, Dia. 1.13mm coaxial cable, 300mm length, gray, using U.FL-LP-068 plugs on both ends",
+    "package-ao": [
+      {
+        "ptype-s": "board-to-board"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "signal"
+      },
+      {
+        "2": "shield"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "2": "gnd"
+      }
+    ],
+    "blocks-as": [
+      "jack",
+      "coax_cable_assembly"
+    ],
+    "interfaces-as": [
+      "dd-gmsl-rxtx"
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 1,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 10,
+      "voltage_max_v_i": 60,
+      "contact_plating_s": "gold-flash",
+      "locking_b": true,
+      "shielded_b": true
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 90
+        }
+      }
+    ],
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "U.FL-2LP-068N1T-A-(300)"
+  }
+}

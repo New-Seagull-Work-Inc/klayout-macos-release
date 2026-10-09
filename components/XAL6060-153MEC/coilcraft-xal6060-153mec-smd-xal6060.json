@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Coilcraft",
+    "part-s": "XAL6060-153MEC",
+    "description-s": "15 µH 5.8 A shielded power inductor, XAL series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 3.16,
+        "100": 2.78,
+        "1K": 0.97,
+        "10K": 0.84,
+        "100K": 0.84
+      },
+      "distributor-s": "Coilcraft Direct"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-xal6060" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 15000,
+      "value-unit-s": "nh",
+      "current-max-i": 5800,
+      "lead-style-s": "smd"
+    }
+  }
+}

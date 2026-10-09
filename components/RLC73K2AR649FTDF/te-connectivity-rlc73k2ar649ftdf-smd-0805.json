@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "TE Connectivity",
+    "description-s": "0.649 Ω ±1% 0.125 W thick film current-sense chip resistor, 0805 SMD, ±200 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.04,
+        "10K": 0.02975,
+        "100K": 0.02929
+      },
+      "distributor-s": "Avnet",
+      "moq-i": 1000,
+      "order-mult-i": 1000,
+      "lead-time-weeks-i": 15
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-current-sense"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 649,
+      "value-unit-s": "r",
+      "power-mw-i": 125,
+      "tolerance-pct-x10": 10
+    },
+    "part-s": "RLC73K2AR649FTDF"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Nichicon",
+    "part-s": "UVR1H4R7MDD1TD",
+    "description-s": "4.7 uF 50 V ±20% radial aluminum electrolytic capacitor, 5x11 mm, thru-hole, VR series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.03,
+        "100": 0.03,
+        "1K": 0.03,
+        "10K": 0.03,
+        "100K": 0.03
+      },
+      "distributor-s": "RS (Formerly Allied Electronics)"
+    },
+    "package-ao": [
+      { "ptype-s": "radial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-aluminum-electrolytic"
+    ],
+    "passive-o": {
+      "value-i": 4700000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic",
+      "lead-style-s": "radial"
+    }
+  }
+}

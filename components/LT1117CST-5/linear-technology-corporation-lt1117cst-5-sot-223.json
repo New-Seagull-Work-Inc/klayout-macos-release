@@ -1,0 +1,100 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Linear Technology Corporation",
+    "part-s": "LT1117CST-5",
+    "description-s": "Fixed 5V Low Dropout Positive Regulator, 800mA",
+    "package-ao": [
+      { "ptype-s": "sot-223" },
+      { "ppins-i": 3 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 15000 },
+      { "vout": 5000 }
+    ],
+    "max_currents-ao": [
+      { "out": 800 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "out" },
+      { "3": "in" }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "10uf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "10uf-avss" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 6500,
+      "vin_max_mv": 15000,
+      "vout_fixed_mv": 5000,
+      "vout_accuracy_pct_x10": 10,
+      "iout_max_ma": 800,
+      "iq_typ_ua": 5000,
+      "dropout_mv_at_iout": 1200,
+      "psrr_db_at_1khz": 75,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "cost-o": {
+        "10": 5.008,
+        "100": 5.008,
+        "1K": 2.66,
+        "10K": 2.66,
+        "100K": 2.66
+      },
+      "distributor-s": "Analog Devices"
+    }
+  }
+}

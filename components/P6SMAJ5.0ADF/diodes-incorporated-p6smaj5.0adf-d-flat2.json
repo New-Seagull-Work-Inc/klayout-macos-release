@@ -1,0 +1,73 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Diodes Incorporated",
+    "part-s": "P6SMAJ5.0ADF",
+    "description-s": "5.0V unidirectional TVS, 600W (10/1000us), VC 9.2V @ 65.2A, D-FLAT, for power-input surge protection",
+    "package-ao": [
+      {
+        "ptype-s": "D-FLAT"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 5000,
+      "breakdown-voltage-min-mv-i": 6400,
+      "breakdown-voltage-max-mv-i": 7230,
+      "clamping-voltage-mv-i": 9200,
+      "peak-pulse-current-a-i": 65,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 800
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.598,
+        "100": 0.235,
+        "1K": 0.156,
+        "10K": 0.137,
+        "100K": 0.137
+      },
+      "distributor-s": "Newark"
+    },
+    "pins-ao": [
+      {
+        "1": "cathode"
+      },
+      {
+        "2": "anode"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "1": "ds-power-rx"
+      },
+      {
+        "2": "avss"
+      }
+    ]
+  }
+}

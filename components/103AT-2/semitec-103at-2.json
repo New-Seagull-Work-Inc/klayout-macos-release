@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Semitec",
+    "part-s": "103AT-2",
+    "description-s": "10KΩ ±2% 10mW ±1% 3435K Through hole mounting 3.8mm*2.4mm*8.5mm",
+    "package-ao": [
+      { "ptype-s": "Variable Resistors and Potentiometers" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "component-o": {
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Texas Instruments",
+    "description-s": "Single-cell Li-ion/LiPo linear charger with power-path management, 4.2 V, 1.5 A max, USB-compliant input current limits, 100/500/1500 mA programmable, DPPM, thermal regulation, NTC thermistor input, QFN-16",
+    "package-ao": [
+      { "ptype-s": "QFN-16" },
+      { "ppins-i": 16 }
+    ],
+    "non-technical-o": {},
+    "blocks-as": [
+      "battery-charger-linear"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 4350 },
+      { "vin_max": 6400 },
+      { "vin_abs_max": 28000 },
+      { "vbat": 4200 },
+      { "vout": 5500 }
+    ],
+    "max_currents-ao": [
+      { "charge_max": 1500 },
+      { "input_max": 1500 },
+      { "quiescent_ua": 1500 },
+      { "battery_leakage_ua": 6 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "ts" },
+      { "2": "bat" },
+      { "3": "bat" },
+      { "4": "ce" },
+      { "5": "en2" },
+      { "6": "en1" },
+      { "7": "pgood" },
+      { "8": "vss" },
+      { "9": "chg" },
+      { "10": "out" },
+      { "11": "out" },
+      { "12": "ilim" },
+      { "13": "in" },
+      { "14": "tmr" },
+      { "15": "sysoff" },
+      { "16": "iset" }
+    ],
+    "stdpins-ao": [
+      { "13": "ds-power-rx" },
+      { "13": "1uf-avss" },
+      { "10": "ds-power-tx" },
+      { "10": "4.7uf-avss" },
+      { "11": "ds-power-tx" },
+      { "2": "ds-power-tx" },
+      { "2": "4.7uf-avss" },
+      { "3": "ds-power-tx" },
+      { "8": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "1": "ts" },
+      { "1c": "NTC thermistor input, 10kΩ NTC (103AT-2) for 0-50°C charge range, 75 µA bias current" },
+      { "4": "ce" },
+      { "4c": "Charge enable, active low; pulled down internally with ~285 kΩ" },
+      { "5": "en2" },
+      { "5c": "Input current limit configuration; EN2=0, EN1=0: 100 mA (USB100); EN2=0, EN1=1: 500 mA (USB500); EN2=1, EN1=0: programmable via ILIM; EN2=1, EN1=1: standby" },
+      { "6": "en1" },
+      { "6c": "Input current limit configuration; see EN2" },
+      { "7": "pgood" },
+      { "7c": "Open-drain power good status, low when valid input power detected" },
+      { "7": "1.5k-out" },
+      { "9": "chg" },
+      { "9c": "Open-drain charge status, low during first charge cycle, high-impedance when done or charging disabled" },
+      { "9": "1.5k-out" },
+      { "12": "ilim" },
+      { "12c": "Input current limit programming resistor; IIN_MAX = 1550 AΩ / RILIM (typical); 1.18 kΩ for 1.3 A" },
+      { "12": "1.18k-avss" },
+      { "14": "tmr" },
+      { "14c": "Timer programming resistor; tPRECHG = KTMR × RTMR; tMAXCHG = 10 × KTMR × RTMR; KTMR = 48 s/kΩ typical; 46.4 kΩ for 6.25 hour fast-charge" },
+      { "14": "46.4k-avss" },
+      { "15": "sysoff" },
+      { "15c": "System enable, active high to disconnect battery from system output; pulled up to VBAT via ~5 MΩ" },
+      { "16": "iset" },
+      { "16c": "Fast-charge current programming resistor; ICHG = 890 AΩ / RISET (typical); 1.13 kΩ for 800 mA" },
+      { "16": "1.13k-avss" }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "cells-i": 1,
+      "topology-s": "linear",
+      "vin-min-mv-i": 4350,
+      "vin-max-mv-i": 6400,
+      "vin-abs-max-mv-i": 28000,
+      "input-ovp-mv-i": 6600,
+      "input-uvlo-mv-i": 3300,
+      "charge-voltage-mv-i": 4200,
+      "charge-voltage-accuracy-pct-x10-i": 8,
+      "charge-voltage-selectable-b": false,
+      "charge-current-max-ma-i": 1500,
+      "charge-current-min-ma-i": 150,
+      "charge-current-programmable-b": true,
+      "charge-current-accuracy-pct-x10-i": 100,
+      "precharge-b": true,
+      "precharge-threshold-mv-i": 3000,
+      "precharge-current-pct-x10-i": 100,
+      "termination-current-pct-x10-i": 100,
+      "recharge-threshold-mv-i": 100,
+      "power-path-b": true,
+      "sys-current-max-ma-i": 4500,
+      "ntc-thermistor-b": true,
+      "jeita-b": false,
+      "safety-timer-b": true,
+      "safety-timer-min-i": 1800,
+      "thermal-regulation-b": true,
+      "thermal-regulation-c-i": 125,
+      "charge-enable-b": true,
+      "status-outputs-i": 2,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "none",
+      "input-current-limit-b": true,
+      "input-current-limit-max-ma-i": 1500,
+      "usb-input-b": true,
+      "otg-boost-b": false,
+      "integrated-protection-b": false,
+      "quiescent-current-ua-i": 1500,
+      "battery-leakage-ua-i": 6
+    },
+    "part-s": "BQ24075RGTR",
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "in",
+        "pins-as": [
+          "13"
+        ],
+        "vmin_mv": 4350,
+        "vmax_mv": 26000,
+        "decap-ao": [
+          { "value_nf": 1000, "count": 1, "per-s": "rail", "page_n": 6 }
+        ],
+        "source-o": {
+          "datasheet-s": "BQ24075RGTR.pdf",
+          "page_n": 3,
+          "table-s": "RECOMMENDED OPERATING CONDITIONS"
+        }
+      }
+    ]
+  }
+}

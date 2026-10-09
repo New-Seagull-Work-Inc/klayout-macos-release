@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Panasonic",
+    "part-s": "EEU-FR1E101",
+    "description-s": "Panasonic EEUFR1E101 - Aluminum Electrolytic Capacitors (Radial Lead Type)",
+    "package-ao": [
+      { "ptype-s": "Aluminum Electrolytic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

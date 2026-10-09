@@ -1,0 +1,22 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Littelfuse",
+    "part-s": "MBRB10100CT",
+    "description-s": "Rectifier Diode, Schottky, 1 Phase, 2 Element, 100V V(RRM), Silicon, TO-263AB",
+    "package-ao": [
+      { "ptype-s": "Rectifier Diodes" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "non-technical-o": {
+      "cost-o": {
+        "100": 0.5133,
+        "1K": 0.5133,
+        "10K": 0.5133,
+        "100K": 0.5133
+      },
+      "distributor-s": "Verical"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TLV71209DBVT",
+    "description-s": "300-mA, Sub-Bandgap Output Voltage (0.9V), Low-IQ, Low-Dropout Regulator",
+    "package-ao": [
+      { "ptype-s": "sot23-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "bandgap",
+      "thermal-shutdown",
+      "current-limit",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 2000 },
+      { "vout": 900 }
+    ],
+    "max_currents-ao": [
+      { "out": 300 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "in" },
+      { "2": "gnd" },
+      { "3": "en" },
+      { "4": "nc" },
+      { "5": "out" }
+    ],
+    "cfgpins-ao": [
+      { "3": "en" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "1uf-avss" },
+      { "2": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 2000,
+      "vin_max_mv": 5500,
+      "vout_fixed_mv": 900,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 300,
+      "iq_typ_ua": 35,
+      "dropout_mv_at_iout": 130,
+      "psrr_db_at_1khz": 68,
+      "noise_uvrms": 30,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    }
+  }
+}

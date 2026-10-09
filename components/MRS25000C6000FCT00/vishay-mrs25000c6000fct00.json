@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "MRS25000C6000FCT00",
+    "description-s": "Fixed Resistor, Thin Film, 0.6W, 600ohm, 350V, 1% +/-Tol, 50ppm/Cel, Through Hole Mount",
+    "package-ao": [
+      { "ptype-s": "Through-Hole Resistors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

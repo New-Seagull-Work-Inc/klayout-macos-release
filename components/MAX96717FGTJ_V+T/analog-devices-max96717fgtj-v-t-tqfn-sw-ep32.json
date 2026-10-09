@@ -1,0 +1,198 @@
+{
+  "component-o": {
+    "type-s": "serdes",
+    "vendor-s": "Analog Devices",
+    "description-s": "MAX96717 CSI-2 to GMSL2 Serializer, 4-lane MIPI CSI-2 D-PHY input, single GMSL2 serial link output at 3Gbps or 6Gbps forward / 187.5Mbps reverse, coax or STP, 32-pin TQFN-SW",
+    "specs-o": {
+      "direction-s": "serializer",
+      "link-s": "gmsl2",
+      "max_link_rate_mbps": 6000,
+      "max_bus_rate_per_lane_mbps": 2500,
+      "bus_lanes-i": 4,
+      "link_channels-i": 1,
+      "coax-b": true,
+      "bus_ports-i": 1
+    },
+    "package-ao": [
+      { "ptype-s": "TQFN-SW-EP" },
+      { "ppins-i": 32 }
+    ],
+    "blocks-as": [
+      "gmsl2-serializer",
+      "mipi-csi2-rx",
+      "i2c-uart-passthrough",
+      "spi-tunnel",
+      "gpio",
+      "adc",
+      "temperature-sensor",
+      "line-fault-detection",
+      "crc-fec"
+    ],
+    "interfaces-as": [
+      "dd-mipi-csi-rx",
+      "dd-gmsl-tx",
+      "ds-i2c-rxtx",
+      "ds-refclk-tx"
+    ],
+    "max_currents-ao": [
+      { "dvdd18": 53 },
+      { "dvdd11": 232 },
+      { "iovdd": 1 },
+      { "dvdd": 285 }
+    ],
+    "voltages-ao": [
+      { "dvdd18": 1800 },
+      { "dvdd11": 1100 },
+      { "iovdd": 1800 }
+    ],
+    "typical_voltages-ao": [
+      { "dvdd18": 18 },
+      { "dvdd11": 10 },
+      { "iovdd18_min": 17 },
+      { "iovdd18_max": 36 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 105
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "non-technical-o": {
+      "cost-o": {},
+      "distributor-s": "",
+      "lifecycle-o": {}
+    },
+    "pins-ao": [
+      { "12": "SIOP" },
+      { "13": "SION" },
+      { "19": "D2P" },
+      { "20": "D2N" },
+      { "23": "D3P" },
+      { "24": "D3N" },
+      { "25": "D0P" },
+      { "26": "D0N" },
+      { "27": "CKP" },
+      { "28": "CKN" },
+      { "29": "D1P" },
+      { "30": "D1N" },
+      { "2": "MFP0" },
+      { "3": "MFP1/CFG0" },
+      { "4": "MFP2/CFG1" },
+      { "17": "MFP3" },
+      { "18": "MFP4" },
+      { "21": "MFP5" },
+      { "22": "MFP6" },
+      { "31": "MFP7" },
+      { "32": "MFP8" },
+      { "5": "MFP9" },
+      { "6": "MFP10" },
+      { "11": "VDD18" },
+      { "14": "CAP_VDD" },
+      { "15": "VDD" },
+      { "16": "VDDIO" },
+      { "33": "EP" },
+      { "1": "PWDNB" },
+      { "7": "VREF" },
+      { "8": "X1/OSC" },
+      { "9": "X2" },
+      { "10": "XRES" }
+    ],
+    "stdpins-ao": [
+      { "5": "ds-i2c-sda" },
+      { "6": "ds-i2c-scl" },
+      { "27": "dd-mipi-csi-clkp" },
+      { "28": "dd-mipi-csi-clkn" },
+      { "25": "dd-mipi-csi-data0p" },
+      { "26": "dd-mipi-csi-data0n" },
+      { "29": "dd-mipi-csi-data1p" },
+      { "30": "dd-mipi-csi-data1n" },
+      { "19": "dd-mipi-csi-data2p" },
+      { "20": "dd-mipi-csi-data2n" },
+      { "23": "dd-mipi-csi-data3p" },
+      { "24": "dd-mipi-csi-data3n" },
+      { "12": "dd-gmsl-p" },
+      { "13": "dd-gmsl-n" },
+      { "13": "100nf+49.9r-dvss" },
+      { "11": "dvdd-1_8" },
+      { "11": "10nf-dvss" },
+      { "11": "100nf-dvss" },
+      { "11": "10uf-dvss" },
+      { "15": "dvdd-1_1" },
+      { "15": "10nf-dvss" },
+      { "15": "100nf-dvss" },
+      { "15": "10uf-dvss" },
+      { "16": "iovdd-1_8" },
+      { "16": "10nf-dvss" },
+      { "16": "100nf-dvss" },
+      { "16": "10uf-dvss" },
+      { "33": "dvss" },
+      { "14": "100nf-dvss" },
+      { "14": "10uf-dvss" },
+      { "18": "ds-refclk-tx" },
+      { "12": "100nf-link" }
+    ],
+    "cfgpins-ao": [
+      { "3": "MFP1/CFG0" },
+      { "3": "10k-dvss" },
+      { "3c": "CFG0 sets main control-channel interface (I2C vs UART) latched at power-up. Typical application uses I2C mode with pull-down/pull-up divider to VDDIO per CFG0 Input Map (Table 11) row for I2C selection; typical app circuit shows a resistor divider from VDDIO to GND on this pin. Strap set from the datasheet's CFG0 input map, row I2C/RoR/0x80: R1 OPEN, R2 10k." },
+      { "4": "MFP2/CFG1" },
+      { "4": "32.4k-vddio" },
+      { "4": "68.1k-dvss" },
+      { "4c": "CFG1 sets GMSL2 link rate/coax-STP mode latched at power-up, per CFG1 Input Map (Table 12); typical app circuit shows a resistor divider from VDDIO to GND on this pin for 6Gbps coax tunnel mode selection. Strap set from the datasheet's CFG1 input map, row COAX/6/Tunnel: R1 32.4k, R2 68.1k." },
+      { "1": "PWDNB" },
+      { "1c": "Power-down input, active low, internal 1MΩ pulldown. Tie to VDDIO through the host GPIO/enable control; do not float. Hold low >= tHOLD_PWDNB (1ms) to reset." },
+      { "10": "XRES" },
+      { "10c": "Connect a single 402Ω ±1% resistor (RXRES) from XRES to ground per Table 3 External Component Requirements. Do not float." },
+      { "10": "402r-dvss" },
+      { "8": "X1/OSC" },
+      { "8c": "Crystal input. Unused: CFG0 selects Reference over Reverse (Table 11 row I2C/RoR/0x80), so the serializer takes its reference from the link; leave X1/OSC open." },
+      { "9": "X2" },
+      { "9c": "Crystal input. Unused with Reference over Reverse (see X1/OSC); leave X2 open." },
+      { "7": "VREF" },
+      { "7c": "Optional external 1.25V reference for the ADC. Leave open if not used (Table 1 pin description)." },
+      { "1": "10k-vddio" },
+      { "12": "SIOP" },
+      { "12c": "SIOP: GMSL2 link. CLINK 0.1uF AC-coupling capacitor in series between SIOP and the coax connector (Table 3); a series part to another component, not a pin passive." },
+      { "18c": "MFP4 = RCLKOUT: 25 MHz reference clock out (divide by 2 or 4 available; or DPLL_OUT, 1 MHz up). Feeds an image sensor's EXTCLK (AR0235: 10-48 MHz), enabled by register." }
+    ],
+    "part-s": "MAX96717FGTJ/V+T",
+    "supplies-ao": [
+      {
+        "rail-s": "VDD18",
+        "role-s": "dvdd",
+        "pins-as": [
+          "11"
+        ],
+        "i_max_ma": 53,
+        "i_typ_ma": 46,
+        "source-o": {
+          "datasheet-s": "MAX96717.pdf",
+          "page_n": 14,
+          "table-s": "Electrical Characteristics (continued)"
+        }
+      },
+      {
+        "rail-s": "VDD",
+        "role-s": "dvdd",
+        "pins-as": [
+          "15"
+        ],
+        "i_max_ma": 232,
+        "i_typ_ma": 98,
+        "source-o": {
+          "datasheet-s": "MAX96717.pdf",
+          "page_n": 14,
+          "table-s": "Electrical Characteristics (continued)"
+        }
+      }
+    ]
+  }
+}

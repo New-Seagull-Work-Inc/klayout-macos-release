@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Uniroyal",
+    "part-s": "0402WGF3162TCE",
+    "description-s": "31.6 kΩ ±1% 0.0625 W thick film chip resistor, 0402 SMD, ±100 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.0021,
+        "1K": 0.0016,
+        "10K": 0.0013,
+        "100K": 0.001
+      },
+      "distributor-s": "LCSC",
+      "moq-i": 100,
+      "order-mult-i": 100,
+      "stock-i": 11000
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 31600000,
+      "value-unit-s": "k",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

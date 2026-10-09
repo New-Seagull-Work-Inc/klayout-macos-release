@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "EEMB",
+    "part-s": "LP103450",
+    "description-s": "Secondary Battery, Polymer Lithium-ion, 103450, 3.7V, 1.85Ah",
+    "package-ao": [
+      { "ptype-s": "Batteries and Accessories" },
+      { "ppins-i": 2 }
+    ],
+    "battery-o": {}
+  }
+}

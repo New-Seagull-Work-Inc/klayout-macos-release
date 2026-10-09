@@ -1,0 +1,97 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Microchip Technology Inc.",
+    "description-s": "Fixed 2.7V LDO Regulator, 150mA Output Current, Low Dropout",
+    "package-ao": [
+      { "ptype-s": "sot-223" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 5500 },
+      { "vout": 2700 }
+    ],
+    "max_currents-ao": [
+      { "out": 150 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "vout" },
+      { "3": "vin" },
+      { "4": "vout" }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "1uf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "1uf-avss" },
+      { "4": "ds-power-tx" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 2900,
+      "vin_max_mv": 5500,
+      "vout_fixed_mv": 2700,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 150,
+      "iq_typ_ua": 80,
+      "dropout_mv_at_iout": 300,
+      "has_enable_b": false,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "TC1185-2.7VCT"
+  }
+}

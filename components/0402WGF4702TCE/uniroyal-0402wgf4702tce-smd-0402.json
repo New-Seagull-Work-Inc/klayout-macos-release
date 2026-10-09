@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Uniroyal",
+    "part-s": "0402WGF4702TCE",
+    "description-s": "47 kΩ ±1% 0.0625 W thick film chip resistor, 0402 SMD, ±100 ppm/°C",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.00836,
+        "1K": 0.00198,
+        "10K": 0.00063,
+        "100K": 0.00045
+      },
+      "distributor-s": "TME",
+      "moq-i": 100,
+      "order-mult-i": 100,
+      "lead-time-weeks-i": 21,
+      "stock-i": 71268
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 47000000,
+      "value-unit-s": "k",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

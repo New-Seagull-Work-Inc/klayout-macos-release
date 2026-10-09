@@ -1,0 +1,13 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "part-s": "GRM188R61C105KA12D",
+    "description-s": "0603 1 uF 16 V ±10% Tolerance X5R Multilayer Ceramic Capacitor",
+    "package-ao": [
+      { "ptype-s": "Ceramic Capacitors" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {}
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Yageo",
+    "part-s": "MFR-25FBF52-33K2",
+    "description-s": "33.2 kΩ ±1% 0.25 W axial metal film resistor, thru-hole, MFR-25 series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.0167,
+        "10K": 0.0124,
+        "100K": 0.0124
+      },
+      "distributor-s": "Verical"
+    },
+    "package-ao": [
+      { "ptype-s": "axial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 33200000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 250,
+      "voltage-max-i": 250000,
+      "tolerance-pct-x10": 10,
+      "lead-style-s": "axial"
+    }
+  }
+}

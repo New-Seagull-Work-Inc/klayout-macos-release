@@ -1,0 +1,117 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "description-s": "30-A, 4.5-V to 14-V Input, Wide-Output Adjust Power Module with Auto-Track",
+    "package-ao": [
+      { "ptype-s": "DSSMT" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "soft-start",
+      "current-limit",
+      "thermal-shutdown",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 9000 },
+      { "vout": 3300 }
+    ],
+    "max_currents-ao": [
+      { "out": 30000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vin" },
+      { "2": "vin" },
+      { "3": "track/margin" },
+      { "4": "inhibit" },
+      { "5": "vo sense" },
+      { "6": "vo adjust" },
+      { "7": "gnd" },
+      { "8": "gnd" },
+      { "9": "vout" },
+      { "10": "vout" }
+    ],
+    "cfgpins-ao": [
+      { "3": "track/margin" },
+      { "4": "inhibit" },
+      { "5": "vo sense" },
+      { "6": "vo adjust" },
+      { "6c": "feedback divider for adjustable output" },
+      { "6": "10k-out" },
+      { "6": "3.3k-avss" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "2": "ds-power-rx" },
+      { "1": "100uf-avss" },
+      { "2": "100uf-avss" },
+      { "7": "avss" },
+      { "8": "avss" },
+      { "9": "ds-power-tx" },
+      { "10": "ds-power-tx" },
+      { "9": "330uf-avss" },
+      { "10": "330uf-avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 4500,
+      "vin_max_mv": 14000,
+      "vout_min_mv": 1200,
+      "vout_max_mv": 5500,
+      "iout_max_ma": 30000,
+      "switching_freq_khz": 300,
+      "efficiency_pct_max": 96,
+      "has_enable_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "PTH08080WAH"
+  }
+}

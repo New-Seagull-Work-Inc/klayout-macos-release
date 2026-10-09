@@ -1,0 +1,30 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Coilcraft",
+    "part-s": "XAL4020-222MEB",
+    "description-s": "2.2 µH 5.5 A shielded power inductor, XAL series",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "smd-xal4020"
+      },
+      {
+        "ppins-i": 2
+      }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "passive-o": {
+      "value-i": 2200,
+      "value-unit-s": "nh",
+      "current-max-i": 5500,
+      "lead-style-s": "smd"
+    }
+  }
+}

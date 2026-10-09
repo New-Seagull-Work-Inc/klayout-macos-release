@@ -1,0 +1,92 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Microchip Technology Incorporated",
+    "description-s": "250 mA Low Quiescent Current LDO Regulator",
+    "package-ao": [
+      { "ptype-s": "sot-223" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 13200 },
+      { "vout": 2702 }
+    ],
+    "max_currents-ao": [
+      { "out": 250 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "vout" },
+      { "3": "vin" },
+      { "4": "vout" }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      { "1": "avss" },
+      { "3": "ds-power-rx" },
+      { "3": "1uf-avss" },
+      { "2": "ds-power-tx" },
+      { "2": "1uf-avss" },
+      { "4": "ds-power-tx" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 2700,
+      "vin_max_mv": 13200,
+      "vout_fixed_mv": 2702,
+      "iout_max_ma": 250,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      }
+    },
+    "part-s": "MCP1702T-2702E/CB"
+  }
+}
