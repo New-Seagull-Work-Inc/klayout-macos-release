@@ -41,7 +41,12 @@
       "orientation_s": "vertical",
       "mount_s": "through-hole",
       "contact_plating_s": "10µ\" gold in contact area, 3µ\" gold on tail",
-      "source_s": "drawing legend (procurement connx, no LLM)"
+      "source_s": "drawing legend (procurement connx, no LLM)",
+      "family_s": "pin-header-2.54",
+      "courtyard_area_mm2_f": 12.5,
+      "board_area_mm2_f": 12.5,
+      "board_area_note_s": "courtyard",
+      "fields_source_s": "test point; no current rating taken"
     },
     "part-s": "TSW-101-07-G-S"
   }

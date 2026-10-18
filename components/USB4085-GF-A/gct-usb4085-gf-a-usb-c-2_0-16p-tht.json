@@ -5,6 +5,18 @@
     "vendor-s": "GCT",
     "part-s": "USB4085-GF-A",
     "description-s": "USB Type-C 2.0 receptacle, 16 contacts, through-hole, right angle, 5 A / 48 VDC, 20000 cycles; board power input (VBUS/GND, CC1/CC2 with 5.1k Rd pull-downs for a sink, D+/D- brought out)",
+    "connector-o": {
+      "orientation_s": "right-angle",
+      "pin_count_i": 16,
+      "family_s": "usb-c",
+      "courtyard_area_mm2_f": 107.3,
+      "board_area_mm2_f": 107.3,
+      "board_area_note_s": "courtyard (right-angle at the board edge: the mate overhangs the edge)",
+      "fields_source_s": "5 A / 20 V for the receptacle = 1.25 A on each of the 4 VBUS / 4 GND contacts; signal contacts 0.25 A (Nexar maker spec)",
+      "pitch_mm_f": 0.5,
+      "current_per_pin_ma_i": 1250,
+      "voltage_max_v_f": 20.0
+    },
     "package-ao": [
       { "ptype-s": "through-hole" },
       { "ppins-i": 16 }

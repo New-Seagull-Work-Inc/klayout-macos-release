@@ -52,6 +52,7 @@
       "ds-i2c-rxtx",
       "ds-sdio-rxtx"
     ],
+    "internal-rails-as": [ "vddcore", "vddcsi" ],
     "max_currents-ao": [
       { "vdd": 1 },
       { "vddio2": 50 },
@@ -67,7 +68,11 @@
       { "vdd33usb": 17 },
       { "vdda18adc": 1 },
       { "vbat": 1 },
-      { "vref": 1 }
+      { "vref": 1 },
+      { "vdda18pmu": 20 },
+      { "vdda18pmuc": "ESTIMATE, not datasheet data (Raul, 2026-10-17): DS14791 Rev 2 and AN5967 Rev 2 state no VDDA18PMU current; ~30 mW at 1.8 V (17 mA) is the upper end an ST community answer gives for the PMU domain, rounded up to 20 mA." },
+      { "vddsmps": 450 },
+      { "vddsmpsc": "ESTIMATE, not datasheet data (procurement for design-c-43, 2026-10-17; Raul asked for recommended choices while away): DS14791 Rev 2 and AN5967 Rev 2 state no VDDSMPS input current. The SMPS input load is the core load reflected to 1.8 V: VDDCORE 840 mA x 0.81 V / 1.8 V / 0.85 efficiency = 445 mA, rounded to 450 mA." }
     ],
     "temperatures-ao": [
       {
@@ -99,6 +104,19 @@
       "gpio_count_i": 165,
       "adc_resolution_b": 12
     },
+    "boot-pins-ao": [
+      {"ball": "G4", "pin": "BOOT0", "use": "boot-strap"},
+      {"ball": "P8", "pin": "PA6", "use": "boot-strap", "signal": "BOOT1"},
+      {"ball": "U6", "pin": "PA13", "use": "debug", "signal": "SWDIO"},
+      {"ball": "T6", "pin": "PA14", "use": "debug", "signal": "SWCLK"},
+      {"ball": "R17", "pin": "PN1", "use": "boot-memory", "signal": "XSPIM_P2_NCS1"},
+      {"ball": "P15", "pin": "PN6", "use": "boot-memory", "signal": "XSPIM_P2_CLK"},
+      {"ball": "T17", "pin": "PN2", "use": "boot-memory", "signal": "XSPIM_P2_IO0"},
+      {"ball": "R15", "pin": "PN3", "use": "boot-memory", "signal": "XSPIM_P2_IO1"},
+      {"ball": "N17", "pin": "PN4", "use": "boot-memory", "signal": "XSPIM_P2_IO2"},
+      {"ball": "R16", "pin": "PN5", "use": "boot-memory", "signal": "XSPIM_P2_IO3"},
+      {"ball": "P17", "pin": "PN0", "use": "boot-memory", "signal": "XSPIM_P2_DQS0"}
+    ],
     "pins-ao": [
       { "T2": "VREF-" },
       { "U2": "VREF+" },
@@ -378,7 +396,18 @@
       { "C3": "OTG1_ID" },
       { "C3c": "USB OTG1 ID; internally pulled up, so it may be left open for peripheral-only use. Tie to VSS only when USB host (A-device) operation is required." },
       { "P8": "BOOT1" },
-      { "P8c": "PA6/BOOT1 alternate boot strap function; strap per boot configuration, pull to VDD or VSS depending on desired boot source" }
+      { "P8c": "PA6/BOOT1 alternate boot strap function; strap per boot configuration, pull to VDD or VSS depending on desired boot source" },
+      { "J1": "vlxsmps" },
+      { "J2": "vlxsmps" },
+      { "J3": "vlxsmps" },
+      { "J4": "vlxsmps" },
+      { "J5": "vlxsmps" },
+      { "J6": "vlxsmps" },
+      { "J1c": "VLXSMPS (J1-J6, one node): the internal SMPS switch output; 1 uH coil from it to VDDCORE. DS14791 Rev 2 section 3.4.4 p22: 'The SMPS generates this voltage on VLXSMPS, with a total external capacitor of 88 (4x 22) uF (typical). The SMPS requires an external coil of 1 uH (typical).' Figure 2 'SMPS supply' drawing: VDDSMPS and VDDA18PMU on VDD18, VLXSMPS through the coil to VCORE/VDDCORE, VFBSMPS on VCORE. Internal SMPS on (Raul, 2026-10-17). AN5967 Rev 2 coil: '1 uH +-20%, 1 MHz, ISat > 3000 mA DC, resistance < 0.06 Ohm'." },
+      { "G2c": "VFBSMPS: SMPS feedback, on VCORE (VDDCORE). DS14791 Rev 2 section 3.4.4 p22: 'The SMPS generates this voltage on VLXSMPS, with a total external capacitor of 88 (4x 22) uF (typical). The SMPS requires an external coil of 1 uH (typical).' Figure 2 'SMPS supply' drawing: VDDSMPS and VDDA18PMU on VDD18, VLXSMPS through the coil to VCORE/VDDCORE, VFBSMPS on VCORE. Internal SMPS on (Raul, 2026-10-17)." },
+      { "L6c": "VDDCORE: 4 x 22 uF for the internal SMPS output ('total external capacitor of 88 (4x 22) uF'). DS14791 Rev 2 section 3.4.4 p22: 'The SMPS generates this voltage on VLXSMPS, with a total external capacitor of 88 (4x 22) uF (typical). The SMPS requires an external coil of 1 uH (typical).' Figure 2 'SMPS supply' drawing: VDDSMPS and VDDA18PMU on VDD18, VLXSMPS through the coil to VCORE/VDDCORE, VFBSMPS on VCORE. Internal SMPS on (Raul, 2026-10-17)." },
+      { "G1c": "VDDA18PMU on the 1.8 V rail (Figure 2); AN5967 Rev 2 p6: 'external analog power supply for the SMPS step-down converter - 1.8 V typical'. max_currents-ao vdda18pmu 20 mA is an estimate (see vdda18pmuc)." },
+      { "R4c": "VDDCSI on VCORE: AN5967 Rev 2 p6, 'Note: VDDCSI must be connected to VDDCORE as 0.8 V typical power.'" }
     ],
     "stdpins-ao": [
       { "U3": "dd-mipi-csi-clkn" },
@@ -470,7 +499,13 @@
       { "N10": "dvdd-0_81" },
       { "N12": "dvdd-0_81" },
       { "P11": "dvdd-0_81" },
-      { "A4": "dvdd-3_3" }
+      { "A4": "dvdd-3_3" },
+      { "G2": "dvdd-0_81" },
+      { "J1": "1uh-dvdd-0_81" },
+      { "L6": "22uf-dvss" },
+      { "L6": "22uf-dvss" },
+      { "L6": "22uf-dvss" },
+      { "L6": "22uf-dvss" }
     ],
     "peripheral-counts-o": {
       "i3c-i": 2,
@@ -506,7 +541,7 @@
       { "ball": "A8", "pin": "PC10", "signal": "SDMMC1_D2", "af": 10, "role": "ds-sdio-d2" },
       { "ball": "B8", "pin": "PC11", "signal": "SDMMC1_D3", "af": 10, "role": "ds-sdio-d3" }
     ],
-    "pinmux-note-s": "Pin mux on STM32 is a firmware setting (GPIOx_MODER = AF, GPIOx_AFRL/AFRH = AFn), not a hardware strap; BOOT0/BOOT1 select the boot source only. This SKU uses I2C2 on PB10/PB11 (AF4) for the deserializer's control bus and 4-bit SDMMC1 on PC8-PC12/PH2 (AF10) as the SDIO host for the WiFi radio. The boot ROM configures SDMMC1 itself only when SD boot is strapped; application firmware must set these AFs. Same port pins as the Z0 hand-built I2C2 choice, so the I2C init is shared.",
+    "pinmux-note-s": "Pin mux on STM32 is a firmware setting (GPIOx_MODER = AF, GPIOx_AFRL/AFRH = AFn), not a hardware strap; BOOT0/BOOT1 select the boot source only. This SKU uses I2C2 on PB10/PB11 (AF4) for the deserializer's control bus and 4-bit SDMMC1 on PC8-PC12/PH2 (AF10) as the SDIO host for the WiFi radio. The boot ROM configures SDMMC1 itself only when SD boot is strapped; application firmware must set these AFs. Same port pins as the Z0 hand-built I2C2 choice, so the I2C init is shared. boot-pins-ao (2026-10-17): the STM32N6 has no internal flash and boots from the NOR on XSPIM_P2 (DS14791 marks XSPIM_P2_NCS1 / IO0 / DQS0 '(boot)'), whatever this SKU's mux; BOOT0 (G4) / BOOT1 (PA6, P8) straps and SWD (PA13, PA14) are kept free too.",
     "voltages-ao": [
       { "vref": 1800 },
       { "vbat": 3300 },
@@ -522,7 +557,9 @@
       { "vdda18adc": 1800 },
       { "vdda18aon": 1800 },
       { "vdd": 3300 },
-      { "vddcore": 810 }
+      { "vddcore": 810 },
+      { "vdda18pmu": 1800 },
+      { "vddsmps": 1800 }
     ],
     "supplies-ao": [
       {

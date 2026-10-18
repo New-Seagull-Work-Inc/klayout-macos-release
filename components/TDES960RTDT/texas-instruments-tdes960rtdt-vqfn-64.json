@@ -12,7 +12,80 @@
       "bus_lanes-i": 4,
       "bus_ports-i": 2,
       "link_channels-i": 4,
-      "coax-b": true
+      "coax-b": true,
+      "layout_rules-o": {
+        "coax_z_ohm": 50,
+        "coax_z_tol_pct": 10,
+        "coax_len_max_mm": 50,
+        "coax_con_z_min_ohm": 40,
+        "coax_con_z_max_ohm": 62.5,
+        "coax_il_max_db-ao": [
+          { "f_max_ghz": 0.5, "il_db": -0.35 },
+          { "f_ghz": 1.0, "il_db": -0.6 },
+          { "f_ghz": 2.1, "il_db": -1.2 }
+        ],
+        "coax_rl_max_db-ao": [
+          { "f_from_ghz": 0.025, "f_to_ghz": 0.1, "rl_db": -20 },
+          { "f_from_ghz": 0.1, "f_to_ghz": 1.0, "rl_formula-s": "-12 + 8*log10(f_ghz)" },
+          { "f_from_ghz": 1.0, "f_to_ghz": 2.1, "rl_db": -12 }
+        ],
+        "coax_n_leg_gap_min_x_width": 3,
+        "stp_zdiff_ohm": 100,
+        "pin_to_cap_zdiff_ohm": 100,
+        "ac_cap_near_pin_b": true,
+        "ac_cap_top_layer_b": true,
+        "ac_cap_link_p_nf_min": 33,
+        "ac_cap_link_p_nf_max": 100,
+        "ac_cap_link_n_nf_min": 15,
+        "ac_cap_link_n_nf_max": 47,
+        "term_r_ohm": 49.9,
+        "term_near_connector_b": true,
+        "poc_z_min_ohm": 1000,
+        "poc_band_from_mhz": 25,
+        "poc_band_to_mhz": 2100,
+        "poc_noise_max_mvpp": 10,
+        "poc_bead_near_connector_b": true,
+        "poc_bead_antipad_b": true,
+        "csi_zdiff_ohm": 100,
+        "csi_zdiff_tol_pct": 20,
+        "csi_zse_ohm": 50,
+        "csi_zse_tol_pct": 15,
+        "csi_intra_pair_mismatch_max_mm": 0.127,
+        "csi_inter_pair_mismatch_max_mm": 1.27,
+        "csi_pair_gap_min_x_width": 3,
+        "csi_vias_max_i": 2,
+        "csi_bend_angle_min_deg": 135,
+        "csi_same_layer_b": true,
+        "csi_over_split_b": false,
+        "layers_min_i": 4,
+        "layout_source-o": {
+          "datasheet-s": "TDES960RTDT.pdf",
+          "doc-s": "SNLS698 (April 2021)"
+        },
+        "layout_cites-o": {
+          "coax_z_ohm_cite-s": "p. 148 Table 8-3 Ztrace 45 / 50 / 55 ohm; p. 160 section 10.1.2: 'a 50-ohm single-ended micro-strip with tight impedance control (+-10%)'",
+          "coax_len_max_mm_cite-s": "p. 148 Table 8-3 Ltrace: single-ended PCB trace length from the device pin to the connector pin, max 5 cm",
+          "coax_con_z_cite-s": "p. 148 Table 8-3 Zcon: connector (mounted) characteristic impedance 40 / 50 / 62.5 ohm (the TSER953's table says 60)",
+          "coax_il_max_db_cite-s": "p. 148 Table 8-3 insertion loss S12: f < 0.5 GHz -0.35 dB, f = 1 GHz -0.6 dB, f = 2.1 GHz -1.2 dB (PCB trace with the PoC network attached)",
+          "coax_rl_max_db_cite-s": "p. 148 Table 8-3 return loss S11: 1/2 fBC < f < 0.1 GHz -20 dB; 0.1-1 GHz -12 + 8 log(f); 1 GHz < f < fFC -12 dB. 1/2 fBC = 25 MHz and fFC = 2.1 GHz with the TSER953 (p. 145)",
+          "coax_n_leg_cite-s": "p. 160 section 10.1.2: 'Route the RIN- trace with minimum coupling to the RIN+ trace (S > 3W).'",
+          "stp_zdiff_ohm_cite-s": "p. 160 section 10.1 and 10.1.2: STP traces 'must maintain a 100-ohm differential impedance routed to the connector' (no tolerance stated)",
+          "pin_to_cap_cite-s": "p. 148: 'Use coupled 100-ohm differential signal traces from the device pins to the AC-coupling caps. Use 50-ohm single-ended traces from the AC-coupling capacitors to the connector.'; p. 160: AC-coupling capacitors on the top layer, very close to the receiver input pins",
+          "ac_cap_nf_cite-s": "p. 151 Table 8-4, coax with the 953: RIN+ 33 nF - 100 nF, RIN- 15 nF - 47 nF (50 V X7R 0402)",
+          "term_cite-s": "p. 148: 'Terminate the inverting signal traces close to the connectors with standard 49.9-ohm resistors.' (p. 151 says 'an AC-coupling capacitor and a 50-ohm resistor' for unused RIN- pins)",
+          "poc_cite-s": "p. 145: PoC network impedance >= 1 kohm from 1/2 fBC to fFC (25 MHz to 2.1 GHz with the TSER953); p. 148: VPOC noise 10 mVp-p or lower on the deserializer side; bead closest to the connector with the trace through its pad, anti-pads under the pads; p. 160 the same",
+          "csi_zdiff_tol_pct_cite-s": "p. 161 section 10.1.3: 'controlled 100-ohm differential impedance (+-20%) or 50-ohm single-ended impedance (+-15%)'; the pin table (p. 4) states no CSI impedance",
+          "csi_routing_cite-s": "p. 161 section 10.1.3: intra-pair length mismatch < 5 mils, inter-pair < 50 mils within one CSI-2 TX port (port 0 need not match port 1), pairs separated by at least 3x the trace width, bends >= 135 degrees, all pairs on the same layer, two vias or fewer, adjacent to a ground plane",
+          "layers_min_i_cite-s": "p. 160 section 10.1: 'Use at least a four-layer board with a power and ground plane.'"
+        },
+        "layout_not_stated-as": [
+          "STP differential impedance tolerance",
+          "PoC network current limit (the TSER953 sheet states 150 mA; this sheet does not)",
+          "CSI-2 plane-split rule (the TSER953 sheet states it; this sheet's list does not)",
+          "AC-coupling capacitor maximum distance in mm (stated only as 'very close to the receiver input pins')",
+          "termination resistor maximum distance in mm (stated only as 'close to the connectors')"
+        ]
+      }
     },
     "non-technical-o": {
       "lifecycle-o": {},

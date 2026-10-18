@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "shunt",
+    "vendor-s": "TE Connectivity",
+    "part-s": "881545-2",
+    "description-s": "Jumper shunt, 2 positions, 2.54 mm centerline, open top (Novo), gold; product height 10.9 mm; 'Contact Current Rating (Max): 3 A' (TE datasheet)",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.2552,
+        "100": 0.2155,
+        "1K": 0.1258,
+        "10K": 0.1246,
+        "100K": 0.1246
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 20394
+    },
+    "package-ao": [
+      { "ptype-s": "shunt-2.54mm-2pos" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "jumper-shunt"
+    ],
+    "passive-o": {
+      "lead-style-s": "tht",
+      "value-i": 0,
+      "value-unit-s": "r",
+      "current-max-i": 3000,
+      "tolerance-pct-x10": 0
+    }
+  }
+}

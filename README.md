@@ -13,9 +13,7 @@
 > part's design record, JSON) are the entire distribution: there is no source tree, no
 > Makefile, and nothing here that can be compiled,
 > rebuilt, or modified. The example is design input for
-> the tool, not program source. The `scripts/` folder holds
-> the report generators (Python, standard library only) —
-> the router itself is the binaries and nothing else.
+> the tool, not program source.
 > Nothing to build here: route the included board with
 > `./klayout --input-dir example --output-dir out --resize-pcb`.
 > Keep both binaries in the same directory: klayout invokes
@@ -140,10 +138,7 @@ my-board-routed/
   si-report/                   boards built on a fab's stackup: the copper
                                as laid, per net — segments.csv, vias.csv,
                                pads.csv — the reflection data an SI review
-                               starts from, and si-report.pdf built on it
-                               (reflections per DDR net; per serial lane its
-                               eye at the receiver and its impedance along
-                               the lane)
+                               starts from
   fabrication/                 the manufacturing package (below);
                                --gerber-dir moves it, --no-fab skips it
   .input/                      a read-only copy of the input, judged by the
@@ -174,10 +169,9 @@ fabrication/
                       mm, populated parts only
                       drawings-svg/ — front and back fab drawings
   documentation/      <board>-board-render.png (top view),
-                      schematic/<board>.pdf, si-report.pdf (a copy of
-                      si-report/si-report.pdf), signoff-si.html and
-                      signoff-pi.html — the SI documents, written after
-                      the verdict and listed in the manifest
+                      schematic/<board>.pdf, pdn-impedance.html and .csv
+                      (the rail impedance curves, when the board
+                      declares rails)
   design/             the board, project, schematic, tables and libraries
                       as sent to manufacture
   manifest.json       every file with its size and SHA-256, the source
@@ -355,79 +349,18 @@ within 10 %). Then:
 KiCad's own DRC is the ground truth; open the board in KiCad or run
 `kicad-cli pcb drc` on it yourself to confirm.
 
-## The SI and PI sign-off pages — `scripts/`
+## The SI and PI sign-off pages
 
-Beside the binaries the package carries the report generators (Python 3,
-no packages needed). klayout runs them itself at the end of every run —
-`si-report/si-report.pdf` and, in the fabrication package's
-`documentation/`, `si-report.pdf`, `signoff-si.html` and
-`signoff-pi.html` — and prints the lane table on the console (per pair:
-home layer, skew against budget, differential impedance as laid, share
-of the copper within 10 % of the target). To re-run them by hand, or to
-compare several output directories on one page:
-
-```
-python3 scripts/signoff.py    my-board-routed -o my-board-routed/signoff-si.html
-python3 scripts/signoff_pi.py my-board-routed -o my-board-routed/signoff-pi.html
-python3 scripts/si_report.py  my-board-routed my-board-routed/si-report/si-report.pdf
-```
-
-Several output directories on one command line give one page with a
-column per board (a 6/8/10/12-layer comparison, say). `--label TEXT`
-names the build on the page. `si_report.py` (the PDF) applies to boards
-with SI groups — pairs or DDR buses — and says so on a board without
-them. A pair whose ends it recognises as a serial link — a MIPI CSI-2
-sensor into a serializer or SoC, a V3Link forward channel (`serial_links.py`
-lists the parts) — is judged by that link's own standard: the eye at the
-receiver at the parts' data rate, worst corner of their datasheet limits,
-against the receiver's threshold window, with the lane's differential
-impedance profile above it; every other SI net gets the DDR reflection
-judge.
-
-**`signoff-si.html`** — the signal-integrity sign-off:
-
-- a verdict per board — *Signed off* (no open condition), *Conditional*
-  (every gate in spec, a legal termination for every group, but a
-  shipped-quality target missed) or *Not ready* (a DRC/ERC finding, a
-  spec miss, or an impedance outside every legal bin) — with the
-  bring-up settings it was judged at (DQ / CA ODT and PHY drive);
-- the gates table: DRC/ERC, every DDR group's worst skew against its
-  target and spec tiers, home layers and shares, the as-laid impedance
-  of pairs and members, the reflection judge's count;
-- **eye diagrams**: PRBS-7 at the interface's rate through the copper
-  as laid (every segment a transmission line at its own impedance;
-  every reflection), write and read direction, worst-case opening by
-  peak-distortion analysis at the point the DRAM trains to, against the
-  JEDEC receiver mask (LPDDR4 tDIVW × VdIVW) net of a jitter budget —
-  every eye marked PASS/FAIL, a table of all nets, the worst per group
-  drawn; `KLAYOUT_DATA_RATE` (MT/s) and `KLAYOUT_JITTER_UI` set the rate
-  and the jitter allowance;
-- a timing budget per group in picoseconds (UI − mask − jitter − static
-  skew − eye closure = margin), the worst through-via stub against the
-  data rate's harmonics, and the method statement a reviewer expects;
-- **conditions for sign-off**: every missed gate as *measured →
-  required*, with the remedy — nothing on the page is typed in.
-
-**`signoff-pi.html`** — the power-integrity sign-off: one row per rail
-declared in `power.json` (declared load, IPC-2221 ampacity width against
-the width laid, worst IR drop against the budget and its load, plane-fed
-or unmodeled), plane bonds, and the conditions (a rail over budget, laid
-narrow, or not modelable for lack of supply/load pads).
-
-**Field-solver measurements (optional).** `scripts/fullwave/` drives
-openEMS through Antmicro's gerber2ems and si-wrapper to measure a net's
-impedance, loss and crosstalk on the real copper; when its
-`si-report/fullwave.json` is present, the SI page shows the measured
-impedance beside the router's model, the measured eye (loss and
-crosstalk) beside the bounce eye, and |S| and TDR figures. Those tools
-are external installs (openEMS, gerbv, KiCad's Python) and are not part
-of this package; the `README.md` in `scripts/fullwave/` describes the
-recipe and its pitfalls.
-
-**`progress.py`** turns a history of sign-off runs (`signoff.py
---record history.json`) into a build-by-build progress page: verdict
-timeline, metric charts, an eye per board per build, changes since the
-previous build marked.
+This package is executables only. The sign-off generators that turn a
+run into `si-report.pdf`, `signoff-si.html` and `signoff-pi.html` are not
+part of it, so those three documents are not written. Everything they
+would read is: the console lane table (per pair: home layer, skew against
+budget, differential impedance as laid, share of the copper within 10 %
+of the target), `si-report/` with the copper as laid per net
+(`segments.csv`, `vias.csv`, `pads.csv`), the rail impedance curves
+(`pdn-impedance.html` and `.csv`, in the fabrication package's
+`documentation/`, or beside the board when it has no package)
+and the verdict JSON.
 
 ## Requirements
 
@@ -436,7 +369,6 @@ previous build marked.
   it the board still routes, but the DRC / ERC gates, the pour
   verification and the fab package are skipped, and the verdict says so.
 - Both binaries in the same directory.
-- **Python 3** for the sign-off pages (`scripts/`); no packages beyond the standard library.
 
 ## Limitations
 

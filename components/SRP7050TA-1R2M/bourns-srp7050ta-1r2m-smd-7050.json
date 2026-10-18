@@ -1,0 +1,43 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "SRP7050TA-1R2M",
+    "description-s": "1.2 uH ±20% shielded power inductor, carbonyl powder core, 7.3 x 6.6 x 4.8 mm, DCR 6.7 mOhm typ / 7.5 max, Irms 14 A (40 C rise), Isat 18 A (-20% L), AEC-Q200, -55~150°C (SRP7050TA datasheet); buyable alternative to XAL7070-122MEC for the TPS61088 boost",
+    "non-technical-o": {
+      "cost-o": {
+        "1K": 0.4754,
+        "10K": 0.4539,
+        "100K": 0.4473
+      },
+      "distributor-s": "Onlinecomponents.com",
+      "moq-i": 800,
+      "order-mult-i": 800,
+      "lead-time-weeks-i": 16,
+      "stock-i": 800
+    },
+    "package-ao": [
+      { "ptype-s": "smd-7050" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor-shielded"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "passive-o": {
+      "esr-mr-i": 8,
+      "lead-style-s": "smd",
+      "value-i": 1200,
+      "value-unit-s": "nh",
+      "current-max-i": 18000,
+      "tolerance-pct-x10": 200
+    }
+  }
+}

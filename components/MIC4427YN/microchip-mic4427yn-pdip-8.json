@@ -56,7 +56,7 @@
       { "6": "ds-power-rx" },
       { "6": "1uf-gnd" },
       { "6": "100nf-gnd" },
-      { "3": "gnd" }
+      { "3": "dvss" }
     ],
     "cfgpins-ao": [
       { "1": "nc" },

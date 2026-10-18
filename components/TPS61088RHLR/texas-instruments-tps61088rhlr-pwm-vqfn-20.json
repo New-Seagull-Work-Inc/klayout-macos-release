@@ -243,7 +243,37 @@
       "has_pgood_b": false,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "sw_pins-as": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_mv": 14500
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_mv": 14500,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in TPS61088RHLR.pdf: no switch rise-time row in its tables (35 pages); section 11.1 only says the switch rise and fall times are very fast",
+        "sw_fall_ns": "not stated in TPS61088RHLR.pdf: no switch fall-time row in its tables (35 pages)",
+        "sw_coss_pf": "not stated in TPS61088RHLR.pdf: no switch-pin or C_oss capacitance row in its tables (35 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "TPS61088RHLR.pdf",
+        "page_n": 4,
+        "table-s": "6.1 Absolute Maximum Ratings (row VIN, SW, FSW, VOUT: -0.3 V to 14.5 V; no transient row). Entered by hand: the datasheet on file is TI's Chinese edition (ZHCSDT5), which procurement supplies does not read"
+      }
     },
     "non-technical-o": {
       "cost-o": {

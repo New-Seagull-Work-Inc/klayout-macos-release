@@ -98,8 +98,8 @@
       { "E4": "ds-power-rx" },
       { "E4": "dvdd-1_8" },
       { "E4": "1uf-gnd" },
-      { "C1": "gnd" },
-      { "E5": "gnd" }
+      { "C1": "dvss" },
+      { "E5": "dvss" }
     ],
     "cfgpins-ao": [],
     "notes-s": "Ball map: datasheet rev 1.5 section 2.1, 'Ball Assignment for MINI-BGA 24B', left-hand drawing (X8/X16 mode); ball A1 is not populated. Decoupling per section 8.3: a low-ESR capacitor of 1 uF or less close to the device (one per VDD ball here) and a 4.7 uF to 10 uF capacitor for the burst-refresh peak (about 25 mA). VDDQ is shorted to VDD internally. X16 mode is selected by mode register MR8[6] = 1; the default is X8.",

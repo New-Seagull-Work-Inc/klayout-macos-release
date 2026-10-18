@@ -1,0 +1,50 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-contact-plug",
+    "vendor-s": "JST",
+    "part-s": "SPUD-001T-P0.5",
+    "description-s": "JST PUD crimp contact, AWG 26-22 (0.13-0.33 mm2), insulation 0.95-1.5 mm, tin; 3 A at AWG 22, 250 V. One per circuit in PUDP housings; crimp applicator MKS-L with die MK/SPUD-001-05.",
+    "non-technical-o": {
+      "cost-o": {
+        "1K": 0.0181,
+        "10K": 0.0181,
+        "100K": 0.0181
+      },
+      "distributor-s": "Verical",
+      "moq-i": 110,
+      "stock-i": 294298
+    },
+    "package-ao": [
+      { "ptype-s": "crimp-contact-pud" },
+      { "ppins-i": 1 }
+    ],
+    "blocks-as": [
+      "contact"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "CONTACT" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 1,
+      "gender_s": "female",
+      "mount_s": "cable",
+      "orientation_s": "cable",
+      "current_per_pin_ma_i": 3000,
+      "voltage_max_v_i": 250,
+      "voltage_max_v_f": 250,
+      "wire_awg_min_i": 26,
+      "wire_awg_max_i": 22,
+      "contact_plating_s": "tin",
+      "family_s": "pud",
+      "housing_part_s": "PUDP-14V-S",
+      "source_s": "JST PUD catalog, contact table"
+    },
+    "max_currents-ao": [
+      { "1": 3000 }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "Molex",
+    "part-s": "215325-1021",
+    "description-s": "Mini-Fit Jr. female-to-female off-the-shelf cable assembly, dual row, 2 circuits, 150 mm (5.9 in), 16 AWG UL 1015, tin, 9.0 A per contact, 600 V, black. A cable BOM line between two 39-29-9023 (5566) headers: the battery cable, 1 BAT+, 2 GND. Family lengths: 150 / 300 / 600 mm (215325-1021 / -1022 / -1023); no 254 mm.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 2.641,
+        "100": 2.2444,
+        "1K": 1.90784,
+        "10K": 1.78849,
+        "100K": 1.78849
+      },
+      "distributor-s": "DigiKey",
+      "moq-i": 1,
+      "lead-time-weeks-i": 20,
+      "stock-i": 573
+    },
+    "package-ao": [
+      { "ptype-s": "cable-2x1-4.2mm-female-both-ends" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "plug",
+      "power-plug",
+      "cable"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "max_currents-ao": [
+      { "1": 9000 },
+      { "2": 9000 }
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 2,
+      "pitch_mm_f": 4.2,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 9000,
+      "voltage_max_v_i": 600,
+      "contact_plating_s": "tin",
+      "locking_b": true,
+      "polarized_b": true,
+      "length_mm_f": 150,
+      "wire_awg_i": 16,
+      "wire_type_s": "UL 1015",
+      "family_s": "mini-fit-jr",
+      "mates_with_series_s": "5566, 5569, 5559",
+      "mates_with_part_s": "39-29-9023",
+      "wiring_s": "circuit-for-circuit (1-1, 2-2), Molex OTS dual-ended convention; NOT yet checked against sales drawing 2153251021-000 (molex.com refuses automated downloads): meter the first harness before the cell is connected",
+      "source_s": "Molex product sheet 2153251021 (procurement, no LLM)"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-jack",
+    "vendor-s": "Molex",
+    "part-s": "39-29-9023",
+    "description-s": "Mini-Fit Jr. vertical header (5566-02A2, 0039299023), dual row, 2 circuits, 4.20 mm pitch, snap-in plastic pegs, tin, 9.0 A per contact, 600 V, THT for 1.6 mm boards. Board end of the battery cable: 1 BAT+ (V), 2 GND. Mates with Mini-Fit Jr. receptacle 5557 and the off-the-shelf harnesses 215325-102x (150 / 300 / 600 mm, 16 AWG). The same part on both boards.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.22922,
+        "100": 0.22922,
+        "1K": 0.22922,
+        "10K": 0.22922,
+        "100K": 0.22922
+      },
+      "distributor-s": "Avnet",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 18,
+      "stock-i": 65095
+    },
+    "package-ao": [
+      { "ptype-s": "header-2x1-4.2mm-vertical-tht" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "header",
+      "jack",
+      "power-jack"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-batt-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "V" },
+      { "2": "GND" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "1": "ds-batt-rxtx" },
+      { "2": "dvss" }
+    ],
+    "cfgpins-ao": [],
+    "max_currents-ao": [
+      { "1": 9000 },
+      { "2": 9000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 105
+        }
+      }
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 2,
+      "pitch_mm_f": 4.2,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "through-hole",
+      "current_per_pin_ma_i": 9000,
+      "voltage_max_v_i": 600,
+      "mating_cycles_i": 30,
+      "contact_plating_s": "tin",
+      "locking_b": true,
+      "shielded_b": false,
+      "polarized_b": true,
+      "family_s": "mini-fit-jr",
+      "mates_with_series_s": "5557; OTS harness 215325",
+      "source_s": "Molex product sheet 0039299023 and sales drawing 55660021-SD (2-circuit: B 5.4, C 9.40, rows 5.50, pegs 3.00 dia)",
+      "mate-o": {
+        "part_s": "215325-1022",
+        "model_s": "footprints/39-29-9023.3dshapes/39-29-9023-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -3.5,
+          -3.0,
+          3.5,
+          12.0
+        ],
+        "height_mm_f": 38.5,
+        "z_min_mm_f": 0.0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Molex SD-5557-003: 2-circuit receptacle 5.4 x 9.6 (+2.5 latch) mm, 19.6 mm long, 10.7 mm above the header when seated; two 16 AWG wires (3.1 mm max insulation) 15 mm straight up; keepout adds a finger's reach on the latch side"
+      },
+      "courtyard_area_mm2_f": 160.8,
+      "board_area_mm2_f": 201.0,
+      "board_area_note_s": "bounding rect of courtyard and mate keepout",
+      "fields_source_s": "9.0 A per contact at 16 AWG, 600 V (Molex sheet on file)",
+      "voltage_max_v_f": 600.0
+    }
+  }
+}

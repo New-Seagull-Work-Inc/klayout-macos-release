@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Panasonic",
+    "part-s": "ERJ-2RKF9310X",
+    "description-s": "931 Ohm ±1% 0.1 W thick film chip resistor, 0402; second source for the Yageo RC0402FR-07 part",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0054,
+        "100": 0.0054,
+        "1K": 0.0054,
+        "10K": 0.0054,
+        "100K": 0.0054
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1764,
+      "order-mult-i": 1,
+      "stock-i": 1764
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 931000,
+      "value-unit-s": "r",
+      "power-mw-i": 100,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

@@ -56,7 +56,7 @@
       { "3": "ds-power-rx" },
       { "2": "10uf-gnd" },
       { "2": "100nf-gnd" },
-      { "8": "gnd" }
+      { "8": "dvss" }
     ],
     "cfgpins-ao": [
       { "6": "vref" },

@@ -1,0 +1,52 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-contact-plug",
+    "vendor-s": "Molex",
+    "part-s": "50-29-1638",
+    "description-s": "KK 254 female crimp terminal (series 2759), 22-30 AWG, 2.54 mm pitch, tin; for receptacle series 2695. One per circuit; a cable BOM line. Molex successor of 08-50-0114 (obsolete at DigiKey, 2026-10-14); same series, wire range and finish.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.127,
+        "100": 0.1075,
+        "1K": 0.09594,
+        "10K": 0.08283,
+        "100K": 0.08283
+      },
+      "distributor-s": "DigiKey",
+      "stock-i": 73306
+    },
+    "package-ao": [
+      {
+        "ptype-s": "crimp-contact-22-30awg"
+      },
+      {
+        "ppins-i": 1
+      }
+    ],
+    "blocks-as": [
+      "crimp-contact"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      {
+        "1": "CONTACT"
+      }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 1,
+      "rows_i": 1,
+      "pitch_mm_f": 2.54,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "contact_plating_s": "tin",
+      "housing_series_s": "2695",
+      "wire_awg_s": "22-30",
+      "source_s": "DigiKey product parameters for 0050291638 (series KK254, 2759) and Molex product sheet; record derived from 08-50-0114's (no LLM)"
+    }
+  }
+}

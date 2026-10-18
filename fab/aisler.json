@@ -1,0 +1,567 @@
+{
+  "found": true,
+  "vendor": "AISLER B.V. (AISLER, 'Beautiful Boards')",
+  "source_url": "https://community.aisler.net/t/pcb-portfolio/101",
+  "tier_s": "budget",
+  "country_s": "Germany",
+  "location_s": "Origin 'Germany / Europe' per the PCB Portfolio page; Aachen, Germany (company HQ, not restated on the pages read). Service status page refers to 'our manufacturing facility' without a city.",
+  "assembly_b": true,
+  "process_s": "Pooled prototype products ordered through aisler.net: 4 Layer 35 µm ENIG (0.8 / 1.6 mm, FR4 TG150) design rules used for the top-level floors",
+  "turn_days_fab_min": 2,
+  "turn_times_fab-ao": [
+    {
+      "layers": "2",
+      "service": "2 Layer 1.6mm HASL Blitz",
+      "days": 2,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "2",
+      "service": "2 Layer 1.6mm HASL/ENIG Budget",
+      "days": 10,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "2",
+      "service": "2 Layer 1.6mm ENIG Blitz",
+      "days": 5,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "4",
+      "service": "4 Layer 1.6mm ENIG Blitz",
+      "days": 4,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "4",
+      "service": "4 Layer 0.8mm ENIG Blitz",
+      "days": 5,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "4",
+      "service": "4 Layer 0.8/1.6mm ENIG Budget",
+      "days": 10,
+      "unit": "business days (target)",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "6-8",
+      "service": "not listed on the service status page",
+      "days": "not published",
+      "unit": "-",
+      "source": "https://community.aisler.net/t/service-status/399"
+    }
+  ],
+  "turn_times_assembly-ao": [
+    {
+      "layers": "2",
+      "service": "2 Layer Assembly Blitz",
+      "days": "9 - 12",
+      "unit": "business days total incl. material",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "4",
+      "service": "4 Layer 1.6mm Assembly Blitz",
+      "days": 11,
+      "unit": "business days total incl. material",
+      "source": "https://community.aisler.net/t/service-status/399"
+    },
+    {
+      "layers": "any",
+      "service": "Amazing Assembly",
+      "days": 18,
+      "unit": "business days total incl. material",
+      "source": "https://community.aisler.net/t/service-status/399"
+    }
+  ],
+  "shipping_us-ao": [
+    {
+      "method": "UPS Express",
+      "days": "2-5",
+      "unit": "business days",
+      "to": "USA",
+      "from": "Germany",
+      "cost": "calculated at checkout; UPS adds 2.5 € to all USA-bound parcels; import duties paid by customer",
+      "source": "https://community.aisler.net/t/shipping-methods/672"
+    },
+    {
+      "method": "UPS Expedited",
+      "days": "3-10",
+      "unit": "business days",
+      "to": "USA",
+      "from": "Germany",
+      "cost": "calculated at checkout",
+      "source": "https://community.aisler.net/t/shipping-methods/672"
+    },
+    {
+      "method": "DHL Parcel / Warenpost (free standard option)",
+      "days": "4-14 / 6-18",
+      "unit": "business days",
+      "to": "USA",
+      "from": "Germany",
+      "cost": "'we cannot ship via DHL to the US at the moment. This also affects our free shipping option.' (update 2025-09-25)",
+      "source": "https://community.aisler.net/t/shipping-methods/672"
+    }
+  ],
+  "cutoff_note": "'The Deadline for design submission is 6AM CET on a business day.' First business day = first full day 5:30h-18h. https://community.aisler.net/t/service-status/399",
+  "times_not_published_as": [
+    "6- and 8-layer lead times",
+    "fixed shipping prices"
+  ],
+  "times_note": "Target lead times from the Service Status page (updated 2026-10-15); US shipping only via UPS at present.",
+  "times_retrieved_utc": "2026-10-17T00:00:00Z",
+  "min_trace_width_mm": 0.125,
+  "min_trace_spacing_mm": 0.125,
+  "min_drill_mm": 0.25,
+  "min_via_drill_mm": 0.25,
+  "min_via_diameter_mm": 0.45,
+  "min_annular_ring_mm": 0.1,
+  "min_hole_to_hole_mm": 0.3,
+  "min_silkscreen_width_mm": 0.15,
+  "min_silkscreen_height_mm": 0.8,
+  "min_solder_mask_dam_mm": 0.1,
+  "min_solder_mask_clearance_mm": 0.05,
+  "min_board_edge_clearance_mm": 0.3,
+  "min_layers": 2,
+  "max_layers": 8,
+  "layer_counts": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "board_thickness_mm": [
+    0.8,
+    1.6
+  ],
+  "copper_weights_oz": [
+    1,
+    2
+  ],
+  "materials": [
+    "FR4 TG 140°C (2 layer)",
+    "FR4 TG 150°C (4/6/8 layer 35 µm)",
+    "FR4 (4 layer 70 µm, variable)"
+  ],
+  "surface_finishes": [
+    "HASL",
+    "ENIG"
+  ],
+  "solder_mask_colors": [
+    "Green"
+  ],
+  "impedance_control": null,
+  "max_aspect_ratio": null,
+  "via_in_pad_note": "Not supported: 'Buried, blind, micro or tented vias are not supported'; staff: 'We do not support filling/plugging vias with resin ... this is what we mean by via in pad.' https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733 ; https://community.aisler.net/t/3766",
+  "advanced-o": {
+    "process_s": "6L+ Layer 35µm ENIG design rules (valid for 6, 8 and more layers)",
+    "min_trace_width_mm": 0.1,
+    "min_trace_spacing_mm": 0.1,
+    "min_drill_mm": 0.25,
+    "min_via_drill_mm": 0.25,
+    "min_via_diameter_mm": 0.45,
+    "min_annular_ring_mm": 0.1,
+    "min_silkscreen_width_mm": 0.15,
+    "min_silkscreen_height_mm": 0.8,
+    "min_solder_mask_dam_mm": 0.1,
+    "min_solder_mask_clearance_mm": 0.05,
+    "min_board_edge_clearance_mm": 0.3,
+    "note": "Identical to the 4-layer ENIG rules except 100 µm / 4 mil track and space. https://community.aisler.net/t/6l-layer-35-m-enig-design-rules/5467"
+  },
+  "not_published_as": [
+    "impedance control service / tolerance (impedance tables are 'basic orientation' only)",
+    "max aspect ratio",
+    "Df",
+    "copper foil type",
+    "solder mask colours other than green (portfolio shows colour swatches as images only)"
+  ],
+  "sources": {
+    "4 Layer 35µm ENIG rules (0.8 and 1.6 mm): min tracewidth 125 µm, min copper spacing 125 µm, min via drill 0.25 mm, max via drill 0.45 mm, min via annular ring 100 µm, min PTH drill 0.5 mm, PTH annular ring 300 µm, min drill spacing 300 µm, copper to edge 300 µm, silkscreen width 150 µm / text height 800 µm, soldermask dam 100 µm, suggested soldermask expansion 50 µm, ENIG Ni 4-7 µm / Au 0.05-0.1 µm": "https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733",
+    "6L+ rules: 100/100 µm, same drills": "https://community.aisler.net/t/6l-layer-35-m-enig-design-rules/5467",
+    "HASL vs ENIG summary table (2 L HASL 200/150 µm, drill >=0.3 mm; ENIG 125/125 µm, drill >=0.25 mm; 70 µm copper 225/225 HASL, 175/175 ENIG)": "https://community.aisler.net/t/pcb-design-rules/41",
+    "products, layers, thickness, copper, base material, stackup 'variable' for 2 L and 4 L 70 µm": "https://community.aisler.net/t/pcb-portfolio/101",
+    "lead times, cut-off": "https://community.aisler.net/t/service-status/399",
+    "shipping": "https://community.aisler.net/t/shipping-methods/672",
+    "via plating ~18-25 µm (staff answer)": "https://community.aisler.net/t/2960",
+    "press-fit holes minimum copper 25 µm": "https://community.aisler.net/t/4429"
+  },
+  "note": "All AISLER specifications are published as staff-authored articles on community.aisler.net (AISLER's own Discourse site, linked from aisler.net). Top-level = 4 Layer 35 µm ENIG product rules. min_via_diameter_mm 0.45 is DERIVED (0.25 mm via drill + 2 x 100 µm via annular ring); no via pad diameter is stated. min_drill_mm is the via drill; component (PTH) drills start at 0.5 mm with 300 µm ring. min_solder_mask_clearance_mm 0.05 is the 'suggested soldermask expansion', not a stated minimum. 2-layer HASL is coarser (200/150 µm, 0.3 mm drill). impedance_control null: AISLER publishes impedance width tables for its 4/6/8-layer stackups as 'basic orientation' but no controlled-impedance service or tolerance on the pages read.",
+  "retrieved_utc": "2026-10-17T00:00:00Z",
+  "barrel_plating_um": 18,
+  "barrel_plating_range_um": [
+    18,
+    25
+  ],
+  "barrel_plating-s": "range",
+  "barrel_plating_source-s": "AISLER staff (Thea) in 'Via Plating Thickness' thread, 2023-08-16: 'The plating is ~18-25µm' https://community.aisler.net/t/2960 ; another staff reply 2024-04-22: 'Plating holes add around 22 µm of bare copper' (stated as from memory) https://community.aisler.net/t/3928 ; press-fit holes (4 L 1.6 mm ENIG pool only): 'minimum copper thickness of 25 µm' https://community.aisler.net/t/4429 ; read 2026-10-17. Forum answers, not a formal specification.",
+  "copper_foil_note-s": "not published (foil type, roughness); stackups print 35 µm for every copper layer. read 2026-10-17",
+  "laminate_df_note-s": "no Df and no laminate brand; FR4 TG 150°C for 4/6/8-layer 35 µm products. https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-17",
+  "via_in_pad_standard_b": false,
+  "via_in_pad_standard_source-s": "AISLER staff: \"We do not support filling/plugging vias with resin ... this is what we mean by via in pad.\" https://community.aisler.net/t/3766, read 2026-10-17",
+  "stackups": [
+    {
+      "name": "AISLER 6 Layers 1.6mm 35µm",
+      "layers": 6,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.615,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "thickness-s": "page title '6 Layers 1.6mm 35µm Stackup' (copper 35 µm on all layers)",
+      "source_pdf-s": [
+        "https://community.aisler.net/t/6-layers-1-6mm-35-m-stackup/5458",
+        "https://community.aisler.net/uploads/default/original/2X/8/857ea85cd8a35d38e08657730a8f8dbd1ba60238.jpeg"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (TOP)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN1)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3,
+          "er": 4.5,
+          "material": "Core FR4",
+          "printed-s": "300 µm, εr 4.5"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN2)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN3)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3,
+          "er": 4.5,
+          "material": "Core FR4",
+          "printed-s": "300 µm, εr 4.5"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN4)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (BOT)"
+        }
+      ]
+    },
+    {
+      "name": "AISLER 8 Layers 1.6mm 35µm",
+      "layers": 8,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.67,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "thickness-s": "page title '8 Layers 1.6mm 35µm Stackup'",
+      "source_pdf-s": [
+        "https://community.aisler.net/t/8-layers-1-6mm-35-m-stackup/5459",
+        "https://community.aisler.net/uploads/default/original/2X/b/b7149b60461276d5c5821452988e7a102bc11cba.jpeg"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (TOP)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN1)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.4,
+          "material": "Core FR4",
+          "printed-s": "200 µm, εr 4.4"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN2)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN3)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.0,
+          "material": "Core FR4",
+          "printed-s": "200 µm, εr 4.00",
+          "er-s": "printed '4.00' for this middle core while the other two cores read '4.4' - copied as printed"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN4)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.115,
+          "er": 4.25,
+          "material": "Prepreg 2116",
+          "printed-s": "115 µm, εr 4.25"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN5)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.4,
+          "material": "Core FR4",
+          "printed-s": "200 µm, εr 4.4"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN6)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (BOT)"
+        }
+      ]
+    },
+    {
+      "name": "AISLER 4 Layers 0.8mm 35µm",
+      "layers": 4,
+      "thickness_mm": 0.8,
+      "measured_total_mm": 0.78,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "thickness-s": "Final Thickness: 0.8 mm +/- 10%",
+      "source_pdf-s": [
+        "https://community.aisler.net/t/4-layers-0-8-mm-stackup/5460",
+        "https://community.aisler.net/uploads/default/original/2X/d/dc56d865e81abc646b52b4b753b83c3413236ed1.png"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (TOP)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN1)"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.36,
+          "er": 4.5,
+          "material": "Core FR4",
+          "printed-s": "360 µm, εr 4.5"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (IN2)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.07,
+          "er": 4.0,
+          "material": "Prepreg 1080",
+          "printed-s": "70 µm, εr 4.0"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Copper 35 µm (BOT)"
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://community.aisler.net/t/6-layers-1-6mm-35-m-stackup/5458",
+  "stackups_sources-as": [
+    "https://community.aisler.net/t/6-layers-1-6mm-35-m-stackup/5458",
+    "https://community.aisler.net/uploads/default/original/2X/8/857ea85cd8a35d38e08657730a8f8dbd1ba60238.jpeg",
+    "https://community.aisler.net/t/8-layers-1-6mm-35-m-stackup/5459",
+    "https://community.aisler.net/uploads/default/original/2X/b/b7149b60461276d5c5821452988e7a102bc11cba.jpeg",
+    "https://community.aisler.net/t/4-layers-0-8-mm-stackup/5460",
+    "https://community.aisler.net/uploads/default/original/2X/d/dc56d865e81abc646b52b4b753b83c3413236ed1.png",
+    "https://community.aisler.net/t/4-layers-1-6mm-35-m-stackup/5457",
+    "https://community.aisler.net/uploads/default/original/2X/1/112b68b5ca7ad6db93dcabb82f8346bbab3e965f.png"
+  ],
+  "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
+  "stackups_note": "Stackups are images on the topic pages (viewed directly); each dielectric ply is listed separately with its own εr, kept as separate prepreg entries. The 4 Layers 1.6mm 35µm stackup (2x1080 70 µm / Core FR4 1200 µm / 2x1080, all copper 35 µm) is EXCLUDED because its εr column is printed as ranges ('4.0 - 4.3' prepreg, '4.5 - 4.6' core). As a result the first (and only) 4-layer stackup is the 0.8 mm build, so a 1.6 mm 4-layer board has no matching stackup here. 2-layer and 4-layer 70 µm products are 'variable' (no stackup). In the 8-layer image the middle core (IN3-IN4) is printed 'εr 4.00' while the outer cores are '4.4'; copied as printed (may be a typo). Layer order: 6L 1.6, 8L 1.6, 4L 0.8."
+}

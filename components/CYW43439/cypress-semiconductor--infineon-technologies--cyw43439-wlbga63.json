@@ -435,46 +435,46 @@
         "F6": "100nf-gnd"
       },
       {
-        "D4": "gnd"
+        "D4": "dvss"
       },
       {
-        "J5": "gnd"
+        "J5": "dvss"
       },
       {
-        "A7": "gnd"
+        "A7": "dvss"
       },
       {
-        "B6": "gnd"
+        "B6": "dvss"
       },
       {
-        "H4": "gnd"
+        "H4": "dvss"
       },
       {
-        "J2": "gnd"
+        "J2": "dvss"
       },
       {
-        "K2": "gnd"
+        "K2": "dvss"
       },
       {
-        "L2": "gnd"
+        "L2": "dvss"
       },
       {
-        "L3": "gnd"
+        "L3": "dvss"
       },
       {
-        "L4": "gnd"
+        "L4": "dvss"
       },
       {
-        "H2": "gnd"
+        "H2": "dvss"
       },
       {
-        "H3": "gnd"
+        "H3": "dvss"
       },
       {
-        "G2": "gnd"
+        "G2": "dvss"
       },
       {
-        "E3": "gnd"
+        "E3": "dvss"
       },
       {
         "A6": "2.2uh-ldo_vdd1p5"

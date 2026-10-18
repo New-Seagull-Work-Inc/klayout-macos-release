@@ -1,0 +1,78 @@
+{
+  "component-o": {
+    "type-s": "lens",
+    "vendor-s": "Lightspeed Semiconductor",
+    "part-s": "LSS-HLY9903-f1.9-F2.2-TTL14.9-ic6.4-AR0235",
+    "description-s": "M12x0.5 fisheye lens for the AR0235 (1/2.8\", 1920x1200, 2.8 um): EFL 1.9 mm, F2.2, image circle 6.4 mm, FOV 200 diag / 162.2 H / 101 V, 6 glass elements, 440-680 nm (visible only, IR cut), TTL 14.9 mm, 4 g.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 13.3,
+        "100": 11.7,
+        "1K": 9.6,
+        "10K": 9,
+        "100K": 9
+      },
+      "distributor-s": "Nanjing Lightspeed Semiconductor Co.Ltd",
+      "moq-i": 10,
+      "lead-time-weeks-i": 4,
+      "quote-s": "Nanjing Lightspeed Semiconductor Co.Ltd quote USASL20261010001 (2026-10-10, expires 2026-11-09)"
+    },
+    "blocks-as": [
+      "lens"
+    ],
+    "interfaces-as": [
+      "light-rx",
+      "light-tx"
+    ],
+    "max_currents-ao": [],
+    "pins-ao": [],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -30,
+          "max-i": 80
+        }
+      }
+    ],
+    "package-ao": [
+      { "ptype-s": "m12" },
+      { "ppins-i": 0 }
+    ],
+    "specs-o": {
+      "fnumber-f": 2.2,
+      "fov-ao": [
+        { "degrees-i": 200, "imagecircle-f": 6.4 }
+      ],
+      "fov-h-deg-f": 162.2,
+      "fov-v-deg-f": 101,
+      "ttl-f": 14.9,
+      "efl-f": 1.9,
+      "bfl-mechanical-mm-f": 3,
+      "bfl-optical-mm-f": 3.6,
+      "cra-max-deg-f": 12,
+      "distortion-pct-f": -1.7,
+      "distortion-model-s": "f-theta",
+      "elements-s": "6G",
+      "resolution-mp-i": 5,
+      "spectral-nm-ai": [
+        440,
+        680
+      ],
+      "transmission-pct-min-i": 80,
+      "thread-s": "M12x0.5-6g",
+      "weight-g-f": 4,
+      "sensor-s": "AR0235 (1/2.8\")",
+      "source-o": {
+        "datasheet-s": "LSS-HLY9903-f1.9-F2.2-TTL14.9-ic6.4-AR0235.pdf",
+        "page_n": 1,
+        "note-s": "Specification table and dimension figure. The table's TTL reads \"14. mm\"; the drawing gives 14.9 mm (used)."
+      }
+    },
+    "features-as": [
+      "fisheye"
+    ]
+  }
+}

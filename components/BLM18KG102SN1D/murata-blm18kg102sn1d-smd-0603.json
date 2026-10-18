@@ -32,6 +32,61 @@
       "current-max-i": 1000,
       "tolerance-pct-x10": 250
     },
-    "part-s": "BLM18KG102SN1D"
+    "part-s": "BLM18KG102SN1D",
+    "impedance-o": {
+      "z_curve-ao": [
+        { "f_mhz": 1, "z_ohm": 39.04, "r_ohm": 1.746, "x_ohm": 39 },
+        { "f_mhz": 1.271, "z_ohm": 49.86, "r_ohm": 3.201, "x_ohm": 49.76 },
+        { "f_mhz": 1.585, "z_ohm": 62.27, "r_ohm": 5.447, "x_ohm": 62.04 },
+        { "f_mhz": 2.015, "z_ohm": 79.12, "r_ohm": 9.432, "x_ohm": 78.56 },
+        { "f_mhz": 2.511, "z_ohm": 98.18, "r_ohm": 15.18, "x_ohm": 96.99 },
+        { "f_mhz": 3.193, "z_ohm": 123.6, "r_ohm": 24.82, "x_ohm": 121.1 },
+        { "f_mhz": 3.979, "z_ohm": 151.6, "r_ohm": 38, "x_ohm": 146.8 },
+        { "f_mhz": 5.06, "z_ohm": 187.6, "r_ohm": 58.73, "x_ohm": 178.2 },
+        { "f_mhz": 6.306, "z_ohm": 225.5, "r_ohm": 84.87, "x_ohm": 208.9 },
+        { "f_mhz": 8.018, "z_ohm": 271.1, "r_ohm": 121.9, "x_ohm": 242.2 },
+        { "f_mhz": 9.992, "z_ohm": 315.9, "r_ohm": 163, "x_ohm": 270.6 },
+        { "f_mhz": 12.71, "z_ohm": 366.7, "r_ohm": 214, "x_ohm": 297.8 },
+        { "f_mhz": 15.83, "z_ohm": 415.3, "r_ohm": 264.7, "x_ohm": 320 },
+        { "f_mhz": 20.13, "z_ohm": 472.5, "r_ohm": 324.8, "x_ohm": 343.2 },
+        { "f_mhz": 25.09, "z_ohm": 532.2, "r_ohm": 387.2, "x_ohm": 365.1 },
+        { "f_mhz": 31.9, "z_ohm": 609.7, "r_ohm": 470.2, "x_ohm": 388.1 },
+        { "f_mhz": 39.76, "z_ohm": 695.5, "r_ohm": 568, "x_ohm": 401.3 },
+        { "f_mhz": 50.56, "z_ohm": 804.5, "r_ohm": 704.3, "x_ohm": 388.7 },
+        { "f_mhz": 63.01, "z_ohm": 910.7, "r_ohm": 850.4, "x_ohm": 325.7 },
+        { "f_mhz": 80.12, "z_ohm": 1011, "r_ohm": 997.1, "x_ohm": 169.9 },
+        { "f_mhz": 99.85, "z_ohm": 1060, "r_ohm": 1059, "x_ohm": -50.74 },
+        { "f_mhz": 127, "z_ohm": 1039, "r_ohm": 992, "x_ohm": -309.1 },
+        { "f_mhz": 158.2, "z_ohm": 954.8, "r_ohm": 825.7, "x_ohm": -479.4 },
+        { "f_mhz": 201.2, "z_ohm": 822, "r_ohm": 607, "x_ohm": -554.3 },
+        { "f_mhz": 250.7, "z_ohm": 691.5, "r_ohm": 428.8, "x_ohm": -542.5 },
+        { "f_mhz": 318.8, "z_ohm": 558.9, "r_ohm": 281.2, "x_ohm": -482.9 },
+        { "f_mhz": 397.3, "z_ohm": 453.2, "r_ohm": 186.9, "x_ohm": -412.9 },
+        { "f_mhz": 505.2, "z_ohm": 356.3, "r_ohm": 118, "x_ohm": -336.2 },
+        { "f_mhz": 629.6, "z_ohm": 282.9, "r_ohm": 76.88, "x_ohm": -272.2 },
+        { "f_mhz": 800.6, "z_ohm": 216.9, "r_ohm": 47.97, "x_ohm": -211.5 },
+        { "f_mhz": 997.7, "z_ohm": 166.8, "r_ohm": 31.07, "x_ohm": -163.9 },
+        { "f_mhz": 1269, "z_ohm": 121, "r_ohm": 19.33, "x_ohm": -119.4 },
+        { "f_mhz": 1581, "z_ohm": 85.04, "r_ohm": 12.52, "x_ohm": -84.11 },
+        { "f_mhz": 2010, "z_ohm": 50.44, "r_ohm": 7.809, "x_ohm": -49.83 },
+        { "f_mhz": 2505, "z_ohm": 21.42, "r_ohm": 5.085, "x_ohm": -20.81 }
+      ],
+      "impedance_ohm": 1060,
+      "impedance_test_mhz": 100,
+      "srf_mhz": 95.31,
+      "l_lf_nh": 6208,
+      "dcr_mohm": 200,
+      "rated_ma": 1000,
+      "source-o": {
+        "s2p-s": "BLM18KG102SN1.s2p",
+        "fixture-s": "series",
+        "z0_ohm": 50,
+        "f_min_mhz": 1,
+        "f_max_mhz": 3000,
+        "url-s": "https://www.murata.com/-/media/webrenewal/tool/sparameter/ferritebeads/v22/blm18-s-v22.ashx (Murata S-parameter data, ferrite beads BLM18 v22 zip: BLM18KG102SN1.s2p)",
+        "retrieved-s": "2026-10-15",
+        "dcr_rated-s": "dcr_mohm / rated_ma: the record's passive-o (value-i, current-max-i), from the datasheet"
+      }
+    }
   }
 }

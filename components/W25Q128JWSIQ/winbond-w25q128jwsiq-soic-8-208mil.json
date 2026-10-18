@@ -55,7 +55,7 @@
       { "1": "ds-qspi-cs" },
       { "2": "ds-qspi-io1" },
       { "3": "ds-qspi-io2" },
-      { "4": "gnd" },
+      { "4": "dvss" },
       { "5": "ds-qspi-io0" },
       { "6": "ds-qspi-clk" },
       { "7": "ds-qspi-io3" },

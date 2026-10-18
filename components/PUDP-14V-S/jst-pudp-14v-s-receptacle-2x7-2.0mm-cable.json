@@ -1,0 +1,70 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "JST",
+    "part-s": "PUDP-14V-S",
+    "description-s": "JST PUD receptacle housing (cable end), 2x7 = 14 circuits, 2.0 mm pitch, 16.0 x 8.3 x 9.1 mm, takes contacts SPUD-001T-P0.5 (AWG 26-22) or SPUD-002T-P0.5 (AWG 28-24). Mates with B14B-PUDSS-1 (vertical) / S14B-PUDSS-1 (right-angle). A cable BOM line: two housings + 28 contacts + 14 wires make the camera harness.",
+    "non-technical-o": {
+      "cost-o": {
+        "1K": 0.147,
+        "10K": 0.143,
+        "100K": 0.139
+      },
+      "distributor-s": "Future Electronics",
+      "moq-i": 1000,
+      "order-mult-i": 1000,
+      "lead-time-weeks-i": 20,
+      "stock-i": 1000
+    },
+    "package-ao": [
+      { "ptype-s": "receptacle-2x7-2.0mm-cable" },
+      { "ppins-i": 14 }
+    ],
+    "blocks-as": [
+      "receptacle",
+      "plug",
+      "power-plug"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" },
+      { "4": "PIN4" },
+      { "5": "PIN5" },
+      { "6": "PIN6" },
+      { "7": "PIN7" },
+      { "8": "PIN8" },
+      { "9": "PIN9" },
+      { "10": "PIN10" },
+      { "11": "PIN11" },
+      { "12": "PIN12" },
+      { "13": "PIN13" },
+      { "14": "PIN14" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 14,
+      "rows_i": 2,
+      "pitch_mm_f": 2,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 3000,
+      "voltage_max_v_i": 250,
+      "voltage_max_v_f": 250,
+      "locking_b": true,
+      "polarized_b": true,
+      "family_s": "pud",
+      "mates_with_part_s": "B14B-PUDSS-1",
+      "mates_with_parts_as": [
+        "B14B-PUDSS-1",
+        "S14B-PUDSS-1"
+      ],
+      "terminal_part_s": "SPUD-001T-P0.5",
+      "source_s": "JST PUD catalog (housing table: PUDP-14V-S A 12.0, B 16.0)"
+    }
+  }
+}

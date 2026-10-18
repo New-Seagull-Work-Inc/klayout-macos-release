@@ -33,7 +33,22 @@
     "diode-o": {
       "technology-s": "schottky",
       "vf-mv-i": 740,
-      "ir-ua-i": 600
+      "ir-ua-i": 600,
+      "cj-curve-ao": [
+        { "vr-mv-i": 1000, "cj-pf-i": 243 },
+        { "vr-mv-i": 2000, "cj-pf-i": 210 },
+        { "vr-mv-i": 5000, "cj-pf-i": 153 },
+        { "vr-mv-i": 10000, "cj-pf-i": 107 },
+        { "vr-mv-i": 12000, "cj-pf-i": 95 },
+        { "vr-mv-i": 20000, "cj-pf-i": 68 },
+        { "vr-mv-i": 24000, "cj-pf-i": 61 },
+        { "vr-mv-i": 40000, "cj-pf-i": 50 }
+      ],
+      "cj-source-o": {
+        "datasheet-s": "MBR360RLG.pdf",
+        "page_n": 3,
+        "figure-s": "Figure 5. Typical Capacitance (read from the curve by procurement pdf-graph; the graph ends at 50 V)"
+      }
     }
   }
 }

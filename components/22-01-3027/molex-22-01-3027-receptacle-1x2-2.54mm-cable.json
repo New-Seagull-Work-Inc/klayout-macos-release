@@ -39,6 +39,7 @@
       "rows_i": 1,
       "pitch_mm_f": 2.54,
       "gender_s": "female",
+      "orientation_s": "cable",
       "mount_s": "cable",
       "mates_with_series_s": "42375, 42377, 42376, 4030, 6373, 6410",
       "terminal_series_s": "2759",

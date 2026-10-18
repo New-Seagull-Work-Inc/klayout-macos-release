@@ -44,7 +44,14 @@
       "voltage_max_v_i": 125,
       "contact_plating_s": "tin",
       "locking_b": true,
-      "shielded_b": false
+      "shielded_b": false,
+      "family_s": "picoblade",
+      "courtyard_area_mm2_f": 27.5,
+      "board_area_mm2_f": 27.5,
+      "board_area_note_s": "courtyard",
+      "fields_source_s": "1 A per contact, 125 V (Nexar maker spec)",
+      "pitch_mm_f": 1.25,
+      "voltage_max_v_f": 125.0
     }
   }
 }

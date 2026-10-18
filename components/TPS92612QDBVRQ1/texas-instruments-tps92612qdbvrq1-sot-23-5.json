@@ -35,7 +35,7 @@
       { "5": "OUT" }
     ],
     "stdpins-ao": [
-      { "1": "gnd" },
+      { "1": "dvss" },
       { "1": "ds-led-c" },
       { "2": "ds-led-rx" },
       { "3": "ds-power-rx" },

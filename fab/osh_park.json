@@ -2,6 +2,199 @@
   "found": true,
   "vendor": "OSH Park",
   "source_url": "https://docs.oshpark.com/services/",
+  "tier_s": "budget",
+  "country_s": "USA",
+  "location_s": "Lake Oswego, OR (ships from); boards fabricated by partner fabs in the United States",
+  "assembly_b": false,
+  "location_source_url": "https://blog.oshpark.com/2020/03/04/all-boards-are-manufactured-in-the-united-states/",
+  "turn_days_fab_min": 5,
+  "turn_times_fab-ao": [
+    {
+      "layers": "1-2",
+      "service": "standard (prototype)",
+      "days": "9-12",
+      "unit": "calendar days",
+      "condition": "time to ship from ordering; 90% of 2-layer orders ship in 10 calendar days; 1.6 mm, 1 oz, ENIG, sets of 3",
+      "source": "https://docs.oshpark.com/services/two-layer/"
+    },
+    {
+      "layers": "1-2",
+      "service": "super swift",
+      "days": 5,
+      "unit": "business days",
+      "condition": "guaranteed to ship within 5 business days; 90% ship within 4 business days (services table: 4-5 business days); ordered before 11AM Monday ships by Friday; before 11AM Tuesday typically by Friday, maybe following Monday; 1.6 mm, 1 oz",
+      "source": "https://docs.oshpark.com/services/super-swift/"
+    },
+    {
+      "layers": "1-2",
+      "service": "2oz 0.8mm",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "0.8 mm, 2 oz",
+      "source": "https://docs.oshpark.com/services/"
+    },
+    {
+      "layers": "1-2",
+      "service": "after dark",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "1.6 mm, 1 oz",
+      "source": "https://docs.oshpark.com/services/"
+    },
+    {
+      "layers": "1-2",
+      "service": "flex",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "listed as 'Temporarily suspended'",
+      "source": "https://docs.oshpark.com/services/"
+    },
+    {
+      "layers": "1-2",
+      "service": "medium run",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "100 sq in minimum, multiples of 10",
+      "source": "https://docs.oshpark.com/services/"
+    },
+    {
+      "layers": 4,
+      "service": "standard (prototype)",
+      "days": "9-14",
+      "unit": "calendar days",
+      "condition": "ship within 9-14 calendar days of ordering; FR408HR, 1.6 mm, 1 oz outer / 0.5 oz inner, ENIG",
+      "source": "https://docs.oshpark.com/services/four-layer/"
+    },
+    {
+      "layers": 4,
+      "service": "super swift",
+      "days": "5-6",
+      "unit": "business days",
+      "condition": "ship within 5-6 business days of ordering; $20/sq in per set of 3",
+      "source": "https://docs.oshpark.com/services/four-layer-swift/"
+    },
+    {
+      "layers": 4,
+      "service": "medium run",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "100 sq in minimum",
+      "source": "https://docs.oshpark.com/services/"
+    },
+    {
+      "layers": 6,
+      "service": "standard (prototype)",
+      "days": "12-21",
+      "unit": "calendar days",
+      "condition": "ship within 12-21 calendar days of ordering (changed from 9-14 on 15-DEC-2025 due to order volumes); no Super Swift or Medium Run for 6 layers",
+      "source": "https://docs.oshpark.com/services/six-layer/"
+    }
+  ],
+  "via_in_pad_turn_note": "Not applicable: OSH Park lists 'Filled+Plated Vias (via-in-pad): No' (https://docs.oshpark.com/services/two-layer/).",
+  "shipping_us-ao": [
+    {
+      "method": "USPS First Class",
+      "days": "1-5",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "USPS Priority",
+      "days": "2-3",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "USPS Express",
+      "days": "1-2",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "UPS Ground",
+      "days": "1-7",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "UPS Second Day Air",
+      "days": "2",
+      "unit": "business days (by end of second business day)",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "UPS Next Day Air",
+      "days": "1",
+      "unit": "business days (by end of next business day)",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx Express Saver",
+      "days": "1-3",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx Two Day",
+      "days": "2",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx Two Day AM",
+      "days": "2",
+      "unit": "business days (early AM to some locations)",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx Standard Overnight",
+      "days": "1",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx Priority Overnight",
+      "days": "1",
+      "unit": "business days",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    },
+    {
+      "method": "FedEx First Overnight",
+      "days": "1",
+      "unit": "business days (early AM to some locations)",
+      "to": "US address",
+      "from": "Lake Oswego, Oregon",
+      "source": "https://docs.oshpark.com/submitting-orders/shipping-information/"
+    }
+  ],
+  "times_not_published_as": [
+    "assembly (OSH Park offers no assembly)",
+    "order cut-off time for standard services"
+  ],
+  "times_note": "OSH Park turn times are 'time to ship' from ordering, so they exclude transit; boards ship from Lake Oswego, Oregon. Shipping-info page: 'Turnaround times range from 5 business days to 3-4 weeks'. USPS First Class is the $0 default domestic option. The 2-layer Super Swift page still says Super Swift is not available for Four Layer orders, but the services table and /services/four-layer-swift/ list 4-layer Super Swift at 5-6 business days; the newer pages are used. Read 2026-10-14.",
+  "times_retrieved_utc": "2026-10-14T00:00:00Z",
   "min_trace_width_mm": 0.127,
   "min_trace_spacing_mm": 0.127,
   "min_drill_mm": 0.2032,
@@ -67,7 +260,40 @@
   ],
   "note": "Most conservative values used across all services. 2-layer uses 6mil (0.1524mm) trace width but 4/6-layer use 5mil (0.127mm). Minimum drill is 8mil (0.2032mm) for 6-layer, 10mil (0.254mm) for 2/4-layer. Annular ring is 5mil (0.127mm) for 2-layer, 4mil (0.1016mm) for 4/6-layer. No specific silkscreen or solder mask dam specifications found. Via diameter not explicitly stated. Impedance control not mentioned.",
   "retrieved_utc": "2026-06-22T23:40:53Z",
+  "barrel_plating_um": 25.4,
+  "barrel_plating-s": "stated (min or average not said)",
+  "barrel_plating_source-s": "OSH Park 4-layer service: via wall plating '1mil (0.0254mm)'. https://docs.oshpark.com/services/four-layer/, read 2026-10-15",
+  "via_in_pad_standard_b": false,
+  "via_in_pad_standard_source-s": "\"Filled+Plated Vias (via-in-pad): No\". https://docs.oshpark.com/services/two-layer/, read 2026-10-17",
   "stackups": [
+    {
+      "name": "OSH Park 2-layer (Prototype / Super Swift / Medium Run)",
+      "layers": 2,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.5952,
+      "copper_outer_oz": 1,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "1.4 mil  (0.0356mm) 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 1.524,
+          "er": 4.5,
+          "material": "175Tg FR4 (Kingboard KB6167F)",
+          "printed-s": "60 mil   (1.5240mm) core +/-6mil   (0.1524mm)"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "1.4 mil  (0.0356mm) 1 oz copper"
+        }
+      ]
+    },
     {
       "name": "OSH Park 4-layer",
       "layers": 4,
@@ -80,44 +306,215 @@
         {
           "type": "copper",
           "thickness_mm": 0.0432,
-          "weight_oz": 1
+          "weight_oz": 1,
+          "foil_type-s": null,
+          "roughness_rz_um": null,
+          "base_foil_um": null,
+          "plating_um": null,
+          "foil_note-s": "not published: OSH Park states '1oz outer' (finished); foil type, roughness and the base foil / plating split are not stated. https://docs.oshpark.com/services/four-layer/, read 2026-10-15"
         },
         {
           "type": "prepreg",
           "thickness_mm": 0.1999,
           "er": 3.61,
-          "material": "Isola FR408HR 2113 prepreg"
+          "material": "Isola FR408HR 2113 prepreg",
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "df_curve-ao": [
+            {
+              "f_ghz": 0.1,
+              "df": 0.007
+            },
+            {
+              "f_ghz": 0.5,
+              "df": 0.008
+            },
+            {
+              "f_ghz": 1,
+              "df": 0.009
+            },
+            {
+              "f_ghz": 2,
+              "df": 0.009
+            },
+            {
+              "f_ghz": 5,
+              "df": 0.01
+            },
+            {
+              "f_ghz": 10,
+              "df": 0.01
+            }
+          ],
+          "df_source-s": "Isola FR408HR Dk/Df Tables, Revision D (last update 2019-10-25) p4 Prepreg Data, row 2113, resin 57.0 %, 0.104 mm/ply: Df 0.007 / 0.008 / 0.009 / 0.009 / 0.010 / 0.010 and Dk 3.67 / 3.64 / 3.62 / 3.61 / 3.60 / 3.59 at 100 MHz / 500 MHz / 1 / 2 / 5 / 10 GHz (OSH Park states 2113 prepreg, Dk 3.61 at 1 GHz). https://www.isola-group.com/wp-content/uploads/data-sheets/FR408HR__Dk_Df_Tables.pdf, read 2026-10-15"
         },
         {
           "type": "copper",
           "thickness_mm": 0.0173,
-          "weight_oz": 0.5
+          "weight_oz": 0.5,
+          "foil_type-s": "RTF",
+          "roughness_rz_um": null,
+          "foil_note-s": "RTF per Isola: 'Standard Material Offering: Laminate ... Copper Foil Type RTF (Reverse Treat Foil)' (FR408HR data sheet Rev. E); OSH Park does not state which foil it buys. Roughness not stated. https://www.isola-group.com/wp-content/uploads/data-sheets/fr408hr.pdf, read 2026-10-15"
         },
         {
           "type": "core",
           "thickness_mm": 0.9906,
           "er": 3.61,
-          "material": "Isola FR408HR core"
+          "material": "Isola FR408HR core",
+          "df": 0.0091,
+          "df_f_ghz": 1,
+          "df_curve-ao": [
+            {
+              "f_ghz": 0.1,
+              "df": 0.0072
+            },
+            {
+              "f_ghz": 1,
+              "df": 0.0091
+            },
+            {
+              "f_ghz": 2,
+              "df": 0.0092
+            },
+            {
+              "f_ghz": 5,
+              "df": 0.0098
+            },
+            {
+              "f_ghz": 10,
+              "df": 0.0095
+            }
+          ],
+          "df_source-s": "Isola FR408HR data sheet Revision E (2021-04-15), typical values (Bereskin stripline; construction not stated): Df 0.0072 / 0.0091 / 0.0092 / 0.0098 / 0.0095 at 100 MHz / 1 / 2 / 5 / 10 GHz. The Dk/Df tables' core data stop at 0.028 in (0.711 mm): no row for this 39 mil core. https://www.isola-group.com/wp-content/uploads/data-sheets/fr408hr.pdf, read 2026-10-15"
         },
         {
           "type": "copper",
           "thickness_mm": 0.0173,
-          "weight_oz": 0.5
+          "weight_oz": 0.5,
+          "foil_type-s": "RTF",
+          "roughness_rz_um": null,
+          "foil_note-s": "RTF per Isola: 'Standard Material Offering: Laminate ... Copper Foil Type RTF (Reverse Treat Foil)' (FR408HR data sheet Rev. E); OSH Park does not state which foil it buys. Roughness not stated. https://www.isola-group.com/wp-content/uploads/data-sheets/fr408hr.pdf, read 2026-10-15"
         },
         {
           "type": "prepreg",
           "thickness_mm": 0.1999,
           "er": 3.61,
-          "material": "Isola FR408HR 2113 prepreg"
+          "material": "Isola FR408HR 2113 prepreg",
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "df_curve-ao": [
+            {
+              "f_ghz": 0.1,
+              "df": 0.007
+            },
+            {
+              "f_ghz": 0.5,
+              "df": 0.008
+            },
+            {
+              "f_ghz": 1,
+              "df": 0.009
+            },
+            {
+              "f_ghz": 2,
+              "df": 0.009
+            },
+            {
+              "f_ghz": 5,
+              "df": 0.01
+            },
+            {
+              "f_ghz": 10,
+              "df": 0.01
+            }
+          ],
+          "df_source-s": "Isola FR408HR Dk/Df Tables, Revision D (last update 2019-10-25) p4 Prepreg Data, row 2113, resin 57.0 %, 0.104 mm/ply: Df 0.007 / 0.008 / 0.009 / 0.009 / 0.010 / 0.010 and Dk 3.67 / 3.64 / 3.62 / 3.61 / 3.60 / 3.59 at 100 MHz / 500 MHz / 1 / 2 / 5 / 10 GHz (OSH Park states 2113 prepreg, Dk 3.61 at 1 GHz). https://www.isola-group.com/wp-content/uploads/data-sheets/FR408HR__Dk_Df_Tables.pdf, read 2026-10-15"
         },
         {
           "type": "copper",
           "thickness_mm": 0.0432,
-          "weight_oz": 1
+          "weight_oz": 1,
+          "foil_type-s": null,
+          "roughness_rz_um": null,
+          "base_foil_um": null,
+          "plating_um": null,
+          "foil_note-s": "not published: OSH Park states '1oz outer' (finished); foil type, roughness and the base foil / plating split are not stated. https://docs.oshpark.com/services/four-layer/, read 2026-10-15"
+        }
+      ]
+    },
+    {
+      "name": "OSH Park 2-layer After Dark",
+      "layers": 2,
+      "thickness_mm": 1.6,
+      "measured_total_mm": 1.5952,
+      "copper_outer_oz": 1,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "1.4 mil  (0.0356mm) 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 1.524,
+          "er": 4.35,
+          "material": "Black 180Tg FR4, opaque light blocking (Ventec VT 447 b)",
+          "printed-s": "60 mil   (1.5240mm) core +/-6mil   (0.1524mm)"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "1.4 mil  (0.0356mm) 1 oz copper"
+        }
+      ]
+    },
+    {
+      "name": "OSH Park 2-layer 2oz 0.8mm",
+      "layers": 2,
+      "thickness_mm": 0.8,
+      "measured_total_mm": 0.8532,
+      "copper_outer_oz": 2,
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "2.8 mil (0.0711mm) 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.711,
+          "er": 4.27,
+          "material": "180 Tg FR4 (Ventec VT-47)",
+          "printed-s": "28 mil (0.711mm) core +/-2.8mil (0.0711mm); Core construction: 4x 7628 Ventec VT-47"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "2.8 mil (0.0711mm) 2 oz copper"
         }
       ]
     }
   ],
+  "stackups_sources-as": [
+    "https://docs.oshpark.com/resources/four-layer-stackup.png",
+    "https://docs.oshpark.com/resources/six-layer-stackup.png",
+    "https://docs.oshpark.com/services/",
+    "https://docs.oshpark.com/services/afterdark/",
+    "https://docs.oshpark.com/services/flex/",
+    "https://docs.oshpark.com/services/four-layer-medium-run/",
+    "https://docs.oshpark.com/services/four-layer-swift/",
+    "https://docs.oshpark.com/services/four-layer/",
+    "https://docs.oshpark.com/services/six-layer/",
+    "https://docs.oshpark.com/services/super-swift/",
+    "https://docs.oshpark.com/services/two-layer-hhdc/",
+    "https://docs.oshpark.com/services/two-layer-medium-run/",
+    "https://docs.oshpark.com/services/two-layer/"
+  ],
+  "stackups_note": "2-layer stackups added 2026-10-17 from the service pages (Dielectric row = er). Left out: the 6-layer (its 36.44 mil centre core has no Dk in the table) and the 2-layer Flex (service temporarily suspended). The 4-layer's construction diagram gives the core Dk as 3.87; the table, used here, gives 3.61. The 4-layer page notes some orders in two date windows were built on an alternate FR408HR + EM528 stackup (not on file).",
   "stackups_source_url": "https://docs.oshpark.com/services/four-layer/",
   "stackups_retrieved_utc": "2026-08-26T04:00:10Z"
 }

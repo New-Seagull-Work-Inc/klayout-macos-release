@@ -79,7 +79,10 @@
       { "9": "47.5k-avss" },
       { "19": "pwm/sync" },
       { "19c": "Burst Mode/PWM mode control and sync input; force high for PWM mode, low for Burst Mode; can be driven by external clock" },
-      { "19": "vin" }
+      { "19": "vin" },
+      { "12": "vcc" },
+      { "12": "pvcc" },
+      { "12c": "tied to pvcc: the datasheet says \"The VCC and PVCC pins must be connected together\"" }
     ],
     "stdpins-ao": [
       { "17": "ds-power-rx" },
@@ -118,7 +121,8 @@
       "has_softstart_b": true,
       "synchronous_b": true,
       "sw_pins-as": [
-        "18"
+        "18",
+        "3"
       ],
       "vin_pins-as": [
         "17"
@@ -132,6 +136,42 @@
       "l_nh_typ": 10000,
       "cin_nf_typ": 4700,
       "cout_nf_typ": 47000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "18"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_ref-s": "pvin",
+          "abs_max_above_ref_mv": 300,
+          "abs_min_transient_mv": -1500,
+          "abs_max_transient_ref-s": "pvin",
+          "abs_max_transient_above_ref_mv": 1500,
+          "abs_max_transient_ns": 100
+        },
+        {
+          "pins-as": [
+            "3"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_ref-s": "pvout",
+          "abs_max_above_ref_mv": 300,
+          "abs_min_transient_mv": -1500,
+          "abs_max_transient_ref-s": "pvout",
+          "abs_max_transient_above_ref_mv": 1500,
+          "abs_max_transient_ns": 100
+        }
+      ],
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in ltc3115-1.pdf: no switch rise-time row in its tables (42 pages)",
+        "sw_fall_ns": "not stated in ltc3115-1.pdf: no switch fall-time row in its tables (42 pages)",
+        "sw_coss_pf": "not stated in ltc3115-1.pdf: no switch-pin or C_oss capacitance row in its tables (42 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "ltc3115-1.pdf",
+        "page_n": 2,
+        "table-s": "Absolute Maximum Ratings"
+      },
       "source-o": {
         "datasheet-s": "ltc3115-1.pdf",
         "page_n": 1,
@@ -162,6 +202,9 @@
         "100K": 0
       }
     },
-    "part-s": "LTC3115EFE-1#PBF"
+    "part-s": "LTC3115EFE-1#PBF",
+    "thermal-o": {
+      "tj-max-c-i": 125
+    }
   }
 }

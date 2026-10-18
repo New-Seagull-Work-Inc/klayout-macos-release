@@ -172,7 +172,8 @@
     "specs-o": {
       "synchronous_b": true,
       "sw_pins-as": [
-        "19"
+        "19",
+        "20"
       ],
       "vin_pins-as": [
         "24"
@@ -185,6 +186,28 @@
       "l_nh_typ": 1000,
       "cin_nf_typ": 1000,
       "cout_nf_typ": 20000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "19",
+            "20"
+          ],
+          "abs_min_mv": -2000,
+          "abs_max_mv": 16000
+        }
+      ],
+      "sw_abs_min_mv": -2000,
+      "sw_abs_max_mv": 16000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in BQ25601RTWR.pdf: no switch rise-time row in its tables (64 pages)",
+        "sw_fall_ns": "not stated in BQ25601RTWR.pdf: no switch fall-time row in its tables (64 pages)",
+        "sw_coss_pf": "not stated in BQ25601RTWR.pdf: no switch-pin or C_oss capacitance row in its tables (64 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "BQ25601RTWR.pdf",
+        "page_n": 7,
+        "table-s": "Absolute Maximum Ratings"
+      },
       "source-o": {
         "datasheet-s": "BQ25601RTWR.pdf",
         "page_n": 45,

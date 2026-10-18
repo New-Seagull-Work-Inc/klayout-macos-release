@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL10A475KA8NQNC",
+    "description-s": "4.7 uF ±10% 25 V X5R 0603 MLCC; second source for C1608X5R1E475K080AC",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.073,
+        "100": 0.073,
+        "1K": 0.073,
+        "10K": 0.069,
+        "100K": 0.043
+      },
+      "distributor-s": "Newark",
+      "moq-i": 4000,
+      "order-mult-i": 1,
+      "stock-i": 36000
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 4700000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x5r"
+    }
+  }
+}

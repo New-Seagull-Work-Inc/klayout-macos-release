@@ -1,0 +1,68 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "Molex",
+    "part-s": "45130-0210",
+    "description-s": "Nano-Fit to Nano-Fit off-the-shelf cable assembly, single row, 2 circuits, 1000 mm, 20 AWG UL 1061, gold, 6.5 A per contact, 250 V. Battery cable between two Nano-Fit headers (105309-1202 vertical / 105313-1302 right-angle, the same family on both boards). Family lengths 150 / 300 / 1000 mm (45130-0201 / -0203 / -0210).",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 2.34,
+        "100": 2.34,
+        "1K": 2.34,
+        "10K": 2.34,
+        "100K": 2.34
+      },
+      "distributor-s": "RS (Formerly Allied Electronics)",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 6
+    },
+    "package-ao": [
+      { "ptype-s": "cable-1x2-2.5mm-female-both-ends" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "plug",
+      "power-plug",
+      "cable"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 1,
+      "pitch_mm_f": 2.5,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 6500,
+      "voltage_max_v_i": 250,
+      "voltage_max_v_f": 250,
+      "contact_plating_s": "gold",
+      "locking_b": true,
+      "polarized_b": true,
+      "length_mm_f": 1000,
+      "wire_awg_i": 20,
+      "wire_type_s": "UL 1061",
+      "family_s": "nano-fit",
+      "mates_with_part_s": "105309-1202",
+      "mates_with_parts_as": [
+        "105309-1202",
+        "105313-1302"
+      ],
+      "mates_with_series_s": "105309, 105311, 105313",
+      "wiring_s": "circuit-for-circuit (1-1, 2-2), Molex OTS dual-ended convention; not checked against the sales drawing (molex.com refuses automated downloads): meter the first harness before the cell is connected",
+      "source_s": "Molex product sheet 451300210 (procurement, no LLM)"
+    },
+    "max_currents-ao": [
+      { "1": 6500 },
+      { "2": 6500 }
+    ]
+  }
+}

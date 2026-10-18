@@ -6,16 +6,20 @@
     "description-s": "1.2 µH 31.2 A shielded power inductor, XAL series",
     "non-technical-o": {
       "lifecycle-o": {},
-      "cost-o": {},
-      "distributor-s": ""
+      "cost-o": {
+        "10": 3.58,
+        "100": 3.58,
+        "1K": 1.41,
+        "10K": 0.95,
+        "100K": 0.95
+      },
+      "distributor-s": "Coilcraft Direct",
+      "moq-i": 1,
+      "stock-i": 1014
     },
     "package-ao": [
-      {
-        "ptype-s": "smd-xal7070"
-      },
-      {
-        "ppins-i": 2
-      }
+      { "ptype-s": "smd-xal7070" },
+      { "ppins-i": 2 }
     ],
     "blocks-as": [
       "inductor"

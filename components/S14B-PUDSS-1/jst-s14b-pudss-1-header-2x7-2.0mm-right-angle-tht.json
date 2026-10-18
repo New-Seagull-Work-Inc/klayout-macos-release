@@ -1,0 +1,118 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-jack",
+    "vendor-s": "JST",
+    "part-s": "S14B-PUDSS-1",
+    "description-s": "JST PUD side-entry shrouded header with PCB bosses, 2x7 = 14 circuits, 2.0 mm pitch, through hole, tin, 3 A per contact (AWG 22), 250 V, -25~85 C. Sits at the board edge (mating along +y). Camera harness. Mates with PUDP-14V-S / SPUD-001T-P0.5.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.387,
+        "100": 0.285,
+        "1K": 0.271,
+        "10K": 0.266,
+        "100K": 0.266
+      },
+      "distributor-s": "CoreStaff",
+      "moq-i": 1,
+      "stock-i": 935
+    },
+    "package-ao": [
+      { "ptype-s": "header-2x7-2.0mm-right-angle-tht" },
+      { "ppins-i": 14 }
+    ],
+    "blocks-as": [
+      "header",
+      "jack",
+      "power-jack"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" },
+      { "4": "PIN4" },
+      { "5": "PIN5" },
+      { "6": "PIN6" },
+      { "7": "PIN7" },
+      { "8": "PIN8" },
+      { "9": "PIN9" },
+      { "10": "PIN10" },
+      { "11": "PIN11" },
+      { "12": "PIN12" },
+      { "13": "PIN13" },
+      { "14": "PIN14" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "max_currents-ao": [
+      { "1": 3000 },
+      { "2": 3000 },
+      { "3": 3000 },
+      { "4": 3000 },
+      { "5": 3000 },
+      { "6": 3000 },
+      { "7": 3000 },
+      { "8": 3000 },
+      { "9": 3000 },
+      { "10": 3000 },
+      { "11": 3000 },
+      { "12": 3000 },
+      { "13": 3000 },
+      { "14": 3000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -25,
+          "max-i": 85
+        }
+      }
+    ],
+    "connector-o": {
+      "pin_count_i": 14,
+      "rows_i": 2,
+      "pitch_mm_f": 2,
+      "gender_s": "male",
+      "orientation_s": "right-angle",
+      "mount_s": "through-hole",
+      "current_per_pin_ma_i": 3000,
+      "current_awg_s": "22",
+      "voltage_max_v_i": 250,
+      "voltage_max_v_f": 250,
+      "contact_plating_s": "tin",
+      "locking_b": true,
+      "polarized_b": true,
+      "family_s": "pud",
+      "mates_with_part_s": "PUDP-14V-S",
+      "courtyard_area_mm2_f": 232.9,
+      "board_area_mm2_f": 232.9,
+      "board_area_note_s": "courtyard plus the on-board part of the mate keepout (right-angle at the board edge: the mate overhangs the edge)",
+      "mate-o": {
+        "part_s": "PUDP-14V-S",
+        "model_s": "footprints/S14B-PUDSS-1.3dshapes/S14B-PUDSS-1-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -2.5,
+          5,
+          14.5,
+          29.1
+        ],
+        "height_mm_f": 8.5,
+        "z_min_mm_f": 0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "JST PUD catalog: side-entry header 16.0 wide, 12.7 deep, 8.5 high; PC board layout gives mated length 14.1 and height 8.5; at the board edge the mated housing overhangs the edge, so the board gives only the courtyard"
+      },
+      "source_s": "JST PUD catalog: side-entry header 16.0 wide, 12.7 deep, 8.5 high; PC board layout gives mated length 14.1 and height 8.5; at the board edge the mated housing overhangs the edge, so the board gives only the courtyard"
+    }
+  }
+}

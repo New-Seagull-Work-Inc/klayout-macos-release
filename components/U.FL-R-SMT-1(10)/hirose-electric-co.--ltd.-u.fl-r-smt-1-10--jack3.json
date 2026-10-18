@@ -34,7 +34,37 @@
       "voltage_max_v_i": 100,
       "contact_plating_s": "gold",
       "locking_b": true,
-      "shielded_b": true
+      "shielded_b": true,
+      "mate-o": {
+        "part_s": "U.FL-LP-068",
+        "model_s": "footprints/U_FL-R-SMT-110.3dshapes/U_FL-R-SMT-110-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -13.5,
+          -2.5,
+          3.3,
+          2.5
+        ],
+        "height_mm_f": 2.5,
+        "z_min_mm_f": 0.0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Hirose U.FL-LP-068 plug on 1.13 mm cable, mated height 2.5 mm max; plug body ~3.4 mm square. The plug turns freely: cable exit modelled toward -x, 10 mm of cable; rotate the keepout with the cable route"
+      },
+      "family_s": "u.fl",
+      "courtyard_area_mm2_f": 7.4,
+      "board_area_mm2_f": 84.0,
+      "board_area_note_s": "bounding rect of courtyard and mate keepout",
+      "fields_source_s": "RF jack: current not applicable; 60 V (Nexar maker spec)",
+      "voltage_max_v_f": 60.0
     },
     "temperatures-ao": [
       {

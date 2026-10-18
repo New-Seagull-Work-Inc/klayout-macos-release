@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "part-s": "GRM188R61A226ME15D",
+    "description-s": "22 µF ±20% 10 V X5R 0603 multilayer ceramic capacitor (MLCC), SMD, 1.6 x 0.8 mm (Murata catalog: '10Vdc X5R 22µF ±20% GRM188R61A226ME15#'); STM32N6 VDDSMPS/VLXSMPS output bulk (1.8 V / 0.81 V rails)",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.095,
+        "100": 0.05,
+        "1K": 0.0354,
+        "10K": 0.031,
+        "100K": 0.031
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 1
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 22000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 10000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-jack",
+    "vendor-s": "Molex",
+    "part-s": "105309-1202",
+    "description-s": "Nano-Fit vertical header, single row, 2 circuits, 2.50 mm pitch, through hole with PCB peg, gold (0.76 um), 8.0 A per contact, 250 V, -40~115 C, for 1.6-2.4 mm boards. Battery link: 1 BAT+, 2 GND. Mates with Nano-Fit receptacle 105307 / OTS harness 45130-02xx.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.34,
+        "100": 0.34,
+        "1K": 0.34,
+        "10K": 0.34,
+        "100K": 0.34
+      },
+      "distributor-s": "RS (Formerly Allied Electronics)",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 994
+    },
+    "package-ao": [
+      { "ptype-s": "header-1x2-2.5mm-vertical-tht" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "header",
+      "jack",
+      "power-jack"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-batt-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "V" },
+      { "2": "GND" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "1": "ds-batt-rxtx" },
+      { "2": "dvss" }
+    ],
+    "cfgpins-ao": [],
+    "max_currents-ao": [
+      { "1": 6500 },
+      { "2": 6500 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 115
+        }
+      }
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 1,
+      "pitch_mm_f": 2.5,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "through-hole",
+      "current_per_pin_ma_i": 6500,
+      "current_awg_s": "20",
+      "voltage_max_v_i": 250,
+      "voltage_max_v_f": 250,
+      "contact_plating_s": "gold",
+      "locking_b": true,
+      "polarized_b": true,
+      "family_s": "nano-fit",
+      "mates_with_part_s": "45130-0203",
+      "courtyard_area_mm2_f": 51,
+      "board_area_mm2_f": 68.4,
+      "board_area_note_s": "courtyard plus the on-board part of the mate keepout",
+      "mate-o": {
+        "part_s": "45130-0203",
+        "model_s": "footprints/105309-1202.3dshapes/105309-1202-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -7.6,
+          -2.22,
+          2.25,
+          4.72
+        ],
+        "height_mm_f": 32.2,
+        "z_min_mm_f": 0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Molex SD-105309-100 (header), SD-105307-100 (receptacle 15.70 long, 5.85 into the header), 45130 harness 20 AWG; keepout adds 2.5 mm on the latch side (-x) for the release finger; mated receptacle height estimated from the drawings"
+      },
+      "source_s": "Molex SD-105309-100 (header), SD-105307-100 (receptacle 15.70 long, 5.85 into the header), 45130 harness 20 AWG; keepout adds 2.5 mm on the latch side (-x) for the release finger; mated receptacle height estimated from the drawings",
+      "header_current_per_pin_ma_i": 8000,
+      "current_note_s": "6.5 A per contact is the 45130 OTS harness rating at 20 AWG (Molex 45130-0203); the gold header alone is rated 8.0 A"
+    }
+  }
+}

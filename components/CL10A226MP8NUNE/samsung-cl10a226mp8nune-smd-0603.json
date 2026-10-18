@@ -1,0 +1,44 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL10A226MP8NUNE",
+    "description-s": "22 µF ±20% 10 V X5R 0603 multilayer ceramic capacitor (MLCC), SMD, 1.6 x 0.8 x 0.8 mm, -55~85°C; second source for GRM188R61A226ME15D (STM32N6 SMPS bulk)",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.0284,
+        "100": 0.0284,
+        "1K": 0.0284,
+        "10K": 0.0284,
+        "100K": 0.0284
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 7,
+      "order-mult-i": 1,
+      "stock-i": 7
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 85
+        }
+      }
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 22000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 10000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    }
+  }
+}

@@ -251,6 +251,13 @@
         "vmax_mv": 1300,
         "i_max_ma": 123,
         "i_typ_ma": 100,
+        "i_step_ma": 122.8,
+        "step_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT",
+          "derived-s": "derived: operating max 123 mA (p17) less the smallest low-power current 0.17 mA (p17, IDD Digital Current XSHUTDOWN signal low (EXTCLK off))"
+        },
         "source-o": {
           "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
           "page_n": 16,
@@ -278,6 +285,13 @@
         "vmax_mv": 1900,
         "i_max_ma": 3,
         "i_typ_ma": 1,
+        "i_step_ma": 2.8,
+        "step_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT",
+          "derived-s": "derived: operating max 2.8 mA (p17) less the smallest low-power current 0.00415 mA (p17, IDD_IO I/O Digital Current XSHUTDOWN signal low (EXTCLK off))"
+        },
         "source-o": {
           "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
           "page_n": 16,
@@ -303,6 +317,13 @@
         "vnom_mv": 1250,
         "vmin_mv": 1200,
         "vmax_mv": 1300,
+        "i_step_ma": 0,
+        "counted_under-s": "VDD",
+        "step_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "derived-s": "counted under VDD: 11. VDD_PHY is shorted internally in the part. The external supply to VDD and VDD_PHY should be the same supply."
+        },
         "source-o": {
           "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
           "page_n": 16,
@@ -323,6 +344,13 @@
         "vmax_mv": 3000,
         "i_max_ma": 52,
         "i_typ_ma": 45,
+        "i_step_ma": 51.5,
+        "step_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "table-s": "Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT",
+          "derived-s": "derived: operating max 51.5 mA (p17) less the smallest low-power current 0.0012 mA (p17, IAA/IAA_PIX Analog/Pixel Current XSHUTDOWN signal low (EXTCLK off))"
+        },
         "source-o": {
           "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
           "page_n": 16,
@@ -345,10 +373,56 @@
         "vnom_mv": 2800,
         "vmin_mv": 2600,
         "vmax_mv": 3000,
+        "i_step_ma": 0,
+        "counted_under-s": "VAA",
+        "step_source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 17,
+          "derived-s": "counted under VAA: the datasheet states one current for both, IAA/IAA_PIX (Table 9. OPERATING CURRENT CONSUMPTION FOR MIPI OUTPUT)"
+        },
         "source-o": {
           "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
           "page_n": 16,
           "table-s": "Table 7. DC ELECTRICAL CHARACTERISTICS"
+        }
+      },
+      {
+        "rail-s": "VDD_IO_ANA",
+        "role-s": "iovdd",
+        "pins-as": [
+          "G3"
+        ],
+        "vnom_mv": 1800,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 8,
+          "table-s": "pin description"
+        }
+      },
+      {
+        "rail-s": "VDD_ANA",
+        "role-s": "dvdd",
+        "pins-as": [
+          "G4"
+        ],
+        "vnom_mv": 1250,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 8,
+          "table-s": "pin description"
+        }
+      },
+      {
+        "rail-s": "VAA_PLL",
+        "role-s": "avdd",
+        "pins-as": [
+          "G8"
+        ],
+        "vnom_mv": 2800,
+        "source-o": {
+          "datasheet-s": "AR0235CSSC28SMKA0-CP2.pdf",
+          "page_n": 7,
+          "table-s": "pin description"
         }
       }
     ]

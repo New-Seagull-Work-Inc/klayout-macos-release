@@ -1,0 +1,587 @@
+{
+  "found": true,
+  "vendor": "Bittele Electronics (7pcb.com)",
+  "source_url": "https://www.7pcb.com/Upload_file/PCB-specifications.pdf",
+  "tier_s": "budget",
+  "country_s": "Canada",
+  "location_s": "HQ Toronto, Ontario (sales, procurement, assembly line); PCB assembly facility 2680 14th Ave, Markham, ON; facilities in Penang, Malaysia and Shenzhen, China. Where bare boards are fabricated is not stated.",
+  "location_source_url": "https://www.7pcb.com/about-bittele",
+  "assembly_b": true,
+  "process_s": "turnkey/bare-board online order; floors from Bittele's 'PCB specifications' PDF (Technical Parameters page, 1 oz row of the line/space table) - no separate online-vs-custom tiers are published",
+  "turn_days_fab_min": 1,
+  "turn_times_fab-ao": [
+    {
+      "layers": "any (not stated)",
+      "service": "Rush",
+      "days": 24,
+      "unit": "hours",
+      "condition": "'Delivery: Rush: 24 Hours'",
+      "source": "https://www.7pcb.com/PCB-Fabrication"
+    },
+    {
+      "layers": "any (not stated)",
+      "service": "Standard Prototype",
+      "days": 5,
+      "unit": "days (business/calendar not stated)",
+      "condition": "standard turn is quoted for low-volume 2-layer 1 oz boards; more layers, heavier copper, blind/buried vias, via-in-pad and very large/small boards add time (https://www.7pcb.com/PCB-Assembly-Turn-Time)",
+      "source": "https://www.7pcb.com/PCB-Fabrication"
+    },
+    {
+      "layers": "any (not stated)",
+      "service": "Standard Production",
+      "days": 10,
+      "unit": "days (business/calendar not stated)",
+      "condition": "",
+      "source": "https://www.7pcb.com/PCB-Fabrication"
+    }
+  ],
+  "shipping_us-ao": [],
+  "shipping_note-s": "not published: no shipping methods, carriers or transit days found on 7pcb.com pages read (PCB-Fabrication, about, turn-time, FAQ pages); consigned parts go to the Toronto office.",
+  "times_not_published_as": [
+    "shipping methods / transit days to the US",
+    "business vs calendar days",
+    "turn time by layer count"
+  ],
+  "times_retrieved_utc": "2026-10-17T00:00:00Z",
+  "min_trace_width_mm": 0.1016,
+  "min_trace_spacing_mm": 0.127,
+  "min_trace_note-s": "spec PDF p3 line/space table for 1 oz: '4/6; 5/5; 6/5 1 OZ' (width/space pairs, mil) -> 4 mil min width (needs 6 mil space), 5 mil min space (with 5-6 mil width). 0.5 oz: '4/4; 4/5'. Headline elsewhere: 'Min line width/space: 3mil/3mil' (spec p1), 'Minimum Line Width: 3 mil / Minimum Line spacing: 3 mil' (PCB-Fabrication page), p2 'Min.Line Width 3/4mil Partial 3mil lines is allowed' - see advanced-o.",
+  "min_drill_mm": 0.15,
+  "min_via_drill_mm": 0.15,
+  "min_via_drill_note-s": "spec p2 'Min.Hole Size, Board Thickness<2.0mm: 0.15mm' (>=2.0 mm boards: aspect ratio <=12); PCB-Fabrication page 'Smallest Hole: 0.006\"'. No separate via-drill value.",
+  "min_via_diameter_mm": 0.3024,
+  "min_via_diameter_note-s": "derived, not printed: 0.15 mm min hole + 2 x via annular ring 3 mil (0.0762 mm)",
+  "min_annular_ring_mm": 0.0762,
+  "min_annular_ring_note-s": "spec p2 'Min.Annular Ring Width (mil) vias:3mil ... Component Holes:6mils' ('the distance between the hole edge to the ring outskirt')",
+  "min_silkscreen_width_mm": 0.127,
+  "min_silkscreen_height_mm": null,
+  "min_silkscreen_height_note-s": "not published (spec gives Legend Min.Line Width 5mil only)",
+  "min_solder_mask_dam_mm": 0.1524,
+  "min_solder_mask_dam_note-s": "spec p2 'Mask Bridge(mil) 6mil Between IC pins'",
+  "min_solder_mask_clearance_mm": 0.0508,
+  "min_solder_mask_clearance_note-s": "spec p2 'Mask Window(mil) 2-4mil, 1. Single side; 2. 2mil is allowed for mask bridge or avoiding exposed lines.' -> 2 mil lower end",
+  "min_board_edge_clearance_mm": 0.2,
+  "min_board_edge_clearance_note-s": "spec p2 'Distance between Line to Board edge Outline:0.20mm V-CUT:0.4mm'",
+  "min_layers": 1,
+  "max_layers": 50,
+  "max_layers_note-s": "spec PDF 'Layers: 2--50layers' / 'Max.Layers 50 layers'; PCB-Fabrication page says 'Maximum Number of Layers: 1-40' (1 layer from that page)",
+  "layer_counts": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+  ],
+  "layer_counts_note-s": "spec p1 lists board-thickness ranges for 2-20 layers; up to 40/50 layers stated without per-count detail",
+  "board_thickness_mm": null,
+  "board_thickness_note-s": "no discrete thickness list published; ranges only: 'Double sided: 0.2mm-6.0mm; 4 layers: 0.4mm-8.0mm; 6 layers: 0.8mm-8.0mm; 8 layers: 1.0mm-8.0mm; 10 layers: 1.2mm-8.0mm; 12/14 layers: 1.5mm-8.0mm; 16 layers 1.6mm-8.0mm; 18 layers 2.2mm-8.0mm; 20 layers 2.4mm-8.0mm' (spec p1); PCB-Fabrication page: 'Thickness 0.008\" to 0.240\"'. Standard stackups are all 0.062\".",
+  "copper_weights_oz": [
+    0.5,
+    1,
+    2,
+    3,
+    5
+  ],
+  "copper_weights_note-s": "weights with a published line/space rule (spec p3); spec p1 'Copper foil thickness: 0.5 oZ-20.0 oZ', p3 finished outer 1-20 oz, inner 0.5-6 oz; PCB-Fabrication page '0.5 oz to 5.0 oz'",
+  "materials": [
+    "FR4 Tg130",
+    "FR4 Tg170",
+    "IT180A",
+    "Bergquist",
+    "Rogers",
+    "Arlon",
+    "Taconic",
+    "PTFE"
+  ],
+  "surface_finishes": [
+    "HASL",
+    "LF HASL",
+    "ENIG",
+    "Immersion Silver",
+    "Immersion Tin",
+    "Gold Finger",
+    "Flash Gold",
+    "OSP",
+    "Carbon",
+    "Hard and Soft Gold"
+  ],
+  "solder_mask_colors": [
+    "Green",
+    "Yellow",
+    "Black",
+    "Red",
+    "Blue",
+    "White"
+  ],
+  "impedance_control": true,
+  "impedance_note-s": "'Impedance control: +/-10%' (spec); Polar SI8000 calculation, impedance report and serialized TDR coupons free (https://www.7pcb.com/Impedance-controlled-PCB)",
+  "max_aspect_ratio": 12,
+  "via_in_pad_note": "Via in pad listed under special techniques (spec p1); adds turn time (https://www.7pcb.com/PCB-Assembly-Turn-Time). No VIP drill/fill/cap rules published.",
+  "sources": {
+    "layers, copper range, thickness ranges per layer count, min line/space 3/3 headline, min hole 0.15 mm, aspect ratio 12:1, impedance +/-10%, finishes, materials, annular ring (vias 3 mil / component 6 mil), line-to-edge, mask window/bridge, legend 5 mil, hole copper 20/30 um, line/space by copper weight": "https://www.7pcb.com/Upload_file/PCB-specifications.pdf",
+    "turn times (rush 24 h / prototype 5 days / production 10 days), mask colours, legend colours, smallest hole 0.006\", 1-40 layers": "https://www.7pcb.com/PCB-Fabrication",
+    "turn-time factors": "https://www.7pcb.com/PCB-Assembly-Turn-Time",
+    "locations": "https://www.7pcb.com/about-bittele",
+    "impedance": "https://www.7pcb.com/Impedance-controlled-PCB",
+    "stackups": "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+  },
+  "advanced-o": {
+    "process_s": "headline 'Min line width/space: 3mil/3mil' (spec p1, PCB-Fabrication page); spec p2: 'Partial 3mil lines is allowed'",
+    "min_trace_width_mm": 0.0762,
+    "min_trace_spacing_mm": 0.0762,
+    "source": "https://www.7pcb.com/Upload_file/PCB-specifications.pdf"
+  },
+  "note": "Bittele (7pcb.com) is a Toronto-headquartered turnkey PCB/PCBA company with facilities in Shenzhen and Penang; the pages do not say which plant fabricates bare boards. Its PCB specifications PDF (address: Markham, post-2019) gives the floors used here; the 3/3 mil headline is kept in advanced-o because the per-copper-weight table puts 1 oz at 4 mil width / 5 mil space. The stackup PDF is '(c) Copyright 2012' with the older North York address - it is the only stackup document linked from the current site. Pages read with curl + browser user agent and PDFs with procurement pdf-text/pdf-table on 2026-10-17.",
+  "retrieved_utc": "2026-10-17T00:00:00Z",
+  "barrel_plating_um": 20,
+  "barrel_plating-s": "minimum",
+  "barrel_plating_source-s": "Bittele PCB specifications PDF p3, plating table with columns 'Min.Thickness Max.Thickness': 'Copper Plating Hole (micron) | Copper Thickness | 20um | 30um' -> 20 um minimum, 30 um maximum (no IPC class stated). https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-17",
+  "copper_foil_note-s": "not published (foil type, roughness). Impedance page: 'Copper foil: 1/3 oz, 1/2 oz, 1 oz, 2 oz, 3 oz' kept in stock and a preference for foil-built constructions; the standard stackup PDF prints every layer (outer included) as 0.0014\" / 1 oz with no base-foil/plating split. https://www.7pcb.com/Impedance-controlled-PCB, https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf, read 2026-10-17",
+  "laminate_df_note-s": "no Df and no laminate brand for the standard stackups; every dielectric printed with Dielectric Constant 4.2 (frequency not stated). Spec lists FR4 Tg130/170, IT180A. https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf, read 2026-10-17",
+  "via_in_pad_standard_b": false,
+  "via_in_pad_standard_source-s": "Via in pad is listed under \"special techniques\" in the PCB specifications (p1), not the standard service; no fill/cap rules published. https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-17",
+  "stackups": [
+    {
+      "name": "Bittele 2 Layer Stack-up (0.062\")",
+      "layers": 2,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Final board thickness: 0.062\" ± 10%",
+      "measured_total_mm": 1.5189,
+      "printed_sum_in-s": "0.0598 in (sum of printed layers)",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": null,
+      "source_pdf-s": [
+        "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 1.4478,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.057\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        }
+      ]
+    },
+    {
+      "name": "Bittele 4 Layer Stack-up (0.062\")",
+      "layers": 4,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Final board thickness: 0.062\" ± 10%",
+      "measured_total_mm": 1.5443,
+      "printed_sum_in-s": "0.0608 in (sum of printed layers)",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "source_pdf-s": [
+        "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.23114,
+          "er": 4.2,
+          "material": "2116 (2 sheets)",
+          "printed-s": "2116 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0091\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.9398,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.037\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.23114,
+          "er": 4.2,
+          "material": "2116 (2 sheets)",
+          "printed-s": "2116 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0091\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        }
+      ]
+    },
+    {
+      "name": "Bittele 6 Layer Stack-up (0.062\")",
+      "layers": 6,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Final board thickness: 0.062\" ± 10%",
+      "measured_total_mm": 1.5164,
+      "printed_sum_in-s": "0.0597 in (sum of printed layers)",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "source_pdf-s": [
+        "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.20574,
+          "er": 4.2,
+          "material": "2116 and 3313",
+          "printed-s": "2116 and 3313 | Prepreg | Dielectric Constant 4.2 | 0.0081\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3302,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.013\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.23114,
+          "er": 4.2,
+          "material": "2116 (2 sheets)",
+          "printed-s": "2116 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0091\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3302,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.013\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.20574,
+          "er": 4.2,
+          "material": "2116 and 3313",
+          "printed-s": "2116 and 3313 | Prepreg | Dielectric Constant 4.2 | 0.0081\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        }
+      ]
+    },
+    {
+      "name": "Bittele 8 Layer Stack-up (0.062\")",
+      "layers": 8,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Final board thickness: 0.062\" ± 10%",
+      "measured_total_mm": 1.5418,
+      "printed_sum_in-s": "0.0607 in (sum of printed layers)",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "source_pdf-s": [
+        "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14986,
+          "er": 4.2,
+          "material": "1080 (2 sheets)",
+          "printed-s": "1080 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0059\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2286,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.009\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.18542,
+          "er": 4.2,
+          "material": "7628",
+          "printed-s": "7628 | Prepreg | Dielectric Constant 4.2 | 0.0073\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.12954,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.0051\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.18542,
+          "er": 4.2,
+          "material": "7628",
+          "printed-s": "7628 | Prepreg | Dielectric Constant 4.2 | 0.0073\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2286,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.009\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14986,
+          "er": 4.2,
+          "material": "1080 (2 sheets)",
+          "printed-s": "1080 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0059\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        }
+      ]
+    },
+    {
+      "name": "Bittele 10 Layer Stack-up (0.062\")",
+      "layers": 10,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Final board thickness: 0.062\" ± 10%",
+      "measured_total_mm": 1.5519,
+      "printed_sum_in-s": "0.0611 in (sum of printed layers)",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "source_pdf-s": [
+        "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14986,
+          "er": 4.2,
+          "material": "1080 (2 sheets)",
+          "printed-s": "1080 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0059\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.12954,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.0051\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1143,
+          "er": 4.2,
+          "material": "2116",
+          "printed-s": "2116 | Prepreg | Dielectric Constant 4.2 | 0.0045\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.12954,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.0051\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14986,
+          "er": 4.2,
+          "material": "1080 (2 sheets)",
+          "printed-s": "1080 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0059\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.12954,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.0051\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1143,
+          "er": 4.2,
+          "material": "2116",
+          "printed-s": "2116 | Prepreg | Dielectric Constant 4.2 | 0.0045\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.12954,
+          "er": 4.2,
+          "material": "Core",
+          "printed-s": "Core | Core | Dielectric Constant 4.2 | 0.0051\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14986,
+          "er": 4.2,
+          "material": "1080 (2 sheets)",
+          "printed-s": "1080 (2 sheets) | Prepreg | Dielectric Constant 4.2 | 0.0059\""
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.03556,
+          "weight_oz": 1,
+          "printed-s": "0.0014\" / 1 oz"
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf",
+  "stackups_sources-as": [
+    "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
+  ],
+  "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
+  "stackups_note": "Bittele 'Standard Multi-layer PCB Stackup' PDF (2 pages, (c) 2012): one stackup each for 2, 4, 6, 8 and 10 layers, all 'final thickness of 0.62\" ± 10% and 1 ounce of Copper weight' (the 0.62\" in the intro is a typo; each table says 'Final board thickness: 0.062\" ± 10%'). Units printed in inches, converted at 25.4 mm per inch; every copper layer 0.0014\" 1 oz; every dielectric Dk 4.2. measured_total_mm is the sum of printed layers (e.g. 4L 0.0608\" = 1.544 mm; 6L only 0.0597\")."
+}

@@ -5,6 +5,16 @@
     "vendor-s": "Suntsu",
     "part-s": "SCNRJ-1010GGMSEGY-073GSORTH",
     "description-s": "1000 Base-T Single Port RJ45 Jack Magnetics",
+    "connector-o": {
+      "orientation_s": "right-angle",
+      "pin_count_i": 14,
+      "family_s": "rj45",
+      "courtyard_area_mm2_f": 382.5,
+      "board_area_mm2_f": 382.5,
+      "board_area_note_s": "courtyard (right-angle at the board edge: the mate overhangs the edge)",
+      "fields_source_s": "RJ45 with magnetics: current / voltage not taken (data link)",
+      "pitch_mm_f": 1.27
+    },
 	"non-technical-o" : {
 		  "lifecycle-o" : {
 			  "samples" : {

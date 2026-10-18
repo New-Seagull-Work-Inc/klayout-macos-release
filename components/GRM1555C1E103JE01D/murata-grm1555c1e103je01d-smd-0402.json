@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "part-s": "GRM1555C1E103JE01D",
+    "description-s": "10 nF ±5% 25 V C0G (Class 1) 0402 multilayer ceramic capacitor (MLCC), SMD, 1.0 x 0.5 x 0.5 mm (Murata catalog C02E p81: '25Vdc C0G 10000pF ±5% GRM1555C1E103JE01#'); Class 1 bypass for the SPH8878 microphone's VDD, which must not see Class 2 dielectrics (piezoelectric effect)",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0529,
+        "100": 0.0462,
+        "1K": 0.0395,
+        "10K": 0.0272,
+        "100K": 0.0272
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 22444
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g"
+    }
+  }
+}

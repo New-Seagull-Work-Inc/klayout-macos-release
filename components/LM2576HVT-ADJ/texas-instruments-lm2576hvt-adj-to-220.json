@@ -95,6 +95,26 @@
         "if_ma_min": 3000,
         "vr_mv_min": 60000
       },
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "2"
+          ],
+          "abs_min_mv": -1000
+        }
+      ],
+      "sw_abs_min_mv": -1000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in LM2576HVT-ADJ.pdf: no switch rise-time row in its tables (37 pages)",
+        "sw_fall_ns": "not stated in LM2576HVT-ADJ.pdf: no switch fall-time row in its tables (37 pages)",
+        "sw_coss_pf": "not stated in LM2576HVT-ADJ.pdf: no switch-pin or C_oss capacitance row in its tables (37 pages)",
+        "sw_abs_max_mv": "not stated in LM2576HVT-ADJ.pdf: the Absolute Maximum Ratings (page 3) give the switch pin only a lower limit"
+      },
+      "sw_source-o": {
+        "datasheet-s": "LM2576HVT-ADJ.pdf",
+        "page_n": 3,
+        "table-s": "Absolute Maximum Ratings"
+      },
       "source-o": {
         "datasheet-s": "LM2576HVT-ADJ.pdf",
         "page_n": 1,

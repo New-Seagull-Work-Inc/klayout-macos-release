@@ -21,6 +21,7 @@
       "inductor"
     ],
     "passive-o": {
+      "esr-mr-i": 15,
       "value-i": 1000,
       "value-unit-s": "nh",
       "current-max-i": 8700,

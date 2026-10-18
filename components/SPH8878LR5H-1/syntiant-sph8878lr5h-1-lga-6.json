@@ -37,10 +37,11 @@
     ],
     "stdpins-ao": [
       { "1": "as-audio-tx" },
-      { "2": "gnd" },
-      { "3": "gnd" },
-      { "4": "gnd" },
+      { "2": "dvss" },
+      { "3": "dvss" },
+      { "4": "dvss" },
       { "5": "ds-power-rx" },
+      { "5": "10nf/c0g-gnd" },
       { "5": "100nf/c0g-gnd" },
       { "5": "dvdd-2_75" }
     ],

@@ -1,0 +1,70 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "JST",
+    "part-s": "GHR-14V-S",
+    "description-s": "JST GH receptacle housing (cable end), 1x14, 1.25 mm pitch, 18.75 x 4.15 x 5.7 mm, takes contacts SSHL-002T-P0.2 (AWG 30-26). Mates with BM14B-GHS-TBT (vertical) / SM14B-GHS-TB (right-angle). A cable BOM line.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.166,
+        "100": 0.117,
+        "1K": 0.108,
+        "10K": 0.106,
+        "100K": 0.106
+      },
+      "distributor-s": "CoreStaff",
+      "moq-i": 1,
+      "stock-i": 5044
+    },
+    "package-ao": [
+      { "ptype-s": "receptacle-1x14-1.25mm-cable" },
+      { "ppins-i": 14 }
+    ],
+    "blocks-as": [
+      "receptacle",
+      "plug",
+      "power-plug"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" },
+      { "4": "PIN4" },
+      { "5": "PIN5" },
+      { "6": "PIN6" },
+      { "7": "PIN7" },
+      { "8": "PIN8" },
+      { "9": "PIN9" },
+      { "10": "PIN10" },
+      { "11": "PIN11" },
+      { "12": "PIN12" },
+      { "13": "PIN13" },
+      { "14": "PIN14" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 14,
+      "rows_i": 1,
+      "pitch_mm_f": 1.25,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 1000,
+      "voltage_max_v_i": 50,
+      "voltage_max_v_f": 50,
+      "locking_b": true,
+      "polarized_b": true,
+      "family_s": "gh",
+      "mates_with_part_s": "BM14B-GHS-TBT",
+      "mates_with_parts_as": [
+        "BM14B-GHS-TBT",
+        "SM14B-GHS-TB"
+      ],
+      "terminal_part_s": "SSHL-002T-P0.2",
+      "source_s": "JST GH catalog (housing table: GHR-14V-S A 16.25, B 18.75)"
+    }
+  }
+}

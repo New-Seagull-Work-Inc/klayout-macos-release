@@ -51,7 +51,38 @@
       "mount_s": "through-hole",
       "contact_plating_s": "tin",
       "mates_with_series_s": "43025",
-      "source_s": "drawing (procurement connx, no LLM)"
+      "source_s": "drawing (procurement connx, no LLM)",
+      "mate-o": {
+        "part_s": "0430251400",
+        "model_s": "footprints/0430451400.3dshapes/0430451400-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -3.58,
+          -34.17,
+          21.57,
+          -0.17
+        ],
+        "height_mm_f": 11.0,
+        "z_min_mm_f": 0.0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Molex 430250000-SD: 2x7 receptacle 21.85 x 6.85 x 14.00 mm, mated right-angle length 17.56 mm from the header's rear face, 11.0 mm for latching; 20 mm of the 14-wire bundle"
+      },
+      "family_s": "micro-fit-3.0",
+      "courtyard_area_mm2_f": 357.6,
+      "board_area_mm2_f": 357.6,
+      "board_area_note_s": "courtyard (right-angle at the board edge: the mate overhangs the edge)",
+      "fields_source_s": "Micro-Fit 3.0 5.0 A per contact, 600 V (series rating; 14-circuit derating not applied)",
+      "current_per_pin_ma_i": 5000,
+      "voltage_max_v_f": 600.0
     },
     "part-s": "0430451400"
   }

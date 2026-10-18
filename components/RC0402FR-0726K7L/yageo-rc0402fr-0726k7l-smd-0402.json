@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Yageo",
+    "part-s": "RC0402FR-0726K7L",
+    "description-s": "26.7 kΩ ±1% 0.0625 W thick film chip resistor, 0402 SMD, ±100 ppm/°C",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.001,
+        "100": 0.001,
+        "1K": 0.001,
+        "10K": 0.001,
+        "100K": 0.001
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 380008
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 26700000,
+      "value-unit-s": "k",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

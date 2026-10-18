@@ -1,0 +1,54 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-contact-plug",
+    "vendor-s": "JST",
+    "part-s": "SSHL-002T-P0.2",
+    "description-s": "JST GH crimp contact, AWG 30-26, tin; 1.0 A at AWG 26, 50 V. One per circuit in GHR housings.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 0.0287,
+        "100": 0.0229,
+        "1K": 0.0103,
+        "10K": 0.0082,
+        "100K": 0.0075
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 5,
+      "stock-i": 309194
+    },
+    "package-ao": [
+      { "ptype-s": "crimp-contact-gh" },
+      { "ppins-i": 1 }
+    ],
+    "blocks-as": [
+      "contact"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "CONTACT" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 1,
+      "gender_s": "female",
+      "mount_s": "cable",
+      "orientation_s": "cable",
+      "current_per_pin_ma_i": 1000,
+      "voltage_max_v_i": 50,
+      "voltage_max_v_f": 50,
+      "wire_awg_min_i": 30,
+      "wire_awg_max_i": 26,
+      "contact_plating_s": "tin",
+      "family_s": "gh",
+      "housing_part_s": "GHR-14V-S",
+      "source_s": "JST GH catalog"
+    },
+    "max_currents-ao": [
+      { "1": 1000 }
+    ]
+  }
+}

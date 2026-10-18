@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Yageo",
+    "part-s": "RC0402FR-079K09L",
+    "description-s": "9.09 kOhm ±1% 0.063 W thick film chip resistor, 0402",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.0007,
+        "100": 0.0007,
+        "1K": 0.0007,
+        "10K": 0.0007,
+        "100K": 0.0007
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 10000,
+      "order-mult-i": 1,
+      "stock-i": 80000
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor-thick-film"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 9090000,
+      "value-unit-s": "k",
+      "power-mw-i": 63,
+      "tolerance-pct-x10": 10
+    }
+  }
+}

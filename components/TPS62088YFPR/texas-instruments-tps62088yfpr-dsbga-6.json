@@ -107,6 +107,35 @@
       "l_nh_typ": 240,
       "cin_nf_typ": 4700,
       "cout_nf_typ": 20000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "B2"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_ref-s": "vin",
+          "abs_max_above_ref_mv": 300,
+          "abs_min_transient_mv": -2500,
+          "abs_max_transient_mv": 10000,
+          "abs_max_transient_ns": 10
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_ref-s": "vin",
+      "sw_abs_max_above_ref_mv": 300,
+      "sw_abs_min_transient_mv": -2500,
+      "sw_abs_max_transient_mv": 10000,
+      "sw_abs_max_transient_ns": 10,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in TPS62088YFPR.pdf: no switch rise-time row in its tables (33 pages)",
+        "sw_fall_ns": "not stated in TPS62088YFPR.pdf: no switch fall-time row in its tables (33 pages)",
+        "sw_coss_pf": "not stated in TPS62088YFPR.pdf: no switch-pin or C_oss capacitance row in its tables (33 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "TPS62088YFPR.pdf",
+        "page_n": 4,
+        "table-s": "Absolute Maximum Ratings"
+      },
       "source-o": {
         "datasheet-s": "TPS62088YFPR.pdf",
         "page_n": 10,
