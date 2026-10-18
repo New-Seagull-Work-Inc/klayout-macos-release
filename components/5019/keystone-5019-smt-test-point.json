@@ -1,0 +1,49 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-testpoint-jack",
+    "vendor-s": "Keystone",
+    "part-s": "5019",
+    "description-s": "Keystone miniature SMT test point (surface mount), 3.0 x 1.6 x 1.8 mm (L x W x H) phosphor bronze loop, silver plate, tape and reel; pad 3.8 x 2.0 mm (Keystone catalog p.55). A single surface-mount loop for probes, clips and hooks on one face, so a board placed on both faces keeps the other side free; its net is the design's.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.12,
+        "10K": 0.1,
+        "100K": 0.1
+      },
+      "distributor-s": "Sager Electronics",
+      "moq-i": 1000,
+      "lead-time-weeks-i": 8,
+      "stock-i": 353000
+    },
+    "package-ao": [
+      { "ptype-s": "smd-testpoint-3.0x1.6mm" },
+      { "ppins-i": 1 }
+    ],
+    "blocks-as": [
+      "test-point"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "TP" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 1,
+      "rows_i": 1,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "smt",
+      "height_mm_f": 1.8,
+      "contact_plating_s": "silver",
+      "family_s": "keystone-smt-test-point",
+      "courtyard_area_mm2_f": 13.63,
+      "board_area_mm2_f": 13.63,
+      "board_area_note_s": "courtyard",
+      "source_s": "Keystone catalog p.55 (SMT test points); footprint KiCad TestPoint_Keystone_5019_Miniature",
+      "fields_source_s": "test point; no current rating taken"
+    }
+  }
+}

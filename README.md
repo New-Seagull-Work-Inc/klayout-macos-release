@@ -138,7 +138,10 @@ my-board-routed/
   si-report/                   boards built on a fab's stackup: the copper
                                as laid, per net — segments.csv, vias.csv,
                                pads.csv — the reflection data an SI review
-                               starts from
+                               starts from, and si-report.pdf built on it
+                               (reflections per DDR net; per serial lane its
+                               eye at the receiver and its impedance along
+                               the lane)
   fabrication/                 the manufacturing package (below);
                                --gerber-dir moves it, --no-fab skips it
   .input/                      a read-only copy of the input, judged by the
@@ -169,8 +172,9 @@ fabrication/
                       mm, populated parts only
                       drawings-svg/ — front and back fab drawings
   documentation/      <board>-board-render.png (top view),
-                      schematic/<board>.pdf, pdn-impedance.html and .csv
-                      (the rail impedance curves, when the board
+                      schematic/<board>.pdf, si-report.pdf (a copy of
+                      si-report/si-report.pdf), pdn-impedance.html and
+                      .csv (the rail impedance curves, when the board
                       declares rails)
   design/             the board, project, schematic, tables and libraries
                       as sent to manufacture
@@ -349,18 +353,35 @@ within 10 %). Then:
 KiCad's own DRC is the ground truth; open the board in KiCad or run
 `kicad-cli pcb drc` on it yourself to confirm.
 
-## The SI and PI sign-off pages
+## The SI report
 
-This package is executables only. The sign-off generators that turn a
-run into `si-report.pdf`, `signoff-si.html` and `signoff-pi.html` are not
-part of it, so those three documents are not written. Everything they
-would read is: the console lane table (per pair: home layer, skew against
-budget, differential impedance as laid, share of the copper within 10 %
-of the target), `si-report/` with the copper as laid per net
-(`segments.csv`, `vias.csv`, `pads.csv`), the rail impedance curves
-(`pdn-impedance.html` and `.csv`, in the fabrication package's
-`documentation/`, or beside the board when it has no package)
-and the verdict JSON.
+Every run on a fab's stackup ends with `si-report.pdf` (in `si-report/`
+beside its CSVs, and a copy in the fabrication package's
+`documentation/`), written by klayout itself. Page one states the model,
+every parameter and its source (the standard, the parts' datasheets).
+
+- **DDR nets** — each net chained driver to receiver through the copper
+  as laid, every run a transmission line at its own as-laid impedance,
+  simulated exactly (lossless, reflections only). Per group (DQ / CA) the
+  legal LPDDR4 drive strength and ODT that clears the most nets is chosen;
+  each net is judged on overshoot and ringback, with a page showing its
+  impedance along the path and the edge at the receiver.
+- **Serial links** — a pair whose ends are a known transmitter and
+  receiver (a MIPI CSI-2 D-PHY sensor into a serializer or SoC; a TI
+  V3Link forward channel) is judged by that link's own standard: the
+  worst-case eye at the receiver at the parts' data rate and limits,
+  against the receiver's threshold window, beside the lane's differential
+  impedance along its length, its return loss and its S-parameters
+  (SDD11, SDD21) to the fifth harmonic.
+
+To draw it again for an output directory: `./klayout --si-report OUTPUT_DIR
+[PDF]`.
+
+The console lane table (per pair: home layer, skew against budget,
+differential impedance as laid, share of the copper within 10 % of the
+target) and the rail impedance curves (`pdn-impedance.html` and `.csv`)
+come with every run too. The HTML sign-off pages of the source tree
+(`signoff-si.html`, `signoff-pi.html`) are not part of this package.
 
 ## Requirements
 
