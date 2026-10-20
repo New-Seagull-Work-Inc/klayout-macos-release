@@ -134,14 +134,14 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "100": 5.1,
+        "1K": 4.56,
+        "10K": 4.3,
+        "100K": 4.3
+      },
+      "distributor-s": "Rochester Electronics",
+      "stock-i": 11
     },
     "supplies-ao": [
       {

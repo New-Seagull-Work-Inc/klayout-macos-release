@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Murata Electronics",
+    "part-s": "GRM1555C1H222JA01D",
+    "description-s": "2200 pF ±5% 50 V C0G 0402 multilayer ceramic capacitor (MLCC), SMD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.038,
+        "100": 0.022,
+        "1K": 0.016,
+        "10K": 0.008,
+        "100K": 0.008
+      },
+      "distributor-s": "Mouser"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 2200,
+      "value-unit-s": "pf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g"
+    }
+  }
+}

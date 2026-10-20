@@ -91,7 +91,9 @@
         "10K": 0.875,
         "100K": 0.875
       },
-      "distributor-s": "Texas Instruments"
+      "distributor-s": "Texas Instruments",
+      "moq-i": 1,
+      "stock-i": 1009
     }
   }
 }

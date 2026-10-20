@@ -31,6 +31,8 @@
         "source_s": "USB Type-C plug, generic: shell 8.3 x 2.4 mm inserted 6.5 mm, overmold 12.0 x 6.5 x 25 mm (the USB-C spec's overmold envelope is 12.35 x 6.5), 4 mm cable 15 mm. The overmold reaches 1.65 mm below the board's top: the jack must sit at the board edge"
       },
       "orientation_s": "right-angle",
+      "shell_tht_b": true,
+      "shell_tht_source_s": "four plated through-hole slot tabs for the shell (footprint pads 1-4, thru_hole oval, 0.8 x 1.2 / 1.5 mm slots; HRO TYPE-C-31-M-12 drawing); signal contacts SMD",
       "pin_count_i": 16,
       "family_s": "usb-c",
       "courtyard_area_mm2_f": 65.7,
@@ -54,7 +56,7 @@
       "usb-c-receptacle"
     ],
     "interfaces-as": [
-      "ds-power-rxtx",
+      "ds-power-rx",
       "ds-usb2-rxtx",
       "ds-usbcc-rxtx"
     ],
@@ -124,10 +126,10 @@
         "B1A12": "avss"
       },
       {
-        "A4B9": "ds-power-rxtx"
+        "A4B9": "ds-power-rx"
       },
       {
-        "B4A9": "ds-power-rxtx"
+        "B4A9": "ds-power-rx"
       },
       {
         "A5": "ds-usbcc-cc1"

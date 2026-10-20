@@ -1,0 +1,121 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS562201DDCR",
+    "description-s": "4.5-17 V input, 2 A, 580 kHz synchronous step-down converter, D-CAP2, adjustable output, SOT-23-6 (DDC)",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.317,
+        "100": 0.2452,
+        "1K": 0.20741,
+        "10K": 0.18827,
+        "100K": 0.18183
+      },
+      "distributor-s": "DigiKey",
+      "moq-i": 1,
+      "lead-time-weeks-i": 16,
+      "stock-i": 3389
+    },
+    "package-ao": [
+      { "ptype-s": "sot-23-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 5000 }
+    ],
+    "max_currents-ao": [
+      { "out": 2000 }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3"
+        ],
+        "vmin_mv": 4500,
+        "vmax_mv": 17000,
+        "source-o": {
+          "datasheet-s": "TPS562201DDCR.pdf",
+          "page_n": 4,
+          "table-s": "Recommended Operating Conditions"
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "sw" },
+      { "3": "vin" },
+      { "4": "vfb" },
+      { "5": "en" },
+      { "6": "vbst" }
+    ],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "10uf-avss" },
+      { "3": "100nf-avss" },
+      { "2": "3.3uh-vout" },
+      { "vout": "ds-power-tx" },
+      { "vout": "22uf-avss" },
+      { "vout": "22uf-avss" },
+      { "1": "avss" },
+      { "6": "100nf-sw" }
+    ],
+    "cfgpins-ao": [
+      { "5": "en" },
+      { "5": "vin" },
+      { "5c": "EN active high, must be pulled up (VENH 1.6 V); rated to 17 V like VIN, so tied to VIN" },
+      { "4": "vfb" },
+      { "4": "54.9k-vout" },
+      { "4": "10k-avss" },
+      { "4c": "VFB 0.768 V; datasheet table (p14): 5 V out = R1 54.9k / R2 10k, L 3.3 uH, COUT 20-68 uF (2 x 22 uF)" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 4500,
+      "vin_max_mv": 17000,
+      "vout_min_mv": 768,
+      "vout_max_mv": 7000,
+      "iout_max_ma": 2000,
+      "switching_freq_khz": 580,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "synchronous_b": true,
+      "l_nh_typ": 3300,
+      "cin_nf_typ": 10100,
+      "cout_nf_typ": 44000,
+      "replaces_s": "TPS54202DDCR (0 stock): same SOT-23-6 pinout, but VIN max 17 V (not 28 V) and VFB 0.768 V, so dividers must be re-valued",
+      "source-o": {
+        "datasheet-s": "TPS562201DDCR.pdf",
+        "pages-s": "p3 pin functions, p4 abs max / recommended (VIN 4.5-17 V), p5 electrical characteristics (VFB 0.768 V, fSW 580 kHz), p12-14 typical application"
+      }
+    }
+  }
+}

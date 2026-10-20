@@ -1,0 +1,230 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS63020DSJR",
+    "description-s": "High Efficiency Buck-Boost Converter with 4-A Switches",
+    "package-ao": [
+      { "ptype-s": "qfn-14" },
+      { "ppins-i": 14 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "power-good",
+      "enable",
+      "overvoltage-protection"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 1800 },
+      { "vout": 1200 }
+    ],
+    "max_currents-ao": [
+      { "out": 3000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vina" },
+      { "2": "gnd" },
+      { "3": "fb" },
+      { "4": "vout" },
+      { "5": "vout" },
+      { "6": "l2" },
+      { "7": "l2" },
+      { "8": "l1" },
+      { "9": "l1" },
+      { "10": "vin" },
+      { "11": "vin" },
+      { "12": "en" },
+      { "13": "ps/sync" },
+      { "14": "pg" },
+      { "15": "exposed thermal pad, connect to gnd" }
+    ],
+    "cfgpins-ao": [
+      { "12": "en" },
+      { "12": "vina" },
+      { "12c": "EN tied to VINA, always on (TI SLVS916 application circuit)" },
+      { "13": "ps/sync" },
+      { "13": "vina" },
+      { "13c": "PS/SYNC tied to VINA as in the application circuit: high = power-save off; GND for power-save" },
+      { "14": "pg" },
+      { "14": "1m-vout" },
+      { "14c": "PG open drain, 1 M pull-up to VOUT (application circuit R3)" },
+      { "3": "fb" },
+      { "3": "1m-out" },
+      { "3": "180k-avss" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "100nf-avss" },
+      { "10": "ds-power-rx" },
+      { "10": "10uf-avss" },
+      { "11": "ds-power-rx" },
+      { "11": "10uf-avss" },
+      { "4": "ds-power-tx" },
+      { "4": "22uf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "22uf-avss" },
+      { "2": "avss" },
+      { "8": "1uh-l2" },
+      { "9": "1uh-l2" },
+      { "15": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck_boost",
+      "adjustable_b": true,
+      "vin_min_mv": 1800,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 1200,
+      "vout_max_mv": 5500,
+      "iout_max_ma": 3000,
+      "iq_typ_ua": 25,
+      "switching_freq_khz": 2400,
+      "efficiency_pct_max": 96,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "8",
+        "6",
+        "7",
+        "9"
+      ],
+      "vin_pins-as": [
+        "1",
+        "10",
+        "11"
+      ],
+      "pgnd_pins-as": [
+        "2"
+      ],
+      "l_nh_typ": 1000,
+      "cin_nf_typ": 20100,
+      "cout_nf_typ": 44000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "8",
+            "6",
+            "7",
+            "9"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_mv": 7000
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_mv": 7000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in TPS63020DSJR.pdf: no switch rise-time row in its tables (29 pages)",
+        "sw_fall_ns": "not stated in TPS63020DSJR.pdf: no switch fall-time row in its tables (29 pages)",
+        "sw_coss_pf": "not stated in TPS63020DSJR.pdf: no switch-pin or C_oss capacitance row in its tables (29 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "TPS63020DSJR.pdf",
+        "page_n": 2,
+        "table-s": "Absolute Maximum Ratings"
+      },
+      "source-o": {
+        "datasheet-s": "TPS63020DSJR.pdf",
+        "page_n": 20,
+        "figure-s": "Typical Application"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      },
+      "lifecycle-s": "active",
+      "lifecycle-source-s": "DigiKey: Active; manufacturer (Nexar): ACTIVE",
+      "lifecycle-checked-s": "2026-10-15",
+      "stock-digikey-i": 0,
+      "stock-mouser-i": 69,
+      "lead-weeks-digikey-i": 20,
+      "lead-weeks-mouser-i": 20,
+      "stock-checked-s": "2026-10-15"
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VINA",
+        "role-s": "vina",
+        "pins-as": [
+          "1"
+        ],
+        "vmin_mv": 1800,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "TPS63020DSJR.pdf",
+          "page_n": 3,
+          "table-s": "RECOMMENDED OPERATING CONDITIONS"
+        }
+      },
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "10",
+          "11"
+        ],
+        "vmin_mv": 1800,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "TPS63020DSJR.pdf",
+          "page_n": 3,
+          "table-s": "RECOMMENDED OPERATING CONDITIONS"
+        }
+      }
+    ]
+  }
+}

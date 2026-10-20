@@ -4,8 +4,12 @@
     "vendor-s": "Texas Instruments",
     "description-s": "6-A, 5-V Input Non-Isolated Wide Output Adjust Power Module",
     "package-ao": [
-      { "ptype-s": "through-hole module" },
-      { "ppins-i": 6 }
+      {
+        "ptype-s": "through-hole module"
+      },
+      {
+        "ppins-i": 6
+      }
     ],
     "blocks-as": [
       "regulator",
@@ -21,11 +25,17 @@
       "ds-power-tx"
     ],
     "voltages-ao": [
-      { "vin": 5000 },
-      { "vout": 800 }
+      {
+        "vin": 5000
+      },
+      {
+        "vout": 800
+      }
     ],
     "max_currents-ao": [
-      { "out": 6000 }
+      {
+        "out": 6000
+      }
     ],
     "temperatures-ao": [
       {
@@ -42,24 +52,55 @@
       }
     ],
     "pins-ao": [
-      { "1": "gnd" },
-      { "2": "track" },
-      { "3": "vin" },
-      { "4": "inhibit" },
-      { "5": "vo adjust" },
-      { "6": "vout" }
+      {
+        "1": "gnd"
+      },
+      {
+        "2": "track"
+      },
+      {
+        "3": "vin"
+      },
+      {
+        "4": "inhibit"
+      },
+      {
+        "5": "vo adjust"
+      },
+      {
+        "6": "vout"
+      }
     ],
     "cfgpins-ao": [
-      { "2": "track" },
-      { "4": "inhibit" },
-      { "5": "vo adjust" }
+      {
+        "2": "track"
+      },
+      {
+        "4": "inhibit"
+      },
+      {
+        "4c": "Inhibit left open: internal pull-up, the module runs when input power is applied (datasheet pin note); pull low with a low-leakage open-drain to inhibit"
+      },
+      {
+        "5": "vo adjust"
+      }
     ],
     "stdpins-ao": [
-      { "3": "ds-power-rx" },
-      { "3": "100uf-avss" },
-      { "6": "ds-power-tx" },
-      { "6": "100uf-avss" },
-      { "1": "avss" }
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "3": "100uf-avss"
+      },
+      {
+        "6": "ds-power-tx"
+      },
+      {
+        "6": "100uf-avss"
+      },
+      {
+        "1": "avss"
+      }
     ],
     "specs-o": {
       "topology_s": "buck",
@@ -76,7 +117,8 @@
       "has_enable_b": true,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "integrated_inductor_b": true
     },
     "non-technical-o": {
       "lifecycle-o": {

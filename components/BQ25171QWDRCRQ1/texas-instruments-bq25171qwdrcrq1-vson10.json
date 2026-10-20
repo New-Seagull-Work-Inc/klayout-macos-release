@@ -12,7 +12,7 @@
     ],
     "interfaces-as": [
       "ds-power-rx",
-      "ds-power-tx"
+      "ds-batt-rxtx"
     ],
     "voltages-ao": [
       { "vin_min": 3000 },
@@ -51,7 +51,7 @@
     "stdpins-ao": [
       { "1": "ds-power-rx" },
       { "1": "1uf-avss" },
-      { "10": "ds-power-tx" },
+      { "10": "ds-batt-rxtx" },
       { "10": "1uf-avss" },
       { "5": "avss" }
     ],

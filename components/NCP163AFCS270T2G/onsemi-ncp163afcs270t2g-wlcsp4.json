@@ -97,14 +97,14 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "100": 0.1232,
+        "1K": 0.1023,
+        "10K": 0.0912,
+        "100K": 0.0764
+      },
+      "distributor-s": "Rochester Electronics",
+      "stock-i": 1700000
     },
     "part-s": "NCP163AFCS270T2G"
   }

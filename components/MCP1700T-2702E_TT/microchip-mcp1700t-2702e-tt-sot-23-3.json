@@ -81,14 +81,18 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 0.51,
+        "100": 0.39,
+        "1K": 0.36,
+        "10K": 0.36,
+        "100K": 0.36
+      },
+      "distributor-s": "Microchip",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 4,
+      "stock-i": 20570
     },
     "part-s": "MCP1700T-2702E/TT"
   }

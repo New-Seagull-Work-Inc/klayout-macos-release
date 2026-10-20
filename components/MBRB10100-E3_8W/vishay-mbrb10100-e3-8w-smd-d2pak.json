@@ -1,0 +1,33 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "MBRB10100-E3/8W",
+    "description-s": "10 A 100 V single Schottky rectifier, TO-263AB (D2PAK); buyable replacement for MBRB10100",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.7014,
+        "100": 0.6801,
+        "1K": 0.6481,
+        "10K": 0.6268,
+        "100K": 0.6268
+      },
+      "distributor-s": "Verical",
+      "moq-i": 10,
+      "stock-i": 7596
+    },
+    "package-ao": [
+      { "ptype-s": "smd-d2pak" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "passive-o": {
+      "voltage-max-i": 100000,
+      "current-max-i": 10000,
+      "lead-style-s": "smd"
+    }
+  }
+}

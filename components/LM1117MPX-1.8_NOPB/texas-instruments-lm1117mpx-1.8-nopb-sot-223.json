@@ -1,0 +1,158 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "LM1117MPX-1.8/NOPB",
+    "description-s": "800-mA Low-Dropout Linear Regulator, Fixed 1.8V Output",
+    "package-ao": [
+      {
+        "ptype-s": "sot-223"
+      },
+      {
+        "ppins-i": 4
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "reference-bandgap",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 15000
+      },
+      {
+        "vout": 1800
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 800
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": 0,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": 0,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "adj/gnd"
+      },
+      {
+        "2": "vout"
+      },
+      {
+        "3": "vin"
+      },
+      {
+        "4": "vout"
+      }
+    ],
+    "cfgpins-ao": [],
+    "stdpins-ao": [
+      {
+        "1": "avss"
+      },
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "3": "10uf-avss"
+      },
+      {
+        "2": "ds-power-tx"
+      },
+      {
+        "2": "10uf-avss"
+      }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vin_min_mv": 3200,
+      "vin_max_mv": 15000,
+      "vout_fixed_mv": 1800,
+      "vout_accuracy_pct_x10": 10,
+      "iout_max_ma": 800,
+      "iq_typ_ua": 5000,
+      "dropout_mv_at_iout": 1200,
+      "psrr_db_at_1khz": 75,
+      "has_enable_b": false,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "pinout_note_s": "SNOS412N p3, DCY (SOT-223): 1 ADJ/GND, 2 VOUT, 3 VIN, tab (4) VOUT. VIN min is the line-regulation test floor (p5); 10 uF tantalum on output for stability"
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "Texas Instruments",
+      "cost-o": {
+        "10": 1.176,
+        "100": 0.904,
+        "1K": 0.476,
+        "10K": 0.476,
+        "100K": 0.476
+      },
+      "lifecycle-s": "active",
+      "lifecycle-source-s": "DigiKey: Active; manufacturer (Nexar): ACTIVE",
+      "lifecycle-checked-s": "2026-10-19",
+      "stock-digikey-i": 3033,
+      "stock-mouser-i": 2875,
+      "lead-weeks-digikey-i": 12,
+      "stock-checked-s": "2026-10-19",
+      "moq-i": 1,
+      "stock-i": 8435
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3"
+        ],
+        "vmin_mv": 3200,
+        "vmax_mv": 15000,
+        "source-o": {
+          "datasheet-s": "LM1117MPX-3.3_NOPB.pdf",
+          "page_n": 4,
+          "table-s": "6.3 Recommended Operating Conditions (max); 6.5 Electrical Characteristics p5 line-regulation VIN (min)"
+        }
+      }
+    ]
+  }
+}

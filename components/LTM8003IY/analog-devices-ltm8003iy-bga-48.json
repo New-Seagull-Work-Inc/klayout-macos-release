@@ -152,14 +152,15 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 37.008,
+        "100": 35.0454,
+        "1K": 22.54,
+        "10K": 22.54,
+        "100K": 22.54
+      },
+      "distributor-s": "Analog Devices",
+      "stock-i": 585
     },
     "part-s": "LTM8003IY",
     "supplies-ao": [

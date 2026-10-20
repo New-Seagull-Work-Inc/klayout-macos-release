@@ -1,0 +1,55 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "Molex",
+    "part-s": "22-01-3047",
+    "description-s": "KK 254 receptacle housing (cable end), 4 circuits, 2.54 mm pitch; mates with series 42375, 42377, 42376, 4030, 6373, 6410; takes terminals series 2759. A cable BOM line, not board-mounted.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "receptacle-1x4-2.54mm-cable"
+      },
+      {
+        "ppins-i": 4
+      }
+    ],
+    "blocks-as": [
+      "receptacle",
+      "plug",
+      "power-plug"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      {
+        "1": "PIN1"
+      },
+      {
+        "2": "PIN2"
+      },
+      {
+        "3": "PIN3"
+      },
+      {
+        "4": "PIN4"
+      }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 4,
+      "rows_i": 1,
+      "pitch_mm_f": 2.54,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "mates_with_series_s": "42375, 42377, 42376, 4030, 6373, 6410",
+      "terminal_series_s": "2759",
+      "source_s": "as 22-01-3027 (2695 series, 4-circuit member); housing 10.72 x 4.82 x 12.7 mm per 26950000-SD"
+    }
+  }
+}
