@@ -1,0 +1,32 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "B340A-E3/61T",
+    "description-s": "3 A 40 V Schottky barrier rectifier, SMA (DO-214AC); buyable replacement for B340A",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "100": 0.1203,
+        "1K": 0.1191,
+        "10K": 0.1088,
+        "100K": 0.1088
+      },
+      "distributor-s": "Verical",
+      "moq-i": 20,
+      "stock-i": 169752
+    },
+    "package-ao": [
+      { "ptype-s": "smd-sma" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "passive-o": {
+      "voltage-max-i": 40000,
+      "current-max-i": 3000,
+      "lead-style-s": "smd"
+    }
+  }
+}

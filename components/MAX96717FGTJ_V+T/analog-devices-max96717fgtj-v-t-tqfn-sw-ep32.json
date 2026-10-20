@@ -4,6 +4,27 @@
     "vendor-s": "Analog Devices",
     "description-s": "MAX96717 CSI-2 to GMSL2 Serializer, 4-lane MIPI CSI-2 D-PHY input, single GMSL2 serial link output at 3Gbps or 6Gbps forward / 187.5Mbps reverse, coax or STP, 32-pin TQFN-SW",
     "specs-o": {
+      "layout_rules-o": {
+        "coax_z_ohm": 50,
+        "stp_zdiff_ohm": 100,
+        "ac_cap_near_pin_b": true,
+        "ac_cap_max_dist_mm": 12.7,
+        "pad_gnd_cutout_area_x": 1.3,
+        "device_near_connector_b": true,
+        "poc_near_device_b": true,
+        "notes-as": [
+          "50 ohm single-ended (coax) or 100 ohm differential (STP) traces only; minimise length, no sharp bends",
+          "AC-coupling capacitors within 500 mil (12.7 mm) of the SIOx pins; component pads directly on the trace (no stubs)",
+          "ground cutouts under the high-speed pads, 1.3x the pad area; stitch ground layers with vias along the traces",
+          "PoC: smallest (highest-SRF) inductor on the signal trace, within 1/2 UI of the device; cutouts under the first two inductors and resistors",
+          "coax mode: terminate the unused SION leg with 100 nF in series with 50 ohm to ground (MAX96717 p22 pin 13)"
+        ],
+        "source-o": {
+          "datasheet-s": "MAX96717 datasheet (Analog Devices)",
+          "pages-s": "p42 (50 ohm coax or 100 ohm STP), p22 (SION coax-mode termination); trace rules as MAX96716A p67 (same GMSL2 PHY)"
+        },
+        "unused_leg_term-s": "100nf+50r-gnd"
+      },
       "direction-s": "serializer",
       "link-s": "gmsl2",
       "max_link_rate_mbps": 6000,

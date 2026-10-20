@@ -1,0 +1,217 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Linear Technology Corporation",
+    "description-s": "Wide Input Voltage Synchronous Buck-Boost DC/DC Converter",
+    "package-ao": [
+      {
+        "ptype-s": "dfn-10"
+      },
+      {
+        "ppins-i": 10
+      }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      {
+        "vin": 3600
+      },
+      {
+        "vout": 3300
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "out": 600
+      }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "rt"
+      },
+      {
+        "2": "burst"
+      },
+      {
+        "3": "sw1"
+      },
+      {
+        "4": "sw2"
+      },
+      {
+        "5": "gnd"
+      },
+      {
+        "6": "vout"
+      },
+      {
+        "7": "vin"
+      },
+      {
+        "8": "shdn/ss"
+      },
+      {
+        "9": "fb"
+      },
+      {
+        "10": "vc"
+      },
+      {
+        "11": "exposed pad, connect to gnd"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "1": "rt"
+      },
+      {
+        "1": "33.2k-avss"
+      },
+      {
+        "2": "burst"
+      },
+      {
+        "2": "33.2k-avss"
+      },
+      {
+        "2": "0.01uf-avss"
+      },
+      {
+        "8": "shdn/ss"
+      },
+      {
+        "8": "1m-vin"
+      },
+      {
+        "8": "0.01uf-avss"
+      },
+      {
+        "9": "fb"
+      },
+      {
+        "9": "576k-avss"
+      },
+      {
+        "9": "1m-vout"
+      },
+      {
+        "9": "33pf-vout"
+      },
+      {
+        "10": "vc"
+      },
+      {
+        "10": "10k-fb"
+      },
+      {
+        "10": "560pf-fb"
+      },
+      {
+        "10": "33pf-fb"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "7": "ds-power-rx"
+      },
+      {
+        "7": "10uf-avss"
+      },
+      {
+        "6": "ds-power-tx"
+      },
+      {
+        "6": "22uf-avss"
+      },
+      {
+        "6": "33pf-avss"
+      },
+      {
+        "5": "avss"
+      },
+      {
+        "11": "avss"
+      },
+      {
+        "3": "4.7uh-sw2"
+      }
+    ],
+    "specs-o": {
+      "topology_s": "buck_boost",
+      "adjustable_b": true,
+      "vin_min_mv": 1800,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 1800,
+      "vout_max_mv": 5250,
+      "iout_max_ma": 600,
+      "iq_typ_ua": 40,
+      "switching_freq_khz": 1000,
+      "efficiency_pct_max": 96,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      },
+      "lifecycle-s": "unknown",
+      "lifecycle-source-s": "DigiKey: not listed; manufacturer (Nexar): not stated",
+      "lifecycle-checked-s": "2026-10-15",
+      "stock-checked-s": "2026-10-15"
+    },
+    "part-s": "LTC3530EDD"
+  }
+}

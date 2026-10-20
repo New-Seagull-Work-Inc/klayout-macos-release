@@ -50,9 +50,10 @@
     ],
     "cfgpins-ao": [
       { "4": "inhibit" },
+      { "4c": "Inhibit left open: internal pull-up, the module runs when input power is applied (datasheet pin note); pull low with a low-leakage open-drain to inhibit" },
       { "2": "track" },
       { "5": "adjust" },
-      { "5c": "output voltage adjust resistor to gnd" }
+      { "5c": "Adjust left open: VO defaults to the 1.2 V the row records (RSET open circuit, datasheet); an RSET to GND sets a higher VO" }
     ],
     "stdpins-ao": [
       { "3": "ds-power-rx" },
@@ -78,7 +79,8 @@
       "has_pgood_b": false,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "integrated_inductor_b": true
     },
     "non-technical-o": {
       "lifecycle-o": {
@@ -115,7 +117,7 @@
         "vmin_mv": 10800,
         "vmax_mv": 13200,
         "source-o": {
-          "datasheet-s": "datasheet_7.pdf",
+          "datasheet-s": "PTH12050WAH.pdf",
           "page_n": 3,
           "table-s": "ELECTRICAL CHARACTERISTICS"
         }

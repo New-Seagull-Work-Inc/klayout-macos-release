@@ -136,13 +136,13 @@
         }
       },
       "cost-o": {
-        "10": 7.439,
-        "100": 6.065,
-        "1K": 4.043,
-        "10K": 4.043,
-        "100K": 4.043
+        "100": 6.17,
+        "1K": 5.52,
+        "10K": 5.19,
+        "100K": 5.19
       },
-      "distributor-s": "Texas Instruments"
+      "distributor-s": "Rochester Electronics",
+      "stock-i": 819
     },
     "part-s": "LM2576HVS-5.0"
   }

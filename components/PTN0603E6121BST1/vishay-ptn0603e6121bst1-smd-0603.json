@@ -1,0 +1,35 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "PTN0603E6121BST1",
+    "description-s": "6.12 kΩ ±0.1% 0.15 W precision thin film chip resistor, 0603, PTN series, 75 V; buyable replacement for TNPW06036K12BEEA",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 0.39798,
+        "10K": 0.38793,
+        "100K": 0.38592
+      },
+      "distributor-s": "Avnet",
+      "moq-i": 1000,
+      "order-mult-i": 1000,
+      "lead-time-weeks-i": 50
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 6120000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 150,
+      "voltage-max-i": 75000,
+      "tolerance-pct-x10": 1,
+      "lead-style-s": "smd"
+    }
+  }
+}

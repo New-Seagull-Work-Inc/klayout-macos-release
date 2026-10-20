@@ -1,0 +1,54 @@
+{
+  "component-o": {
+    "type-s": "battery",
+    "vendor-s": "Samsung SDI",
+    "description-s": "Li-ion 18650 cell, 3.6 V nominal, 2500 mAh, 20 A max continuous discharge, unprotected, 45.0 g max",
+    "package-ao": [
+      { "ptype-s": "18650" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "battery-lithium-ion"
+    ],
+    "battery-o": {
+      "chemistry-s": "lithium-ion",
+      "cell-format-s": "18650",
+      "rechargeable-b": true,
+      "capacity-mah-i": 2500,
+      "voltage-nominal-mv-i": 3600,
+      "voltage-charge-max-mv-i": 4200,
+      "voltage-cutoff-mv-i": 2500,
+      "energy-wh-x10-i": 90,
+      "discharge-max-ma-i": 20000,
+      "discharge-max-c-x10-i": 80,
+      "cycle-life-i": 250,
+      "protection-b": false
+    },
+    "non-technical-o": {
+      "coo-s": "NL",
+      "coo-source-s": "web",
+      "coo-url-s": "https://cpc.farnell.com/samsung/inr18650-25r/lith-ion-e-cigarette-battery-3/dp/BT07511",
+      "coo-quote-s": "Country of Origin:Netherlands",
+      "coo-checked-s": "2026-09-25",
+      "lifecycle-s": "unknown",
+      "lifecycle-source-s": "DigiKey: not listed; manufacturer (Nexar): not stated",
+      "lifecycle-checked-s": "2026-10-15",
+      "stock-checked-s": "2026-10-15"
+    },
+    "part-s": "INR18650-25R",
+    "pins-ao": [
+      { "1": "+" },
+      { "2": "-" }
+    ],
+    "interfaces-as": [
+      "ds-batt-rxtx",
+      "ds-power-tx",
+      "ds-battneg-rxtx"
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-tx" },
+      { "1": "ds-batt-rxtx" },
+      { "2": "ds-battneg-rxtx" }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "SRP6060FA-100M",
+    "description-s": "10 µH ±20% shielded power inductor, SRP6060FA series, 6.6 x 6.4 x 5.8 mm, DCR 26.6 mΩ typ / 29.3 max, Irms 5.0 A (20 °C rise) / 7.0 A (40 °C), Isat 7.6 A; buyable replacement for the Coilcraft XAL6060-103MEB (current-max-i = Isat, as the XAL row)",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 1.2874,
+        "100": 1.0837,
+        "1K": 0.8549,
+        "10K": 0.8429,
+        "100K": 0.8429
+      },
+      "distributor-s": "Verical",
+      "moq-i": 2,
+      "stock-i": 2461
+    },
+    "package-ao": [
+      { "ptype-s": "smd-6060" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor-shielded"
+    ],
+    "specs-o": {"irms_ma_i": 7000, "irms_rise_c_i": 40, "isat_ma_i": 7600, "isat_drop_pct_i": 30, "current_note_s": "Bourns SRP6060FA table: Isat = 30 % drop (typ); Irms at 20 / 40 °C rise (typ); 5.0 A at 20 °C"},
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000,
+      "value-unit-s": "nh",
+      "current-max-i": 7600,
+      "esr-mr-i": 30
+    }
+  }
+}

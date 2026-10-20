@@ -380,8 +380,12 @@ To draw it again for an output directory: `./klayout --si-report OUTPUT_DIR
 The console lane table (per pair: home layer, skew against budget,
 differential impedance as laid, share of the copper within 10 % of the
 target) and the rail impedance curves (`pdn-impedance.html` and `.csv`)
-come with every run too. The HTML sign-off pages of the source tree
-(`signoff-si.html`, `signoff-pi.html`) are not part of this package.
+come with every run too, and so do the two sign-off pages,
+`signoff-si.html` and `signoff-pi.html` (each with its PDF): the verdict,
+the results against every gate, the eye diagrams, the conditions for
+sign-off, and the rails against their ampacity and IR-drop budgets. To
+write them again for routed output directories: `./klayout --signoff DIR
+[DIR ...] [-o OUT_DIR] [--label BUILD]`.
 
 ## Requirements
 
@@ -390,6 +394,11 @@ come with every run too. The HTML sign-off pages of the source tree
   it the board still routes, but the DRC / ERC gates, the pour
   verification and the fab package are skipped, and the verdict says so.
 - Both binaries in the same directory.
+- Nothing else: no Python, no other runtime or package. `klayout` and
+  `kplace` are self-contained C programs; every report (SI report, sign-off
+  pages, regulator report, their PDFs) is written by `klayout` itself.
+- On macOS, if Gatekeeper blocks the downloaded binaries, clear the
+  quarantine flag once: `xattr -d com.apple.quarantine klayout kplace`.
 
 ## Limitations
 

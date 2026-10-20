@@ -1,0 +1,78 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-antenna-plug",
+    "vendor-s": "Yageo (Pulse)",
+    "part-s": "W1030",
+    "description-s": "2.4-2.5 GHz half-wave swivel stick dipole antenna, 2.0 dBi, omni, vertical polarization, 50 ohm, return loss <= -10 dB, 108 mm, RP-SMA male plug, black, -40..85 C, indoor use. Inside ST's FCC/ISED grant for ST67W611M1A6U/-A6P (external dipole <= 3.37 dBi). Screws onto the RP-SMA bulkhead of the W9037BD cables.",
+    "non-technical-o": {
+      "cost-o": {
+        "10": 1.1485,
+        "100": 1.1485,
+        "1K": 1.1465,
+        "10K": 1.1465,
+        "100K": 1.1465
+      },
+      "distributor-s": "Verical",
+      "moq-i": 4,
+      "stock-i": 24681
+    },
+    "package-ao": [
+      { "ptype-s": "antenna-dipole-rpsma-male-108mm" },
+      { "ppins-i": 1 }
+    ],
+    "blocks-as": [
+      "antenna",
+      "plug",
+      "rf"
+    ],
+    "interfaces-as": [
+      "dd-rf-tx"
+    ],
+    "pins-ao": [
+      { "1": "RF" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      }
+    ],
+    "specs-o": {
+      "antenna_type_s": "dipole",
+      "gain_dbi_f": 2,
+      "connector_s": "rp-sma-male",
+      "frequency_min_mhz_i": 2400,
+      "frequency_max_mhz_i": 2500,
+      "impedance_ohm": 50,
+      "polarization_s": "vertical",
+      "pattern_s": "omni",
+      "length_mm_f": 108,
+      "indoor_b": true
+    },
+    "connector-o": {
+      "pin_count_i": 1,
+      "gender_s": "male",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "family_s": "rp-sma",
+      "mates_with_part_s": "W9037BD0100",
+      "mates_with_parts_as": [
+        "W9037BD0100",
+        "W9037BD0200"
+      ],
+      "mates_with_series_s": "RP-SMA female (jack) bulkheads",
+      "source_s": "Pulse W1030 datasheet issue 2047 (pages 1-2: electrical, mechanical, connector RP-SMA male default)"
+    }
+  }
+}

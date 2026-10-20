@@ -4,8 +4,12 @@
     "vendor-s": "Texas Instruments",
     "description-s": "800-mA Low-Dropout Linear Regulator",
     "package-ao": [
-      { "ptype-s": "sot-223" },
-      { "ppins-i": 4 }
+      {
+        "ptype-s": "to-220"
+      },
+      {
+        "ppins-i": 3
+      }
     ],
     "blocks-as": [
       "regulator",
@@ -19,11 +23,17 @@
       "ds-power-tx"
     ],
     "voltages-ao": [
-      { "vin": 15000 },
-      { "vout": 1250 }
+      {
+        "vin": 15000
+      },
+      {
+        "vout": 1250
+      }
     ],
     "max_currents-ao": [
-      { "out": 800 }
+      {
+        "out": 800
+      }
     ],
     "temperatures-ao": [
       {
@@ -46,21 +56,37 @@
       }
     ],
     "pins-ao": [
-      { "1": "adj/gnd" },
-      { "2": "vout" },
-      { "3": "vin" },
-      { "4": "vout" }
+      {
+        "1": "adj/gnd"
+      },
+      {
+        "2": "vout"
+      },
+      {
+        "3": "vin"
+      }
     ],
     "cfgpins-ao": [
-      { "1": "adj" }
+      {
+        "1": "adj"
+      }
     ],
     "stdpins-ao": [
-      { "2": "ds-power-tx" },
-      { "2": "10uf-avss" },
-      { "3": "ds-power-rx" },
-      { "3": "10uf-avss" },
-      { "4": "ds-power-tx" },
-      { "1": "avss" }
+      {
+        "2": "ds-power-tx"
+      },
+      {
+        "2": "10uf-avss"
+      },
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "3": "10uf-avss"
+      },
+      {
+        "1": "avss"
+      }
     ],
     "specs-o": {
       "topology_s": "ldo",
@@ -103,6 +129,7 @@
       },
       "distributor-s": "Worldway Electronics"
     },
-    "part-s": "LM1117T"
+    "part-s": "LM1117T",
+    "footprint-note-s": "TO-220-3 (LM1117T is TI's TO-220 name; the tab is VOUT, pin 2). Was filed as SOT-223 with a 4th (tab) pin that its TO-220 footprint does not have."
   }
 }

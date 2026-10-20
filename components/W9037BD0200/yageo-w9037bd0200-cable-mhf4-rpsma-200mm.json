@@ -1,0 +1,59 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-coax-plug",
+    "vendor-s": "Yageo (Pulse)",
+    "part-s": "W9037BD0200",
+    "description-s": "MHF4 plug to RP-SMA female bulkhead jumper cable (with spring washer), 200 mm of 0.81 mm black coax (216 mm overall), 50 ohm, 0-8 GHz, 1.06 dB loss at 2 GHz. The antenna cable for ST67W611M1A6UTR's MHF4 receptacle out to a panel RP-SMA jack; takes an RP-SMA male antenna (W1030). Family lengths 100 / 200 / 250 mm (W9037BD0100 / -0200 / -0250).",
+    "non-technical-o": {
+      "cost-o": {
+        "1K": 3.41,
+        "10K": 3.41,
+        "100K": 3.41
+      },
+      "distributor-s": "TTI",
+      "moq-i": 1000
+    },
+    "package-ao": [
+      { "ptype-s": "cable-coax-0.81mm-mhf4-plug-to-rpsma-female-bulkhead" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "plug",
+      "cable",
+      "rf"
+    ],
+    "interfaces-as": [
+      "dd-rf-tx"
+    ],
+    "pins-ao": [
+      { "1": "RF" },
+      { "2": "SHIELD" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "specs-o": {
+      "connector_a_s": "mhf4-plug",
+      "connector_b_s": "rp-sma-female-bulkhead",
+      "impedance_ohm": 50,
+      "cable_od_mm_f": 0.81,
+      "frequency_max_ghz_f": 8,
+      "loss_db_2ghz_f": 1.06
+    },
+    "connector-o": {
+      "pin_count_i": 2,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "length_mm_f": 200,
+      "family_s": "mhf4",
+      "mates_with_part_s": "ST67W611M1A6UTR",
+      "mates_with_parts_as": [
+        "ST67W611M1A6UTR",
+        "W1030"
+      ],
+      "mates_with_series_s": "I-PEX MHF4 receptacle (20449-001E class); RP-SMA male plug antennas",
+      "source_s": "Pulse W9037BDXXXX datasheet issue 1901 (pages 1-2: connectors, 0.81 mm cable, length table, attenuation table)"
+    }
+  }
+}

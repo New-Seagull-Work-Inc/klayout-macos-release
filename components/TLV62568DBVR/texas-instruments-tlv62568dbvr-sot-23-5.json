@@ -1,0 +1,161 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TLV62568DBVR",
+    "description-s": "2.5-5.5 V input, 1 A, 1.5 MHz synchronous step-down converter, adjustable output 0.6 V to VIN, SOT-23-5",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.121,
+        "100": 0.1053,
+        "1K": 0.0896,
+        "10K": 0.0896,
+        "100K": 0.0896
+      },
+      "distributor-s": "Arrow Electronics",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "stock-i": 1721
+    },
+    "package-ao": [
+      { "ptype-s": "sot-23-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "soft-start",
+      "enable",
+      "thermal-shutdown",
+      "current-limit"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "voltages-ao": [
+      { "vin": 3600 },
+      { "vout": 1200 }
+    ],
+    "max_currents-ao": [
+      { "out": 1000 }
+    ],
+    "pins-ao": [
+      { "1": "en" },
+      { "2": "gnd" },
+      { "3": "sw" },
+      { "4": "vin" },
+      { "5": "fb" }
+    ],
+    "stdpins-ao": [
+      { "4": "ds-power-rx" },
+      { "4": "4.7uf-avss" },
+      { "3": "2.2uh-vout" },
+      { "vout": "ds-power-tx" },
+      { "vout": "10uf-avss" },
+      { "2": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "1": "en" },
+      { "1": "vin" },
+      { "1c": "EN high (VIH 1.2 V max) enables, do not leave floating: tied to VIN" },
+      { "5": "fb" },
+      { "5": "200k-vout" },
+      { "5": "200k-avss" },
+      { "5c": "VFB 0.6 V; VOUT = 0.6 V x (1 + R1/R2): 200k / 200k gives the row's 1.2 V (TI typical application R1, R2 0603 1 %; C3 feed-forward optional)" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 2500,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 600,
+      "vout_max_mv": 5500,
+      "iout_max_ma": 1000,
+      "iq_typ_ua": 35,
+      "ish_max_ua": 2,
+      "switching_freq_khz": 1500,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "replaces_s": "NCP1529ASNT1G (obsolete): same SOT-23-5 pin order EN/GND/SW/VIN/FB and VFB 0.6 V",
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "3"
+      ],
+      "vin_pins-as": [
+        "4"
+      ],
+      "pgnd_pins-as": [
+        "2"
+      ],
+      "l_nh_typ": 2200,
+      "cin_nf_typ": 4700,
+      "cout_nf_typ": 10000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "3"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_ref-s": "vin",
+          "abs_max_above_ref_mv": 300,
+          "abs_min_transient_mv": -3000,
+          "abs_max_transient_mv": 9000,
+          "abs_max_transient_ns": 10
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_ref-s": "vin",
+      "sw_abs_max_above_ref_mv": 300,
+      "sw_abs_min_transient_mv": -3000,
+      "sw_abs_max_transient_mv": 9000,
+      "sw_abs_max_transient_ns": 10,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in TLV62568DBVR.pdf: no switch rise-time row in its tables (29 pages)",
+        "sw_fall_ns": "not stated in TLV62568DBVR.pdf: no switch fall-time row in its tables (29 pages)",
+        "sw_coss_pf": "not stated in TLV62568DBVR.pdf: no switch-pin or C_oss capacitance row in its tables (29 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "TLV62568DBVR.pdf",
+        "page_n": 4,
+        "table-s": "Absolute Maximum Ratings"
+      },
+      "source-o": {
+        "datasheet-s": "TLV62568DBVR.pdf",
+        "page_n": 9,
+        "figure-s": "Typical Application"
+      }
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "4"
+        ],
+        "vmin_mv": 2500,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "TLV62568DBVR.pdf",
+          "page_n": 4,
+          "table-s": "6.3 Recommended Operating Conditions(1)"
+        }
+      }
+    ]
+  }
+}

@@ -20,6 +20,7 @@
     "blocks-as": [
       "inductor"
     ],
+    "specs-o": {"irms_ma_i": 4600, "irms_rise_c_i": 50, "isat_ma_i": 4600, "isat_drop_pct_i": 35, "current_note_s": "Bourns 2100HT: rated Idc causes a 50 °C rise (not 40); no separate Isat -- isat_ma_i is Idc, where L is down by isat_drop_pct_i (L @ I rated column) (100 -> 64.5 uH)"},
     "passive-o": {
       "value-i": 100000,
       "value-unit-s": "nh",

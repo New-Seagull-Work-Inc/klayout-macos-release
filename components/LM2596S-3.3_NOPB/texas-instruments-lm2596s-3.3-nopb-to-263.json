@@ -146,14 +146,16 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 5.995,
+        "100": 4.887,
+        "1K": 3.258,
+        "10K": 3.258,
+        "100K": 3.258
+      },
+      "distributor-s": "Texas Instruments",
+      "moq-i": 1,
+      "stock-i": 6877
     },
     "part-s": "LM2596S-3.3/NOPB",
     "supplies-ao": [

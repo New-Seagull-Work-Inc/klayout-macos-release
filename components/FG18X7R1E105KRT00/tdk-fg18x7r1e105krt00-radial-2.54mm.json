@@ -1,0 +1,38 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "TDK",
+    "part-s": "FG18X7R1E105KRT00",
+    "description-s": "1 µF 25 V ±10% X7R radial leaded (dipped) MLCC, FG18 series, 2.5 mm lead pitch, 4.0 x 5.5 x 2.5 mm, bulk; buyable replacement for C320C105K3R5TA",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.144,
+        "100": 0.121,
+        "1K": 0.05704,
+        "10K": 0.05309,
+        "100K": 0.05309
+      },
+      "distributor-s": "Avnet",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 24,
+      "stock-i": 4951
+    },
+    "package-ao": [
+      { "ptype-s": "radial-2.54mm" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 1000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "radial"
+    }
+  }
+}

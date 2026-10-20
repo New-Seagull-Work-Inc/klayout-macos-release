@@ -25,6 +25,7 @@
     "blocks-as": [
       "inductor-shielded"
     ],
+    "specs-o": {"irms_ma_i": 6000, "irms_rise_c_i": 40, "isat_ma_i": 5800, "isat_drop_pct_i": 30, "current_note_s": "Bourns SRP6060FA table: Isat = 30 % drop (typ); Irms at 20 / 40 °C rise (typ); 4.5 A at 20 °C"},
     "passive-o": {
       "esr-mr-i": 43,
       "lead-style-s": "smd",

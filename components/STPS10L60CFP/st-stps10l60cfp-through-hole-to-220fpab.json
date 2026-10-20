@@ -1,0 +1,37 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "STMicroelectronics",
+    "part-s": "STPS10L60CFP",
+    "description-s": "2 x 5 A (10 A per device) 60 V dual common-cathode power Schottky rectifier, TO-220FPAB; buyable replacement for STPS10L40CFP",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.929,
+        "100": 0.605,
+        "1K": 0.441,
+        "10K": 0.361,
+        "100K": 0.361
+      },
+      "distributor-s": "TME",
+      "moq-i": 1,
+      "order-mult-i": 1,
+      "lead-time-weeks-i": 17
+    },
+    "package-ao": [
+      { "ptype-s": "through-hole-to-220fpab" },
+      { "ppins-i": 3 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "passive-o": {
+      "voltage-max-i": 60000,
+      "current-max-i": 10000,
+      "lead-style-s": "through-hole"
+    },
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 15
+    }
+  }
+}

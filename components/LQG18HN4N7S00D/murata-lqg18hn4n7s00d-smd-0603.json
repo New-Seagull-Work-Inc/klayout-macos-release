@@ -20,6 +20,7 @@
     "blocks-as": [
       "inductor"
     ],
+    "specs-o": {"irms_ma_i": 900, "isat_ma_i": 900, "current_note_s": "Murata LQG18HN datasheet: rated current Itemp 900 mA (temperature-rise based, rise not stated); air-core multilayer RF inductor, no saturation -- isat_ma_i = Itemp; the row's current-max-i 300 mA is lower (conservative)"},
     "passive-o": {
       "value-i": 5,
       "value-unit-s": "nh",

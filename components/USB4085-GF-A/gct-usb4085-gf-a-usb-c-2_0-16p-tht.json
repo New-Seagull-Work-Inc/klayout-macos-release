@@ -7,6 +7,8 @@
     "description-s": "USB Type-C 2.0 receptacle, 16 contacts, through-hole, right angle, 5 A / 48 VDC, 20000 cycles; board power input (VBUS/GND, CC1/CC2 with 5.1k Rd pull-downs for a sink, D+/D- brought out)",
     "connector-o": {
       "orientation_s": "right-angle",
+      "shell_tht_b": true,
+      "shell_tht_source_s": "four plated through-hole shell tabs (footprint pads SH, thru_hole oval; GCT USB4085 drawing: through-hole shell legs)",
       "pin_count_i": 16,
       "family_s": "usb-c",
       "courtyard_area_mm2_f": 107.3,
@@ -25,7 +27,7 @@
       "usb-c-receptacle"
     ],
     "interfaces-as": [
-      "ds-power-rxtx",
+      "ds-power-rx",
       "ds-usb2-rxtx",
       "ds-usbcc-rxtx"
     ],
@@ -59,10 +61,10 @@
       { "A12": "avss" },
       { "B1":  "avss" },
       { "B12": "avss" },
-      { "A4":  "ds-power-rxtx" },
-      { "A9":  "ds-power-rxtx" },
-      { "B4":  "ds-power-rxtx" },
-      { "B9":  "ds-power-rxtx" },
+      { "A4":  "ds-power-rx" },
+      { "A9":  "ds-power-rx" },
+      { "B4":  "ds-power-rx" },
+      { "B9":  "ds-power-rx" },
       { "A5":  "ds-usbcc-cc1" },
       { "A5":  "5.1k-avss" },
       { "B5":  "ds-usbcc-cc2" },

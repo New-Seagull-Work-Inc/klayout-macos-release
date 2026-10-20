@@ -1,0 +1,165 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Maxim Integrated",
+    "description-s": "400mV to 5.5V Input, nanoPower Synchronous Boost Converter with True Shutdown, 500mA peak inductor current limit",
+    "package-ao": [
+      { "ptype-s": "udfn-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 5500 },
+      { "vout": 3000 }
+    ],
+    "max_currents-ao": [
+      { "out": 200 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "out" },
+      { "2": "lx" },
+      { "3": "gnd" },
+      { "4": "sel" },
+      { "5": "in" },
+      { "6": "en" }
+    ],
+    "cfgpins-ao": [
+      { "4": "sel" },
+      { "4": "133k-avss" },
+      { "4c": "RSEL 133 k 1 % to GND selects VOUT 3.0 V (RSEL Selection Table)" },
+      { "6": "en" },
+      { "6": "in" },
+      { "6c": "EN active high; tied to IN, always on (EN can be an open-drain GPIO with pull-up)" }
+    ],
+    "stdpins-ao": [
+      { "5": "ds-power-rx" },
+      { "5": "10uf-avss" },
+      { "1": "ds-power-tx" },
+      { "1": "10uf-avss" },
+      { "3": "avss" },
+      { "2": "2.2uh-in" }
+    ],
+    "specs-o": {
+      "topology_s": "boost",
+      "adjustable_b": false,
+      "vin_min_mv": 400,
+      "vin_max_mv": 5500,
+      "vout_fixed_mv": 3000,
+      "vout_min_mv": 1800,
+      "vout_max_mv": 5000,
+      "iout_max_ma": 200,
+      "iq_typ_ua": 0,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "efficiency_pct_max": 95,
+      "switching_freq_khz": 2500,
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "2"
+      ],
+      "vin_pins-as": [
+        "5"
+      ],
+      "pgnd_pins-as": [
+        "3"
+      ],
+      "l_nh_typ": 2200,
+      "cin_nf_typ": 10000,
+      "cout_nf_typ": 10000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in MAX17222ELT+T.pdf: no switch rise-time row in its tables (22 pages)",
+        "sw_fall_ns": "not stated in MAX17222ELT+T.pdf: no switch fall-time row in its tables (22 pages)",
+        "sw_coss_pf": "not stated in MAX17222ELT+T.pdf: no switch-pin or C_oss capacitance row in its tables (22 pages)",
+        "sw_abs_max_mv": "not stated in MAX17222ELT+T.pdf: the Absolute Maximum Ratings (page 2) have no row for the switch pin"
+      },
+      "source-o": {
+        "datasheet-s": "MAX17222ELT+T.pdf",
+        "page_n": 19,
+        "figure-s": "Typical Application"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      },
+      "lifecycle-s": "active",
+      "lifecycle-source-s": "DigiKey: Active; manufacturer (Nexar): PRODUCTION",
+      "lifecycle-checked-s": "2026-10-15",
+      "stock-digikey-i": 4702,
+      "stock-mouser-i": 9739,
+      "stock-newark-i": 7614,
+      "lead-weeks-digikey-i": 10,
+      "stock-checked-s": "2026-10-15"
+    },
+    "part-s": "MAX17222ELT+T",
+    "thermal-o": {
+      "tj-max-c-i": 150
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "in",
+        "pins-as": [
+          "5"
+        ],
+        "vmin_mv": 950,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "MAX17222ELT+T.pdf",
+          "page_n": 2,
+          "table-s": "Electrical Characteristics"
+        }
+      }
+    ]
+  }
+}

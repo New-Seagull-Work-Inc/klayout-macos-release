@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "ESK106M025AC3AA",
+    "description-s": "10 µF 25 V ±20% radial aluminum electrolytic capacitor, ESK series, 5 x 11 mm, 2.0 mm lead spacing, 85 °C; buyable replacement for UVR1E100MDD1TD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.09,
+        "100": 0.079,
+        "1K": 0.053,
+        "10K": 0.053,
+        "100K": 0.053
+      },
+      "distributor-s": "Mouser",
+      "moq-i": 1,
+      "stock-i": 15129
+    },
+    "package-ao": [
+      { "ptype-s": "radial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-aluminum-electrolytic"
+    ],
+    "passive-o": {
+      "value-i": 10000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic",
+      "lead-style-s": "radial"
+    }
+  }
+}
