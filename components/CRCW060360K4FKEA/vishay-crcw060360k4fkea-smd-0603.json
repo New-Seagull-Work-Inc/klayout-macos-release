@@ -1,0 +1,34 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "CRCW060360K4FKEA",
+    "description-s": "60.4 kΩ ±1% 0.1 W thick film chip resistor, 0603, CRCW-e3",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.02,
+        "100": 0.016,
+        "1K": 0.009,
+        "10K": 0.005,
+        "100K": 0.004
+      },
+      "distributor-s": "Mouser"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 60400000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 100,
+      "voltage-max-i": 75000,
+      "tolerance-pct-x10": 10,
+      "lead-style-s": "smd"
+    }
+  }
+}

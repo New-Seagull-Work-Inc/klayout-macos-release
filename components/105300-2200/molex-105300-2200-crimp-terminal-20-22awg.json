@@ -1,0 +1,53 @@
+{
+  "component-o": {
+  "type-s": "connector",
+  "subtype-s": "io-contact-plug",
+  "vendor-s": "Molex",
+  "part-s": "105300-2200",
+  "description-s": "Nano-Fit female crimp terminal, gold 0.38 um (15 u-in), 20-22 AWG, for the 105307 receptacle housing; gold to match the gold 105309-1203 header. Three per battery-pack cable. Sold on 15,000-piece reels.",
+  "non-technical-o": {
+   "lifecycle-o": {},
+   "cost-o": {
+    "100": 0.191,
+    "1K": 0.185,
+    "10K": 0.182,
+    "100K": 0.124
+   },
+   "distributor-s": "TTI",
+   "moq-i": 100,
+   "stock-i": 135400
+  },
+  "package-ao": [
+   {
+    "ptype-s": "crimp-contact-20-22awg"
+   },
+   {
+    "ppins-i": 1
+   }
+  ],
+  "blocks-as": [
+   "crimp-contact"
+  ],
+  "interfaces-as": [],
+  "pins-ao": [
+   {
+    "1": "CONTACT"
+   }
+  ],
+  "stdpins-ao": [],
+  "cfgpins-ao": [],
+  "connector-o": {
+   "pin_count_i": 1,
+   "gender_s": "female",
+   "orientation_s": "cable",
+   "mount_s": "cable",
+   "family_s": "nano-fit",
+   "contact_plating_s": "gold",
+   "wire_awg_s": "20-22",
+   "source_s": "Mouser 538-105300-2200: NanoFit Term Fem Gld 0.38um 20-22AWG",
+   "rows_i": 1,
+   "housing_series_s": "105307",
+   "pitch_mm_f": 2.5
+  }
+ }
+}

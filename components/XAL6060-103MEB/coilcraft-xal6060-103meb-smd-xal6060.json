@@ -20,6 +20,7 @@
     "blocks-as": [
       "inductor"
     ],
+    "specs-o": {"irms_ma_i": 7000, "irms_rise_c_i": 40, "isat_ma_i": 7600, "isat_drop_pct_i": 30, "current_note_s": "Coilcraft XAL table: Isat = 30 % inductance drop (typ); Irms at 20 / 40 °C rise from 25 °C; 5.0 A at 20 °C"},
     "passive-o": {
       "value-i": 10000,
       "value-unit-s": "nh",

@@ -1,0 +1,85 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-header-jack",
+    "vendor-s": "Molex",
+    "part-s": "22-28-4040",
+    "description-s": "KK 254 breakaway header, vertical, 4 circuits, 2.54 mm, tin. As an LED link: pins 1-3 one LED drive (anode) each, pin 4 the common return (cathode, ground).",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      { "ptype-s": "header-1x4-2.54mm-vertical-tht" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "header"
+    ],
+    "interfaces-as": [
+      "ds-led-rxtx",
+      "ds-ir_led-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "LED1" },
+      { "2": "LED2" },
+      { "3": "LED3" },
+      { "4": "GND" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-led-a" },
+      { "1": "ds-ir_led-a" },
+      { "2": "ds-led-a" },
+      { "2": "ds-ir_led-a" },
+      { "3": "ds-led-a" },
+      { "3": "ds-ir_led-a" },
+      { "4": "dvss" },
+      { "4": "ds-led-c" },
+      { "4": "ds-ir_led-c" }
+    ],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 4,
+      "rows_i": 1,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "through-hole",
+      "contact_plating_s": "tin",
+      "locking_b": false,
+      "shielded_b": false,
+      "mate-o": {
+        "part_s": "22-01-3047",
+        "model_s": "footprints/22-28-4040.3dshapes/22-28-4040-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -5.84,
+          -2.9,
+          5.84,
+          2.9
+        ],
+        "height_mm_f": 30.24,
+        "z_min_mm_f": 0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Molex 26950000-SD (2695 / 22-01-3047): 4-circuit housing 10.72 x 4.82 x 12.7 mm seated on the header's 2.54 mm base; 4 22 AWG wires (1.57 mm insulation) 15 mm up"
+      },
+      "family_s": "kk-254",
+      "courtyard_area_mm2_f": 25.8,
+      "board_area_mm2_f": 67.7,
+      "board_area_note_s": "bounding rect of courtyard and mate keepout",
+      "fields_source_s": "as 22-28-4020: KK 254 4.0 A per contact with 22 AWG on 2759 terminals (Nexar maker spec), voltage 250 V",
+      "pitch_mm_f": 2.54,
+      "current_per_pin_ma_i": 4000,
+      "voltage_max_v_f": 250
+    }
+  }
+}

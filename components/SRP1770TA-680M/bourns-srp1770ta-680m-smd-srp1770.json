@@ -26,6 +26,7 @@
     "blocks-as": [
       "inductor"
     ],
+    "specs-o": {"irms_ma_i": 7000, "irms_rise_c_i": 40, "isat_ma_i": 8000, "isat_drop_pct_i": 20, "current_note_s": "Bourns SRP table: Isat = inductance drops 20 % (typ); Irms = 40 °C rise; Isat2 (30 % drop) 13 A"},
     "passive-o": {
       "value-i": 68000,
       "value-unit-s": "nh",

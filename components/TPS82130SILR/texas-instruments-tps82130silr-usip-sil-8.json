@@ -4,8 +4,12 @@
     "vendor-s": "Texas Instruments",
     "description-s": "17-V Input 3-A Step-Down Converter MicroSiP Power Module with Integrated Inductor",
     "package-ao": [
-      { "ptype-s": "usip-sil-8" },
-      { "ppins-i": 8 }
+      {
+        "ptype-s": "usip-sil-8"
+      },
+      {
+        "ppins-i": 8
+      }
     ],
     "blocks-as": [
       "regulator",
@@ -21,11 +25,17 @@
       "ds-power-tx"
     ],
     "voltages-ao": [
-      { "vin": 12000 },
-      { "vout": 1800 }
+      {
+        "vin": 12000
+      },
+      {
+        "vout": 1800
+      }
     ],
     "max_currents-ao": [
-      { "out": 3000 }
+      {
+        "out": 3000
+      }
     ],
     "temperatures-ao": [
       {
@@ -42,32 +52,82 @@
       }
     ],
     "pins-ao": [
-      { "1": "en" },
-      { "2": "vin" },
-      { "3": "gnd" },
-      { "4": "vout" },
-      { "5": "vout" },
-      { "6": "fb" },
-      { "7": "pg" },
-      { "8": "ss/tr" }
+      {
+        "1": "en"
+      },
+      {
+        "2": "vin"
+      },
+      {
+        "3": "gnd"
+      },
+      {
+        "4": "vout"
+      },
+      {
+        "5": "vout"
+      },
+      {
+        "6": "fb"
+      },
+      {
+        "7": "pg"
+      },
+      {
+        "8": "ss/tr"
+      }
     ],
     "cfgpins-ao": [
-      { "1": "en" },
-      { "6": "fb" },
-      { "6": "124k-out" },
-      { "6": "100k-avss" },
-      { "7": "pg" },
-      { "7": "100k-out" },
-      { "8": "ss/tr" },
-      { "8": "3.3nf-avss" }
+      {
+        "1": "en"
+      },
+      {
+        "1": "vin"
+      },
+      {
+        "1c": "EN pull high to enable (internal 400 k pull-down when disabled); tied to VIN, always on"
+      },
+      {
+        "6": "fb"
+      },
+      {
+        "6": "124k-out"
+      },
+      {
+        "6": "100k-avss"
+      },
+      {
+        "7": "pg"
+      },
+      {
+        "7": "100k-out"
+      },
+      {
+        "8": "ss/tr"
+      },
+      {
+        "8": "3.3nf-avss"
+      }
     ],
     "stdpins-ao": [
-      { "2": "ds-power-rx" },
-      { "2": "10uf-avss" },
-      { "3": "avss" },
-      { "4": "ds-power-tx" },
-      { "4": "22uf-avss" },
-      { "5": "ds-power-tx" }
+      {
+        "2": "ds-power-rx"
+      },
+      {
+        "2": "10uf-avss"
+      },
+      {
+        "3": "avss"
+      },
+      {
+        "4": "ds-power-tx"
+      },
+      {
+        "4": "22uf-avss"
+      },
+      {
+        "5": "ds-power-tx"
+      }
     ],
     "specs-o": {
       "topology_s": "buck",
@@ -83,7 +143,8 @@
       "has_pgood_b": true,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "integrated_inductor_b": true
     },
     "non-technical-o": {
       "lifecycle-o": {

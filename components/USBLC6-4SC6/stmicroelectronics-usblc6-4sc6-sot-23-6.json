@@ -1,5 +1,6 @@
 {
   "component-o": {
+    "specs-o": {"usb_ports-ao": [{"port-s": "usb", "speed-s": "hs", "source-o": {"datasheet-s": "USBLC6-4SC6.pdf", "page_n": 1, "table-s": "DocID11068 Rev 7, Applications: USB 2.0 ports up to 480 Mb/s (high speed)"}}]},
     "type-s": "esd-array",
     "vendor-s": "STMicroelectronics",
     "part-s": "USBLC6-4SC6",

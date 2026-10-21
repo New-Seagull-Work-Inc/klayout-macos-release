@@ -1,0 +1,165 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "ON Semiconductor",
+    "description-s": "1.7 MHz, 1 A, High Efficiency, Low Ripple, Adjustable Output Voltage Step-down Converter",
+    "package-ao": [
+      { "ptype-s": "tsop-5" },
+      { "ppins-i": 5 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "soft-start",
+      "thermal-shutdown",
+      "current-limit",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 3600 },
+      { "vout": 1200 }
+    ],
+    "max_currents-ao": [
+      { "out": 1000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "en" },
+      { "2": "gnd" },
+      { "3": "sw" },
+      { "4": "vin" },
+      { "5": "fb" }
+    ],
+    "cfgpins-ao": [
+      { "1": "en" },
+      { "1": "vin" },
+      { "1c": "EN active high, >1.2 V enables; tied to VIN (typical application ON position)" },
+      { "5": "fb" },
+      { "5c": "VFB 0.6 V; Vout = VFB (1 + R1/R2), R2 in 100k-600k (onsemi eq. 2): 200 k / 200 k gives the row's 1.2 V; 18 pF feed-forward across R1" },
+      { "5": "200k-vout" },
+      { "5": "200k-avss" },
+      { "5": "18pf-vout" }
+    ],
+    "stdpins-ao": [
+      { "4": "ds-power-rx" },
+      { "4": "4.7uf-avss" },
+      { "3": "2.2uh-vout" },
+      { "vout": "ds-power-tx" },
+      { "vout": "10uf-avss" },
+      { "2": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 2700,
+      "vin_max_mv": 5500,
+      "vout_min_mv": 900,
+      "vout_max_mv": 3900,
+      "vout_accuracy_pct_x10": 30,
+      "iout_max_ma": 1000,
+      "iq_typ_ua": 28,
+      "ish_max_ua": 1,
+      "switching_freq_khz": 1700,
+      "efficiency_pct_max": 96,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "3"
+      ],
+      "vin_pins-as": [
+        "4"
+      ],
+      "pgnd_pins-as": [
+        "2"
+      ],
+      "l_nh_typ": 2200,
+      "cin_nf_typ": 4700,
+      "cout_nf_typ": 10000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in NCP1529ASNT1G.pdf: no switch rise-time row in its tables (16 pages)",
+        "sw_fall_ns": "not stated in NCP1529ASNT1G.pdf: no switch fall-time row in its tables (16 pages)",
+        "sw_coss_pf": "not stated in NCP1529ASNT1G.pdf: no switch-pin or C_oss capacitance row in its tables (16 pages)",
+        "sw_abs_max_mv": "not stated in NCP1529ASNT1G.pdf: no Absolute Maximum Ratings heading in its first 12 pages"
+      },
+      "source-o": {
+        "datasheet-s": "NCP1529ASNT1G.pdf",
+        "page_n": 1,
+        "figure-s": "Typical Application"
+      }
+    },
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 0,
+          "year": 0
+        },
+        "mp": {
+          "month": 0,
+          "year": 0
+        },
+        "eol": {
+          "month": 0,
+          "year": 0
+        }
+      },
+      "distributor-s": "",
+      "cost-o": {
+        "10": 0,
+        "100": 0,
+        "1K": 0,
+        "10K": 0,
+        "100K": 0
+      },
+      "lifecycle-s": "obsolete",
+      "lifecycle-source-s": "DigiKey: Obsolete; manufacturer (Nexar): LAST SHIPMENTS",
+      "lifecycle-checked-s": "2026-10-15",
+      "stock-digikey-i": 0,
+      "lead-weeks-digikey-i": 34,
+      "stock-checked-s": "2026-10-15"
+    },
+    "part-s": "NCP1529ASNT1G",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "4"
+        ],
+        "vmin_mv": 2700,
+        "vmax_mv": 5500,
+        "source-o": {
+          "datasheet-s": "NCP1529ASNT1G.pdf",
+          "page_n": 5,
+          "table-s": "Electrical Characteristics: Input Voltage Range"
+        }
+      }
+    ]
+  }
+}

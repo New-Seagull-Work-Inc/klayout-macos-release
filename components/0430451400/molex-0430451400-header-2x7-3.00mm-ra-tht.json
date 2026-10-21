@@ -7,12 +7,15 @@
     "non-technical-o": {
       "lifecycle-o": {},
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 1.56,
+        "100": 1.56,
+        "1K": 1.08,
+        "10K": 1.08,
+        "100K": 1.08
+      },
+      "distributor-s": "Verical",
+      "moq-i": 5,
+      "stock-i": 19146
     },
     "package-ao": [
       { "ptype-s": "header-2x7-3.00mm-ra-tht" },
@@ -71,8 +74,8 @@
           21.57,
           -0.17
         ],
-        "height_mm_f": 11.0,
-        "z_min_mm_f": 0.0,
+        "height_mm_f": 11,
+        "z_min_mm_f": 0,
         "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
         "source_s": "Molex 430250000-SD: 2x7 receptacle 21.85 x 6.85 x 14.00 mm, mated right-angle length 17.56 mm from the header's rear face, 11.0 mm for latching; 20 mm of the 14-wire bundle"
       },
@@ -82,7 +85,7 @@
       "board_area_note_s": "courtyard (right-angle at the board edge: the mate overhangs the edge)",
       "fields_source_s": "Micro-Fit 3.0 5.0 A per contact, 600 V (series rating; 14-circuit derating not applied)",
       "current_per_pin_ma_i": 5000,
-      "voltage_max_v_f": 600.0
+      "voltage_max_v_f": 600
     },
     "part-s": "0430451400"
   }

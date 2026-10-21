@@ -50,7 +50,7 @@
     "pins-ao": [
       { "1": "in" },
       { "2": "gnd" },
-      { "3": "en" },
+      { "3": "en" }, {"3": "in"}, {"3c": "EN active high; open = shutdown (p2): tied to IN, the datasheet's always-on connection (p8: 'If the enable/shutdown feature is not required, connect EN (pin 3) to IN'); a sequenced design drives it instead"},
       { "4": "adj" },
       { "5": "out" }
     ],
@@ -67,7 +67,7 @@
       { "5": "2.2uf-avss" },
       { "2": "avss" }
     ],
-    "specs-o": {
+    "specs-o": {"en_vil_max_mv": 180, "en_vih_max_mv": 2000, "en_note-s": "no internal pull: EN open = shutdown (p2); IIL 0.01 uA", "en_source-o": {"datasheet-s": "MIC5205 datasheet (Micrel M9999-020806)", "page_n": 3, "table-s": "ENABLE Input: VIL 0.4 V at 25 C, 0.18 V over -40..125 C (regulator shutdown); VIH 2.0 V min (regulator enabled)"}, 
       "topology_s": "ldo",
       "adjustable_b": true,
       "vin_min_mv": 2500,

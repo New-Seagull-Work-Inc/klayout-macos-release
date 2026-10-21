@@ -1,0 +1,353 @@
+{
+  "component-o": {
+    "type-s": "a2i2s",
+    "vendor-s": "AKM",
+    "part-s": "AK5522VN",
+    "description-s": "parallel-mode A/D with 96KHz I2S output, sharp roll-off digital filter -- SKU AK5522-IO33: DVDD/I-O at 3.3 V.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "1K": 2.37,
+        "10K": 2.29,
+        "100K": 2.29
+      },
+      "distributor-s": "AERI",
+      "stock-i": 3492
+    },
+    "package-ao": [
+      {
+        "ptype-s": "qfn"
+      },
+      {
+        "ppins-i": 24
+      }
+    ],
+    "blocks-as": [
+      "a2i2s"
+    ],
+    "interfaces-as": [
+      "as-l-rx",
+      "as-r-rx",
+      "ds-i2s-tx"
+    ],
+    "voltages-ao": [
+      {
+        "avdd": 5000
+      },
+      {
+        "dvdd": 3300
+      }
+    ],
+    "max_currents-ao": [
+      {
+        "avdd": 18
+      },
+      {
+        "dvdd": 13
+      }
+    ],
+    "passives-ao": [
+      {
+        "capacitor": [
+          {
+            "value": "10000"
+          },
+          {
+            "voltage": "15000"
+          },
+          {
+            "pin1": "1"
+          },
+          {
+            "pin2": "10"
+          }
+        ]
+      }
+    ],
+    "pins-ao": [
+      {
+        "1": "cks3/sda"
+      },
+      {
+        "2": "pdn"
+      },
+      {
+        "3": "cks1"
+      },
+      {
+        "4": "sd"
+      },
+      {
+        "5": "psn"
+      },
+      {
+        "6": "dif"
+      },
+      {
+        "7": "linp"
+      },
+      {
+        "8": "linn"
+      },
+      {
+        "9": "rinn"
+      },
+      {
+        "10": "rinp"
+      },
+      {
+        "11": "vref"
+      },
+      {
+        "12": "loop"
+      },
+      {
+        "13": "avss"
+      },
+      {
+        "14": "avdd"
+      },
+      {
+        "15": "rega0"
+      },
+      {
+        "16": "dvss"
+      },
+      {
+        "17": "dvdd"
+      },
+      {
+        "18": "mclk"
+      },
+      {
+        "19": "regd0"
+      },
+      {
+        "20": "lrck"
+      },
+      {
+        "21": "bick"
+      },
+      {
+        "22": "sdto"
+      },
+      {
+        "23": "ckso/tdmi"
+      },
+      {
+        "24": "cks2/scl"
+      },
+      {
+        "25": "exposed pad"
+      }
+    ],
+    "cfgpins-ao": [
+      {
+        "1": "cks3/sda"
+      },
+      {
+        "1": "dvss"
+      },
+      {
+        "1c": "CKS3 low (Table 3 mode 2); p6: unused digital inputs to DVSS, never float (p5 Note 1)"
+      },
+      {
+        "2c": "PDN active-low reset/power-down, Hi-Z, must not float (p5 Note 1): driven by the MCU (ds-adc_pdn-rx); 100 k to DVSS holds the ADC in power-down while the MCU pin is Hi-Z at boot (not from the datasheet)"
+      },
+      {
+        "3": "cks1"
+      },
+      {
+        "3": "dvdd"
+      },
+      {
+        "3c": "CKS1 high: with CKS3/2/0 low, Table 3 mode 2 = master, stereo, MCLK 256fs in, BICK 64fs and LRCK out, fs 8-54 kHz, PLL off"
+      },
+      {
+        "4": "sd"
+      },
+      {
+        "4": "dvss"
+      },
+      {
+        "4c": "SD low: sharp roll-off digital filter (p5)"
+      },
+      {
+        "5": "psn"
+      },
+      {
+        "5": "dvdd"
+      },
+      {
+        "5c": "PSN high: parallel control mode (p5); no I2C"
+      },
+      {
+        "6": "dif"
+      },
+      {
+        "6": "dvdd"
+      },
+      {
+        "6c": "DIF high: I2S-compatible data format (p5)"
+      },
+      {
+        "8": "linn"
+      },
+      {
+        "8": "330nf/c0g-avss"
+      },
+      {
+        "8c": "single-ended input (Figure 87): LINN AC-grounded through 330 nF C0G to AVSS, matching LINP's 330 nF series coupling cap so both inputs see the same source impedance; C0G because the review flagged Class 2 (X5R) dielectric in the audio path. Corner with the single-ended input resistance (p8: 27.3 k typ, 10 k min at 0 dB) is 18 Hz typ, 48 Hz worst case"
+      },
+      {
+        "9": "rinn"
+      },
+      {
+        "9": "330nf/c0g-avss"
+      },
+      {
+        "9c": "single-ended input (Figure 87): RINN AC-grounded through 330 nF C0G to AVSS, matching RINP's series cap (see 8c)"
+      },
+      {
+        "11": "vref"
+      },
+      {
+        "11": "1uf-avss"
+      },
+      {
+        "11c": "VREF: decouple to AVSS with 1 uF (p5 pin 11, p80 item 2)"
+      },
+      {
+        "12": "loop"
+      },
+      {
+        "12c": "LOOP left open: PLL off in mode 2 (p6 Handling of Unused Pin: LOOP open); 0.01 uF to AVSS only in a PLL mode"
+      },
+      {
+        "15": "regao"
+      },
+      {
+        "15": "10uf-avss"
+      },
+      {
+        "15c": "REGAO: AVDD 5 V, the 3.3 V DAC regulator is on (no register to disable it in parallel mode): 10 uF to AVSS (p5 pin 15, p6)"
+      },
+      {
+        "19": "regdo"
+      },
+      {
+        "19": "1uf-dvss"
+      },
+      {
+        "19c": "REGDO: DVDD 3.0-3.6 V, internal 1.8 V regulator output, 1 uF to DVSS (p5 pin 19)"
+      },
+      {
+        "23": "ckso/tdmi"
+      },
+      {
+        "23": "dvss"
+      },
+      {
+        "23c": "CKS0 low (Table 3 mode 2)"
+      },
+      {
+        "24": "cks2/scl"
+      },
+      {
+        "24": "dvss"
+      },
+      {
+        "24c": "CKS2 low (Table 3 mode 2)"
+      },
+      {
+        "25c": "exposed pad (2.45 mm, p82 outline): the datasheet does not say where it connects; tied to AVSS, since AVSS and DVSS share one analog ground plane (p80 item 1)"
+      },
+      {
+        "14c": "AVDD and DVDD: 10 uF + 0.1 uF each to ground, close to the pins (system connection diagram p79; p80 item 1)"
+      },
+      {
+        "7c": "LINP: the source (SPH8878 OUT+, a single-ended analog output) is AC-coupled at this end through a 330 nF C0G series cap (<C>-link); the input is biased internally to the ADC's reference (p80 item 3)"
+      },
+      {
+        "10c": "RINP: AC-coupled through a 330 nF C0G series cap (<C>-link), as LINP"
+      }
+    ],
+    "stdpins-ao": [
+      {
+        "18": "ds-i2s-mclk"
+      },
+      {
+        "2": "ds-adc_pdn-rx"
+      },
+      {
+        "2": "100k-dvss"
+      },
+      {
+        "7": "as-l-rx"
+      },
+      {
+        "7": "330nf/c0g-link"
+      },
+      {
+        "10": "as-r-rx"
+      },
+      {
+        "10": "330nf/c0g-link"
+      },
+      {
+        "20": "ds-i2s-lrck"
+      },
+      {
+        "21": "ds-i2s-bick"
+      },
+      {
+        "22": "ds-i2s-sdto"
+      },
+      {
+        "14": "avdd-5"
+      },
+      {
+        "14": "10uf-avss"
+      },
+      {
+        "14": "100nf-avss"
+      },
+      {
+        "17": "dvdd-3_3"
+      },
+      {
+        "17": "10uf-dvss"
+      },
+      {
+        "17": "100nf-dvss"
+      },
+      {
+        "13": "avss"
+      },
+      {
+        "16": "dvss"
+      },
+      {
+        "25": "avss"
+      }
+    ],
+    "sku-s": "AK5522-IO33",
+    "specs-o": {
+      "io_voltage_mv_i": 3300,
+      "vddio_min_mv_i": 3000,
+      "vddio_max_mv_i": 3600,
+      "io_banks_ao": [
+        {
+          "bank-s": "DVDD",
+          "pins-as": [
+            "17"
+          ],
+          "mv-i": 3300,
+          "source-s": "AK5522 datasheet 017002311-E-00 (2017/03): p1 Features, p5 pin 17 DVDD / pin 19 REGDO, p7 Note 7"
+        }
+      ],
+      "io_note-s": "DVDD (pin 17) is the only digital supply and sets the I/O level of PDN, MCLK, BICK, LRCK, SDTO and the mode straps; AVDD (pin 14, 3.0-3.6 or 4.5-5.5 V) is independent."
+    },
+    "sku-note-s": "I/O-voltage SKU: DVDD = 3.3 V (3.00-3.60 V), so its I2S port, PDN and straps run at 3.3 V. REGDO (pin 19) is the internal 1.8 V regulator output: 1 uF to DVSS. Parallel control mode (CKS2/CKS3 to DVSS, PSN high), so no I2C. AVDD stays 5 V. AK5522 datasheet 017002311-E-00 (2017/03): p1 Features, p5 pin 17 DVDD / pin 19 REGDO, p7 Note 7"
+  }
+}

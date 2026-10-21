@@ -1,29 +1,69 @@
 {
   "component-o": {
     "type-s": "regulator",
-    "vendor-s": "STMicroelectronics",
+    "vendor-s": "ST",
     "part-s": "LD1117S25TR",
-    "description-s": "2.5 V Fixed LDO Voltage Regulator",
+    "description-s": "Fixed Linear Regulator",
+    "non-technical-o": {
+      "lifecycle-o": {
+        "samples": {
+          "month": 11,
+          "year": 2023
+        },
+        "mp": {
+          "month": 1,
+          "year": 2024
+        },
+        "eol": {
+          "month": 12,
+          "year": 2035
+        }
+      },
+      "distributor-s": "TBD",
+      "cost-o": {
+        "10": 3,
+        "100": 2.5,
+        "1K": 1.8,
+        "10K": 1.2,
+        "100K": 1
+      },
+      "lifecycle-s": "active",
+      "lifecycle-source-s": "DigiKey: Active; manufacturer (Nexar): not stated",
+      "lifecycle-checked-s": "2026-10-19",
+      "stock-digikey-i": 9440,
+      "stock-mouser-i": 5754,
+      "stock-newark-i": 5000,
+      "lead-weeks-digikey-i": 30,
+      "lead-weeks-mouser-i": 30,
+      "stock-checked-s": "2026-10-19"
+    },
     "package-ao": [
-      { "ptype-s": "sot-223" },
-      { "ppins-i": 4 }
+      {
+        "ptype-s": "sot-223"
+      },
+      {
+        "ppins-i": 4
+      }
     ],
     "blocks-as": [
-      "regulator",
-      "regulator-ldo",
-      "thermal-shutdown",
-      "current-limit"
+      "regulator"
     ],
     "interfaces-as": [
       "ds-power-rx",
       "ds-power-tx"
     ],
     "voltages-ao": [
-      { "vin": 15000 },
-      { "vout": 2500 }
+      {
+        "vin": 5000
+      },
+      {
+        "vout": 2500
+      }
     ],
     "max_currents-ao": [
-      { "out": 800 }
+      {
+        "out": 800
+      }
     ],
     "temperatures-ao": [
       {
@@ -40,56 +80,39 @@
       }
     ],
     "pins-ao": [
-      { "1": "gnd" },
-      { "2": "vout" },
-      { "3": "vin" },
-      { "4": "vout" }
+      {
+        "1": "gnd"
+      },
+      {
+        "2": "vout"
+      },
+      {
+        "4": "vout"
+      },
+      {
+        "3": "vin"
+      }
     ],
     "cfgpins-ao": [],
     "stdpins-ao": [
-      { "3": "ds-power-rx" },
-      { "3": "100nf-avss" },
-      { "2": "ds-power-tx" },
-      { "2": "10uf-avss" },
-      { "1": "avss" }
+      {
+        "3": "ds-power-rx"
+      },
+      {
+        "2": "ds-power-tx"
+      },
+      {
+        "2": "10uf-avss"
+      },
+      {
+        "1": "avss"
+      }
     ],
     "specs-o": {
       "topology_s": "ldo",
       "adjustable_b": false,
-      "vin_min_mv": 3900,
-      "vin_max_mv": 15000,
       "vout_fixed_mv": 2500,
-      "vout_accuracy_pct_x10": 20,
-      "iout_max_ma": 800,
-      "iq_typ_ua": 5000,
-      "dropout_mv_at_iout": 1100,
-      "psrr_db_at_1khz": 75,
-      "has_thermal_shutdown_b": true,
-      "has_current_limit_b": true
-    },
-    "non-technical-o": {
-      "lifecycle-o": {
-        "samples": {
-          "month": 0,
-          "year": 0
-        },
-        "mp": {
-          "month": 0,
-          "year": 0
-        },
-        "eol": {
-          "month": 0,
-          "year": 0
-        }
-      },
-      "distributor-s": "",
-      "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+      "pinout_note_s": "LD1117 SOT-223: 1 GND, 2 VOUT, 3 VIN, tab VOUT; 10 uF minimum output capacitor for stability (p1)"
     },
     "supplies-ao": [
       {

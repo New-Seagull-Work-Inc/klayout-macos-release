@@ -3,7 +3,7 @@
     "type-s": "connector",
     "subtype-s": "io-contact-plug",
     "vendor-s": "Molex",
-    "description-s": "KK 254 female crimp terminal, 22-30 AWG, 2.54 mm pitch, tin; for receptacle series 2695. One per circuit; a cable BOM line.",
+    "description-s": "KK 254 female crimp terminal, 22-30 AWG, 2.54 mm pitch, tin; for receptacle series 2695. One per circuit; a cable BOM line. SUPERSEDED by 50-29-1638 (Molex successor, 2026-10-14; obsolete at DigiKey): kept for reference, not in ltl.db -- do not push.",
     "non-technical-o": {
       "lifecycle-o": {},
       "cost-o": {

@@ -1,0 +1,36 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "ESK226M025AC3AA",
+    "description-s": "22 µF 25 V ±20% radial aluminum electrolytic capacitor, ESK series, 5 x 11 mm, 2.0 mm lead spacing, 85 °C; buyable replacement for UVR1E220MDD1TD",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.074,
+        "100": 0.065,
+        "1K": 0.042,
+        "10K": 0.042,
+        "100K": 0.042
+      },
+      "distributor-s": "Mouser",
+      "moq-i": 1,
+      "stock-i": 23469
+    },
+    "package-ao": [
+      { "ptype-s": "radial" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-aluminum-electrolytic"
+    ],
+    "passive-o": {
+      "value-i": 22000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic",
+      "lead-style-s": "radial"
+    }
+  }
+}

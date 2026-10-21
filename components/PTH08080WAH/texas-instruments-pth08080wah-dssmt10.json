@@ -55,6 +55,7 @@
     "cfgpins-ao": [
       { "3": "track/margin" },
       { "4": "inhibit" },
+      { "4c": "Inhibit left open: internal pull-up, the module runs when input power is applied (datasheet pin note); pull low with a low-leakage open-drain to inhibit" },
       { "5": "vo sense" },
       { "6": "vo adjust" },
       { "6c": "feedback divider for adjustable output" },
@@ -86,7 +87,8 @@
       "has_enable_b": true,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "integrated_inductor_b": true
     },
     "non-technical-o": {
       "lifecycle-o": {
@@ -103,14 +105,16 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 12.02,
+        "100": 10.499,
+        "1K": 7.241,
+        "10K": 7.241,
+        "100K": 7.241
+      },
+      "distributor-s": "Texas Instruments",
+      "moq-i": 1,
+      "stock-i": 2947
     },
     "part-s": "PTH08080WAH"
   }

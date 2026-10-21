@@ -94,6 +94,9 @@
       { "17": "avss" }
     ],
     "specs-o": {
+      "sw_inductor_isat_min_ma_i": 4500,
+      "sw_inductor_irms_min_ma_i": 3000,
+      "sw_inductor_note_s": "SW1/SW2 inductors (4.7 uH, one per phase): Isat >= 4.5 A (the per-phase N-MOSFET peak current limit is 2.5/3.5/4.5 A min/typ/max, LTC3124 datasheet p3; p16: peak inductor currents of 3-4 A), Irms >= 3 A; shielded. The switch current limit bounds the coil peak, so a 24 A part (XAL1010-472MEB) is oversized: e.g. Bourns SRP5030T-4R7M (Isat 6 A, Irms 4.6 A, 5.7x5.2 mm).",
       "topology_s": "boost",
       "adjustable_b": true,
       "vin_min_mv": 1800,

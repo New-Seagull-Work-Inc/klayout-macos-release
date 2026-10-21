@@ -1,5 +1,6 @@
 {
   "component-o": {
+    "specs-o": {"usb_ports-ao": [{"port-s": "otg-hs", "pins-as": ["50", "49"], "speed-s": "hs", "source-o": {"datasheet-s": "esp32-p4_datasheet_en.pdf", "page_n": 75, "table-s": "4.2.2.9 USB 2.0 High-Speed OTG: High-Speed mode (480 Mbit/s); pins USB_DP/USB_DM p29"}}, {"port-s": "serial-jtag", "pins-as": ["53", "52"], "speed-s": "fs", "source-o": {"datasheet-s": "esp32-p4_datasheet_en.pdf", "page_n": 28, "table-s": "USB 2.0 Full-speed: by default USB Serial/JTAG uses GPIO24/25 (USB1P1_N0/P0)"}}, {"port-s": "otg-fs", "pins-as": ["56", "55"], "speed-s": "fs", "source-o": {"datasheet-s": "esp32-p4_datasheet_en.pdf", "page_n": 28, "table-s": "USB 2.0 Full-Speed OTG uses GPIO26/27 (USB1P1_N1/P1) by default"}}]},
     "type-s": "soc",
     "vendor-s": "Espressif Systems",
     "part-s": "ESP32-P4",

@@ -55,6 +55,7 @@
     "cfgpins-ao": [
       { "8": "track/margin" },
       { "9": "inhibit" },
+      { "9c": "Inhibit left open: internal pull-up, the module runs when input power is applied (datasheet pin note); pull low with a low-leakage open-drain to inhibit" },
       { "10": "set point" },
       { "10c": "feedback divider top to vout, bottom to gnd" },
       { "10": "10k-out" },
@@ -84,7 +85,8 @@
       "has_enable_b": true,
       "has_thermal_shutdown_b": true,
       "has_current_limit_b": true,
-      "has_softstart_b": true
+      "has_softstart_b": true,
+      "integrated_inductor_b": true
     },
     "non-technical-o": {
       "lifecycle-o": {
@@ -101,14 +103,16 @@
           "year": 0
         }
       },
-      "distributor-s": "",
       "cost-o": {
-        "10": 0,
-        "100": 0,
-        "1K": 0,
-        "10K": 0,
-        "100K": 0
-      }
+        "10": 74.516,
+        "100": 66.236,
+        "1K": 48.703,
+        "10K": 48.703,
+        "100K": 48.703
+      },
+      "distributor-s": "Texas Instruments",
+      "moq-i": 1,
+      "stock-i": 513
     },
     "part-s": "PTH04040WAH"
   }

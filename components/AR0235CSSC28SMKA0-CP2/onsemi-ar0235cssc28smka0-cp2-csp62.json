@@ -4,7 +4,7 @@
     "vendor-s": "onsemi",
     "part-s": "AR0235CSSC28SMKA0-CP2",
     "description-s": "AR0235CS 1/2.8-inch 2.3 MP (1920 x 1200) global-shutter CMOS image sensor, RGB Bayer, 28 deg CRA, 120 fps full resolution (10-bit), MIPI CSI-2 1/2/4-lane up to 850 Mbps/lane; 62-ball CSP with protective film, MOQ 50 (-CP2).",
-    "specs-o": {
+    "specs-o": {"power_sequence-ao": [{"rail-s": "avdd-2_8", "order-i": 1}, {"rail-s": "iovdd-1_8", "order-i": 2, "delay_min_ms-f": 0.1}, {"rail-s": "dvdd-1_2", "order-i": 3, "delay_min_ms-f": 0.1}], "power_sequence_source-s": "onsemi AR0235CS datasheet p19, Power-Up Sequence (Figure 18, Table 15): VAA, VAA_PLL, VAA_PIX (2.8 V) first, together (CSP: same-voltage supplies without delay); VDD_IO, VDD_IO_ANA (1.8 V) t1 >= tr + 100 us after; VDD, VDD_ANA, VDD_PHY (1.25 V) t2 >= tr + 100 us after (tr >= 100 us; delay_min_ms-f counts from the earlier rail being up); then EXTCLK t4 >= 100 us. Table 15's unit glyph is unmapped in the PDF text; step 3 reads 'After 100 us', so us, not ms. Power-down (Table 16) is the reverse; not built.", 
       "max_h_res": 1920,
       "max_v_res": 1200,
       "max_frame_rate_at_max_res": 120,

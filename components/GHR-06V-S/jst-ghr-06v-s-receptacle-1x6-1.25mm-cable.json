@@ -1,0 +1,70 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "JST",
+    "part-s": "GHR-06V-S",
+    "description-s": "JST GH receptacle housing (cable end), 1x6, 1.25 mm pitch, 8.75 x 4.15 x 5.7 mm, takes contacts SSHL-002T-P0.2 (AWG 30-26). Mates with SM06B-GHS-TB (right-angle). A cable BOM line.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {},
+      "distributor-s": ""
+    },
+    "package-ao": [
+      {
+        "ptype-s": "receptacle-1x6-1.25mm-cable"
+      },
+      {
+        "ppins-i": 6
+      }
+    ],
+    "blocks-as": [
+      "receptacle",
+      "plug",
+      "power-plug"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      {
+        "1": "PIN1"
+      },
+      {
+        "2": "PIN2"
+      },
+      {
+        "3": "PIN3"
+      },
+      {
+        "4": "PIN4"
+      },
+      {
+        "5": "PIN5"
+      },
+      {
+        "6": "PIN6"
+      }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 6,
+      "rows_i": 1,
+      "pitch_mm_f": 1.25,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "current_per_pin_ma_i": 1000,
+      "voltage_max_v_i": 50,
+      "voltage_max_v_f": 50,
+      "locking_b": true,
+      "polarized_b": true,
+      "family_s": "gh",
+      "mates_with_part_s": "SM06B-GHS-TB",
+      "mates_with_parts_as": [
+        "SM06B-GHS-TB"
+      ],
+      "terminal_part_s": "SSHL-002T-P0.2",
+      "source_s": "JST GH catalog (housing table p2: GHR-06V-S A 6.25, B 8.75)"
+    }
+  }
+}

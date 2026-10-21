@@ -29,7 +29,6 @@
       "power-jack"
     ],
     "interfaces-as": [
-      "ds-power-rxtx",
       "ds-batt-rxtx"
     ],
     "pins-ao": [
@@ -37,7 +36,6 @@
       { "2": "GND" }
     ],
     "stdpins-ao": [
-      { "1": "ds-power-rxtx" },
       { "1": "ds-batt-rxtx" },
       { "2": "dvss" }
     ],

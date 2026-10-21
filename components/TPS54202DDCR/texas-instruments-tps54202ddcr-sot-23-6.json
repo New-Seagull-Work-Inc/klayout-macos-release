@@ -76,7 +76,7 @@
       { "1": "avss" },
       { "6": "100nf-sw" }
     ],
-    "specs-o": {
+    "specs-o": {"en_vil_max_mv": 1100, "en_vih_max_mv": 1280, "en_pullup_ua": 0.7, "en_note-s": "internal current source: a floating EN enables (p3); 0.7 uA at VEN 1 V plus 1.55 uA hysteresis current above the threshold", "en_source-o": {"datasheet-s": "tps54202.pdf", "page_n": 5, "table-s": "5.5 Electrical Characteristics, ENABLE: V(EN_FALLING) 1.1 V min, V(EN_RISING) 1.28 V max, I(EN_INPUT) 0.7 uA, I(EN_HYS) 1.55 uA"}, 
       "topology_s": "buck",
       "adjustable_b": true,
       "vin_min_mv": 4500,

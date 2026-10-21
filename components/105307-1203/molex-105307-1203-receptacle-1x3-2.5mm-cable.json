@@ -1,0 +1,51 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-power-plug",
+    "vendor-s": "Molex",
+    "part-s": "105307-1203",
+    "description-s": "Nano-Fit receptacle housing with TPA (cable end), single row, 3 circuits, 2.50 mm pitch, black; mates with the 105309-1203 header; takes female crimp terminals series 105300 (105300-2200, gold, 20-22 AWG). Battery-pack cable: BAT+, pack -, NTC. A cable BOM line, not board-mounted.",
+    "non-technical-o": {
+      "lifecycle-o": {},
+      "cost-o": {
+        "10": 0.207,
+        "100": 0.1632,
+        "1K": 0.15,
+        "10K": 0.15,
+        "100K": 0.15
+      },
+      "distributor-s": "Verical",
+      "moq-i": 6,
+      "stock-i": 70339
+    },
+    "package-ao": [
+      { "ptype-s": "receptacle-1x3-2.5mm-cable" },
+      { "ppins-i": 3 }
+    ],
+    "blocks-as": [
+      "receptacle",
+      "plug",
+      "power-plug"
+    ],
+    "interfaces-as": [],
+    "pins-ao": [
+      { "1": "PIN1" },
+      { "2": "PIN2" },
+      { "3": "PIN3" }
+    ],
+    "stdpins-ao": [],
+    "cfgpins-ao": [],
+    "connector-o": {
+      "pin_count_i": 3,
+      "rows_i": 1,
+      "pitch_mm_f": 2.5,
+      "gender_s": "female",
+      "orientation_s": "cable",
+      "mount_s": "cable",
+      "family_s": "nano-fit",
+      "mates_with_part_s": "105309-1203",
+      "terminal_series_s": "105300",
+      "source_s": "Molex 105307 product listing (Mouser 538-105307-1203: NanoFit TPA Recp Hsg Single Row 3Ckt Blk)"
+    }
+  }
+}

@@ -15,7 +15,9 @@
       "protection-ic-lithium"
     ],
     "interfaces-as": [
-      "ds-power-rxtx"
+      "ds-batt-rxtx",
+      "ds-battneg-rxtx",
+      "ds-prot-tx"
     ],
     "protection-o": {
       "chemistry-s": "lithium-ion",
@@ -55,32 +57,26 @@
       }
     ],
     "cfgpins-ao": [
-      {
-        "4": "DP"
-      },
-      {
-        "4c": "Test pin for delay time measurement; leave open in application"
-      }
+      { "4": "DP" },
+      { "4c": "Test pin for delay time measurement; leave open in application" },
+      { "5c": "R1 470 ohm (300 ohm-1 k) from VDD to the cell positive EB+ (net eb_p), ESD and power fluctuation (ABLIC Figure 10, Table 17); VDD carries the strap, not the battery role" },
+      { "5c": "C1 0.1 uF (>= 0.022 uF, else DO may oscillate on a short) between VDD and VSS (cell negative)" },
+      { "6c": "VSS = cell negative B- (ds-battneg net): joins FET1 (discharge) source only, never the pack/system ground" },
+      { "2c": "R2 2 kohm (300 ohm-4 k) from VM to EB- (net eb_n = pack negative = board ground avss), reverse-charger protection" },
+      { "1": "DO" },
+      { "1c": "DO drives the discharge FET gate (DMN2019UTS-13 G1) over ds-prot-dfet" },
+      { "3": "CO" },
+      { "3c": "CO drives the charge FET gate (DMN2019UTS-13 G2) over ds-prot-cfet" }
     ],
     "stdpins-ao": [
-      {
-        "5": "ds-power-rx"
-      },
-      {
-        "6": "vss"
-      },
-      {
-        "5c": "Series resistor R1 = 470Ω from VDD to battery positive for ESD protection and power fluctuation"
-      },
-      {
-        "5": "0.1uf-vss"
-      },
-      {
-        "5c": "Decoupling capacitor C1 = 0.1µF between VDD and VSS for power fluctuation"
-      },
-      {
-        "2c": "Resistor R2 = 2kΩ on VM pin for reverse charger connection protection"
-      }
+      { "5": "470r-eb_p" },
+      { "5": "0.1uf-vss" },
+      { "eb_p": "ds-batt-rxtx" },
+      { "6": "ds-battneg-rxtx" },
+      { "1": "ds-prot-dfet" },
+      { "3": "ds-prot-cfet" },
+      { "2": "2k-eb_n" },
+      { "eb_n": "avss" }
     ],
     "temperatures-ao": [
       {
@@ -105,6 +101,17 @@
       }
     ],
     "non-technical-o": {},
-    "part-s": "S-8261ABJMD-G3JT2G"
+    "part-s": "S-8261ABJMD-G3JT2G",
+    "specs-o": {
+      "external_fets-o": {
+        "topology-s": "dual N-channel in the cell's return: FET1 discharge (gate DO, source VSS = cell -), FET2 charge (gate CO, source EB- = pack -), drains common",
+        "vth_max_mv-i": 3000,
+        "vgs_min_v-i": 6,
+        "requirement-s": "FET Vth <= overdischarge detection voltage (3.000 V); gate-source rating >= charger voltage (ABLIC Table 17 *1 *2)",
+        "suggested_part-s": "DMN2019UTS-13",
+        "source-s": "ABLIC S-8261 Rev.5.5 p24 Figure 10 / Table 17",
+        "nets-s": "eb_p = cell/pack positive EB+; VSS (pin 6) = cell negative; avss = pack negative EB- (system ground)"
+      }
+    }
   }
 }
