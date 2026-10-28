@@ -1,0 +1,288 @@
+{
+  "found": true,
+  "vendor": "Multi Circuit Boards (Multi-CB; Multi Leiterplatten GmbH / Multi Circuit Boards Ltd.)",
+  "country_s": "Germany",
+  "location_s": "Brunnthal (near Munich), Germany (support and dispatch); contracting party Multi Circuit Boards Ltd., Poole, GB. Manufacturing plant location not published on the pages read.",
+  "assembly_b": false,
+  "shipping_us-ao": [
+    {
+      "method": "UPS Express Saver (worldwide zone CA, US)",
+      "days": "not published ('The transit time can be calculated at UPS')",
+      "unit": "-",
+      "to": "US",
+      "from": "Brunnthal, Germany",
+      "cost": "87,65 € for 0,5 kg (zone CA, US)",
+      "source": "https://www.multi-circuit-boards.eu/en/pricing/delivery-costs/ups-delivery-costs.html"
+    }
+  ],
+  "cutoff_note": "'Order your boards until 9:00 am, counting the current day as the production day.' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards/prototypes.html",
+  "barrel_plating_um": 20,
+  "barrel_plating-s": "minimum",
+  "barrel_plating_source-s": "Multi-CB manufacturing tolerances, 'Cu thickness in vias': 'Via, PTH slots, THT (> 150µm) | min. 20µm (Class 2 standard) | min. 25µm (class 3)'; Microvia (<=150µm) min. 18µm; blind/buried via min. 10µm. https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-17",
+  "copper_foil_note-s": "not published (foil type, roughness). Outer layers printed 'Cu 18µm + plating' = 35 µm final; inner 35 µm. https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-17",
+  "laminate_df_note-s": "Single Df for the defined buildups: 'Loss Tangent / Dissipation factor (Df): ca. 0.02'; laminate brand not named (FR4 Tg150). https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-17",
+  "min_silkscreen_width_mm": 0.15,
+  "min_silkscreen_height_mm": 1.2,
+  "source_url": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html",
+  "tier_s": "special_production",
+  "base_profile_s": "multi_cb",
+  "process_s": "Multi-CB 'Special production' / 'Non-Pool Special production' (design-parameters 'Special production (min.)' column, technical-options 'Special production' column), 35 um copper",
+  "quote_required_b": true,
+  "quote_source-s": "Technical options: 'Custom layer buildup | Price inquiry' in the PCB-Calculator column; pooling page: the online calculator 'is always preset to the lowest cost pool specification', Non-Pool Special production production time 'call orders, frame orders'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation on the same day of your request.'; design parameters: 'For other thicknesses / special production, please contact our technical hotline'. https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html ; https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html ; https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html, read 2026-10-23",
+  "price_published_b": false,
+  "turn_days_fab_min": 1,
+  "times_note": "Technical options, Production times, Special production: 'Standard starting at 8WD', 'Express service starting at 1WD' (working days); the quote sets the actual turn. https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html",
+  "times_retrieved_utc": "2026-10-23T00:00:00Z",
+  "min_trace_width_mm": 0.075,
+  "min_trace_spacing_mm": 0.075,
+  "min_trace_source-s": "CONFLICT ON MULTI-CB'S OWN PAGES. Design parameters, H/I Conductors, Special production (min.): width 75 um / space 75 um ('exemplary for 35um copper thickness'); pooling page, Non-Pool Special production: 'Min. track / space, annular ring >= 75um'. Technical options, Special production: 'Conductor width / spacing min. 75um/105um 90um/90um'. BGA design page, 0.50 mm pitch: 'Track-width / -space 70um/90um', inner-layer fan-out with 1 track 80/80 um. Top level takes the design-parameters 75/75; at 75/105 or 90/90 one track needs 0.285 / 0.27 mm. Confirm on the quote. https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html ; https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html ; https://www.multi-circuit-boards.eu/en/pcb-design-aid/bga-pcb-design-for-ball-grid-array.html",
+  "min_drill_mm": 0.1,
+  "min_via_drill_mm": 0.15,
+  "min_via_diameter_mm": 0.3,
+  "min_annular_ring_mm": 0.075,
+  "via_source-s": "Design parameters, A-C Via / buried via, Special production: aspect 1:12, diameter 150 um, via pad 300 um, annular ring 75 um circular. Drills page: drilling smallest 0.1 mm (1:10, rfq 1:20), laser 0.075 mm (1:1). Technical options, Special: 'Vias min. O 75um', 'Vias Pad min. O 225um', 'Via annular rings min. 75um'; Blind via laser (design parameters): 100 um / pad 280 um / ring 90 um ('Prior data check necessary'). https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html ; https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html ; https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html",
+  "min_via_in_pad_drill_mm": 0.15,
+  "via_in_pad_standard_b": true,
+  "via_in_pad_standard_source-s": "Via-in-pad page, 'Via-in-Pad Parameters': Special production IPC 4761 Type VII (filled & capped) min drill 150 um, min pad 350 um, min pitch 550 um, 1:12; a second Special production column with filling 'none': drill 100 um, pad 300 um, min pitch 500 um, 1:10 ('A via diameter of 100um is technically possible, and results in a pitch of 500um. Please contact our cam department in advance.'). BGA page, 0.50 mm pitch via-in-pad 300 um pad / 100 um drill, 'please order as IPC 4761 Type VII: Filled & Capped Vias' -- conflicts with the via-in-pad page's 'none'. Technical options: 'Filled & capped vias' '-' in the calculator, '+' in special production. https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating/via-in-pad.html ; https://www.multi-circuit-boards.eu/en/pcb-design-aid/bga-pcb-design-for-ball-grid-array.html ; https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html",
+  "bga_0_5mm_pitch-o": {
+    "bga_pad_um": 250,
+    "dogbone_via_pad_um": 250,
+    "dogbone_via_drill_um": 100,
+    "via_in_pad_pad_um": 300,
+    "via_in_pad_drill_um": 100,
+    "track_um": 70,
+    "space_um": 90,
+    "solder_stop_clearance_um": 50,
+    "inner_fanout_1_track-o": {
+      "via_pad_um": 260,
+      "via_drill_um": 100,
+      "track_um": 80,
+      "space_um": 80
+    },
+    "source-s": "BGA design proposal table and Dogbone / inner-layer fan-out tables, 0.50mm column; 'The values given are design proposals, values of component data sheets are always preferable.' https://www.multi-circuit-boards.eu/en/pcb-design-aid/bga-pcb-design-for-ball-grid-array.html"
+  },
+  "min_solder_mask_dam_mm": 0.08,
+  "min_solder_mask_clearance_mm": 0.025,
+  "solder_mask_source-s": "Design parameters L, Solder-stop green, Special production: 'clearance 25um circ. (BGA)', bridge 80 um; other colours 50 / 125 um. Technical options, Special: clearance min 30 um, bridge min 75 um (coloured 50 / 100 um)",
+  "min_board_edge_clearance_mm": 0.2,
+  "edge_source-s": "Design parameters J, conductor/pad to milling edge 200 um, to scoring edge 500 um (both columns)",
+  "min_layers": 1,
+  "max_layers": 48,
+  "layer_counts": [
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+  ],
+  "layers_note-s": "Technical options: rigid 1-48 layers in special production; layer_counts lists the even counts to 20 only as the ones a board here would use, Multi-CB lists no count set",
+  "board_thickness_mm": [
+    0.3,
+    0.8,
+    1.0,
+    1.55,
+    1.6,
+    1.7,
+    2.0,
+    3.2
+  ],
+  "board_thickness_note-s": "Special production 0.3-7.0 mm (technical options), multilayer FR4 0.8-7 mm (pooling page, 8 layers); the listed values are within that range for the aspect check, not a published list",
+  "copper_weights_oz": [
+    0.5,
+    1,
+    2,
+    3
+  ],
+  "materials": [
+    "FR4 Tg 135",
+    "FR4 HTg 150",
+    "FR4 HTg 170",
+    "FR4 HTg 180",
+    "FR4 KF (CTI 400)",
+    "Rogers 4350B",
+    "G200 (Tg 180)",
+    "P97 (Tg 260)",
+    "PTFE (Teflon)",
+    "Polyimid",
+    "Metal core"
+  ],
+  "surface_finishes": [
+    "Lead-free HAL",
+    "Lead/tin HAL",
+    "Copper (blank)",
+    "Immersion tin",
+    "Immersion silver",
+    "Immersion gold (ENIG)",
+    "ENEPIG",
+    "Bonded gold",
+    "Gold-fingers"
+  ],
+  "solder_mask_colors": [
+    "Green",
+    "White",
+    "Red",
+    "Blue",
+    "Black",
+    "Peelable"
+  ],
+  "impedance_control": true,
+  "impedance_tolerance_pct": 5,
+  "impedance_source-s": "Technical options, Quality controls: 'Impedance control | - | + | Precision up to 5% for 50 Ohms' (calculator '-', special '+')",
+  "max_aspect_ratio": 12,
+  "blind_buried_vias_b": true,
+  "microvias_b": true,
+  "min_microvia_drill_mm": 0.075,
+  "min_microvia_diameter_mm": 0.225,
+  "microvia_source-s": "Technical options, Special: 'Blind Vias min. O 75um' (1:1), via pad 225 um; drills page laser 0.075 mm (1:1, rfq 1:1.2); design parameters E Blind via laser 100 / 280 / 90 um; stacked vias 'Disproportional high effort'; staggered 100 / 300 / 90 um. Microvia copper min 18 um (barrel_plating_source-s of multi_cb.json)",
+  "not_published_as": [
+    "a single special-production track/space (three different figures)",
+    "price (quote only)",
+    "defined 10-layer buildup",
+    "Dk/Df of a custom buildup",
+    "US transit time"
+  ],
+  "sources": {
+    "design parameters": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html",
+    "technical options / quote wording": "https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html",
+    "pooling / non-pool special": "https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html",
+    "BGA 0.5 mm design proposal": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/bga-pcb-design-for-ball-grid-array.html",
+    "via-in-pad parameters": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating/via-in-pad.html",
+    "drills / aspect": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html"
+  },
+  "note": "Multi-CB's special production as its own profile, so tools that read only the top-level floors see it; the online / pool profile is multi_cb.json. Read 2026-10-23 with curl, no LLM. For a 0.50 mm BGA with 0.24 mm pads (0.26 mm channel): 75/75 fits one track (0.225 mm), 75/105 or 90/90 do not; Multi-CB's own 0.5 mm proposal is 70/90 (0.25 mm). Via-in-pad at 0.5 mm pitch is the 100/300 um via whose filling the via-in-pad page lists as 'none' and the BGA page as Type VII -- ask on the quote.",
+  "retrieved_utc": "2026-10-23T00:00:00Z",
+  "stackups": [
+    {
+      "name": "Multi-CB Defined layer buildup 8L-01 (8 layers 1.7mm)",
+      "layers": 8,
+      "thickness_mm": 1.7,
+      "measured_total_mm": 1.67,
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "thickness-s": "Estimated final thickness (+/- 10%): 1.7mm (no 1.6 mm 8-layer defined buildup is published)",
+      "source_pdf-s": [
+        "https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf",
+        "https://www.multi-circuit-boards.eu/fileadmin/_processed_/c/0/csm_leiterplatte_definierter-lagenaufbau_impedanz_8l-01_en_269e0de980.png"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 0.5,
+          "printed-s": "Cu 18µm + plating - 35µm",
+          "note-s": "outer: 18 µm base foil plated to 35 µm (as printed)"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14,
+          "er": 4.0,
+          "material": "2x Prepreg 1080",
+          "printed-s": "140µm Ԑr: 4,00"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN2 - 35µm"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.4,
+          "material": "Core 200µm",
+          "printed-s": "200µm Ԑr: 4,40"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN3 - 35µm"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.255,
+          "er": 4.1,
+          "material": "1x Prepreg 1080 + 1x Prepreg 2116 + 1x Prepreg 1080",
+          "printed-s": "255µm Ԑr: 4,10"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN4 - 35µm"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.4,
+          "material": "Core 200µm",
+          "printed-s": "200µm Ԑr: 4,40"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN5 - 35µm"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.255,
+          "er": 4.1,
+          "material": "1x Prepreg 1080 + 1x Prepreg 2116 + 1x Prepreg 1080",
+          "printed-s": "255µm Ԑr: 4,10"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN6 - 35µm"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2,
+          "er": 4.4,
+          "material": "Core 200µm",
+          "printed-s": "200µm Ԑr: 4,40"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 1,
+          "printed-s": "Cu - IN7 - 35µm"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.14,
+          "er": 4.0,
+          "material": "2x Prepreg 1080",
+          "printed-s": "140µm Ԑr: 4,00"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.035,
+          "weight_oz": 0.5,
+          "printed-s": "Cu 18µm + plating - 35µm",
+          "note-s": "outer: 18 µm base foil plated to 35 µm (as printed)"
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf",
+  "stackups_sources-as": [
+    "https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf",
+    "https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/impedance-examples.html",
+    "https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html",
+    "https://www.multi-circuit-boards.eu/fileadmin/_processed_/1/2/csm_leiterplatte_definierter-lagenaufbau_impedanz_4l-01_en_2f9843676a.png",
+    "https://www.multi-circuit-boards.eu/fileadmin/_processed_/8/1/csm_leiterplatte_definierter-lagenaufbau_impedanz_4l-02_en_3243661d2c.png",
+    "https://www.multi-circuit-boards.eu/fileadmin/_processed_/d/f/csm_leiterplatte_definierter-lagenaufbau_impedanz_6l-01_en_4a0299d2d5.png",
+    "https://www.multi-circuit-boards.eu/fileadmin/_processed_/c/0/csm_leiterplatte_definierter-lagenaufbau_impedanz_8l-01_en_269e0de980.png"
+  ],
+  "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
+  "stackups_note": "Only the free 8-layer defined buildup 8L-01 (1.7 mm) is published (from multi_cb.json, read 2026-10-17); Multi-CB publishes no 10-layer buildup -- special production uses a 'custom' buildup set on the quote (pooling page, 8 layers: 'Layer buildup | defined: 8L-01 (1.7mm), variable | | custom'). Four 'Defined layer buildups' (free of charge, also in pool). Every layer thickness and every Ԑr is printed in the PDF and the same figures appear in the four PNG images on the impedance-examples page; images were viewed to place each Ԑr on its layer (PDF text extraction scrambles the column order). Header note: 'Only nominal values'; 'Specified prepreg thicknesses: after pressing, at approx. 80% copper utilisation on the inner layers.' Outer copper is printed 'Cu 18µm + plating' with 35µm in the thickness column, so thickness_mm 0.035 is the plated value and weight_oz/copper_outer_oz 0.5 is the 18 µm base foil. No 2-layer stackup with Ԑr is published, and no 1.6 mm 8-layer (8L-01 is 1.7 mm). Order: 4L-01 (1.6), 6L-01 (1.6), 8L-01 (1.7), then 4L-02 (1.0). The default 'variable layer buildup' (FR4 1,55 mm, prepregs/cores vary with availability) has no published stackup. Separate Rogers 4350B/FR4 hybrid buildup PDF exists but was not transcribed (RF material)."
+}

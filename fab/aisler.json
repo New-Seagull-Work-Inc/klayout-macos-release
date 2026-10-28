@@ -127,6 +127,7 @@
   "min_hole_to_hole_mm": 0.3,
   "min_silkscreen_width_mm": 0.15,
   "min_silkscreen_height_mm": 0.8,
+  "silkscreen_source-s": "AISLER 4 Layer 35um ENIG design rules: \"The smallest supported width is 150 \u00b5m / 6 mil\"; \"min. silkscreen text height 800\u00b5m / 32 mil\". https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733, read 2026-10-21",
   "min_solder_mask_dam_mm": 0.1,
   "min_solder_mask_clearance_mm": 0.05,
   "min_board_edge_clearance_mm": 0.3,

@@ -1,0 +1,4979 @@
+{
+  "found": true,
+  "vendor": "Sunstone Circuits (ASC Sunstone, American Standard Circuits); assembly partner Screaming Circuits",
+  "country_s": "USA",
+  "location_s": "Mulino, OR (fab); Canby, OR (assembly, Screaming Circuits)",
+  "assembly_b": true,
+  "shipping_us-ao": [
+    {
+      "method": "UPS Ground",
+      "days": "not published (allow up to 5 additional days in holiday/weather periods)",
+      "unit": "-",
+      "to": "Continental US",
+      "from": "Mulino, OR (fab)",
+      "cost": "FREE for continental US",
+      "source": "https://www.sunstone.com/pcb-resources/customer-support/shipping-policy"
+    },
+    {
+      "method": "UPS 2nd Day Air",
+      "days": "2",
+      "unit": "business days (2-day grace period in holiday/weather periods)",
+      "to": "Continental US",
+      "from": "Mulino, OR",
+      "cost": "extra, calculated from UPS/FedEx rates by size/weight/destination",
+      "source": "https://www.sunstone.com/pcb-resources/customer-support/shipping-policy"
+    },
+    {
+      "method": "Next Day (UPS/FedEx)",
+      "days": "1",
+      "unit": "business days, 'arrives with your daily UPS/Fedex delivery Monday - Friday'",
+      "to": "US address",
+      "from": "Mulino, OR",
+      "cost": "extra; Saturday delivery +$25-$50",
+      "source": "https://www.sunstone.com/pcb-resources/customer-support/shipping-policy"
+    },
+    {
+      "method": "UPS (Screaming Circuits assembled boards; customer may give own carrier/account)",
+      "days": "not published",
+      "unit": "-",
+      "to": "US address",
+      "from": "Canby, OR",
+      "cost": "not published",
+      "source": "https://www.screamingcircuits.com/faq"
+    }
+  ],
+  "cutoff_note": "Fab: 4:00 pm PT for all orders; 1-day 4-6 L and 2-day >6 L need confirmation by noon PT (https://www.sunstone.com/pcb-manufacturing-capabilities/order-cut-off-times). Shipping changes by 9:00am PST on ship date. Assembly: materials by noon (https://www.screamingcircuits.com/faq).",
+  "barrel_plating_um": 20.3,
+  "barrel_plating-s": "minimum target",
+  "barrel_plating_source-s": "Sunstone: \"*Plating Target is minimum of 0.0008\" in the hole with approximately 0.001\" - 0.0014\" on the surface.\" https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-15",
+  "copper_foil_note-s": "not published (foil type, roughness). read 2026-10-15",
+  "outer_base_foil_um": 17.5,
+  "outer_finished_um": 43.2,
+  "outer_split_note-s": "\"1 Oz Selection (1 oz internal layers with 0.5 oz copper foil external layers)\"; 4-layer 0.062 construction sheet: \"Layer 1 .5 oz foil plated to approximate* thickness 0.0017\"\". https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-15",
+  "laminate_df_note-s": "no Df and no laminate brand: \"FR-4 150 Tg\", \"FR-4 170 Tg\"; \"Dielectric constant for material (core and prepreg) is 4.5 (+/- 0.10)\". https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-15",
+  "hole_location_tolerance_mm": 0.076,
+  "source_url": "https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities",
+  "tier_s": "custom_quote",
+  "base_profile_s": "sunstone_circuits",
+  "process_s": "Sunstone 'Custom' column of the detailed-capabilities page (Inner Layers / Outer Layers / Soldermask / Silkscreen / Drill / Other Capabilities tabs), built in Mulino OR through the custom quoting form, not the online order",
+  "quote_required_b": true,
+  "quote_source-s": "Quickturn page: 'Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.' (https://www.sunstone.com/pcb-products/quickturn-pcbs). Standard PCBs page, 'Quoting tiers': 'our custom quote process can take up to 24 hours depending on complexity of the project.' (https://www.sunstone.com/pcb-products/standard-pcbs). The detailed page's online tier ('Online NRE') stops at 0.004\"/0.004\" at 1 oz; the 0.003\"/0.003\" here is the Custom column only. Quote form: https://onequote.sunstone.com/onequote-form/. Read 2026-10-23",
+  "price_published_b": false,
+  "turn_days_fab_min": null,
+  "times_note": "No turn is published for the Custom tier; the quote (up to 24 h) sets it. The online tiers' turns (1 day limited review 1-14 L, 2 day NRE 1-20 L) are on sunstone_circuits.json and do not apply here.",
+  "times_retrieved_utc": "2026-10-23T00:00:00Z",
+  "min_trace_width_mm": 0.0762,
+  "min_trace_spacing_mm": 0.0762,
+  "min_trace_source-s": "Detailed capabilities, Inner Layers tab, 'Minimum trace/space INNER', Custom, 1 oz Cu: '0.003\" / 0.003\"' (2 oz: 0.004\"/0.004\"); Outer Layers tab, Custom, 1 oz finished: '0.003\" / 0.003\"' (2 oz 0.004\", 3 oz 0.006\"). 'Material Type, Copper weight and PCB design may limit trace and space capabilities.'",
+  "min_drill_mm": 0.1524,
+  "min_via_drill_mm": 0.1524,
+  "min_drill_source-s": "Drill tab, Custom: 'Smallest drill <0.008\"' (no figure). The smallest figure Sunstone prints for a mechanical drill is the ASC PWB Capabilities tab, 'Min. drilled hole diameter', Standard Production: '0.006\" 152 um' (Advanced or Prototype: '<.006\"'). Used here as the floor; confirm on the quote",
+  "min_via_diameter_mm": 0.4064,
+  "min_annular_ring_mm": 0.127,
+  "via_pad_source-s": "Outer Layers tab, Custom: 'Via Pads 0.010\" larger than finished hole size' -> 0.1524 + 0.254 = 0.4064 mm (ring 0.127 mm). Inner Layers tab, Custom: 'Pads for Vias 0.016\" larger than finished hole size' -> 0.1524 + 0.4064 = 0.5588 mm on inner layers. The 'via + 0.006\"' pad the 2026-10-14 read took from the old main page is no longer published",
+  "min_via_in_pad_drill_mm": 0.1016,
+  "min_via_in_pad_drill_source-s": "ASC PWB Capabilities tab, Hole Plugging: 'Copper filled vias | Hole sizes from .004\" - .010\" Aspect Ratio 1:1 Max' -> 0.1016 mm, a blind (microvia-depth) hole; a plugged through via needs 0.010\" (non-conductive) / 0.015\" (conductive) finished. UHDI page: 'Copper-filled microvia for VIPPO 3-4 mil diameter, aspect ratio <= 1:1'",
+  "min_inner_via_diameter_mm": 0.5588,
+  "min_silkscreen_width_mm": 0.0762,
+  "min_silkscreen_height_mm": 1.27,
+  "min_solder_mask_dam_mm": 0.0762,
+  "min_solder_mask_clearance_mm": 0.0381,
+  "solder_mask_source-s": "Soldermask tab, Custom: 'Minimum Web <0.003\"' (0.0762 mm used as the floor), mask clearance 'We will adjust'; ASC PWB Capabilities tab, 'Min. soldermask clearance', Advanced or Prototype: '0.0015\" (per side) 37 um (per side)'",
+  "min_board_edge_clearance_mm": 0.254,
+  "edge_source-s": "Outer Layers tab, Custom: 'Minimum backset (distance from copper to board edge) 0.010\"'",
+  "min_layers": 1,
+  "max_layers": 20,
+  "layers_note-s": "Inner Layers tab: '1-14 Layers Yes', '15-20 Layers Yes', '>20 Layers Yes' for Custom; max_layers 20 is the largest published standard construction (L20-125-1oz1oz) on the layer-stackup page",
+  "layer_counts": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20
+  ],
+  "board_thickness_mm": [
+    0.508,
+    0.7874,
+    0.9906,
+    1.1938,
+    1.5748,
+    1.9812,
+    2.3622,
+    3.175
+  ],
+  "copper_weights_oz": [
+    1,
+    2,
+    3
+  ],
+  "materials": [
+    "FR-4 150 or 170 Tg",
+    "Various FR-4",
+    "Rogers 3000 series",
+    "Rogers 4000 series",
+    "Rogers RT duroid (5,000, 6,000 series)",
+    "Taconic",
+    "Arlon",
+    "Polyimide",
+    "Polyflon",
+    "Others"
+  ],
+  "surface_finishes": [
+    "Tin / Lead Solder",
+    "Immersion Silver",
+    "ENIG",
+    "Copper Only",
+    "Immersion Tin",
+    "OSP",
+    "ENEPIG",
+    "Full Body Hard Gold",
+    "Soft Bondable Gold",
+    "Lead Free Solder"
+  ],
+  "solder_mask_colors": [
+    "Green",
+    "Blue",
+    "Black",
+    "Red",
+    "White",
+    "Yellow",
+    "Orange",
+    "Purple",
+    "Clear",
+    "Others"
+  ],
+  "impedance_control": true,
+  "impedance_tolerance_pct": 5,
+  "impedance_source-s": "Other Capabilities tab, 'Controlled Impedance' Custom: Yes. Controlled-impedance page: 'Impedance tolerance | +/-5% (verified by TDR coupon testing)' (https://www.sunstone.com/capabilities/controlled-impedance)",
+  "max_aspect_ratio": 10,
+  "aspect_ratio_note-s": "Inner Layers tab, Custom: '>10:1' (no maximum); ASC PWB Capabilities tab, 'Max. Aspect Ratio' 10:1 standard / 15:1 advanced. 10 kept as the floor",
+  "blind_buried_vias_b": true,
+  "microvias_b": true,
+  "min_microvia_drill_mm": 0.075,
+  "min_microvia_diameter_mm": 0.2,
+  "microvia_source-s": "UHDI CAPABILITIES tab: 'Microvia hole diameter 75 (Rigid: 50 um thick material or less)', 'Microvia pad diameter 200', 'Copper Thickness in Microvia 25 nominal Or Copper Filled', 'Copper Via Fill Yes'; Blind & Buried Vias page (https://www.sunstone.com/capabilities/blind-and-buried-vias): blind and buried both built, 'Via depth-to-diameter ratio should generally not exceed 8.1'; Standard PCBs page: 'Blind and buried vias | Supported'",
+  "via_in_pad_standard_b": true,
+  "via_in_pad_standard_source-s": "Within this quoted tier: Standard PCBs page 'Via fill | Conductive and non-conductive fill available'; ASC PWB Capabilities tab 'Copper filled vias: Hole sizes from .004\" - .010\" Aspect Ratio 1:1 Max', conductive plugging min. finished hole 0.015\", non-conductive 0.010\"; UHDI tab 'Via-inPad-Plated-Over (VIPPO) Yes'. The online tiers do not offer it (quickturn page: 'Via fill | Not available'), which is why sunstone_circuits.json says false. Read 2026-10-23",
+  "hdi-o": {
+    "min_trace_width_mm": 0.02,
+    "min_trace_spacing_mm": 0.02,
+    "laser_drill_mm": 0.075,
+    "microvia_pad_mm": 0.2,
+    "through_hole_mm": 0.15,
+    "through_hole_pad_mm": 0.3,
+    "note": "UHDI (semi-additive) process, its own quote: UHDI PCBs page 'Minimum line width 20 microns (0.8 mil) current', 'Microvia diameter Down to 75 microns with copper fill', 'Copper-filled microvia for VIPPO 3-4 mil diameter, aspect ratio <= 1:1', impedance <5 %; detailed page UHDI tab line width 15 / space 12.5 um, through hole 150 um / pad 300 um. https://www.sunstone.com/pcb-products/uhdi-pcbs"
+  },
+  "not_published_as": [
+    "Custom-tier smallest drill as a figure ('<0.008\"')",
+    "Custom-tier mask web as a figure ('<0.003\"')",
+    "min_hole_to_hole_mm",
+    "Custom-tier turn time",
+    "price (quote only)",
+    "microvia capture-pad ring",
+    "stacked/staggered microvia rules",
+    "max lamination cycles"
+  ],
+  "sources": {
+    "Custom column: trace/space, via pads, edge, layers, drill, mask, silk, finishes, materials, impedance": "https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities",
+    "ASC PWB / UHDI tabs (drill 0.006\", mask clearance 0.0015\", filled vias, microvia 75/200 um)": "https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities",
+    "custom quote": "https://www.sunstone.com/pcb-products/quickturn-pcbs ; https://www.sunstone.com/pcb-products/standard-pcbs",
+    "impedance +/-5 %": "https://www.sunstone.com/capabilities/controlled-impedance",
+    "blind/buried": "https://www.sunstone.com/capabilities/blind-and-buried-vias",
+    "stackups": "https://www.sunstone.com/capabilities/layer-stackup"
+  },
+  "note": "Sunstone's Custom (quoted) tier as its own profile, so tools that read only the top-level floors see it. The online profile is sunstone_circuits.json. Read 2026-10-23 from the redesigned site (Next.js payload, curl, no LLM); the 2026-10-14 figures in sunstone_circuits.json advanced-o (0.002\" track, 0.005\" drill, via + 0.006\") came from the old main page and are not on the current site. Fit for a 0.50 mm BGA with 0.24 mm pads (0.26 mm channel): one 0.0762 track needs 0.0762 + 2 x 0.0762 = 0.2286 mm. A through via (0.4064 mm outer / 0.5588 mm inner pad) cannot sit between those balls; the published path is a filled microvia in the pad (75 um / 200 um).",
+  "retrieved_utc": "2026-10-23T00:00:00Z",
+  "stackups": [
+    {
+      "name": "8 Layer StackUp (0.062\") L08-062-1ozHoz",
+      "layers": 8,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.5346,
+      "printed_total-s": "0.0576 in / 1.463 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_062_1oz_Hoz_Stackup_1e0af67259.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 8: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.062\") L10-062-1ozHoz",
+      "layers": 10,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.5906,
+      "printed_total-s": "0.0598 in / 1.5189 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_062_1oz_Hoz_Stackup_91bb40cbe8.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 2x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 10: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.078\") L12-078-1ozHoz",
+      "layers": 12,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.053,
+      "printed_total-s": "0.0763 in / 1.938 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_078_1oz_Hoz_Stackup_09a0d55d94.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 12: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.047\") L08-047-1ozHoz",
+      "layers": 8,
+      "thickness_mm": 1.1938,
+      "thickness-s": "Target Thickness: 0.047\"",
+      "measured_total_mm": 1.2398,
+      "printed_total-s": "0.0460 in / 1.1684 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_047_1oz_Hoz_Stackup_71c9c14aac.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1676,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x1080)",
+          "printed-s": "0.0066 in / 0.1676 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1676,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x1080)",
+          "printed-s": "0.0066 in / 0.1676 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 8: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.062\") L08-062-1oz1oz",
+      "layers": 8,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.5702,
+      "printed_total-s": "0.0618 in / 1.5697 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_062_1oz1oz_Stackup_79d0e7ebbc.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 8: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.062\") L08-062-2oz2oz",
+      "layers": 8,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.651,
+      "printed_total-s": "0.0650 in / 1.651 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_062_2oz2oz_Stackup_0944dbbe7b.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 8: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.078\") L08-078-1ozHoz",
+      "layers": 8,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.0476,
+      "printed_total-s": "0.0806 in / 2.0472 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_078_1oz_Hoz_Stackup_1a58f550aa.pdf",
+        "https://cms.sunstone.com/uploads/L08_078_1oz_Hoz_Stackup_d15047dee4.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 1x1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 1x1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 8: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.078\") L08-078-1oz1oz",
+      "layers": 8,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.195,
+      "printed_total-s": "0.0864 in / 2.1946 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_078_1oz1oz_Stackup_ff55ab70b7.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1x7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 2x1080)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 1x1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 8: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.078\") L08-078-2oz2oz",
+      "layers": 8,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.098,
+      "printed_total-s": "0.0826 in / 2.098 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_078_2oz2oz_Stackup_e518124df7.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1x7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 1x1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 2x1080)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 8: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.093\") L08-093-1ozHoz",
+      "layers": 8,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4436,
+      "printed_total-s": "0.0934 in / 2.3724 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_093_1oz_Hoz_Stackup_bad2c2ed91.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 8: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.093\") L08-093-1oz1oz",
+      "layers": 8,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4792,
+      "printed_total-s": "0.0976 in / 2.479 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_093_1oz1oz_Stackup_1b53074813.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 8: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.093\") L08-093-2oz2oz",
+      "layers": 8,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4584,
+      "printed_total-s": "0.0968 in / 2.4587 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_093_2oz2oz_Stackup_8bc841fb61.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 8: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.125\") L08-125-1ozHoz",
+      "layers": 8,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.1856,
+      "printed_total-s": "0.1226 in / 3.114 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_125_1oz_Hoz_Stackup_01beda4857.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 8: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.125\") L08-125-1oz1oz",
+      "layers": 8,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.2212,
+      "printed_total-s": "0.1268 in / 3.2207 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_125_1oz1oz_Stackup_48ecccb5b7.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 8: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "8 Layer StackUp (0.125\") L08-125-2oz2oz",
+      "layers": 8,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.2966,
+      "printed_total-s": "0.1298 in / 3.2969 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L08_125_2oz2oz_Stackup_6563cafc7c.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116, 1x1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116, 1x1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 8: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.062\") L10-062-1oz1oz",
+      "layers": 10,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.6262,
+      "printed_total-s": "0.0640 in / 1.6256 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_062_1oz1oz_Stackup_1dc3c47e06.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 2x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 10: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.078\") L10-078-1ozHoz",
+      "layers": 10,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.0578,
+      "printed_total-s": "0.0810 in / 2.0574 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_078_1oz_Hoz_Stackup_d0fb15feaa.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116, 1x1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 10: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.078\") L10-078-1oz1oz",
+      "layers": 10,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.0934,
+      "printed_total-s": "0.0824 in / 2.093 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_078_1oz1oz_Stackup_40cda25f4f.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116, 1x1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 10: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.093\") L10-093-1ozHoz",
+      "layers": 10,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4542,
+      "printed_total-s": "0.0966 in / 2.4536 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_093_1oz_Hoz_Stackupupdate_80bfb3c5ca.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 10: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.093\") L10-093-1oz1oz",
+      "layers": 10,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4898,
+      "printed_total-s": "0.0980 in / 2.4892 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_093_1oz1oz_Stackup_012cfbae5d.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 10: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.093\") L10-093-2oz2oz",
+      "layers": 10,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4358,
+      "printed_total-s": "0.0959 in / 2.4359 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_093_2oz2oz_Stackup_023318fd90.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 8: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 9: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 10: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.125\") L10-125-1ozHoz",
+      "layers": 10,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.2058,
+      "printed_total-s": "0.1234 in / 3.1344 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_125_1oz_Hoz_Stackup_502a3d2a58.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1x7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 2x1080)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 10: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.125\") L10-125-1oz1oz",
+      "layers": 10,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.2414,
+      "printed_total-s": "0.1276 in / 3.241 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_125_1oz1oz_Stackup_b8dc1e289d.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1x7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x7628, 2x1080)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 10: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "10 Layer StackUp (0.125\") L10-125-2oz2oz",
+      "layers": 10,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.19,
+      "printed_total-s": "0.1256 in / 3.1902 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L10_125_2oz2oz_Stackup_d792c9915e.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approx* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg DC 4.5'",
+          "material": "Bonding ply (2x 1080, 1x 7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz foil thickness"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dielectric Constant 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz foil thickness"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg DC 4.5'",
+          "material": "Bonding ply (1x 1080, 2x 2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz foil thickness"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dielectric Constant 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz foil thickness"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg DC 4.5'",
+          "material": "Bonding ply (1x 1080, 2x 2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz foil thickness"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dielectric Constant 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz foil thickness"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg DC 4.5'",
+          "material": "Bonding ply (1x 1080, 2x 2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 8: 2 oz foil thickness"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dielectric Constant 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 9: 2 oz foil thickness"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg DC 4.5'",
+          "material": "Bonding ply (1x 7628, 2x 1080)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 10: 2 oz foil plated to approx* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.078\") L12-078-1oz1oz",
+      "layers": 12,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.0886,
+      "printed_total-s": "0.0822 in / 2.0879 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_078_1oz1oz_Stackup_118822292f.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 12: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.093\") L12-093-1ozHoz",
+      "layers": 12,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.434,
+      "printed_total-s": "0.0958 in / 2.4333 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_093_1oz_Hoz_Stackup_d114fe77ed.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 12: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.093\") L12-093-1oz1oz",
+      "layers": 12,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4696,
+      "printed_total-s": "0.0972 in / 2.4689 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_093_1oz1oz_Stackup_2cbe184dd5.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.2032,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0080 in / 0.2032 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 12: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.093\") L12-093-2oz2oz",
+      "layers": 12,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.5146,
+      "printed_total-s": "0.0990 in / 2.5146 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_093_2oz2oz_Stackup_a6e480c553.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 8: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 9: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 10: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 11: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 12: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.125\") L12-125-1ozHoz",
+      "layers": 12,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.206,
+      "printed_total-s": "0.1262 in / 3.2055 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_125_1oz_Hoz_Stackup1_4f196be947.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approximate* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.32,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x2116)",
+          "printed-s": "0.0126 in / 0.3200 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.32,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x2116)",
+          "printed-s": "0.0126 in / 0.3200 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 12: 0.5 oz foil plated to approximate* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.125\") L12-125-1oz1oz",
+      "layers": 12,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.2416,
+      "printed_total-s": "0.1276 in / 3.241 mm",
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_125_1oz1oz_Stackup_37c29a9c95.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 1: 1 oz foil plated to approximate* thickness 0.0024"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.32,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x2116)",
+          "printed-s": "0.0126 in / 0.3200 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 6: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 7: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 8: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 9: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 10: 1 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 11: 1 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.32,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (3x2116)",
+          "printed-s": "0.0126 in / 0.3200 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.061,
+          "weight_oz": 1,
+          "printed-s": "0.0024 in / 0.0610 mm",
+          "note-s": "Layer 12: 1 oz foil plated to approximate* thickness 0.0024"
+        }
+      ]
+    },
+    {
+      "name": "12 Layer StackUp (0.125\") L12-125-2oz2oz",
+      "layers": 12,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.1542,
+      "printed_total-s": "0.1242 in / 3.1547 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L12_125_2oz2oz_Stackup_b4b4116545.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 6: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 7: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 8: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 9: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 10: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 11: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x180, 2x2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 12: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    }
+  ],
+  "stackups_source_url": "https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup",
+  "stackups_sources-as": [
+    "https://cms.sunstone.com/uploads/L08_047_1oz_Hoz_Stackup_71c9c14aac.pdf",
+    "https://cms.sunstone.com/uploads/L08_062_1oz1oz_Stackup_79d0e7ebbc.pdf",
+    "https://cms.sunstone.com/uploads/L08_062_1oz_Hoz_Stackup_1e0af67259.pdf",
+    "https://cms.sunstone.com/uploads/L08_062_2oz2oz_Stackup_0944dbbe7b.pdf",
+    "https://cms.sunstone.com/uploads/L08_078_1oz1oz_Stackup_ff55ab70b7.pdf",
+    "https://cms.sunstone.com/uploads/L08_078_1oz_Hoz_Stackup_1a58f550aa.pdf",
+    "https://cms.sunstone.com/uploads/L08_078_1oz_Hoz_Stackup_d15047dee4.pdf",
+    "https://cms.sunstone.com/uploads/L08_078_2oz2oz_Stackup_e518124df7.pdf",
+    "https://cms.sunstone.com/uploads/L08_093_1oz1oz_Stackup_1b53074813.pdf",
+    "https://cms.sunstone.com/uploads/L08_093_1oz_Hoz_Stackup_bad2c2ed91.pdf",
+    "https://cms.sunstone.com/uploads/L08_093_2oz2oz_Stackup_8bc841fb61.pdf",
+    "https://cms.sunstone.com/uploads/L08_125_1oz1oz_Stackup_48ecccb5b7.pdf",
+    "https://cms.sunstone.com/uploads/L08_125_1oz_Hoz_Stackup_01beda4857.pdf",
+    "https://cms.sunstone.com/uploads/L08_125_2oz2oz_Stackup_6563cafc7c.pdf",
+    "https://cms.sunstone.com/uploads/L10_062_1oz1oz_Stackup_1dc3c47e06.pdf",
+    "https://cms.sunstone.com/uploads/L10_062_1oz_Hoz_Stackup_91bb40cbe8.pdf",
+    "https://cms.sunstone.com/uploads/L10_078_1oz1oz_Stackup_40cda25f4f.pdf",
+    "https://cms.sunstone.com/uploads/L10_078_1oz_Hoz_Stackup_d0fb15feaa.pdf",
+    "https://cms.sunstone.com/uploads/L10_093_1oz1oz_Stackup_012cfbae5d.pdf",
+    "https://cms.sunstone.com/uploads/L10_093_1oz_Hoz_Stackupupdate_80bfb3c5ca.pdf",
+    "https://cms.sunstone.com/uploads/L10_093_2oz2oz_Stackup_023318fd90.pdf",
+    "https://cms.sunstone.com/uploads/L10_125_1oz1oz_Stackup_b8dc1e289d.pdf",
+    "https://cms.sunstone.com/uploads/L10_125_1oz_Hoz_Stackup_502a3d2a58.pdf",
+    "https://cms.sunstone.com/uploads/L10_125_2oz2oz_Stackup_d792c9915e.pdf",
+    "https://cms.sunstone.com/uploads/L12_078_1oz1oz_Stackup_118822292f.pdf",
+    "https://cms.sunstone.com/uploads/L12_078_1oz_Hoz_Stackup_09a0d55d94.pdf",
+    "https://cms.sunstone.com/uploads/L12_093_1oz1oz_Stackup_2cbe184dd5.pdf",
+    "https://cms.sunstone.com/uploads/L12_093_1oz_Hoz_Stackup_d114fe77ed.pdf",
+    "https://cms.sunstone.com/uploads/L12_093_2oz2oz_Stackup_a6e480c553.pdf",
+    "https://cms.sunstone.com/uploads/L12_125_1oz1oz_Stackup_37c29a9c95.pdf",
+    "https://cms.sunstone.com/uploads/L12_125_1oz_Hoz_Stackup1_4f196be947.pdf",
+    "https://cms.sunstone.com/uploads/L12_125_2oz2oz_Stackup_b4b4116545.pdf"
+  ],
+  "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
+  "stackups_note": "The 8, 10 and 12 L standard FR-4 constructions of sunstone_circuits.json (read 2026-10-17 from the construction-sheet PDFs; every sheet is still linked from the layer-stackup page on 2026-10-23). The page: 'ASC Sunstone has published our set of standard multilayer constructions for FR-4 designs'; a custom tier may also quote a custom stack-up. Stackup selector data (89 rows: copper weight 1/2/3 oz finished x layers x thickness) is embedded in the page's Next.js payload, readable with curl (no JS needed); each row links a construction-sheet PDF on cms.sunstone.com. One stackup per unique construction sheet (sheet code, e.g. L04-062-1ozHoz = 1 oz inner / half-oz outer foil; 1oz1oz; 2oz2oz). Every layer thickness is printed in both in and mm; thickness_mm uses the printed mm. copper_outer_oz is the BASE outer foil weight as printed ('0.5 oz foil plated to approximate* thickness 0.0017'); the page's selector calls these 1 / 2 / 3 oz FINISHED weights (site_copper_weight-s). er: 77 sheets print a sheet-level footnote 'Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz' (er = 4.3 at 1 GHz used on every dielectric); 8 newer sheets print 'Avg Dk 4.5' / 'Avg DC 4.5' / 'Avg Dielectric Constant 4.5' on each dielectric (er = 4.5). Each layer's er-s says which. The page says these are FR-4 constructions; no laminate brand. None is stated as impedance-controlled. Site data issues: the '2 Oz' 6-layer rows (all 7 thicknesses) link to L06-xxx-1ozHoz sheets identical in numbers to the '1 Oz' ones (sheets with Avg Dk 4.5 instead of the 4.3 footnote) - so no 6-layer 1oz/1oz sheet is published. For the 7 L06-xxx-1ozHoz codes the newer variant (per-layer Avg Dk 4.5, correct printed total) is used; the older variant linked from the '1 Oz' rows has identical layer thicknesses but prints the 4.3 @ 1 GHz footnote and a total short by 0.0014 in (e.g. 0.0608 vs 0.0622). '1 Oz' 8L 0.093 has a duplicate row linking the 8L 0.078 sheet; '1 Oz' 4L 0.078 and '2 Oz' 10L 0.093 rows are duplicated; '1 Oz' 4L 0.093 has no PDF or image (not published); '3 Oz' 4L 0.093 links the 4L 0.039 2oz2oz PDF, so L04-093-2oz2oz was transcribed from its stackup image (it prints two unclad cores with a 2x2116 prepreg between them, as printed). Typos copied as printed (e.g. '1x180'). The example PDF URL under /docs/default-source/layer-stack-up-2022/ returned 404 (superseded by the cms.sunstone.com set). The sheets' own printed totals disagree with the sum of their printed layers on these (measured_total_mm = sum of layers; printed_total-s = sheet's total): L04-125-1ozHoz: sum 3.1448 vs printed 3.1598; L08-047-1ozHoz: sum 1.2398 vs printed 1.1684; L08-062-1ozHoz: sum 1.5346 vs printed 1.4630; L08-093-1ozHoz: sum 2.4436 vs printed 2.3724; L08-125-1ozHoz: sum 3.1856 vs printed 3.1140; L10-062-1ozHoz: sum 1.5906 vs printed 1.5189; L10-125-1ozHoz: sum 3.2058 vs printed 3.1344; L12-078-1ozHoz: sum 2.0530 vs printed 1.9380; L14-093-1ozHoz: sum 2.4138 vs printed 2.3419; L14-125-1ozHoz: sum 3.2266 vs printed 3.1547; L16-125-1ozHoz: sum 3.1810 vs printed 3.1090; L18-125-1ozHoz: sum 3.1862 vs printed 3.1140. Left out (a dielectric without thickness or Dk on the sheet): 4 Layer StackUp (0.093\") L04-093-2oz2oz. Order: klayout reads the first 8 and takes the first of a layer count, so the 0.062 in 0.5 oz-outer / 1 oz-inner build of 4 / 6 / 8 / 10 layers and the thinnest 12 / 14 / 16 / 18-layer builds come first."
+}

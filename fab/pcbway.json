@@ -141,6 +141,7 @@
   "min_hole_to_hole_note-s": "Advanced PCB table row 10 'Hole to hole spacing', normal process: via (<=0.45 mm) >= 11 mil; component hole >= 16 mil",
   "min_silkscreen_width_mm": 0.15,
   "min_silkscreen_height_mm": 0.8,
+  "silkscreen_source-s": "PCBWay capabilities, Legend: Min Character Width 0.15mm (\"Characters of less than 0.15mm wide will be too narrow to be identifiable\"), Min Character Height 0.8mm (\"Characters of less than 0.8mm high will be too small to be recognizable\"), width-to-height ratio 1:5. https://www.pcbway.com/capabilities.html, read 2026-10-21",
   "min_solder_mask_dam_mm": 0.1016,
   "min_solder_mask_dam_note-s": "Advanced PCB table row 23 'green solder mask Bridge (mil)', normal process: '4 (spacing between ICs is 8 mil, green oil), variegated or black oil >=4.5mil'. The standard-PCB solder-mask page instead states pad spacing: 'the spacing between IC pads should be min 0.19mm(7.5mil) for green, blue, red, purple ... others require min 0.22mm(9mil)' at 1 oz (https://www.pcbway.com/pcb_prototype/PCB_Solder_mask.html).",
   "min_solder_mask_clearance_mm": 0.0508,

@@ -4,18 +4,19 @@
 > Other platforms and distributions: build from the source
 > repository when authorized by Seagull Work, Inc.
 > **This package contains executables, one example
-> KiCad board, the fab library and the parts library — no source code is
+> KiCad board and the fab library — no source code is
 > included or implied.**
 > The `klayout` and `kplace` binaries, this README, the
 > `LICENSE`, the `example/` board they route and the `fab/`
 > folder (the fabs' published capabilities and stackups,
-> JSON) and the `components/` folder (the parts library: each
-> part's design record, JSON) are the entire distribution: there is no source tree, no
+> JSON) are the entire distribution: there is no source tree, no
 > Makefile, and nothing here that can be compiled,
 > rebuilt, or modified. The example is design input for
 > the tool, not program source.
 > Nothing to build here: route the included board with
 > `./klayout --input-dir example --output-dir out --resize-pcb`.
+> The parts library is the designer-parts release, unpacked as
+> `designer-parts/` beside the folder you run in (`../designer-parts`).
 > Keep both binaries in the same directory: klayout invokes
 > kplace for auto-placement and re-invokes itself for parallel
 > attempts (install on PATH or run from their directory).
@@ -184,8 +185,7 @@ fabrication/
 
 The BOM's sourcing columns come from the footprint's own fields
 (Manufacturer, MPN, Datasheet) when the schematic carries them, and
-otherwise from the parts library beside the fab library
-(`--parts-dir`). The `components/` folder of this package holds each
+otherwise from the parts library (below). The library holds each
 part's design record, and the BOM takes from it the manufacturer, the
 part number, the datasheet when the record names one, and, where the
 record carries them, the distributor, the stock and the lowest-volume
@@ -211,6 +211,9 @@ frame** with the ‹ › buttons beside the bar, or click a panel and use
 the ← → keys (space returns to live); the counter shows which frame you
 are on. The run ends on two frames: what the last pass laid, highlighted
 white, then the finished board in its layer colours.
+Once an attempt is kept the title reads **writing outputs** while the
+run writes the board, the fabrication package and the reports -- the
+clock runs on -- and **ended** when the run is done.
 If the page does not open by itself, open that address (or
 `http://127.0.0.1:8765/`) while the run is going. To watch a finished
 run again:
@@ -231,13 +234,12 @@ All options are `klayout --help`. The ones you are likely to use:
 |---|---|
 | `--plane NET:LAYER` | pour a copper zone for that net on that layer (`--plane GND:In2.Cu`); repeatable. Without it the tool reserves ground and power layers itself from the layer count. |
 | `--stack SPEC` | the stackup by role, outermost first, e.g. `SIG-GND-SIG-GND-PWR:3V3-SIG`; sets `--layers` and the planes at once. |
-| `--place-tries N` | placement attempts (default 8; four run at a time, `KLAYOUT_PARALLEL` changes that). The first attempt to meet every gate wins; `--not-first-win` keeps the lowest-numbered one instead, for reproducible output. |
+| `--place-tries N` | placement attempts in the first wave (default: as many as the machine has performance and super cores, all at once). An attempt that ends without a clean board hands its slot to a new attempt with a new placement, until one is clean. The first **clean** attempt -- every gate met, and no DRC error, DRC warning or unconnected item added over the input -- stops the others and is kept. Each attempt's line in the log names what it left unconnected (`attempt 3/6 left unconnected: NET: Pad 2 of C12 -- Track ... at (x, y)`). |
 | `--seed N` | base placement seed (default 1) — same command, same board, same result. |
 | `--resize-pcb` | after routing, shrink the outline to the smallest DRC-legal rectangle around the design. |
 | `--grid`, `--track`, `--clearance`, `--via-size`, `--via-drill`, `--edge-clearance`, `--hole-clearance` (mm) | override the design rules read from the `.kicad_pro`. |
 | `--fab NAME` | the board house you will use: its floors become the minimum for every rule and its stackup is written into the board (see the fab library below). |
 | `--fab-dir DIR` | where the fab library is (default: `fab/` beside the binaries; `KLAYOUT_FAB_DIR` does the same; `none` runs without it). |
-| `--parts-dir DIR` | the parts library the BOM is sourced from (default: `components/` beside the fab library). |
 | `--group-labeling` | frame and name the functional blocks on the front silkscreen; off, the blocks pack as tightly as the rows allow and nothing is drawn. |
 | `--no-fab` | skip the fabrication package. |
 | `--gerber-dir DIR` | write the fabrication package somewhere else. |
@@ -254,22 +256,26 @@ Environment: `KICAD_CLI=/path/to/kicad-cli` if it is not on your PATH;
 `KLAYOUT_NO_SWEEP=1` to skip the fab sweep (below) when a board ends
 below its gates.
 
-## The parts library — the `components/` folder
+## The parts library — `../designer-parts`
 
-One folder per part number, holding the part's design record as JSON:
+klayout reads one parts library: the **designer-parts release**, unpacked
+as `designer-parts/` in the folder ABOVE the one you run in, so the run
+finds it as `../designer-parts` (for the example: the package folder and
+`designer-parts/` side by side, and `./klayout` run from the package
+folder). Without it the run stops before anything is laid out and says
+the path it looked for; `--parts-dir` is refused. Its `components/`
+folder holds one folder per part number, holding the part's design record as JSON:
 its pins by number and name, the circuit its datasheet asks for around
 it, its voltages, currents and, for a switching regulator, which pins
-are the switch node, the power input and the power ground. klayout
-reads it by itself from beside the binaries; nothing has to be set.
+are the switch node, the power input and the power ground. Nothing has
+to be set.
 
 - The electrical checks use it to recognise switching regulators and
   their hot loops, supply pins and rails. The log names the library it
-  read and its revision (`components/REVISION`). A part with no record
+  read and its revision. A part with no record
   is judged by pin names and topology only, and the log says so.
 - The functional blocks are named after each part's type.
 - The BOM takes its sourcing columns from it (see above).
-
-`--parts-dir DIR` points the BOM at another library of the same shape.
 
 ## The fab library — the `fab/` folder
 

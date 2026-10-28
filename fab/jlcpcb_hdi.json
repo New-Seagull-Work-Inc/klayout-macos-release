@@ -1,0 +1,293 @@
+{
+  "found": true,
+  "vendor": "JLCPCB",
+  "country_s": "China",
+  "location_s": "Zhuhai, Guangdong (PCB factories 1 and 2, Doumen District); further PCB sites in Huizhou (Daya Bay), Huaian (Jiangsu), Shaoguan and Jiangxi",
+  "location_source_url": "https://jlcpcb.com/help/article/contact-jlcpcb",
+  "assembly_b": true,
+  "shipping_us-ao": [
+    {
+      "method": "DHL Express Priority (DDP)",
+      "days": "3-5",
+      "unit": "business days",
+      "to": "North America (table column 'North American')",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "DHL Express Worldwide",
+      "days": "3-5",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "DHL Express Economy",
+      "days": "4-5",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "UPS Worldwide Express",
+      "days": "4-5",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "UPS Express Saver",
+      "days": "4-5",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "FedEx International Priority",
+      "days": "4-7",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "FedEx International Priority Saver",
+      "days": "4-7",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "FedEx International Packet",
+      "days": "4-7",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "Global Direct Line Saver",
+      "days": "8-10",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "Global Standard Direct Line",
+      "days": "8-10",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "Economical Global Direct Line",
+      "days": "10-12",
+      "unit": "business days",
+      "to": "North America",
+      "from": "China (ship-from city not stated)",
+      "source": "https://jlcpcb.com/help/article/Shipping-Methods-and-Delivery-Time"
+    },
+    {
+      "method": "Sea shipment (DDU, to carrier's US warehouse)",
+      "days": "20-25 (western US) / 28-35 (eastern US)",
+      "unit": "days (business/calendar not stated)",
+      "to": "US",
+      "from": "JLCPCB factory via export sea port; sails every Thursday, closing every Friday",
+      "source": "https://jlcpcb.com/help/article/u.s-sea-shipment-instructions"
+    }
+  ],
+  "min_silkscreen_width_mm": 0.15,
+  "min_silkscreen_height_mm": 1.0,
+  "silkscreen_source-s": "JLCPCB PCB capabilities, Legend: Minimum Line Width \"≥0.15mm\" (\"Characters width less than 0.15mm will be unidentifiable\"); Minimum text height \"40 mil (1.0mm)\" (\"Characters height less than 40 mil(1.0mm) will be unidentifiable\"); preferred width-to-height ratio 1:6; pad to silkscreen 0.15mm. https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-21. The height was 0.15 (the line width copied)",
+  "min_solder_mask_dam_mm": 0.1,
+  "min_solder_mask_clearance_mm": 0.05,
+  "min_board_edge_clearance_mm": 0.5,
+  "barrel_plating_um": 18,
+  "barrel_plating-s": "average",
+  "barrel_plating_source-s": "JLCPCB PCB capabilities: 'Average Hole Plating Thickness: 18μm' (no minimum or IPC class stated). https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-15",
+  "copper_foil_note-s": "not published: JLCPCB states copper weights only (capabilities page); its copper-foil article describes foil types in general without saying which it uses. https://jlcpcb.com/capabilities/pcb-capabilities, https://jlcpcb.com/blog/pcb-copper-foil, read 2026-10-15",
+  "source_url": "https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq",
+  "tier_s": "hdi",
+  "base_profile_s": "jlcpcb",
+  "process_s": "JLCPCB HDI (laser blind vias, copper-filled; 1-, 2-, 3-step), ordered online as Advanced PCB with Base Material 'HDI'",
+  "quote_required_b": false,
+  "price_published_b": true,
+  "quote_source-s": "Order page, Advanced PCB/PCBA, Base Material HDI, read in Chrome 2026-10-23 (no login): calculated price shown online, e.g. 8 layers, 1-step, 100 x 100 mm, qty 5, 1.6 mm, S1000-2M TG170, ENIG: USD 220.68 (engineering fee 99.00, HDI structure fee 70.30, board 8.30, inner copper 16.95, surface finish 17.70, material 8.43); 10 layers same settings: USD 376.11 (engineering fee 248.00). 'Buried Via Fee' and 'Lamination Fee' read 'Manual Quote' and 'Layer Stackup' reads 'Subject to Review', so the final price and stack-up are set at JLCPCB's review. https://cart.jlcpcb.com/quote (Advanced PCB/PCBA, Base Material HDI)",
+  "turn_days_fab_min": 13,
+  "times_note": "Order page, HDI 8 and 10 layers: 'PCB Build Time 13-14 days' (the only option offered). Capabilities FAQ: HDI 'typically require[s] DFM review and may increase both cost and production time'.",
+  "times_retrieved_utc": "2026-10-23T00:00:00Z",
+  "min_trace_width_mm": 0.0762,
+  "min_trace_spacing_mm": 0.0762,
+  "min_trace_source-s": "HDI FAQ table: 'Min. Trace Width / Spacing | 3 mil / 3 mil | ... for inner/outer layers. The limit can reach 2.7 / 2.7 mil.'; Q9: 'When there is enough space, please design at 3.5/3.5 mil. In tight spaces, we support an extreme line width/spacing of 2.7/2.7 mil, but this will increase difficulty and cost.' Capabilities page HDI: '3 mil / 3 mil; Extreme capability: 2.7 mil / 2.7 mil'",
+  "extreme_trace_width_mm": 0.0686,
+  "extreme_trace_spacing_mm": 0.0686,
+  "min_drill_mm": 0.15,
+  "min_via_drill_mm": 0.15,
+  "min_via_diameter_mm": 0.25,
+  "min_annular_ring_mm": 0.05,
+  "via_source-s": "HDI FAQ: 'Through-Hole Diameter (C) | >= 0.15 mm | Mechanical drilling; the corresponding pad diameter should be at least 0.10 mm larger than the through-hole diameter' -> 0.15 / 0.25 mm; Q6 aspect <= 16:1, 0.15 mm through hole up to 2.4 mm boards. Order page 'Min via hole size/diameter' offers 0.3/(0.4/0.45), 0.25/(0.35/0.4), 0.2/(0.3/0.35), 0.15/(0.25/0.3) and 0.1mm/(0.2/0.25mm); capabilities page: '0.1mm microvias only available for board thickness <=1mm; ENIG/OSP surface finish required'",
+  "min_via_in_pad_drill_mm": 0.075,
+  "min_microvia_drill_mm": 0.075,
+  "min_microvia_diameter_mm": 0.225,
+  "default_microvia_drill_mm": 0.1,
+  "microvia_source-s": "HDI FAQ: 'Blind Via Diameter (A) | 0.075-0.15 mm | Laser drilled; the corresponding pad diameter should be at least 0.15 mm larger than the blind-via diameter'; Q1 'The default laser-drilled hole diameter is 0.1 mm'; 'Blind vias are filled and planarized by electroplating, while buried vias are resin plugged and capped with plating'; Q5 blind-via thickness-to-diameter <= 1:1 (0.1 mm dielectric -> 0.1 mm via); blind-via dielectric 0.05-0.127 mm",
+  "min_hole_to_trace_mm": 0.15,
+  "min_hole_to_hole_same_net_mm": 0.13,
+  "min_hole_to_hole_mm": 0.24,
+  "hole_rules_source-s": "HDI FAQ: 'Hole-to-Trace Clearance (E) | >= 0.15 mm | Distance from the edge of a via (including blind, buried, and through vias) to the edge of a trace'; 'Hole-to-Hole Spacing (F) | >= 0.13 mm | ... same net' / '>= 0.24 mm | ... different nets'; 'Hole-to-Board-Edge Clearance (D) | >= 0.35 mm' (blind via edge to routed edge). min_hole_to_trace_mm is read by no tool today",
+  "buried_via_drill_range_mm": [
+    0.15,
+    0.55
+  ],
+  "min_layers": 4,
+  "max_layers": 32,
+  "layer_counts": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32
+  ],
+  "layers_source-s": "HDI FAQ: 'Currently supports 4-32 layer blind/buried-via boards (1st-, 2nd-, and 3rd-order HDI); minimum size: 5 x 5 mm, maximum size: 576 x 469 mm'",
+  "board_thickness_mm": [
+    0.8,
+    1.0,
+    1.2,
+    1.6,
+    1.8,
+    2.0
+  ],
+  "board_thickness_note-s": "Order page HDI thickness buttons: 0.8, 1.0, 1.2, 1.6, 1.8, 2.0, 2.5, 3.0 mm; the FAQ limits HDI finished thickness to 0.5-2.4 mm (0.5 mm 4-layer only), so 2.5 / 3.0 are left out",
+  "copper_weights_oz": [
+    1
+  ],
+  "copper_inner_weights_oz": [
+    1
+  ],
+  "copper_note-s": "Order page HDI: outer 1 oz (2 oz disabled), inner 1 oz (0.5 and 2 oz disabled) at 8 / 10 layers",
+  "materials": [
+    "Shengyi S1000-2M TG170",
+    "Nan Ya NP-175F TG170"
+  ],
+  "prepregs-ao": [
+    {
+      "material": "Shengyi S1000-2MB-2116 RC57%",
+      "thickness_mm": 0.127,
+      "er": 4.29
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-2116 RC56%",
+      "thickness_mm": 0.127,
+      "er": 4.24
+    },
+    {
+      "material": "Shengyi S1000-2MB-2313 RC58%",
+      "thickness_mm": 0.103,
+      "er": 4.27
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-2113 RC58%",
+      "thickness_mm": 0.099,
+      "er": 4.19
+    },
+    {
+      "material": "Shengyi S1000-2MB-1080 RC69%",
+      "thickness_mm": 0.086,
+      "er": 3.99
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-1080 RC70%",
+      "thickness_mm": 0.091,
+      "er": 3.93
+    },
+    {
+      "material": "Shengyi S1000-2MB-106 RC72%",
+      "thickness_mm": 0.05,
+      "er": 3.92
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-106 RC74%",
+      "thickness_mm": 0.055,
+      "er": 3.84
+    },
+    {
+      "material": "Shengyi S1000-2MB-1037 RC76%",
+      "thickness_mm": 0.055,
+      "er": 3.86
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-1037 RC76%",
+      "thickness_mm": 0.06,
+      "er": 3.79
+    },
+    {
+      "material": "Shengyi S1000-2MB-1078 RC69%",
+      "thickness_mm": 0.086,
+      "er": 3.99
+    },
+    {
+      "material": "Nan Ya NP-175FBHB-1078 RC70%",
+      "thickness_mm": 0.091,
+      "er": 3.93
+    }
+  ],
+  "prepregs_source-s": "HDI FAQ Q4 image https://rs.jlcpcb.com/static/image/blog/pcb/jlcpcb-hdi-pcb-pp-parameter.png (Model / Supplier, thickness mil and mm, Dk @ 1 GHz), read 2026-10-23",
+  "surface_finishes": [
+    "ENIG",
+    "OSP"
+  ],
+  "surface_finish_note-s": "Order page HDI: OSP, ENIG selectable; HASL (with lead) and LeadFree HASL disabled. Capabilities page: FR-4/HDI boards with 6 or more layers do not support HASL",
+  "solder_mask_colors": [
+    "Green",
+    "Purple",
+    "Red",
+    "Yellow",
+    "Blue",
+    "White",
+    "Black"
+  ],
+  "impedance_control": true,
+  "impedance_tolerance_pct": 10,
+  "impedance_source-s": "HDI FAQ Q7: '>= 50 ohms, the tolerance is +/-10%. When the impedance value is < 50 ohms, the tolerance is +/-5 ohms'; order page 'Impedance Control: No requirement / +/-10% (+/-5 ohm if value <= 50 ohm)'",
+  "max_aspect_ratio": 16,
+  "blind_buried_vias_b": true,
+  "microvias_b": true,
+  "hdi_steps-ai": [
+    1,
+    2,
+    3
+  ],
+  "via_in_pad_standard_b": true,
+  "via_in_pad_standard_source-s": "Order page HDI: Via Covering 'Epoxy Filled & Capped' is the selected option (Tented / Epoxy Filled & Untented / Plugged / Copper paste disabled), USD 0.00; HDI FAQ: laser blind vias 'filled and planarized by electroplating'. Read 2026-10-23",
+  "stackups": [],
+  "stackups_note": "No HDI stack-up is published as layers: the order page's 'Layer Stackup' reads 'Subject to Review' for 8 and 10 layers (1-step, 1.6 mm, 1 oz / 1 oz), and the HDI templates are named by the key in https://rs.jlcpcb.com/static/image/blog/pcb/hdi-stackup-naming-rules.png (JLC + H + layers + thickness + outer/inner copper + buried Y/N + order + outer PP, e.g. JLCH081611Y2-1078A) without their layers. getImpedanceTemplateSettings returned only the standard JLC templates (those are in jlcpcb.json, not HDI builds). Use prepregs-ao for the build-up dielectrics; JLCPCB sets the stack-up at review.",
+  "not_published_as": [
+    "HDI layer stack-ups (set at review)",
+    "buried via and lamination fees (manual quote)",
+    "stacked / staggered microvia rules"
+  ],
+  "sources": {
+    "capabilities HDI block": "https://jlcpcb.com/capabilities/pcb-capabilities",
+    "HDI FAQ (rules, materials, PP, impedance)": "https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq",
+    "order page price, finishes, via covering, build time": "https://cart.jlcpcb.com/quote (Advanced PCB/PCBA, Base Material HDI)"
+  },
+  "note": "JLCPCB's HDI service as its own profile, so tools that read only the top-level floors see it; the standard profile is jlcpcb.json. Ordered online with a calculated price, not a custom quote. For a 0.50 mm BGA with 0.24 mm pads (0.26 mm channel): one 3 mil track needs 0.2286 mm; a 0.1 mm laser via centred in the ball pad leaves the track edge 0.212 mm from the ball centre against 0.05 + 0.15 (hole-to-trace) = 0.20 mm needed, and its pad is 0.25 mm (hole + 0.15). Read 2026-10-23 with curl and the order page in Chrome, no LLM.",
+  "retrieved_utc": "2026-10-23T00:00:00Z"
+}
