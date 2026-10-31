@@ -134,6 +134,189 @@
   ],
   "impedance_control": true,
   "max_aspect_ratio": 10,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "base_oz": 0.5,
+        "base_um": 18,
+        "finished_oz": 1,
+        "finished_um": 35,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "pool page: 'Our Printed Circuit Board online calculator is always preset to the lowest cost pool specification (standard).' 'Lowest cost Pool specification ... Final (outer) copper 35µm' for 1-8 layers https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Base: defined buildups print the outer layer 'Cu 18µm + plating' with 35µm thickness https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-28; the default variable buildup gives only 'Cu outer layers - final (35µm)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html."
+      },
+      {
+        "finished_oz": 2,
+        "finished_um": 70,
+        "offer-s": "option",
+        "default_b": false,
+        "source-s": "pool page 'Additional Pooling options' column: 'Final (outer) copper 70µm' (not the lowest-cost spec the calculator is preset to) https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Base foil not stated."
+      },
+      {
+        "finished_oz": 3,
+        "finished_um": 105,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "technical options, PCB-Calculator column 'Copper outer layers max. 105µm' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28; not in a pool column. Base foil not stated."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 0.5,
+        "um": 18,
+        "layers-ai": [
+          4
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "pool page, 4 layers, 'Lowest cost Pool specification ... Final inner copper 18µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28; standard buildup 'Cu inner layers - final (18µm or 35µm)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html. Note the free defined buildup 4L-01 prints inner 35µm https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf."
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          4
+        ],
+        "offer-s": "option",
+        "default_b": false,
+        "source-s": "pool page, 4 layers, 'Additional Pooling options ... Final inner copper 35µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28"
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          6,
+          8
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "pool page, 6 and 8 layers, 'Lowest cost Pool specification ... Final inner copper 35µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "technical options, PCB-Calculator column 'Copper inner layers max. 70µm' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (rigid foil type / roughness not stated; RA / ED named only for flex materials https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html; foils stocked 12 / 18 / 35 / 70 / 105 / 210 µm https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/prepreg-core-foil.html, read 2026-10-28)",
+      "outer-ao base foil for 70 / 105 µm",
+      "Tg of the 1-2 layer pool base material",
+      "plant location"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "min_um": 20,
+      "class-s": "IPC-A-600 class 2",
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "tolerances 'Cu thickness in vias | Class 2 (standard) | class 3': 'Via, PTH slots, THT (> 150µm) | min. 20µm | min. 25µm' https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28; pool page 'Our PCBs are manufactured to IPC-A-600 class 2 (class 3 optional)' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html"
+    },
+    {
+      "min_um": 25,
+      "class-s": "IPC-A-600 class 3",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "tolerances 'Via, PTH slots, THT (> 150µm) ... class 3 min. 25µm' https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28; pool page '(class 3 optional)', Production class 'IPC-A-600 class 3' in the non-lowest-cost column https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html. Price not stated."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 HTg 150°C",
+      "tg_c": 150,
+      "df": 0.02,
+      "df_at-s": "not stated ('ca. 0.02')",
+      "layers-ai": [
+        4,
+        6,
+        8
+      ],
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "pool page, 4 / 6 / 8 layers lowest cost spec 'Base material FR4 Tg150 1.55mm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html; standard buildup 'FR4 Tg150 at no extra charge for multilayers' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html, read 2026-10-28. Df from published stackups, not a laminate data sheet: defined buildups 'Loss Tangent / Dissipation factor (Df): ca. 0.02' https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-28; Dk per ply 4.0-4.6 there (no single value). Brand not named; the materials page lists FR4 MidTg candidates (Isola IS400 150°, ITEQ IT-158 155°) without saying which is used, and: 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html",
+      "not_published_as": [
+        "brand-s",
+        "dk (single value)",
+        "df frequency"
+      ]
+    },
+    {
+      "name-s": "FR4 Tg 135°C",
+      "tg_c": 135,
+      "dk": 4.6,
+      "dk_at-s": "1 MHz",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "technical options, Materials: 'FR4 Tg 135°C | + | +' (PCB-Calculator, Special production) https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28. Dk from Multi-CB 'Materials Default Values FR4' sheet, column FR4 Standard: 'TG ≥ 135', 'Permittivity εr at 1MHz 4,6', 'e.g. Isola Duraver, Shengyi S1141, KingBoard 6160, Panasonic R-1766M' ('Depending on availability') https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_material/standard/multi-cb_material-standard-values.pdf, read 2026-10-28. The 1-2 layer pool spec says only 'FR4 1.55mm' (no Tg) https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, so the 2-layer default Tg is not stated.",
+      "not_published_as": [
+        "brand-s (one of several, by availability)",
+        "df",
+        "whether it is the 1-2 layer pool default"
+      ]
+    },
+    {
+      "name-s": "FR4 HTg 170°C",
+      "tg_c": 170,
+      "dk": 4.8,
+      "dk_at-s": "1 MHz",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "technical options 'FR4 HTg 170°C | + | +' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html; pool page lists HTg170 in the 'Non-Pool Special production' column https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Dk from 'Materials Default Values FR4', column FR4 High-TG: 'TG ≥ 170', 'Permittivity εr at 1MHz 4,8', 'e.g. Isola IS410, Shengyi S1000-2, Iteq IT180-A, Panasonic R-1755V' https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_material/standard/multi-cb_material-standard-values.pdf, read 2026-10-28.",
+      "not_published_as": [
+        "brand-s (one of several, by availability)",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Rogers 4350B",
+      "brand-s": "Rogers",
+      "tg_c": 280,
+      "dk": 3.5,
+      "dk_at-s": "1.9 GHz",
+      "df": 0.0037,
+      "df_at-s": "1.9 GHz",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "technical options 'Rogers 4350B | + | +' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28; materials page HF table (header '* @1,9GHz'): 'Rogers 4350B | HF Material | ... 3,5 | 0,0037 | 280°' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28."
+    }
+  ],
+  "max_aspect_ratio_source-s": "drills page: 'Drilling | 0.1mm | 5.9mm | 1:10 (rfq 1:20)'; 'Multi-CB can produce aspect ratios up to a maximum of 1:10 (rfq 1:20)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28; design parameters Standard (min.) 'aspect ratio 1:10' https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html, read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.2,
+      "board_mm": 1.55,
+      "offer-s": "standard",
+      "source-s": "pool page, lowest cost spec column: 'Base material FR4 1.55mm' and 'Min. drill ≥0.2mm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 2.4,
+      "offer-s": "not stated",
+      "source-s": "drills page 'Sample aspect ratios': 'Material thickness 2.4mm | drill-Ø min. at aspect ratio 1:10 0.25mm' https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. 2.4 mm is not a pool thickness (calculator range 0.5-3.2 mm https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html)."
+    },
+    {
+      "drill_mm": 0.15,
+      "board_mm": 1.55,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios': '1.55mm | 0.15mm' at 1:10 https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28; 'Holes with Ø smaller than 0.2mm have a low machining speed (= surcharge).' https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html; pool page puts '≥0.15 mm mechanical' in the 'Non-Pool Special production' column https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html."
+    },
+    {
+      "drill_mm": 0.1,
+      "board_mm": 1.0,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios': '1.0mm | 0.1mm' at 1:10 https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28; below 0.2 mm = surcharge, and below the pool's ≥0.2 mm https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html."
+    },
+    {
+      "drill_mm": 0.1,
+      "board_mm": 0.8,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios': '0.8mm | 0.1mm' at 1:10 https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28; below 0.2 mm = surcharge, and below the pool's ≥0.2 mm https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html."
+    }
+  ],
   "via_in_pad_note": "PCB-Calculator: tented/plugged/filled/filled & capped vias '-' (not offered); special production '+' for all. Pooling page lists 'Filled & Capped Via (IPC 4761 Type VII)' as an additional pooling option for 2 layers. https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html ; https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html",
   "advanced-o": {
     "process_s": "Special production column (technical options) / design parameters 'Special production (min.)'",
@@ -159,7 +342,12 @@
     "Dk for the variable (standard, non-defined) buildup",
     "Df per layer (only 'ca. 0.02' overall)",
     "copper foil type/roughness",
-    "US transit time"
+    "US transit time",
+    "copper-o.foil-ao (foil type / roughness for rigid boards)",
+    "copper-o.outer-ao base foil for the variable (default) buildup",
+    "laminates-ao brand / Dk / Df actually used for the FR4 Tg150 default",
+    "laminates-ao Tg of the 1-2 layer pool FR4",
+    "prices of 70 µm copper, HTg170 and class 3 (calculator not run)"
   ],
   "sources": {
     "PCB-Calculator column: track/space 100/100 µm, via min 200 µm, via pad 400 µm, via ring 100 µm, component ring 200 µm, layers 1-10 (special 1-48), thickness 0,5-3,2 mm, copper outer max 105 µm / inner max 70 µm, finishes, mask colours, materials, solder-stop clearance 75 µm / bridge 100 µm (green), coloured 75/125 µm": "https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html",

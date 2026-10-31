@@ -55,8 +55,8 @@ and delivers a placed and routed board:
   the input connector; a connector's circuit sits at the connector,
   with the USB pair short and straight from the jack. Boards of four
   copper layers and up are placed on both faces from the first
-  attempt; two-layer boards start single-sided and go to both faces
-  only when no single-sided attempt routes every net.
+  trial; two-layer boards start single-sided and go to both faces
+  only when no single-sided trial routes every net.
   `--group-labeling` frames and names each block on the silkscreen
   (`Battery charger (U3)`, `Boost converter (U10)`).
 - **Routes** every net on the layer count you ask for, through vias,
@@ -95,7 +95,7 @@ and delivers a placed and routed board:
   board render, the schematic as PDF, a copy of the design and a
   SHA-256 manifest, unless you ask it not to.
 - **Keeps the console quiet.** A run prints one status line per
-  attempt (placing, routing pass, rip-up round, DRC, done) and the
+  trial (placing, routing pass, rip-up round, DRC, done) and the
   verdict; everything else goes to `klayout.log`.
 
 ## Quick start
@@ -134,8 +134,8 @@ my-board-routed/
                                skew and reflection reports, DRC and ERC
   placement-report.txt         boards that were placed: wirelength before
                                and after, the pin pulls, each part's move
-                               (beside the board, or in the kept attempt's
-                               folder when that attempt placed it)
+                               (beside the board, or in the kept trial's
+                               folder when that trial placed it)
   si-report/                   boards built on a fab's stackup: the copper
                                as laid, per net — segments.csv, vias.csv,
                                pads.csv — the reflection data an SI review
@@ -149,10 +149,13 @@ my-board-routed/
                                same DRC at the fab's floors, so the verdict
                                can separate the board's own violations from
                                anything the router introduced
-  .att0/ … .att7/, .att0.log … the placement attempts, each a full project
-                               with that attempt's board and log (hidden
+  .att0/ … .att7/, .att0.log … the placement trials, each a full project
+                               with that trial's board and log (hidden
                                dot-files; `ls -a`)
   <board>.progress.json        the frame the PCB Layout Cinema is drawing
+  <board>.progress.jsonl       every frame of that trial, one per line (each
+                               holds what changed since the frame before), so
+                               the Cinema plays the run back after it ends
 ```
 
 The fabrication package, in the layout a board house and an assembler
@@ -171,6 +174,13 @@ fabrication/
                       Available, Verified On, Unit Price, DNP
                       <board>-positions.csv — pick-and-place, both sides,
                       mm, populated parts only
+                      for a JLCPCB board also <board>-bom-jlcpcb.csv —
+                      Comment, Designator, Footprint, LCSC (from each
+                      part record; blank where it has none) — and
+                      <board>-positions-jlcpcb.csv — Designator, Mid X,
+                      Mid Y, Layer, Rotation (rotations as KiCad
+                      exports them: check bottom parts in JLCPCB's
+                      placement preview)
                       drawings-svg/ — front and back fab drawings
   documentation/      <board>-board-render.png (top view),
                       schematic/<board>.pdf, si-report.pdf (a copy of
@@ -203,15 +213,17 @@ browser (Safari, Chrome and Firefox all work):
 http://localhost:8765/
 ```
 
-One panel per placement attempt, drawn as it routes — the copper laid
+One panel per placement trial, drawn as it routes — the copper laid
 since the last frame in white — with completion bars per signal class
 (differential pairs and DDR, other signals, power), the current stage,
 the elapsed time, and a scrub bar over the run's frames. **Step frame by
 frame** with the ‹ › buttons beside the bar, or click a panel and use
 the ← → keys (space returns to live); the counter shows which frame you
-are on. The run ends on two frames: what the last pass laid, highlighted
+are on. Every frame is kept on disk in each trial's
+<board>.progress.jsonl, so a reloaded page, or `--watch` on a finished
+run or on its archived copy, steps through all of them. The run ends on two frames: what the last pass laid, highlighted
 white, then the finished board in its layer colours.
-Once an attempt is kept the title reads **writing outputs** while the
+Once a trial is kept the title reads **writing outputs** while the
 run writes the board, the fabrication package and the reports -- the
 clock runs on -- and **ended** when the run is done.
 If the page does not open by itself, open that address (or
@@ -234,7 +246,7 @@ All options are `klayout --help`. The ones you are likely to use:
 |---|---|
 | `--plane NET:LAYER` | pour a copper zone for that net on that layer (`--plane GND:In2.Cu`); repeatable. Without it the tool reserves ground and power layers itself from the layer count. |
 | `--stack SPEC` | the stackup by role, outermost first, e.g. `SIG-GND-SIG-GND-PWR:3V3-SIG`; sets `--layers` and the planes at once. |
-| `--place-tries N` | placement attempts in the first wave (default: as many as the machine has performance and super cores, all at once). An attempt that ends without a clean board hands its slot to a new attempt with a new placement, until one is clean. The first **clean** attempt -- every gate met, and no DRC error, DRC warning or unconnected item added over the input -- stops the others and is kept. Each attempt's line in the log names what it left unconnected (`attempt 3/6 left unconnected: NET: Pad 2 of C12 -- Track ... at (x, y)`). |
+| `--place-tries N` | placement trials in the first wave (default: as many as the machine has performance and super cores, all at once). A trial that ends without a clean board hands its slot to a new trial with a new placement, until one is clean. The first **clean** trial -- every gate met, and no DRC error, DRC warning or unconnected item added over the input -- stops the others and is kept. Each trial's line in the log names what it left unconnected (`trial 3/6 left unconnected: NET: Pad 2 of C12 -- Track ... at (x, y)`). |
 | `--seed N` | base placement seed (default 1) — same command, same board, same result. |
 | `--resize-pcb` | after routing, shrink the outline to the smallest DRC-legal rectangle around the design. |
 | `--grid`, `--track`, `--clearance`, `--via-size`, `--via-drill`, `--edge-clearance`, `--hole-clearance` (mm) | override the design rules read from the `.kicad_pro`. |
@@ -319,7 +331,7 @@ kept.
 ## Reading the result
 
 The log ends with the verdict. For a board with differential pairs or
-DDR, the **trial table** comes first — one row per placement attempt,
+DDR, the **trial table** comes first — one row per placement trial,
 a check or a cross in every gate cell:
 
 ```

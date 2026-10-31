@@ -181,7 +181,7 @@
   "copper_inner_weights_oz": [
     1
   ],
-  "copper_note-s": "Order page HDI: outer 1 oz (2 oz disabled), inner 1 oz (0.5 and 2 oz disabled) at 8 / 10 layers",
+  "copper_note-s": "Order page HDI: outer 1 oz (2 oz disabled), inner 1 oz (0.5 and 2 oz disabled) at 6 layers (read 2026-10-28) and 8 / 10 layers (2026-10-23)",
   "materials": [
     "Shengyi S1000-2M TG170",
     "Nan Ya NP-175F TG170"
@@ -265,8 +265,88 @@
   ],
   "impedance_control": true,
   "impedance_tolerance_pct": 10,
-  "impedance_source-s": "HDI FAQ Q7: '>= 50 ohms, the tolerance is +/-10%. When the impedance value is < 50 ohms, the tolerance is +/-5 ohms'; order page 'Impedance Control: No requirement / +/-10% (+/-5 ohm if value <= 50 ohm)'",
+  "impedance_source-s": "HDI FAQ Q7: '>= 50 ohms, the tolerance is +/-10%. When the impedance value is < 50 ohms, the tolerance is +/-5 ohms'; order page 'Impedance Control: No requirement / +/-10% (+/-5 ohm if value <= 50 ohm)'; order form 6-layer HDI, 2026-10-28: 'Impedance Control: No requirement / ±10% (±5Ω if value≤50Ω)' (not priced: selected 'No requirement' only)",
   "max_aspect_ratio": 16,
+  "max_aspect_ratio_source-s": "HDI PCB Capabilities & FAQ: \"The aspect ratio for mechanical buried vias and through vias must be <= 16:1.\" https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq, read 2026-10-28",
+  "copper-o": {
+    "outer-ao": [
+      {
+        "finished_oz": 1,
+        "finished_um": 35,
+        "layers-ai": [
+          6,
+          8,
+          10
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "JLCPCB order page, Advanced PCB/PCBA, Base Material HDI, High-spec Options 'Outer Copper Weight' (https://cart.jlcpcb.com/quote), read in Chrome at 6 layers 2026-10-28 (HDI 1-step, 100 x 100 mm, qty 5; nothing submitted) and at 8 / 10 layers 2026-10-23: '1 oz' selected, '2 oz' disabled. Finished weight as on the standard capabilities page ('Finished Outer Layer Copper' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28); base foil not stated. Other HDI layer counts (4, 12-32 per layer_counts) not read on the form."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          6,
+          8,
+          10
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "JLCPCB order page, Advanced PCB/PCBA, Base Material HDI, High-spec Options 'Inner Copper Weight' (https://cart.jlcpcb.com/quote), read in Chrome at 6 layers 2026-10-28 (nothing submitted) and at 8 / 10 layers 2026-10-23: '1 oz' selected, '0.5 oz' and '2 oz' disabled. At 6 layers the Charge Details list 'Inner Copper Weight $16.95' with this only choice, so it is in the online price, not an extra the design can avoid."
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness)",
+      "outer-ao.base_oz / base_um",
+      "copper on HDI layer counts other than 6 / 8 / 10 (form read at 6, 8, 10 only)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "avg_um": 18,
+      "class-s": "not stated",
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "standard capabilities 'Average Hole Plating Thickness 18μm' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28; the HDI FAQ gives no through-hole plating figure, only that 'Blind vias are filled and planarized by electroplating, while buried vias are resin plugged and capped with plating.' https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq, read 2026-10-28. Not HDI-specific."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "Shengyi S1000-2M TG170",
+      "brand-s": "Shengyi",
+      "tg_c": 170,
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "capabilities 'HDI base material: Nan Ya NP-175F TG170/Shengyi S1000-2M TG170.' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28; FAQ 'We use Shengyi and Nanya laminates.' https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq, read 2026-10-28. Prepreg Dk @ 1 GHz per glass style (S1000-2MB 3.86-4.29) in jlcpcb_hdi.json prepregs-ao (FAQ image). The 2026-10-23 quote with S1000-2M TG170 selected listed a 'material 8.43' line (jlcpcb_hdi.json quote_source-s). Which of the two is the default is not stated.",
+      "not_published_as": [
+        "dk (core)",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Nan Ya NP-175F TG170",
+      "brand-s": "Nan Ya",
+      "tg_c": 170,
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "capabilities 'HDI base material: Nan Ya NP-175F TG170/Shengyi S1000-2M TG170.' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28; prepreg Dk @ 1 GHz per glass style (NP-175FBHB 3.79-4.24) in jlcpcb_hdi.json prepregs-ao (FAQ image https://rs.jlcpcb.com/static/image/blog/pcb/jlcpcb-hdi-pcb-pp-parameter.png). Which of the two is the default is not stated.",
+      "not_published_as": [
+        "dk (core)",
+        "df"
+      ]
+    }
+  ],
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.15,
+      "board_mm": 2.4,
+      "offer-s": "standard",
+      "source-s": "HDI PCB Capabilities & FAQ: \"We can process HDI boards up to 2.4 mm thick, with a corresponding minimum through-hole size of 0.15 mm.\" Standard within JLCPCB HDI (its own product and order page). https://jlcpcb.com/help/article/hdi-pcb-capabilities-faq, read 2026-10-28"
+    }
+  ],
   "blind_buried_vias_b": true,
   "microvias_b": true,
   "hdi_steps-ai": [
@@ -277,11 +357,17 @@
   "via_in_pad_standard_b": true,
   "via_in_pad_standard_source-s": "Order page HDI: Via Covering 'Epoxy Filled & Capped' is the selected option (Tented / Epoxy Filled & Untented / Plugged / Copper paste disabled), USD 0.00; HDI FAQ: laser blind vias 'filled and planarized by electroplating'. Read 2026-10-23",
   "stackups": [],
-  "stackups_note": "No HDI stack-up is published as layers: the order page's 'Layer Stackup' reads 'Subject to Review' for 8 and 10 layers (1-step, 1.6 mm, 1 oz / 1 oz), and the HDI templates are named by the key in https://rs.jlcpcb.com/static/image/blog/pcb/hdi-stackup-naming-rules.png (JLC + H + layers + thickness + outer/inner copper + buried Y/N + order + outer PP, e.g. JLCH081611Y2-1078A) without their layers. getImpedanceTemplateSettings returned only the standard JLC templates (those are in jlcpcb.json, not HDI builds). Use prepregs-ao for the build-up dielectrics; JLCPCB sets the stack-up at review.",
+  "stackup_policy-s": "by_review",
+  "stackup_policy_source-s": "Stack-up by review, not published. Order form https://cart.jlcpcb.com/quote, Base Material HDI, 6 layers, 1-step, read 2026-10-28 (form only, nothing submitted): 'Layer Stackup' offers only 'Subject to Review', whose help text reads: 'Our engineers will generate the optimal stackup based on your design files and our manufacturing capabilities. You will receive an email notification to review and confirm it before production begins.' Same at 8 / 10 layers on 2026-10-23. The HDI FAQ names one 8-layer option code ('the stack-up structure option includes JLCH081611Y2-1078A') and the naming key, but no HDI construction is published layer by layer, and nothing says HDI uses the standard JLC06161H-3313 family (those templates are in jlcpcb.json). The FAQ's prepreg table (Shengyi / Nan Ya PP thickness and Dk @ 1 GHz) is the only HDI dielectric data.",
+  "stackups_note": "2026-10-28: see stackup_policy_source-s (6-layer HDI is 'Subject to Review' too). No HDI stack-up is published as layers: the order page's 'Layer Stackup' reads 'Subject to Review' for 8 and 10 layers (1-step, 1.6 mm, 1 oz / 1 oz), and the HDI templates are named by the key in https://rs.jlcpcb.com/static/image/blog/pcb/hdi-stackup-naming-rules.png (JLC + H + layers + thickness + outer/inner copper + buried Y/N + order + outer PP, e.g. JLCH081611Y2-1078A) without their layers. getImpedanceTemplateSettings returned only the standard JLC templates (those are in jlcpcb.json, not HDI builds). Use prepregs-ao for the build-up dielectrics; JLCPCB sets the stack-up at review.",
   "not_published_as": [
     "HDI layer stack-ups (set at review)",
     "buried via and lamination fees (manual quote)",
-    "stacked / staggered microvia rules"
+    "stacked / staggered microvia rules",
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o.outer-ao base foil / plating split",
+    "hole_plating-ao HDI through-hole and microvia plating thickness",
+    "laminates-ao default HDI laminate, core Dk, Df"
   ],
   "sources": {
     "capabilities HDI block": "https://jlcpcb.com/capabilities/pcb-capabilities",

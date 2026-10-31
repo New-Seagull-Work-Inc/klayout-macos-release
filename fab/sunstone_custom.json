@@ -151,6 +151,189 @@
   "impedance_tolerance_pct": 5,
   "impedance_source-s": "Other Capabilities tab, 'Controlled Impedance' Custom: Yes. Controlled-impedance page: 'Impedance tolerance | +/-5% (verified by TDR coupon testing)' (https://www.sunstone.com/capabilities/controlled-impedance)",
   "max_aspect_ratio": 10,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "base_oz": 0.5,
+        "base_um": 17.5,
+        "finished_oz": 1,
+        "finished_um": 43.2,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '1 Oz' rows = 'IC - 1 Oz', 'Foil - .5 Oz' (4-18 layers). Sheet L04-062-1ozHoz: 'Layer 1 0.5 oz foil plated to approximate* thickness 0.0017' (0.0432 mm) https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, read 2026-10-28. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      },
+      {
+        "base_oz": 1,
+        "base_um": 35,
+        "finished_oz": 2,
+        "finished_um": 61.0,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '2 Oz' rows = 'IC - 1 Oz', 'Foil - 1 Oz' (4-20 layers). Sheet L04-062-1oz1oz: 'Layer 1 1 oz foil plated to approximate* thickness 0.0024' (0.0610 mm) https://cms.sunstone.com/uploads/L04_062_1oz1oz_Stackup_dcb35d5a91.pdf, read 2026-10-28. finished_um is the printed approximate thickness. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      },
+      {
+        "base_oz": 2,
+        "base_um": 70,
+        "finished_oz": 3,
+        "finished_um": 96.5,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '3 Oz' rows = 'IC - 2 Oz', 'Foil - 2 Oz' (4-14 layers). Sheet L04-062-2oz2oz: 'Layer 1 2 oz foil plated to approximate* thickness 0.0038' (0.0965 mm) https://cms.sunstone.com/uploads/L04_062_2oz2oz_Stackup_c593ed06ad.pdf, read 2026-10-28. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      },
+      {
+        "base_oz_range": [
+          0.25,
+          4
+        ],
+        "base_um_range": [
+          9,
+          142
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "detailed capabilities 'ASC PWB Capabilities' tab: 'Foil Weight: (outer layer) | ¼ oz - 4 oz 9 µm - 142 µm | < 1/4 oz - > 4 oz' (Standard Production / Advanced) https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28. American Standard Circuits group table; plant not stated. Range only. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35.6,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: 'IC - 1 Oz' for the 1 Oz and 2 Oz selections; sheets print 'Layer 2 1 oz copper 0.0014' (0.0356 mm) https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, https://cms.sunstone.com/uploads/L04_062_1oz1oz_Stackup_dcb35d5a91.pdf, read 2026-10-28 Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      },
+      {
+        "oz": 2,
+        "um": 71.1,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: 'IC - 2 Oz' for the 3 Oz selection; sheet prints 'Layer 2 2 oz copper 0.0028' (0.0711 mm) https://cms.sunstone.com/uploads/L04_062_2oz2oz_Stackup_c593ed06ad.pdf, read 2026-10-28 Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      },
+      {
+        "oz_range": [
+          0.25,
+          4
+        ],
+        "um_range": [
+          9,
+          142
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "'ASC PWB Capabilities' tab: 'Foil Weight: (inner layer) | ¼ oz - 4 oz 9 µm - 142 µm' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness) for FR-4 builds (the materials page names HVLP only as part of Isola Tachyon 100G: 'uses spread glass ... and HVLP copper (as fine as 2UM RZ)' https://www.sunstone.com/capabilities/pcb-materials)",
+      "custom copper beyond the published constructions (ranges only)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "min_um": 20.3,
+      "class-s": "IPC Class II & III / Other (Custom)",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "min_um: stackup page footnote '*Plating Target is minimum of 0.0008\" in the hole with approximately 0.001\" - 0.0014\" on the surface.' (sunstone_circuits.json barrel_plating_source-s, read 2026-10-15; not found on the redesigned page 2026-10-28). class-s: detailed capabilities Plating tab 'Minimum Average Copper In Hole | Limited Review IPC Class ll | Online NRE IPC Class ll & lll | Custom IPC Class ll & lll/Other' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR-4 150 or 170 Tg",
+      "dk": 4.3,
+      "dk_at-s": "1 GHz (sheet average; 4.8 @ 1 MHz)",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "detailed capabilities Material tab: 'FR-4 Tg rating* | Limited Review 150 or 170 Tg* | Online NRE 150 or 170 Tg* | Custom Various', '*High Tg / Low Td' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28. Which Tg a buyer gets is not stated (tg_c left out). Dk from published stackups, not a laminate data sheet: construction sheets '* Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz' https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, read 2026-10-28 (8 newer sheets print 'Avg Dk 4.5' per layer). Suppliers named for digital boards: 'Isola Nelco Panasonic Shengyi Taconic' https://www.sunstone.com/pcb-products/pcb-manufacturing/pcbpro-full-feature, read 2026-10-28; brand per order not stated. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s).",
+      "not_published_as": [
+        "tg_c (150 vs 170 not chosen in the table)",
+        "brand-s",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Isola Tachyon 100G",
+      "brand-s": "Isola",
+      "tg_c": 215,
+      "dk": 3.02,
+      "dk_at-s": "not stated (page: 'representative')",
+      "df": 0.0021,
+      "df_at-s": "not stated (page: 'representative')",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'Tachyon 100G | Ultra low | 3.02 | 0.0021 | 215°C'; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Isola FR408HR",
+      "brand-s": "Isola",
+      "tg_c": 190,
+      "dk": 3.68,
+      "dk_at-s": "not stated (page: 'representative')",
+      "df": 0.0092,
+      "df_at-s": "not stated (page: 'representative')",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'FR408HR | Mid loss | 3.68 | 0.0092 | 190°C'; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Panasonic Megtron 6",
+      "brand-s": "Panasonic",
+      "tg_c": 185,
+      "dk": 3.7,
+      "dk_at-s": "1 GHz",
+      "df": 0.002,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'Megtron 6 | Ultra low | 3.70 | 0.002 | 185°C; text 'Megtron 6 (Dk 3.7, Df 0.002 @ 1 GHz)''; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Panasonic Megtron 7",
+      "brand-s": "Panasonic",
+      "dk": 3.6,
+      "dk_at-s": "1 GHz",
+      "df": 0.0015,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'Megtron 7 | Ultra low | 3.60 | 0.0015 | High; text 'lower Df (0.0015 @ 1 GHz), lower Dk (3.6)''; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Rogers RO4003C",
+      "brand-s": "Rogers",
+      "dk": 3.55,
+      "dk_at-s": "10 GHz",
+      "df": 0.0027,
+      "df_at-s": "10 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'RO4003C | Very low | 3.55 | 0.0027 | ~280°C; text 'RO4003C (Dk 3.55, Df 0.0027 @ 10 GHz''; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Rogers RO4350B",
+      "brand-s": "Rogers",
+      "dk": 3.66,
+      "dk_at-s": "10 GHz",
+      "df": 0.0031,
+      "df_at-s": "10 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'RO4350B | Very low | 3.66 | 0.0031 | ~280°C; text 'RO4350B (Dk 3.66, Df 0.0031 @ 10 GHz''; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    },
+    {
+      "name-s": "Arlon 85N",
+      "brand-s": "Arlon",
+      "dk": 4.2,
+      "dk_at-s": "not stated (page: 'typical', '~')",
+      "df": 0.013,
+      "df_at-s": "not stated (page: 'typical', '~')",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "Sunstone PCB materials page, 'Side-by-side comparison' (MATERIAL | LOSS TIER | DK (TYPICAL) | DF (TYPICAL) | TG): 'Arlon 85N | Standard | ~4.2 | ~0.013 | >250°C; 'Currently offered at Sunstone as a 2-layer option.''; 'Dk and Df values are representative; actual values vary by frequency, resin content, and glass style.' https://www.sunstone.com/capabilities/pcb-materials, read 2026-10-28. Detailed Material tab: Rogers / Arlon / Taconic / Polyimide 'No' online, 'Yes' Custom https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities. Custom tier = custom quote form ('Need controlled impedance, blind/buried vias, gold fingers, or a custom stack-up? Those features are available through ASC Sunstone's standard custom quoting form.', sunstone_custom.json quote_source-s)."
+    }
+  ],
+  "max_aspect_ratio_source-s": "detailed capabilities Drill tab 'Aspect Ratio ... Custom >10:1' (no maximum); 'ASC PWB Capabilities' tab 'Max. Aspect Ratio | 10:1 | 15:1' (Standard Production / Advanced) https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28",
   "aspect_ratio_note-s": "Inner Layers tab, Custom: '>10:1' (no maximum); ASC PWB Capabilities tab, 'Max. Aspect Ratio' 10:1 standard / 15:1 advanced. 10 kept as the floor",
   "blind_buried_vias_b": true,
   "microvias_b": true,
@@ -176,7 +359,11 @@
     "price (quote only)",
     "microvia capture-pad ring",
     "stacked/staggered microvia rules",
-    "max lamination cycles"
+    "max lamination cycles",
+    "copper-o.foil-ao (foil type / roughness for FR-4)",
+    "laminates-ao Df and brand of FR-4 150 / 170 Tg",
+    "which plant (Mulino vs ASC group) builds ASC PWB-tab capabilities",
+    "hole_plating-ao plating figure on the current site"
   ],
   "sources": {
     "Custom column: trace/space, via pads, edge, layers, drill, mask, silk, finishes, materials, impedance": "https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities",
@@ -189,6 +376,105 @@
   "note": "Sunstone's Custom (quoted) tier as its own profile, so tools that read only the top-level floors see it. The online profile is sunstone_circuits.json. Read 2026-10-23 from the redesigned site (Next.js payload, curl, no LLM); the 2026-10-14 figures in sunstone_circuits.json advanced-o (0.002\" track, 0.005\" drill, via + 0.006\") came from the old main page and are not on the current site. Fit for a 0.50 mm BGA with 0.24 mm pads (0.26 mm channel): one 0.0762 track needs 0.0762 + 2 x 0.0762 = 0.2286 mm. A through via (0.4064 mm outer / 0.5588 mm inner pad) cannot sit between those balls; the published path is a filled microvia in the pad (75 um / 200 um).",
   "retrieved_utc": "2026-10-23T00:00:00Z",
   "stackups": [
+    {
+      "name": "6 Layer StackUp (0.062\") L06-062-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 1.575,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.5802,
+      "printed_total-s": "0.0622 in / 1.5799 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_062_1oz_Hoz_Stackup_5916f66995.pdf",
+        "https://cms.sunstone.com/uploads/L06_062_1oz_Hoz_Stackup_c3444049bc.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
     {
       "name": "8 Layer StackUp (0.062\") L08-062-1ozHoz",
       "layers": 8,
@@ -4937,10 +5223,1244 @@
           "note-s": "Layer 12: 2 oz foil plated to approximate* thickness 0.0038"
         }
       ]
+    },
+    {
+      "name": "6 Layer StackUp (0.031\") L06-031-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 0.787,
+      "thickness-s": "Target Thickness: 0.031\"",
+      "measured_total_mm": 0.8182,
+      "printed_total-s": "0.0322 in / 0.8179 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_031_1oz_Hoz_Stackup_8c46b0ffd2.pdf",
+        "https://cms.sunstone.com/uploads/L06_031_1oz_Hoz_Stackup_8e04f84e5d.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1118,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 1080)",
+          "printed-s": "0.0044 in / 0.1118 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.039\") L06-039-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 0.9906,
+      "thickness-s": "Target Thickness: 0.039\"",
+      "measured_total_mm": 1.27,
+      "printed_total-s": "0.0500 in / 1.27 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_039_2oz2oz_Stackup_337b17ca0c.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x 1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.039\") L06-039-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 0.991,
+      "thickness-s": "Target Thickness: 0.039\"",
+      "measured_total_mm": 0.9706,
+      "printed_total-s": "0.0382 in / 0.9703 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_039_1oz_Hoz_Stackup_9c1ef9d831.pdf",
+        "https://cms.sunstone.com/uploads/L06_039_1oz_Hoz_Stackup_b6757cb5c7.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.047\") L06-047-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 1.1938,
+      "thickness-s": "Target Thickness: 0.047\"",
+      "measured_total_mm": 1.2192,
+      "printed_total-s": "0.0480 in / 1.2192 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_047_2oz2oz_Stackup_f07675e67f.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x 1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x 1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x 1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.047\") L06-047-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 1.194,
+      "thickness-s": "Target Thickness: 0.047\"",
+      "measured_total_mm": 1.222,
+      "printed_total-s": "0.0481 in / 1.2217 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_047_1oz_Hoz_Stackup_22c2162eca.pdf",
+        "https://cms.sunstone.com/uploads/L06_047_1oz_Hoz_Stackup_973d56679d.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.127,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0050 in / 0.1270 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.062\") L06-062-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 1.5748,
+      "thickness-s": "Target Thickness: 0.062\"",
+      "measured_total_mm": 1.6256,
+      "printed_total-s": "0.0640 in / 1.6256 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_062_2oz2oz_Stackup_50ceffdb1b.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.254,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0100 in / 0.2540 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2134,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116)",
+          "printed-s": "0.0084 in / 0.2134 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.078\") L06-078-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 1.981,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.1032,
+      "printed_total-s": "0.0828 in / 2.1031 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_078_1oz_Hoz_Stackup_d0324015e0.pdf",
+        "https://cms.sunstone.com/uploads/L06_078_1oz_Hoz_Stackup_e81dd5b843.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 2x 2116)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116, 1x 1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116, 1x 1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.078\") L06-078-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 1.9812,
+      "thickness-s": "Target Thickness: 0.078\"",
+      "measured_total_mm": 2.1386,
+      "printed_total-s": "0.0842 in / 2.1387 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_078_2oz2oz_Stackup_28d0317b9d.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1x2116)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x2116, 1x1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1626,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1x1080)",
+          "printed-s": "0.0064 in / 0.1626 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.093\") L06-093-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 2.362,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.3904,
+      "printed_total-s": "0.0941 in / 2.3901 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_093_1oz_Hoz_Stackup_51cec8f855.pdf",
+        "https://cms.sunstone.com/uploads/L06_093_1oz_Hoz_Stackup_6f3a04f46b.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (1x 1080, 1x 7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.093\") L06-093-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 2.3622,
+      "thickness-s": "Target Thickness: 0.093\"",
+      "measured_total_mm": 2.4511,
+      "printed_total-s": "0.0965 in / 2.4511 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_093_2oz2oz_Stackup_ce897d9c0e.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1X7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1X7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x1080, 1X7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.125\") L06-125-1ozHoz",
+      "layers": 6,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.1498,
+      "printed_total-s": "0.1240 in / 3.1496 mm",
+      "copper_outer_oz": 0.5,
+      "copper_inner_oz": 1,
+      "site_copper_weight-s": "1 Oz, 2 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_125_1oz_Hoz_Stackup_5a769b3044.pdf",
+        "https://cms.sunstone.com/uploads/L06_125_1oz_Hoz_Stackup_cb517cb4d4.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 1: 0.5 oz foil plated to approx* thickness 0.0017"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 1080, 1x 7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 2: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 3: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116, 1x 1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.3556,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0140 in / 0.3556 mm"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2692,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 2116, 1x 1080)",
+          "printed-s": "0.0106 in / 0.2692 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 4: 1 oz Cu"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0356,
+          "weight_oz": 1,
+          "printed-s": "0.0014 in / 0.0356 mm",
+          "note-s": "Layer 5: 1 oz Cu"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.3023,
+          "er": 4.5,
+          "er-s": "printed on this layer: 'Avg Dk 4.5'",
+          "material": "Bonding ply (2x 1080, 1x 7628)",
+          "printed-s": "0.0119 in / 0.3023 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0432,
+          "weight_oz": 0.5,
+          "printed-s": "0.0017 in / 0.0432 mm",
+          "note-s": "Layer 6: 0.5 oz foil plated to approx* thickness 0.0017"
+        }
+      ]
+    },
+    {
+      "name": "6 Layer StackUp (0.125\") L06-125-2oz2oz",
+      "layers": 6,
+      "thickness_mm": 3.175,
+      "thickness-s": "Target Thickness: 0.125\"",
+      "measured_total_mm": 3.241,
+      "printed_total-s": "0.1276 in / 3.241 mm",
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 2,
+      "site_copper_weight-s": "3 Oz",
+      "source_pdf-s": [
+        "https://cms.sunstone.com/uploads/L06_125_2oz2oz_Stackup_ab19bcf961.pdf"
+      ],
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 1: 2 oz foil plated to approximate* thickness 0.0038"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1X7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 2: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 3: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1X1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.7112,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0280 in / 0.7112 mm"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (1x2116, 1X1080)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 4: 2 oz copper"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Laminate Core",
+          "printed-s": "0.0210 in / 0.5334 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0711,
+          "weight_oz": 2,
+          "printed-s": "0.0028 in / 0.0711 mm",
+          "note-s": "Layer 5: 2 oz copper"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2464,
+          "er": 4.3,
+          "er-s": "sheet footnote: Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz",
+          "material": "Bonding ply (2x1080, 1X7628)",
+          "printed-s": "0.0097 in / 0.2464 mm"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0965,
+          "weight_oz": 2,
+          "printed-s": "0.0038 in / 0.0965 mm",
+          "note-s": "Layer 6: 2 oz foil plated to approximate* thickness 0.0038"
+        }
+      ]
     }
   ],
   "stackups_source_url": "https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup",
   "stackups_sources-as": [
+    "https://cms.sunstone.com/uploads/L06_031_1oz_Hoz_Stackup_8c46b0ffd2.pdf",
+    "https://cms.sunstone.com/uploads/L06_031_1oz_Hoz_Stackup_8e04f84e5d.pdf",
+    "https://cms.sunstone.com/uploads/L06_039_1oz_Hoz_Stackup_9c1ef9d831.pdf",
+    "https://cms.sunstone.com/uploads/L06_039_1oz_Hoz_Stackup_b6757cb5c7.pdf",
+    "https://cms.sunstone.com/uploads/L06_039_2oz2oz_Stackup_337b17ca0c.pdf",
+    "https://cms.sunstone.com/uploads/L06_047_1oz_Hoz_Stackup_22c2162eca.pdf",
+    "https://cms.sunstone.com/uploads/L06_047_1oz_Hoz_Stackup_973d56679d.pdf",
+    "https://cms.sunstone.com/uploads/L06_047_2oz2oz_Stackup_f07675e67f.pdf",
+    "https://cms.sunstone.com/uploads/L06_062_1oz_Hoz_Stackup_5916f66995.pdf",
+    "https://cms.sunstone.com/uploads/L06_062_1oz_Hoz_Stackup_c3444049bc.pdf",
+    "https://cms.sunstone.com/uploads/L06_062_2oz2oz_Stackup_50ceffdb1b.pdf",
+    "https://cms.sunstone.com/uploads/L06_078_1oz_Hoz_Stackup_d0324015e0.pdf",
+    "https://cms.sunstone.com/uploads/L06_078_1oz_Hoz_Stackup_e81dd5b843.pdf",
+    "https://cms.sunstone.com/uploads/L06_078_2oz2oz_Stackup_28d0317b9d.pdf",
+    "https://cms.sunstone.com/uploads/L06_093_1oz_Hoz_Stackup_51cec8f855.pdf",
+    "https://cms.sunstone.com/uploads/L06_093_1oz_Hoz_Stackup_6f3a04f46b.pdf",
+    "https://cms.sunstone.com/uploads/L06_093_2oz2oz_Stackup_ce897d9c0e.pdf",
+    "https://cms.sunstone.com/uploads/L06_125_1oz_Hoz_Stackup_5a769b3044.pdf",
+    "https://cms.sunstone.com/uploads/L06_125_1oz_Hoz_Stackup_cb517cb4d4.pdf",
+    "https://cms.sunstone.com/uploads/L06_125_2oz2oz_Stackup_ab19bcf961.pdf",
     "https://cms.sunstone.com/uploads/L08_047_1oz_Hoz_Stackup_71c9c14aac.pdf",
     "https://cms.sunstone.com/uploads/L08_062_1oz1oz_Stackup_79d0e7ebbc.pdf",
     "https://cms.sunstone.com/uploads/L08_062_1oz_Hoz_Stackup_1e0af67259.pdf",
@@ -4974,6 +6494,6 @@
     "https://cms.sunstone.com/uploads/L12_125_1oz_Hoz_Stackup1_4f196be947.pdf",
     "https://cms.sunstone.com/uploads/L12_125_2oz2oz_Stackup_b4b4116545.pdf"
   ],
-  "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
-  "stackups_note": "The 8, 10 and 12 L standard FR-4 constructions of sunstone_circuits.json (read 2026-10-17 from the construction-sheet PDFs; every sheet is still linked from the layer-stackup page on 2026-10-23). The page: 'ASC Sunstone has published our set of standard multilayer constructions for FR-4 designs'; a custom tier may also quote a custom stack-up. Stackup selector data (89 rows: copper weight 1/2/3 oz finished x layers x thickness) is embedded in the page's Next.js payload, readable with curl (no JS needed); each row links a construction-sheet PDF on cms.sunstone.com. One stackup per unique construction sheet (sheet code, e.g. L04-062-1ozHoz = 1 oz inner / half-oz outer foil; 1oz1oz; 2oz2oz). Every layer thickness is printed in both in and mm; thickness_mm uses the printed mm. copper_outer_oz is the BASE outer foil weight as printed ('0.5 oz foil plated to approximate* thickness 0.0017'); the page's selector calls these 1 / 2 / 3 oz FINISHED weights (site_copper_weight-s). er: 77 sheets print a sheet-level footnote 'Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz' (er = 4.3 at 1 GHz used on every dielectric); 8 newer sheets print 'Avg Dk 4.5' / 'Avg DC 4.5' / 'Avg Dielectric Constant 4.5' on each dielectric (er = 4.5). Each layer's er-s says which. The page says these are FR-4 constructions; no laminate brand. None is stated as impedance-controlled. Site data issues: the '2 Oz' 6-layer rows (all 7 thicknesses) link to L06-xxx-1ozHoz sheets identical in numbers to the '1 Oz' ones (sheets with Avg Dk 4.5 instead of the 4.3 footnote) - so no 6-layer 1oz/1oz sheet is published. For the 7 L06-xxx-1ozHoz codes the newer variant (per-layer Avg Dk 4.5, correct printed total) is used; the older variant linked from the '1 Oz' rows has identical layer thicknesses but prints the 4.3 @ 1 GHz footnote and a total short by 0.0014 in (e.g. 0.0608 vs 0.0622). '1 Oz' 8L 0.093 has a duplicate row linking the 8L 0.078 sheet; '1 Oz' 4L 0.078 and '2 Oz' 10L 0.093 rows are duplicated; '1 Oz' 4L 0.093 has no PDF or image (not published); '3 Oz' 4L 0.093 links the 4L 0.039 2oz2oz PDF, so L04-093-2oz2oz was transcribed from its stackup image (it prints two unclad cores with a 2x2116 prepreg between them, as printed). Typos copied as printed (e.g. '1x180'). The example PDF URL under /docs/default-source/layer-stack-up-2022/ returned 404 (superseded by the cms.sunstone.com set). The sheets' own printed totals disagree with the sum of their printed layers on these (measured_total_mm = sum of layers; printed_total-s = sheet's total): L04-125-1ozHoz: sum 3.1448 vs printed 3.1598; L08-047-1ozHoz: sum 1.2398 vs printed 1.1684; L08-062-1ozHoz: sum 1.5346 vs printed 1.4630; L08-093-1ozHoz: sum 2.4436 vs printed 2.3724; L08-125-1ozHoz: sum 3.1856 vs printed 3.1140; L10-062-1ozHoz: sum 1.5906 vs printed 1.5189; L10-125-1ozHoz: sum 3.2058 vs printed 3.1344; L12-078-1ozHoz: sum 2.0530 vs printed 1.9380; L14-093-1ozHoz: sum 2.4138 vs printed 2.3419; L14-125-1ozHoz: sum 3.2266 vs printed 3.1547; L16-125-1ozHoz: sum 3.1810 vs printed 3.1090; L18-125-1ozHoz: sum 3.1862 vs printed 3.1140. Left out (a dielectric without thickness or Dk on the sheet): 4 Layer StackUp (0.093\") L04-093-2oz2oz. Order: klayout reads the first 8 and takes the first of a layer count, so the 0.062 in 0.5 oz-outer / 1 oz-inner build of 4 / 6 / 8 / 10 layers and the thinnest 12 / 14 / 16 / 18-layer builds come first."
+  "stackups_retrieved_utc": "2026-10-28T00:00:00Z",
+  "stackups_note": "The 6, 8, 10 and 12 L standard FR-4 constructions of sunstone_circuits.json (read 2026-10-17 from the construction-sheet PDFs; every sheet is still linked from the layer-stackup page on 2026-10-23). The page: 'ASC Sunstone has published our set of standard multilayer constructions for FR-4 designs'; a custom tier may also quote a custom stack-up. Stackup selector data (89 rows: copper weight 1/2/3 oz finished x layers x thickness) is embedded in the page's Next.js payload, readable with curl (no JS needed); each row links a construction-sheet PDF on cms.sunstone.com. One stackup per unique construction sheet (sheet code, e.g. L04-062-1ozHoz = 1 oz inner / half-oz outer foil; 1oz1oz; 2oz2oz). Every layer thickness is printed in both in and mm; thickness_mm uses the printed mm. copper_outer_oz is the BASE outer foil weight as printed ('0.5 oz foil plated to approximate* thickness 0.0017'); the page's selector calls these 1 / 2 / 3 oz FINISHED weights (site_copper_weight-s). er: 77 sheets print a sheet-level footnote 'Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz' (er = 4.3 at 1 GHz used on every dielectric); 8 newer sheets print 'Avg Dk 4.5' / 'Avg DC 4.5' / 'Avg Dielectric Constant 4.5' on each dielectric (er = 4.5). Each layer's er-s says which. The page says these are FR-4 constructions; no laminate brand. None is stated as impedance-controlled. Site data issues: the '2 Oz' 6-layer rows (all 7 thicknesses) link to L06-xxx-1ozHoz sheets identical in numbers to the '1 Oz' ones (sheets with Avg Dk 4.5 instead of the 4.3 footnote) - so no 6-layer 1oz/1oz sheet is published. For the 7 L06-xxx-1ozHoz codes the newer variant (per-layer Avg Dk 4.5, correct printed total) is used; the older variant linked from the '1 Oz' rows has identical layer thicknesses but prints the 4.3 @ 1 GHz footnote and a total short by 0.0014 in (e.g. 0.0608 vs 0.0622). '1 Oz' 8L 0.093 has a duplicate row linking the 8L 0.078 sheet; '1 Oz' 4L 0.078 and '2 Oz' 10L 0.093 rows are duplicated; '1 Oz' 4L 0.093 has no PDF or image (not published); '3 Oz' 4L 0.093 links the 4L 0.039 2oz2oz PDF, so L04-093-2oz2oz was transcribed from its stackup image (it prints two unclad cores with a 2x2116 prepreg between them, as printed). Typos copied as printed (e.g. '1x180'). The example PDF URL under /docs/default-source/layer-stack-up-2022/ returned 404 (superseded by the cms.sunstone.com set). The sheets' own printed totals disagree with the sum of their printed layers on these (measured_total_mm = sum of layers; printed_total-s = sheet's total): L04-125-1ozHoz: sum 3.1448 vs printed 3.1598; L08-047-1ozHoz: sum 1.2398 vs printed 1.1684; L08-062-1ozHoz: sum 1.5346 vs printed 1.4630; L08-093-1ozHoz: sum 2.4436 vs printed 2.3724; L08-125-1ozHoz: sum 3.1856 vs printed 3.1140; L10-062-1ozHoz: sum 1.5906 vs printed 1.5189; L10-125-1ozHoz: sum 3.2058 vs printed 3.1344; L12-078-1ozHoz: sum 2.0530 vs printed 1.9380; L14-093-1ozHoz: sum 2.4138 vs printed 2.3419; L14-125-1ozHoz: sum 3.2266 vs printed 3.1547; L16-125-1ozHoz: sum 3.1810 vs printed 3.1090; L18-125-1ozHoz: sum 3.1862 vs printed 3.1140. Left out (a dielectric without thickness or Dk on the sheet): 4 Layer StackUp (0.093\") L04-093-2oz2oz. Order: klayout reads the first 8 and takes the first of a layer count, so the 0.062 in 0.5 oz-outer / 1 oz-inner build of 4 / 6 / 8 / 10 layers and the thinnest 12 / 14 / 16 / 18-layer builds come first. 6-layer builds added 2026-10-28 (architect-nadin: a 6-layer board failed fab_has_stackup on this tier): the 13 L06 sheets of sunstone_circuits.json, on the same basis as the 8-12 L ones (the layer-stackup page, re-read 2026-10-28: 'ASC Sunstone has published our set of standard multilayer constructions for FR-4 designs', not tied to a tier; it links 20 L06 sheets). L06-062-1ozHoz is placed first so klayout, which reads the first eight, sees a 6-layer build."
 }

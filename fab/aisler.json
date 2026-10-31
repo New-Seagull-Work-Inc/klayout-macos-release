@@ -161,6 +161,182 @@
   ],
   "impedance_control": null,
   "max_aspect_ratio": null,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          2,
+          4
+        ],
+        "offer-s": "standard",
+        "default_b": false,
+        "source-s": "Portfolio: '2 Layer 1.6 mm 35 µm HASL / ENIG ... Copper thickness 35µm'; '4 Layer 1.6 mm / 0.8 mm 35 µm ENIG ... 35µm on all Layers' https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. Base vs finished not stated. 2 and 4 layers also have 70 µm products, so no default is stated. AISLER products are fixed builds chosen by product name (copper / base material set per product); default_b marks the only build of a layer count where there is one. Order form not read (app, upload required)."
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          6,
+          8
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "Portfolio: '6 Layer 1.6 mm 35 µm ENIG' and '8 Layer 1.6 mm 35 µm ENIG', 'Copper thickness 35µm on all Layers' (the only 6 / 8 layer products) https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. Base vs finished not stated."
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "layers-ai": [
+          2,
+          4
+        ],
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Portfolio: '2 Layer 1.6 mm 70 µm HASL / ENIG ... Copper thickness 70µm'; '4 Layer 1.6 mm / 0.8 mm 70 µm ... 70µm outer / 35µm inner layers', stackup 'variable' / 'Details' https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. Separate product; its price was not read. Base vs finished not stated."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          4,
+          6,
+          8
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "Portfolio: 4 / 6 / 8 layer 35 µm products '35µm on all Layers'; 4 layer 70 µm products '35µm inner layers' https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. The only inner weight offered."
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness)",
+      "outer-ao base / finished split (only 'Copper thickness 35µm / 70µm' printed)",
+      "price difference of the 70 µm products (order form not read)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "nominal_range_um": [
+        18,
+        25
+      ],
+      "class-s": "not stated",
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "staff (Thea), 'Via Plating Thickness', 2023-08-16: 'The plating is ~18-25µm' https://community.aisler.net/t/2960 ; staff 2024-04-22: 'Plating holes add around 22 µm of bare copper.' https://community.aisler.net/t/3928 ; read 2026-10-28. Forum answers, not a formal specification; min or average not said."
+    },
+    {
+      "min_um": 25,
+      "class-s": "not stated",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Press-Fit article: 'Press-Fit is currently only supported on the 4 Layer 1.6 mm ENIG pool.' 'The plated through hole will be manufactured with a minimum copper thickness of 25 µm and a maximum tolerance of +75 µm.' (applies to detected press-fit holes, #.#75 mm) https://community.aisler.net/t/4429, read 2026-10-28. Price not stated."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 TG 140°C",
+      "tg_c": 140,
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "Portfolio, all four 2-layer products: 'Base material FR4 TG 140°C', 'Stackup variable' https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. The only 2-layer base material.",
+      "not_published_as": [
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "FR4 TG 150°C",
+      "tg_c": 150,
+      "df": 0.02,
+      "df_at-s": "not stated ('~ 0.02')",
+      "layers-ai": [
+        4,
+        6,
+        8
+      ],
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "Portfolio: 4 / 6 / 8 layer 35 µm products 'Base material FR4 TG 150°C' https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28. Df from published stackups, not a laminate data sheet: 6- and 8-layer stackup pages 'Loss Tangent / Dissipation factor (Df): ~ 0.02' https://community.aisler.net/t/6-layers-1-6mm-35-m-stackup/5458 , https://community.aisler.net/t/8-layers-1-6mm-35-m-stackup/5459, read 2026-10-28. Dk is per ply in the stackup images (core 4.0-4.5, prepreg 1080 4.0, 2116 4.25), no single value.",
+      "not_published_as": [
+        "brand-s",
+        "dk (single value)",
+        "df frequency"
+      ]
+    },
+    {
+      "name-s": "FR4 (4 layer 70 µm products)",
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Portfolio: '4 Layer 1.6 mm 70 µm' / '4 Layer 0.8 mm 70 µm' 'Base material FR4' (no Tg) https://community.aisler.net/t/pcb-portfolio/101, read 2026-10-28.",
+      "not_published_as": [
+        "tg_c",
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    }
+  ],
+  "max_aspect_ratio_source-s": "not published: no aspect ratio in the design rules or portfolio (https://community.aisler.net/t/pcb-design-rules/41, https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733, https://community.aisler.net/t/6l-layer-35-m-enig-design-rules/5467, https://community.aisler.net/t/pcb-portfolio/101), read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.3,
+      "board_mm": 1.6,
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "source-s": "Design rules: 'min. drill diameter | HASL allowed ≥ 0.3 mm | ENIG required ≥ 0.25 mm' https://community.aisler.net/t/pcb-design-rules/41, read 2026-10-28; every 2-layer product is 1.6 mm https://community.aisler.net/t/pcb-portfolio/101. HASL product."
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 1.6,
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "source-s": "Design rules: 'ENIG required ≥ 0.25 mm' https://community.aisler.net/t/pcb-design-rules/41, read 2026-10-28; 2-layer products are 1.6 mm https://community.aisler.net/t/pcb-portfolio/101. ENIG product."
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "standard",
+      "source-s": "4 Layer 35µm ENIG rules: 'Valid for 0.8 mm and 1.6 mm PCB thickness', 'min. via drill 0.25 mm / 10 mil' https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 0.8,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "standard",
+      "source-s": "4 Layer 35µm ENIG rules: 'Valid for 0.8 mm and 1.6 mm PCB thickness', 'min. via drill 0.25 mm / 10 mil' https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 1.6,
+      "layers-ai": [
+        6,
+        8
+      ],
+      "offer-s": "standard",
+      "source-s": "6L+ rules: 'Valid for 6, 8 and more layers.', 'min. via drill 0.25 mm / 10 mil' https://community.aisler.net/t/6l-layer-35-m-enig-design-rules/5467, read 2026-10-28; 6 / 8 layer products are 1.6 mm https://community.aisler.net/t/pcb-portfolio/101"
+    }
+  ],
   "via_in_pad_note": "Not supported: 'Buried, blind, micro or tented vias are not supported'; staff: 'We do not support filling/plugging vias with resin ... this is what we mean by via in pad.' https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733 ; https://community.aisler.net/t/3766",
   "advanced-o": {
     "process_s": "6L+ Layer 35µm ENIG design rules (valid for 6, 8 and more layers)",
@@ -182,7 +358,12 @@
     "max aspect ratio",
     "Df",
     "copper foil type",
-    "solder mask colours other than green (portfolio shows colour swatches as images only)"
+    "solder mask colours other than green (portfolio shows colour swatches as images only)",
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o.outer-ao base / finished split",
+    "hole_plating-ao formal plating spec (only forum answers ~18-25 µm)",
+    "laminates-ao brand and Dk (single value) of FR4 TG 140 / TG 150",
+    "laminates-ao Df of 2-layer FR4 TG 140 and 4-layer builds"
   ],
   "sources": {
     "4 Layer 35µm ENIG rules (0.8 and 1.6 mm): min tracewidth 125 µm, min copper spacing 125 µm, min via drill 0.25 mm, max via drill 0.45 mm, min via annular ring 100 µm, min PTH drill 0.5 mm, PTH annular ring 300 µm, min drill spacing 300 µm, copper to edge 300 µm, silkscreen width 150 µm / text height 800 µm, soldermask dam 100 µm, suggested soldermask expansion 50 µm, ENIG Ni 4-7 µm / Au 0.05-0.1 µm": "https://community.aisler.net/t/4-layer-35-m-enig-design-rules/3733",

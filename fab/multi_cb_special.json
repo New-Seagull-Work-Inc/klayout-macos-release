@@ -135,6 +135,314 @@
   "impedance_tolerance_pct": 5,
   "impedance_source-s": "Technical options, Quality controls: 'Impedance control | - | + | Precision up to 5% for 50 Ohms' (calculator '-', special '+')",
   "max_aspect_ratio": 12,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "base_oz": 0.5,
+        "base_um": 18,
+        "finished_oz": 1,
+        "finished_um": 35,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page: 'Our Printed Circuit Board online calculator is always preset to the lowest cost pool specification (standard).' 'Lowest cost Pool specification ... Final (outer) copper 35µm' for 1-8 layers https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Base: defined buildups print the outer layer 'Cu 18µm + plating' with 35µm thickness https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-28; the default variable buildup gives only 'Cu outer layers - final (35µm)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "finished_oz": 2,
+        "finished_um": 70,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page 'Additional Pooling options' column: 'Final (outer) copper 70µm' (not the lowest-cost spec the calculator is preset to) https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Base foil not stated. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "finished_oz": 3,
+        "finished_um": 105,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "technical options, PCB-Calculator column 'Copper outer layers max. 105µm' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28; not in a pool column. Base foil not stated. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "finished_um_range": [
+          18,
+          400
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page 'Non-Pool Special production' column 'Final (outer) copper 18µm - 400µm' (1 layer) / '35µm - 400µm' (2-8 layers); technical options Special production 'Copper outer layers max. 450µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28. Range only. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 0.5,
+        "um": 18,
+        "layers-ai": [
+          4
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page, 4 layers, 'Lowest cost Pool specification ... Final inner copper 18µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28; standard buildup 'Cu inner layers - final (18µm or 35µm)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html. Note the free defined buildup 4L-01 prints inner 35µm https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          4
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page, 4 layers, 'Additional Pooling options ... Final inner copper 35µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28 Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "layers-ai": [
+          6,
+          8
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page, 6 and 8 layers, 'Lowest cost Pool specification ... Final inner copper 35µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28 Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "technical options, PCB-Calculator column 'Copper inner layers max. 70µm' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28 Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      },
+      {
+        "um_range": [
+          9,
+          210
+        ],
+        "offer-s": "quote",
+        "default_b": false,
+        "source-s": "pool page 'Non-Pool Special production' 'Final inner copper 9µm - 210µm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28; technical options Special production 'Copper inner layers max. 105µm' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html (the two pages differ). Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (rigid foil type / roughness not stated; RA / ED named only for flex materials https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html; foils stocked 12 / 18 / 35 / 70 / 105 / 210 µm https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/prepreg-core-foil.html, read 2026-10-28)",
+      "single special-production copper list (ranges only; two pages differ on inner max)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "min_um": 20,
+      "class-s": "IPC-A-600 class 2",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "tolerances 'Cu thickness in vias | Class 2 (standard) | class 3': 'Via, PTH slots, THT (> 150µm) | min. 20µm | min. 25µm' https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28; pool page 'Our PCBs are manufactured to IPC-A-600 class 2 (class 3 optional)' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "min_um": 25,
+      "class-s": "IPC-A-600 class 3",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "tolerances 'Via, PTH slots, THT (> 150µm) ... class 3 min. 25µm' https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28; pool page '(class 3 optional)', Production class 'IPC-A-600 class 3' in the non-lowest-cost column https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html. Price not stated. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "min_um": 18,
+      "class-s": "IPC-A-600 class 2",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "tolerances 'Microvia (≤ 150µm) | min. 18µm | min. 25µm' (class 2 / class 3) https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "min_um": 25,
+      "class-s": "IPC-A-600 class 3",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "tolerances 'Microvia (≤ 150µm) ... class 3 min. 25µm' https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28"
+    },
+    {
+      "min_um": 10,
+      "class-s": "IPC-A-600 class 2",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "tolerances, blind / buried via rows: 'min. 10µm' (class 2), 'min. 12µm' (class 3) https://www.multi-circuit-boards.eu/en/quality/manufacturing-tolerances.html, read 2026-10-28"
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 HTg 150°C",
+      "tg_c": 150,
+      "df": 0.02,
+      "df_at-s": "not stated ('ca. 0.02')",
+      "layers-ai": [
+        4,
+        6,
+        8
+      ],
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "pool page, 4 / 6 / 8 layers lowest cost spec 'Base material FR4 Tg150 1.55mm' https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html; standard buildup 'FR4 Tg150 at no extra charge for multilayers' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/standard-buildup.html, read 2026-10-28. Df from published stackups, not a laminate data sheet: defined buildups 'Loss Tangent / Dissipation factor (Df): ca. 0.02' https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_lagenaufbau/Multi-CB_Definierter_Lagenaufbau_Impedanzen_en.pdf, read 2026-10-28; Dk per ply 4.0-4.6 there (no single value). Brand not named; the materials page lists FR4 MidTg candidates (Isola IS400 150°, ITEQ IT-158 155°) without saying which is used, and: 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28",
+      "not_published_as": [
+        "brand-s",
+        "dk (single value)",
+        "df frequency"
+      ]
+    },
+    {
+      "name-s": "FR4 Tg 135°C",
+      "tg_c": 135,
+      "dk": 4.6,
+      "dk_at-s": "1 MHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "technical options, Materials: 'FR4 Tg 135°C | + | +' (PCB-Calculator, Special production) https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28. Dk from Multi-CB 'Materials Default Values FR4' sheet, column FR4 Standard: 'TG ≥ 135', 'Permittivity εr at 1MHz 4,6', 'e.g. Isola Duraver, Shengyi S1141, KingBoard 6160, Panasonic R-1766M' ('Depending on availability') https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_material/standard/multi-cb_material-standard-values.pdf, read 2026-10-28. The 1-2 layer pool spec says only 'FR4 1.55mm' (no Tg) https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, so the 2-layer default Tg is not stated. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28",
+      "not_published_as": [
+        "brand-s (one of several, by availability)",
+        "df",
+        "whether it is the 1-2 layer pool default"
+      ]
+    },
+    {
+      "name-s": "FR4 HTg 170°C",
+      "tg_c": 170,
+      "dk": 4.8,
+      "dk_at-s": "1 MHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "technical options 'FR4 HTg 170°C | + | +' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html; pool page lists HTg170 in the 'Non-Pool Special production' column https://www.multi-circuit-boards.eu/en/pricing/printed-circuit-boards/pooling-options.html, read 2026-10-28. Dk from 'Materials Default Values FR4', column FR4 High-TG: 'TG ≥ 170', 'Permittivity εr at 1MHz 4,8', 'e.g. Isola IS410, Shengyi S1000-2, Iteq IT180-A, Panasonic R-1755V' https://www.multi-circuit-boards.eu/fileadmin/pdf/leiterplatten_material/standard/multi-cb_material-standard-values.pdf, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28",
+      "not_published_as": [
+        "brand-s (one of several, by availability)",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Rogers 4350B",
+      "brand-s": "Rogers",
+      "tg_c": 280,
+      "dk": 3.5,
+      "dk_at-s": "1.9 GHz",
+      "df": 0.0037,
+      "df_at-s": "1.9 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "technical options 'Rogers 4350B | + | +' https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28; materials page HF table (header '* @1,9GHz'): 'Rogers 4350B | HF Material | ... 3,5 | 0,0037 | 280°' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "ITEQ IT-180A",
+      "brand-s": "ITEQ",
+      "tg_c": 175,
+      "dk": 4.4,
+      "dk_at-s": "1 GHz",
+      "df": 0.015,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'ITEQ IT-180A | FR4 HTg | 175° | 45 | 4,4 | 0,015' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "Shengyi S1000-2",
+      "brand-s": "Shengyi",
+      "tg_c": 180,
+      "dk": 4.8,
+      "dk_at-s": "1 MHz",
+      "df": 0.013,
+      "df_at-s": "1 MHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'Shengyi S1000-2 | FR4 HTg alternative | 180° | 45 | 4,8* | 0,013*' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "Isola IS410",
+      "brand-s": "Isola",
+      "tg_c": 180,
+      "dk": 4.0,
+      "dk_at-s": "1 GHz",
+      "df": 0.019,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'ISOLA IS410 | FR4 HTg, CAF-Enhanced | 180° | 55 | 4,0 | 0,019' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "Isola 370HR",
+      "brand-s": "Isola",
+      "tg_c": 180,
+      "dk": 4.2,
+      "dk_at-s": "1 GHz",
+      "df": 0.016,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'ISOLA 370HR | FR4 HTg, CAF-Enhanced | 180° | 45 | 4,2 | 0,016' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "Isola Duraver DE104 KF",
+      "brand-s": "Isola",
+      "tg_c": 135,
+      "df": 0.02,
+      "df_at-s": "1 MHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'ISOLA Duraver DE104 KF | FR4 tracking resistant | 135° | 45 | 4,6 - 4,9 | 0,020*' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "name-s": "Isola DE156",
+      "brand-s": "Isola",
+      "tg_c": 155,
+      "dk": 4.0,
+      "dk_at-s": "1 GHz",
+      "df": 0.016,
+      "df_at-s": "1 GHz",
+      "offer-s": "quote",
+      "default_b": false,
+      "source-s": "materials page table 'Material for Rigid Circuit boards' (Tg, 'εr, Dk- Permittivity @1GHz', 'Loss Tangent @1GHz'; '* at 1MHz', '** Material for rigid PCBs'): 'ISOLA DE156 | FR4 halogen-free | 155° | 45 | 4,0 | 0,016' https://www.multi-circuit-boards.eu/en/pcb-design-aid/layer-buildup/pcb-materials.html, read 2026-10-28. 'The selected materials may be replaced by technically equivalent or similar products, according to available stocks on hand.' Technical options Special production lists FR4 HTg 180°C, FR4 KF (CTI 400), G200, P97, PTFE, Polyimid https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    }
+  ],
+  "max_aspect_ratio_source-s": "design parameters 'Special production (min.)' 'aspect ratio 1:12' https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html, read 2026-10-28; drills page 'Drilling ... 1:10 (rfq 1:20)' https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.6,
+      "board_mm": 6.0,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 6.0mm | drill-Ø min. at aspect ratio 1:10' 0.6mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.3,
+      "board_mm": 6.0,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 6.0mm | drill-Ø min. at aspect ratio 1:20*' 0.3mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 2.4,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 2.4mm | drill-Ø min. at aspect ratio 1:10' 0.25mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.15,
+      "board_mm": 2.4,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 2.4mm | drill-Ø min. at aspect ratio 1:20*' 0.15mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.15,
+      "board_mm": 1.55,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 1.55mm | drill-Ø min. at aspect ratio 1:10' 0.15mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.1,
+      "board_mm": 1.55,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 1.55mm | drill-Ø min. at aspect ratio 1:20*' 0.1mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.1,
+      "board_mm": 1.0,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 1.0mm | drill-Ø min. at aspect ratio 1:10' 0.1mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.1,
+      "board_mm": 0.8,
+      "offer-s": "quote",
+      "source-s": "drills page 'Sample aspect ratios' ('*Only on request'): 'Material thickness 0.8mm | drill-Ø min. at aspect ratio 1:10' 0.1mm https://www.multi-circuit-boards.eu/en/pcb-design-aid/drills-throughplating.html, read 2026-10-28. Special production is quoted ('Custom layer buildup | Price inquiry'; products page: 'If a circuit board cannot be calculated automatically, you will usually receive an individually tailored quotation') https://www.multi-circuit-boards.eu/en/products/printed-circuit-boards.html, read 2026-10-28"
+    }
+  ],
   "blind_buried_vias_b": true,
   "microvias_b": true,
   "min_microvia_drill_mm": 0.075,
@@ -145,7 +453,10 @@
     "price (quote only)",
     "defined 10-layer buildup",
     "Dk/Df of a custom buildup",
-    "US transit time"
+    "US transit time",
+    "copper-o.foil-ao (foil type / roughness for rigid boards)",
+    "laminates-ao: which laminate a custom buildup uses (substituted by availability)",
+    "laminates-ao Dk/Df of G200, P97, PTFE, FR4 KF actually stocked"
   ],
   "sources": {
     "design parameters": "https://www.multi-circuit-boards.eu/en/pcb-design-aid/design-parameters.html",

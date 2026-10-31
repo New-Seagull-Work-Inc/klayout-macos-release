@@ -122,6 +122,181 @@
   "impedance_control": true,
   "impedance_note-s": "'Impedance control: +/-10%' (spec); Polar SI8000 calculation, impedance report and serialized TDR coupons free (https://www.7pcb.com/Impedance-controlled-PCB)",
   "max_aspect_ratio": 12,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "oz": 1,
+        "um": 35.6,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "Standard stackup PDF: 'standard multi-layer PCB stack up carried by Bittele ... final thickness of 0.62\" ± 10% and 1 ounce of Copper weight'; every layer '0.0014\" 1 oz' https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf, read 2026-10-28. Printed as 1 oz / 0.0014\" without saying base foil or finished. spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Impedance page: in-house stock 'Higher copper weights: 2 oz, 3 oz' (higher weights may need extra lead time), 'Copper foil: ⅓ oz, ½ oz, 1 oz, 2 oz, 3 oz' https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28; spec p3 line/space row '5/6; 6/6 | 2 OZ' https://www.7pcb.com/Upload_file/PCB-specifications.pdf. spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28"
+      },
+      {
+        "oz": 3,
+        "um": 105,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Impedance page: in-house stock 'Higher copper weights: 2 oz, 3 oz' (higher weights may need extra lead time), 'Copper foil: ⅓ oz, ½ oz, 1 oz, 2 oz, 3 oz' https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28; spec p3 line/space row '6/8; 7/8; 8/8 | 3 OZ' https://www.7pcb.com/Upload_file/PCB-specifications.pdf. spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28"
+      },
+      {
+        "oz": 5,
+        "um": 175,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "spec p3 line/space row '8/10; 9/10; 10/10 | 5 OZ' https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28; PCB-Fabrication page 'PCB Copper Thickness: 0.5 oz to 5.0 oz' https://www.7pcb.com/PCB-Fabrication, read 2026-10-28"
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35.6,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "Standard stackup PDF: 'standard multi-layer PCB stack up carried by Bittele ... final thickness of 0.62\" ± 10% and 1 ounce of Copper weight'; every layer '0.0014\" 1 oz' https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf, read 2026-10-28 (inner planes printed '0.0014\" 1 oz')."
+      },
+      {
+        "oz": 0.5,
+        "um": 17.5,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28; spec p3 line/space row '4/4; 4/5 | 0.5 OZ'; Impedance page: in-house stock 'Higher copper weights: 2 oz, 3 oz' (higher weights may need extra lead time), 'Copper foil: ⅓ oz, ½ oz, 1 oz, 2 oz, 3 oz' https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28 (asymmetric cores ½/1, ½/2 oz)."
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28; Impedance page: in-house stock 'Higher copper weights: 2 oz, 3 oz' (higher weights may need extra lead time), 'Copper foil: ⅓ oz, ½ oz, 1 oz, 2 oz, 3 oz' https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28"
+      },
+      {
+        "oz": 3,
+        "um": 105,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "spec PDF p3: 'Base Copper Thickness Inner Layers and Outer Layers(OZ) 0.5 / 6', 'Finished Copper Thickness Outer Layers 1 / 20, Inner Layers 0.5 / 6' (min / max) https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28; Impedance page: in-house stock 'Higher copper weights: 2 oz, 3 oz' (higher weights may need extra lead time), 'Copper foil: ⅓ oz, ½ oz, 1 oz, 2 oz, 3 oz' https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness). Impedance page: 'our usual preference is for Foil-Built PCBs' (outer layers from copper foil) https://www.7pcb.com/Impedance-controlled-PCB, read 2026-10-28",
+      "outer-ao base / finished split for the standard 1 oz build",
+      "which plant builds the boards (Toronto / Shenzhen / Penang not stated)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "min_um": 20,
+      "class-s": "not stated",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "spec PDF p3 plating table (columns Min.Thickness / Max.Thickness): 'Copper Plating Hole (micron) Copper Thickness 20um 30um' https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28. Bittele publishes no standard-vs-option tiers; no IPC class stated."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 Tg 140 (default)",
+      "tg_c": 140,
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "High-Tg page: 'If you do not specify a minimum Tg level ... we will normally use our default Tg 140 FR4 material' https://www.7pcb.com/High-TG-PCB-Materials, read 2026-10-28. Conflicting wording: materials page 'Bittele Electronics uses FR406 as our default standard' https://www.7pcb.com/PCB-materials, read 2026-10-28; spec PDF lists 'FR4, Tg: 130℃/170℃' https://www.7pcb.com/Upload_file/PCB-specifications.pdf. Standard stackup PDF prints Dielectric Constant 4.2 on every dielectric (published stackup, no frequency) https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf.",
+      "not_published_as": [
+        "brand-s",
+        "dk (laminate)",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Shengyi S1141 (Tg 130 column)",
+      "brand-s": "Shengyi",
+      "tg_c": 130,
+      "dk": 4.2,
+      "dk_at-s": "2 GHz, 50% resin",
+      "df": 0.015,
+      "df_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'Tg 130 / China', S1141 Dk 4.2, Df 0.015; 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated."
+    },
+    {
+      "name-s": "Shengyi S1000-H (Tg 150 column)",
+      "brand-s": "Shengyi",
+      "tg_c": 150,
+      "dk": 4.38,
+      "dk_at-s": "2 GHz, 50% resin",
+      "df": 0.015,
+      "df_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'Tg 150 / China', S1000-H Dk 4.38, Df 0.015; 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated."
+    },
+    {
+      "name-s": "Shengyi S1000-2 (Tg 170 column)",
+      "brand-s": "Shengyi",
+      "tg_c": 170,
+      "dk": 4.28,
+      "dk_at-s": "2 GHz, 50% resin",
+      "df": 0.017,
+      "df_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'Tg 170 / China', S1000-2 Dk 4.28, Df 0.017; 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated. High-Tg page: 'We also offer higher Tg materials ... such as Tg 170 FR4 material'."
+    },
+    {
+      "name-s": "ITEQ IT180A",
+      "brand-s": "ITEQ",
+      "tg_c": 180,
+      "dk": 4.3,
+      "dk_at-s": "2 GHz, 50% resin",
+      "df": 0.015,
+      "df_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'Tg 180 / China', IT180A Dk 4.3, Df 0.015; 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated. High-Tg page: 'IT180A with a characteristic Tg 180'; spec PDF lists IT 180A."
+    },
+    {
+      "name-s": "Isola FR406",
+      "brand-s": "Isola",
+      "dk": 3.93,
+      "dk_at-s": "2 GHz, 50% resin",
+      "df": 0.0167,
+      "df_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'U.S. under Tg 130 / 150 / 170', FR406 Dk 3.93, Df 0.0167; 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated. Materials page: 'Bittele Electronics uses FR406 as our default standard' and 'We also use North American materials such as Isola 370HR, FR408HR, etc., upon request' https://www.7pcb.com/PCB-materials.",
+      "not_published_as": [
+        "tg_c (chart lists FR406 under three Tg columns)"
+      ]
+    },
+    {
+      "name-s": "Isola 370HR",
+      "brand-s": "Isola",
+      "tg_c": 180,
+      "dk": 4.04,
+      "dk_at-s": "2 GHz, 50% resin",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Bittele material chart (image on https://www.7pcb.com/PCB-materials and https://www.7pcb.com/High-TG-PCB-Materials): column 'Tg 180 / U.S.', 370HR Dk 4.04, Df printed 0.21 (left out: implausible, likely a typo); 'Dk (50% resin @ 2 GHz)', 'Df (50% resin @ 2 GHz)' https://www.7pcb.com/images/material-selection.jpg, read 2026-10-28. Values are Bittele's restatement of 'published data sheets' (page text). Price not stated. Materials page: North American materials 'upon request' https://www.7pcb.com/PCB-materials.",
+      "not_published_as": [
+        "df (chart prints 0.21)"
+      ]
+    }
+  ],
+  "max_aspect_ratio_source-s": "spec PDF p1 'Aspect ratio: 12:01'; p2 'Min.Hole Size | Board Thickness>=2.0mm | Aspect Ratio<=12' https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.15,
+      "board_max_mm": 2.0,
+      "offer-s": "not stated",
+      "source-s": "spec PDF p2 'Min.Hole Size | Board Thickness<2.0mm | 0.15mm' (and '>=2.0mm | Aspect Ratio<=12') https://www.7pcb.com/Upload_file/PCB-specifications.pdf, read 2026-10-28. Stated for a thickness range (< 2.0 mm, exclusive), not a single thickness, so board_max_mm is given instead of board_mm. No standard-vs-option tier published."
+    }
+  ],
   "via_in_pad_note": "Via in pad listed under special techniques (spec p1); adds turn time (https://www.7pcb.com/PCB-Assembly-Turn-Time). No VIP drill/fill/cap rules published.",
   "sources": {
     "layers, copper range, thickness ranges per layer count, min line/space 3/3 headline, min hole 0.15 mm, aspect ratio 12:1, impedance +/-10%, finishes, materials, annular ring (vias 3 mil / component 6 mil), line-to-edge, mask window/bridge, legend 5 mil, hole copper 20/30 um, line/space by copper weight": "https://www.7pcb.com/Upload_file/PCB-specifications.pdf",
@@ -583,5 +758,13 @@
     "https://www.7pcb.com/Upload_file/Multi-layer-stack-up.pdf"
   ],
   "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
-  "stackups_note": "Bittele 'Standard Multi-layer PCB Stackup' PDF (2 pages, (c) 2012): one stackup each for 2, 4, 6, 8 and 10 layers, all 'final thickness of 0.62\" ± 10% and 1 ounce of Copper weight' (the 0.62\" in the intro is a typo; each table says 'Final board thickness: 0.062\" ± 10%'). Units printed in inches, converted at 25.4 mm per inch; every copper layer 0.0014\" 1 oz; every dielectric Dk 4.2. measured_total_mm is the sum of printed layers (e.g. 4L 0.0608\" = 1.544 mm; 6L only 0.0597\")."
+  "stackups_note": "Bittele 'Standard Multi-layer PCB Stackup' PDF (2 pages, (c) 2012): one stackup each for 2, 4, 6, 8 and 10 layers, all 'final thickness of 0.62\" ± 10% and 1 ounce of Copper weight' (the 0.62\" in the intro is a typo; each table says 'Final board thickness: 0.062\" ± 10%'). Units printed in inches, converted at 25.4 mm per inch; every copper layer 0.0014\" 1 oz; every dielectric Dk 4.2. measured_total_mm is the sum of printed layers (e.g. 4L 0.0608\" = 1.544 mm; 6L only 0.0597\").",
+  "not_published_as": [
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o.outer-ao base / finished split",
+    "hole_plating-ao IPC class",
+    "laminates-ao brand of the default Tg 140 FR4 (FR406 vs Tg 140 wording conflict)",
+    "prices of non-default copper / laminate choices (quote)",
+    "fabricating plant"
+  ]
 }

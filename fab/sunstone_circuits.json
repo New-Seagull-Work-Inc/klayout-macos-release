@@ -176,6 +176,84 @@
   ],
   "impedance_control": true,
   "max_aspect_ratio": 10,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "base_oz": 0.5,
+        "base_um": 17.5,
+        "finished_oz": 1,
+        "finished_um": 43.2,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '1 Oz' rows = 'IC - 1 Oz', 'Foil - .5 Oz' (4-18 layers). Sheet L04-062-1ozHoz: 'Layer 1 0.5 oz foil plated to approximate* thickness 0.0017' (0.0432 mm) https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, read 2026-10-28. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated."
+      },
+      {
+        "base_oz": 1,
+        "base_um": 35,
+        "finished_oz": 2,
+        "finished_um": 61.0,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '2 Oz' rows = 'IC - 1 Oz', 'Foil - 1 Oz' (4-20 layers). Sheet L04-062-1oz1oz: 'Layer 1 1 oz foil plated to approximate* thickness 0.0024' (0.0610 mm) https://cms.sunstone.com/uploads/L04_062_1oz1oz_Stackup_dcb35d5a91.pdf, read 2026-10-28. finished_um is the printed approximate thickness. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated."
+      },
+      {
+        "base_oz": 2,
+        "base_um": 70,
+        "finished_oz": 3,
+        "finished_um": 96.5,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: '3 Oz' rows = 'IC - 2 Oz', 'Foil - 2 Oz' (4-14 layers). Sheet L04-062-2oz2oz: 'Layer 1 2 oz foil plated to approximate* thickness 0.0038' (0.0965 mm) https://cms.sunstone.com/uploads/L04_062_2oz2oz_Stackup_c593ed06ad.pdf, read 2026-10-28. Online quote form (onequote.sunstone.com) needs JS: order-form not read; price difference and default between 1 / 2 / 3 oz not stated."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35.6,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: 'IC - 1 Oz' for the 1 Oz and 2 Oz selections; sheets print 'Layer 2 1 oz copper 0.0014' (0.0356 mm) https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, https://cms.sunstone.com/uploads/L04_062_1oz1oz_Stackup_dcb35d5a91.pdf, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 71.1,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page: 'All copper weights shown are finished weights — the values listed already reflect plating on outer layers'; selector data (curl, Next.js payload) https://www.sunstone.com/pcb-manufacturing-capabilities/layer-stackup, read 2026-10-28: 'IC - 2 Oz' for the 3 Oz selection; sheet prints 'Layer 2 2 oz copper 0.0028' (0.0711 mm) https://cms.sunstone.com/uploads/L04_062_2oz2oz_Stackup_c593ed06ad.pdf, read 2026-10-28"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness)",
+      "default copper weight and price of 2 / 3 oz (order-form not read)",
+      "detailed-page inner-layer 'Copper Weight (oz/sq ft) pre-plate' table is garbled on the live site (e.g. '1 oz Cu | YES | YES | NO', '< 0.5 oz' twice) https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "min_um": 20.3,
+      "class-s": "IPC Class II & III (Online NRE)",
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "min_um: stackup page footnote '*Plating Target is minimum of 0.0008\" in the hole with approximately 0.001\" - 0.0014\" on the surface.' (sunstone_circuits.json barrel_plating_source-s, read 2026-10-15; not found on the redesigned page 2026-10-28). class-s: detailed capabilities Plating tab 'Minimum Average Copper In Hole | Limited Review IPC Class ll | Online NRE IPC Class ll & lll | Custom IPC Class ll & lll/Other' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR-4 150 or 170 Tg",
+      "dk": 4.3,
+      "dk_at-s": "1 GHz (sheet average; 4.8 @ 1 MHz)",
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "detailed capabilities Material tab: 'FR-4 Tg rating* | Limited Review 150 or 170 Tg* | Online NRE 150 or 170 Tg* | Custom Various', '*High Tg / Low Td' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28. Which Tg a buyer gets is not stated (tg_c left out). Dk from published stackups, not a laminate data sheet: construction sheets '* Average Dielectric Constant 4.3 @ 1 GHz / 4.8 @ 1 MHz' https://cms.sunstone.com/uploads/L04_062_1oz_Hoz_Stackup_eae3a4dcd8.pdf, read 2026-10-28 (8 newer sheets print 'Avg Dk 4.5' per layer). Suppliers named for digital boards: 'Isola Nelco Panasonic Shengyi Taconic' https://www.sunstone.com/pcb-products/pcb-manufacturing/pcbpro-full-feature, read 2026-10-28; brand per order not stated. Online NRE column = the online order, so 'standard' here means orderable without a custom quote; price difference 150 vs 170 not stated.",
+      "not_published_as": [
+        "tg_c (150 vs 170 not chosen in the table)",
+        "brand-s",
+        "df"
+      ]
+    }
+  ],
+  "max_aspect_ratio_source-s": "detailed capabilities Drill tab: 'Note: *Aspect ratio = thickness divided by smallest drill size'; 'Aspect Ratio | Limited Review <= up to 6.5:1 VP / <= up to 8:1 PCBX | Online NRE <10:1 | Custom >10:1' https://www.sunstone.com/pcb-manufacturing-capabilities/detailed-capabilities, read 2026-10-28",
   "via_in_pad_note": "PCBpro online lists 'Via Fill/Plugging: Yes (solder mask filled)' only; no resin/conductive fill or copper cap online. Filled-and-capped via-in-pad needs a custom quote (Sunstone forum per research doc; forum host not re-fetched). https://www.sunstone.com/pcb-products/pcb-manufacturing/pcbpro-full-feature",
   "advanced-o": {
     "process_s": "Custom Quote column (main capabilities page) / 'Custom' column (detailed capabilities)",
@@ -239,7 +317,11 @@
     "hdi-o.microvia_annular_ring_mm",
     "hdi-o.stacked_microvias_b",
     "hdi-o.staggered_microvias_b",
-    "hdi-o.max_lamination_cycles"
+    "hdi-o.max_lamination_cycles",
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o default weight (order form not read)",
+    "hole_plating-ao plating figure on the current site (0.0008\" footnote gone 2026-10-28)",
+    "laminates-ao Df, brand, and which Tg (150 / 170) online orders get"
   ],
   "sources": {
     "drill / via pad / component pad / microvia / blind-buried / layers / thickness range / copper range / materials / finishes (Instant Online vs Custom Quote)": "https://www.sunstone.com/pcb-manufacturing-capabilities",

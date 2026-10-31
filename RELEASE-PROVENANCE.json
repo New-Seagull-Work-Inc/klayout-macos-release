@@ -1,0 +1,17 @@
+{
+  "repository": "New-Seagull-Work-Inc/klayout-macos-release",
+  "release": "v2026.09.17-696-gcaf3314",
+  "source_repository": "klayout",
+  "source_commit": "caf33141bb5ba6171e4a97d43e288e22bc947ad8",
+  "platform": "macOS arm64",
+  "minimum_macos": "14.0",
+  "reference_validation": "Camera run 111: both boards manufacturable; independent KiStack DRC/ERC zero.",
+  "validation": [
+    "make release",
+    "cinema-check",
+    "keepout-check",
+    "si-terminal-check",
+    "stack-room-check",
+    "hole-clearance-check"
+  ]
+}

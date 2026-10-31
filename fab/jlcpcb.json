@@ -314,6 +314,221 @@
   ],
   "impedance_control": true,
   "max_aspect_ratio": 10,
+  "max_aspect_ratio_source-s": "\"Do not exceed 10:1 when plating through-holes.\" https://jlcpcb.com/blog/via-aspect-ratio-critical-pcb-reliability ; \"Fabricators like JLCPCB typically maintain a maximum aspect ratio of 10:1 for standard PTH\" https://jlcpcb.com/blog/standard-pcb-thickness, read 2026-10-28",
+  "copper-o": {
+    "outer-ao": [
+      {
+        "finished_oz": 1,
+        "finished_um": 35,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Outer Copper Weight' 1 oz selected by default; capabilities 'Finished Outer Layer Copper: 2-layer: 1 oz / 2 oz / 2.5 oz / 3.5 oz / 4.5oz; Multi-layer: 1 oz / 2 oz' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28. Finished weight only; the base foil / plating split is not stated. The 2-layer form was not read, so the default is confirmed at 4 layers only."
+      },
+      {
+        "finished_oz": 2,
+        "finished_um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 2 oz is the non-default 'Outer Copper Weight' button; its price was not read. capabilities 'Finished Outer Layer Copper: 2-layer: 1 oz / 2 oz / 2.5 oz / 3.5 oz / 4.5oz; Multi-layer: 1 oz / 2 oz' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28"
+      },
+      {
+        "finished_oz": 2.5,
+        "finished_um": 87.5,
+        "layers-ai": [
+          2
+        ],
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "capabilities 'Finished Outer Layer Copper: 2-layer: 1 oz / 2 oz / 2.5 oz / 3.5 oz / 4.5oz; Multi-layer: 1 oz / 2 oz' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28 (2-layer only); 2-layer order form not read"
+      },
+      {
+        "finished_oz": 3.5,
+        "finished_um": 122.5,
+        "layers-ai": [
+          2
+        ],
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "capabilities 'Finished Outer Layer Copper: 2-layer: 1 oz / 2 oz / 2.5 oz / 3.5 oz / 4.5oz; Multi-layer: 1 oz / 2 oz' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28 (2-layer only); 2-layer order form not read"
+      },
+      {
+        "finished_oz": 4.5,
+        "finished_um": 157.5,
+        "layers-ai": [
+          2
+        ],
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "capabilities 'Finished Outer Layer Copper: 2-layer: 1 oz / 2 oz / 2.5 oz / 3.5 oz / 4.5oz; Multi-layer: 1 oz / 2 oz' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28 (2-layer only); 2-layer order form not read"
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 0.5,
+        "um": 17.5,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "capabilities 'Finished Inner Layer Copper 0.5 oz / 1 oz / 2 oz' and 'Finished copper weight of inner layer is 0.5oz by default.' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28; JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Inner Copper Weight' 0.5 oz default. Impedance guide: '0.5 oz copper on internal layers is 15.2 μm thick' (4-8 layers) instead of the nominal 17.5 μm, https://jlcpcb.com/help/article/User-Guide-to-the-JLCPCB-Impedance-Calculator, read 2026-10-28"
+      },
+      {
+        "oz": 1,
+        "um": 35,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 1 oz is a non-default 'Inner Copper Weight' button, price not read; capabilities lists 0.5 / 1 / 2 oz. https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 2 oz is a non-default 'Inner Copper Weight' button, price not read; capabilities lists 0.5 / 1 / 2 oz. https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness: the copper-foil blog describes ED / RTF / VLP / HVLP / RA in general and says 'ED for standard rigid boards' as a general takeaway, not as what JLCPCB buys; https://jlcpcb.com/blog/pcb-copper-foil, read 2026-10-28)",
+      "outer-ao.base_oz / base_um (only finished outer weight is stated)",
+      "price of 2 oz outer and 1 / 2 oz inner (order-form prices not read)",
+      "2-layer order-form defaults (form read at 4 layers only)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "avg_um": 18,
+      "class-s": "not stated",
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "capabilities 'Average Hole Plating Thickness 18μm' https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28. The one published figure (no option offered); not worded as a default. No minimum and no IPC class stated."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 TG135",
+      "tg_c": 135,
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Material Type' FR4 TG135 selected by default. Capabilities: 'FR-4 | Grade A laminates from suppliers including Nan Ya, KB, Shengyi and etc.' and 'FR-4 Dielectric Constants: 4.5 (2-Layer PCB), 7628 Prepreg 4.4, 3313 Perpreg 4.1, 2116 Perpreg 4.16' (no frequency, not tied to a laminate) https://jlcpcb.com/capabilities/pcb-capabilities, read 2026-10-28",
+      "not_published_as": [
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "FR4 TG155",
+      "tg_c": 155,
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): non-default 'Material Type' FR4 TG155. Extra cost seen: choosing a 0.25 mm min via auto-selects 'FR4 Tg155' at +$3.56 material (4 L, 1.6 mm, qty 5; jlcpcb.json through_drill_pairs-ao source, read 2026-10-28)",
+      "not_published_as": [
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Nan Ya NP-140F",
+      "brand-s": "Nan Ya",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Material Type' button 'Nan Ya NP-140F'; price not read. Tg not printed on the form (not inferred from the name).",
+      "not_published_as": [
+        "tg_c",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "KB6164-TG135",
+      "brand-s": "Kingboard",
+      "tg_c": 135,
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Material Type' button 'KB6164-TG135'; price not read.",
+      "not_published_as": [
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "Nan Ya NP-155F",
+      "brand-s": "Nan Ya",
+      "df": 0.016,
+      "df_at-s": "1 GHz (laminate data sheet typical 0.014-0.016; upper end)",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Material Type' button 'Nan Ya NP-155F'; price not read. Impedance guide: 'Results for 4- to 8-layer boards are calculated assuming Nan Ya Plastics NP-155F core material' https://jlcpcb.com/help/article/User-Guide-to-the-JLCPCB-Impedance-Calculator, read 2026-10-28; its er table is per glass style / core thickness (no single Dk). Df from Nan Ya NP-155FR laminate data sheet 'Loss Tangent 1GHZ ... 0.014-0.016' https://nanotech-elektronik.com/files/materials/NAN-YA-FR-4-Mid-Tg-NP-155F.pdf (cited in jlcpcb.json stackups, read 2026-10-15). Tg not printed on the form.",
+      "not_published_as": [
+        "tg_c",
+        "dk (single value; per-ply er in the impedance guide)"
+      ]
+    },
+    {
+      "name-s": "KB-6165-TG155",
+      "brand-s": "Kingboard",
+      "tg_c": 155,
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 by Raul (form only, nothing submitted; 4 layers, 1.6 mm): 'Material Type' button 'KB-6165-TG155'; price not read.",
+      "not_published_as": [
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "SYTECH (Shengyi) S1000-2M",
+      "brand-s": "Shengyi",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "Impedance guide: '... and SYTECH S1000-2M for 10-layer boards and higher' https://jlcpcb.com/help/article/User-Guide-to-the-JLCPCB-Impedance-Calculator, read 2026-10-28; er table per glass style / core thickness. The 10+ layer order form was not read, so whether it is the default there is not stated. Per-ply Df 0.017-0.021 @ 1 GHz from the Shengyi S1000-2M line-up is on the jlcpcb.json stackup layers (laminate data sheet, read 2026-10-15).",
+      "not_published_as": [
+        "tg_c",
+        "dk (single value)",
+        "df (single value)",
+        "offer at 10+ layers (order form not read)"
+      ]
+    }
+  ],
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.3,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "standard",
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 (form only, nothing submitted): 4 layers, PCB Thickness 1.6mm, default size and qty 5. 'Min via hole size/diameter' buttons 0.3mm/(0.4/0.45mm) [selected by default], 0.25mm/(0.35/0.4mm), 0.2mm/(0.3/0.35mm), 0.15mm/(0.25/0.3mm); 0.1mm/(0.2/0.25mm) greyed out at 1.6 mm. 0.3 mm is the default and adds no charge."
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "option",
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 (form only, nothing submitted): 4 layers, PCB Thickness 1.6mm, default size and qty 5. 'Min via hole size/diameter' buttons 0.3mm/(0.4/0.45mm) [selected by default], 0.25mm/(0.35/0.4mm), 0.2mm/(0.3/0.35mm), 0.15mm/(0.25/0.3mm); 0.1mm/(0.2/0.25mm) greyed out at 1.6 mm. Selecting it adds a 'Min via hole size/diameter' charge ($17.37 at this size and qty) and the form says: 'High-precision PCBs with 0.25mm/(0.35/0.4mm) Via are much more difficult to produce. To ensure the board quality, \"4-Wire Kelvin Test\" and \"FR4 Tg155\" options are automatically selected.' (+$17.20 Kelvin test, +$3.56 material)."
+    },
+    {
+      "drill_mm": 0.2,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "option",
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 (form only, nothing submitted): 4 layers, PCB Thickness 1.6mm, default size and qty 5. 'Min via hole size/diameter' buttons 0.3mm/(0.4/0.45mm) [selected by default], 0.25mm/(0.35/0.4mm), 0.2mm/(0.3/0.35mm), 0.15mm/(0.25/0.3mm); 0.1mm/(0.2/0.25mm) greyed out at 1.6 mm. Selecting it adds a 'Min via hole size/diameter' charge ($17.78 at this size and qty) and the form says: 'High-precision PCBs with 0.2mm/(0.3/0.35mm) Via are much more difficult to produce. To ensure the board quality, \"4-Wire Kelvin Test\" and \"FR4 Tg155\" options are automatically selected.' (+$17.20 Kelvin test, +$3.56 material)."
+    },
+    {
+      "drill_mm": 0.15,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "option",
+      "source-s": "JLCPCB order form https://cart.jlcpcb.com/quote, read 2026-10-28 (form only, nothing submitted): 4 layers, PCB Thickness 1.6mm, default size and qty 5. 'Min via hole size/diameter' buttons 0.3mm/(0.4/0.45mm) [selected by default], 0.25mm/(0.35/0.4mm), 0.2mm/(0.3/0.35mm), 0.15mm/(0.25/0.3mm); 0.1mm/(0.2/0.25mm) greyed out at 1.6 mm. Selecting it adds a 'Min via hole size/diameter' charge ($35.56 at this size and qty) and the form says: 'High-precision PCBs with 0.15mm/(0.25/0.3mm) Via are much more difficult to produce. To ensure the board quality, \"4-Wire Kelvin Test\" and \"FR4 Tg155\" options are automatically selected.' (+$17.20 Kelvin test, +$3.56 material)."
+    }
+  ],
+  "through_drill_pairs_note-s": "No through-drill / board-thickness pair is stated on the capabilities page (drill \"0.15 - 6.3 mm\", via \"0.15/0.25mm\", no thickness) or blogs (10:1 rule, \"2.0 mm/10 = 0.2 mm\"); the pairs come from the order form, read for 4 layers at 1.6 mm only (other layer counts / thicknesses not read). 0.15 mm on 1.6 mm (10.7:1) is a paid option on standard JLCPCB; jlcpcb_hdi states it as standard within HDI. Read 2026-10-28",
   "note": "Standard capabilities reported. Advanced capabilities include minimum trace/space of 0.0762mm and minimum drill of 0.15mm. Hole-to-hole spacing is the published figure (hole_to_hole_source-s). Some silkscreen text parameters based on character design specifications.",
   "retrieved_utc": "2026-05-28T21:08:30Z",
   "barrel_plating_um": 18,
@@ -166267,5 +166482,12 @@
   "stackups_note": "616 named impedance-controlled stackup templates, every one JLCPCB's order-page template API returned for layers 2-50, board thickness 0.11-6.0 mm, outer copper 0.5-4 oz and inner copper 0.33-4 oz (only 4-32 layers, 0.4-4.5 mm, outer 1/2 oz and inner 0.5/1/2 oz returned any). The 'No requirement' default entry on each form is left out: it always repeats one of the named templates. Layer order, layer types and every thickness come from that API's iaminationList, the same data /impedance renders, for example 'Prepreg 7628*1 0.21040mm'. Thicknesses are copied as given; trailing zeros are dropped only by JSON number form. measured_total_mm is the exact sum of the layers and equals JLCPCB's own compressionThickness for all 616. Copper weight_oz is the template's cuprumThickness (outer) or insideCuprumThickness (inner); every core remark (H/HOZ, 1/1OZ, 2/2OZ) agrees with it. material and er follow the impedance-calculator user guide, which says 4-8 layer boards use Nan Ya Plastics NP-155F and 10-layer-and-up boards use SYTECH (Shengyi) S1000-2M, and gives that material's er table by prepreg glass style or by core thickness. For NP-155F the guide lists the prepreg row as '3313 (2313)', so 2313 also takes er 4.1, and cores thicker than 0.70 mm take 4.43. er is left out wherever the guide's table for that material has no matching row. On 10+ layer boards that is 75 7628 prepregs, 5 3313 prepregs and the 0.5 mm and 0.61 mm unclad cores. On 4-8 layer boards it is 67 0.075 mm cores, 34 106 prepregs, one 0.665 mm core and one 0.61 mm unclad core. Template layers of type 'lightPlate' are unclad cores with no copper; they appear as type core with a note-s. Checked against the five previously on file (taken 2026-08-26 from gsuberland/jlcpcb_autogenerated_stackups): JLC04161H-7628 and JLC08161H-2116 are unchanged except that measured_total_mm was rounded before (1.586 is now 1.5862 and 1.6 is now 1.5996). JLC06161H-3313: the middle 2116 prepreg is now 0.1088 mm, not 0.1164, so the total is 1.5384, not 1.546. JLC10161H-2116: the cores were filed as Nan Ya NP-155F with er 4.36, but per JLCPCB's 10+ layer rule they are SYTECH S1000-2M with er 4.42 (0.20 mm). The total was rounded before (1.589 is now 1.5886). JLC12161H-2313: the four inner 2116 prepregs are now 0.1118 mm, not 0.1194, so the total is 1.612, not 1.642. Its cores are S1000-2M with er 4.35 (0.15 mm), not NP-155F with 4.36. gsuberland's generator matched cores to the nearest thickness across both materials, so ties fell to NP-155F, and its table also lists S1000-2M 0.15 mm as 4.53 where JLCPCB's table says 4.35. Cross-check: JLCPCB's calculator database (POST /api/jlcTools/impedance/selectPageImpedanceDefaultTemplate, 5654 internal templates) also lists S1000-2M cores for JLC10161H-2116 (4.42) and JLC12161H-2313 (4.35). It gives S1000-2M 2313 as 4.27, where the published guide table says 4.31; the guide value is used here. That database stores pre-press prepreg thicknesses (for example 3313 at 0.107 mm), so it was not used for thickness, and its 4766 extra 4-32 layer templates are not offered on the order page. Left out: 60 stackups with a dielectric for which JLCPCB's tables give no er. Df / copper fields as in the 2026-10-15 profile (Nan Ya core 0.014-0.016; Nan Ya prepreg not published; Shengyi rows matched by glass style or core thickness and the 1 GHz Dk). Order: the five 1.6 mm stackups that were on file, then 14 / 16 / 18 layers nearest 1.6 mm, then the rest (the reader keeps the first 8, first of a layer count wins).",
   "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
   "min_via_in_pad_drill_mm": 0.2,
-  "via_in_pad_note": "POFV (plated over filled via) free on 6-20 layers; hole Min 0.20 mm / Max 0.50 mm, recommended 0.25-0.35 mm (https://jlcpcb.com/blog/via-in-pad-design-deep-dive, read 2026-10-06)"
+  "via_in_pad_note": "POFV (plated over filled via) free on 6-20 layers; hole Min 0.20 mm / Max 0.50 mm, recommended 0.25-0.35 mm (https://jlcpcb.com/blog/via-in-pad-design-deep-dive, read 2026-10-06)",
+  "not_published_as": [
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o.outer-ao base foil / plating split",
+    "hole_plating-ao minimum plating and IPC class",
+    "laminates-ao brand, Dk and Df of the default FR4 TG135",
+    "prices of non-default copper weights and materials (order form prices not read)"
+  ]
 }

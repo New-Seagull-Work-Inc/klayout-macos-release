@@ -231,6 +231,7 @@
     }
   ],
   "layer_rules_note": "Per service from docs.oshpark.com: 2-layer 6 mil trace/space, 10 mil drill, 5 mil annular ring; 4-layer 5 mil trace/space, 10 mil drill, 4 mil ring; 6-layer 5 mil, 8 mil drill, 4 mil ring. klayout raises the vendor-wide floors above to the entry for the board's copper count.",
+  "impedance_control_note-s": "Not offered as a service: no OSH Park page offers impedance testing, coupons or a guaranteed tolerance. The 4- and 6-layer pages publish an 'Impedance Constraint Table' of predicted trace geometry for their fixed stackups (stackups[].impedance_table-ao). Read 2026-10-28",
   "layer_counts": [
     2,
     4,
@@ -497,10 +498,373 @@
           "printed-s": "2.8 mil (0.0711mm) 2 oz copper"
         }
       ]
+    },
+    {
+      "name": "OSH Park 6-layer",
+      "layers": 6,
+      "thickness_mm": 1.6,
+      "thickness-s": "Material Specs: 'Board Thickness 63mil (1.6mm) nominal'",
+      "measured_total_mm": 1.5146,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 0.5,
+      "impedance_controlled": false,
+      "source-s": "OSH Park 6-layer 'Complete construction diagram' https://docs.oshpark.com/resources/six-layer-stackup.png, read 2026-10-28; layer list cross-checked with https://docs.oshpark.com/services/six-layer/ stackup table, read 2026-10-28. The table lumps the centre as '36.44 mil (0.9256mm) FR408HR core' with no Dk; the diagram splits it into 2x2113 prepreg 7.96 mil (Dk 3.61) + 21.0 mil core (Dk 3.79) + 7.96 mil prepreg (36.92 mil). Differences: outer copper 1.80 (diagram) vs 1.7 mil (table), inner 0.60 vs 0.68 mil. Diagram figures used throughout so every dielectric has a Dk.",
+      "stack": [
+        {
+          "type": "copper",
+          "thickness_mm": 0.0457,
+          "weight_oz": 1,
+          "printed-s": "1.8 mil",
+          "note-s": "diagram 'Base CU / Plt' '0.5oz / Std', 1.80 mil; table '1 oz copper clad+plated' 1.7 mil (0.0432mm); copper spec 'Copper Weight 1oz outer'"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1107,
+          "er": 3.23,
+          "df": 0.011,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 2x106_75%",
+          "printed-s": "4.36 mil",
+          "er-s": "diagram row 'FR408HR - 2x106_75%': Dk 3.23, Df 0.011; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5,
+          "printed-s": "0.6 mil",
+          "note-s": "diagram '0.5oz' 0.60 mil; table '0.5 oz copper clad' 0.68 mil (0.0175mm); copper spec '1/2oz inner'"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.1016,
+          "er": 3.66,
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 4.0mils",
+          "printed-s": "4.0 mil",
+          "er-s": "diagram row 'FR408HR - 4.0mils': Dk 3.66, Df 0.009; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5,
+          "printed-s": "0.6 mil",
+          "note-s": "diagram '0.5oz' 0.60 mil; table '0.5 oz copper clad' 0.68 mil (0.0175mm); copper spec '1/2oz inner'"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2022,
+          "er": 3.61,
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 2x2113_57%",
+          "printed-s": "7.96 mil",
+          "er-s": "diagram row 'FR408HR - 2x2113_57%': Dk 3.61, Df 0.009; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.5334,
+          "er": 3.79,
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 21.0mils",
+          "printed-s": "21.0 mil",
+          "er-s": "diagram row 'FR408HR - 21.0mils': Dk 3.79, Df 0.009; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.2022,
+          "er": 3.61,
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 2x2113_57%",
+          "printed-s": "7.96 mil",
+          "er-s": "diagram row 'FR408HR - 2x2113_57%': Dk 3.61, Df 0.009; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5,
+          "printed-s": "0.6 mil",
+          "note-s": "diagram '0.5oz' 0.60 mil; table '0.5 oz copper clad' 0.68 mil (0.0175mm); copper spec '1/2oz inner'"
+        },
+        {
+          "type": "core",
+          "thickness_mm": 0.1016,
+          "er": 3.66,
+          "df": 0.009,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 4.0mils",
+          "printed-s": "4.0 mil",
+          "er-s": "diagram row 'FR408HR - 4.0mils': Dk 3.66, Df 0.009; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0152,
+          "weight_oz": 0.5,
+          "printed-s": "0.6 mil",
+          "note-s": "diagram '0.5oz' 0.60 mil; table '0.5 oz copper clad' 0.68 mil (0.0175mm); copper spec '1/2oz inner'"
+        },
+        {
+          "type": "prepreg",
+          "thickness_mm": 0.1107,
+          "er": 3.23,
+          "df": 0.011,
+          "df_f_ghz": 1,
+          "material": "FR408HR - 2x106_75%",
+          "printed-s": "4.36 mil",
+          "er-s": "diagram row 'FR408HR - 2x106_75%': Dk 3.23, Df 0.011; table gives Dk at 1 GHz for the 106 prepreg (3.23) and 4 mil cores (3.66), so the diagram's figures are taken as 1 GHz too"
+        },
+        {
+          "type": "copper",
+          "thickness_mm": 0.0457,
+          "weight_oz": 1,
+          "printed-s": "1.8 mil",
+          "note-s": "diagram 'Base CU / Plt' '0.5oz / Std', 1.80 mil; table '1 oz copper clad+plated' 1.7 mil (0.0432mm); copper spec 'Copper Weight 1oz outer'"
+        }
+      ],
+      "impedance_table-ao": [
+        {
+          "row": 1,
+          "kind-s": "single",
+          "layer": 1,
+          "width_mm": 0.2108,
+          "ref_layers-s": "0/2",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.1
+        },
+        {
+          "row": 2,
+          "kind-s": "single",
+          "layer": 1,
+          "width_mm": 0.4572,
+          "ref_layers-s": "0/3",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 49.9
+        },
+        {
+          "row": 3,
+          "kind-s": "differential",
+          "layer": 1,
+          "width_mm": 0.1981,
+          "ref_layers-s": "0/2",
+          "target_ohm": 85,
+          "tolerance_ohm": 8.5,
+          "predicted_ohm": 84.5,
+          "pitch_mm": 0.3302
+        },
+        {
+          "row": 4,
+          "kind-s": "differential",
+          "layer": 1,
+          "width_mm": 0.1727,
+          "ref_layers-s": "0/2",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.6,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 5,
+          "kind-s": "differential",
+          "layer": 1,
+          "width_mm": 0.1448,
+          "ref_layers-s": "0/2",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 100.1,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 6,
+          "kind-s": "single",
+          "layer": 2,
+          "width_mm": 0.1067,
+          "ref_layers-s": "1/3",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.2
+        },
+        {
+          "row": 7,
+          "kind-s": "differential",
+          "layer": 2,
+          "width_mm": 0.1245,
+          "ref_layers-s": "1/3",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.8,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 8,
+          "kind-s": "differential",
+          "layer": 2,
+          "width_mm": 0.1041,
+          "ref_layers-s": "1/3",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 99.3,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 9,
+          "kind-s": "single",
+          "layer": 3,
+          "width_mm": 0.16,
+          "ref_layers-s": "2/4",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.0
+        },
+        {
+          "row": 10,
+          "kind-s": "differential",
+          "layer": 3,
+          "width_mm": 0.1499,
+          "ref_layers-s": "2/4",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.9,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 11,
+          "kind-s": "differential",
+          "layer": 3,
+          "width_mm": 0.127,
+          "ref_layers-s": "2/4",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 99.1,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 12,
+          "kind-s": "single",
+          "layer": 4,
+          "width_mm": 0.16,
+          "ref_layers-s": "3/5",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.0
+        },
+        {
+          "row": 13,
+          "kind-s": "differential",
+          "layer": 4,
+          "width_mm": 0.1499,
+          "ref_layers-s": "3/5",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.9,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 14,
+          "kind-s": "differential",
+          "layer": 4,
+          "width_mm": 0.127,
+          "ref_layers-s": "3/5",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 99.1,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 15,
+          "kind-s": "single",
+          "layer": 5,
+          "width_mm": 0.1067,
+          "ref_layers-s": "4/6",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.2
+        },
+        {
+          "row": 16,
+          "kind-s": "differential",
+          "layer": 5,
+          "width_mm": 0.1245,
+          "ref_layers-s": "4/6",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.8,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 17,
+          "kind-s": "differential",
+          "layer": 5,
+          "width_mm": 0.1041,
+          "ref_layers-s": "4/6",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 99.3,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 18,
+          "kind-s": "single",
+          "layer": 6,
+          "width_mm": 0.2108,
+          "ref_layers-s": "5/0",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 50.1
+        },
+        {
+          "row": 19,
+          "kind-s": "single",
+          "layer": 6,
+          "width_mm": 0.4572,
+          "ref_layers-s": "4/0",
+          "target_ohm": 50,
+          "tolerance_ohm": 5,
+          "predicted_ohm": 49.9
+        },
+        {
+          "row": 20,
+          "kind-s": "differential",
+          "layer": 6,
+          "width_mm": 0.1981,
+          "ref_layers-s": "5/0",
+          "target_ohm": 85,
+          "tolerance_ohm": 8.5,
+          "predicted_ohm": 84.5,
+          "pitch_mm": 0.3302
+        },
+        {
+          "row": 21,
+          "kind-s": "differential",
+          "layer": 6,
+          "width_mm": 0.1727,
+          "ref_layers-s": "5/0",
+          "target_ohm": 90,
+          "tolerance_ohm": 9,
+          "predicted_ohm": 89.6,
+          "pitch_mm": 0.3048
+        },
+        {
+          "row": 22,
+          "kind-s": "differential",
+          "layer": 6,
+          "width_mm": 0.1448,
+          "ref_layers-s": "5/0",
+          "target_ohm": 100,
+          "tolerance_ohm": 10,
+          "predicted_ohm": 100.1,
+          "pitch_mm": 0.3048
+        }
+      ],
+      "impedance_table_source-s": "'Impedance Constraint Table' https://docs.oshpark.com/resources/six-layer-impedance-table.png (linked from the six-layer page), read 2026-10-28. Columns Design Line / Pitch (traces) print no unit; taken as mil (the page's unit throughout, and 8.3 on the 4.36 mil Dk 3.23 prepreg computes to ~46-50 ohm microstrip, which mm cannot). 'Predicted (ohms)' values; OSH Park offers no tested or guaranteed impedance, so impedance_controlled is false."
     }
   ],
   "stackups_sources-as": [
     "https://docs.oshpark.com/resources/four-layer-stackup.png",
+    "https://docs.oshpark.com/resources/six-layer-impedance-table.png",
     "https://docs.oshpark.com/resources/six-layer-stackup.png",
     "https://docs.oshpark.com/services/",
     "https://docs.oshpark.com/services/afterdark/",
@@ -514,7 +878,189 @@
     "https://docs.oshpark.com/services/two-layer-medium-run/",
     "https://docs.oshpark.com/services/two-layer/"
   ],
-  "stackups_note": "2-layer stackups added 2026-10-17 from the service pages (Dielectric row = er). Left out: the 6-layer (its 36.44 mil centre core has no Dk in the table) and the 2-layer Flex (service temporarily suspended). The 4-layer's construction diagram gives the core Dk as 3.87; the table, used here, gives 3.61. The 4-layer page notes some orders in two date windows were built on an alternate FR408HR + EM528 stackup (not on file).",
+  "stackups_note": "2-layer stackups added 2026-10-17 from the service pages (Dielectric row = er). 6-layer added 2026-10-28 from its construction diagram, which gives every dielectric's Dk / Df (the table's 36.44 mil centre 'core' has none), with its Impedance Constraint Table. Left out: the 2-layer Flex (service temporarily suspended). The 4-layer's construction diagram gives the core Dk as 3.87; the table, used here, gives 3.61. The 4-layer page notes some orders in two date windows were built on an alternate FR408HR + EM528 stackup (not on file).",
   "stackups_source_url": "https://docs.oshpark.com/services/four-layer/",
-  "stackups_retrieved_utc": "2026-08-26T04:00:10Z"
+  "stackups_retrieved_utc": "2026-08-26T04:00:10Z",
+  "copper-o": {
+    "outer-ao": [
+      {
+        "oz": 1,
+        "um": 35.6,
+        "layers-ai": [
+          2
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "2-layer Prototype / Super Swift / Medium Run / After Dark pages: stackup '1.4 mil (0.0356mm) 1 oz copper', 'Copper Weight 1oz' https://docs.oshpark.com/services/two-layer/, https://docs.oshpark.com/services/afterdark/, read 2026-10-28; services table 'Prototype ... 63mil (1.6mm) 1oz' https://docs.oshpark.com/services/. Not said whether this is base foil or finished (no 'plated' wording), so oz/um are given without base/finished. OSH Park services are fixed builds (one copper / one material per service, no copper or material choice); default_b marks what that service ships, one per layer count."
+      },
+      {
+        "oz": 2,
+        "um": 71.1,
+        "layers-ai": [
+          2
+        ],
+        "offer-s": "standard",
+        "default_b": false,
+        "source-s": "2 Layer 2oz 0.8mm service: '0.032\" (0.8mm) thick PCB, and includes 2oz (2.8mil, 70um) copper'; stackup '2.8 mil (0.0711mm) 2 oz copper'; '$5 per square inch' (same as Prototype) https://docs.oshpark.com/services/two-layer-hhdc/, read 2026-10-28. Separate service, 0.8 mm only. Base/finished not stated."
+      },
+      {
+        "finished_oz": 1,
+        "finished_um": 43.2,
+        "layers-ai": [
+          4
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "4-layer stackup '1.7 mil (0.0432mm) 1 oz copper clad+plated'; 'Copper Weight 1oz outer' https://docs.oshpark.com/services/four-layer/, read 2026-10-28. Base foil not stated on the 4-layer page. OSH Park services are fixed builds (one copper / one material per service, no copper or material choice); default_b marks what that service ships, one per layer count."
+      },
+      {
+        "base_oz": 0.5,
+        "base_um": 17.5,
+        "finished_oz": 1,
+        "finished_um": 43.2,
+        "layers-ai": [
+          6
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "6-layer stackup table '1.7 mil (0.0432mm) 1 oz copper clad+plated', 'Copper Weight 1oz outer' https://docs.oshpark.com/services/six-layer/, read 2026-10-28; construction diagram 'Base CU / Plt' '0.5oz / Std', 1.80 mil https://docs.oshpark.com/resources/six-layer-stackup.png (osh_park.json stackups, read 2026-10-28). finished_um is the table's 1.7 mil."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 0.5,
+        "um": 17.5,
+        "layers-ai": [
+          4,
+          6
+        ],
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "4- and 6-layer stackups '0.68 mil (0.0175mm) 0.5 oz copper clad'; 'Copper Weight ... 1/2oz inner' https://docs.oshpark.com/services/four-layer/, https://docs.oshpark.com/services/six-layer/, read 2026-10-28; services table '1oz outer 0.5oz inner' https://docs.oshpark.com/services/. (6-layer diagram prints 0.60 mil.)"
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (OSH Park does not say which foil it buys; the Isola FR408HR data sheet it hosts lists 'Copper Foil Type - RTF (Reverse Treat Foil)' as Isola's standard laminate offering, https://docs.oshpark.com/resources/four-layer-substrate-FR408HR.pdf, read 2026-10-28 - a laminate-maker statement, not OSH Park's)",
+      "outer-ao base / finished split for 2-layer services and the 4-layer base foil",
+      "order-form not read (upload required)"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "nominal_um": 25.4,
+      "class-s": "not stated",
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "every rigid service page, Copper Specifications: 'Via Plating Thickness 1mil (0.0254mm)' https://docs.oshpark.com/services/two-layer/, https://docs.oshpark.com/services/four-layer/, https://docs.oshpark.com/services/six-layer/, https://docs.oshpark.com/services/two-layer-hhdc/, https://docs.oshpark.com/services/afterdark/, read 2026-10-28. Minimum or average not said."
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "Kingboard KB6167F (175Tg FR4)",
+      "brand-s": "Kingboard",
+      "tg_c": 175,
+      "dk": 4.5,
+      "dk_at-s": "10 MHz",
+      "df": 0.016,
+      "df_at-s": "1 GHz (laminate data sheet, R/C 50%)",
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "2-layer Material Specs: 'Substrate 175Tg FR4 Kingboard KB6167F Datasheet', 'Dielectric 4.5 at 10Mhz' https://docs.oshpark.com/services/two-layer/, read 2026-10-28. Df from the KB6167F data sheet OSH Park hosts: 'Loss Tangent ... 0.016 @ 1GHz' (Dk 4.6 @ 1 GHz there) https://docs.oshpark.com/resources/two-layer-substrate-Kingboard-KB6167F.pdf, read 2026-10-28. Used by Prototype / Super Swift / Medium Run. OSH Park services are fixed builds (one copper / one material per service, no copper or material choice); default_b marks what that service ships, one per layer count."
+    },
+    {
+      "name-s": "Isola FR408HR",
+      "brand-s": "Isola",
+      "tg_c": 190,
+      "dk": 3.61,
+      "dk_at-s": "1 GHz",
+      "df": 0.0091,
+      "df_at-s": "1 GHz (laminate data sheet)",
+      "layers-ai": [
+        4,
+        6
+      ],
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "4-layer Material Specs: 'Substrate 190Tg FR408-HR ISOLA FR408-HR Datasheet PDF', 'Dielectric 3.61 at 1GHz' https://docs.oshpark.com/services/four-layer/, read 2026-10-28 (6-layer page prints 'Substrate 175Tg FR4' beside the same FR408-HR data sheet, 'Dielectric See stackup' https://docs.oshpark.com/services/six-layer/). Df: Isola FR408HR data sheet hosted by OSH Park 'Df, Loss Tangent B. @ 1 GHz 0.0091' (Dk 3.69 @ 1 GHz; Tg 190 DSC) https://docs.oshpark.com/resources/four-layer-substrate-FR408HR.pdf, read 2026-10-28. The 6-layer construction diagram (a published stackup) prints Df 0.009 (2113 / cores) and 0.011 (106 prepreg) per ply. 4-layer page: some orders in production 2026-06-09 to 2026-06-22 used 'a FR408HR prepreg and EM528 core'. OSH Park services are fixed builds (one copper / one material per service, no copper or material choice); default_b marks what that service ships, one per layer count."
+    },
+    {
+      "name-s": "Ventec VT-47 (180 Tg FR4)",
+      "brand-s": "Ventec",
+      "tg_c": 180,
+      "dk": 4.27,
+      "dk_at-s": "1 GHz (data sheet, RC 50%; the service page prints 4.27 with no frequency)",
+      "df": 0.016,
+      "df_at-s": "1 GHz (laminate data sheet, RC 50%)",
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "2oz 0.8mm Material Specs: 'Substrate 180 Tg FR4 Ventec VT-47', 'Dielectric 4.27'; 'Core construction: 4x 7628 Ventec VT-47' https://docs.oshpark.com/services/two-layer-hhdc/, read 2026-10-28. Df from the VT-47 data sheet OSH Park hosts 'DF @ 1GHz RC 50% ... 0.016' https://docs.oshpark.com/resources/2oz-0.8mm-substrate-VT-47.pdf, read 2026-10-28. Only on the 2oz 0.8mm service."
+    },
+    {
+      "name-s": "Ventec VT 447 b (black 180Tg FR4)",
+      "brand-s": "Ventec",
+      "tg_c": 180,
+      "dk": 4.35,
+      "dk_at-s": "1 GHz",
+      "df": 0.013,
+      "df_at-s": "1 GHz (laminate data sheet, RC 50%)",
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "default_b": false,
+      "source-s": "After Dark Material Specs: 'Substrate Black 180Tg FR4, opaque light blocking Ventec VT 447 b', 'Dielectric 4.35 at 1GHz'; '$5 per square inch' https://docs.oshpark.com/services/afterdark/, read 2026-10-28. Df from the VT-447 b data sheet OSH Park hosts 'DF (RC 50%) @ 1GHz ... 0.013' https://docs.oshpark.com/resources/afterdark-substrate-Ventec-VT-447-b.pdf, read 2026-10-28. Only on the After Dark service."
+    }
+  ],
+  "max_aspect_ratio_source-s": "not published: no aspect ratio on the services pages (https://docs.oshpark.com/services/, https://docs.oshpark.com/services/two-layer/, https://docs.oshpark.com/services/four-layer/, https://docs.oshpark.com/services/six-layer/, https://docs.oshpark.com/services/two-layer-hhdc/, https://docs.oshpark.com/services/afterdark/), read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.254,
+      "board_mm": 1.6,
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "source-s": "2-layer: 'Minimum Drill Size 10mil (0.254mm)', 'Board Thickness 63mil (1.6mm) nominal' https://docs.oshpark.com/services/two-layer/, read 2026-10-28 (fixed thickness per service)"
+    },
+    {
+      "drill_mm": 0.254,
+      "board_mm": 0.8,
+      "layers-ai": [
+        2
+      ],
+      "offer-s": "standard",
+      "source-s": "2oz 0.8mm: 'Minimum Drill Size 10mil (0.254mm)', 'Board Thickness 32mil (0.8mm) nominal' https://docs.oshpark.com/services/two-layer-hhdc/, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.254,
+      "board_mm": 1.6,
+      "layers-ai": [
+        4
+      ],
+      "offer-s": "standard",
+      "source-s": "4-layer: 'Minimum Drill Size 10mil (0.254mm)', 'Board Thickness 63mil (1.6mm) nominal' https://docs.oshpark.com/services/four-layer/, read 2026-10-28"
+    },
+    {
+      "drill_mm": 0.2032,
+      "board_mm": 1.6,
+      "layers-ai": [
+        6
+      ],
+      "offer-s": "standard",
+      "source-s": "6-layer: 'Minimum Drill Size 8mil (0.2032mm)', 'Board Thickness 63mil (1.6mm) nominal' https://docs.oshpark.com/services/six-layer/, read 2026-10-28"
+    }
+  ],
+  "not_published_as": [
+    "max_aspect_ratio",
+    "copper-o.foil-ao (foil type / roughness)",
+    "copper-o.outer-ao base / finished split (2-layer; 4-layer base foil)",
+    "hole_plating-ao minimum vs average, IPC class"
+  ]
 }

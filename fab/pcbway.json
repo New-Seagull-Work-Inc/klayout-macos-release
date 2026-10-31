@@ -224,6 +224,266 @@
   "impedance_control": true,
   "impedance_note-s": "via 'Customized Services and Advanced Options' (custom stackup or impedance control) per the stackup page; impedance tolerance not stated on the pages read",
   "max_aspect_ratio": 8,
+  "copper-o": {
+    "outer-ao": [
+      {
+        "base_oz": 0.5,
+        "base_um": 17.5,
+        "finished_oz": 1,
+        "finished_um": 35,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Finished copper' button '1 oz Cu' is the active (default) one. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Stackup page prints 'Outer Base Copper 0.5OZ' with '(Plating to 1OZ)' https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28. Base 0.5 oz printed 0.0175 mm."
+      },
+      {
+        "base_oz": 1.5,
+        "base_um": 52.5,
+        "finished_oz": 2,
+        "finished_um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '2 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Stackup page prints 'Outer Base Copper 1.5OZ' with '(Plating to 2OZ)' https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28. Base 1.5 oz printed 0.0525 mm."
+      },
+      {
+        "base_oz": 2.5,
+        "base_um": 87.5,
+        "finished_oz": 3,
+        "finished_um": 105,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '3 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Stackup page prints 'Outer Base Copper 2.5OZ' with '(Plating to 3OZ)' https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28."
+      },
+      {
+        "base_oz": 3.5,
+        "base_um": 122.5,
+        "finished_oz": 4,
+        "finished_um": 140,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '4 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Stackup page prints 'Outer Base Copper 3.5OZ' with '(Plating to 4OZ)' https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28."
+      },
+      {
+        "base_oz": 4.5,
+        "base_um": 157.5,
+        "finished_oz": 5,
+        "finished_um": 175,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '5 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Stackup page prints 'Outer Base Copper 4.5OZ' with '(Plating to 5OZ)' https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28."
+      },
+      {
+        "finished_oz": 6,
+        "finished_um": 210,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '6 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28."
+      },
+      {
+        "finished_oz": 7,
+        "finished_um": 245,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '7 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28."
+      },
+      {
+        "finished_oz": 8,
+        "finished_um": 280,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: '8 oz Cu' is a non-default 'Finished copper' button; price not shown without the JS quote. capabilities Standard PCB table 'Outer Layer Copper Thickness 1oz/2oz/3oz/4oz/5oz/6oz/7oz/8oz (35um/70um/...)' https://www.pcbway.com/capabilities.html, read 2026-10-28. Form also offers 9-13 oz; capabilities: 'contact us if you need copper weight greater than 8oz'."
+      }
+    ],
+    "inner-ao": [
+      {
+        "oz": 1,
+        "um": 35,
+        "offer-s": "standard",
+        "default_b": true,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Inner Copper' 1 oz active; tooltip 'The default inner copper weight is 1 oz.' Capabilities 'Inner Layer Copper Thickness 1oz/1.5oz/2oz/3oz/4oz (35μm/50μm/70um/105um/140um)' https://www.pcbway.com/capabilities.html, read 2026-10-28"
+      },
+      {
+        "oz": 1.5,
+        "um": 52.5,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'Inner Copper' 1.5 oz; capabilities prints '1.5oz ... 50μm' (52.5 um is the 35 um/oz conversion). https://www.pcbway.com/capabilities.html, read 2026-10-28"
+      },
+      {
+        "oz": 2,
+        "um": 70,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'Inner Copper' 2 oz; capabilities standard table. https://www.pcbway.com/capabilities.html, read 2026-10-28"
+      },
+      {
+        "oz": 3,
+        "um": 105,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'Inner Copper' 3 oz; capabilities standard table. https://www.pcbway.com/capabilities.html, read 2026-10-28"
+      },
+      {
+        "oz": 4,
+        "um": 140,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'Inner Copper' 4 oz; capabilities standard table (form also offers 5 / 6 oz). https://www.pcbway.com/capabilities.html, read 2026-10-28"
+      },
+      {
+        "oz": 0.5,
+        "um": 17.5,
+        "offer-s": "not stated",
+        "default_b": false,
+        "source-s": "Stackup page has 'Inner Copper 0.5OZ' constructions https://www.pcbway.com/multi-layer-laminated-structure.html, read 2026-10-28; 0.5 oz is not on the order form or the capabilities standard table."
+      }
+    ],
+    "foil-ao": [],
+    "not_published_as": [
+      "foil-ao (foil type / roughness)",
+      "prices of non-default outer / inner weights (form price needs the JS quote)",
+      "base foil for 6-8 oz outer"
+    ]
+  },
+  "hole_plating-ao": [
+    {
+      "nominal_um": 20,
+      "class-s": "not stated",
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' dropdown shows 'Standard(20um)' (min or average not said). Capabilities Advanced table row 21 'Hole copper thickness (µm) Through hole 18-25 µm' (Normal process) https://www.pcbway.com/capabilities.html, read 2026-10-28"
+    },
+    {
+      "nominal_um": 25,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '25um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    },
+    {
+      "nominal_um": 30,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '30um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    },
+    {
+      "nominal_um": 35,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '35um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    },
+    {
+      "nominal_um": 50,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '50um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    },
+    {
+      "nominal_um": 55,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '55um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    },
+    {
+      "nominal_um": 70,
+      "class-s": "not stated",
+      "offer-s": "option",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'Hole copper thickness' option '70um' under 'Customized Services and Advanced Options': 'We may add extra cost for these special options which will be confirmed after review.'"
+    }
+  ],
+  "laminates-ao": [
+    {
+      "name-s": "FR4 TG 150-160",
+      "tg_c": 150,
+      "offer-s": "standard",
+      "default_b": true,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'FR4-TG' button 'TG 150-160' active; tooltip 'The default material of PCBWay has a TG of 150-160℃'. Brand not named on the form. Blog 2024-05-29: 4-layer-and-up boards and 2-layer orders >=3 m2 moved from Kingboard to Shengyi; 'The original TG150 material KB6165F will be fully replaced with Shengyi's S1000H material.' https://www.pcbway.com/blog/3/PCBWay_Upgrades_Multi_Layers_PCB_Material_to_ShengYi_Material_d4ba6d1c.html, read 2026-10-28. Stackup page prints Dk per sheet (7628 RC46% 4.74, 2116 / 3313 RC58% 4.45, 1080 RC68% 4.21, Core 4.6; no frequency) https://www.pcbway.com/multi-layer-laminated-structure.html.",
+      "not_published_as": [
+        "brand-s for 2-layer orders under 3 m2",
+        "dk (single value)",
+        "df"
+      ]
+    },
+    {
+      "name-s": "FR4 TG 130-140",
+      "tg_c": 130,
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'FR4-TG' button 'TG 130-140'; note under it: '*The base material of 2-layer PCBs is automatically upgraded to TG150 for FREE ... Except for some parameters (eg.: Weighty finished copper; Greater board thickness; Custom stackup; Via in pad...)'.",
+      "not_published_as": [
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "FR4 TG 170-180",
+      "tg_c": 170,
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: non-default 'FR4-TG' button 'TG 170-180'; price not shown without the JS quote.",
+      "not_published_as": [
+        "brand-s",
+        "dk",
+        "df"
+      ]
+    },
+    {
+      "name-s": "S1000H TG150",
+      "brand-s": "Shengyi",
+      "tg_c": 150,
+      "dk": 4.6,
+      "dk_at-s": "1 GHz",
+      "df": 0.011,
+      "df_at-s": "1 GHz",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'FR4-TG' button 'S1000H TG150', linking a material report. Dk/Df from Shengyi S1000H laminate data sheet linked by PCBWay ('Permittivity (1GHz) 4.6', 'Loss Tangent (1GHz) 0.011'; Tg 155 DSC / 160 DMA) https://pcbwayfile.s3.us-west-2.amazonaws.com/web/231212/Shengyi_S1000H.pdf, read 2026-10-28"
+    },
+    {
+      "name-s": "S1000-2M TG170",
+      "brand-s": "Shengyi",
+      "tg_c": 170,
+      "dk": 4.6,
+      "dk_at-s": "1 GHz",
+      "df": 0.018,
+      "df_at-s": "1 GHz",
+      "offer-s": "not stated",
+      "default_b": false,
+      "source-s": "PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28: 'FR4-TG' button 'S1000-2M TG170'. Dk/Df from Shengyi S1000-2M laminate data sheet linked by PCBWay ('Permittivity (1GHz) 4.6', 'Loss Tangent (1GHz) 0.018'; Tg 180 DSC / 185 DMA) https://pcbwayfile.s3.us-west-2.amazonaws.com/web/240529/S1000_2M.pdf, read 2026-10-28"
+    }
+  ],
+  "max_aspect_ratio_source-s": "Capabilities Advanced PCB table row 6 'Thickness to diameter ratio | Thickness to diameter ratio≤8' (Normal process column); 'Drill diameter below 0.2mm, and the aspect ratio≥10, which is medium difficulty'. https://www.pcbway.com/capabilities.html, read 2026-10-28",
+  "through_drill_pairs-ao": [
+    {
+      "drill_mm": 0.2,
+      "board_mm": 1.6,
+      "offer-s": "standard",
+      "source-s": "Capabilities Advanced table row 5 Drill diameter, Normal process: 'hole diameter 0.2mm: maximum board thickness 1.6mm' https://www.pcbway.com/capabilities.html, read 2026-10-28. Standard table: 'Any holes ... smaller than 0.2mm will be subject to extra charges', so >=0.2 mm carries no drill surcharge. Order form default 'Min hole size' is 0.3 mm (PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28)."
+    },
+    {
+      "drill_mm": 0.25,
+      "board_mm": 2.0,
+      "offer-s": "standard",
+      "source-s": "Capabilities Advanced table row 5 Drill diameter, Normal process: 'hole diameter diameter 0.25mm:maximum board thickness 2.0mm' https://www.pcbway.com/capabilities.html, read 2026-10-28. Standard table: 'Any holes ... smaller than 0.2mm will be subject to extra charges', so >=0.2 mm carries no drill surcharge. Order form default 'Min hole size' is 0.3 mm (PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28)."
+    },
+    {
+      "drill_mm": 0.3,
+      "board_mm": 3.2,
+      "offer-s": "standard",
+      "source-s": "Capabilities Advanced table row 5 Drill diameter, Normal process: 'hole diameter 0.3mm≤Ф≤0.35mm, maximum board thickness 3.2 mm' https://www.pcbway.com/capabilities.html, read 2026-10-28. Standard table: 'Any holes ... smaller than 0.2mm will be subject to extra charges', so >=0.2 mm carries no drill surcharge. Order form default 'Min hole size' is 0.3 mm (PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28)."
+    },
+    {
+      "drill_mm": 0.4,
+      "board_mm": 4.8,
+      "offer-s": "standard",
+      "source-s": "Capabilities Advanced table row 5 Drill diameter, Normal process: 'hole diameter 0.4mm≤Ф≤0.55mm, maximum board thickness 4.8 mm' https://www.pcbway.com/capabilities.html, read 2026-10-28. Standard table: 'Any holes ... smaller than 0.2mm will be subject to extra charges', so >=0.2 mm carries no drill surcharge. Order form default 'Min hole size' is 0.3 mm (PCBWay order form https://www.pcbway.com/orderonline.aspx (static HTML read with curl, nothing submitted), read 2026-10-28)."
+    }
+  ],
   "max_aspect_ratio_note-s": "Advanced PCB table row 6 'Thickness to diameter ratio <=8' normal process (8-10 medium, >12 high)",
   "via_in_pad_note": "Via-in-pad = resin-filled with electroplated cap on BGA pads unless the customer asks otherwise (https://www.pcbway.com/pcb_prototype/PCB_Via_in_Pad.html); plug hole 0.20-0.40 mm (70% fullness) for 0.40-2.4 mm boards (Advanced table row 23). No minimum VIP drill or turn-time effect published.",
   "sources": {
@@ -21611,5 +21871,12 @@
     "https://www.pcbway.com/multi-layer-laminated-structure.html"
   ],
   "stackups_retrieved_utc": "2026-10-17T00:00:00Z",
-  "stackups_note": "All 298 'PCB standard stackup' entries from the page HTML (4-18 layers; 112 x 4L, 74 x 6L, 49 x 8L, 33 x 10L, 12 x 12L, 6 each 14/16/18L; no 2-layer stackups published). Through-hole stackups only ('not applicable for blind and buried vias'). Each table prints Thickness (mm) and Thickness after lamination (mm): prepreg thickness_mm is the after-lamination value; core and inner copper use the printed thickness (their after-lamination cell is the 'Core with Cu' total); outer copper is the printed base foil (0.0175 mm for 0.5 oz) with the table's '(Plating to 1OZ)' kept in printed-s, so finished outer copper is thicker than thickness_mm. measured_total_mm matches each table's 'Thickness after lamination' to within 0.01 mm; the finished board thickness (printed separately, e.g. 1.61 mm) adds plating, mask and finish. Where several prepreg sheets share one after-lamination value: same type -> one prepreg layer with that thickness; mixed types with different DK (85 stackups) -> one layer per sheet with the shared thickness split in proportion to the printed raw sheet thickness (flagged thickness_derived-s). Ordering: first 1.6 mm entry of 4/6/8/10/12 layers (1 oz outer / 1 oz inner / 70% residual copper, 'Regular'), then the rest in page order. Many entries differ only in inner residual copper ratio (90/70/50/30%), which changes the after-lamination prepreg thickness. Left out: 105 published stackups in which several prepreg sheets share one printed after-lamination thickness (a per-sheet thickness would have to be derived). Outer copper is printed as the base foil (0.0175 mm, 'Plating to 1OZ'), so outer thickness_mm is thinner than finished copper. Order: one stackup per layer count first (1.6 mm where published), since the reader takes the first 8."
+  "stackups_note": "All 298 'PCB standard stackup' entries from the page HTML (4-18 layers; 112 x 4L, 74 x 6L, 49 x 8L, 33 x 10L, 12 x 12L, 6 each 14/16/18L; no 2-layer stackups published). Through-hole stackups only ('not applicable for blind and buried vias'). Each table prints Thickness (mm) and Thickness after lamination (mm): prepreg thickness_mm is the after-lamination value; core and inner copper use the printed thickness (their after-lamination cell is the 'Core with Cu' total); outer copper is the printed base foil (0.0175 mm for 0.5 oz) with the table's '(Plating to 1OZ)' kept in printed-s, so finished outer copper is thicker than thickness_mm. measured_total_mm matches each table's 'Thickness after lamination' to within 0.01 mm; the finished board thickness (printed separately, e.g. 1.61 mm) adds plating, mask and finish. Where several prepreg sheets share one after-lamination value: same type -> one prepreg layer with that thickness; mixed types with different DK (85 stackups) -> one layer per sheet with the shared thickness split in proportion to the printed raw sheet thickness (flagged thickness_derived-s). Ordering: first 1.6 mm entry of 4/6/8/10/12 layers (1 oz outer / 1 oz inner / 70% residual copper, 'Regular'), then the rest in page order. Many entries differ only in inner residual copper ratio (90/70/50/30%), which changes the after-lamination prepreg thickness. Left out: 105 published stackups in which several prepreg sheets share one printed after-lamination thickness (a per-sheet thickness would have to be derived). Outer copper is printed as the base foil (0.0175 mm, 'Plating to 1OZ'), so outer thickness_mm is thinner than finished copper. Order: one stackup per layer count first (1.6 mm where published), since the reader takes the first 8.",
+  "not_published_as": [
+    "copper-o.foil-ao (foil type / roughness)",
+    "hole_plating-ao: whether 'Standard(20um)' is minimum or average, IPC class",
+    "laminates-ao brand of default TG150-160 on 2-layer orders under 3 m2",
+    "laminates-ao Dk/Df of the default TG150-160 (only the named Shengyi options link a data sheet)",
+    "prices of non-default copper, material and hole-copper options"
+  ]
 }
