@@ -1,0 +1,313 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS562201DDCR",
+    "description-s": "4.5-17 V input, 2 A, 580 kHz synchronous step-down converter, D-CAP2, adjustable output, SOT-23-6 (DDC)",
+    "package-ao": [
+      { "ptype-s": "sot-23-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 5000 }
+    ],
+    "max_currents-ao": [
+      { "out": 2000 }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "sw" },
+      { "3": "vin" },
+      { "4": "vfb" },
+      { "5": "en" },
+      { "6": "vbst" }
+    ],
+    "pin_sources-ao": [
+      {
+        "pin-s": "1",
+        "name-s": "GND",
+        "function-s": "Ground: low-side NFET source and controller ground",
+        "connection-s": "GND (avss); VFB divider bottom returns here",
+        "required-s": "Ground; connect sensitive VFB to this GND at a single point (Table 4-1)",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 12,
+          "figure-s": "Figure 7-1 TPS562201 and TPS562208 1.05-V/2-A Reference Design"
+        }
+      },
+      {
+        "pin-s": "2",
+        "name-s": "SW",
+        "function-s": "Switch node between high-side and low-side NFETs",
+        "connection-s": "3.3 uH from SW to VOUT (3.3uh-vout); 100 nF bootstrap from VBST",
+        "required-s": "For 5 V out: L1 3.3 min / 4.7 typ / 4.7 max uH (Table 7-2 p14); EVM L1 3.3 uH",
+        "matches_b": true,
+        "note-s": "Record uses the Table 7-2 minimum (3.3 uH, also the EVM value), not the 4.7 uH typical.",
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 12,
+          "figure-s": "Figure 7-1 TPS562201 and TPS562208 1.05-V/2-A Reference Design"
+        }
+      },
+      {
+        "pin-s": "3",
+        "name-s": "VIN",
+        "function-s": "Input supply; drain of the high-side NFET",
+        "connection-s": "input power via ds-power-rx; 10 uF + 100 nF to GND (10uf-avss, 100nf-avss)",
+        "required-s": "'TI recommends a ceramic capacitor over 10 uF for the decoupling capacitor'; optional extra 0.1 uF (C3) from pin 3 to ground (7.2.2.4 p14); Figure 7-1: 2 x 10 uF + 0.1 uF; EVM C2 + C3 10 uF + C1 0.1 uF",
+        "matches_b": true,
+        "note-s": "Record has one 10 uF; the text asks for over 10 uF and both the reference design and the EVM fit 2 x 10 uF. Within the letter only if derating is ignored; raise if the board sees large input ripple.",
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 12,
+          "figure-s": "Figure 7-1 TPS562201 and TPS562208 1.05-V/2-A Reference Design"
+        }
+      },
+      {
+        "pin-s": "4",
+        "name-s": "VFB",
+        "function-s": "Converter feedback input (0.768 V reference)",
+        "connection-s": "R1 54.9k to VOUT (54.9k-vout), R2 10k to GND (10k-avss): 5 V out",
+        "required-s": "Connect to the output through a feedback divider (Table 4-1); 5 V row: R1 54.9 k, R2 10.0 k, C8 + C9 20 to 68 uF (Table 7-2 p14)",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 14,
+          "table-s": "Table 7-2 Recommended Component Values (continued), 5 V row"
+        }
+      },
+      {
+        "pin-s": "5",
+        "name-s": "EN",
+        "function-s": "Enable input, active high",
+        "connection-s": "tied to VIN",
+        "required-s": "Active high and must be pulled up to enable the device (Table 4-1); VIN, EN abs max 19 V (5.1 p4); EVM: R4 10.0k from VIN to EN (JP1); Figure 7-1: R3 10.0 k to an EN signal",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "docs/tps562201evm-user-guide-slvual5.pdf",
+          "page_n": 13,
+          "figure-s": "Figure 6-1 TPS562201EVM-715 Schematic Diagram"
+        }
+      },
+      {
+        "pin-s": "6",
+        "name-s": "VBST",
+        "function-s": "High-side NFET gate drive supply (bootstrap)",
+        "connection-s": "100 nF from VBST to SW (100nf-sw)",
+        "required-s": "Connect a 0.1 uF capacitor between VBST and SW (Table 4-1; 7.2.2.5 p14); EVM C4 0.1 uF via R5 0 Ohm",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 3,
+          "table-s": "Table 4-1 Pin Functions"
+        },
+        "also-o": {
+          "document-s": "tps562201.pdf",
+          "page_n": 12,
+          "figure-s": "Figure 7-1 TPS562201 and TPS562208 1.05-V/2-A Reference Design"
+        }
+      }
+    ],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "10uf-avss" },
+      { "3": "100nf-avss" },
+      { "2": "3.3uh-vout" },
+      { "vout": "ds-power-tx" },
+      { "vout": "22uf-avss" },
+      { "vout": "22uf-avss" },
+      { "1": "avss" },
+      { "6": "100nf-sw" }
+    ],
+    "cfgpins-ao": [
+      { "5": "en" },
+      { "5": "vin" },
+      { "5c": "EN active high, must be pulled up (VENH 1.6 V); rated to 17 V like VIN, so tied to VIN" },
+      { "4": "vfb" },
+      { "4": "54.9k-vout" },
+      { "4": "10k-avss" },
+      { "4c": "VFB 0.768 V; datasheet table (p14): 5 V out = R1 54.9k / R2 10k, L 3.3 uH, COUT 20-68 uF (2 x 22 uF)" }
+    ],
+    "specs-o": {
+      "load_regulation_mv_per_a": 5.34,
+      "load_regulation_source-o": {
+        "datasheet-s": "tps562201.pdf",
+        "page_n": 15,
+        "fig-s": "Figure 7-2. Load Regulation, VIN = 5 V (TPS562201 curve, VOUT 1.05 V reference design)",
+        "derived-s": "read by procurement pdf-graph (vector): +0.1451 % at 0.5 A, -0.6184 % at 2 A (continuous-conduction region; below 0.5 A Eco-mode raises VOUT); 0.7635 % x 1050 mV = 8.02 mV over 1.5 A = 5.34 mV/A. VIN = 12 V (Figure 7-3): +0.174 % -> -0.573 % = 5.23 mV/A; the larger is kept. No load-regulation row in the Electrical Characteristics"
+      },
+      "cout_min_nf": 20000,
+      "cout_max_nf": 68000,
+      "cout_source-o": {
+        "datasheet-s": "tps562201.pdf",
+        "page_n": 13,
+        "table-s": "Table 7-2 Recommended Component Values: C8 + C9 20 to 68 uF for every VOUT 1 to 6.5 V; 7.2.2.3 p14: Recommended values range from 20 uF to 68 uF (ceramic or other low-ESR)"
+      },
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 4500,
+      "vin_max_mv": 17000,
+      "vout_min_mv": 768,
+      "vout_max_mv": 7000,
+      "iout_max_ma": 2000,
+      "switching_freq_khz": 580,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "replaces_s": "TPS54202DDCR (0 stock): same SOT-23-6 pinout, but VIN max 17 V (not 28 V) and VFB 0.768 V, so dividers must be re-valued",
+      "load_transient-ao": [
+        { "rail-s": "VOUT", "i_from_ma": 100, "i_to_ma": 1500, "vout_mv": 1050, "fig-s": "Figure 7-11 TPS562201 Transient Response, 0.1 to 1.5 A (SLVSD91D p16), 1.05 V reference design", "dv_mv": "not stated (scope shot)" },
+        { "rail-s": "VOUT", "i_from_ma": 750, "i_to_ma": 2250, "vout_mv": 1050, "fig-s": "Figure 7-12 TPS562201 Transient Response, 0.75 to 2.25 A (SLVSD91D p16)", "i_step_ma": 1500, "dv_mv": 17.8, "dv_overshoot_mv": 12.8, "cout_uf": 44, "cout_part-s": "C8 + C9 2 x 22 uF (Figure 7-1 1.05-V/2-A reference design p12; TDK C3216X5R0J226M, 7.2.2.3 p14)", "l_uh": 2.2, "page_n": 16, "read-s": "scope capture rendered at 600 dpi, 20 mV/div = 159.75 px (graticule top 17.5 px, centre 656.5 px): pre-step trace envelope 282..361 px (centre 321), undershoot on 0.75 -> 2.25 A reaches 463 px = 142 px = 17.8 mV below the pre-step centre (12.8 mV below the envelope bottom); release overshoot peak 252 px, 102 px = 12.8 mV above the loaded envelope centre 354 px. VIN not stated for this figure (reference design 4.5 to 17 V)" },
+        { "rail-s": "VOUT", "i_step_ma": 1500, "dv_pct": 5, "fig-s": "Table 7-1 Design Parameters (SLVSD91D p12): 'Transient response, 1.5-A load step ΔVout = ±5%' (a design target of the 1.05 V example)" }
+      ],
+      "efficiency-ao": [
+        { "vin_mv": 9000, "vout_mv": 5000, "iout_ma": 1988, "efficiency_pct": 91.5, "page_n": 8, "fig-s": "Fig 5-13 VOUT 5 V, Vin 9 V", "source-s": "tps562201.pdf (SLVSD91D) p8 Figure 5-13 'TPS562201 VOUT = 5 V Efficiency, L = 3.3 uH', Vin = 9 V curve at its last point 1.988 A, read by procurement pdf-graph (0.9152)" },
+        { "vin_mv": 9000, "vout_mv": 3300, "iout_ma": 1500, "efficiency_pct": 90.7, "page_n": 7, "fig-s": "Fig 5-12 VOUT 3.3 V, Vin 9 V", "source-s": "tps562201.pdf (SLVSD91D) p7 Figure 5-12 'TPS562201 VOUT = 3.3 V Efficiency, L = 3.3 uH', Vin = 9 V curve at 1.5 A, read by procurement pdf-graph (0.907)" },
+        { "vin_mv": 5000, "vout_mv": 1050, "iout_ma": 200, "efficiency_pct": 87.3, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-9", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1050, "iout_ma": 500, "efficiency_pct": 87.4, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-9", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1050, "iout_ma": 1000, "efficiency_pct": 83.9, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-9", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1050, "iout_ma": 1900, "efficiency_pct": 74.7, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-9", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1800, "iout_ma": 200, "efficiency_pct": 90.7, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-11", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1800, "iout_ma": 500, "efficiency_pct": 90.6, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-11", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1800, "iout_ma": 1000, "efficiency_pct": 89.1, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-11", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 1800, "iout_ma": 1900, "efficiency_pct": 83.4, "l_uh": 2.2, "page_n": 7, "fig-s": "Figure 5-11", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 3300, "iout_ma": 200, "efficiency_pct": 96.4, "l_uh": 3.3, "page_n": 7, "fig-s": "Figure 5-12", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 3300, "iout_ma": 500, "efficiency_pct": 95.6, "l_uh": 3.3, "page_n": 7, "fig-s": "Figure 5-12", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 3300, "iout_ma": 1000, "efficiency_pct": 93.7, "l_uh": 3.3, "page_n": 7, "fig-s": "Figure 5-12", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" },
+        { "vin_mv": 5000, "vout_mv": 3300, "iout_ma": 1900, "efficiency_pct": 88.8, "l_uh": 3.3, "page_n": 7, "fig-s": "Figure 5-12", "kind-s": "typical vector curve", "read_uncertainty_pct_points": 1, "source_url-s": "https://www.ti.com/lit/ds/symlink/tps562201.pdf" }
+      ],
+      "efficiency_note-s": "No efficiency curve for VOUT above 5 V: the board's point (9 V in, 7.07 V out, 2 A) is not stated. The nearest stated curve is VOUT 5 V at Vin 9 V, 91.5 % at 1.988 A (Figure 5-13 p8). | Added VIN5V typical curve data for VOUT1.05/1.8/3.3V (SLVSD91D p7 Figures5-9/5-11/5-12). Local deterministic pdf-graph vector extraction; red VIN5V trace visually verified. Points200/500/1000/1900mA interpolated only between curve vertices on the logarithmic load axis, rounded0.1 percentage point; assign about +/-1 percentage point plot-reading uncertainty, not a manufacturer tolerance. Temperature is not stated beside these plots. L=2.2uH for1.05/1.8V,3.3uH for3.3V. Exact VOUT1.1V is not published; do not relabel1.05V or extrapolate from VIN9V. Different inductors/temperature require explicit model qualification. These are typical efficiencies, not guaranteed lower bounds.",
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "2"
+      ],
+      "vin_pins-as": [
+        "3"
+      ],
+      "pgnd_pins-as": [
+        "1"
+      ],
+      "l_nh_typ": 3300,
+      "cin_nf_typ": 10100,
+      "cout_nf_typ": 44000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "2"
+          ],
+          "abs_min_mv": -2000,
+          "abs_max_mv": 19000,
+          "abs_min_transient_mv": -3500,
+          "abs_max_transient_mv": 21000,
+          "abs_max_transient_ns": 10
+        }
+      ],
+      "sw_abs_min_mv": -2000,
+      "sw_abs_max_mv": 19000,
+      "sw_abs_min_transient_mv": -3500,
+      "sw_abs_max_transient_mv": 21000,
+      "sw_abs_max_transient_ns": 10,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in tps562201.pdf: no switch rise-time row in its tables (28 pages)",
+        "sw_fall_ns": "not stated in tps562201.pdf: no switch fall-time row in its tables (28 pages)",
+        "sw_coss_pf": "not stated in tps562201.pdf: no switch-pin or C_oss capacitance row in its tables (28 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "tps562201.pdf",
+        "page_n": 4,
+        "table-s": "Absolute Maximum Ratings"
+      },
+      "source-o": {
+        "datasheet-s": "tps562201.pdf",
+        "page_n": 12,
+        "figure-s": "Typical Application",
+        "pages-s": "p3 pin functions, p4 abs max / recommended (VIN 4.5-17 V), p5 electrical characteristics (VFB 0.768 V, fSW 580 kHz), p12-14 typical application"
+      }
+    },
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 90.8,
+      "tj-max-c-i": 125
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3"
+        ],
+        "vmin_mv": 4500,
+        "vmax_mv": 17000,
+        "source-o": {
+          "datasheet-s": "tps562201.pdf",
+          "page_n": 4,
+          "table-s": "5.3 Recommended Operating Conditions"
+        },
+        "not_stated-o": {
+          "i_step_ma": "not stated: the transient tests step the OUTPUT load (SLVSD91D Figures 7-11 / 7-12), no VIN current step is given"
+        },
+        "carried_source-o": {
+          "datasheet-s": "tps562201.pdf",
+          "page_n": 4,
+          "table-s": "Recommended Operating Conditions"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tps562201.pdf https://www.ti.com/lit/ds/symlink/tps562201.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

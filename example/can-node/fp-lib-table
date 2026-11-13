@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "can_node")(type "KiCad")(uri "${KIPRJMOD}/can_node.pretty")(options "")(descr ""))
+)

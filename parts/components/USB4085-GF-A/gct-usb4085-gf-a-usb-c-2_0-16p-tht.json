@@ -1,0 +1,104 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-usbc-jack",
+    "vendor-s": "GCT",
+    "part-s": "USB4085-GF-A",
+    "description-s": "USB Type-C 2.0 receptacle, 16 contacts, through-hole, right angle, 5 A / 48 VDC, 20000 cycles; board power input (VBUS/GND, CC1/CC2 with 5.1k Rd pull-downs for a sink, D+/D- brought out)",
+    "connector-o": {
+      "height_mm_f": 3.46,
+      "contact_resistance_mohm": 40,
+      "contact_height_source-s": "GCT USB4085 drawing Rev B p1: contact resistance 40 mOhm max initial (50 after test); height 3.46 mm read from the side view (shell alone 3.16)",
+      "orientation_s": "right-angle",
+      "shell_tht_b": true,
+      "shell_tht_source_s": "four plated through-hole shell tabs (footprint pads SH, thru_hole oval; GCT USB4085 drawing: through-hole shell legs)",
+      "pin_count_i": 16,
+      "family_s": "usb-c",
+      "courtyard_area_mm2_f": 107.3,
+      "board_area_mm2_f": 107.3,
+      "board_area_note_s": "courtyard (right-angle at the board edge: the mate overhangs the edge)",
+      "fields_source_s": "5 A / 20 V for the receptacle = 1.25 A on each of the 4 VBUS / 4 GND contacts; signal contacts 0.25 A (Nexar maker spec)",
+      "pitch_mm_f": 0.5,
+      "current_per_pin_ma_i": 1250,
+      "voltage_max_v_f": 20
+    },
+    "package-ao": [
+      { "ptype-s": "through-hole" },
+      { "ppins-i": 16 }
+    ],
+    "blocks-as": [
+      "usb-c-receptacle"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-usb2-rxtx",
+      "ds-usbcc-rxtx"
+    ],
+    "voltages-ao": [
+      { "vin_max": 48000 }
+    ],
+    "max_currents-ao": [
+      5
+    ],
+    "pins-ao": [
+      { "A1": "GND" },
+      { "A4": "VBUS" },
+      { "A5": "CC1" },
+      { "A6": "D+" },
+      { "A7": "D-" },
+      { "A8": "SBU1" },
+      { "A9": "VBUS" },
+      { "A12": "GND" },
+      { "B1": "GND" },
+      { "B4": "VBUS" },
+      { "B5": "CC2" },
+      { "B6": "D+" },
+      { "B7": "D-" },
+      { "B8": "SBU2" },
+      { "B9": "VBUS" },
+      { "B12": "GND" },
+      { "SH": "shield" }
+    ],
+    "stdpins-ao": [
+      { "A1": "avss" },
+      { "A12": "avss" },
+      { "B1": "avss" },
+      { "B12": "avss" },
+      { "A4": "ds-power-rx" },
+      { "A9": "ds-power-rx" },
+      { "B4": "ds-power-rx" },
+      { "B9": "ds-power-rx" },
+      { "A5": "ds-usbcc-cc1" },
+      { "A5": "5.1k-avss" },
+      { "B5": "ds-usbcc-cc2" },
+      { "B5": "5.1k-avss" },
+      { "A6": "ds-usb2-dp" },
+      { "B6": "ds-usb2-dp" },
+      { "A7": "ds-usb2-dm" },
+      { "B7": "ds-usb2-dm" },
+      { "A8": "SBU1, unused for a power sink" },
+      { "B8": "SBU2, unused for a power sink" },
+      { "SH": "shield, tie to chassis/ground at the connector" },
+      { "A5c": "CC1/CC2: USB-C sink must present Rd = 5.1k to GND on each CC pin or a Type-C source keeps VBUS off; the 5.1k-avss shorthands place them" }
+    ],
+    "cfgpins-ao": [],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      }
+    ],
+    "datasheet-s": "https://gct.co/files/drawings/usb4085.pdf",
+    "procurement-o": {},
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "usb4085.pdf https://gct.co/files/drawings/usb4085.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

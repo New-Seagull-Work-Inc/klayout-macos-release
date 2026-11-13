@@ -1,0 +1,84 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Diodes Incorporated",
+    "part-s": "SB5100-T",
+    "description-s": "5 A 100 V Schottky barrier rectifier, VF 0.80 V max at 5 A, DO-201AD axial (tape and reel); replaces STPS5H100RL (no longer offered in DO-201AD)",
+    "package-ao": [
+      { "ptype-s": "do-201ad" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "passive-o": {
+      "voltage-max-i": 100000,
+      "current-max-i": 5000,
+      "lead-style-s": "axial"
+    },
+    "specs-o": {
+      "forward_ma": 5000,
+      "forward_source-o": {
+        "datasheet-s": "ds30135.pdf",
+        "page_n": 2,
+        "table-s": "Maximum Ratings and Electrical Characteristics: Average Rectified Output Current IO 5.0 A at TL = +80 C (all SB570-SB5100)"
+      },
+      "dynamic_resistance_mohm": 48,
+      "dynamic_resistance_source-o": {
+        "datasheet-s": "ds30135.pdf",
+        "page_n": 3,
+        "table-s": "Fig. 2 Typical Forward Characteristics, TA = 25 C curve",
+        "read": "raster figure read by eye (log current axis): about 0.51 V at 1 A and 0.70 V at 5 A; (0.70 - 0.51) / 4 A = 48 mOhm over 1-5 A; typical curve, accuracy about +/-15 %"
+      },
+      "cj_pf": 400,
+      "cj_source-o": {
+        "datasheet-s": "ds30135.pdf",
+        "page_n": 2,
+        "table-s": "Typical Junction Capacitance CJ 400 pF, Note 5: 1.0 MHz, 4.0 V DC reverse"
+      },
+      "rth_ja_c_per_w": 10
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 800,
+      "ir-ua-i": 500
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "source-o": {
+      "datasheet-s": "ds30135.pdf",
+      "revision-s": "DS30135 Rev. 6-2, January 2020",
+      "page_n": 2,
+      "table-s": "Maximum Ratings and Electrical Characteristics, SB5100 column: VRRM 100 V, IO 5.0 A at TL 80 C, IFSM 150 A, VFM 0.80 V at 5.0 A, IRM 0.5 mA (25 C) / 50 mA (100 C), CJ 400 pF, RthetaJA 10 C/W, TJ / TSTG -65 to +150 C; p1 Ordering Information: SB5100-T DO-201AD 1.2K tape and reel",
+      "polarity-s": "KiCad diode footprints number the cathode pad 1 (the band end), so pin 1 = cathode, pin 2 = anode; the datasheet marks the cathode with the band"
+    },
+    "stdpins-ao": [],
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 10
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "ds30135.pdf https://www.diodes.com/assets/Datasheets/ds30135.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

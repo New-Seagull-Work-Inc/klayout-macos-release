@@ -1,0 +1,133 @@
+{
+  "component-o": {
+    "specs-o": {
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 99.7 },
+        { "v_mv": 1800, "c_pct": 99 },
+        { "v_mv": 2500, "c_pct": 98.1 },
+        { "v_mv": 3300, "c_pct": 96.7 },
+        { "v_mv": 5000, "c_pct": 92.4 },
+        { "v_mv": 6300, "c_pct": 87.9 },
+        { "v_mv": 10000, "c_pct": 64.8 },
+        { "v_mv": 12000, "c_pct": 54 },
+        { "v_mv": 16000, "c_pct": 40.5 }
+      ],
+      "dc_bias_source-s": "KEMET K-SIM (ksim3.kemet.com/capacitor-simulation?pn=C0603C105K4RACTU) S2P model exports at 25 degC, shunt, 50 ohm, 10 kHz - 10 GHz (model of base PN C0603C105K4RAC): ESR / ESL / SRF in impedance-o from the 0 V model (C0603C105K4RACTU_ksim_0V_25C.s2p, kept beside this record); DC-bias curve = capacitance at 10 kHz from the model at each bias (0, 1, 1.8, 2.5, 3.3, 5, 6.3, 10, 12, 16 V), relative to 0 V (963.7 nF); KEMET model, not a measurement; read 2026-10-28"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "C0603C105K4RACTU",
+    "description-s": "1 µF 16 V ±10% X7R dielectric SMD ceramic capacitor, EIA 0603 case",
+    "height_mm_f": 0.9,
+    "height_source-o": {
+      "datasheet-s": "KEM_C1002_X7R_SMD.pdf",
+      "page_n": 9,
+      "table-s": "KEMET X7R commercial (C1002_X7R 2026-09-01) Table 1A (p5) 1 µF / C0603C / 16 V -> code CG; Table 2A row CG 0603: 0.80 ± 0.10 mm",
+      "derived-s": "max = nominal + tolerance: 0.80 + 0.10 = 0.9 mm"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 1000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 16000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r",
+      "lead-style-s": "smd"
+    },
+    "impedance-o": {
+      "z_curve-ao": [
+        { "f_mhz": 0.01, "z_ohm": 16.52, "r_ohm": 0.3558, "x_ohm": -16.52 },
+        { "f_mhz": 0.01259, "z_ohm": 13.16, "r_ohm": 0.2845, "x_ohm": -13.16 },
+        { "f_mhz": 0.01585, "z_ohm": 10.49, "r_ohm": 0.2279, "x_ohm": -10.49 },
+        { "f_mhz": 0.01995, "z_ohm": 8.357, "r_ohm": 0.183, "x_ohm": -8.355 },
+        { "f_mhz": 0.02512, "z_ohm": 6.659, "r_ohm": 0.1473, "x_ohm": -6.657 },
+        { "f_mhz": 0.03162, "z_ohm": 5.306, "r_ohm": 0.1189, "x_ohm": -5.305 },
+        { "f_mhz": 0.03981, "z_ohm": 4.228, "r_ohm": 0.09641, "x_ohm": -4.227 },
+        { "f_mhz": 0.05012, "z_ohm": 3.369, "r_ohm": 0.07852, "x_ohm": -3.368 },
+        { "f_mhz": 0.0631, "z_ohm": 2.685, "r_ohm": 0.0643, "x_ohm": -2.684 },
+        { "f_mhz": 0.07943, "z_ohm": 2.139, "r_ohm": 0.05301, "x_ohm": -2.139 },
+        { "f_mhz": 0.1, "z_ohm": 1.705, "r_ohm": 0.04405, "x_ohm": -1.704 },
+        { "f_mhz": 0.1259, "z_ohm": 1.358, "r_ohm": 0.03692, "x_ohm": -1.358 },
+        { "f_mhz": 0.1585, "z_ohm": 1.082, "r_ohm": 0.03127, "x_ohm": -1.082 },
+        { "f_mhz": 0.1995, "z_ohm": 0.8625, "r_ohm": 0.02677, "x_ohm": -0.8621 },
+        { "f_mhz": 0.2512, "z_ohm": 0.6872, "r_ohm": 0.0232, "x_ohm": -0.6868 },
+        { "f_mhz": 0.3162, "z_ohm": 0.5475, "r_ohm": 0.02036, "x_ohm": -0.5471 },
+        { "f_mhz": 0.3981, "z_ohm": 0.4361, "r_ohm": 0.01811, "x_ohm": -0.4358 },
+        { "f_mhz": 0.5012, "z_ohm": 0.3473, "r_ohm": 0.01632, "x_ohm": -0.3469 },
+        { "f_mhz": 0.631, "z_ohm": 0.2765, "r_ohm": 0.0149, "x_ohm": -0.2761 },
+        { "f_mhz": 0.7943, "z_ohm": 0.2199, "r_ohm": 0.01377, "x_ohm": -0.2195 },
+        { "f_mhz": 1, "z_ohm": 0.1748, "r_ohm": 0.01288, "x_ohm": -0.1743 },
+        { "f_mhz": 1.259, "z_ohm": 0.1386, "r_ohm": 0.01216, "x_ohm": -0.1381 },
+        { "f_mhz": 1.585, "z_ohm": 0.1097, "r_ohm": 0.0116, "x_ohm": -0.1091 },
+        { "f_mhz": 1.995, "z_ohm": 0.08636, "r_ohm": 0.01115, "x_ohm": -0.08564 },
+        { "f_mhz": 2.512, "z_ohm": 0.06752, "r_ohm": 0.01079, "x_ohm": -0.06665 },
+        { "f_mhz": 3.162, "z_ohm": 0.05217, "r_ohm": 0.01051, "x_ohm": -0.0511 },
+        { "f_mhz": 3.981, "z_ohm": 0.03961, "r_ohm": 0.01053, "x_ohm": -0.03818 },
+        { "f_mhz": 5.012, "z_ohm": 0.0293, "r_ohm": 0.01082, "x_ohm": -0.02723 },
+        { "f_mhz": 6.31, "z_ohm": 0.02092, "r_ohm": 0.01119, "x_ohm": -0.01768 },
+        { "f_mhz": 7.943, "z_ohm": 0.01473, "r_ohm": 0.01165, "x_ohm": -0.009016 },
+        { "f_mhz": 10, "z_ohm": 0.01101, "r_ohm": 0.01098, "x_ohm": -0.0008004 },
+        { "f_mhz": 12.59, "z_ohm": 0.01387, "r_ohm": 0.01138, "x_ohm": 0.007926 },
+        { "f_mhz": 15.85, "z_ohm": 0.02106, "r_ohm": 0.01189, "x_ohm": 0.01738 },
+        { "f_mhz": 19.95, "z_ohm": 0.03076, "r_ohm": 0.01253, "x_ohm": 0.02809 },
+        { "f_mhz": 25.12, "z_ohm": 0.04286, "r_ohm": 0.01334, "x_ohm": 0.04073 },
+        { "f_mhz": 31.62, "z_ohm": 0.05791, "r_ohm": 0.01436, "x_ohm": 0.0561 },
+        { "f_mhz": 39.81, "z_ohm": 0.07679, "r_ohm": 0.01564, "x_ohm": 0.07519 },
+        { "f_mhz": 50.12, "z_ohm": 0.1007, "r_ohm": 0.01726, "x_ohm": 0.0992 },
+        { "f_mhz": 63.1, "z_ohm": 0.1311, "r_ohm": 0.01929, "x_ohm": 0.1297 },
+        { "f_mhz": 79.43, "z_ohm": 0.1701, "r_ohm": 0.02185, "x_ohm": 0.1687 },
+        { "f_mhz": 100, "z_ohm": 0.2201, "r_ohm": 0.02509, "x_ohm": 0.2187 },
+        { "f_mhz": 125.9, "z_ohm": 0.2844, "r_ohm": 0.02917, "x_ohm": 0.2829 },
+        { "f_mhz": 158.5, "z_ohm": 0.3674, "r_ohm": 0.03433, "x_ohm": 0.3657 },
+        { "f_mhz": 199.5, "z_ohm": 0.471, "r_ohm": 0.04088, "x_ohm": 0.4692 },
+        { "f_mhz": 251.2, "z_ohm": 0.5941, "r_ohm": 0.04924, "x_ohm": 0.592 },
+        { "f_mhz": 316.2, "z_ohm": 0.7499, "r_ohm": 0.06002, "x_ohm": 0.7475 },
+        { "f_mhz": 398.1, "z_ohm": 0.9478, "r_ohm": 0.07424, "x_ohm": 0.9449 },
+        { "f_mhz": 501.2, "z_ohm": 1.2, "r_ohm": 0.09382, "x_ohm": 1.197 },
+        { "f_mhz": 631, "z_ohm": 1.525, "r_ohm": 0.1229, "x_ohm": 1.52 },
+        { "f_mhz": 794.3, "z_ohm": 1.944, "r_ohm": 0.1713, "x_ohm": 1.936 },
+        { "f_mhz": 1000, "z_ohm": 2.48, "r_ohm": 0.2588, "x_ohm": 2.467 },
+        { "f_mhz": 1259, "z_ohm": 3.147, "r_ohm": 0.4122, "x_ohm": 3.12 },
+        { "f_mhz": 1585, "z_ohm": 3.94, "r_ohm": 0.634, "x_ohm": 3.889 },
+        { "f_mhz": 1995, "z_ohm": 4.88, "r_ohm": 0.8918, "x_ohm": 4.797 },
+        { "f_mhz": 2512, "z_ohm": 6.035, "r_ohm": 1.169, "x_ohm": 5.921 },
+        { "f_mhz": 3162, "z_ohm": 7.494, "r_ohm": 1.483, "x_ohm": 7.346 },
+        { "f_mhz": 3981, "z_ohm": 9.346, "r_ohm": 1.86, "x_ohm": 9.159 },
+        { "f_mhz": 5012, "z_ohm": 11.7, "r_ohm": 2.328, "x_ohm": 11.46 },
+        { "f_mhz": 6310, "z_ohm": 14.67, "r_ohm": 2.917, "x_ohm": 14.37 },
+        { "f_mhz": 7943, "z_ohm": 18.42, "r_ohm": 3.66, "x_ohm": 18.05 }
+      ],
+      "impedance_ohm": 0.2201,
+      "impedance_test_mhz": 100,
+      "srf_mhz": 10.23,
+      "c_lf_nf": 963.7,
+      "esr_mohm": 11,
+      "esl_ph": 361,
+      "source-o": {
+        "s2p-s": "C0603C105K4RACTU_ksim_0V_25C.s2p",
+        "fixture-s": "shunt",
+        "z0_ohm": 50,
+        "f_min_mhz": 0.01,
+        "f_max_mhz": 9550,
+        "url-s": "https://ksim3.kemet.com/capacitor-simulation?pn=C0603C105K4RACTU (KEMET K-SIM, S2P export via /api/s2p/: KEMET S2P model of base PN C0603C105K4RAC, 25 C, 0 V DC bias, shunt, 50 ohm, 10 kHz - 10 GHz)",
+        "retrieved-s": "2026-10-28"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "C0603C105K4RACTU_ksim_0V_25C.s2p https://ksim3.kemet.com/capacitor-simulation?pn=C0603C105K4RACTU",
+        "KEM_C1002_X7R_SMD.pdf https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

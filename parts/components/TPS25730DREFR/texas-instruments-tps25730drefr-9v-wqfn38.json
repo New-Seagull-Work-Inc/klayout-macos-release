@@ -1,0 +1,325 @@
+{
+  "component-o": {
+    "type-s": "usb-pd-sink",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS25730DREFR",
+    "sku-s": "TPS25730DREFR-9V",
+    "description-s": "USB Type-C PD 3.1 sink-only controller with an integrated 16 mohm power path (VBUS_IN to PPHV, 7 A), configured by resistor straps on ADCIN1-4 (no firmware, NVM or MCU); 5-20 V PDOs, integrated Rd, OVP / RCP; WQFN-38 (REF) 4 x 6 mm",
+    "package-ao": [
+      { "ptype-s": "WQFN" },
+      { "ppins-i": 40 }
+    ],
+    "blocks-as": [
+      "usb-pd-sink"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "ds-usbcc-rxtx",
+      "ds-pwrmon-pg"
+    ],
+    "voltages-ao": [
+      { "vin_min": 4000 },
+      { "vin_max": 22000 }
+    ],
+    "max_currents-ao": [
+      { "out": 7000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 65
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "ldo_3v3" },
+      { "2": "adcin1" },
+      { "3": "adcin2" },
+      { "4": "ldo_1v5" },
+      { "5": "adcin3" },
+      { "6": "cap_mis" },
+      { "7": "adcin4" },
+      { "8": "i2ct_sda" },
+      { "9": "i2ct_scl" },
+      { "10": "dbg_acc" },
+      { "11": "gnd" },
+      { "12": "gnd" },
+      { "13": "plug_flip" },
+      { "14": "gnd" },
+      { "15": "drain" },
+      { "16": "gnd" },
+      { "17": "gnd" },
+      { "18": "fault_in" },
+      { "19": "sink_en" },
+      { "20": "pphv" },
+      { "21": "pphv" },
+      { "22": "pphv" },
+      { "23": "vbus_in" },
+      { "24": "vbus_in" },
+      { "25": "vbus_in" },
+      { "26": "reserved" },
+      { "27": "reserved" },
+      { "28": "cc1" },
+      { "29": "cc2" },
+      { "30": "drain" },
+      { "31": "gnd" },
+      { "32": "vbus" },
+      { "33": "vbus" },
+      { "34": "gnd" },
+      { "35": "gnd" },
+      { "36": "reserved" },
+      { "37": "plug_event" },
+      { "38": "vin_3v3" },
+      { "39": "gnd" },
+      { "40": "drain" }
+    ],
+    "stdpins-ao": [
+      { "23": "ds-power-rx" },
+      { "24": "ds-power-rx" },
+      { "25": "ds-power-rx" },
+      { "20": "ds-power-tx" },
+      { "21": "ds-power-tx" },
+      { "22": "ds-power-tx" },
+      { "28": "ds-usbcc-cc1" },
+      { "28": "330pf-avss" },
+      { "29": "ds-usbcc-cc2" },
+      { "29": "330pf-avss" },
+      { "32": "4.7uf-avss" },
+      { "32": "10nf-avss" },
+      { "32": "10nf-avss" },
+      { "32": "10nf-avss" },
+      { "32": "10nf-avss" },
+      { "20": "22uf-avss" },
+      { "20": "22uf-avss" },
+      { "20": "10uf-avss" },
+      { "38": "10uf-avss" },
+      { "1": "10uf-avss" },
+      { "4": "4.7uf-avss" },
+      { "19": "ds-pwrmon-pg" },
+      { "11": "avss" },
+      { "12": "avss" },
+      { "14": "avss" },
+      { "16": "avss" },
+      { "17": "avss" },
+      { "31": "avss" },
+      { "34": "avss" },
+      { "35": "avss" },
+      { "39": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "2": "adcin1" },
+      { "2": "178k-ldo_3v3" },
+      { "2": "9.53k-avss" },
+      { "2c": "ADCIN1 = minimum PD voltage. Decoded 1 = 9 V (Table 8-4 p36). With ADCIN2 also 1 the sink asks for 9 V only (Table 8-3 p35: ADCIN1 1 / ADCIN2 1, I2C address 0x21). Built from stocked E96 values: RUP 178 k (RC0402FR-07178KL) / RDOWN 9.53 k (RC0402FR-079K53L) = 0.0508, inside decoded 1's window 0.0229-0.0722 (Table 8-1 p31); TI's own Figure 9-3 pair is 190 k / 9.5 k = 0.0476 (neither value is E96, and 191 k 0402 is out of stock)." },
+      { "3": "adcin2" },
+      { "3": "178k-ldo_3v3" },
+      { "3": "9.53k-avss" },
+      { "3c": "ADCIN2 = maximum PD voltage. Decoded 1 = 9 V (Table 8-5 p36). Built from stocked E96 values: RUP 178 k (RC0402FR-07178KL) / RDOWN 9.53 k (RC0402FR-079K53L) = 0.0508, inside decoded 1's window 0.0229-0.0722 (Table 8-1 p31); TI's own Figure 9-3 pair is 190 k / 9.5 k = 0.0476 (neither value is E96, and 191 k 0402 is out of stock)." },
+      { "5": "adcin3" },
+      { "5": "178k-ldo_3v3" },
+      { "5": "21.5k-avss" },
+      { "5c": "ADCIN3 = operating current. Decoded 2 with ADCIN4 decoded 1 = 2 A operating / 3 A maximum (Table 8-6 p37); the board draws about 1.75 A at 9 V (7 V x 2 A through the buck). The datasheet prints no resistor pair for decoded 2: 178 k (RC0402FR-07178KL) / 21.5 k (RC0402FR-0721K5L), both E96 and stocked, gives 0.1078 against Table 8-1's decoded-2 window 0.0723-0.1425, target 0.1074 -- derived here, not from a figure." },
+      { "7": "adcin4" },
+      { "7": "178k-ldo_3v3" },
+      { "7": "9.53k-avss" },
+      { "7c": "ADCIN4 = maximum current. Decoded 1 (with ADCIN3 2) = 3 A maximum (Table 8-6 p37). Built from stocked E96 values: RUP 178 k (RC0402FR-07178KL) / RDOWN 9.53 k (RC0402FR-079K53L) = 0.0508, inside decoded 1's window 0.0229-0.0722 (Table 8-1 p31); TI's own Figure 9-3 pair is 190 k / 9.5 k = 0.0476 (neither value is E96, and 191 k 0402 is out of stock)." },
+      { "18": "fault_in" },
+      { "18": "ldo_3v3" },
+      { "18c": "FAULT_IN: 0 disconnects from the port, 1 keeps the connection (Table 5-1 p5); Hi-Z at reset. Held high on LDO_3V3 so the sink path stays on (Figure 9-3 leaves it to a system net); a system fault signal may drive it low instead." },
+      { "8": "i2ct_sda" },
+      { "8": "avss" },
+      { "9": "i2ct_scl" },
+      { "9": "avss" },
+      { "8c": "I2Ct unused (standalone, no host): Table 5-1 p5 'May be grounded if unused'. With a host, 3.3 k pull-ups to LDO_3V3 (Figure 9-3 R1/R2)." },
+      { "26": "reserved" },
+      { "26": "10k-avss" },
+      { "27": "reserved" },
+      { "27": "10k-avss" },
+      { "36": "reserved" },
+      { "36": "10k-avss" },
+      { "26c": "RESERVED 26, 27, 36: 'Tie to ground or LDO_3V3' (Table 5-1 p5); Figure 9-3 ties each through 10 k to GND (R9, R10, R?)." },
+      { "32": "vbus" },
+      { "32": "vbus_in" },
+      { "33": "vbus" },
+      { "33": "vbus_in" },
+      { "32c": "VBUS (32, 33) is the internal LDO's input and must be shorted to VBUS_IN (23-25): ROC note 2 p9 'All VBUS and VBUS_IN pins be shorted together'. Its decoupling CVBUS 1-4.7-10 uF, 25 V rating (6.4 p10; Figure 9-3: 4.7 uF + 4 x 0.01 uF)." },
+      { "15": "drain" },
+      { "15": "nc" },
+      { "30": "drain" },
+      { "30": "nc" },
+      { "40": "drain" },
+      { "40": "nc" },
+      { "15c": "DRAIN (15, 30 and the DRAIN exposed pad 40) connect to the internal FET's drain: leave unconnected -- 9.4.1.3 p48 'the drain connection pads ... must not be connected to anything and left floating'. Pad 40 is a thermal pad for the footprint only (RthetaJC bottom DRAIN 4.6 C/W)." },
+      { "38": "vin_3v3" },
+      { "38c": "VIN_3V3: optional system 3.3 V (Figures 9-1/9-2 p41 'System 3.3V (Optional)'); without it the part runs from VBUS through its own LDO (8.3.2 p27, the dead-battery start-up). Keep CVIN_3V3 10 uF (6.4 p9: 5 min / 10 nom, 6.3 V rating). On this board it is left without a supply: the controller is standalone." },
+      { "6c": "CAP_MIS, DBG_ACC, PLUG_FLIP, PLUG_EVENT: open-drain status outputs (Table 5-1 p5), unused here: leave open." },
+      { "19c": "SINK_EN: open-drain, 0 = sink path enabled, 1 = disabled (Table 5-1 p5): an active-low power-good for the sink path. Needs a pull-up if used (value not stated)." }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "VBUS",
+        "role-s": "vbus",
+        "pins-as": [
+          "23",
+          "24",
+          "25",
+          "32",
+          "33"
+        ],
+        "vnom_mv": 9000,
+        "vnom_note-s": "the SKU's negotiated PDO (ADCIN1/2 = 9 V); the part accepts 4-22 V",
+        "vmin_mv": 4000,
+        "vmax_mv": 22000,
+        "i_max_ma": 7000,
+        "i_note-s": "IPP_HV 7 A at TA <= 45 C, 6 A at TA <= 65 C (6.3.1)",
+        "source-o": {
+          "datasheet-s": "tps25730.pdf",
+          "page_n": 9,
+          "table-s": "6.3.1 TPS25730D Recommended Operating Conditions"
+        },
+        "not_stated-o": {
+          "i_step_ma": "not stated (no load-step or transient test in the datasheet)",
+          "ripple_max_mvpp": "not stated"
+        }
+      },
+      {
+        "rail-s": "VIN_3V3",
+        "role-s": "vin_3v3",
+        "pins-as": [
+          "38"
+        ],
+        "vnom_mv": 3300,
+        "vnom_note-s": "the test condition of 6.7 (VVIN_3V3 = 3.3 V); unpowered on this board (optional input)",
+        "vmin_mv": 3000,
+        "vmax_mv": 3600,
+        "i_max_ma": 6,
+        "i_note-s": "IVIN_3V3 active sink 3 typ / 6 max mA (6.7 p12)",
+        "source-o": {
+          "datasheet-s": "tps25730.pdf",
+          "page_n": 9,
+          "table-s": "6.3.1 Recommended Operating Conditions (VIN_3V3 3.0-3.6 V); 6.7 Power Consumption p12"
+        },
+        "not_stated-o": {
+          "i_step_ma": "not stated",
+          "ripple_max_mvpp": "not stated"
+        }
+      },
+      {
+        "rail-s": "LDO_3V3",
+        "role-s": "ldo_3v3",
+        "pins-as": [
+          "1"
+        ],
+        "vnom_mv": 3400,
+        "vnom_note-s": "the internal LDO's output (typ), bypass only: LDO_3V3 is an output of the part",
+        "vmin_mv": 3000,
+        "vmax_mv": 3600,
+        "i_max_ma": 5,
+        "i_note-s": "output current from the VBUS LDO, LDO_3V3 + GPIO sum, 5 mA max (6.3.1 p9); VLDO_3V3 tested 10 uA-18 mA (6.6)",
+        "source-o": {
+          "datasheet-s": "tps25730.pdf",
+          "page_n": 12,
+          "table-s": "6.6 Power Supply Characteristics: VLDO_3V3 3.0 / 3.4 / 3.6 V (VVIN_3V3 = 0, VBUS >= 3.9 V); 6.3.1 IO"
+        },
+        "not_stated-o": {
+          "i_step_ma": "not stated",
+          "ripple_max_mvpp": "not stated"
+        }
+      }
+    ],
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 57.4,
+      "rtheta-jc-top-c-per-w-f": 30.5,
+      "rtheta-jb-c-per-w-f": 21.1,
+      "psi-jt-c-per-w-f": 18.2,
+      "psi-jb-c-per-w-f": 21.1,
+      "rtheta-jc-bot-gnd-c-per-w-f": 1.8,
+      "rtheta-jc-bot-drain-c-per-w-f": 4.6,
+      "tj-max-c-i": 125,
+      "tj-pphv-max-c-i": 150,
+      "source-s": "6.5.1 TPS25730D Thermal Information p11 (sinking through PP_HV); TJ 125 C, TJ_PPHV 150 C (6.3.1 p9)"
+    },
+    "specs-o": {
+      "pd_voltages_v": [
+        5,
+        9,
+        12,
+        15,
+        20
+      ],
+      "pd_voltages_note-s": "fixed PDOs the straps can request (9.2.1 p42: '5V, 9V, 12V, 15V, and 20V up to 5A'); this SKU's straps ask for 9 V only (min = max = 9 V)",
+      "pdo_straps-ao": [
+        { "pd_voltage_mv": 9000, "pin-s": "2", "strap-s": "178k-ldo_3v3", "decoded-i": 1, "fig-s": "Table 8-1 p31 decoding (decoded 1: 0.0229-0.0722); Table 8-3 p35; Tables 8-4/8-5 p36; 178 k / 9.53 k = 0.0508 in stocked E96 values (TI's Figure 9-3 pair 190 k / 9.5 k = 0.0476)", "page_n": 36 },
+        { "pd_voltage_mv": 9000, "pin-s": "2", "strap-s": "9.53k-avss", "decoded-i": 1, "fig-s": "Table 8-1 p31 decoding (decoded 1: 0.0229-0.0722); Table 8-3 p35; Tables 8-4/8-5 p36; 178 k / 9.53 k = 0.0508 in stocked E96 values (TI's Figure 9-3 pair 190 k / 9.5 k = 0.0476)", "page_n": 36 },
+        { "pd_voltage_mv": 9000, "pin-s": "3", "strap-s": "178k-ldo_3v3", "decoded-i": 1, "fig-s": "Table 8-1 p31 decoding (decoded 1: 0.0229-0.0722); Table 8-3 p35; Tables 8-4/8-5 p36; 178 k / 9.53 k = 0.0508 in stocked E96 values (TI's Figure 9-3 pair 190 k / 9.5 k = 0.0476)", "page_n": 36 },
+        { "pd_voltage_mv": 9000, "pin-s": "3", "strap-s": "9.53k-avss", "decoded-i": 1, "fig-s": "Table 8-1 p31 decoding (decoded 1: 0.0229-0.0722); Table 8-3 p35; Tables 8-4/8-5 p36; 178 k / 9.53 k = 0.0508 in stocked E96 values (TI's Figure 9-3 pair 190 k / 9.5 k = 0.0476)", "page_n": 36 },
+        { "pd_voltage_mv": 12000, "pin-s": "2", "strap-s": "NOT STATED: decoded 2, ratio 0.0723-0.1425 (target 0.1074); no pair printed", "decoded-i": 2, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36", "page_n": 36 },
+        { "pd_voltage_mv": 12000, "pin-s": "3", "strap-s": "162k-ldo_3v3", "decoded-i": 3, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; Figure 9-3 p42 R7/R13 pair", "page_n": 36 },
+        { "pd_voltage_mv": 12000, "pin-s": "3", "strap-s": "38k-avss", "decoded-i": 3, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; Figure 9-3 p42 R7/R13 pair", "page_n": 36 },
+        { "pd_voltage_mv": 15000, "pin-s": "2", "strap-s": "162k-ldo_3v3", "decoded-i": 3, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; Figure 9-3 p42 R7/R13 pair", "page_n": 36 },
+        { "pd_voltage_mv": 15000, "pin-s": "2", "strap-s": "38k-avss", "decoded-i": 3, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; Figure 9-3 p42 R7/R13 pair", "page_n": 36 },
+        { "pd_voltage_mv": 15000, "pin-s": "3", "strap-s": "ldo_1v5", "decoded-i": 5, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; decoded 5 = tie to LDO_1V5 (Table 8-1)", "page_n": 36 },
+        { "pd_voltage_mv": 20000, "pin-s": "2", "strap-s": "NOT STATED: decoded 4, ratio 0.2373-0.3671 (target 0.3022); no pair printed", "decoded-i": 4, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36", "page_n": 36 },
+        { "pd_voltage_mv": 20000, "pin-s": "3", "strap-s": "ldo_3v3", "decoded-i": 7, "fig-s": "Table 8-1 p31 decoding; Table 8-3 p35 voltage pairs; Tables 8-4/8-5 p36; decoded 7 = tie to LDO_3V3 (Table 8-1)", "page_n": 36 }
+      ],
+      "pdo_straps_note-s": "one entry per pin and resistor: a divider is two entries (RUP to LDO_3V3, RDOWN to GND); a decoded 0 / 5 / 7 is a single tie (GND / LDO_1V5 / LDO_3V3). 5 V alone is not settable: ADCIN2 has no 5 V setting (Table 8-5); the lowest window is 5-9 V (ADCIN1 0, ADCIN2 1). The 12 / 15 V entries keep TI's printed 162 k / 38 k pair (decoded 3); 38 k is not an E96 value (38.3 k keeps 0.191, inside 0.1425-0.2372).",
+      "sink_current_strap-s": "ADCIN3 decoded 2 + ADCIN4 decoded 1 = 2 A operating / 3 A maximum (Table 8-6 p37)",
+      "iout_max_ma": 7000,
+      "iout_max_note-s": "VBUS_IN to PPHV 7 A continuous at TA <= 45 C, 6 A at TA <= 65 C (6.3.1 p9); PD request up to 5 A (Table 8-6)",
+      "vbus_max_mv": 22000,
+      "vbus_abs_max_mv": 28000,
+      "vbus_note-s": "ROC 4-22 V (6.3.1 p9); abs max 28 V on VBUS_IN / VBUS / PPHV (6.1 p8, note 4: a TVS breaking down between 22 V and 28 V, such as TVS2200, is recommended)",
+      "cc_rd_internal_b": true,
+      "cc_rd_note-s": "integrated Rd: RSNK 4.1-6.1 kohm (6.11 p15), dead-battery Rd included (Features p1): no external 5.1 k",
+      "cc_abs_max_mv": 26000,
+      "cc_rec_max_mv": 5500,
+      "ron_pphv_mohm-ao": [
+        { "tj_c": 25, "typ": 16, "max": 19 },
+        { "tj_c": 125, "typ": 24, "max": 29 },
+        { "tj_c": 150, "typ": 27, "max": 32 }
+      ],
+      "ron_source-s": "6.8 RPPHV p12, IPPHV 6.5 A",
+      "soft_start_v_per_ms": "2.8 / 3.3 / 3.8 (6.8 p12)",
+      "cpphv_uf": "nom 47, max 100 at 25 V rating (6.4 p10; USB PD cSnkBulkPd 100 uF max total on the sink after a contract, which includes the buck's input caps); Figure 9-3 lays 22 + 22 + 10 uF",
+      "cvbus_uf": "1 / 4.7 / 10 at 25 V rating (6.4 p10)",
+      "ccc_pf": "200 / 400 / 480 per CC pin incl. all capacitance to the receptacle, 6.3 V rating (6.4 p10); Figure 9-3: 330 pF",
+      "cldo_3v3_uf": "5 / 10 / 25, 6.3 V (6.4 p10)",
+      "cldo_1v5_uf": "4.5 / - / 12, 4 V (6.4 p10); Figure 9-3: 4.7 uF",
+      "schottky_note-s": "TI recommends a Schottky diode from VBUS to ground against cable-inductance ground currents at sudden disconnect (8.5 p39); part not named",
+      "i2c_address-s": "0x21 with ADCIN1 = 1 (Table 8-3 p35)",
+      "layout_note-s": "CC caps on the same side as the part, no via between CC pin and cap (9.4.1.3 p49); VBUS >= 6 vias, VBUS_IN and PPHV 15 vias each, 8 mil hole / 16 mil pad (9.4.1.4 p49); DRAIN pads unconnected",
+      "not_stated-o": {
+        "fault_in_pullup-s": "FAULT_IN's level when left floating is not stated; held high here per its pin description",
+        "sink_en_pullup-s": "SINK_EN pull-up value not stated",
+        "dead_battery-s": "8.3.2 says the VIN_3V3 switch stays open until a host clears the dead-battery flag over I2C; standalone operation runs from the VBUS LDO, as the Description p1 ('no need for ... an external microcontroller') and Figures 9-1/9-2 (VIN_3V3 optional) intend"
+      },
+      "ambient_note-s": "TA -40 to 65 C with IPP_HV <= 6 A, to 45 C at 7 A (6.3.1 p9)",
+      "on-resistance-max-mohm-i": 32,
+      "on-resistance-mohm-i": 16,
+      "on-resistance_note-s": "VBUS_IN -> PPHV, IPPHV 6.5 A (6.8 RPPHV p12): typ 16 / max 19 mohm at TJ_PPHV 25 C, 24 / 29 at 125 C, 27 / 32 at 150 C; the max field holds the worst stated max (150 C, the switch's operating TJ limit)"
+    },
+    "sku-note-s": "Strap setting of the TPS25730DREFR: 9 V fixed PDO (ADCIN1 = ADCIN2 = decoded 1, 178 k / 9.53 k each), 2 A operating / 3 A maximum (ADCIN3 decoded 2 178 k / 21.5 k, ADCIN4 decoded 1 178 k / 9.53 k), standalone (I2C grounded, no VIN_3V3 supply), FAULT_IN held high. Made for the USB-C 9 V -> 7 V / 2 A supply (architect request, 2026-10-26). Other PDOs: specs-o pdo_straps-ao. Strap resistors: RC0402FR-07178KL, RC0402FR-079K53L, RC0402FR-0721K5L (all in ltl.db, stocked).",
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tps25730.pdf https://www.ti.com/lit/ds/symlink/tps25730.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

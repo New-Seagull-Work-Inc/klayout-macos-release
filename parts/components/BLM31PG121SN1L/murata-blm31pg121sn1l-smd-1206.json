@@ -1,0 +1,40 @@
+{
+  "component-o": {
+    "type-s": "ferrite-bead",
+    "vendor-s": "Murata",
+    "description-s": "120 Ω @ 100 MHz ±25% ferrite bead, 3.2×1.6 mm SMD, 3500 mA @ 85°C, 0.02 Ω DC resistance max",
+    "package-ao": [
+      { "ptype-s": "smd-1206" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "ferrite-bead"
+    ],
+    "passive-o": {
+      "value-i": 20,
+      "value-unit-s": "r",
+      "current-max-i": 3500,
+      "tolerance-pct-x10": 250,
+      "lead-style-s": "smd"
+    },
+    "part-s": "BLM31PG121SN1L",
+    "specs-o": {
+      "impedance_ohm": 120,
+      "impedance_test_mhz": 100,
+      "dcr_mohm": 20,
+      "impedance_source-o": {
+        "datasheet-s": "BLM31PG121SN1L.pdf (Murata reference specification JENF243A_0006AC-01)",
+        "page_n": 1,
+        "table-s": "3. Part Number and Rating, BLM31PG121SN1L: Impedance at 100 MHz 120 Ohm +/-25%; Rated current 3500 mA at 85 C / 2000 mA at 125 C; DC resistance 0.02 Ohm max initial value (0.04 Ohm after testing)"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "BLM31PG121SN1L.pdf https://datasheet.lcsc.com/datasheet/pdf/9525287731f5c8248563a4f23e44cad3.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

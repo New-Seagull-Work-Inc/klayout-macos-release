@@ -1,0 +1,60 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Vishay",
+    "part-s": "IHLP5050FDER2R2M01",
+    "description-s": "2.2 uH ±20% shielded composite power inductor, IHLP-5050FD-01, 13.2 x 12.9 x 6.4 mm max, DCR 4.2 mOhm max / 3.5 typ, Isat 40 A typ (-20 % L), heat rating 22 A typ (40 C rise)",
+    "package-ao": [
+      { "ptype-s": "smd-13.2x12.9" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor-shielded"
+    ],
+    "specs-o": {
+      "isat_typ_ma_i": 40000,
+      "isat_drop_pct_i": 20,
+      "irms_ma_i": 22000,
+      "irms_rise_c_i": 40,
+      "dcr_mohm": 4.2,
+      "dcr_typ_mohm": 3.5,
+      "l_test-s": "100 kHz, 0.25 V, 0 A",
+      "height_mm": 6.4,
+      "rated_voltage_mv_i": 75000,
+      "fmax_mhz_i": 5,
+      "source-o": {
+        "datasheet-s": "ihlp5050fd-01.pdf",
+        "document-s": "Vishay IHLP-5050FD-01, Document Number 34123, Revision 07-Oct-2026",
+        "page_n": 1,
+        "table-s": "STANDARD ELECTRICAL SPECIFICATIONS row 2.2 uH: DCR typ 3.5 / max 4.2 mOhm (25 C), heat rating current 22 A DC typ (note 1: approx. 40 C rise), saturation current 40 A DC typ (note 2: L0 drops approx. 20 %); DIMENSIONS: 0.520 +/- 0.02 in [13.2 +/- 0.5 mm], 0.508 in [12.9 mm] max, height 0.252 in [6.4 mm] max; rated operating voltage 75 V; frequency range up to 5.0 MHz"
+      },
+      "isat_ma_i": 40000,
+      "isat_basis-s": "Vishay states saturation current as typical only (40 A DC typ, L0 down about 20 %, p1); isat_ma_i carries that typical figure, 2.3x the TPS61288 17.1 A max current limit"
+    },
+    "passive-o": {
+      "esr-mr-i": 4,
+      "lead-style-s": "smd",
+      "value-i": 2200,
+      "value-unit-s": "nh",
+      "current-max-i": 22000,
+      "tolerance-pct-x10": 200
+    },
+    "esr_note-s": "esr-mr-i is the integer of the 4.2 mOhm max DCR",
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "ihlp5050fd-01.pdf https://www.vishay.com/docs/34123/ihlp5050fd-01.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

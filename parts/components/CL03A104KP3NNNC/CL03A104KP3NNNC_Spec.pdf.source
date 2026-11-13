@@ -1,0 +1,3 @@
+url: https://weblib.samsungsem.com/mlcc/mlcc-ec-data-sheet.do?partNumber=CL03A104KP3NNN
+how: the page's own "Specsheet" button flow (POST /mlcc/findFileYn.do, then POST /mlcc/downloadFile.do masterKey=CL03A104KP3NNN type=specsheet, with the session cookie and CSRF token the page itself issues; no bot check, no altered headers); served as SpecSheet_CL03A104KP3NNN_20261106.pdf. Samsung spec reference sheet, English.
+retrieved: 2026-11-05

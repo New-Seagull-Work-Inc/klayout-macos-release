@@ -1,0 +1,197 @@
+{
+  "component-o": {
+    "specs-o": {
+      "not_stated-o": {
+        "vref_mv": "no feedback reference: the charge voltage is chosen by the VSET resistor from a fixed table (3.5-8.4 V, p3 Pin Functions), not by a divider; charge-voltage regulation -0.5 / +0.5 % at TJ 25 C, all VSET settings (p6)",
+        "ripple_max_mvpp": "no input ripple limit stated; IN range 3.0-18 V (6.3 ROC p4)"
+      }
+    },
+    "type-s": "battery-charger-ic",
+    "vendor-s": "Texas Instruments",
+    "description-s": "Automotive 1-2 cell Li-Ion/LiFePO4, 1-6 cell NiMH linear charger, 800 mA max, 3-18 V input, resistor-programmable current and voltage, VSON-10",
+    "package-ao": [
+      { "ptype-s": "VSON" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "battery-charger-linear"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-batt-rxtx"
+    ],
+    "voltages-ao": [
+      { "vin_min": 3000 },
+      { "vin_max": 18000 },
+      { "vin_abs_max": 40000 }
+    ],
+    "max_currents-ao": [
+      { "charge_max": 800 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "in" },
+      { "2": "iset" },
+      { "3": "ce" },
+      { "4": "ts" },
+      { "5": "gnd" },
+      { "6": "chm_tmr" },
+      { "7": "stat1" },
+      { "8": "stat2" },
+      { "9": "vset" },
+      { "10": "out" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "1": "1uf-avss" },
+      { "10": "ds-batt-rxtx" },
+      { "10": "1uf-avss" },
+      { "5": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "2": "iset" },
+      { "2c": "fast charge current ICHG = KISET / RISET where KISET = 300 AΩ typical; range 375 Ω (800 mA) to 30 kΩ (10 mA); precharge = 20% ICHG; termination = 10% ICHG" },
+      { "2": "549r-avss" },
+      { "6": "chm_tmr" },
+      { "6c": "chemistry and safety timer: 100k for Li+ 5 hr, 82k for Li+ 10 hr, 62k for Li+ timer disable, 36k for NiMH 4 hr, 27k for NiMH 6 hr, 24k for NiMH 8 hr, 18k for NiMH 10 hr, 15k for NiMH 12 hr, 11k for NiMH 14 hr, 8.2k for NiMH 16 hr, 6.2k for NiMH 18 hr, 4.7k for NiMH 20 hr, 3.6k for NiMH 22 hr" },
+      { "6": "82k-avss" },
+      { "9": "vset" },
+      { "9c": "regulation voltage: 100k for 1s LiFePO4 3.50 V, 82k for 1s LiFePO4 3.60 V, 62k for 1s LiFePO4 3.70 V, 47k for 1s Li-Ion 3.80 V, 36k for 1s Li-Ion 3.90 V, 27k for 1s Li-Ion 4.05 V, 24k for 1s Li-Ion 4.10 V, 18k for 1s Li-Ion 4.20 V, 15k for 1s Li-Ion 4.35 V, 11k for 2s LiFePO4 7.00 V, 8.2k for 2s LiFePO4 7.20 V, 6.2k for 2s LiFePO4 7.40 V, 4.7k for 2s Li-Ion 8.20 V, 3.6k for 2s Li-Ion 8.40 V" },
+      { "9": "18k-avss" },
+      { "4": "ts" },
+      { "4c": "NTC thermistor input, connect 10k NTC (103AT-2 recommended) from TS to GND for temperature monitoring; if not used connect 10k resistor to GND" },
+      { "4": "10k-avss" },
+      { "3": "ce" },
+      { "3c": "active low charge enable; pull low to enable charging, high to disable; internal pull-down enables by default if floating" },
+      { "7": "stat1" },
+      { "7c": "open-drain status output, pull up via 10k to VREF or VIN" },
+      { "7": "10k-in" },
+      { "8": "stat2" },
+      { "8c": "open-drain status output, pull up via 10k to VREF or VIN" },
+      { "8": "10k-in" }
+    ],
+    "charger-o": {
+      "chemistry-s": "lithium-ion",
+      "chemistries-as": [
+        "lithium-ion",
+        "lithium-polymer",
+        "lifepo4",
+        "nimh"
+      ],
+      "cells-i": 2,
+      "topology-s": "linear",
+      "vin-min-mv-i": 3000,
+      "vin-max-mv-i": 18000,
+      "vin-abs-max-mv-i": 40000,
+      "input-ovp-mv-i": 18400,
+      "input-uvlo-mv-i": 3090,
+      "charge-voltage-mv-i": 4200,
+      "charge-voltage-accuracy-pct-x10-i": 5,
+      "charge-voltage-selectable-b": true,
+      "charge-voltage-settings-ao": [
+        { "chemistry-s": "lifepo4", "cells-i": 1, "charge-voltage-mv-i": 3500, "strap-s": "VSET 100k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lifepo4", "cells-i": 1, "charge-voltage-mv-i": 3600, "strap-s": "VSET 82k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lifepo4", "cells-i": 1, "charge-voltage-mv-i": 3700, "strap-s": "VSET 62k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 3800, "strap-s": "VSET 47k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 3900, "strap-s": "VSET 36k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 4050, "strap-s": "VSET 27k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 4100, "strap-s": "VSET 24k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 4200, "strap-s": "VSET 18k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 1, "charge-voltage-mv-i": 4350, "strap-s": "VSET 15k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lifepo4", "cells-i": 2, "charge-voltage-mv-i": 3500, "strap-s": "VSET 11k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lifepo4", "cells-i": 2, "charge-voltage-mv-i": 3600, "strap-s": "VSET 8.2k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lifepo4", "cells-i": 2, "charge-voltage-mv-i": 3700, "strap-s": "VSET 6.2k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 2, "charge-voltage-mv-i": 4100, "strap-s": "VSET 4.7k to GND (Li+ CHM_TMR configuration)" },
+        { "chemistry-s": "lithium-ion", "cells-i": 2, "charge-voltage-mv-i": 4200, "strap-s": "VSET 3.6k to GND (Li+ CHM_TMR configuration)" }
+      ],
+      "charge-voltage-source-o": {
+        "doc-s": "SLUSDK0A (BQ25171QWDRCRQ1.pdf)",
+        "page-i": 18,
+        "quote-s": "Table 7-2. VSET Pin Resistor Value Table: 82 kΩ 1-cell LiFePO4: 3.60 V",
+        "note-s": "2-cell rows are the table's pack voltages (7.00/7.20/7.40, 8.20/8.40 V) divided per cell. VSET resistor +/-1 % (p4). Regulation accuracy -0.8/+0.8 % over Tj -40..125 C, -0.5/+0.5 % at 25 C (p6); the record's charge-voltage-accuracy-pct-x10-i 5 is the 25 C figure. The 1-cell LiFePO4 3.60 V setting (82k) suits a 3.65 V charge-max cell."
+      },
+      "charge-current-max-ma-i": 800,
+      "charge-current-min-ma-i": 10,
+      "charge-current-programmable-b": true,
+      "charge-current-accuracy-pct-x10-i": 100,
+      "precharge-b": true,
+      "precharge-threshold-mv-i": 2800,
+      "precharge-current-pct-x10-i": 200,
+      "termination-current-pct-x10-i": 100,
+      "recharge-threshold-mv-i": 100,
+      "power-path-b": false,
+      "otg-boost-b": false,
+      "ntc-thermistor-b": true,
+      "jeita-b": false,
+      "safety-timer-b": true,
+      "safety-timer-min-i": 600,
+      "thermal-regulation-b": true,
+      "thermal-regulation-c-i": 125,
+      "charge-enable-b": true,
+      "status-outputs-i": 2,
+      "status-output-type-s": "open-drain",
+      "host-interface-s": "none",
+      "integrated-protection-b": false,
+      "quiescent-current-ua-i": 600,
+      "battery-leakage-ua-i": 600
+    },
+    "part-s": "BQ25171QWDRCRQ1",
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "vnom_mv": 5000,
+        "vnom_source-o": {
+          "datasheet-s": "BQ25171QWDRCRQ1.pdf",
+          "page_n": 25,
+          "table-s": "8.2.1.1 Design Requirements: Supply voltage = 5 V (8.2.1.2: the input voltage is 5 V); range 3.0-18 V from 6.3 Recommended Operating Conditions (p4), whose NOM column is empty"
+        },
+        "i_max_ma": 880.6,
+        "i_source-o": {
+          "datasheet-s": "BQ25171QWDRCRQ1.pdf",
+          "page_n": 7,
+          "table-s": "6.5 Electrical Characteristics: ICHG at RISET = 375 ohm 880 mA max (p7); IQ_IN 0.6 mA max, IN = 5 V or 14 V, CE low (p6)",
+          "derived-s": "IN current while charging = charge current passed IN to OUT + IN quiescent current: 880 + 0.6 = 880.6 mA at the part's largest charge setting (6.3 IOUT max 0.8 A, p4)"
+        },
+        "i_step_ma": 880,
+        "i_step_source-o": {
+          "datasheet-s": "BQ25171QWDRCRQ1.pdf",
+          "page_n": 7,
+          "table-s": "6.5 Electrical Characteristics: ICHG_RANGE 10-800 mA; ICHG at RISET = 375 ohm (the 800 mA setting) 720 / 800 / 880 mA; IQ_IN 0.45 / 0.6 mA (p6)",
+          "derived": "a linear charger passes its charge current from IN to OUT, so the step on IN when charging starts is ICHG: Figure 8-5 Charge Enable (p27) shows IBAT stepping from 0 to ICHG as CE goes low (Figure 8-2, p27: the same at power-up with a battery). The largest ICHG the part is specified to regulate is 880 mA max at the 800 mA setting (p7). A board's own RISET sets less: the record's cfgpins 549 ohm gives KISET 270-330 AOhm / 549 = 492-601 mA. IQ_IN (0.6 mA max) is a constant bias, not counted"
+        },
+        "role-s": "in",
+        "pins-as": [
+          "1"
+        ],
+        "vmin_mv": 3000,
+        "vmax_mv": 18000,
+        "source-o": {
+          "datasheet-s": "BQ25171QWDRCRQ1.pdf",
+          "page_n": 4,
+          "table-s": "6.3 Recommended Operating Conditions"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "bq25171-q1.pdf https://www.ti.com/lit/gpn/bq25171-q1"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Vishay",
+    "part-s": "CRCW060313K3FKEA",
+    "description-s": "13.3 kΩ ±1% 0.1 W thick film chip resistor, 0603, CRCW-e3",
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "resistor"
+    ],
+    "passive-o": {
+      "value-i": 13300000,
+      "value-unit-s": "ohm",
+      "power-mw-i": 100,
+      "voltage-max-i": 75000,
+      "tolerance-pct-x10": 10,
+      "lead-style-s": "smd"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "dcrcwe3.pdf https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

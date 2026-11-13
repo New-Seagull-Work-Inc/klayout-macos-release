@@ -1,0 +1,66 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Microdiode Semiconductor",
+    "part-s": "DSK310",
+    "description-s": "3 A 100 V Schottky barrier rectifier, 850 mV VF max, SOD-123FL",
+    "package-ao": [
+      { "ptype-s": "smd-sod-123fl" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "passive-o": {
+      "voltage-max-i": 100000,
+      "current-max-i": 3000,
+      "lead-style-s": "smd"
+    },
+    "specs-o": {
+      "forward_ma": 3000,
+      "forward_source-o": {
+        "datasheet-s": "DSK32-DSK320.pdf",
+        "page_n": 1,
+        "table-s": "Maximum Ratings And Electrical Characteristics: Maximum average forward rectified current I(AV) at TL (see fig.1) 3.0 A, all DSK32-DSK320"
+      },
+      "dynamic_resistance_mohm": 162,
+      "dynamic_resistance_source-o": {
+        "datasheet-s": "DSK32-DSK320.pdf",
+        "page_n": 2,
+        "table-s": "Fig.3 Typical Forward Characteristic, DSK38-DSK310 curve (dark short-dash, third from the left; legend matched on a render, and its 3 A point at ~0.82 V agrees with VF 0.85 V max at 3 A, p1). Vector curve read with procurement pdf-graph; log current axis",
+        "derived": "curve vertices 0.52843 V at 0.42126 A and 0.62046 V at 0.99019 A: (0.62046 - 0.52843) V / (0.99019 - 0.42126) A = 0.09203 / 0.56893 = 162 mOhm over ~0.4-1.0 A. Next span 0.65285 A (0.57015 V) -> 1.469 A (0.67877 V) = 0.10862 / 0.81615 = 133 mOhm; it falls with current. Typical curve, TJ not printed (ratings at 25 C)"
+      },
+      "cj_pf": 160,
+      "cj_source-o": {
+        "datasheet-s": "DSK32-DSK320.pdf",
+        "page_n": 1,
+        "table-s": "Maximum Ratings And Electrical Characteristics: Typical junction capacitance CJ 250 pF (DSK32-DSK34) / 160 pF (DSK35-DSK320, the DSK310 column group; Fig.4 p2 groups them the same way); Note 1: measured at 1 MHz and 4.0 V reverse"
+      }
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 850,
+      "ir-ua-i": 300
+    },
+    "source-o": {
+      "datasheet-s": "DSK32-DSK320.pdf",
+      "revision-s": "Rev:2025A5",
+      "page_n": 1,
+      "table-s": "Maximum Ratings And Electrical Characteristics, DSK310 column: VRRM 100 V, I(AV) 3.0 A, VF 0.85 V max at 3.0 A, IR 0.3 mA max at 25 C (5.0 mA at 100 C)",
+      "polarity-s": "Page 1, Mechanical Data: \"Color band denotes cathode end\"; the SOD-123FL outline on the same page draws the band at one end. The datasheet does not number the terminals. Pin 1 = cathode is the footprint's numbering (footprints/DSK310.pretty: pad 1 at x = -1.63 mm, silkscreen bar at x = -0.72 mm on the pad-1 side; DSK310.kicad_sym pin 1 = C), so the part's band goes over the silkscreen bar.",
+      "land-pattern-s": "Page 3, Suggested Pad Layout: pads 1.2 x 1.2 mm, 3.2 mm centre to centre, 2.0 mm gap, 4.4 mm overall. The footprint's pads are 1.2 x 1.2 mm at 3.26 mm centres."
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "DSK310.pdf https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6537/3372_DSK310W000S100.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

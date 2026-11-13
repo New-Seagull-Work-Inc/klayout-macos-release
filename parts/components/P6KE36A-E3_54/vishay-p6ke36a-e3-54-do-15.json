@@ -1,0 +1,75 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Vishay Semiconductors",
+    "part-s": "P6KE36A-E3/54",
+    "description-s": "30.8 V standoff unidirectional TVS, 600 W (10/1000 us), VBR 34.2-37.8 V, VC 49.9 V at 12.0 A, DO-15 (DO-204AC)",
+    "package-ao": [
+      { "ptype-s": "do-15" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 30800,
+      "breakdown-voltage-min-mv-i": 34200,
+      "breakdown-voltage-max-mv-i": 37800,
+      "clamping-voltage-mv-i": 49900,
+      "peak-pulse-current-a-i": 12,
+      "peak-pulse-power-w-i": 600,
+      "pulse-waveform-s": "10/1000us",
+      "reverse-leakage-ua-i": 1
+    },
+    "temperatures-ao": [
+      {
+        "junction-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      }
+    ],
+    "sources-o": {
+      "tvs-o": {
+        "datasheet-s": "p6ke.pdf",
+        "page_n": 2,
+        "table-s": "Electrical Characteristics row (+)P6KE36A: VBR 34.2 / 37.8 V at IT 1.0 mA, VWM 30.8 V, ID 1.0 uA at VWM, IPPM 12.0 A, VC 49.9 V at IPPM"
+      },
+      "tvs-o.peak-pulse-power-w-i": {
+        "datasheet-s": "p6ke.pdf",
+        "page_n": 1,
+        "table-s": "Maximum Ratings: PPPM 600 W with a 10/1000 us waveform"
+      },
+      "temperatures-ao": {
+        "datasheet-s": "p6ke.pdf",
+        "page_n": 1,
+        "table-s": "Maximum Ratings: operating junction and storage temperature range -55 to +175 C"
+      }
+    },
+    "source-o": {
+      "datasheet-s": "p6ke.pdf",
+      "revision-s": "Document Number 88369, Revision 27-Sep-2021",
+      "page_n": 2,
+      "polarity-s": "KiCad diode footprints number the cathode pad 1 (the band end), so pin 1 = cathode, pin 2 = anode; the datasheet marks the cathode with the band (unidirectional)"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "p6ke.pdf https://www.vishay.com/docs/88369/p6ke.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

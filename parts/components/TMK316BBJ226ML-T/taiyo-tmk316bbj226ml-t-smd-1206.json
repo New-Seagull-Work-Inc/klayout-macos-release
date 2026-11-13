@@ -1,0 +1,58 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 3.49,
+      "esl_ph": 427,
+      "srf_mhz": 1.4575,
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 103.5 },
+        { "v_mv": 1800, "c_pct": 100.8 },
+        { "v_mv": 2500, "c_pct": 95.9 },
+        { "v_mv": 3300, "c_pct": 88.9 },
+        { "v_mv": 5000, "c_pct": 73 },
+        { "v_mv": 6300, "c_pct": 62 },
+        { "v_mv": 10000, "c_pct": 39.7 },
+        { "v_mv": 12000, "c_pct": 32 },
+        { "v_mv": 16000, "c_pct": 22 },
+        { "v_mv": 20000, "c_pct": 16.2 },
+        { "v_mv": 25000, "c_pct": 12.3 }
+      ],
+      "esr_esl_dc_bias_source-s": "Taiyo Yuden TY-COMPAS standard model for MSAST31LBB5226MTNA01 (the renamed TMK316BBJ226ML-T, per TY's rename notice): ESR at SRF, ESL at 10x SRF; DC bias (conditions not stated), read 2026-10-21"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Taiyo Yuden",
+    "part-s": "TMK316BBJ226ML-T",
+    "description-s": "22 uF ±20% 25 V X5R 1206 MLCC",
+    "height_mm_f": 1.9,
+    "height_source-o": {
+      "datasheet-s": "taiyo-yuden-tmk316bbj226ml.pdf",
+      "page_n": 1,
+      "table-s": "Taiyo Yuden spec sheet MLAST31LBB5226MTNA01 (previous PN TMK316BBJ226ML-T), External Dimensions: Dimension T 1.6 ±0.30 mm (p2 also states t=1.9mm MAX)",
+      "derived-s": "max = nominal + tolerance: 1.6 + 0.30 = 1.9 mm"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-1206" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 22000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "taiyo-yuden-tmk316bbj226ml.pdf http://datasheet.octopart.com/TMK316BBJ226ML-T-Taiyo-Yuden-datasheet-182120888.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

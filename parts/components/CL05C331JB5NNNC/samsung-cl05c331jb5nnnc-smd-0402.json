@@ -1,0 +1,95 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL05C331JB5NNNC",
+    "description-s": "330 pF ±5% 50 V C0G (NP0) 0402 multilayer ceramic capacitor (MLCC), SMD, 1.0 x 0.5 x 0.5 mm, -55~125 degC; USB-C CC filter cap (TPS25730 CCCy 200-480 pF)",
+    "specs-o": {
+      "source-s": "Samsung Electro-Mechanics product page product.samsungsem.com/mlcc/CL05C331JB5NNN.do, read 2026-10-26: C0G(-55 ~ +125), 330.0 pF, ±5 %, 50.0 Vdc, 0402 (1005) 1.00 x 0.50 x 0.50 mm, Mass Production"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 330,
+      "value-unit-s": "pf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g"
+    },
+    "impedance-o": {
+      "z_curve-ao": [
+        { "f_mhz": 10, "z_ohm": 48.21, "r_ohm": 0.02789, "x_ohm": -48.21 },
+        { "f_mhz": 12.57, "z_ohm": 38.34, "r_ohm": 0.02804, "x_ohm": -38.34 },
+        { "f_mhz": 15.8, "z_ohm": 30.49, "r_ohm": 0.02829, "x_ohm": -30.49 },
+        { "f_mhz": 19.86, "z_ohm": 24.24, "r_ohm": 0.02867, "x_ohm": -24.24 },
+        { "f_mhz": 24.97, "z_ohm": 19.26, "r_ohm": 0.02927, "x_ohm": -19.26 },
+        { "f_mhz": 31.39, "z_ohm": 15.3, "r_ohm": 0.03017, "x_ohm": -15.3 },
+        { "f_mhz": 39.46, "z_ohm": 12.14, "r_ohm": 0.03152, "x_ohm": -12.14 },
+        { "f_mhz": 49.61, "z_ohm": 9.617, "r_ohm": 0.03349, "x_ohm": -9.617 },
+        { "f_mhz": 62.36, "z_ohm": 7.603, "r_ohm": 0.03624, "x_ohm": -7.603 },
+        { "f_mhz": 80.41, "z_ohm": 5.832, "r_ohm": 0.04033, "x_ohm": -5.832 },
+        { "f_mhz": 101.1, "z_ohm": 4.566, "r_ohm": 0.04492, "x_ohm": -4.566 },
+        { "f_mhz": 127.1, "z_ohm": 3.542, "r_ohm": 0.05015, "x_ohm": -3.542 },
+        { "f_mhz": 159.7, "z_ohm": 2.706, "r_ohm": 0.05574, "x_ohm": -2.706 },
+        { "f_mhz": 200.8, "z_ohm": 2.015, "r_ohm": 0.06151, "x_ohm": -2.014 },
+        { "f_mhz": 252.4, "z_ohm": 1.431, "r_ohm": 0.0676, "x_ohm": -1.429 },
+        { "f_mhz": 317.3, "z_ohm": 0.9232, "r_ohm": 0.07459, "x_ohm": -0.9202 },
+        { "f_mhz": 398.9, "z_ohm": 0.4667, "r_ohm": 0.08364, "x_ohm": -0.4591 },
+        { "f_mhz": 501.4, "z_ohm": 0.09881, "r_ohm": 0.09685, "x_ohm": -0.01959 },
+        { "f_mhz": 630.3, "z_ohm": 0.4437, "r_ohm": 0.1194, "x_ohm": 0.4273 },
+        { "f_mhz": 792.4, "z_ohm": 0.942, "r_ohm": 0.177, "x_ohm": 0.9252 },
+        { "f_mhz": 996.1, "z_ohm": 1.432, "r_ohm": 0.4339, "x_ohm": 1.364 },
+        { "f_mhz": 1252, "z_ohm": 1.894, "r_ohm": 0.4191, "x_ohm": 1.847 },
+        { "f_mhz": 1574, "z_ohm": 2.274, "r_ohm": 0.7903, "x_ohm": 2.132 },
+        { "f_mhz": 1979, "z_ohm": 2.737, "r_ohm": 0.5259, "x_ohm": 2.686 },
+        { "f_mhz": 2487, "z_ohm": 3.564, "r_ohm": 0.5245, "x_ohm": 3.526 },
+        { "f_mhz": 3127, "z_ohm": 4.534, "r_ohm": 0.5793, "x_ohm": 4.497 },
+        { "f_mhz": 4032, "z_ohm": 5.847, "r_ohm": 0.6549, "x_ohm": 5.81 },
+        { "f_mhz": 5068, "z_ohm": 7.316, "r_ohm": 0.7273, "x_ohm": 7.28 },
+        { "f_mhz": 6371, "z_ohm": 9.142, "r_ohm": 0.8051, "x_ohm": 9.106 },
+        { "f_mhz": 8009, "z_ohm": 11.42, "r_ohm": 0.8928, "x_ohm": 11.38 },
+        { "f_mhz": 10070, "z_ohm": 14.26, "r_ohm": 0.9938, "x_ohm": 14.23 },
+        { "f_mhz": 12660, "z_ohm": 17.81, "r_ohm": 1.108, "x_ohm": 17.78 },
+        { "f_mhz": 15910, "z_ohm": 22.24, "r_ohm": 1.229, "x_ohm": 22.21 },
+        { "f_mhz": 20000, "z_ohm": 27.79, "r_ohm": 1.348, "x_ohm": 27.75 }
+      ],
+      "impedance_ohm": 4.62,
+      "impedance_test_mhz": 100,
+      "srf_mhz": 506.6,
+      "c_lf_nf": 0.3301,
+      "esr_mohm": 96.8,
+      "esl_ph": 221,
+      "source-o": {
+        "s2p-s": "CL05C331JB5NNN_Series_Precise_DC0V_25degC.s2p",
+        "fixture-s": "series",
+        "z0_ohm": 50,
+        "f_min_mhz": 10,
+        "f_max_mhz": 20000,
+        "url-s": "https://weblib.samsungsem.com/resources/file/support/software_library/Samsung_MLCC_Precise_s2p.zip (Samsung Electro-Mechanics S-parameter library, Precise model: General/Features Normal/Temperature_compensating/0402in_1005mm/CL05C331JB5NNN_Series_Precise_DC0V_25degC.s2p; 0 V DC, 25 degC)",
+        "retrieved-s": "2026-10-28"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "CL05C331JB5NNN_Series_Precise_DC0V_25degC.s2p https://weblib.samsungsem.com/resources/file/support/software_library/Samsung_MLCC_Precise_s2p.zip"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

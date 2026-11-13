@@ -1,0 +1,93 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "subtype-s": "io-header-jack",
+    "vendor-s": "Molex",
+    "part-s": "22-28-4020",
+    "description-s": "KK 254 breakaway header, vertical, 2 circuits, 2.54 mm, tin. As a power header: 1 V, 2 GND; as an LED link: 1 LED drive (anode), 2 return (cathode, ground).",
+    "package-ao": [
+      { "ptype-s": "header-1x2-2.54mm-vertical-tht" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "header"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx",
+      "ds-led-rxtx",
+      "ds-ir_led-rxtx"
+    ],
+    "pins-ao": [
+      { "1": "V" },
+      { "2": "GND" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rxtx" },
+      { "1": "ds-led-a" },
+      { "1": "ds-ir_led-a" },
+      { "2": "dvss" },
+      { "2": "ds-led-c" },
+      { "2": "ds-ir_led-c" }
+    ],
+    "connector-o": {
+      "pin_count_i": 2,
+      "rows_i": 1,
+      "gender_s": "male",
+      "orientation_s": "vertical",
+      "mount_s": "through-hole",
+      "contact_plating_s": "tin",
+      "locking_b": false,
+      "shielded_b": false,
+      "mate-o": {
+        "part_s": "22-01-3027",
+        "model_s": "footprints/22-28-4020.3dshapes/22-28-4020-mate.step",
+        "offset_mm_af": [
+          0,
+          0,
+          0
+        ],
+        "rotate_deg_af": [
+          0,
+          0,
+          0
+        ],
+        "keepout_mm_af": [
+          -3.3,
+          -2.9,
+          3.3,
+          2.9
+        ],
+        "height_mm_f": 30.24,
+        "z_min_mm_f": 0,
+        "frame_s": "the board connector's footprint frame; the model is built there, so offset and rotation are zero",
+        "source_s": "Molex 26950000-SD (2695 / 22-01-3027): 2-circuit housing 5.64 x 4.82 x 12.7 mm seated on the header's 2.54 mm base; two 22 AWG wires (1.57 mm insulation) 15 mm up"
+      },
+      "family_s": "kk-254",
+      "courtyard_area_mm2_f": 12.9,
+      "board_area_mm2_f": 38.3,
+      "board_area_note_s": "bounding rect of courtyard and mate keepout",
+      "fields_source_s": "current: KK 254 4.0 A per contact with 22 AWG on 2759 terminals (Nexar maker spec), voltage 250 V; current 4.0 A per contact: Molex KK 254 system spec (22-28-4020-system-spec.pdf) 'Current: 4.0A' (22 AWG 4.00 A, 24 AWG 3.75 A); the header's own rating, a brass-terminal harness is 2.5 A",
+      "pitch_mm_f": 2.54,
+      "current_per_pin_ma_i": 4000,
+      "voltage_max_v_f": 250,
+      "contact_resistance_mohm": 20,
+      "contact_resistance_source-o": {
+        "document-s": "Molex KK 254 catalog MX01 C-119, series 42375",
+        "url-s": "https://datasheet.octopart.com/22-28-4020-Molex-datasheet-7285279.pdf",
+        "page_n": 2,
+        "rating-s": "20 milliohm maximum per mated contact, matched KK system; not a bare-pin resistance measurement",
+        "local-pdf-s": "22-28-4020-system-spec.pdf",
+        "checked-s": "2026-11-04"
+      },
+      "contact_not_stated-o": {}
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "22-28-4020.pdf https://datasheet.lcsc.com/datasheet/pdf/d4acc954b7f504ef0d69d28ba9c6d401.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

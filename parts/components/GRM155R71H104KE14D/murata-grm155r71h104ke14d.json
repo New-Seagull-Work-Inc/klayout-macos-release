@@ -1,0 +1,51 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 20.51,
+      "esl_ph": 221,
+      "srf_mhz": 29.1017,
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 100 },
+        { "v_mv": 1800, "c_pct": 99.7 },
+        { "v_mv": 3300, "c_pct": 98.5 },
+        { "v_mv": 5000, "c_pct": 95.9 },
+        { "v_mv": 10000, "c_pct": 82.5 },
+        { "v_mv": 12000, "c_pct": 75.7 },
+        { "v_mv": 16000, "c_pct": 61.8 },
+        { "v_mv": 20000, "c_pct": 49.6 },
+        { "v_mv": 25000, "c_pct": 37.9 },
+        { "v_mv": 35000, "c_pct": 24.9 },
+        { "v_mv": 50000, "c_pct": 16.7 }
+      ],
+      "esr_esl_dc_bias_source-s": "Murata SimSurfing (ds.murata.co.jp/simserve): measured series-thru S-parameters GRM155R71H104KE14.s2p (25 degC, 0 V; data generated Feb 1, 2022) -> ESR at SRF, ESL at 10x SRF; DC-bias curve c_dcbias_capchange (25 degC, AC 1 Vrms), read 2026-10-21"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Murata Electronics",
+    "part-s": "GRM155R71H104KE14D",
+    "description-s": "0.1 µF ±10% 50 V X7R 0402 (1005M) MLCC, SMD, 0.5 mm thick",
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 100000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 100,
+      "dielectric-s": "x7r"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "GRM155R71H104KE14.pdf https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71H104KE14-01A-EN_PDF_CERAMICCAPACITORSMD"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

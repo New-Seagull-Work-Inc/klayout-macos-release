@@ -1,0 +1,50 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "SRP4020TA-3R3M",
+    "description-s": "3.3 µH ±20% shielded power inductor, SRP4020TA series, 4.45 x 4.06 x 2.0 mm, DCR 76 mΩ max, Irms 3.5 A, Isat 4.0 A, SRF 40 MHz, AEC-Q200; stocked 3.3 µH (>= 1.36 A) (current-max-i = Isat, as the SRP4020TA-2R2M row)",
+    "package-ao": [
+      { "ptype-s": "smd-srp4020ta" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "specs-o": {
+      "irms_ma_i": 3500,
+      "irms_rise_c_i": 40,
+      "isat_ma_i": 4000,
+      "isat_drop_pct_i": 20,
+      "srf_mhz_i": 40,
+      "current_note_s": "Bourns SRP4020TA table, SRP4020TA-3R3M row: Isat = inductance drops 20 % (typ); Irms = 40 °C rise; DCR 76 mΩ max; SRF 40 MHz",
+      "dcr_mohm": 76,
+      "dcr_typ_mohm": 69,
+      "dcr_source-o": {
+        "datasheet-s": "SRP4020TA-3R3M.pdf",
+        "page_n": 1,
+        "table-s": "SRP4020TA Electrical Specifications @ 25 C row SRP4020TA-3R3M: DCR 69 mOhm typ / 76 mOhm max, Irms 3.5 A, Isat 4.0 A; L 3.3 uH; row overprinted by the dimension drawing in the text layer, read by word position (pdftotext -bbox): typ column x=247, max x=273"
+      },
+      "current_source-o": {
+        "datasheet-s": "SRP4020TA-3R3M.pdf",
+        "page_n": 1,
+        "table-s": "SRP4020TA Electrical Specifications @ 25 C row SRP4020TA-3R3M: DCR 69 mOhm typ / 76 mOhm max, Irms 3.5 A, Isat 4.0 A; L 3.3 uH; row overprinted by the dimension drawing in the text layer, read by word position (pdftotext -bbox): typ column x=247, max x=273"
+      }
+    },
+    "passive-o": {
+      "esr-mr-i": 76,
+      "value-i": 3300,
+      "value-unit-s": "nh",
+      "current-max-i": 4000,
+      "lead-style-s": "smd"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "SRP4020TA-3R3M.pdf https://datasheet.lcsc.com/datasheet/pdf/b2b37e0d8cf5712d1367acf6ed67b22b.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

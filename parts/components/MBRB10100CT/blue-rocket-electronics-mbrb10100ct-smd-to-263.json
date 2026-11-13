@@ -1,0 +1,48 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Blue Rocket Electronics",
+    "description-s": "10 A 100 V Schottky barrier rectifier, 950 mV VF max @ 10 A, TO-263",
+    "package-ao": [
+      { "ptype-s": "smd-to-263" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "passive-o": {
+      "voltage-max-i": 100000,
+      "current-max-i": 5000,
+      "lead-style-s": "smd"
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 950,
+      "ir-ua-i": 5000
+    },
+    "part-s": "MBRB10100CT",
+    "specs-o": {
+      "forward_ma": 5000,
+      "forward_source-o": {
+        "datasheet-s": "MBRB10100CT.pdf (Blue Rocket, Rev.F May-2016, Chinese/English bilingual)",
+        "page_n": 2,
+        "table-s": "Absolute Maximum Ratings (Ta = 25 C): Average forward rectified Current IF 2X5 A, i.e. 5 A per leg (10 A per device, Fig. IF-TC p3), matching passive-o current-max-i 5000"
+      },
+      "dynamic_resistance_mohm": 39,
+      "dynamic_resistance_source-o": {
+        "datasheet-s": "MBRB10100CT.pdf",
+        "page_n": 3,
+        "fig-s": "IF - VF (Electrical Characteristic Curve), TA = 25 C curve (rightmost, labelled; checked on a render); vector curve read with procurement pdf-graph --points, log current axis. Its 5 A point (0.784 V) sits under VFM 0.85 V max at IF = 5.0 A, Tj = 25 C (p2), so the curve is per leg",
+        "derived-s": "chord over the upper half of the 5 A per-leg rating: vertices 0.68634 V at 2.5083 A and 0.78387 V at 4.9845 A: (0.78387 - 0.68634) V / (4.9845 - 2.5083) A = 0.09753 / 2.4762 = 39 mOhm. Typical curve, 25 C"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "MBRB10100CT.pdf https://datasheet.lcsc.com/datasheet/pdf/7fb69a1e6121afff42c90294c80c9742.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

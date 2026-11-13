@@ -1,0 +1,59 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 4.28,
+      "esl_ph": 257,
+      "srf_mhz": 2.2096,
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 96.4 },
+        { "v_mv": 1800, "c_pct": 87 },
+        { "v_mv": 2500, "c_pct": 77.4 },
+        { "v_mv": 3300, "c_pct": 66 },
+        { "v_mv": 5000, "c_pct": 47.2 },
+        { "v_mv": 6300, "c_pct": 37.3 },
+        { "v_mv": 10000, "c_pct": 21.7 },
+        { "v_mv": 12000, "c_pct": 17.7 },
+        { "v_mv": 16000, "c_pct": 11.8 },
+        { "v_mv": 20000, "c_pct": 9.2 },
+        { "v_mv": 25000, "c_pct": 6.9 }
+      ],
+      "esr_esl_dc_bias_source-s": "Samsung Electro-Mechanics product page chart data (product.samsungsem.com/mlcc/<pn>.do): ESR at SRF, ESL at 10x SRF; DC-bias curve (AC level not stated), read 2026-10-21"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL10A106MA8NRNC",
+    "description-s": "10 uF ±20% 25 V X5R 0603 MLCC; second source for C1608X5R1E106M080AC",
+    "height_mm_f": 1,
+    "height_source-o": {
+      "datasheet-s": "CL10A106MA8NRNC.pdf",
+      "page_n": 1,
+      "table-s": "Samsung spec reference sheet (issued May 09 2024), B. Structure & Dimension, CL10A106MA8NRNC: T 0.80 ± 0.20 mm",
+      "derived-s": "max = nominal + tolerance: 0.80 + 0.20 = 1 mm"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "CL10A106MA8NRNC.pdf https://datasheet.lcsc.com/datasheet/pdf/24d8eb2e4bec5cc4dad0f294a4a8fd8e.pdf",
+        "samsung-cl10a106ma8nrnc.pdf http://datasheet.octopart.com/CL10A106MA8NRNC-Samsung-Electro-Mechanics-datasheet-182019172.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

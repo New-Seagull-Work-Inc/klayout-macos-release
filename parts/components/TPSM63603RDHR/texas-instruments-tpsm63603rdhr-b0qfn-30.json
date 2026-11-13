@@ -1,0 +1,429 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPSM63603RDHR",
+    "description-s": "3-36V in, 1-16V out, 3A synchronous buck power module (inductor integrated), adjustable output (configured 7.38V nominal; 63.4k/10k gives 7.34V typ)",
+    "package-ao": [
+      { "ptype-s": "b0qfn-30" },
+      { "ppins-i": 30 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable",
+      "pgood"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 36000 },
+      { "vout": 7380 }
+    ],
+    "max_currents-ao": [
+      { "out": 3000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 105
+        }
+      },
+      {
+        "junction-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "temperatures_source-o": {
+      "datasheet-s": "tpsm63603.pdf",
+      "page_n": 6,
+      "table-s": "6.3 Recommended Operating Conditions: 'TA Operating ambient temperature -40 105'; TJ -40 125 (also 6.1 p5); Tstg -55 150 (6.1 Absolute Maximum Ratings p5)"
+    },
+    "pins-ao": [
+      { "1": "rt" },
+      { "2": "en" },
+      { "3": "vin" },
+      { "4": "vin" },
+      { "5": "pgnd" },
+      { "6": "pgnd" },
+      { "7": "vout" },
+      { "8": "vout" },
+      { "9": "vout" },
+      { "10": "vout" },
+      { "11": "sw" },
+      { "12": "vout" },
+      { "13": "vout" },
+      { "14": "vout" },
+      { "15": "vout" },
+      { "16": "pgnd" },
+      { "17": "pgnd" },
+      { "18": "vin" },
+      { "19": "vin" },
+      { "20": "cboot" },
+      { "21": "rboot" },
+      { "22": "vldoin" },
+      { "23": "vcc" },
+      { "24": "agnd" },
+      { "25": "fb" },
+      { "26": "pgood" },
+      { "27": "agnd" },
+      { "28": "pgnd" },
+      { "29": "pgnd" },
+      { "30": "vout" }
+    ],
+    "pins_source-o": {
+      "datasheet-s": "tpsm63603.pdf",
+      "page_n": 4,
+      "table-s": "Table 5-1 Pin Functions: 1 RT, 2 EN/SYNC, 3/4/18/19 VIN, 5/6/16/17/28/29 PGND, 7-10/12-15/30 VOUT, 11 SW, 20 CBOOT, 21 RBOOT, 22 VLDOIN, 23 VCC, 24/27 AGND, 25 FB, 26 PG"
+    },
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "4": "ds-power-rx" },
+      { "18": "ds-power-rx" },
+      { "19": "ds-power-rx" },
+      { "3": "4.7uf-avss" },
+      { "18": "4.7uf-avss" },
+      { "7": "ds-power-tx" },
+      { "8": "ds-power-tx" },
+      { "9": "ds-power-tx" },
+      { "10": "ds-power-tx" },
+      { "12": "ds-power-tx" },
+      { "13": "ds-power-tx" },
+      { "14": "ds-power-tx" },
+      { "15": "ds-power-tx" },
+      { "30": "ds-power-tx" },
+      { "7": "22uf-avss" },
+      { "7": "22uf-avss" },
+      { "30": "22uf-avss" },
+      { "30": "22uf-avss" },
+      { "23": "1uf-avss" },
+      { "5": "avss" },
+      { "6": "avss" },
+      { "16": "avss" },
+      { "17": "avss" },
+      { "28": "avss" },
+      { "29": "avss" },
+      { "24": "avss" },
+      { "27": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "25": "fb" },
+      { "25": "63.4k-out" },
+      { "25": "10k-avss" },
+      { "25c": "Feedback divider RFBT VOUT->FB, RFBB FB->AGND. 7.3.2 p15: 'The recommended value of RFBB is 10 kΩ'; VFB 1.0 V typ (6.5 p7). Equation 1 / 8 (p15 / p27) is not legible in the text layer; RFBT = RFBB x (VOUT / 1.0 V - 1) reproduces every Table 7-1 row (p16: 5.0 V -> 40.2k, 7.5 V -> 64.9k). For 7.38 V: 10k x 6.38 = 63.8k; nearest E96 63.4k -> VOUT = 1.0 x (1 + 63.4/10) = 7.34 V typ (-0.5 %). Same R101 63.4k / R102 10k the LM76003 used (1.006 V x 7.34 = 7.384 V there). 64.9k/10.2k (7.36 V) is the closer E96 pair if RFBB may move off 10k." },
+      { "1": "rt" },
+      { "1": "10.7k-avss" },
+      { "1c": "RT to AGND sets FSW (7.3.5 p18; RT must not be open or grounded, Table 5-1 p4). 10.7 kΩ = 1200 kHz per Table 7-4 (p18), whose VIN = 12 V column allows VOUT 1.5-9.0 V and VIN = 24 V column 2.5-13.0 V at that frequency (IOUT = 3 A). Table 7-1 (p16) recommends 1300 kHz for 7.5 V, but 1300 kHz has no Table 7-4 row and Equation 5 is not legible in the text layer, so the nearest listed row is used. Table 7-4 has no 10.3 V column; see specs-o.vin_headroom-o." },
+      { "2": "en" },
+      { "2": "vin" },
+      { "2c": "EN/SYNC tied to VIN: 7.3.6 p19 'The simplest way to enable the TPSM63603 is to connect EN/SYNC directly to VIN' (Table 5-1 p4: 'Can be connected to VIN'). This matches the LM76003 board, whose EN (U1.18) sits on VRECT. Figure 8-1 (p25) instead shows a 374k/100k RENT/RENB UVLO divider for VIN(on) 6 V (Equation 6 p19, VEN 1.263 V); not fitted here." },
+      { "26": "pgood" },
+      { "26": "100k-out" },
+      { "26c": "PG open-drain: Table 5-1 p4 'A 10-kΩ to 100-kΩ pullup resistor is required to a suitable pullup voltage. If not used, this pin can be left open or connected to PGND.' 100 kΩ RPG to VOUT as in Figure 8-1 (p25). PG abs max 20 V (p5), recommended 0-16 V (p6); 7.38 V is inside." },
+      { "22": "vldoin" },
+      { "22": "out" },
+      { "22c": "VLDOIN tied to VOUT: 8.2.1.2.6 p27 'Connect VLDOIN to VOUT to improve efficiency.' 7.3.11 p22: VLDOIN must be lower than both VIN and 12.5 V (7.38 V < 10.3 V min line). The optional 0.1-1 uF VLDOIN cap (Table 5-1 p4) is not fitted." },
+      { "21": "rboot" },
+      { "21": "cboot" },
+      { "21c": "RBOOT shorted to CBOOT: 8.2.1.2.6 p27 'Short RBOOT to CBOOT for best efficiency.' 7.3.10 p21: leaving them open keeps the internal 100 Ω (slower SW edge, better EMI)." }
+    ],
+    "specs-o": {
+      "topology_s": "buck",
+      "integrated_inductor_b": true,
+      "adjustable_b": true,
+      "synchronous_b": true,
+      "synchronous_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 1,
+        "table-s": "Description: 'The TPSM63603 synchronous buck power module'; Table 8-2 p26 '36-V, 3-A synchronous buck module'"
+      },
+      "vin_min_mv": 3000,
+      "vin_start_min_mv": 3950,
+      "vin_max_mv": 36000,
+      "vin_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 7,
+        "table-s": "6.5 Electrical Characteristics: VIN 'Needed to start up (over IOUT range) 3.95 36 V'; 'Once operating (over IOUT range) 3 36 V'"
+      },
+      "vout_min_mv": 1000,
+      "vout_max_mv": 16000,
+      "vout_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 7,
+        "table-s": "6.5 Electrical Characteristics: 'Adjustable output voltage range (TPSM63603) Over the IOUT range 1 16 V'"
+      },
+      "vref_mv": 1000,
+      "vout_accuracy_pct_x10": 10,
+      "vref_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 7,
+        "table-s": "6.5 Electrical Characteristics: 'VFB Feedback voltage TA = 25°C, IOUT = 0 A 1.0 V'; 'VFB_ACC ... Over the VIN range, VOUT = 1 V, IOUT = 0 A, FSW = 200 kHz -1 +1 %' (divider tolerance not included)"
+      },
+      "iout_max_ma": 3000,
+      "iout_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 6,
+        "table-s": "6.3 Recommended Operating Conditions: 'Output current IOUT(2) 0 3 A'; note 2: 'may be derated when operating with high switching frequency and/or high ambient temperature'. Also 6.5 p7 'IOUT Output current TA = 25°C 0 3.0 A'"
+      },
+      "current_limit-o": {
+        "iocl_ma": 4900,
+        "il_hs_typ_ma": 6200,
+        "il_ls_typ_ma": 3400,
+        "source-o": {
+          "datasheet-s": "tpsm63603.pdf",
+          "page_n": 7,
+          "table-s": "6.5: 'IOCL Output over-current (DC) limit threshold 4.9 A'; IL_HS 5.6/6.2/6.8 A; IL_LS 2.9/3.4/3.8 A"
+        }
+      },
+      "switching_freq_khz": 1200,
+      "fsw_min_khz": 200,
+      "fsw_max_khz": 2200,
+      "fsw_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 18,
+        "table-s": "Table 7-4 Switching Frequency Versus Output Voltage (IOUT = 3 A): '1200 10.7 ...' (RRT 10.7 kΩ). Range: 6.3 p6 'FSW set by RT or SYNC 200 2200 kHz'; 6.5 p8 fSW_RANGE 200-2200 kHz"
+      },
+      "load_regulation_pct": 0.1,
+      "load_regulation_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 7,
+        "table-s": "6.5 Electrical Characteristics, FEEDBACK: 'VFB Load Regulation TA = 25°C, 0 A ≤ IOUT ≤ 3 A 0.1 %' (typical column only; no min/max; no VOUT condition)"
+      },
+      "load_regulation_mv_per_a": 2.46,
+      "load_regulation_mv_per_a_derived-s": "derived, not stated: 0.1 % x 7380 mV / 3 A = 7.38 mV / 3 A = 2.46 mV/A (TA 25 °C typical, spread uniformly over 0-3 A). With the 63.4k/10k divider (7.34 V) it is 2.45 mV/A",
+      "load_regulation-ao": [
+        { "i_from_ma": 0, "i_to_ma": 3000, "pct_per_a": 0.0333, "mv_per_a": 2.46, "vout_mv": 7380, "mode-s": "FPWM", "page_n": 7, "table-s": "6.5 Electrical Characteristics, VFB Load Regulation 0.1 %", "derived-s": "0.1 % / 3 A = 0.0333 %/A; x 7380 mV = 2.46 mV/A. The table states the % at FB, independent of VOUT" }
+      ],
+      "line_regulation_pct": 0.1,
+      "line_regulation_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 7,
+        "table-s": "6.5: 'VFB Line Regulation TA = 25°C, IOUT = 0 A, 4.0 V ≤ VIN ≤ 36 V 0.1 %'"
+      },
+      "load_transient-ao": [
+        {
+          "i_from_ma": 1000,
+          "i_to_ma": 2500,
+          "i_step_ma": 1500,
+          "slew_a_per_us": 2,
+          "dv_mv": 50,
+          "cout_uf": 49,
+          "vout_mv": 3300,
+          "vin_mv": 24000,
+          "fsw_khz": 800,
+          "note-s": "at VOUT 3.3 V, not 7.38 V: System Characteristics row, typical circuit, TJ 25 °C, not production tested; cout_uf is the DERATED (effective) value; whether 50 mV is the up-step, down-step or larger of the two is not said",
+          "source-o": {
+            "datasheet-s": "tpsm63603.pdf",
+            "page_n": 9,
+            "table-s": "6.6 System Characteristics: 'VOUT Load transient VOUT = 3.3 V, VIN = 24 V, IOUT = 1 A to 2.5 A @ 2 A/μs, COUT(derated) = 49 uF 50 mV'"
+          }
+        }
+      ],
+      "cout_min_nf": 25000,
+      "cout_min_rows-ao": [
+        { "vout_mv": 5000, "rfbt_kohm": 40.2, "fsw_khz": 1000, "cout_min_eff_uf": 25 },
+        { "vout_mv": 7500, "rfbt_kohm": 64.9, "fsw_khz": 1300, "cout_min_eff_uf": 20 }
+      ],
+      "cout_min_note-s": "Table 7-1 has no 7.38 V row; the larger of the two bracketing rows (5.0 V, 25 uF) is used. Values are EFFECTIVE capacitance after DC bias and temperature (7.3.2 p15: 'The capacitance values listed represent the effective capacitance')",
+      "cout_min_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 16,
+        "table-s": "Table 7-1 Standard RFBT Values, Recommended FSW and Minimum COUT: '5.0 40.2 1000 25' and '7.5 64.9 1300 20' (RFBB = 10 kΩ)"
+      },
+      "cin_nf_min": 9400,
+      "cin_ceramic_required_b": true,
+      "cin_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 17,
+        "table-s": "7.3.3 Input Capacitors: 'The TPSM63603 requires a minimum of 2 × 4.7 µF of ceramic type input capacitance'"
+      },
+      "efficiency-ao": [
+        { "vin_mv": 24000, "vout_mv": 12000, "iout_ma": 1500, "fsw_khz": 2000, "efficiency_pct": 94.1, "page_n": 9, "table-s": "6.6 System Characteristics (VLDOIN = VOUT)" },
+        { "vin_mv": 24000, "vout_mv": 5000, "iout_ma": 2500, "fsw_khz": 1000, "efficiency_pct": 91, "page_n": 9, "table-s": "6.6 System Characteristics (VLDOIN = VOUT)" },
+        { "vin_mv": 12000, "vout_mv": 3300, "iout_ma": 2500, "fsw_khz": 800, "efficiency_pct": 89.5, "page_n": 9, "table-s": "6.6 System Characteristics (VLDOIN = VOUT)" }
+      ],
+      "efficiency_pct_max": 94.1,
+      "vin_headroom-o": {
+        "table_7_4-s": "Table 7-4 p18 (IOUT = 3 A), FSW 1200 kHz / RRT 10.7 kΩ: VIN = 12 V -> VOUT 1.5-9.0 V; VIN = 24 V -> 2.5-13.0 V. No column for 10.3 V (columns are 5, 12, 24, 36 V)",
+        "toff_min_ns_typ": 65,
+        "toff_min_ns_max": 85,
+        "ton_min_ns_max": 70,
+        "ton_max_ns": 9000,
+        "timing_source-o": {
+          "datasheet-s": "tpsm63603.pdf",
+          "page_n": 8,
+          "table-s": "6.5 POWER STAGE: 'tOFF_MIN Minimum OFF pulse width VIN = 4 V, IOUT = 1 A, RBOOT shorted to CBOOT 65 85 ns'; tON_MIN 55/70 ns (VOUT 1 V, IOUT 1 A); tON_MAX 9 µs"
+        },
+        "duty_check_derived-s": "derived, not stated: D = 7.38 / 10.3 = 0.717 (ideal, losses ignored). At 1200 kHz T = 833 ns: tON = 597 ns (< tON_MAX 9 µs), tOFF = 236 ns vs tOFF_MIN 85 ns max -> margin. Dmax = 1 - 85/833 = 0.898 -> ideal VOUT ceiling 9.25 V at 10.3 V in. At 20 V in: D = 0.369, tON = 308 ns > tON_MIN 70 ns. Module conduction drops at 2.8 A are not stated, so the real ceiling is lower than 9.25 V; 7.38 V sits below the stated 12 V-column limit (9.0 V) but 10.3 V is outside the table"
+      },
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "thermal_shutdown_c": 168,
+      "sw_pins-as": [
+        "11"
+      ],
+      "sw_exposure-s": "Pin 11 SW is the internal switch node brought out to a pad; the output inductor is inside the module (VOUT pins 'are connected to the internal output inductor', Table 5-1 p4). 'Do not place any external component on this pin or connect to any signal. The amount of copper placed on these pins must be kept to a minimum' (p4). No external inductor strap, so no external switch-node loop",
+      "vin_pins-as": [
+        "3",
+        "4",
+        "18",
+        "19"
+      ],
+      "pgnd_pins-as": [
+        "5",
+        "6",
+        "16",
+        "17",
+        "28",
+        "29"
+      ],
+      "cin_nf_typ": 9400,
+      "cout_nf_typ": 88000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "11"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_mv": 40000,
+          "abs_min_transient_mv": -2000,
+          "abs_max_transient_ref-s": "vin",
+          "abs_max_transient_above_ref_mv": 2000,
+          "abs_max_transient_ns": 200
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_mv": 40000,
+      "sw_abs_min_transient_mv": -2000,
+      "sw_abs_max_transient_ref-s": "vin",
+      "sw_abs_max_transient_above_ref_mv": 2000,
+      "sw_abs_max_transient_ns": 200,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in tpsm63603.pdf: no switch rise-time row (7.3.10 p21 describes RBOOT slew adjustment qualitatively only)",
+        "sw_fall_ns": "not stated in tpsm63603.pdf: no switch fall-time row",
+        "sw_coss_pf": "not stated in tpsm63603.pdf: no switch-pin or C_oss capacitance row"
+      },
+      "sw_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 5,
+        "table-s": "6.1 Absolute Maximum Ratings: 'SW to AGND, PGND(2) -0.3 40 V'; note 2: 'A voltage of 2 V below PGND and 2 V above VIN can appear on this pin for ≤ 200 ns with a duty cycle of ≤ 0.01%.' (hand-entered)"
+      },
+      "vin_abs_max_mv": 40000,
+      "vout_abs_max_mv": 16000,
+      "abs_max_source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 5,
+        "table-s": "6.1 Absolute Maximum Ratings: VIN to AGND, PGND -0.3 40 V; VOUT to AGND, PGND -0.3 16 V; VLDOIN -0.3 16 V; EN/SYNC -0.3 40 V; PG 0 20 V"
+      },
+      "thermal-o": {
+        "rthja_c_per_w_x10": 335,
+        "rthja_evm_c_per_w_x10": 291,
+        "psi_jt_c_per_w_x10": 41,
+        "psi_jb_c_per_w_x10": 215,
+        "tj_max_c": 125,
+        "source-o": {
+          "datasheet-s": "tpsm63603.pdf",
+          "page_n": 6,
+          "table-s": "6.4 Thermal Information: RθJA 33.5 °C/W (64 x 83 mm 4-layer 2 oz, natural convection), 29.1 °C/W (TPSM63603 EVM); ψJT 4.1; ψJB 21.5. TJ max 125 °C (6.3)"
+        }
+      },
+      "source-o": {
+        "datasheet-s": "tpsm63603.pdf",
+        "page_n": 25,
+        "figure-s": "Figure 8-1. Circuit Schematic (Design 1: 3-A Synchronous Buck Regulator, 5 V / 1 MHz / 24 V in); parts re-valued for 7.38 V per Table 7-1 / 7-4 and 8.2.1.2"
+      },
+      "not_stated-o": {
+        "loop_crossover_khz": "not stated: internally compensated ('the integrated loop compensation is optimized for a certain range of output capacitance', p26); no crossover figure, equation or Bode plot in SLVSFS5A (42 pages searched for 'crossover' / 'bandwidth')",
+        "output_impedance_mohm": "not stated: no Zout curve",
+        "load_regulation at 7.38 V": "no curve at 7.38 V; the p7 0.1 % VFB figure is VOUT-independent and is what this record uses",
+        "load_transient at 7.38 V": "not stated: p9 row is at 3.3 V; Figures 8-4 / 8-5 (p28, 5 V, 0-3 A and 1.5-3 A at 1 A/µs, COUT 2 x 47 µF) and 8-6 / 8-7 (3.3 V) are scope captures at 200 mV/div with no numeric deviation",
+        "efficiency near 7.38 V / 10.3 V": "not stated: Figure 6-7 (p11, VIN 12 V) plots VOUT 1.8-5.0 V only; nearest table point is 12 V out / 24 V in 94.1 % at 1.5 A (p9)",
+        "cout_max_nf": "not stated: Table 7-1 gives minimums only; p26 says only that the compensation is optimized for 'a certain range of output capacitance'",
+        "cout_min at 7.38 V": "no row; 5.0 V (25 uF) and 7.5 V (20 uF) rows bracket it",
+        "current derating at 7.38 V": "not stated: Safe Operating Area curves (Figures 6-10..6-12 at VIN 12 V) cover VOUT 1.8/3.3/5 V only; 6.3 note 2 says IOUT may be derated at high FSW / high TA",
+        "vin_min for 7.38 V at 3 A": "not stated: Table 7-4 has no column between 5 V and 12 V; no dropout curve",
+        "vout_ripple_mvpp_typ": "not stated for 7.38 V: Figure 6-9 / 6-15 ripple plots are at other VOUT",
+        "rfbt equation text": "Equation 1 / 8 (p15 / p27) is not legible in the PDF text layer; the formula used is inferred from Table 7-1 rows"
+      },
+      "pin_notes-o": {
+        "23": "VCC: 1 uF to PGND, 8.2.1.2.6 p27 / Table 5-1 p4 ('Connect a high-quality 1-μF ceramic capacitor from this pin to PGND'); no external load.",
+        "3": "CIN: 2 x 4.7 uF ceramic minimum (7.3.3 p17, 8.2.1.2.4 p27), 50 V X7R 1206/1210 from Table 7-2 (p17); rating must exceed max VIN (~20 V here).",
+        "7": "COUT: 4 x 22 uF 25 V X7R 1210 (Murata GRM32ER71E226M, Table 7-3 p18). Required: >= 25 uF EFFECTIVE (Table 7-1 p16, 5.0 V row; the 7.5 V row says 20 uF; 7.38 V has no row). The effective value of 4 x 22 uF at 7.38 V DC bias is not in this datasheet; confirm >= 25 uF from the capacitor maker's DC-bias curve.",
+        "11": "SW: 'Do not place any external component on this pin or connect to any signal' (Table 5-1 p4); left open, minimum copper. The inductor is inside the module."
+      },
+      "alt_setpoints-ao": [
+        { "board-s": "regulator (replaces LM2576HVS-5.0 at the owner's request, 2026-11-06)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 3000, "rfbt-s": "40.2k (Table 7-1 p16 row 5.0 V, RFBB 10k)", "fsw_khz": 1000, "rt-s": "13.0k (Table 7-4 p18: 1000 kHz, VIN 12 V allows VOUT 1.0-8.0 V at IOUT 3 A)", "cout_min_nf": 25000, "cout_source-s": "Table 7-1 p16 row 5.0 V: 25 uF effective, recommended FSW 1000 kHz", "soa-s": "Figure 6-12 p11 Safe Operating Area, VOUT 5.0 V, FSW 1 MHz (64 x 83 mm 4-layer PCB)", "efficiency_pct": 91.4, "efficiency-s": "Figure 6-7 Efficiency (p11, 6.8 Typical Characteristics, VIN = 12 V), VOUT 5.0 V / 1.0 MHz curve read with procurement pdf-graph --points: 91.38 % at 2.99 A (92.43 % at 2.5 A); the 5.0 V curve is the highest of the four (93.76 % at 1 A vs 92.42 % for 3.3 V, 89.23 % for 2.5 V), as the legend order implies. Also 6.5 System Characteristics p9: 91 % at VOUT 5 V, VIN 24 V, IOUT 2.5 A", "load_regulation_mv_per_a": 1.67, "load_regulation_derived-s": "0.1 % x 5000 mV / 3 A (VFB load regulation 0.1 %, 0-3 A, p7)" }
+      ]
+    },
+    "board_point-o": {
+      "ref-s": "U1",
+      "vin_net-s": "VRECT",
+      "vout_net-s": "MAIN_RAW",
+      "vin_min_mv": 10300,
+      "vin_max_mv": 20000,
+      "vout_mv": 7380,
+      "iout_ma": 2800,
+      "note-s": "board figures from the coordinator (rectified 8 VAC at minimum line; input up to ~20 V), not from the datasheet"
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125,
+      "rtheta-ja-c-per-w-f": 29.1
+    },
+    "not_supply_pins-as": [
+      "23"
+    ],
+    "not_supply_pins_note-s": "pin 23 VCC is the output of the TPSM63603 internal LDO (Table 5-1 p4: Connect a high-quality 1-uF ceramic capacitor from this pin to PGND; no external load), not a supply input",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3",
+          "4",
+          "18",
+          "19"
+        ],
+        "vmin_mv": 3950,
+        "vmax_mv": 36000,
+        "source-o": {
+          "datasheet-s": "tpsm63603.pdf",
+          "page_n": 7,
+          "table-s": "6.5 Electrical Characteristics"
+        },
+        "board_net-s": "VRECT",
+        "ripple_not_stated-s": "not stated as a limit: 7.3.3 p16-17 gives the input ripple only as Equation 3 (from IOUT, D, FSW, CIN, ESR) and sizes CIN by Equation 4 against a designer-chosen ΔVIN; no allowed VIN ripple figure",
+        "i_not_stated-s": "regulator input current is the load's; 6.6 p9 states only IIN 10 mA at no load (VIN 24 V, VOUT 3.3 V, 800 kHz) and 6.5 p7 IQ_VIN 4 µA non-switching / ISDN_VIN 3 µA",
+        "carried_source-o": {
+          "datasheet-s": "tpsm63603.pdf",
+          "page_n": 7,
+          "table-s": "6.5 Electrical Characteristics: VIN 'Once operating (over IOUT range) 3 36 V' (start-up needs 3.95 V); 6.3 p6 'VIN (Input voltage range after start-up) 3 36 V'"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tpsm63603.pdf https://www.ti.com/lit/ds/symlink/tpsm63603.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

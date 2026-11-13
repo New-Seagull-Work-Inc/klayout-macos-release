@@ -1,0 +1,111 @@
+{
+  "component-o": {
+    "type-s": "esd-array",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPD4E05U06QDQARQ1",
+    "description-s": "4-channel unidirectional ESD protection diodes with no VBUS / supply pin, 0.5 pF per line (DQA), 5.5 V standoff, 6.4 V min breakdown, 14 V clamp at 5 A TLP, IEC 61000-4-2 level 4 (+/-12 kV contact, +/-15 kV air), AEC-Q101, USON-10 2.5 x 1.0 mm flow-through",
+    "package-ao": [
+      { "ptype-s": "USON-10" },
+      { "ppins-i": 10 }
+    ],
+    "blocks-as": [
+      "esd-array"
+    ],
+    "interfaces-as": [
+      "ds-usb2-rxtx",
+      "ds-usbcc-rxtx"
+    ],
+    "voltages-ao": [
+      { "vin_max": 5500 }
+    ],
+    "esd-o": {
+      "lines-i": 4,
+      "standoff-voltage-mv-i": 5500,
+      "breakdown-voltage-min-mv-i": 6400,
+      "clamping-voltage-mv-i": 14000,
+      "iec61000-4-2-air-kv-i": 15,
+      "iec61000-4-2-contact-kv-i": 12
+    },
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "D1+" },
+      { "2": "D1-" },
+      { "3": "GND" },
+      { "4": "D2+" },
+      { "5": "D2-" },
+      { "6": "NC" },
+      { "7": "NC" },
+      { "8": "GND" },
+      { "9": "NC" },
+      { "10": "NC" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-usb2-dp" },
+      { "2": "ds-usb2-dm" },
+      { "4": "ds-usbcc-cc1" },
+      { "5": "ds-usbcc-cc2" },
+      { "3": "avss" },
+      { "8": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "6": "nc" },
+      { "7": "nc" },
+      { "9": "nc" },
+      { "10": "nc" },
+      { "6c": "NC 6, 7, 9, 10: 'Not Connected; Used for optional straight-through routing. Can be left floating or grounded' (Pin Functions p3): the protected line may run through the NC pad opposite its channel." },
+      { "1c": "Channels: D1+ (1) / D1- (2) on USB D+ / D-, D2+ (4) / D2- (5) on CC1 / CC2. Place as close to the connector as possible (Pin Functions note 1, p3). Any channel takes any line up to VIO 5.5 V (6.4 p4)." },
+      { "7c": "NC: no connect -- the datasheet labels it \"NC\" beside the pin (page 3); left open." },
+      { "9c": "NC: no connect -- the datasheet labels it \"NC\" beside the pin (page 3); left open." },
+      { "10c": "NC: no connect -- the datasheet labels it \"NC\" beside the pin (page 3); left open." }
+    ],
+    "specs-o": {
+      "vio_max_mv": 5500,
+      "vrwm_mv": 5500,
+      "vbr_min_mv": 6400,
+      "vbr_max_mv": 8700,
+      "vclamp-ao": [
+        { "ipp_a": 1, "dir-s": "I/O to GND", "v": 10 },
+        { "ipp_a": 5, "dir-s": "I/O to GND", "v": 14 },
+        { "ipp_a": 1, "dir-s": "GND to I/O", "v": 3 },
+        { "ipp_a": 5, "dir-s": "GND to I/O", "v": 7.5 }
+      ],
+      "line_capacitance_pf_typ": 0.5,
+      "leakage_na_max": 10,
+      "rdyn_ohm_dqa": 0.96,
+      "surge_8_20us_a": 2.5,
+      "surge_8_20us_w": 40,
+      "no_vbus_pin_b": true,
+      "cc_note-s": "CC1/CC2 sit at <= 5.5 V in normal operation (VCONN included), inside VRWM 5.5 V. A cable fault that shorts CC to a 9 V (or 20 V) VBUS would conduct through this clamp (VBR 6.4-8.7 V); the TPS25730's own CC pins tolerate 26 V abs max. Not stated here: a CC-to-VBUS short rating.",
+      "source-s": "TI SLVSCO7C (Sept 2017): Pin Functions p3, 6.1-6.4 p4, 6.5 thermal p4, 6.6 Electrical Characteristics p5"
+    },
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 327,
+      "rtheta-jc-top-c-per-w-f": 189.5,
+      "rtheta-jb-c-per-w-f": 257.7,
+      "psi-jt-c-per-w-f": 60.9,
+      "psi-jb-c-per-w-f": 257,
+      "source-s": "6.5 Thermal Information p4, DQA (USON) 10 pins"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tpd4e05u06-q1.pdf https://www.ti.com/lit/ds/symlink/tpd4e05u06-q1.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

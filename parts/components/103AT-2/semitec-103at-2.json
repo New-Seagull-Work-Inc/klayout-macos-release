@@ -1,0 +1,21 @@
+{
+  "component-o": {
+    "type-s": "resistor",
+    "vendor-s": "Semitec",
+    "part-s": "103AT-2",
+    "description-s": "10KΩ ±2% 10mW ±1% 3435K Through hole mounting 3.8mm*2.4mm*8.5mm",
+    "package-ao": [
+      { "ptype-s": "Variable Resistors and Potentiometers" },
+      { "ppins-i": 2 }
+    ],
+    "passive-o": {},
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "103AT-2.pdf https://datasheet.lcsc.com/datasheet/pdf/e938d2a9aa19145b6544bdfd26c83c27.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

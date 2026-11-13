@@ -1,0 +1,51 @@
+{
+  "component-o": {
+    "type-s": "inductor",
+    "vendor-s": "Bourns",
+    "part-s": "SRP5030T-4R7M",
+    "description-s": "4.7 µH ±20% shielded power inductor, SRP5030T series, 5.7 x 5.2 x 2.8 mm, DCR 53 mΩ max, Irms 4.6 A, Isat 6.0 A; buyable replacement for the obsolete Coilcraft XAL1010-472MEB as the LTC3124 two-phase boost coil (the coil peak is bounded by the LTC3124's 4.5 A max per-phase switch current limit, so a 24 A part is not needed)",
+    "package-ao": [
+      { "ptype-s": "smd-srp5030t" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "inductor"
+    ],
+    "specs-o": {
+      "irms_ma_i": 4600,
+      "irms_rise_c_i": 40,
+      "isat_ma_i": 6000,
+      "isat_drop_pct_i": 20,
+      "current_note_s": "Bourns SRP table: Isat = inductance drops 20 % (typ); Irms = 40 °C rise",
+      "dcr_mohm": 53,
+      "dcr_source-o": {
+        "datasheet-s": "SRP5030T-4R7M.pdf",
+        "page_n": 1,
+        "table-s": "SRP5030T table row SRP5030T-4R7M: L 4.7 uH +/-20 %, DCR 53 mOhm max, Irms 4.6 A, Isat 6 A; Rated Current: ind. drops 20 % typ at Isat; Temperature Rise 40 C typ at rated Irms"
+      },
+      "current_source-o": {
+        "datasheet-s": "SRP5030T-4R7M.pdf",
+        "page_n": 1,
+        "table-s": "SRP5030T table row SRP5030T-4R7M: L 4.7 uH +/-20 %, DCR 53 mOhm max, Irms 4.6 A, Isat 6 A; Rated Current: ind. drops 20 % typ at Isat; Temperature Rise 40 C typ at rated Irms"
+      },
+      "not_stated-o": {
+        "dcr_typ_mohm": "SRP5030T table gives DCR max only (SRP5030T-4R7M.pdf p1)"
+      }
+    },
+    "passive-o": {
+      "esr-mr-i": 53,
+      "value-i": 4700,
+      "value-unit-s": "nh",
+      "current-max-i": 6000,
+      "lead-style-s": "smd"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "SRP5030T-4R7M.pdf https://datasheet.lcsc.com/datasheet/pdf/944cd579a15d7dc0beb5896721112005.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 15,
+      "esl_ph": 9700,
+      "srf_mhz": 0.0236,
+      "esr_esl_dc_bias_source-s": "Würth Elektronik LTspice model library WCAP-ATG8.lib (rev22a, 6/1/2022, eiSos EDA Service; github.com/WurthElektronik/LTspice-Library sub/WCAP-ATG8.lib, the repository Würth's LTspice user guide UG002 names), subckt 860010683032_4.7mF: Rser 0.015 ohm, Lser 9.7 nH, C 4.7 mF, Rpar 21277 ohm -> esr_mohm = Rser (frequency-independent model, so also the ESR at SRF), esl_ph = Lser, srf_mhz = 1/(2 pi sqrt(Lser C)). Model values, not a measured curve; temperature not stated. Würth datasheet 860010683032 rev 1.0 (2014-11-11): ripple 3355 mA max (120 Hz, 85 degC); DF 10 % typ (120 Hz); leakage 2350 µA max; load life 2000 h at 85 degC; no impedance stated. DC bias not applicable (electrolytic). Read 2026-10-27",
+      "ripple_ma_120hz_85c": 3355
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Würth Elektronik",
+    "part-s": "860010683032",
+    "description-s": "4700 µF ±20% 50 V aluminum electrolytic capacitor, WCAP-ATG8 (general purpose, 85 °C 2000 h), radial can 22.0 x 41.0 mm, 10.0 mm lead pitch, 0.8 mm leads",
+    "package-ao": [
+      { "ptype-s": "radial-electrolytic" },
+      { "ppins-i": 2 },
+      { "can-diameter-mm-f": 22 },
+      { "can-length-mm-f": 41 },
+      { "lead-pitch-mm-f": 10 },
+      { "lead-diameter-mm-f": 0.8 }
+    ],
+    "blocks-as": [
+      "capacitor-electrolytic"
+    ],
+    "passive-o": {
+      "lead-style-s": "radial",
+      "value-i": 4700000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "WCAP-ATG8.lib https://raw.githubusercontent.com/WurthElektronik/LTspice-Library/master/sub/WCAP-ATG8.lib"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

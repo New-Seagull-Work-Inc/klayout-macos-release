@@ -1,0 +1,68 @@
+{
+  "component-o": {
+    "type-s": "mosfet",
+    "vendor-s": "Infineon",
+    "part-s": "IRF4905PBF",
+    "description-s": "P-channel power MOSFET -55V -74A TO-220AB, pass element for power-path/ideal-diode duty",
+    "package-ao": [
+      { "ptype-s": "to-220ab" },
+      { "ppins-i": 3 }
+    ],
+    "blocks-as": [
+      "mosfet",
+      "mosfet-p",
+      "pass-fet"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "as-gate-rx"
+    ],
+    "max_currents-ao": [
+      { "out": 74000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 175
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gate" },
+      { "2": "drain" },
+      { "3": "source" }
+    ],
+    "stdpins-ao": [
+      { "2": "ds-power-rx" },
+      { "3": "ds-power-tx" },
+      { "1": "as-gate-rx" }
+    ],
+    "cfgpins-ao": [],
+    "specs-o": {
+      "channel_s": "p",
+      "vds_max_mv": -55000,
+      "id_max_ma": -74000,
+      "rds_on_mohm": 20,
+      "vgs_th_mv": -3000,
+      "on_resistance_source-o": {
+        "not_stated-s": "no manufacturer datasheet PDF in components/IRF4905PBF/ (only the two .json records), so on_resistance_mohm / on_resistance_max_mohm are left out. The existing rds_on_mohm 20 has no source (the distributor description 'Rds(on) 0.02 Ohm'); emcheck does not read rds_on_mohm. Needed: Infineon's IRF4905PbF datasheet in this folder, RDS(on) max at VGS -10 V"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "IRF4905PBF.pdf https://datasheet.lcsc.com/datasheet/pdf/d425166591a04605a1c3bb16ef89697a.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

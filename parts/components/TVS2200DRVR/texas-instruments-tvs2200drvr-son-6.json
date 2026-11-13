@@ -1,0 +1,227 @@
+{
+  "component-o": {
+    "type-s": "tvs",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TVS2200DRVR",
+    "description-s": "22 V flat-clamp unidirectional surge protection device, VBR 24.6-27.6 V, 28 V max clamp at 40 A (8/20 us), 1120 W, USB Type-C VBUS, SON-6 (DRV) 2 x 2 mm; the TVS TPS25730 note 4 names for VBUS (breakdown between 22 V and 28 V)",
+    "package-ao": [
+      { "ptype-s": "SON-6 (DRV)" },
+      { "ppins-i": 7 }
+    ],
+    "blocks-as": [
+      "tvs-diode"
+    ],
+    "interfaces-as": [
+      "ds-power-rx"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "tvs-o": {
+      "bidirectional-b": false,
+      "standoff-voltage-mv-i": 22000,
+      "breakdown-voltage-min-mv-i": 24600,
+      "breakdown-voltage-max-mv-i": 27600,
+      "clamping-voltage-mv-i": 28000,
+      "peak-pulse-current-a-i": 40,
+      "peak-pulse-power-w-i": 1120,
+      "pulse-waveform-s": "8/20us",
+      "esd-contact-kv-i": 17
+    },
+    "pins-ao": [
+      { "1": "GND" },
+      { "2": "GND" },
+      { "3": "GND" },
+      { "4": "IN" },
+      { "5": "IN" },
+      { "6": "IN" },
+      { "7": "GND" }
+    ],
+    "stdpins-ao": [
+      { "4": "ds-power-rx" },
+      { "5": "ds-power-rx" },
+      { "6": "ds-power-rx" },
+      { "1": "avss" },
+      { "2": "avss" },
+      { "3": "avss" },
+      { "7": "avss" }
+    ],
+    "pin_sources-ao": [
+      {
+        "pin-s": "1",
+        "name-s": "GND",
+        "function-s": "Ground",
+        "connection-s": "avss",
+        "required-s": "Table 6-1: ground; Figure 9-1: GND to system GND",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "2",
+        "name-s": "GND",
+        "function-s": "Ground",
+        "connection-s": "avss",
+        "required-s": "Table 6-1: ground; Figure 9-1: GND to system GND",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "3",
+        "name-s": "GND",
+        "function-s": "Ground",
+        "connection-s": "avss",
+        "required-s": "Table 6-1: ground; Figure 9-1: GND to system GND",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "4",
+        "name-s": "IN",
+        "function-s": "ESD and surge protected channel",
+        "connection-s": "ds-power-rx (USB Type-C VBUS)",
+        "required-s": "Figure 9-1: IN on the protected VBUS; recommended VIN 0-22 V (9.3 p11, Recommended Operating Conditions p4); place close to the connector (9.4.1 p11)",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "5",
+        "name-s": "IN",
+        "function-s": "ESD and surge protected channel",
+        "connection-s": "ds-power-rx (USB Type-C VBUS)",
+        "required-s": "Figure 9-1: IN on the protected VBUS; recommended VIN 0-22 V (9.3 p11, Recommended Operating Conditions p4); place close to the connector (9.4.1 p11)",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "6",
+        "name-s": "IN",
+        "function-s": "ESD and surge protected channel",
+        "connection-s": "ds-power-rx (USB Type-C VBUS)",
+        "required-s": "Figure 9-1: IN on the protected VBUS; recommended VIN 0-22 V (9.3 p11, Recommended Operating Conditions p4); place close to the connector (9.4.1 p11)",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        },
+        "also-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 10,
+          "figure-s": "Figure 9-1. TVS2200 Application (IN on USB Type-C VBUS, GND to GND); 9.3 p11: keep VIN 0-22 V; 9.4.1 p11: place as close to the connector as possible"
+        }
+      },
+      {
+        "pin-s": "7",
+        "name-s": "GND (exposed thermal pad)",
+        "function-s": "Exposed thermal pad: ground",
+        "connection-s": "avss",
+        "required-s": "Table 6-1: exposed thermal pad is GND",
+        "matches_b": true,
+        "source-o": {
+          "document-s": "tvs2200.pdf",
+          "page_n": 3,
+          "table-s": "Table 6-1. Pin Functions (GND 1, 2, 3 ground; IN 4, 5, 6 ESD and surge protected channel; exposed thermal pad GND), SLVSED5C"
+        }
+      }
+    ],
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "clamp",
+        "pins-as": [
+          "4",
+          "5",
+          "6"
+        ],
+        "vmax_mv": 22000,
+        "i_max_ma": 6.2e-05,
+        "source-o": {
+          "datasheet-s": "tvs2200.pdf",
+          "page_n": 5,
+          "table-s": "SLVSED5C 7.6 Electrical Characteristics: VRWM 22 V, ILEAK 3.5 typ / 62 max nA at VRWM, 27 C (400 nA max at 85 C); VBR 24.6 / 25.9 / 27.6 V at 1 mA; VCLAMP 27.6 / 28 V at 40 A 8/20 us"
+        },
+        "not_stated-o": {
+          "ripple_max_mvpp": "not stated (a clamp; no supply ripple or operating window)",
+          "i_step_ma": "not stated (draws only leakage)"
+        }
+      }
+    ],
+    "specs-o": {
+      "capacitance_pf_typ": 105,
+      "leak_na_85c_max": 400,
+      "forward_surge_8_20us_a": 50,
+      "source-s": "TI SLVSED5C (Aug 2023): Features p1 (105 pF), 7.1 p4, 7.4 p4, 7.6 p5; pins Table 6-1 p3 (1-3 GND, 4-6 IN, exposed pad GND)"
+    },
+    "thermal-o": {
+      "rtheta-ja-c-per-w-f": 70.4,
+      "rtheta-jc-top-c-per-w-f": 73.7,
+      "rtheta-jb-c-per-w-f": 40,
+      "rtheta-jc-bot-c-per-w-f": 11,
+      "source-s": "7.5 Thermal Information p5, DRV (SON) 6 pins"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tvs2200.pdf https://www.ti.com/lit/ds/symlink/tvs2200.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

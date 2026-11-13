@@ -1,0 +1,97 @@
+{
+  "component-o": {
+    "type-s": "power-path",
+    "vendor-s": "Analog Devices",
+    "part-s": "LTC4412ES6#TRPBF",
+    "description-s": "Low-loss PowerPath ideal-diode controller, drives external P-channel MOSFET",
+    "package-ao": [
+      { "ptype-s": "sot-23-6" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "power-path",
+      "ideal-diode-controller"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx",
+      "as-gate-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 28000 }
+    ],
+    "max_currents-ao": [
+      { "vin": 1 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "vin" },
+      { "2": "gnd" },
+      { "3": "ctl" },
+      { "4": "stat" },
+      { "5": "gate" },
+      { "6": "sense" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "6": "ds-power-tx" },
+      { "5": "as-gate-tx" },
+      { "2": "avss" }
+    ],
+    "cfgpins-ao": [
+      { "3": "ctl" },
+      { "3c": "tie to gnd for automatic primary/auxiliary switchover" },
+      { "3": "avss" },
+      { "4": "stat" },
+      { "4c": "open-drain status output; may float unconnected" }
+    ],
+    "specs-o": {
+      "forward_regulation_mv": 20,
+      "gate_drive_b": true,
+      "iq_typ_ua": 11
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "1"
+        ],
+        "vmin_mv": 2500,
+        "vmax_mv": 28000,
+        "source-o": {
+          "datasheet-s": "LTC4412.pdf",
+          "page_n": 3,
+          "table-s": "ELECTRICAL CHARACTERISTICS"
+        },
+        "ripple_not_stated-s": "not stated: LTC4412 Rev. C gives no input ripple limit; p3 forward regulation VIN - VSENSE 10 / 20 / 32 mV min / typ / max (2.5 V <= VIN <= 28 V) is the only regulation figure",
+        "carried_source-o": {
+          "datasheet-s": "LTC4412.pdf (Rev. C)",
+          "page_n": 3,
+          "table-s": "Electrical Characteristics: VIN, VSENSE Operating Supply Range, VIN and/or VSENSE Must Be in This Range for Proper Operation, 2.5 V min, 28 V max (full Tj range); Absolute Maximum Ratings p2: Supply Voltage (VIN) -14 V to 36V; pin configuration p2: VIN 1, SENSE 6. The controller passes the load current through an external P-channel MOSFET (GATE pin 5), so it has no load step of its own"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "LTC4412.pdf https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4412.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

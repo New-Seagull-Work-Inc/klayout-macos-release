@@ -1,0 +1,111 @@
+{
+  "component-o": {
+    "type-s": "capacitor",
+    "vendor-s": "KEMET",
+    "part-s": "C0603C330J5GACTU",
+    "description-s": "33 pF 50 V ±5% C0G SMD ceramic capacitor, EIA 0603",
+    "package-ao": [
+      { "ptype-s": "smd-0603" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "value-i": 33,
+      "value-unit-s": "pf",
+      "voltage-max-i": 50000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g",
+      "lead-style-s": "smd"
+    },
+    "impedance-o": {
+      "z_curve-ao": [
+        { "f_mhz": 0.01, "z_ohm": 480100, "r_ohm": -12.5, "x_ohm": -480100 },
+        { "f_mhz": 0.01259, "z_ohm": 381400, "r_ohm": -12.5, "x_ohm": -381400 },
+        { "f_mhz": 0.01585, "z_ohm": 302900, "r_ohm": -12.5, "x_ohm": -302900 },
+        { "f_mhz": 0.01995, "z_ohm": 240600, "r_ohm": -12.5, "x_ohm": -240600 },
+        { "f_mhz": 0.02512, "z_ohm": 191100, "r_ohm": -12.5, "x_ohm": -191100 },
+        { "f_mhz": 0.03162, "z_ohm": 151800, "r_ohm": -12.5, "x_ohm": -151800 },
+        { "f_mhz": 0.03981, "z_ohm": 120600, "r_ohm": -12.5, "x_ohm": -120600 },
+        { "f_mhz": 0.05012, "z_ohm": 95790, "r_ohm": -12.5, "x_ohm": -95790 },
+        { "f_mhz": 0.0631, "z_ohm": 76090, "r_ohm": 15.11, "x_ohm": -76090 },
+        { "f_mhz": 0.07943, "z_ohm": 60440, "r_ohm": 4.92, "x_ohm": -60440 },
+        { "f_mhz": 0.1, "z_ohm": 48010, "r_ohm": 9.482, "x_ohm": -48010 },
+        { "f_mhz": 0.1259, "z_ohm": 38140, "r_ohm": 8.305, "x_ohm": -38140 },
+        { "f_mhz": 0.1585, "z_ohm": 30290, "r_ohm": 9.378, "x_ohm": -30290 },
+        { "f_mhz": 0.1995, "z_ohm": 24060, "r_ohm": 4.065, "x_ohm": -24060 },
+        { "f_mhz": 0.2512, "z_ohm": 19110, "r_ohm": 4.92, "x_ohm": -19110 },
+        { "f_mhz": 0.3162, "z_ohm": 15180, "r_ohm": 2.888, "x_ohm": -15180 },
+        { "f_mhz": 0.3981, "z_ohm": 12060, "r_ohm": 2.757, "x_ohm": -12060 },
+        { "f_mhz": 0.5012, "z_ohm": 9579, "r_ohm": 1.94, "x_ohm": -9579 },
+        { "f_mhz": 0.631, "z_ohm": 7609, "r_ohm": 1.857, "x_ohm": -7609 },
+        { "f_mhz": 0.7943, "z_ohm": 6044, "r_ohm": 1.61, "x_ohm": -6044 },
+        { "f_mhz": 1, "z_ohm": 4801, "r_ohm": 1.129, "x_ohm": -4801 },
+        { "f_mhz": 1.259, "z_ohm": 3816, "r_ohm": 1.037, "x_ohm": -3816 },
+        { "f_mhz": 1.585, "z_ohm": 3032, "r_ohm": 0.8731, "x_ohm": -3032 },
+        { "f_mhz": 1.995, "z_ohm": 2410, "r_ohm": 0.7375, "x_ohm": -2410 },
+        { "f_mhz": 2.512, "z_ohm": 1915, "r_ohm": 0.6187, "x_ohm": -1915 },
+        { "f_mhz": 3.162, "z_ohm": 1522, "r_ohm": 0.537, "x_ohm": -1522 },
+        { "f_mhz": 3.981, "z_ohm": 1210, "r_ohm": 0.47, "x_ohm": -1210 },
+        { "f_mhz": 5.012, "z_ohm": 961.3, "r_ohm": 0.4214, "x_ohm": -961.3 },
+        { "f_mhz": 6.31, "z_ohm": 763.9, "r_ohm": 0.3828, "x_ohm": -763.9 },
+        { "f_mhz": 7.943, "z_ohm": 607.1, "r_ohm": 0.3462, "x_ohm": -607.1 },
+        { "f_mhz": 10, "z_ohm": 482.5, "r_ohm": 0.3195, "x_ohm": -482.5 },
+        { "f_mhz": 12.59, "z_ohm": 383.4, "r_ohm": 0.2988, "x_ohm": -383.4 },
+        { "f_mhz": 15.85, "z_ohm": 304.7, "r_ohm": 0.2814, "x_ohm": -304.7 },
+        { "f_mhz": 19.95, "z_ohm": 242.1, "r_ohm": 0.2681, "x_ohm": -242.1 },
+        { "f_mhz": 25.12, "z_ohm": 192.4, "r_ohm": 0.2572, "x_ohm": -192.4 },
+        { "f_mhz": 31.62, "z_ohm": 152.9, "r_ohm": 0.2488, "x_ohm": -152.9 },
+        { "f_mhz": 39.81, "z_ohm": 121.5, "r_ohm": 0.242, "x_ohm": -121.5 },
+        { "f_mhz": 50.12, "z_ohm": 96.49, "r_ohm": 0.2366, "x_ohm": -96.49 },
+        { "f_mhz": 63.1, "z_ohm": 76.63, "r_ohm": 0.2344, "x_ohm": -76.63 },
+        { "f_mhz": 79.43, "z_ohm": 60.83, "r_ohm": 0.2392, "x_ohm": -60.83 },
+        { "f_mhz": 100, "z_ohm": 48.25, "r_ohm": 0.2453, "x_ohm": -48.25 },
+        { "f_mhz": 125.9, "z_ohm": 38.23, "r_ohm": 0.2529, "x_ohm": -38.23 },
+        { "f_mhz": 158.5, "z_ohm": 30.24, "r_ohm": 0.2625, "x_ohm": -30.24 },
+        { "f_mhz": 199.5, "z_ohm": 23.86, "r_ohm": 0.2745, "x_ohm": -23.86 },
+        { "f_mhz": 251.2, "z_ohm": 18.74, "r_ohm": 0.2569, "x_ohm": -18.73 },
+        { "f_mhz": 316.2, "z_ohm": 14.61, "r_ohm": 0.2676, "x_ohm": -14.61 },
+        { "f_mhz": 398.1, "z_ohm": 11.25, "r_ohm": 0.281, "x_ohm": -11.25 },
+        { "f_mhz": 501.2, "z_ohm": 8.497, "r_ohm": 0.2979, "x_ohm": -8.492 },
+        { "f_mhz": 631, "z_ohm": 6.191, "r_ohm": 0.3192, "x_ohm": -6.183 },
+        { "f_mhz": 794.3, "z_ohm": 4.215, "r_ohm": 0.3462, "x_ohm": -4.201 },
+        { "f_mhz": 1000, "z_ohm": 2.469, "r_ohm": 0.3803, "x_ohm": -2.44 },
+        { "f_mhz": 1259, "z_ohm": 0.91, "r_ohm": 0.4236, "x_ohm": -0.8054 },
+        { "f_mhz": 1585, "z_ohm": 0.9412, "r_ohm": 0.479, "x_ohm": 0.8102 },
+        { "f_mhz": 1995, "z_ohm": 2.572, "r_ohm": 0.5511, "x_ohm": 2.512 },
+        { "f_mhz": 2512, "z_ohm": 4.437, "r_ohm": 0.6481, "x_ohm": 4.389 },
+        { "f_mhz": 3162, "z_ohm": 6.612, "r_ohm": 0.7871, "x_ohm": 6.564 },
+        { "f_mhz": 3981, "z_ohm": 9.242, "r_ohm": 1.007, "x_ohm": 9.187 },
+        { "f_mhz": 5012, "z_ohm": 12.51, "r_ohm": 1.396, "x_ohm": 12.43 },
+        { "f_mhz": 6310, "z_ohm": 16.56, "r_ohm": 2.103, "x_ohm": 16.43 },
+        { "f_mhz": 7943, "z_ohm": 21.47, "r_ohm": 3.253, "x_ohm": 21.23 }
+      ],
+      "impedance_ohm": 48.25,
+      "impedance_test_mhz": 100,
+      "srf_mhz": 1414,
+      "c_lf_nf": 0.03315,
+      "esr_mohm": 444,
+      "esl_ph": 428,
+      "source-o": {
+        "s2p-s": "C0603C330J5GACTU_ksim_0V_25C.s2p",
+        "fixture-s": "shunt",
+        "z0_ohm": 50,
+        "f_min_mhz": 0.01,
+        "f_max_mhz": 9550,
+        "url-s": "https://ksim3.kemet.com/capacitor-simulation?pn=C0603C330J5GACTU (KEMET K-SIM, S2P export via /api/s2p/: KEMET S2P model of base PN C0603C330K5GAC, 25 C, 0 V DC bias, shunt, 50 ohm, 10 kHz - 10 GHz)",
+        "retrieved-s": "2026-10-28"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "C0603C330J5GACTU_ksim_0V_25C.s2p https://ksim3.kemet.com/capacitor-simulation?pn=C0603C330J5GACTU",
+        "KEM_C1003_C0G_SMD.pdf https://yageogroup.com/content/datasheet/asset/file/KEM_C1003_C0G_SMD"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

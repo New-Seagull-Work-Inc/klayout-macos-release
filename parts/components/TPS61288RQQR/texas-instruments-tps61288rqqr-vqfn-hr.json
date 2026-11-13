@@ -1,0 +1,354 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "not_supply_pins-as": [
+      "11"
+    ],
+    "not_supply_pins_note-s": "pin 11 VCC is the output of the TPS61288's internal regulator (SLVSFP3C Table 6-1 p4: 'A ceramic capacitor of more than 1.0 uF is required between this pin and ground'), not a supply input",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS61288RQQR",
+    "description-s": "18-V, 15-A fully integrated synchronous boost converter, 2.0-18 V in, adjustable 4.5-18 V out (configured 6.92 V), fixed 500 kHz, external loop compensation, automatic PFM at light load",
+    "package-ao": [
+      { "ptype-s": "vqfn-hr-11" },
+      { "ppins-i": 11 }
+    ],
+    "package_source-o": {
+      "datasheet-s": "tps61288.pdf",
+      "page_n": 24,
+      "table-s": "Package Option Addendum: 'TPS61288RQQR Active Production VQFN-HR (RQQ) | 11 3000'; Figure 6-1 p4 '11-Pin RQQ VQFN Package'; no exposed thermal pad in the pin table"
+    },
+    "blocks-as": [
+      "regulator",
+      "regulator-boost",
+      "thermal-shutdown",
+      "current-limit",
+      "soft-start",
+      "enable"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 18000 },
+      { "vout": 6920 }
+    ],
+    "max_currents-ao": [
+      { "out": 2300 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -65,
+          "max-i": 150
+        }
+      }
+    ],
+    "temperatures_source-o": {
+      "datasheet-s": "tps61288.pdf",
+      "page_n": 5,
+      "table-s": "7.3 Recommended Operating Conditions 'TJ Operating junction temperature -40 125 C'; 7.1 Absolute Maximum Ratings 'Tstg Storage temperature -65 150 C', 'TJ ... -40 150'"
+    },
+    "pins-ao": [
+      { "1": "fb" },
+      { "2": "comp" },
+      { "3": "pgnd" },
+      { "4": "sw" },
+      { "5": "vout" },
+      { "6": "en" },
+      { "7": "vin" },
+      { "8": "bst" },
+      { "9": "sw" },
+      { "10": "agnd" },
+      { "11": "vcc" }
+    ],
+    "pins_source-o": {
+      "datasheet-s": "tps61288.pdf",
+      "page_n": 4,
+      "table-s": "Table 6-1 Pin Functions: FB 1, COMP 2, PGND 3, SW 4,9, VOUT 5, EN 6, VIN 7, BST 8, AGND 10, VCC 11"
+    },
+    "stdpins-ao": [
+      { "7": "ds-power-rx" },
+      { "7": "10uf-avss" },
+      { "7": "100nf-avss" },
+      { "5": "ds-power-tx" },
+      { "5": "22uf-avss" },
+      { "5": "22uf-avss" },
+      { "5": "22uf-avss" },
+      { "5": "22uf-avss" },
+      { "5": "22uf-avss" },
+      { "5": "22uf-avss" },
+      { "4": "2.2uh-vin" },
+      { "8": "100nf-sw" },
+      { "11": "2.2uf-avss" },
+      { "3": "avss" },
+      { "10": "avss" }
+    ],
+    "stdpins_note-s": "Figure 9-1 (p13, 3.6 V to 13 V / 2.3 A): C1 10 uF input and C5 0.1 uF at the VIN pin ('A 0.1-uF ceramic bypass capacitor is recommended as close as possible to the VIN pin', p15). C4 6 x 22 uF output. L1 2.2 uH from VIN to SW. C2 0.1 uF BST to SW ('A ceramic capacitor of 0.1 uF must be connected between this pin and the SW pin', Table 6-1 p4). C3 2.2 uF on VCC. Inductor: the sheet says to 'select the inductor with saturation current higher than the setting current limit' (p15). The current limit is fixed at 12 / 15 / 17.1 A, so the saturation rating must be at least 17.1 A (see l_isat_min_ma). Table 9-2 (p15) recommends CMLE105T-2R2MS-99 (2.2 uH, 26.0 A saturation). Output capacitors: rated 22 uF each. Choose a voltage rating that keeps the effective total inside the cout_min_nf..cout_max_nf range at 6.92 V (p15: 'leave margin on the voltage rating to ensure adequate effective capacitance').",
+    "cfgpins-ao": [
+      { "6": "en" },
+      { "6": "vin" },
+      { "6c": "EN: 'Logic high level enables the device' (Table 6-1 p4). Internal pull-down REN 850 kohm min (7.5 Electrical Characteristics p6), so a floating EN stays off. Tied to VIN for always-on, as the TPS61088 record does; Figure 9-1 shows an ON/OFF control, so a GPIO may drive it instead (VIH 1.2 V, VIL 0.4 V)." },
+      { "1": "fb" },
+      { "1": "137k-out" },
+      { "1": "13k-avss" },
+      { "1c": "Feedback divider R1 137 kohm (VOUT to FB) and R2 13.0 kohm (FB to ground), both E96. Equation 1 (p14): R1 = (VOUT - VREF) x R2 / VREF, with VREF 0.6 V typ (0.588 / 0.6 / 0.612 V, 7.5 Electrical Characteristics p6). For 6.92 V: (6.92 - 0.6) / 0.6 x 13.0k = 136.9k, so 137k. VOUT = 0.6 x (1 + 137/13.0) = 6.923 V typ, 6.785 to 7.062 V over the VREF limits. R2 is below 15 kohm, so C6 (27 pF across R2, 'Recommend adding C6 when R2>15k', Figure 9-1) is not needed. R2 is also below the p14 limit 'R2 should be smaller than 300 k'." },
+      { "2": "comp" },
+      { "2": "36.5k+4.7nf-avss" },
+      { "2": "33pf-avss" },
+      { "2c": "Loop compensation from COMP to AGND ('the loop compensation network should be connected between this pin and the AGND pin', Table 6-1 p4): RC 36.5 kohm in series with CC 5.6 nF, plus CP 30 pF in parallel. Computed with 9.2.2.5 Loop Stability (p16-17) at the board's worst case: VIN 3.0 V, VOUT 6.92 V, IOUT 2.3 A, L 2.2 uH, CO 6 x 22 uF = 132 uF rated. D = 1 - VIN/VOUT = 0.5665, so (1-D) = 0.4335. RO = 6.92/2.3 = 3.009 ohm. fRHPZ = RO x (1-D)^2 / (2 pi L) (Equation 10) = 3.009 x 0.1879 / (2 pi x 2.2 uH) = 40.9 kHz. Crossover rule (p17): fC no higher than the lower of fSW/10 (44 kHz at the 440 kHz minimum fSW) or fRHPZ/5 (8.18 kHz), so the limit is 8.18 kHz. fC is chosen at 4.0 kHz with CO 132 uF. That leaves the crossover at about 8.0 kHz, still under 8.18 kHz, if DC bias halves the effective CO (rc_sizing_note-s). Equation 12: RC = 2 pi x VOUT x CO x fC / ((1-D) x VREF x GEA x KCOMP) = 2 pi x 6.92 x 132e-6 x 4000 / (0.4335 x 0.6 x 180e-6 x 13.5) = 22.96 / 6.320e-4 = 36.3 kohm, so 36.5k. GEA 180 uS and KCOMP 13.5 A/V come from 7.5 Electrical Characteristics p6. Equation 13: CC = RO x CO / (2 RC) = 3.009 x 132e-6 / 73.0e3 = 5.44 nF, so 5.6 nF. Equation 14: CP = RESR x CO / RC, and 'If the calculated value of CP is less than 10 pF, it can be left open' (p17). The ESR of six ceramic capacitors is not stated, so CP is fitted at Figure 9-1's 30 pF. Its pole is at 1/(2 pi x 36.5k x 30p) = 145 kHz, far above fC. Fitted values (klayout-c9 2026-11-06, procurement): CC 4.7 nF (C0603C472K5RACTU) and CP 33 pF (C0603C330J5GACTU), the nearest values whose ltl.db rows carry ESR / ESL / DC-bias data, in place of the computed 5.6 nF / 30 pF: the CC zero moves from 1 / (2 pi 36.5k 5.6n) = 779 Hz to 1 / (2 pi 36.5k 4.7n) = 928 Hz, still more than 4x below the 4 kHz crossover; the CP pole from 145 kHz to 1 / (2 pi 36.5k 33p) = 132 kHz." }
+    ],
+    "specs-o": {
+      "topology_s": "boost",
+      "adjustable_b": true,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "softstart_note-s": "internal soft start, no SS pin: 'When the EN pin is pulled high, the internal soft-start capacitor is charged' (8.3.1 p11); TSS 3 ms typ at VIN 7.2 V, VOUT 16 V, Cout(eff) 50 uF (7.5 Electrical Characteristics p6)",
+      "vin_min_mv": 2000,
+      "vin_max_mv": 18000,
+      "vin_startup_min_mv": 2400,
+      "vout_min_mv": 4500,
+      "vout_max_mv": 18000,
+      "vout_set_mv": 6923,
+      "vout_set_note-s": "This record is configured for the board's 6.92 V (power.json BOOST_RAW, owner's figure). The TPS61088 record said 7.0 V. The 137k/13.0k divider gives 6.923 V typ. Only the 6.92 V figure was used.",
+      "vin_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 5,
+        "table-s": "7.3 Recommended Operating Conditions: 'VIN Input voltage range 2.0 18 V', 'VOUT Output voltage range 4.5 18 V'; start-up minimum from p1 Features '2.4-V Minimum input voltage for start-up' and 7.5 Electrical Characteristics p6 VUVLO rising 2.3 typ / 2.4 max V"
+      },
+      "vref_mv": 600,
+      "vref_min_mv": 588,
+      "vref_max_mv": 612,
+      "vref_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 6,
+        "table-s": "7.5 Electrical Characteristics, OUTPUT: 'VREF Feedback regulation reference voltage PWM Operation 0.588 0.6 0.612 V'"
+      },
+      "switching_freq_khz": 500,
+      "switching_freq_min_khz": 440,
+      "switching_freq_max_khz": 600,
+      "switching_freq_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 6,
+        "table-s": "7.5 Electrical Characteristics: 'fSW Switching frequency ... 440 500 600 kHz'"
+      },
+      "ilim_min_ma": 12000,
+      "ilim_typ_ma": 15000,
+      "ilim_max_ma": 17100,
+      "ilim_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 6,
+        "table-s": "7.5 Electrical Characteristics, CURRENT LIMIT: 'ILIM Switching Peak Current Limit VIN = 7.2 V, VOUT = 16 V, L = 2.2 uH, -20 C <= TJ <= 125 C 12 15 17.1 A'; fixed, no ILIM pin (8.3.3 p11 'the typical 15-A current limit')"
+      },
+      "l_isat_min_ma": 17100,
+      "l_isat_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 15,
+        "table-s": "9.2.2.2 Inductor Selection: 'Set the current limit of the TPS61288 higher than the peak current, ILpeak. Then select the inductor with saturation current higher than the setting current limit.' The limit is fixed; 17.1 A is its maximum (p6)"
+      },
+      "l_range_note-s": "9.2.2.2 p14: 'designed to work with inductor values between 1.0 and 4.7 uH'. 7.3 Recommended Operating Conditions p5: 'L Effective inductance range 0.8 5.6 uH' (two figures, columns not resolvable from the text layer). 2.2 uH chosen as in Figure 9-1.",
+      "inductor_peak_derived-o": {
+        "ilpeak_ma": 7149,
+        "note-s": "Derived with Equations 2-4 (p14-15) at VIN 3.0 V, VOUT 6.92 V, IOUT 2.3 A, efficiency 0.90, L 2.2 uH -30% = 1.54 uH, fSW min 440 kHz. p14 says to use 'the minimum switching frequency, the inductor value with -30% tolerance, and a low-power conversion efficiency'. The 0.90 efficiency is a chosen design figure: the sheet gives none at 6.92 V, and the bracketing curves read 91.5% (13 V, VIN 2.7 V, 2 A) and 94.8% (5.5 V, VIN 2.3 V, 2 A). IDC = 6.92 x 2.3 / (3.0 x 0.90) = 5.895 A. IPP = 1 / (L x (1/(VOUT-VIN) + 1/VIN) x fSW) = 2.508 A. ILpeak = 7.149 A, below the 12 A minimum limit."
+      },
+      "load_regulation-ao": [
+        {
+          "vout_mv": 5500,
+          "vin_mv": 3600,
+          "readings-ao": [
+            { "iout_ma": 10, "vout_mv_x10": 54936 },
+            { "iout_ma": 500, "vout_mv_x10": 54924 },
+            { "iout_ma": 1000, "vout_mv_x10": 54924 },
+            { "iout_ma": 2000, "vout_mv_x10": 54928 },
+            { "iout_ma": 2300, "vout_mv_x10": 54931 },
+            { "iout_ma": 5000, "vout_mv_x10": 54993 }
+          ],
+          "slope_mv_per_a_x100": 39,
+          "slope_note-s": "derived over 0.5 to 2.3 A (PWM region up to the board load): (5492.4 - 5493.1 mV) gives +0.7 mV / 1.8 A = +0.39 mV/A. The output RISES with load. Below 0.5 A (PFM) it falls 1.2 mV from 10 mA to 0.5 A. Total excursion from 10 mA to 2.3 A: 1.2 mV (0.02%).",
+          "read_from_curve_b": true,
+          "source-o": {
+            "datasheet-s": "tps61288.pdf",
+            "page_n": 8,
+            "figure-s": "Figure 7-6. Output Voltage vs Output Current, VOUT = 5.5 V (VIN = 3.6 V trace, 'Separate power VIN and 3.3 V signal VIN'); read from the vector plot with procurement pdf-graph"
+          }
+        },
+        {
+          "vout_mv": 13000,
+          "vin_mv": 3600,
+          "readings-ao": [
+            { "iout_ma": 10, "vout_mv_x10": 130320 },
+            { "iout_ma": 500, "vout_mv_x10": 130289 },
+            { "iout_ma": 1000, "vout_mv_x10": 130321 },
+            { "iout_ma": 2000, "vout_mv_x10": 130427 },
+            { "iout_ma": 2300, "vout_mv_x10": 130468 },
+            { "iout_ma": 2500, "vout_mv_x10": 130517 }
+          ],
+          "slope_mv_per_a_x100": 994,
+          "slope_note-s": "derived over 0.5 to 2.3 A: 13028.9 to 13046.8 mV gives +17.9 mV / 1.8 A = +9.94 mV/A (0.14% of 13 V). The output RISES with load, not droops.",
+          "read_from_curve_b": true,
+          "source-o": {
+            "datasheet-s": "tps61288.pdf",
+            "page_n": 8,
+            "figure-s": "Figure 7-2. Output Voltage vs Output Current, VOUT = 13 V (VIN = 3.6 V trace); read from the vector plot with procurement pdf-graph"
+          }
+        }
+      ],
+      "load_regulation_mv_per_a": 10,
+      "load_regulation_note-s": "6.92 V has no curve; bracketed by 5.5 V and 13 V, the larger used. The larger is +9.94 mV/A at 13 V (Figure 7-2, p8), rounded to 10. The sign is positive: the output rises with load over 0.5-2.3 A. The magnitude is the figure to use as |Rout| = 10 mohm.",
+      "cout_min_nf": 10000,
+      "cout_max_nf": 1000000,
+      "cout_eff_min_nf": 10000,
+      "cout_eff_max_nf": 1000000,
+      "cout_min_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 5,
+        "table-s": "7.3 Recommended Operating Conditions: 'COUT Effective output capacitance range 10 1000 uF' (effective, i.e. after DC-bias derating)"
+      },
+      "cin_note-s": "7.3 Recommended Operating Conditions p5: 'CIN Effective input capacitance range 1 10 uF' (two figures, columns not resolvable from the text layer). 9.2.2.3 p15: 'Generally, 10-uF input capacitance is sufficient for most applications'.",
+      "crossover_eq-s": "fC = RC x (1 - D) x VREF x GEA x KCOMP / (2 x pi x VOUT x CO), Equation 12 rearranged; (1 - D) = VIN / VOUT; RC the COMP resistor fitted; CO the effective output capacitance",
+      "crossover_eq_gea_us": 180,
+      "crossover_eq_kcomp_ma_per_v": 13500,
+      "crossover_eq_vref_mv": 600,
+      "crossover_eq_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 17,
+        "table-s": "9.2.2.5 Loop Stability, Equation 12: 'RC = 2 pi x VOUT x CO x fC / ((1-D) x VREF x GEA x KCOMP)'. GEA 'Gm Error amplifier trans conductance 180 uS' and 'KCOMP Power stage trans-conductance ... 13.5 A / V' from 7.5 Electrical Characteristics p6; VREF 0.6 V p6"
+      },
+      "loop_crossover_max_rule-s": "fC no higher than the lower of fSW/10 or fRHPZ/5, with fRHPZ = RO x (1-D)^2 / (2 pi L) (Equation 10, p17). Quote: 'loop gain cross over no higher than the lower of either 1/10 of the switching frequency, fSW, or 1/5 of the RHPZ frequency' (p17). Also 'greater than 45 deg of phase margin and greater than 10-dB gain margin' (p17). External compensation, so the crossover is a design choice.",
+      "loop_design_derived-o": {
+        "fc_design_hz": 4020,
+        "frhpz_hz": 40900,
+        "fc_limit_hz": 8180,
+        "rc_sizing_note-s": "Derived at VIN 3.0 V, IOUT 2.3 A, L 2.2 uH, CO 132 uF rated, RC 36.5k: fC = 4.02 kHz. The effective CO at 6.92 V depends on the capacitor picked and is not known here. fC scales as 1/CO_eff: it is 8.04 kHz at CO_eff 66 uF and passes the 8.18 kHz limit at about 65 uF. Below that, raise CO or lower RC. With L at -30% (1.54 uH), fRHPZ = 58.4 kHz and the limit rises to 11.7 kHz."
+      },
+      "efficiency-ao": [
+        { "vin_mv": 3600, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 972, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8" },
+        { "vin_mv": 3600, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 947, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8; matches p1 Features 'Up to 94.7% efficiency at VIN = 3.6 V, VOUT = 13 V, and IOUT = 2 A'" },
+        { "vin_mv": 2700, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 915, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8" },
+        { "vin_mv": 2300, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 948, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8" }
+      ],
+      "vcc_ldo_mv": 4800,
+      "vcc_cap_min_nf": 1000,
+      "vcc_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 6,
+        "table-s": "7.5 Electrical Characteristics: 'VCC Vcc regulated votlage ICC = 5 mA, VIN = 9 V 4.8 V'; Table 6-1 p4 VCC 'A ceramic capacitor of more than 1.0 uF is required'"
+      },
+      "rtheta_ja_c_per_w_x10": 714,
+      "rtheta_ja_evm_c_per_w_x10": 336,
+      "tj_abs_max_c": 150,
+      "tsd_c": 160,
+      "thermal_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 5,
+        "table-s": "7.4 Thermal Information RQQ (VQFN) 11 pins: RthetaJA 71.4 C/W (Standard), 33.6 C/W (EVM, 'Measured on TPS61288EVM, 4-layer, 2oz copper PCB'); 7.1 Absolute Maximum Ratings TJ -40 to 150 C; thermal shutdown 160 C typ (7.5 p7)"
+      },
+      "thermal_note-s": "p1 Features: 'TPS61288L is recommended with thermal improvement' (TPS61288LRQQR, HotRod Lite, same RQQ footprint per the addendum p24). Not chosen here; the owner approved TPS61288RQQR.",
+      "not_stated-o": {
+        "load_regulation_ec-s": "not stated: no load-regulation row in 7.5 Electrical Characteristics (p6-7); only the curves at 5.5 V, 13 V and 16 V (p8). Figure 7-4 (16 V) has its y-axis printed 13.02-13.06 V, a datasheet error, so it is not used.",
+        "load_regulation_6920mv": "not stated: no curve at 6.92 V. Bracketed by Figure 7-6 (5.5 V) and Figure 7-2 (13 V), p8.",
+        "output_impedance_mohm": "not stated: no Zout curve; load_regulation_mv_per_a is the curve-derived DC figure",
+        "loop_crossover_khz": "not stated: externally compensated, so the crossover is a design choice. The p17 rule and Equation 12 give it; this record's design is in loop_design_derived-o.",
+        "load_transient-ao": "not filed: Figure 9-7 (p18) 'Load Transient (IOUT = 1 to 2 A)', VIN 3.6 V, VOUT 13 V, is a scope shot (Vout(AC) 500 mV/div, 500 us/div) with no stated deviation. The Cout is not printed beside the figure; it belongs to the 9.2 typical application, Figure 9-1 C4 6 x 22 uF.",
+        "efficiency_6920mv": "not stated: efficiency curves only at VOUT 5.5 V (Figure 7-5), 13 V (Figure 7-1) and 16 V (Figure 7-3), p8. The bracketing readings are in efficiency-ao.",
+        "ilim_at_board_point": "not stated: ILIM is specified only at VIN 7.2 V, VOUT 16 V, L 2.2 uH, TJ -20 to 125 C (p6); no figure at VIN 3.0 V / VOUT 6.92 V, or below TJ -20 C",
+        "iout_max_ma": "not stated as a device rating: the sheet gives the 15 A switch current (p1) and the 2.3 A rating of the 3.6 V to 13 V design example (Table 9-1 p13). max_currents-ao out 2300 is the board's BOOST_RAW load (the design example happens to be the same 2.3 A).",
+        "cout_esr_mohm_max": "not stated: Equation 14 (p17) uses RESR but the sheet gives no ESR limit",
+        "vout_ripple_mvpp_typ": "not stated as a device figure: Table 9-1 (p13) sets a 100 mV peak-to-peak ripple design requirement for the 13 V example; Equations 5-6 (p16) compute ripple from Cout"
+      },
+      "pin_notes-o": {
+        "8": "BST: 0.1 uF to SW is mandatory (Table 6-1 p4); carried in stdpins-ao as 100nf-sw.",
+        "11": "VCC: internal LDO output, 4.8 V typ (7.5 Electrical Characteristics p6). Needs more than 1.0 uF to ground (Table 6-1 p4); Figure 9-1 C3 is 2.2 uF, carried in stdpins-ao as 2.2uf-avss."
+      },
+      "synchronous_b": true,
+      "sw_pins-as": [
+        "4",
+        "9"
+      ],
+      "vin_pins-as": [
+        "7"
+      ],
+      "pgnd_pins-as": [
+        "3"
+      ],
+      "l_nh_typ": 2200,
+      "cin_nf_typ": 10100,
+      "cout_nf_typ": 132000,
+      "sw_ratings-ao": [
+        {
+          "pins-as": [
+            "4",
+            "9"
+          ],
+          "abs_min_mv": -300,
+          "abs_max_mv": 20000
+        }
+      ],
+      "sw_abs_min_mv": -300,
+      "sw_abs_max_mv": 20000,
+      "sw_not_stated-o": {
+        "sw_rise_ns": "not stated in tps61288.pdf: no switch rise-time row in its tables (30 pages)",
+        "sw_fall_ns": "not stated in tps61288.pdf: no switch fall-time row in its tables (30 pages)",
+        "sw_coss_pf": "not stated in tps61288.pdf: no switch-pin or C_oss capacitance row in its tables (30 pages)"
+      },
+      "sw_source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 5,
+        "table-s": "Absolute Maximum Ratings"
+      },
+      "source-o": {
+        "datasheet-s": "tps61288.pdf",
+        "page_n": 14,
+        "figure-s": "Figure 9-1"
+      }
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125,
+      "rtheta-ja-c-per-w-f": 71.4
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "7"
+        ],
+        "vmin_mv": 2000,
+        "vmax_mv": 18000,
+        "source-o": {
+          "datasheet-s": "tps61288.pdf",
+          "page_n": 5,
+          "table-s": "7.3 Recommended Operating Conditions"
+        },
+        "ripple_max_mvpp": 100,
+        "ripple_source-o": {
+          "datasheet-s": "tps61288.pdf",
+          "page_n": 15,
+          "table-s": "9.2.2.3 Input Capacitor Selection: 'It is recommended to have enough input capacitance to make the input voltage ripple less than 100 mV' (design recommendation for the power-stage input, no band stated)"
+        },
+        "carried_source-o": {
+          "datasheet-s": "tps61288.pdf",
+          "page_n": 5,
+          "table-s": "7.3 Recommended Operating Conditions: 'VIN Input voltage range 2.0 18 V'"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tps61288.pdf https://www.ti.com/lit/ds/symlink/tps61288.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

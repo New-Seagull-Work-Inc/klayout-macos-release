@@ -1,0 +1,52 @@
+{
+  "component-o": {
+    "type-s": "diode",
+    "vendor-s": "Vishay",
+    "part-s": "SB540-E3/54",
+    "description-s": "5 A 40 V Schottky barrier rectifier, 480 mV VF max, DO-201AD axial",
+    "package-ao": [
+      { "ptype-s": "axial-do-201ad" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "diode-schottky"
+    ],
+    "pins-ao": [
+      { "1": "cathode" },
+      { "2": "anode" }
+    ],
+    "passive-o": {
+      "voltage-max-i": 40000,
+      "current-max-i": 5000,
+      "lead-style-s": "axial"
+    },
+    "diode-o": {
+      "technology-s": "schottky",
+      "vf-mv-i": 480,
+      "ir-ua-i": 500
+    },
+    "specs-o": {
+      "forward_ma": 5000,
+      "forward_source-o": {
+        "datasheet-s": "SB540-E3_54.pdf (Vishay SB520 thru SB560, doc 88721, rev 19-Oct-09)",
+        "page_n": 1,
+        "table-s": "Maximum Ratings: Maximum average forward rectified current at 0.375 in (9.5 mm) lead length (fig. 1) IF(AV) 5.0 A"
+      },
+      "dynamic_resistance_mohm": 38,
+      "dynamic_resistance_source-o": {
+        "datasheet-s": "SB540-E3_54.pdf",
+        "page_n": 2,
+        "fig-s": "Fig. 3 - Typical Instantaneous Forward Characteristics, TJ = 25 C solid curve (solid = SB520 thru SB540, dashed = SB550/SB560 per the legend; checked on a render); vector curve read with procurement pdf-graph --points, log current axis",
+        "derived-s": "chord over the upper half of the 5 A rating: vertices 0.3999 V at 2.5977 A and 0.48744 V at 4.9201 A: (0.48744 - 0.3999) V / (4.9201 - 2.5977) A = 0.08754 / 2.3224 = 38 mOhm. Typical curve, TJ = 25 C"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "vishay_sb520.pdf https://www.vishay.com/docs/88721/sb520.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

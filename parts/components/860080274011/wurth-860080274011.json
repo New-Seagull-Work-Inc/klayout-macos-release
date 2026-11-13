@@ -1,0 +1,44 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 62,
+      "esl_ph": 4000,
+      "srf_mhz": 0.1161,
+      "esr_esl_dc_bias_source-s": "Würth Elektronik LTspice model library WCAP-ATLI.lib (rev22a, 6/1/2022, eiSos EDA Service; github.com/WurthElektronik/LTspice-Library sub/WCAP-ATLI.lib, the repository Würth's LTspice user guide UG002 names), subckt 860080274011_470uF: Rser 0.062 ohm, Lser 4 nH, C 470 µF, Rpar 212766 ohm -> esr_mohm = Rser (frequency-independent model, so also the ESR at SRF), esl_ph = Lser, srf_mhz = 1/(2 pi sqrt(Lser C)). Model values, not a measured curve; temperature not stated. Würth datasheet 860080274011 rev 1.0 (2014-11-11): impedance 0.075 ohm max (100 kHz, 20 degC), 0.221 ohm max (100 kHz, -10 degC); ripple 750 mA max (100 kHz, 105 degC); DF 14 % typ (120 Hz); leakage 47 µA max; load life 3000 h at 105 degC. DC bias not applicable (electrolytic). Read 2026-10-27",
+      "impedance_max_100khz_20c_mohm": 75,
+      "impedance_max_100khz_m10c_mohm": 221,
+      "ripple_ma_100khz_105c": 750
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Würth Elektronik",
+    "part-s": "860080274011",
+    "description-s": "470 µF ±20% 10 V aluminum electrolytic capacitor, WCAP-ATLI (low impedance, 105 °C 3000 h), radial can 8.0 x 11.5 mm, 3.5 mm lead pitch, 0.5 mm leads",
+    "package-ao": [
+      { "ptype-s": "radial-electrolytic" },
+      { "ppins-i": 2 },
+      { "can-diameter-mm-f": 8 },
+      { "can-length-mm-f": 11.5 },
+      { "lead-pitch-mm-f": 3.5 },
+      { "lead-diameter-mm-f": 0.5 }
+    ],
+    "blocks-as": [
+      "capacitor-electrolytic"
+    ],
+    "passive-o": {
+      "lead-style-s": "radial",
+      "value-i": 470000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 10000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "aluminum-electrolytic"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "WCAP-ATLI.lib https://raw.githubusercontent.com/WurthElektronik/LTspice-Library/master/sub/WCAP-ATLI.lib"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

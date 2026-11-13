@@ -1,0 +1,59 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 3.6,
+      "esl_ph": 336,
+      "srf_mhz": 1.368,
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 96 },
+        { "v_mv": 1800, "c_pct": 81.2 },
+        { "v_mv": 2500, "c_pct": 68.7 },
+        { "v_mv": 3300, "c_pct": 55.5 },
+        { "v_mv": 5000, "c_pct": 37.4 },
+        { "v_mv": 6300, "c_pct": 28.8 },
+        { "v_mv": 7000, "c_pct": 25.4 },
+        { "v_mv": 9000, "c_pct": 17.9 },
+        { "v_mv": 10000, "c_pct": 16 },
+        { "v_mv": 12000, "c_pct": 13.1 },
+        { "v_mv": 16000, "c_pct": 8.5 }
+      ],
+      "esr_esl_dc_bias_source-s": "Samsung Electro-Mechanics product page chart data (product.samsungsem.com/mlcc/CL21A226MOQNNN.do, datasheetData): |Z| and R 'Precise' model at 0 V, 25 degC -> ESR at SRF (|Z| min), ESL at 10x SRF; DC-bias delta-C curve (dsDcSign 0.5; AC level not otherwise stated), interpolated at the listed volts, read 2026-10-26"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Samsung Electro-Mechanics",
+    "part-s": "CL21A226MOQNNNE",
+    "description-s": "22 uF +/-20% 16 V X5R 0805 multilayer ceramic capacitor (MLCC), SMD, 2.0 x 1.25 mm, -55~85 degC; stocked 0805 for the 9 V PD input and the 7 V output (keeps about 26 % = 5.7 uF at 7 V, 18 % at 9 V per Samsung's DC-bias chart)",
+    "package-ao": [
+      { "ptype-s": "smd-0805" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -55,
+          "max-i": 85
+        }
+      }
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 22000000,
+      "value-unit-s": "uf",
+      "voltage-max-i": 16000,
+      "tolerance-pct-x10": 200,
+      "dielectric-s": "x5r"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "CL21A226MOQNNNE.pdf https://datasheet.lcsc.com/datasheet/pdf/02336ea48ea44ca18c72517dd3cb7b47.pdf"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}

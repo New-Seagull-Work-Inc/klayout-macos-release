@@ -1,0 +1,122 @@
+{
+  "component-o": {
+    "specs-o": {
+      "esr_mohm": 23.94,
+      "esl_ph": 242,
+      "srf_mhz": 85.5617,
+      "dc_bias-ao": [
+        { "v_mv": 0, "c_pct": 100 },
+        { "v_mv": 1000, "c_pct": 100 },
+        { "v_mv": 1800, "c_pct": 100 },
+        { "v_mv": 2500, "c_pct": 100 },
+        { "v_mv": 3300, "c_pct": 100 },
+        { "v_mv": 5000, "c_pct": 100 },
+        { "v_mv": 6300, "c_pct": 100 },
+        { "v_mv": 10000, "c_pct": 100 },
+        { "v_mv": 12000, "c_pct": 100 },
+        { "v_mv": 16000, "c_pct": 100 },
+        { "v_mv": 20000, "c_pct": 100 },
+        { "v_mv": 25000, "c_pct": 100 }
+      ],
+      "esr_esl_dc_bias_source-s": "Murata SimSurfing (ds.murata.co.jp/simserve): measured series-thru S-parameters GRM1555C1E103JE01.s2p (25 degC, 0 V; data generated Mar 5, 2019) -> ESR at SRF, ESL at 10x SRF; DC-bias curve c_dcbias_capchange (25 degC, AC 1 Vrms), read 2026-10-21"
+    },
+    "impedance-o": {
+      "z_curve-ao": [
+        { "f_mhz": 1, "z_ohm": 16.14, "r_ohm": 0.003132, "x_ohm": -16.14 },
+        { "f_mhz": 1.27, "z_ohm": 12.7, "r_ohm": 0.00334, "x_ohm": -12.7 },
+        { "f_mhz": 1.579, "z_ohm": 10.22, "r_ohm": 0.003595, "x_ohm": -10.22 },
+        { "f_mhz": 2.006, "z_ohm": 8.042, "r_ohm": 0.003928, "x_ohm": -8.042 },
+        { "f_mhz": 2.493, "z_ohm": 6.467, "r_ohm": 0.004281, "x_ohm": -6.467 },
+        { "f_mhz": 3.167, "z_ohm": 5.088, "r_ohm": 0.00471, "x_ohm": -5.088 },
+        { "f_mhz": 4.023, "z_ohm": 4.001, "r_ohm": 0.00514, "x_ohm": -4.001 },
+        { "f_mhz": 5, "z_ohm": 3.214, "r_ohm": 0.005568, "x_ohm": -3.214 },
+        { "f_mhz": 6.351, "z_ohm": 2.524, "r_ohm": 0.00609, "x_ohm": -2.524 },
+        { "f_mhz": 7.894, "z_ohm": 2.024, "r_ohm": 0.006652, "x_ohm": -2.024 },
+        { "f_mhz": 10.03, "z_ohm": 1.584, "r_ohm": 0.007413, "x_ohm": -1.584 },
+        { "f_mhz": 12.46, "z_ohm": 1.264, "r_ohm": 0.008234, "x_ohm": -1.264 },
+        { "f_mhz": 15.83, "z_ohm": 0.981, "r_ohm": 0.009272, "x_ohm": -0.9809 },
+        { "f_mhz": 20.11, "z_ohm": 0.7549, "r_ohm": 0.01042, "x_ohm": -0.7549 },
+        { "f_mhz": 25, "z_ohm": 0.5877, "r_ohm": 0.01151, "x_ohm": -0.5876 },
+        { "f_mhz": 31.76, "z_ohm": 0.4361, "r_ohm": 0.01279, "x_ohm": -0.436 },
+        { "f_mhz": 39.47, "z_ohm": 0.3205, "r_ohm": 0.01414, "x_ohm": -0.3202 },
+        { "f_mhz": 50.14, "z_ohm": 0.211, "r_ohm": 0.016, "x_ohm": -0.2104 },
+        { "f_mhz": 63.69, "z_ohm": 0.1142, "r_ohm": 0.01866, "x_ohm": -0.1127 },
+        { "f_mhz": 79.16, "z_ohm": 0.03684, "r_ohm": 0.02225, "x_ohm": -0.02936 },
+        { "f_mhz": 100.6, "z_ohm": 0.06812, "r_ohm": 0.02847, "x_ohm": 0.06189 },
+        { "f_mhz": 125, "z_ohm": 0.1565, "r_ohm": 0.03857, "x_ohm": 0.1517 },
+        { "f_mhz": 158.8, "z_ohm": 0.2943, "r_ohm": 0.08321, "x_ohm": 0.2823 },
+        { "f_mhz": 201.7, "z_ohm": 0.3066, "r_ohm": 0.09467, "x_ohm": 0.2917 },
+        { "f_mhz": 250.7, "z_ohm": 0.481, "r_ohm": 0.2142, "x_ohm": 0.4307 },
+        { "f_mhz": 318.4, "z_ohm": 0.4659, "r_ohm": 0.1158, "x_ohm": 0.4513 },
+        { "f_mhz": 395.8, "z_ohm": 0.6189, "r_ohm": 0.1336, "x_ohm": 0.6043 },
+        { "f_mhz": 502.8, "z_ohm": 0.7519, "r_ohm": 0.1506, "x_ohm": 0.7366 },
+        { "f_mhz": 624.9, "z_ohm": 0.9463, "r_ohm": 0.1484, "x_ohm": 0.9346 },
+        { "f_mhz": 793.8, "z_ohm": 1.2, "r_ohm": 0.1594, "x_ohm": 1.189 },
+        { "f_mhz": 1008, "z_ohm": 1.515, "r_ohm": 0.1696, "x_ohm": 1.505 },
+        { "f_mhz": 1253, "z_ohm": 1.873, "r_ohm": 0.1779, "x_ohm": 1.865 },
+        { "f_mhz": 1592, "z_ohm": 2.369, "r_ohm": 0.187, "x_ohm": 2.362 },
+        { "f_mhz": 1979, "z_ohm": 2.938, "r_ohm": 0.1964, "x_ohm": 2.932 },
+        { "f_mhz": 2514, "z_ohm": 3.729, "r_ohm": 0.2096, "x_ohm": 3.723 },
+        { "f_mhz": 3193, "z_ohm": 4.743, "r_ohm": 0.2279, "x_ohm": 4.738 },
+        { "f_mhz": 3969, "z_ohm": 5.922, "r_ohm": 0.2521, "x_ohm": 5.916 },
+        { "f_mhz": 5042, "z_ohm": 7.615, "r_ohm": 0.2967, "x_ohm": 7.609 }
+      ],
+      "impedance_ohm": 0.06609,
+      "impedance_test_mhz": 100,
+      "srf_mhz": 85.56,
+      "c_lf_nf": 9.862,
+      "esr_mohm": 23.6,
+      "esl_ph": 245,
+      "source-o": {
+        "s2p-s": "GRM1555C1E103JE01.s2p",
+        "fixture-s": "series",
+        "z0_ohm": 50,
+        "f_min_mhz": 1,
+        "f_max_mhz": 6000,
+        "url-s": "https://www.murata.com/-/media/webrenewal/tool/sparameter/mlcc/v78/grm-s-v78.ashx (Murata S-parameter data, MLCC GRM v78 zip: Temperature_compensating/1005_0402/GRM1555C1E103JE01.s2p)",
+        "retrieved-s": "2026-10-21"
+      }
+    },
+    "rating_source-o": {
+      "datasheet-s": "GRM1555C1E103JE01-01A.pdf",
+      "page_n": 2,
+      "table-s": "Rated Value / Type & Dimension (L 1.0+/-0.15, W 0.5+/-0.15, T 0.5+/-0.15 mm); temp. coeff. 0+/-30 ppm/C"
+    },
+    "type-s": "capacitor",
+    "vendor-s": "Murata",
+    "part-s": "GRM1555C1E103JE01D",
+    "description-s": "10 nF ±5% 25 V C0G (Class 1) 0402 multilayer ceramic capacitor (MLCC), SMD, 1.0 x 0.5 x 0.5 mm (Murata catalog C02E p81: '25Vdc C0G 10000pF ±5% GRM1555C1E103JE01#'); Class 1 bypass for the SPH8878 microphone's VDD, which must not see Class 2 dielectrics (piezoelectric effect)",
+    "height_mm_f": 0.65,
+    "height_source-o": {
+      "datasheet-s": "GRM1555C1E103JE01-01A.pdf",
+      "page_n": 2,
+      "table-s": "Murata reference sheet GRM1555C1E103JE01-01A, Type & Dimension (1005M): T 0.5 +/-0.15 mm",
+      "derived-s": "max = nominal + tolerance: 0.5 + 0.15 = 0.65 mm"
+    },
+    "package-ao": [
+      { "ptype-s": "smd-0402" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "capacitor-ceramic"
+    ],
+    "passive-o": {
+      "lead-style-s": "smd",
+      "value-i": 10000,
+      "value-unit-s": "nf",
+      "voltage-max-i": 25000,
+      "tolerance-pct-x10": 50,
+      "dielectric-s": "c0g"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "GRM1555C1E103JE01.s2p https://www.murata.com/-/media/webrenewal/tool/sparameter/mlcc/v78/grm-s-v78.ashx",
+        "GRM1555C1E103JE01-01A.pdf https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1E103JE01-01A-EN_PDF_CERAMICCAPACITORSMD",
+        "GRM1555C1E103JE01.pdf https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1E103JE01-01A-EN_PDF_CERAMICCAPACITORSMD"
+      ],
+      "checked-s": "2026-11-12"
+    }
+  }
+}
