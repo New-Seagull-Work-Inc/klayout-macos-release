@@ -1,0 +1,2 @@
+procurement mkmodel box from the Littelfuse 100-series clip dimensions (https://www.littelfuse.com/assetdocs/fuse-clips-100-445-030-and-520-datasheet?assetguid=8EAFA59E-662E-48B2-9E8C-4EA218516117 p2: 5.94 wide, 5.9 along the fuse, 10.6 mm high) spanning the pair at 20.5 mm (KiCad has no model for this package)
+2026-11-12

@@ -1,0 +1,70 @@
+{
+  "component-o": {
+    "type-s": "fuse-holder",
+    "vendor-s": "Keystone Electronics",
+    "part-s": "3557-2",
+    "description-s": "PCB through-hole 2-in-1 fuse holder for standard ATO/ATC blade fuses (and low-profile mini), black, UL 30 A @ 500 VAC, -50 to 145 C",
+    "package-ao": [
+      { "ptype-s": "ato-blade-holder-tht" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "fuse-holder"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "max_currents-ao": [
+      { "in": 30000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -50,
+          "max-i": 145
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "F1" },
+      { "2": "F2" }
+    ],
+    "fuse_holder-o": {
+      "takes-as": [
+        "littelfuse-atof-287",
+        "bussmann-atc",
+        "littelfuse-lp-mini"
+      ],
+      "fuse_size-s": "ato-blade",
+      "current_max_ma": 30000,
+      "voltage_max_mv": 500000,
+      "mount-s": "tht",
+      "parts_per_fuse_i": 1,
+      "source-o": {
+        "datasheet-s": "K75p47.pdf",
+        "page_n": 47,
+        "table-s": "2 IN 1 FUSE HOLDER: for Littelfuse ATOF 287 series / Bussmann ATC series, Littelfuse Low Profile Mini (LP) series or equivalents; contacts 0.016 in brass, tin-nickel plate; insulator Nylon 46, UL 94V-0; UL current rating 30 A @ 500 V AC; UL temperature rating -50 to +145 C; CAT. NO. 3557-2 black, all colors UL rated for 30 A"
+      },
+      "not_stated-o": {
+        "contact_mohm": "Keystone's catalog page gives no contact resistance",
+        "dc_rating": "the UL rating is stated at 500 V AC only"
+      }
+    },
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "2": "ds-power-tx" }
+    ],
+    "pin_roles_note-s": "pin roles: a fuse (and its holder) is non-polar; pin 1 = supply side (ds-power-rx) and pin 2 = load side (ds-power-tx) is a convention only, as on the DSK310 series diode; either orientation is electrically the same",
+    "supply_pins_are_pass_b": true,
+    "supply_pins_are_pass_note-s": "a fuse holder in the power path: its pins are the two contacts the blade fuse seats in, with no operating supply range of their own; the holder ratings in fuse_holder-o (UL 30 A @ 500 VAC) are the figures the checks use",
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "K75p47.pdf https://www.keyelco.com/userAssets/file/K75p47.pdf"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

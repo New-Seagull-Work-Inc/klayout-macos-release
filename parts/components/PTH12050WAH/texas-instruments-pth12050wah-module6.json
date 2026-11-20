@@ -1,0 +1,138 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "description-s": "6-A, 12-V Input Non-Isolated Wide-Output Adjust Power Module",
+    "package-ao": [
+      { "ptype-s": "module" },
+      { "ppins-i": 6 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-buck",
+      "enable",
+      "soft-start",
+      "current-limit",
+      "thermal-shutdown"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "voltages-ao": [
+      { "vin": 12000 },
+      { "vout": 1200 }
+    ],
+    "max_currents-ao": [
+      { "out": 6000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 85
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "gnd" },
+      { "2": "track" },
+      { "3": "vin" },
+      { "4": "inhibit" },
+      { "5": "adjust" },
+      { "6": "vout" }
+    ],
+    "cfgpins-ao": [
+      { "4": "inhibit" },
+      { "4c": "Inhibit left open: internal pull-up, the module runs when input power is applied (datasheet pin note); pull low with a low-leakage open-drain to inhibit" },
+      { "2": "track" },
+      { "5": "adjust" },
+      { "5c": "Adjust left open: VO defaults to the 1.2 V the row records (RSET open circuit, datasheet); an RSET to GND sets a higher VO" }
+    ],
+    "stdpins-ao": [
+      { "3": "ds-power-rx" },
+      { "3": "100uf-avss" },
+      { "3": "10uf-avss" },
+      { "6": "ds-power-tx" },
+      { "6": "100uf-avss" },
+      { "1": "avss" }
+    ],
+    "specs-o": {
+      "load_transient-ao": [
+        { "rail-s": "VOUT", "i_from_ma": 3000, "i_to_ma": 6000, "i_step_ma": 3000, "slew_a_per_us": 1, "dv_mv": 100, "cout_uf": 100, "vout_mv": 3300, "vin_mv": 12000, "page_n": 3, "table-s": "ELECTRICAL CHARACTERISTICS (PTH12050W): Transient response, 1 A/us load step, 50 to 100 % IOmax, C3 = 100 uF: VO over/undershoot 100 mV typ, recovery 70 us (TA 25 C, VI 12 V, VO 3.3 V, IOmax 6 A)", "derived-s": "50 to 100 % of IOmax 6 A = 3 A to 6 A, a 3 A step" }
+      ],
+      "load_regulation_mv_per_a": 1.67,
+      "load_regulation_source-o": {
+        "datasheet-s": "PTH12050WAH.pdf",
+        "page_n": 3,
+        "table-s": "ELECTRICAL CHARACTERISTICS (PTH12050W): Load regulation over IO range +/-5 mV typ (VI 12 V, VO 3.3 V, IO 0 to 6 A)",
+        "derived-s": "+/-5 mV band = 10 mV over 0 to 6 A = 1.67 mV/A (typical; no max stated)"
+      },
+      "cout_min_nf": 0,
+      "cout_recommended_nf": 100000,
+      "cout_max_nf": 3300000,
+      "cout_ceramic_max_nf": 300000,
+      "cout_source-o": {
+        "datasheet-s": "PTH12050WAH.pdf",
+        "page_n": 3,
+        "table-s": "ELECTRICAL CHARACTERISTICS: external output capacitance C3, nonceramic 0 min / 100 typ / 3300 max uF, ceramic 0 min / 300 max uF; note 5: an external output capacitor is not required for basic operation; Output Capacitors (Optional) p10: 100 uF defines the transient spec. C2 10 uF ceramic is an input capacitor (Standard Application p1)"
+      },
+      "params_gate_note-s": "cout_min_nf is 0 as stated (output capacitor optional, SLTS214H p3 note 5 and p10); the gate counts only a positive cout_min_nf, so this row fails on a stated value, not a missing one",
+      "topology_s": "buck",
+      "adjustable_b": true,
+      "vin_min_mv": 10800,
+      "vin_max_mv": 13200,
+      "vout_min_mv": 1200,
+      "vout_max_mv": 5500,
+      "vout_accuracy_pct_x10": 20,
+      "iout_max_ma": 6000,
+      "iq_typ_ua": 10000,
+      "efficiency_pct_max": 93,
+      "switching_freq_khz": 320,
+      "has_enable_b": true,
+      "has_pgood_b": false,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "has_softstart_b": true,
+      "integrated_inductor_b": true,
+      "efficiency-ao": [
+        { "mode-s": "PWM (synchronous, fixed frequency)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 1000, "efficiency_pct": 82, "page_n": 6, "fig-s": "Figure 1. Efficiency vs Load Current, PTH12050W Typical Characteristics (VI = 12 V), SLTS214H p6; typical data at 25 C (note 1)", "curve-s": "VO = 5 V", "read-s": "vector figure read by eye at 400 dpi (pdf-graph mislabels this figure's dashed curves): the top dash-dot curve, VO = 5 V; cross-checked against Figure 3 (power dissipation, VOUT = 5 V: about 1.1 / 1.3 / 1.5 / 1.75 / 2.0 W at 1-5 A, eta = PO / (PO + PD) = 82 / 88.5 / 91 / 92 / 92.6 %) and the p3 table (93 % at IO 5 A, RSET 280 ohm, VO 5 V); +/-1.5 % by eye" },
+        { "mode-s": "PWM (synchronous, fixed frequency)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 2000, "efficiency_pct": 89, "page_n": 6, "fig-s": "Figure 1. Efficiency vs Load Current, PTH12050W Typical Characteristics (VI = 12 V), SLTS214H p6; typical data at 25 C (note 1)", "curve-s": "VO = 5 V", "read-s": "vector figure read by eye at 400 dpi (pdf-graph mislabels this figure's dashed curves): the top dash-dot curve, VO = 5 V; cross-checked against Figure 3 (power dissipation, VOUT = 5 V: about 1.1 / 1.3 / 1.5 / 1.75 / 2.0 W at 1-5 A, eta = PO / (PO + PD) = 82 / 88.5 / 91 / 92 / 92.6 %) and the p3 table (93 % at IO 5 A, RSET 280 ohm, VO 5 V); +/-1.5 % by eye" },
+        { "mode-s": "PWM (synchronous, fixed frequency)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 3000, "efficiency_pct": 91, "page_n": 6, "fig-s": "Figure 1. Efficiency vs Load Current, PTH12050W Typical Characteristics (VI = 12 V), SLTS214H p6; typical data at 25 C (note 1)", "curve-s": "VO = 5 V", "read-s": "vector figure read by eye at 400 dpi (pdf-graph mislabels this figure's dashed curves): the top dash-dot curve, VO = 5 V; cross-checked against Figure 3 (power dissipation, VOUT = 5 V: about 1.1 / 1.3 / 1.5 / 1.75 / 2.0 W at 1-5 A, eta = PO / (PO + PD) = 82 / 88.5 / 91 / 92 / 92.6 %) and the p3 table (93 % at IO 5 A, RSET 280 ohm, VO 5 V); +/-1.5 % by eye" },
+        { "mode-s": "PWM (synchronous, fixed frequency)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 4000, "efficiency_pct": 92, "page_n": 6, "fig-s": "Figure 1. Efficiency vs Load Current, PTH12050W Typical Characteristics (VI = 12 V), SLTS214H p6; typical data at 25 C (note 1)", "curve-s": "VO = 5 V", "read-s": "vector figure read by eye at 400 dpi (pdf-graph mislabels this figure's dashed curves): the top dash-dot curve, VO = 5 V; cross-checked against Figure 3 (power dissipation, VOUT = 5 V: about 1.1 / 1.3 / 1.5 / 1.75 / 2.0 W at 1-5 A, eta = PO / (PO + PD) = 82 / 88.5 / 91 / 92 / 92.6 %) and the p3 table (93 % at IO 5 A, RSET 280 ohm, VO 5 V); +/-1.5 % by eye" },
+        { "mode-s": "PWM (synchronous, fixed frequency)", "vin_mv": 12000, "vout_mv": 5000, "iout_ma": 5000, "efficiency_pct": 93, "page_n": 6, "fig-s": "Figure 1. Efficiency vs Load Current, PTH12050W Typical Characteristics (VI = 12 V), SLTS214H p6; typical data at 25 C (note 1)", "curve-s": "VO = 5 V", "read-s": "vector figure read by eye at 400 dpi (pdf-graph mislabels this figure's dashed curves): the top dash-dot curve, VO = 5 V; cross-checked against Figure 3 (power dissipation, VOUT = 5 V: about 1.1 / 1.3 / 1.5 / 1.75 / 2.0 W at 1-5 A, eta = PO / (PO + PD) = 82 / 88.5 / 91 / 92 / 92.6 %) and the p3 table (93 % at IO 5 A, RSET 280 ohm, VO 5 V); +/-1.5 % by eye" }
+      ]
+    },
+    "part-s": "PTH12050WAH",
+    "supplies-ao": [
+      {
+        "rail-s": "VIN",
+        "role-s": "vin",
+        "pins-as": [
+          "3"
+        ],
+        "vmin_mv": 10800,
+        "vmax_mv": 13200,
+        "source-o": {
+          "datasheet-s": "PTH12050WAH.pdf",
+          "page_n": 3,
+          "table-s": "ELECTRICAL CHARACTERISTICS"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "PTH12050WAH.pdf https://www.ti.com/lit/ds/symlink/pth12050w.pdf"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

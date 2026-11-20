@@ -1,0 +1,81 @@
+{
+  "component-o": {
+    "type-s": "fuse",
+    "vendor-s": "Littelfuse",
+    "part-s": "0287010.PXCN",
+    "description-s": "10 A 32 VDC ATOF automotive blade fuse (ATO/ATC size, red), 1000 A @ 32 VDC interrupting, 7.70 mOhm typical cold resistance; seated in a PCB blade holder (Keystone 3557-2)",
+    "package-ao": [
+      { "ptype-s": "ato-blade" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "fuse"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "max_currents-ao": [
+      { "in": 10000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "1" },
+      { "2": "2" }
+    ],
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "2": "ds-power-tx" }
+    ],
+    "pin_roles_note-s": "pin roles: a fuse (and its holder) is non-polar; pin 1 = supply side (ds-power-rx) and pin 2 = load side (ds-power-tx) is a convention only, as on the DSK310 series diode; either orientation is electrically the same",
+    "supply_pins_are_pass_b": true,
+    "supply_pins_are_pass_note-s": "a fuse in the power path: its pins are the two blade terminals, which have no operating supply range of their own; the fuse ratings in fuse-o (10 A, 32 VDC, 7.70 milliohm typical cold) are the figures the checks use",
+    "fuse-o": {
+      "current-rating-ma-i": 10000,
+      "speed-s": "fast-blow",
+      "voltage-max-mv-i": 32000,
+      "voltage-kind-s": "dc",
+      "dc-voltage-max-mv-i": 32000,
+      "breaking-capacity-ma-i": 1000000,
+      "melting-i2t-ma2s-i": 115000000,
+      "cold-resistance-mohm-f": 7.7,
+      "cold_resistance_source-o": {
+        "datasheet-s": "Littelfuse-Datasheet-287-ATOF-r4-1.pdf",
+        "page_n": 2,
+        "table-s": "Ratings, row 0287010._: 10 A, test cable 1 mm2, typical voltage drop 109 mV, typical cold resistance 7.70 mOhm, typical I2t 115 A2s (typical values; no measuring condition printed beyond the test cable size)"
+      },
+      "holder_parts-as": [
+        "3557-2"
+      ],
+      "holder_source-o": {
+        "datasheet-s": "K75p47.pdf",
+        "component-s": "3557-2",
+        "page_n": 47,
+        "table-s": "2 IN 1 FUSE HOLDER: for Littelfuse ATOF 287 series / Bussmann ATC series, Littelfuse Low Profile Mini (LP) series or equivalents"
+      },
+      "source-o": {
+        "datasheet-s": "Littelfuse-Datasheet-287-ATOF-r4-1.pdf",
+        "page_n": 1,
+        "table-s": "Specifications: voltage rating 32 V DC; interrupting rating 1000 A @ 32 V DC; recommended environmental temperature -40 to +125 C (ATOF); terminals tin- or silver-plated; housing PA66, UL94 V-2; SAE J1284 / ISO 8820-3"
+      },
+      "not_stated-o": {
+        "speed_class": "the sheet gives time-current curves (p3), not a fast / slow class name; automotive ATO blades are fast-acting by their curves, recorded as fast-blow"
+      }
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "Littelfuse-Datasheet-287-ATOF-r4-1.pdf https://www.littelfuse.com/assetdocs/littelfuse-datasheet-287-atof?assetguid=43DCDCE8-8CA2-426F-8998-7E566F048D40"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

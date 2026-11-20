@@ -1,0 +1,71 @@
+{
+  "component-o": {
+    "type-s": "fuse-holder",
+    "vendor-s": "Littelfuse",
+    "part-s": "01000056Z",
+    "description-s": "PCB fuse clip for 5 mm diameter (5x20 mm) cartridge fuses, 100 056 series, spring brass, tin-plated, 10 A max; filed as the clip PAIR that holds one fuse (BOM quantity 2 per fuse)",
+    "package-ao": [
+      { "ptype-s": "5x20mm-clip-pair-tht" },
+      { "ppins-i": 4 }
+    ],
+    "blocks-as": [
+      "fuse-holder"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "max_currents-ao": [
+      { "in": 10000 }
+    ],
+    "pins-ao": [
+      { "1": "F1" },
+      { "2": "F2" }
+    ],
+    "fuse_holder-o": {
+      "takes-as": [
+        "littelfuse-213",
+        "littelfuse-215",
+        "littelfuse-216",
+        "littelfuse-217",
+        "littelfuse-218",
+        "littelfuse-219xa",
+        "littelfuse-232",
+        "littelfuse-233",
+        "littelfuse-234",
+        "littelfuse-235",
+        "littelfuse-239",
+        "littelfuse-477",
+        "littelfuse-977"
+      ],
+      "fuse_size-s": "5x20",
+      "current_max_ma": 10000,
+      "mount-s": "tht",
+      "parts_per_fuse_i": 2,
+      "source-o": {
+        "datasheet-s": "littelfuse-fuse-clip-100-445-030-520-datasheet-Update.pdf",
+        "page_n": 1,
+        "table-s": "Product Characteristics: 100 054/056 series, 5 mm diameter fuses (213 ... 977 series), current level 10 A max; Ordering Information: 01000056Z, 100 056, spring brass, tin-plated, ear style; p2 Recommended Mounting Dimensions: A 20.5 mm for 5x20, B 4.60 +/- 0.05 mm (100 series), holes 1.30 +0.10/-0.00 mm"
+      },
+      "not_stated-o": {
+        "contact_mohm": "the clip datasheet gives no contact resistance",
+        "voltage_max_mv": "the clip datasheet gives no voltage rating (UL file E14721 only)"
+      }
+    },
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "2": "ds-power-tx" }
+    ],
+    "pin_roles_note-s": "pin roles: a fuse (and its holder) is non-polar; pin 1 = supply side (ds-power-rx) and pin 2 = load side (ds-power-tx) is a convention only, as on the DSK310 series diode; either orientation is electrically the same",
+    "supply_pins_are_pass_b": true,
+    "supply_pins_are_pass_note-s": "a fuse holder (clip pair) in the power path: its pins are the two contacts the fuse seats in, with no operating supply range of their own; the holder ratings in fuse_holder-o (10 A) are the figures the checks use",
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "littelfuse-fuse-clip-100-445-030-520-datasheet-Update.pdf https://www.littelfuse.com/assetdocs/fuse-clips-100-445-030-and-520-datasheet?assetguid=8EAFA59E-662E-48B2-9E8C-4EA218516117"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "component-o": {
+    "type-s": "connector",
+    "vendor-s": "Same Sky",
+    "part-s": "TB007-508-02BE",
+    "description-s": "2-position screw terminal block, 5.08 mm pitch, horizontal wire entry, rising cage clamp, 16 A (UL) / 18 A (IEC), 300 V (UL), contact resistance 20 mOhm max, 24-12 AWG, blue (formerly CUI Devices)",
+    "package-ao": [
+      { "ptype-s": "terminal-block-1x02-p5.08-horizontal" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "connector",
+      "terminal-block"
+    ],
+    "interfaces-as": [
+      "ds-power-rxtx"
+    ],
+    "max_currents-ao": [
+      { "in": 16000 }
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 105
+        }
+      }
+    ],
+    "pins-ao": [
+      { "1": "1" },
+      { "2": "2" }
+    ],
+    "connector-o": {
+      "positions-i": 2,
+      "pitch-mm-f": 5.08,
+      "current-max-ma-i": 16000,
+      "voltage-max-mv-i": 300000,
+      "contact-resistance-mohm-f": 20,
+      "mount-s": "tht",
+      "orientation-s": "horizontal",
+      "wire-awg-s": "24-12 AWG (UL), 2.5 mm2 (IEC)"
+    },
+    "source-o": {
+      "datasheet-s": "tb007-508.pdf",
+      "page_n": 1,
+      "table-s": "SPECIFICATIONS: rated voltage (per contact) UL 300 V / IEC 250 V max; rated current (per contact) UL 16 A / IEC 18 A max; withstanding voltage 2500 Vac; surge 4000 V; contact resistance 20 mOhm max; insulation resistance 500 MOhm min at 500 Vdc; operating temperature -40 to 105 C; p2 wire assembly 24-12 AWG (UL), 2.5 mm2 (IEC), strip 7 mm, M3 screw, 0.5 N.m"
+    },
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tb007-508.pdf https://www.cuidevices.com/product/resource/tb007-508.pdf"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "component-o": {
+    "type-s": "fuse",
+    "vendor-s": "Littelfuse",
+    "part-s": "0218004.MXP",
+    "description-s": "4A 250VAC time-lag (slow-blow) 5x20 mm glass cartridge fuse, 218 series; seated in a 5x20 mm holder (Littelfuse 100 series clip pair)",
+    "package-ao": [
+      { "ptype-s": "5x20mm-cartridge" },
+      { "ppins-i": 2 }
+    ],
+    "blocks-as": [
+      "fuse"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "max_currents-ao": [
+      { "in": 4000 }
+    ],
+    "pins-ao": [
+      { "1": "1" },
+      { "2": "2" }
+    ],
+    "fuse-o": {
+      "current-rating-ma-i": 4000,
+      "speed-s": "slow-blow",
+      "voltage-max-mv-i": 250000,
+      "voltage-kind-s": "ac",
+      "breaking-capacity-ma-i": 40000,
+      "melting-i2t-ma2s-i": 69100000,
+      "cold-resistance-mohm-f": 12.9,
+      "cold_resistance_source-o": {
+        "datasheet-s": "Littelfuse-Fuse-218-Datasheet.pdf",
+        "page_n": 2,
+        "table-s": "Electrical Characteristic Specifications by Item, row 004.: 4 A, 250 V, 40 A @ 250 VAC, nominal cold resistance 0.0129 ohm, nominal melting I2t 69.1 A2s, maximum voltage drop at rated current 100 mV, maximum power dissipation at 1.5 In 1.6 W (the sheet states no measuring condition for the nominal cold resistance)"
+      },
+      "holder_parts-as": [
+        "01000056Z"
+      ],
+      "holder_source-o": {
+        "datasheet-s": "littelfuse-fuse-clip-100-445-030-520-datasheet-Update.pdf",
+        "component-s": "01000056Z",
+        "page_n": 1,
+        "table-s": "Product Characteristics: 100 054/056 series, compatible fuse size 5 mm diameter fuses: 213, 215, 216, 217, 218, 219XA, 232, 233, 234, 235, 239, 477 and 977 Series"
+      },
+      "source-o": {
+        "datasheet-s": "Littelfuse-Fuse-218-Datasheet.pdf",
+        "page_n": 2,
+        "table-s": "Electrical Characteristic Specifications by Item, row 004.: 4 A, 250 V, 40 A @ 250 VAC, nominal cold resistance 0.0129 ohm, nominal melting I2t 69.1 A2s, maximum voltage drop at rated current 100 mV, maximum power dissipation at 1.5 In 1.6 W"
+      },
+      "not_stated-o": {
+        "dc-voltage-max-mv-i": "the 218 sheet gives AC ratings only (250 VAC, 40 A @ 250 VAC at 4 A); no DC rating is stated",
+        "cold_resistance_condition": "no measuring condition is printed for the nominal cold resistance"
+      }
+    },
+    "stdpins-ao": [
+      { "1": "ds-power-rx" },
+      { "2": "ds-power-tx" }
+    ],
+    "pin_roles_note-s": "pin roles: a fuse (and its holder) is non-polar; pin 1 = supply side (ds-power-rx) and pin 2 = load side (ds-power-tx) is a convention only, as on the DSK310 series diode; either orientation is electrically the same",
+    "supply_pins_are_pass_b": true,
+    "supply_pins_are_pass_note-s": "a fuse in the power path: its pins tagged ds-power-rx / ds-power-tx are the two ends of the fuse element, which have no operating supply range, current or ripple limit of their own; the fuse ratings in fuse-o (4 A, 250 VAC, 12.9 milliohm cold) are the figures the checks use",
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "Littelfuse-Fuse-218-Datasheet.pdf https://www.littelfuse.com/assetdocs/fuse-218-datasheet?assetguid=A96D72B7-5296-4815-88B4-98B2F6738874"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

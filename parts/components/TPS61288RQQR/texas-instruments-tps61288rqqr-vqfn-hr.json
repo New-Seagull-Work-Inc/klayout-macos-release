@@ -231,10 +231,10 @@
         "rc_sizing_note-s": "Derived at VIN 3.0 V, IOUT 2.3 A, L 2.2 uH, CO 132 uF rated, RC 36.5k: fC = 4.02 kHz. The effective CO at 6.92 V depends on the capacitor picked and is not known here. fC scales as 1/CO_eff: it is 8.04 kHz at CO_eff 66 uF and passes the 8.18 kHz limit at about 65 uF. Below that, raise CO or lower RC. With L at -30% (1.54 uH), fRHPZ = 58.4 kHz and the limit rises to 11.7 kHz."
       },
       "efficiency-ao": [
-        { "vin_mv": 3600, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 972, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8" },
-        { "vin_mv": 3600, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 947, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8; matches p1 Features 'Up to 94.7% efficiency at VIN = 3.6 V, VOUT = 13 V, and IOUT = 2 A'" },
-        { "vin_mv": 2700, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 915, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8" },
-        { "vin_mv": 2300, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 948, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8" }
+        { "vin_mv": 3600, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 972, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8", "efficiency_pct": 97.15, "read-s": "procurement pdf-graph (vector curve) at 2 A, 2026-11-12" },
+        { "vin_mv": 3600, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 947, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8; matches p1 Features 'Up to 94.7% efficiency at VIN = 3.6 V, VOUT = 13 V, and IOUT = 2 A'", "efficiency_pct": 94.65, "read-s": "procurement pdf-graph (vector curve) at 2 A, 2026-11-12" },
+        { "vin_mv": 2700, "vout_mv": 13000, "iout_ma": 2000, "eff_pct_x10": 915, "read_from_curve_b": true, "figure-s": "Figure 7-1 p8", "efficiency_pct": 91.52, "read-s": "procurement pdf-graph (vector curve) at 2 A, 2026-11-12" },
+        { "vin_mv": 2300, "vout_mv": 5500, "iout_ma": 2000, "eff_pct_x10": 948, "read_from_curve_b": true, "figure-s": "Figure 7-5 p8", "efficiency_pct": 94.82, "read-s": "procurement pdf-graph (vector curve) at 2 A, 2026-11-12" }
       ],
       "vcc_ldo_mv": 4800,
       "vcc_cap_min_nf": 1000,
@@ -258,7 +258,6 @@
         "load_regulation_6920mv": "not stated: no curve at 6.92 V. Bracketed by Figure 7-6 (5.5 V) and Figure 7-2 (13 V), p8.",
         "output_impedance_mohm": "not stated: no Zout curve; load_regulation_mv_per_a is the curve-derived DC figure",
         "loop_crossover_khz": "not stated: externally compensated, so the crossover is a design choice. The p17 rule and Equation 12 give it; this record's design is in loop_design_derived-o.",
-        "load_transient-ao": "not filed: Figure 9-7 (p18) 'Load Transient (IOUT = 1 to 2 A)', VIN 3.6 V, VOUT 13 V, is a scope shot (Vout(AC) 500 mV/div, 500 us/div) with no stated deviation. The Cout is not printed beside the figure; it belongs to the 9.2 typical application, Figure 9-1 C4 6 x 22 uF.",
         "efficiency_6920mv": "not stated: efficiency curves only at VOUT 5.5 V (Figure 7-5), 13 V (Figure 7-1) and 16 V (Figure 7-3), p8. The bracketing readings are in efficiency-ao.",
         "ilim_at_board_point": "not stated: ILIM is specified only at VIN 7.2 V, VOUT 16 V, L 2.2 uH, TJ -20 to 125 C (p6); no figure at VIN 3.0 V / VOUT 6.92 V, or below TJ -20 C",
         "iout_max_ma": "not stated as a device rating: the sheet gives the 15 A switch current (p1) and the 2.3 A rating of the 3.6 V to 13 V design example (Table 9-1 p13). max_currents-ao out 2300 is the board's BOOST_RAW load (the design example happens to be the same 2.3 A).",
@@ -269,6 +268,9 @@
         "8": "BST: 0.1 uF to SW is mandatory (Table 6-1 p4); carried in stdpins-ao as 100nf-sw.",
         "11": "VCC: internal LDO output, 4.8 V typ (7.5 Electrical Characteristics p6). Needs more than 1.0 uF to ground (Table 6-1 p4); Figure 9-1 C3 is 2.2 uF, carried in stdpins-ao as 2.2uf-avss."
       },
+      "load_transient-ao": [
+        { "i_from_ma": 1000, "i_to_ma": 2000, "i_step_ma": 1000, "dv_mv": 675, "dv_overshoot_mv": 780, "cout_uf": 132, "cout_part-s": "C4 6 x 22 uF (Figure 9-1 typical application, 3.6 V to 13 V / 2.3 A), nominal", "vout_mv": 13000, "vin_mv": 3600, "page_n": 18, "fig-s": "Figure 9-7. Load Transient (IOUT = 1 to 2 A), VIN = 3.6 V, VOUT = 13 V", "read-s": "scope capture rendered at 300 dpi; the Iout trace's 1 A step (1.0 A/div) spans 60 px, so 1 div = 60 px; Vout(AC) 500 mV/div: trace centre 104 px before the step, dip centre 185 px = 81 px = 675 mV; release overshoot centre 10 px = 94 px = 780 mV. Read by eye, about +/-10 %; 500 us/div" }
+      ],
       "synchronous_b": true,
       "sw_pins-as": [
         "4",
@@ -348,7 +350,7 @@
       "documents-as": [
         "tps61288.pdf https://www.ti.com/lit/ds/symlink/tps61288.pdf"
       ],
-      "checked-s": "2026-11-12"
+      "checked-s": "2026-11-13"
     }
   }
 }

@@ -216,6 +216,12 @@
         "not_stated-o": {
           "i_step_ma": "not stated",
           "ripple_max_mvpp": "not stated"
+        },
+        "optional-b": true,
+        "optional_source-o": {
+          "datasheet-s": "tps25730.pdf",
+          "page_n": 27,
+          "table-s": "8.3.2 Power Management: \"The TPS25730 is powered from either VIN_3V3 or VBUS. The normal power supply input is VIN_3V3. When VIN_3V3 power is unavailable and power is available on VBUS, it is referred to as the dead-battery start-up condition.\""
         }
       },
       {
@@ -238,6 +244,12 @@
         "not_stated-o": {
           "i_step_ma": "not stated",
           "ripple_max_mvpp": "not stated"
+        },
+        "direction-s": "out",
+        "direction_source-o": {
+          "datasheet-s": "tps25730.pdf",
+          "page_n": 6,
+          "table-s": "Pin Functions: LDO_3V3, pin 1, type O: \"Output of supply switched from VIN_3V3 or VBUS LDO. Bypass with capacitance CLDO_3V3 to GND.\""
         }
       }
     ],
@@ -319,7 +331,7 @@
       "documents-as": [
         "tps25730.pdf https://www.ti.com/lit/ds/symlink/tps25730.pdf"
       ],
-      "checked-s": "2026-11-12"
+      "checked-s": "2026-11-13"
     }
   }
 }

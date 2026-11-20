@@ -1,0 +1,263 @@
+{
+  "component-o": {
+    "type-s": "regulator",
+    "vendor-s": "Texas Instruments",
+    "part-s": "TPS7A8300ARGWR",
+    "sku-s": "TPS7A8300ARGWR-3V3",
+    "sku-note-s": "one SKU per ANY-OUT setting: 1.6V (pin 11), 800mV (pin 10) and 100mV (pin 6) to GND, the other program pins open -> VOUT = 0.8 + 1.6 + 0.8 + 0.1 = 3.30 V (Table 9-3 p29); the public 5 V -> 3.3 V / 0.3 A demo at 1 % (33 mV on a full 0.3 A step), where the TLV62569 buck could not meet 0.11 ohm",
+    "description-s": "2 A low-noise (8.9 uVrms at 3.3 V), high-PSRR LDO, ANY-OUT strapped to 3.30 V, VIN 1.4-6.5 V (1.1 V with BIAS), 200 mV dropout at 2 A, +/-1 % over line/load/temperature, power-good, soft-start, VQFN-20 5 x 5 mm (RGW)",
+    "package-ao": [
+      { "ptype-s": "vqfn-20" },
+      { "ppins-i": 21 }
+    ],
+    "blocks-as": [
+      "regulator",
+      "regulator-ldo",
+      "bias-rail",
+      "uvlo",
+      "thermal-shutdown",
+      "current-limit",
+      "enable",
+      "power-good",
+      "soft-start"
+    ],
+    "interfaces-as": [
+      "ds-power-rx",
+      "ds-power-tx"
+    ],
+    "temperatures-ao": [
+      {
+        "operating-o": {
+          "min-i": -40,
+          "max-i": 125
+        }
+      },
+      {
+        "storage-o": {
+          "min-i": -55,
+          "max-i": 150
+        }
+      }
+    ],
+    "voltages-ao": [
+      { "vin": 5000 },
+      { "vout": 3300 }
+    ],
+    "max_currents-ao": [
+      { "out": 2000 }
+    ],
+    "pins-ao": [
+      { "1": "out" },
+      { "2": "sns" },
+      { "3": "fb" },
+      { "4": "pg" },
+      { "5": "50mv" },
+      { "6": "100mv" },
+      { "7": "200mv" },
+      { "8": "gnd" },
+      { "9": "400mv" },
+      { "10": "800mv" },
+      { "11": "1.6v" },
+      { "12": "bias" },
+      { "13": "nr/ss" },
+      { "14": "en" },
+      { "15": "in" },
+      { "16": "in" },
+      { "17": "in" },
+      { "18": "gnd" },
+      { "19": "out" },
+      { "20": "out" },
+      { "21": "ep" }
+    ],
+    "cfgpins-ao": [
+      { "14": "en" },
+      { "14": "vin" },
+      { "14c": "EN high (VIH 1.1 V min) enables, low (VIL 0.5 V max) disables; if enable is not needed, connect to IN or BIAS (Pin Functions p4, EC p7): tied to VIN" },
+      { "2": "sns" },
+      { "2": "vout" },
+      { "2c": "SNS connects the internal R1 to the output: to the load side of the output trace when ANY-OUT is used (Pin Functions p5)" },
+      { "3": "fb" },
+      { "3": "10nf-vout" },
+      { "3c": "CFF 10 nF FB to OUT, 'not required' but maximizes ac performance (Pin Functions p4; ROC CFF 10 nF nom p6); the noise and PSRR specifications use CFF = 10 nF (p8); TI notes a CFF may disturb PG at start-up" },
+      { "12": "bias" },
+      { "12": "avss" },
+      { "12c": "BIAS not used (VIN >= 1.4 V): left floating or tied to ground (Pin Functions p4): tied to GND" },
+      { "4": "pg" },
+      { "4": "100k-vin" },
+      { "4c": "PG open drain, active high when VOUT reaches VIT(PG) 88 % typ; RPG 10-100 kOhm (ROC p6): 100 kOhm to VIN as in the EC conditions" },
+      { "11": "1.6v" },
+      { "11": "avss" },
+      { "10": "800mv" },
+      { "10": "avss" },
+      { "6": "100mv" },
+      { "6": "avss" },
+      { "11c": "ANY-OUT: 1.6V, 800mV and 100mV program pins to GND, all others open -> 0.8 V + 1.6 V + 0.8 V + 0.1 V = 3.30 V (Equation 2 p28, Table 9-3 p29)" },
+      { "5": "50mv" },
+      { "5": "nc" },
+      { "7": "200mv" },
+      { "7": "nc" },
+      { "9": "400mv" },
+      { "9": "nc" },
+      { "5c": "unused ANY-OUT pins are left floating (open) (Pin Functions p4)" }
+    ],
+    "stdpins-ao": [
+      { "15": "ds-power-rx" },
+      { "15": "10uf-avss" },
+      { "1": "ds-power-tx" },
+      { "1": "47uf-avss" },
+      { "13": "10nf-avss" },
+      { "8": "avss" },
+      { "18": "avss" },
+      { "21": "avss" }
+    ],
+    "specs-o": {
+      "topology_s": "ldo",
+      "adjustable_b": false,
+      "vout_fixed_mv": 3300,
+      "vin_min_mv": 1400,
+      "vin_max_mv": 6500,
+      "vin_abs_max_mv": 7000,
+      "iout_max_ma": 2000,
+      "vout_accuracy_pct_x10": 10,
+      "vout_accuracy_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 8,
+        "table-s": "7.6 EC TPS7A8300A: accuracy -1.0 / +1.0 % for 0.8 V <= VOUT <= 5.2 V, 5 mA <= IOUT <= 2 A, over VIN and temperature; -0.75 / +0.75 % only with BIAS 3.0-6.5 V and VIN 1.1-2.2 V"
+      },
+      "dropout_iout_ma": 2000,
+      "dropout_mv_at_iout": 200,
+      "dropout_max_mv_at_iout": 200,
+      "dropout_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 8,
+        "table-s": "7.6 EC: VDO 200 mV max at VIN = 1.4 V or 5.3 V, IOUT = 2 A, VFB = 0.8 V - 3 %; 300 mV max at VIN = 5.5 V"
+      },
+      "load_regulation_mv_per_a": 0.08,
+      "load_regulation_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 8,
+        "table-s": "7.6 EC: load regulation 0.08 mV/A typ, 5 mA <= IOUT <= 2 A"
+      },
+      "line_regulation_mv_per_v": 0.03,
+      "psrr_vin-ao": [
+        { "f_hz": 100, "db": 49.72 },
+        { "f_hz": 1000, "db": 48.37 },
+        { "f_hz": 10000, "db": 41.45 },
+        { "f_hz": 100000, "db": 28.13 },
+        { "f_hz": 500000, "db": 37.65 },
+        { "f_hz": 1000000, "db": 51.99 },
+        { "f_hz": 2000000, "db": 28.83 },
+        { "f_hz": 5000000, "db": 11.19 }
+      ],
+      "psrr_vin_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 10,
+        "fig-s": "Figure 7-4. PSRR vs Frequency and VIN, trace VIN = 1.4 V, VBIAS = 0 V (no BIAS, as strapped here); page conditions VOUT = 0.8 V, COUT = 22 uF, CNR/SS = CFF = 0 nF unless noted",
+        "read-s": "procurement pdf-graph (vector curve), values at the listed frequencies"
+      },
+      "psrr_db_at_1khz": 48.4,
+      "psrr_note-s": "EC p8: 42 dB at 10 kHz and 39 dB at 500 kHz (VOUT 0.8 V, VBIAS 5 V, IOUT 2 A, CNR/SS 100 nF, CFF 10 nF); 40 / 25 dB at 5.0 V out. Fig 7-4 VIN 2.3 V trace (more headroom): 57.6 dB at 1 kHz, 49.6 dB at 100 kHz",
+      "noise_uvrms": 8.9,
+      "noise_uvrms_per_v": 2.7,
+      "noise_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 11,
+        "fig-s": "Figure 7-9. Output Voltage Noise vs Output Voltage, IOUT = 2 A: 8.36 uVrms at 3.0 V and 9.45 uVrms at 3.6 V (procurement pdf-graph), 8.9 uVrms at 3.3 V by linear interpolation; EC p8: 4.4 uVrms at 0.8 V, 7.7 uVrms at 5.0 V (10 Hz-100 kHz, CNR/SS 100 nF, CFF 10 nF)"
+      },
+      "load_transient-ao": [
+        { "i_from_ma": 150, "i_to_ma": 1930, "i_step_ma": 1780, "dv_mv": 40, "dv_overshoot_mv": 40, "cout_uf": 22, "vout_mv": 5000, "edge_us-s": "1 A/us slew", "page_n": 12, "datasheet-s": "tps7a83a.pdf", "fig-s": "Figure 7-17. Load Transient vs Time for VOUT = 5 V; IOUT,DC = 100 mA, COUT = 22 uF, CNR/SS = CFF = 10 nF, slew rate = 1 A/us", "read-s": "read from the rendered page (300 dpi, by eye): right axis 10 mV/div (5.0 px/mV); the VOUT trace spikes to -40 mV at the 50 ms rise and +40 mV at the 236 ms release, settling about -3 mV then +2 mV; current trace about 0.15 -> 1.93 A", "vout_note-s": "measured at 5 V out; TI shows no 3.3 V capture. The 0.8 V capture (Figure 7-16) gives -30 / +38 mV for about the same step, so the response barely depends on VOUT; at 3.3 V about 40 mV / 1.78 A = 22 milliohm effective, and about 7 mV for a 0.3 A step (scaled linearly, an estimate)" },
+        { "i_from_ma": 100, "i_to_ma": 1900, "i_step_ma": 1800, "dv_mv": 30, "dv_overshoot_mv": 38, "cout_uf": 22, "cin_uf": 10, "vout_mv": 800, "vin_mv": 1400, "edge_us-s": "1 A/us slew", "page_n": 12, "datasheet-s": "tps7a83a.pdf", "fig-s": "Figure 7-16. Load Transient vs Time for VOUT = 0.8 V, trace VIN = 1.4 V (no BIAS); IOUT,DC = 100 mA, 1 A/us, CNR/SS = 10 nF, COUT = 22 uF, CBIAS = 10 uF", "read-s": "read from the rendered page (300 dpi, by eye): right axis 10 mV/div (5.0 px/mV); VIN = 1.4 V trace dips to -30 mV at the 0.1 ms rise and peaks at +38 mV at the 0.6 ms release (VIN = 1.1 V + BIAS trace: -25 / +34 mV); current trace 0.15 -> 1.9 A", "vout_note-s": "measured at 0.8 V out; TI shows no 3.3 V capture" }
+      ],
+      "cin_min_nf": 10000,
+      "cout_min_nf": 22000,
+      "cout_note-s": "ROC p6: COUT 22 uF min / 22 uF nom; Pin Functions p5: 47 uF or larger ceramic (25 uF of capacitance or greater) required for stability; EC tables use 47 uF: 47 uF placed",
+      "cout_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 6,
+        "table-s": "7.3 Recommended Operating Conditions: CIN 10 uF min, COUT 22 uF min, CNR/SS 10 nF, CFF 10 nF, RPG 10-100 kOhm"
+      },
+      "iq_typ_ua": 2800,
+      "iq_max_ua": 4000,
+      "iq_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 8,
+        "table-s": "7.6 EC: IGND 2.8 / 4 mA at VIN 6.5 V, IOUT 5 mA; 3.7 / 5 mA at VIN 1.4 V, IOUT 2 A; shutdown 1.2 / 25 uA"
+      },
+      "current_limit_ma-o": {
+        "min": 2800,
+        "typ": 3300,
+        "max": 3800
+      },
+      "current_limit_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 8,
+        "table-s": "7.6 EC: ILIM 2.8 / 3.3 / 3.8 A (VOUT forced to 0.9 x VOUT(nom)); ISC 1.0 A foldback (RLOAD 20 mOhm)"
+      },
+      "uvlo_in_rising_mv": 1390,
+      "uvlo_in_falling_mv": 1137,
+      "uvlo_source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "page_n": 7,
+        "table-s": "7.5 EC: VUVLO2(IN) without BIAS 1.31 / 1.39 V rising, hysteresis 253 mV"
+      },
+      "en_vil_max_mv": 500,
+      "en_vih_min_mv": 1100,
+      "pgood_note-s": "PG falling threshold 82 / 88 / 93 % of VOUT, 2 % hysteresis; VOL 0.4 V at 1 mA (p8, p7)",
+      "otsd_c": 160,
+      "otsd_hyst_c": 20,
+      "has_enable_b": true,
+      "has_pgood_b": true,
+      "has_thermal_shutdown_b": true,
+      "has_current_limit_b": true,
+      "rth_ja_c_per_w": 33.4,
+      "rth_jc_c_per_w": 3.9,
+      "rth_source-s": "7.4 Thermal Information p7, RGW (VQFN) 20 pins: RthetaJA 33.4 C/W, RthetaJC(bot) 3.9 C/W, RthetaJB 13.0 C/W",
+      "not_stated-o": {
+        "cout_max_nf": "TI states no maximum output capacitance (ROC p6 gives COUT 22 uF min / nom only; 9.1.1.6 p31: characterized with ceramic 22 uF or greater, no upper limit given)",
+        "loop_crossover_khz": "no crossover or bandwidth figure; the load-transient figures stand in"
+      },
+      "source-o": {
+        "datasheet-s": "tps7a83a.pdf",
+        "document-s": "TI SBVS304B (June 2017, revised October 2021)",
+        "pages-s": "4-12, 28-29, 54-55"
+      },
+      "pd_note-s": "dissipation at the demo point: (5.0 - 3.3) V x 0.3 A = 0.51 W, plus IGND x VIN (about 3 mA x 5 V = 0.015 W); RGW thermal (7.4 Thermal Information p7): RthetaJA 33.4 C/W, RthetaJC(bot) 3.9 C/W, RthetaJB 13.0 C/W (JEDEC board) -> about 17 C junction rise over ambient at 0.51 W; TJ max 125 C"
+    },
+    "thermal-o": {
+      "tj-max-c-i": 125,
+      "rtheta-ja-c-per-w-f": 33.4
+    },
+    "supplies-ao": [
+      {
+        "rail-s": "IN",
+        "role-s": "in",
+        "pins-as": [
+          "15"
+        ],
+        "vmin_mv": 1100,
+        "vmax_mv": 6500,
+        "source-o": {
+          "datasheet-s": "tps7a83a.pdf",
+          "page_n": 6,
+          "table-s": "7.3 Recommended Operating Conditions"
+        },
+        "abs_max_mv": 7000,
+        "i_max_ma": 2000,
+        "i_max_note-s": "IN carries the load current, 2 A max (ROC p6), plus IGND 5 mA max at 2 A (p8); 1.4 V minimum without BIAS (ROC note 1), and VIN >= VOUT + 0.4 V for the 1.8 V setting (EC conditions p8)",
+        "carried_source-o": {
+          "datasheet-s": "tps7a83a.pdf",
+          "page_n": 6,
+          "table-s": "7.3 Recommended Operating Conditions: VIN 1.1-6.5 V (BIAS required below 1.4 V); 7.1 Absolute Maximum Ratings: IN -0.3 to 7.0 V"
+        }
+      }
+    ],
+    "provenance-o": {
+      "public_source_b": true,
+      "basis-s": "procurement public-check: every document in the record folder has a public http(s) source; nothing confidential, no correspondence or quote data, no person named outside non-technical-o, not an NDA part; footprint and 3D model of recorded public origin",
+      "documents-as": [
+        "tps7a83a.pdf https://www.ti.com/lit/ds/symlink/tps7a83a.pdf"
+      ],
+      "checked-s": "2026-11-13"
+    }
+  }
+}

@@ -82,7 +82,32 @@
           "datasheet-s": "LTC4412.pdf (Rev. C)",
           "page_n": 3,
           "table-s": "Electrical Characteristics: VIN, VSENSE Operating Supply Range, VIN and/or VSENSE Must Be in This Range for Proper Operation, 2.5 V min, 28 V max (full Tj range); Absolute Maximum Ratings p2: Supply Voltage (VIN) -14 V to 36V; pin configuration p2: VIN 1, SENSE 6. The controller passes the load current through an external P-channel MOSFET (GATE pin 5), so it has no load step of its own"
-        }
+        },
+        "i_typ_ma": 0.011,
+        "i_max_ma": 0.026,
+        "i_source-o": {
+          "datasheet-s": "LTC4412.pdf",
+          "page_n": 3,
+          "table-s": "Electrical Characteristics: IQFL quiescent supply current in forward regulation 11 / 19 uA typ / max at VIN 3.6 V; IQFH 15 / 26 uA at VIN 28 V; combined current of the VIN and SENSE pins (Note 3)"
+        },
+        "i_note-s": "combined VIN + SENSE quiescent current (the part draws from both): 11 uA typ at 3.6 V, 26 uA max at 28 V; the load current itself flows through the external P-channel MOSFET, not the IC"
+      },
+      {
+        "rail-s": "SENSE",
+        "role-s": "sense",
+        "pins-as": [
+          "6"
+        ],
+        "vmin_mv": 2500,
+        "vmax_mv": 28000,
+        "source-o": {
+          "datasheet-s": "LTC4412.pdf",
+          "page_n": 3,
+          "table-s": "ELECTRICAL CHARACTERISTICS: VIN, VSENSE Operating Supply Range 2.5 V min, 28 V max ('VIN and/or VSENSE Must Be in This Range for Proper Operation'); Absolute Maximum Ratings p2: SENSE -14 V to 36 V"
+        },
+        "counted_under-s": "vin",
+        "ripple_not_stated-s": "not stated: LTC4412 Rev. C gives no input ripple limit; p3 forward regulation VIN - VSENSE 10 / 20 / 32 mV min / typ / max (2.5 V <= VIN <= 28 V) is the only regulation figure",
+        "i_note-s": "the quiescent current is stated for VIN and SENSE combined; it is counted on the VIN entry"
       }
     ],
     "provenance-o": {
@@ -91,7 +116,7 @@
       "documents-as": [
         "LTC4412.pdf https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4412.pdf"
       ],
-      "checked-s": "2026-11-12"
+      "checked-s": "2026-11-13"
     }
   }
 }
