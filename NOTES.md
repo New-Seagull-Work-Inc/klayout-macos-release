@@ -1,4 +1,4 @@
-# klayout v2026.09.17-1366-ge0597a55
+# klayout v2026.09.17-1367-ge318ae62
 
 Public release of klayout and kplace for Darwin arm64.
 
@@ -19,4 +19,4 @@ Checksums: SHA256SUMS.
 
 ## Regression
 
-make regression on v2026.09.17-1366-ge0597a55: 6 of 6 boards PASS (run 2026-11-20 13:10:56 rev v2026.09.17-1366-ge0597a55 kicad-cli 10.0.6 fab-library 40821de2)
+make regression on v2026.09.17-1367-ge318ae62: 6 of 6 boards PASS (run 2026-11-20 13:54:00 rev v2026.09.17-1367-ge318ae62 kicad-cli 10.0.6 fab-library 40821de2)
