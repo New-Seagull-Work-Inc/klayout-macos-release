@@ -1,4 +1,4 @@
-# klayout v2026.09.17-1367-ge318ae62
+# klayout v2026.09.17-1368-gb0acefe9
 
 Public release of klayout and kplace for Darwin arm64.
 
@@ -7,16 +7,12 @@ and fab data those boards need).
 
 ## Changes
 
-- Stereo boards: the row drop toward the connector is steered per placement, by the row's own
-  sensor or by every image sensor, whichever closes the lanes.
-- Power rails: the final widening repeats while a pass still gains width.
-- The live viewer keeps the last elapsed time and title when a run ends.
-- A fab stackup named by the caller is honoured.
-- Router and placer fixes for fine-pitch ball grids: pad escapes, via-site clearances, a
-  surface-first pass for short links.
+- Router records follow the copper: when a late pass (the retry after the prune, or the revisit
+  round) reports a net closed while its copper is still in pieces, the net is counted open at
+  once, so it gets the remaining passes and the final report never says routed over split copper.
 
 Checksums: SHA256SUMS.
 
 ## Regression
 
-make regression on v2026.09.17-1367-ge318ae62: 6 of 6 boards PASS (run 2026-11-20 13:54:00 rev v2026.09.17-1367-ge318ae62 kicad-cli 10.0.6 fab-library 40821de2)
+make regression on v2026.09.17-1368-gb0acefe9: 6 of 6 boards PASS (run 2026-11-20 20:26:20 rev v2026.09.17-1368-gb0acefe9 kicad-cli 10.0.6 fab-library 40821de2)
